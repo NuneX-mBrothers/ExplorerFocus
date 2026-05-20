@@ -1,0 +1,1075 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ExplorerFocus — um explorador de ficheiros sem distrações</title>
+<meta name="description" content="Alternativa focada ao Windows Explorer. Perfis, árvores configuráveis, operações ricas, pré-visualização — tudo em torno do que importa.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg-0: #0E0F11;
+    --bg-1: #16181B;
+    --bg-2: #1A1C1F;
+    --bg-3: #22252A;
+    --border-1: #2A2722;
+    --border-2: #3A3530;
+    --accent: #E0A458;
+    --accent-dim: #B6884B;
+    --accent-soft: #5C401E;
+    --fg-0: #E8E5DF;
+    --fg-1: #C8C5BF;
+    --fg-2: #8E8B86;
+    --fg-3: #5E5C58;
+    --row-hover: #2A2722;
+    --row-sel: #5C401E;
+
+    --font-display: "Cormorant Garamond", "Times New Roman", serif;
+    --font-body: "Geist", -apple-system, sans-serif;
+    --font-mono: "JetBrains Mono", "Consolas", monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg-0);
+    color: var(--fg-0);
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+
+    background-image:
+      radial-gradient(ellipse at top left, rgba(224, 164, 88, 0.04), transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(224, 164, 88, 0.025), transparent 60%);
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    pointer-events: none;
+    opacity: .035;
+    z-index: 1000;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  ::selection { background: var(--accent-soft); color: var(--fg-0); }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: var(--fg-0); }
+
+  /* TOP BAR */
+  .topbar {
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(14px);
+    background: rgba(14, 15, 17, 0.78);
+    border-bottom: 1px solid var(--border-1);
+  }
+  .topbar-inner {
+    max-width: 1280px; margin: 0 auto;
+    padding: 14px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-mark { width: 28px; height: 28px; }
+  .brand-name {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--fg-0);
+  }
+  .brand-name em {
+    font-style: italic; color: var(--accent); font-weight: 500;
+  }
+  .nav { display: flex; gap: 28px; }
+  .nav a {
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--fg-2); text-transform: uppercase; letter-spacing: 0.12em;
+    padding: 4px 0;
+    border-bottom: 1px solid transparent;
+    transition: border-color .15s, color .15s;
+  }
+  .nav a:hover { color: var(--accent); border-color: var(--accent); }
+  .nav-version {
+    font-family: var(--font-mono); font-size: 11px; color: var(--fg-3);
+    padding-left: 28px; border-left: 1px solid var(--border-1);
+  }
+
+  /* HERO */
+  .hero {
+    max-width: 1280px; margin: 0 auto;
+    padding: 110px 32px 140px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+  }
+  .hero-eyebrow {
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--accent); text-transform: uppercase; letter-spacing: 0.25em;
+    margin-bottom: 24px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .hero-eyebrow::before {
+    content: ''; width: 36px; height: 1px; background: var(--accent);
+  }
+  .hero h1 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: clamp(48px, 6vw, 88px);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    margin: 0 0 28px;
+    color: var(--fg-0);
+  }
+  .hero h1 em {
+    font-style: italic; color: var(--accent); font-weight: 400;
+  }
+  .hero h1 .strike {
+    position: relative; display: inline-block;
+    color: var(--fg-3);
+  }
+  .hero h1 .strike::after {
+    content: ''; position: absolute;
+    left: -4px; right: -4px; top: 53%;
+    height: 2px; background: var(--accent);
+    transform: rotate(-3deg);
+  }
+  .hero-lede {
+    font-size: 18px; color: var(--fg-1); line-height: 1.65;
+    max-width: 540px;
+    margin-bottom: 38px;
+  }
+  .hero-meta {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--fg-2); text-transform: uppercase; letter-spacing: 0.12em;
+  }
+  .hero-meta span { display: flex; align-items: center; gap: 8px; }
+  .hero-meta span::before {
+    content: ''; width: 6px; height: 6px; background: var(--accent);
+    border-radius: 50%;
+  }
+
+  /* App preview */
+  .hero-preview {
+    position: relative;
+    perspective: 1400px;
+  }
+  .app-frame {
+    background: var(--bg-1);
+    border: 1px solid var(--border-1);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow:
+      0 40px 80px -20px rgba(0, 0, 0, 0.6),
+      0 20px 40px -10px rgba(224, 164, 88, 0.08),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+    transform: rotateY(-8deg) rotateX(3deg);
+    transform-origin: center center;
+    transition: transform .6s ease;
+  }
+  .hero-preview:hover .app-frame {
+    transform: rotateY(-2deg) rotateX(1deg) scale(1.01);
+  }
+  .app-titlebar {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--bg-1);
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-1);
+  }
+  .app-titlebar-dot { width: 9px; height: 9px; border-radius: 50%; background: #3a3a3a; }
+  .app-titlebar-name {
+    margin-left: 10px;
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--fg-2); letter-spacing: 0.08em;
+  }
+  .app-tabs {
+    display: flex; gap: 2px;
+    padding: 8px 14px 0;
+    background: var(--bg-1);
+    border-bottom: 1px solid var(--border-1);
+  }
+  .app-tab {
+    padding: 7px 14px 8px;
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--fg-2);
+    border: 1px solid transparent;
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .app-tab.active {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .app-tab .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+  .app-tab.muted .dot { background: transparent; border: 1px solid var(--fg-3); }
+  .app-body {
+    display: grid; grid-template-columns: 130px 1fr 130px;
+    height: 320px;
+  }
+  .app-tree {
+    background: var(--bg-1); padding: 12px 8px;
+    border-right: 1px solid var(--border-1);
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--fg-1);
+  }
+  .app-tree .label {
+    color: var(--fg-2); text-transform: uppercase; letter-spacing: 0.12em;
+    font-size: 9px; margin-bottom: 8px;
+  }
+  .app-tree .node { padding: 2px 6px; margin: 1px 0; border-radius: 2px; }
+  .app-tree .node.sel { background: var(--accent-soft); color: var(--accent); }
+  .app-list {
+    background: var(--bg-0); padding: 10px 0 0;
+    font-family: var(--font-mono); font-size: 10px;
+  }
+  .app-list .head {
+    display: grid; grid-template-columns: 1.6fr 0.5fr 0.7fr;
+    gap: 8px; padding: 4px 14px;
+    font-size: 9px; color: var(--fg-2); text-transform: uppercase; letter-spacing: 0.1em;
+    border-bottom: 1px solid var(--border-1);
+  }
+  .app-list .row {
+    display: grid; grid-template-columns: 1.6fr 0.5fr 0.7fr;
+    gap: 8px; padding: 5px 14px;
+    color: var(--fg-1);
+    border-left: 2px solid transparent;
+  }
+  .app-list .row.sel {
+    background: var(--row-sel);
+    border-left-color: var(--accent);
+    color: var(--accent);
+  }
+  .app-list .row:hover:not(.sel) { background: var(--row-hover); }
+  .app-list .row .ext {
+    display: inline-block;
+    background: rgba(224, 164, 88, 0.12);
+    color: var(--accent);
+    padding: 1px 5px; border-radius: 2px;
+    font-size: 9px;
+  }
+  .app-preview {
+    background: var(--bg-0);
+    border-left: 1px solid var(--border-1);
+    padding: 12px 10px;
+    font-family: var(--font-mono); font-size: 8px;
+    color: var(--fg-1);
+    overflow: hidden;
+  }
+  .app-preview .head {
+    color: var(--accent); font-size: 8px; text-transform: uppercase;
+    letter-spacing: 0.12em; margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .app-preview .ln { display: flex; gap: 6px; }
+  .app-preview .lno { color: var(--fg-3); width: 12px; text-align: right; }
+  .app-preview .kw { color: #c58fd9; }
+  .app-preview .str { color: #88b884; }
+  .app-preview .cmt { color: var(--fg-3); font-style: italic; }
+  .app-preview .fn { color: var(--accent); }
+
+  .ops-widget {
+    position: absolute;
+    bottom: -40px; right: -30px;
+    width: 240px;
+    background: var(--bg-1);
+    border: 1px solid var(--border-1);
+    border-radius: 5px;
+    padding: 12px;
+    box-shadow: 0 24px 60px -10px rgba(0, 0, 0, 0.7);
+    font-family: var(--font-mono); font-size: 9px;
+    transform: rotate(2deg);
+  }
+  .ops-widget .head {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 6px;
+  }
+  .ops-widget .head .ic { color: var(--accent); font-size: 11px; }
+  .ops-widget .head .pill {
+    background: var(--accent); color: var(--bg-0);
+    padding: 1px 5px; border-radius: 2px;
+    font-weight: 600; font-size: 8px;
+  }
+  .ops-widget .bar {
+    height: 3px; background: var(--bg-0); border-radius: 2px;
+    margin: 4px 0;
+    overflow: hidden;
+  }
+  .ops-widget .bar .fill { height: 100%; background: var(--accent); width: 65%; }
+  .ops-widget .bar.sm .fill { background: var(--accent-dim); width: 78%; }
+  .ops-widget .meta { display: flex; justify-content: space-between; color: var(--fg-2); margin-top: 4px; }
+  .ops-widget .meta .speed { color: var(--accent); }
+
+  /* CATALOG */
+  .section-header {
+    max-width: 1280px; margin: 0 auto;
+    padding: 0 32px 28px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: end;
+    border-bottom: 1px solid var(--border-1);
+  }
+  .section-num {
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--accent); letter-spacing: 0.25em; text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .section-title {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: clamp(36px, 4.5vw, 60px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .section-title em { color: var(--accent); font-style: italic; }
+  .section-blurb {
+    color: var(--fg-1);
+    font-size: 16px;
+    line-height: 1.65;
+    max-width: 520px;
+  }
+
+  .features {
+    max-width: 1280px; margin: 0 auto;
+    padding: 60px 32px 120px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1px;
+    background: var(--border-1);
+  }
+  .feat {
+    background: var(--bg-0);
+    padding: 32px;
+    position: relative;
+    transition: background .25s;
+  }
+  .feat:hover { background: var(--bg-1); }
+  .feat .num {
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--fg-3); margin-bottom: 18px;
+    letter-spacing: 0.1em;
+  }
+  .feat h3 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 28px; line-height: 1.05;
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+    color: var(--fg-0);
+  }
+  .feat p {
+    color: var(--fg-1); font-size: 14px; line-height: 1.6; margin: 0;
+  }
+  .feat-mark {
+    margin-top: 20px;
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase;
+  }
+  .feat.w4 { grid-column: span 4; }
+  .feat.w6 { grid-column: span 6; }
+  .feat.w8 { grid-column: span 8; }
+  .feat.w12 { grid-column: span 12; }
+  .feat.w3 { grid-column: span 3; }
+
+  .feat.hero-card { padding: 0; overflow: hidden; }
+  .feat.hero-card .pad { padding: 32px; }
+  .feat.hero-card .visual {
+    background: var(--bg-1);
+    border-top: 1px solid var(--border-1);
+    padding: 22px 32px;
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--fg-1);
+    display: flex; gap: 24px; flex-wrap: wrap;
+  }
+  .feat.hero-card .visual .k { color: var(--fg-2); }
+  .feat.hero-card .visual .v { color: var(--accent); }
+
+  .preview-demo {
+    background: var(--bg-1);
+    border-top: 1px solid var(--border-1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 200px;
+  }
+  .preview-demo .src {
+    padding: 18px 22px;
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--fg-1);
+    line-height: 1.55;
+    border-right: 1px solid var(--border-1);
+  }
+  .preview-demo .src .h { color: var(--accent); font-size: 9px; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 10px; }
+  .preview-demo .src .kw { color: #c58fd9; }
+  .preview-demo .src .str { color: #88b884; }
+  .preview-demo .src .cmt { color: var(--fg-3); font-style: italic; }
+  .preview-demo .src .fn { color: var(--accent); }
+  .preview-demo .rendered { padding: 18px 22px; }
+  .preview-demo .rendered h4 {
+    font-family: var(--font-display); font-weight: 600;
+    color: var(--accent); margin: 0 0 8px;
+    font-size: 18px;
+  }
+  .preview-demo .rendered p {
+    margin: 0 0 8px; font-size: 12px; color: var(--fg-1); line-height: 1.5;
+  }
+  .preview-demo .rendered code {
+    background: var(--bg-0); padding: 1px 5px; border-radius: 2px;
+    font-family: var(--font-mono); font-size: 11px; color: var(--accent);
+  }
+
+  /* SHORTCUTS */
+  .shortcuts {
+    background: var(--bg-1);
+    border-top: 1px solid var(--border-1);
+    border-bottom: 1px solid var(--border-1);
+    padding: 80px 32px;
+  }
+  .shortcuts-inner {
+    max-width: 1280px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .shortcuts-side h2 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 48px; line-height: 1;
+    letter-spacing: -0.02em;
+    margin: 0 0 16px;
+  }
+  .shortcuts-side h2 em { color: var(--accent); font-style: italic; }
+  .shortcuts-side p {
+    color: var(--fg-1); font-size: 15px;
+    margin: 0;
+  }
+  .kbd-list {
+    display: grid; gap: 1px;
+    background: var(--border-1);
+    border: 1px solid var(--border-1);
+  }
+  .kbd-row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 16px;
+    padding: 14px 20px;
+    background: var(--bg-0);
+    align-items: center;
+  }
+  .kbd-row .keys { display: flex; gap: 4px; }
+  .kbd {
+    font-family: var(--font-mono); font-size: 10px;
+    background: var(--bg-2);
+    color: var(--accent);
+    border: 1px solid var(--border-2);
+    border-bottom-width: 2px;
+    padding: 3px 7px;
+    border-radius: 3px;
+    letter-spacing: 0.04em;
+  }
+  .kbd-row .desc { color: var(--fg-1); font-size: 14px; }
+  .kbd-row .desc em { color: var(--accent); font-style: normal; font-family: var(--font-mono); font-size: 12px; }
+
+  /* STACK */
+  .stack {
+    max-width: 1280px; margin: 0 auto;
+    padding: 100px 32px;
+  }
+  .stack h2 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 48px; line-height: 1; letter-spacing: -0.02em;
+    margin: 0 0 14px;
+  }
+  .stack h2 em { color: var(--accent); font-style: italic; }
+  .stack p { color: var(--fg-1); margin: 0 0 40px; max-width: 540px; }
+  .stack-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border-1);
+    border: 1px solid var(--border-1);
+  }
+  .stack-cell {
+    background: var(--bg-0);
+    padding: 32px 28px;
+  }
+  .stack-cell .ic {
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--accent); letter-spacing: 0.18em; text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .stack-cell h4 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 22px; margin: 0 0 8px;
+    color: var(--fg-0);
+  }
+  .stack-cell p {
+    color: var(--fg-2); font-size: 13px; line-height: 1.55;
+    margin: 0;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border-1);
+    padding: 60px 32px 40px;
+  }
+  .footer-inner {
+    max-width: 1280px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+  .footer-brand { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+  .footer-brand .brand-mark { width: 36px; height: 36px; }
+  .footer-brand .brand-name { font-size: 28px; }
+  .footer-tagline { color: var(--fg-2); max-width: 360px; }
+  .footer-col h5 {
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--accent); text-transform: uppercase; letter-spacing: 0.18em;
+    margin: 0 0 16px; font-weight: 500;
+  }
+  .footer-col a {
+    display: block; color: var(--fg-1); padding: 4px 0;
+    font-size: 14px;
+  }
+  .footer-baseline {
+    max-width: 1280px; margin: 0 auto;
+    padding-top: 28px;
+    border-top: 1px solid var(--border-1);
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--fg-3); letter-spacing: 0.1em; text-transform: uppercase;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; padding: 60px 24px 80px; gap: 60px; }
+    .hero-preview { transform: scale(0.85); transform-origin: top left; }
+    .ops-widget { right: -8px; }
+    .section-header { grid-template-columns: 1fr; gap: 24px; padding: 0 24px 24px; }
+    .features { padding: 40px 24px 80px; }
+    .feat.w4, .feat.w6, .feat.w8, .feat.w3 { grid-column: span 12; }
+    .shortcuts-inner { grid-template-columns: 1fr; gap: 40px; }
+    .stack-grid { grid-template-columns: 1fr 1fr; }
+    .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+    .topbar-inner { padding: 12px 20px; }
+    .nav { gap: 16px; }
+    .nav-version { display: none; }
+  }
+
+  /* ANIMATIONS */
+  @keyframes float-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-eyebrow, .hero h1, .hero-lede, .hero-meta {
+    animation: float-up .8s ease-out both;
+  }
+  .hero h1 { animation-delay: .08s; }
+  .hero-lede { animation-delay: .16s; }
+  .hero-meta { animation-delay: .24s; }
+  .hero-preview { animation: float-up 1s ease-out .32s both; }
+
+  .feat {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .6s, transform .6s, background .25s;
+  }
+  .feat.in-view { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- LOGO MARK -->
+<svg width="0" height="0" style="position:absolute;">
+  <defs>
+    <symbol id="logo" viewBox="0 0 64 64">
+      <path d="M32 4 L60 32 L32 60 L4 32 Z"
+            fill="none" stroke="#E0A458" stroke-width="1.5" stroke-linejoin="miter"/>
+      <path d="M32 12 L52 32 L32 52 L12 32 Z"
+            fill="none" stroke="#E0A458" stroke-width="0.6"
+            stroke-opacity="0.4" stroke-linejoin="miter"/>
+      <path d="M30.5 22 L30.5 21.5
+               C30.5 19.5, 31.5 18.2, 33.4 18.2
+               C34.4 18.2, 35.2 18.5, 35.8 19
+               L34.9 21 C34.6 20.8, 34.2 20.6, 33.8 20.6
+               C33.2 20.6, 32.9 21, 32.9 21.9
+               L32.9 25.5 L35.2 25.5 L35.2 27.6 L32.9 27.6
+               L32.9 42 C32.9 44.5, 31.5 46, 29 46
+               L28 46 L28 43.8 L28.7 43.8
+               C29.7 43.8, 30.5 43.2, 30.5 41.8
+               L30.5 27.6 L28.6 27.6 L28.6 25.5 L30.5 25.5 Z"
+            fill="#E0A458"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="brand-mark"><use href="#logo"/></svg>
+      <span class="brand-name">Explorer<em>Focus</em></span>
+    </div>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#shortcuts">Atalhos</a>
+      <a href="#stack">Stack</a>
+      <a href="#download">Obter</a>
+      <span class="nav-version">v0.9.0</span>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">Um explorador de ficheiros · WPF · .NET 10</div>
+    <h1>O explorer<br>que <em>se foca</em><br>no que <span class="strike">não</span> importa.</h1>
+    <p class="hero-lede">
+      ExplorerFocus é um substituto leve do Windows Explorer, desenhado para quem
+      trabalha sempre nas mesmas pastas. Perfis configuráveis, árvores limpas,
+      pré-visualização rica, operações que dão informação a sério —
+      sem o ruído do shell.
+    </p>
+    <div class="hero-meta">
+      <span>Windows 10 / 11</span>
+      <span>Self-contained · single-file</span>
+      <span>~30 MB</span>
+    </div>
+  </div>
+
+  <div class="hero-preview">
+    <div class="app-frame">
+      <div class="app-titlebar">
+        <span class="app-titlebar-dot"></span>
+        <span class="app-titlebar-dot"></span>
+        <span class="app-titlebar-dot"></span>
+        <span class="app-titlebar-name">ExplorerFocus — default · projects/ExplorerFocus</span>
+      </div>
+
+      <div class="app-tabs">
+        <div class="app-tab active"><span class="dot"></span>default</div>
+        <div class="app-tab muted"><span class="dot"></span>scripts</div>
+        <div class="app-tab muted"><span class="dot"></span>research</div>
+      </div>
+
+      <div class="app-body">
+        <div class="app-tree">
+          <div class="label">Árvore</div>
+          <div class="node">▾ ExplorerFocus</div>
+          <div class="node">&nbsp;&nbsp;Core/</div>
+          <div class="node">&nbsp;&nbsp;Models/</div>
+          <div class="node sel">&nbsp;&nbsp;ViewModels/</div>
+          <div class="node">&nbsp;&nbsp;Views/</div>
+          <div class="node">&nbsp;&nbsp;Themes/</div>
+          <div class="node">▸ ExtensionFocus.cs</div>
+        </div>
+
+        <div class="app-list">
+          <div class="head">
+            <span>NOME</span>
+            <span>EXT</span>
+            <span>TAMANHO</span>
+          </div>
+          <div class="row">
+            <span>📁 FileOperations</span>
+            <span></span>
+            <span>248 KB</span>
+          </div>
+          <div class="row sel">
+            <span>🟦 MainViewModel.cs</span>
+            <span class="ext">cs</span>
+            <span>42 KB</span>
+          </div>
+          <div class="row">
+            <span>🟦 ShellViewModel.cs</span>
+            <span class="ext">cs</span>
+            <span>18 KB</span>
+          </div>
+          <div class="row">
+            <span>🟦 FileItemViewModel.cs</span>
+            <span class="ext">cs</span>
+            <span>7.2 KB</span>
+          </div>
+          <div class="row">
+            <span>🟦 PreviewViewModel.cs</span>
+            <span class="ext">cs</span>
+            <span>9.5 KB</span>
+          </div>
+          <div class="row">
+            <span>🟦 AppsManagerViewModel.cs</span>
+            <span class="ext">cs</span>
+            <span>4.8 KB</span>
+          </div>
+        </div>
+
+        <div class="app-preview">
+          <div class="head">PRÉ-VISUALIZAÇÃO</div>
+          <div class="ln"><span class="lno">1</span><span><span class="kw">using</span> System.IO;</span></div>
+          <div class="ln"><span class="lno">2</span></div>
+          <div class="ln"><span class="lno">3</span><span class="cmt">// Main view-model</span></div>
+          <div class="ln"><span class="lno">4</span><span><span class="kw">public partial class</span> <span class="fn">MainViewModel</span></span></div>
+          <div class="ln"><span class="lno">5</span><span>{</span></div>
+          <div class="ln"><span class="lno">6</span><span>&nbsp;&nbsp;<span class="kw">private readonly</span></span></div>
+          <div class="ln"><span class="lno">7</span><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">ProfileManager</span></span></div>
+          <div class="ln"><span class="lno">8</span><span>&nbsp;&nbsp;&nbsp;&nbsp;_profile;</span></div>
+          <div class="ln"><span class="lno">9</span></div>
+          <div class="ln"><span class="lno">10</span><span>&nbsp;&nbsp;<span class="kw">public</span> <span class="fn">PreviewVM</span></span></div>
+          <div class="ln"><span class="lno">11</span><span>&nbsp;&nbsp;{ <span class="kw">get</span>; }</span></div>
+          <div class="ln"><span class="lno">12</span><span>}</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ops-widget">
+      <div class="head">
+        <span><span class="ic">📋</span> Copiar · 47 ficheiros</span>
+        <span class="pill">EM EXECUÇÃO</span>
+      </div>
+      <div style="color: var(--fg-2); margin-top: 6px;">project_dump_2025.zip</div>
+      <div class="bar"><div class="fill"></div></div>
+      <div class="bar sm"><div class="fill"></div></div>
+      <div class="meta">
+        <span>134 / 248 MB</span>
+        <span class="speed">89 MB/s · 1.3 s</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG -->
+<div id="features"></div>
+<div class="section-header">
+  <div>
+    <div class="section-num">§ 01 · Catálogo</div>
+    <h2 class="section-title">O que <em>realmente</em><br>faz a diferença.</h2>
+  </div>
+  <p class="section-blurb">
+    Cada feature foi adicionada para responder a um problema concreto do
+    trabalho diário sobre uma árvore de ficheiros conhecida. Nenhuma está lá
+    por bonita. Quase todas podem ser ligadas ou desligadas.
+  </p>
+</div>
+
+<section class="features">
+
+  <div class="feat hero-card w8">
+    <div class="pad">
+      <div class="num">01 — PERFIS</div>
+      <h3>Multi-tab por contexto. Cada perfil é uma vista própria, com a sua árvore, filtros e estado.</h3>
+      <p>Drag-reorder, F2 para renomear, Ctrl+1..9 para saltar entre tabs, Ctrl+T para criar.
+         As tabs lembram a última pasta visitada e o estado da árvore.</p>
+    </div>
+    <div class="visual">
+      <span><span class="k">tabs</span> · <span class="v">●</span> default · <span class="v">○</span> scripts · <span class="v">○</span> research</span>
+      <span><span class="k">ativa</span> <span class="v">←</span> destacada com âmbar</span>
+      <span><span class="k">●</span> incluída na pesquisa global</span>
+    </div>
+  </div>
+
+  <div class="feat w4">
+    <div class="num">02 — ÁRVORES</div>
+    <h3>Árvores configuráveis.</h3>
+    <p>Defines manualmente as raízes que queres ver. Filesystem e <em>registry</em> entram lado a lado.
+       Sem a lateral cheia de itens que nunca abres.</p>
+    <div class="feat-mark">Folder + Registry</div>
+  </div>
+
+  <div class="feat w6">
+    <div class="num">03 — PESQUISA</div>
+    <h3>Pesquisa multi-padrão com curingas em qualquer posição.</h3>
+    <p>Escreve <code style="font-family:var(--font-mono);background:var(--bg-2);padding:1px 6px;border-radius:2px;color:var(--accent);">*.cs *.json</code>
+       e tens semântica OR. <em>?</em>onfig.json, Test*Run.cs — todos funcionam.</p>
+    <div class="feat-mark">Wildcards · Regex interno</div>
+  </div>
+
+  <div class="feat w6">
+    <div class="num">04 — PESQUISA GLOBAL</div>
+    <h3>Procurar entre perfis, com opt-in explícito.</h3>
+    <p>Botão direito numa tab → "Incluir na pesquisa global". O dot indicator (●/○)
+       diz logo o que entra. Resultados numa janela não modal.</p>
+    <div class="feat-mark">Opt-in · Resultados não modais</div>
+  </div>
+
+  <div class="feat hero-card w12">
+    <div class="pad">
+      <div class="num">05 — PRÉ-VISUALIZAÇÃO</div>
+      <h3>Painel de preview rico. Cada tipo de ficheiro com a sua renderização ideal.</h3>
+      <p>Texto com <em>syntax highlight</em> via AvalonEdit, imagens com decode em background,
+         PDFs renderizados pelo motor do Edge (WebView2), Markdown convertido em HTML com tema escuro
+         pelo Markdig. Tudo individualmente ativável. Cancela load anterior se mudares de selecção.</p>
+    </div>
+    <div class="preview-demo">
+      <div class="src">
+        <div class="h">SOURCE · MainViewModel.cs · C#</div>
+        <div><span class="lno" style="color:var(--fg-3);">1&nbsp;&nbsp;</span><span class="kw">namespace</span> ExplorerFocus.ViewModels;</div>
+        <div>&nbsp;</div>
+        <div><span class="cmt">/// &lt;summary&gt;Main view-model.&lt;/summary&gt;</span></div>
+        <div><span class="kw">public partial class</span> <span class="fn">MainViewModel</span></div>
+        <div>{</div>
+        <div>&nbsp;&nbsp;<span class="kw">private readonly</span> ProfileManager _profile;</div>
+        <div>&nbsp;&nbsp;<span class="kw">public</span> PreviewViewModel PreviewVM { <span class="kw">get</span>; }</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;&nbsp;<span class="kw">public</span> <span class="fn">MainViewModel</span>(ProfileManager p)</div>
+        <div>&nbsp;&nbsp;{</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;_profile = p;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;PreviewVM = <span class="kw">new</span>(<span class="str">"appearance"</span>);</div>
+        <div>&nbsp;&nbsp;}</div>
+        <div>}</div>
+      </div>
+      <div class="rendered">
+        <div class="src h" style="margin-bottom:14px;">MARKDOWN · README.md</div>
+        <h4>ExplorerFocus</h4>
+        <p>Substituto focado do Windows Explorer. Trabalha em torno de pastas
+           configuráveis e <em>esquece tudo</em> que não interessa.</p>
+        <p><code>net10.0-windows</code> · <code>WPF</code> · single-file</p>
+        <p style="border-left: 3px solid var(--accent); padding: 4px 12px; background: var(--bg-2); margin-top: 12px;">
+          Nota — preview funciona com Edge WebView2 instalado (vem com Windows 10/11).
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="feat w6">
+    <div class="num">06 — OPERAÇÕES DE FICHEIROS</div>
+    <h3>Copiar, mover, apagar — com informação a sério.</h3>
+    <p>Janela flutuante mostra <em>gauge por ficheiro</em>, velocidade real,
+       ETA, contagem global. Pausa, retoma, cancela. Até 6 operações em paralelo.
+       Continua a tua vida noutra coisa enquanto corre.</p>
+    <div class="feat-mark">Buffer 1 MB · 10 Hz UI · histórico × 20</div>
+  </div>
+
+  <div class="feat w3">
+    <div class="num">07 — CONFLITOS</div>
+    <h3>6-vias.</h3>
+    <p>Sobrepor / Saltar / Duplicar, individuais ou em bulk para o resto da operação.</p>
+  </div>
+
+  <div class="feat w3">
+    <div class="num">08 — DRAG &amp; DROP</div>
+    <h3>Entre tabs.</h3>
+    <p>Arrasta um ficheiro para uma tab e a tab comuta sozinha após 600ms. Dialog Copiar/Mover na largada.</p>
+  </div>
+
+  <div class="feat w8">
+    <div class="num">09 — APPS POR EXTENSÃO</div>
+    <h3>Detecção automática de extensões novas. Globais entre perfis.</h3>
+    <p>Entras numa pasta com <em>.dwg</em>, <em>.psd</em>, <em>.bak</em>?
+       Diálogo agregado pergunta de uma vez. Picker individual por linha
+       (browse para o .exe; o nome é auto-resolvido por <em>FileVersionInfo</em>).
+       Marca como ignoradas as que não interessam. Lista persiste.</p>
+    <div class="feat-mark">Mute por sessão · Toggle no Settings</div>
+  </div>
+
+  <div class="feat w4">
+    <div class="num">10 — TERMINAIS</div>
+    <h3>CMD, PowerShell, Git Bash — aqui, agora.</h3>
+    <p>Em qualquer pasta da árvore. Versões normais e <em>elevadas</em>.
+       <em>regedit</em> em chaves do registry.</p>
+  </div>
+
+  <div class="feat w4">
+    <div class="num">11 — CRIAR FICHEIROS</div>
+    <h3>Skeletons sensatos.</h3>
+    <p><em>.cs</em>, <em>.xaml</em>, <em>.json</em>, <em>.md</em>, <em>.cmd</em>, <em>.ps1</em> —
+       começam com a estrutura típica. O nome destaca-se sem apagar a extensão ao escrever.</p>
+  </div>
+
+  <div class="feat w4">
+    <div class="num">12 — DARK COMPLETO</div>
+    <h3>Tema escuro até ao fim.</h3>
+    <p>Title bar, scrollbars, datagrids, dialogs, tooltips, preview do Markdown — tudo
+       no mesmo idioma visual. Sem brancos perdidos a partir lugares improváveis.</p>
+  </div>
+
+  <div class="feat w4">
+    <div class="num">13 — PERSISTÊNCIA</div>
+    <h3>Lembra-se de tudo.</h3>
+    <p>Geometria da janela principal e da janela de operações. Última tab activa.
+       Largura do tree pane. Sort por coluna. Estado da árvore. Tudo em
+       <em>%LOCALAPPDATA%\ExplorerFocus</em>.</p>
+  </div>
+
+  <div class="feat w4">
+    <div class="num">14 — TOOLTIP RICO</div>
+    <h3>Propriedades sem clique.</h3>
+    <p>Tooltip de 1.8s sobre qualquer ficheiro mostra tamanho computado,
+       datas, atributos. Dirs trazem o tamanho recursivo —
+       calculado lazy, com semáforo para não martelar o disco.</p>
+  </div>
+
+  <div class="feat w4">
+    <div class="num">15 — ORDENAÇÃO</div>
+    <h3>Pastas primeiro, sempre.</h3>
+    <p>Comparador customizado garante que diretórios ficam no topo de
+       qualquer ordenação, em qualquer coluna, em qualquer direção.
+       Como deve ser.</p>
+  </div>
+
+  <div class="feat w6">
+    <div class="num">16 — MULTI-SELECT</div>
+    <h3>Selecção inteligente.</h3>
+    <p>Clique normal seleciona. Shift+clique estende com semântica
+       "decide pela maioria" — se o range já está maioritariamente seleccionado, desmarca; senão, marca.
+       Ctrl+clique alterna individual. Não há "perdi todas as selecções por acidente".</p>
+  </div>
+
+  <div class="feat w6">
+    <div class="num">17 — DEPLOYMENT</div>
+    <h3>Um único <em>.exe</em>. Sem instalador.</h3>
+    <p>Self-contained, single-file, com compressão. Copias para uma flash drive
+       e arranca em qualquer Windows 10/11. <em>net10.0-windows</em> + WPF — sem dependências
+       fora da pasta do executável.</p>
+  </div>
+
+</section>
+
+<!-- SHORTCUTS -->
+<section class="shortcuts" id="shortcuts">
+  <div class="shortcuts-inner">
+    <div class="shortcuts-side">
+      <div class="section-num">§ 02 · Atalhos</div>
+      <h2>As mãos<br>na <em>home row</em>.</h2>
+      <p>Cada operação importante tem um atalho. Sem rato sempre que possível —
+         conforto para sessões longas.</p>
+    </div>
+
+    <div class="kbd-list">
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">F2</span></div>
+        <div class="desc">Renomear o item focado <em>— ficheiro, pasta ou tab</em></div>
+      </div>
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">Enter</span></div>
+        <div class="desc">Abrir o ficheiro com a app associada</div>
+      </div>
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">Delete</span></div>
+        <div class="desc">Mover para a Reciclagem <em>— via FileOperationsManager</em></div>
+      </div>
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">F5</span></div>
+        <div class="desc">Atualizar lista da pasta atual</div>
+      </div>
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">F</span><span class="kbd">/</span><span class="kbd">Ctrl</span><span class="kbd">L</span></div>
+        <div class="desc">Focar a caixa de pesquisa local</div>
+      </div>
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">T</span></div>
+        <div class="desc">Novo perfil (nova tab)</div>
+      </div>
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">W</span></div>
+        <div class="desc">Fechar tab atual</div>
+      </div>
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">Tab</span></div>
+        <div class="desc">Próxima tab <em>— Shift inverte</em></div>
+      </div>
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">1</span> ... <span class="kbd">9</span></div>
+        <div class="desc">Saltar para a N-ésima tab</div>
+      </div>
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">Shift</span>+drag</div>
+        <div class="desc">Forçar <em>Move</em> sem perguntar</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section class="stack" id="stack">
+  <div class="section-num">§ 03 · Stack</div>
+  <h2>Construído com <em>peças sérias</em>.</h2>
+  <p>Cada dependência foi escolhida pela maturidade, pelo tamanho ou pela ausência
+     de alternativas razoáveis. Sem framework do dia.</p>
+
+  <div class="stack-grid">
+    <div class="stack-cell">
+      <div class="ic">.NET</div>
+      <h4>net10.0-windows</h4>
+      <p>WPF clássico, sem WinUI nem MAUI.
+         Compatível com Windows 10 e 11.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic">MVVM</div>
+      <h4>CommunityToolkit.Mvvm</h4>
+      <p>ObservableObject, ObservableProperty, RelayCommand — geração por source generators.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic">PREVIEW</div>
+      <h4>AvalonEdit · Markdig · WebView2</h4>
+      <p>Syntax highlight, markdown renderer e embed do motor do Edge para PDF.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic">UTIL</div>
+      <h4>Microsoft.VisualBasic.FileIO</h4>
+      <p>Para o envio à <em>Reciclagem</em> — a única forma honesta, e funciona.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="download">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <svg class="brand-mark"><use href="#logo"/></svg>
+        <span class="brand-name">Explorer<em>Focus</em></span>
+      </div>
+      <p class="footer-tagline">
+        O explorer minimal para quem trabalha sempre nos mesmos sítios — e quer
+        que a ferramenta saiba isso.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h5>Obter</h5>
+      <a href="#">ExplorerFocus.exe</a>
+      <a href="#">Releases</a>
+      <a href="#">Changelog</a>
+    </div>
+
+    <div class="footer-col">
+      <h5>Projecto</h5>
+      <a href="#features">Features</a>
+      <a href="#shortcuts">Atalhos</a>
+      <a href="#stack">Stack</a>
+    </div>
+  </div>
+
+  <div class="footer-baseline">
+    <span>v0.9.0 · WPF · net10.0-windows · single-file</span>
+    <span>desenhado para o quotidiano</span>
+  </div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in-view'), i * 40);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.feat').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>

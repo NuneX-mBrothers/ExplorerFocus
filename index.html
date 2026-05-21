@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ExplorerFocus — um explorador de ficheiros sem distrações</title>
-<meta name="description" content="Alternativa focada ao Windows Explorer. Perfis, árvores configuráveis, operações ricas, pré-visualização — tudo em torno do que importa.">
+<title data-i18n="page_title">ExplorerFocus — um explorador de ficheiros sem distrações</title>
+<meta name="description" data-i18n-attr="content" data-i18n="page_desc" content="Alternativa focada ao Windows Explorer. Perfis, árvores configuráveis, operações ricas, pré-visualização — tudo em torno do que importa.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Geist:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet">
 
 <style>
   :root {
@@ -66,6 +66,44 @@
   a { color: var(--accent); text-decoration: none; }
   a:hover { color: var(--fg-0); }
 
+  /* LANGUAGE SELECTOR */
+  .lang-switch {
+    position: fixed;
+    top: 16px;
+    right: 22px;
+    z-index: 200;
+    display: flex;
+    gap: 0;
+    padding: 4px;
+    background: #000;
+    border: 1px solid var(--border-2);
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  }
+  .lang-flag {
+    width: 32px; height: 22px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.55;
+    transition: opacity .15s, transform .15s;
+    display: block;
+  }
+  .lang-flag + .lang-flag { margin-left: 4px; }
+  .lang-flag:hover { opacity: 0.9; }
+  .lang-flag.active {
+    opacity: 1;
+    outline: 1.5px solid var(--accent);
+    outline-offset: 1px;
+    box-shadow: 0 0 6px rgba(224, 164, 88, 0.45);
+  }
+  .lang-flag svg {
+    width: 100%; height: 100%; display: block;
+  }
+
   /* TOP BAR */
   .topbar {
     position: sticky; top: 0; z-index: 100;
@@ -75,7 +113,7 @@
   }
   .topbar-inner {
     max-width: 1280px; margin: 0 auto;
-    padding: 14px 32px;
+    padding: 14px 180px 14px 32px;
     display: flex; align-items: center; justify-content: space-between;
   }
   .brand { display: flex; align-items: center; gap: 12px; }
@@ -551,6 +589,36 @@
     color: var(--fg-3); letter-spacing: 0.1em; text-transform: uppercase;
     display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
   }
+  .mb-credit {
+    text-align: center;
+    width: 100%;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border-1);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--fg-3);
+  }
+  .mb-credit a {
+    color: var(--accent);
+    border-bottom: 1px dotted var(--accent-dim);
+    padding-bottom: 1px;
+    transition: color .2s, border-color .2s;
+  }
+  .mb-credit a:hover {
+    color: var(--fg-0);
+    border-bottom-color: var(--fg-0);
+  }
+  .mb-credit .sep {
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent-dim);
+    margin: 0 10px;
+    vertical-align: middle;
+  }
 
   /* RESPONSIVE */
   @media (max-width: 900px) {
@@ -563,9 +631,18 @@
     .shortcuts-inner { grid-template-columns: 1fr; gap: 40px; }
     .stack-grid { grid-template-columns: 1fr 1fr; }
     .footer-inner { grid-template-columns: 1fr; gap: 40px; }
-    .topbar-inner { padding: 12px 20px; }
-    .nav { gap: 16px; }
+    .topbar-inner { padding: 12px 150px 12px 20px; }
+    .nav { gap: 14px; }
     .nav-version { display: none; }
+    .lang-switch { top: 10px; right: 12px; padding: 3px; }
+    .lang-flag { width: 26px; height: 18px; }
+    .lang-flag + .lang-flag { margin-left: 3px; }
+  }
+
+  @media (max-width: 620px) {
+    .nav { display: none; }
+    .topbar-inner { padding: 12px 130px 12px 16px; }
+    .lang-flag { width: 22px; height: 15px; }
   }
 
   /* ANIMATIONS */
@@ -590,6 +667,96 @@
 </style>
 </head>
 <body>
+
+<!-- LANGUAGE SWITCHER -->
+<div class="lang-switch" role="group" aria-label="Language selector">
+
+  <!-- PORTUGAL -->
+  <button class="lang-flag" data-lang="pt" aria-label="Português" title="Português">
+    <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+      <rect width="24" height="40" fill="#006600"/>
+      <rect x="24" width="36" height="40" fill="#D52B1E"/>
+      <circle cx="24" cy="20" r="7.5" fill="#FFD700" stroke="#7A1F18" stroke-width="0.4"/>
+      <circle cx="24" cy="20" r="5" fill="#FFFFFF" stroke="#7A1F18" stroke-width="0.4"/>
+      <rect x="22" y="17" width="4" height="6" fill="#0039A6"/>
+      <circle cx="23" cy="18.5" r="0.4" fill="#FFFFFF"/>
+      <circle cx="25" cy="18.5" r="0.4" fill="#FFFFFF"/>
+      <circle cx="23" cy="21.5" r="0.4" fill="#FFFFFF"/>
+      <circle cx="25" cy="21.5" r="0.4" fill="#FFFFFF"/>
+      <circle cx="24" cy="20" r="0.4" fill="#FFFFFF"/>
+    </svg>
+  </button>
+
+  <!-- USA -->
+  <button class="lang-flag" data-lang="en" aria-label="English (US)" title="English (US)">
+    <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+      <rect width="60" height="40" fill="#FFFFFF"/>
+      <g fill="#B22234">
+        <rect y="0"  width="60" height="3.08"/>
+        <rect y="6.15" width="60" height="3.08"/>
+        <rect y="12.31" width="60" height="3.08"/>
+        <rect y="18.46" width="60" height="3.08"/>
+        <rect y="24.62" width="60" height="3.08"/>
+        <rect y="30.77" width="60" height="3.08"/>
+        <rect y="36.92" width="60" height="3.08"/>
+      </g>
+      <rect width="24" height="21.54" fill="#3C3B6E"/>
+      <g fill="#FFFFFF">
+        <circle cx="3"  cy="3"   r="0.9"/>
+        <circle cx="7"  cy="3"   r="0.9"/>
+        <circle cx="11" cy="3"   r="0.9"/>
+        <circle cx="15" cy="3"   r="0.9"/>
+        <circle cx="19" cy="3"   r="0.9"/>
+        <circle cx="5"  cy="6"   r="0.9"/>
+        <circle cx="9"  cy="6"   r="0.9"/>
+        <circle cx="13" cy="6"   r="0.9"/>
+        <circle cx="17" cy="6"   r="0.9"/>
+        <circle cx="3"  cy="9"   r="0.9"/>
+        <circle cx="7"  cy="9"   r="0.9"/>
+        <circle cx="11" cy="9"   r="0.9"/>
+        <circle cx="15" cy="9"   r="0.9"/>
+        <circle cx="19" cy="9"   r="0.9"/>
+        <circle cx="5"  cy="12"  r="0.9"/>
+        <circle cx="9"  cy="12"  r="0.9"/>
+        <circle cx="13" cy="12"  r="0.9"/>
+        <circle cx="17" cy="12"  r="0.9"/>
+        <circle cx="3"  cy="15"  r="0.9"/>
+        <circle cx="7"  cy="15"  r="0.9"/>
+        <circle cx="11" cy="15"  r="0.9"/>
+        <circle cx="15" cy="15"  r="0.9"/>
+        <circle cx="19" cy="15"  r="0.9"/>
+        <circle cx="5"  cy="18"  r="0.9"/>
+        <circle cx="9"  cy="18"  r="0.9"/>
+        <circle cx="13" cy="18"  r="0.9"/>
+        <circle cx="17" cy="18"  r="0.9"/>
+      </g>
+    </svg>
+  </button>
+
+  <!-- GERMANY -->
+  <button class="lang-flag" data-lang="de" aria-label="Deutsch" title="Deutsch">
+    <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+      <rect y="0"    width="60" height="13.33" fill="#000000"/>
+      <rect y="13.33" width="60" height="13.33" fill="#DD0000"/>
+      <rect y="26.66" width="60" height="13.34" fill="#FFCE00"/>
+    </svg>
+  </button>
+
+  <!-- CHINA -->
+  <button class="lang-flag" data-lang="zh" aria-label="中文" title="中文">
+    <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+      <rect width="60" height="40" fill="#EE1C25"/>
+      <g fill="#FFDE00">
+        <polygon points="10,4 11.18,7.64 15,7.64 11.91,9.89 13.09,13.53 10,11.28 6.91,13.53 8.09,9.89 5,7.64 8.82,7.64"/>
+        <polygon points="20,2.5 20.47,3.95 21.99,3.95 20.76,4.84 21.23,6.29 20,5.4 18.77,6.29 19.24,4.84 18.01,3.95 19.53,3.95"/>
+        <polygon points="24,6 24.47,7.45 25.99,7.45 24.76,8.34 25.23,9.79 24,8.9 22.77,9.79 23.24,8.34 22.01,7.45 23.53,7.45"/>
+        <polygon points="24,11 24.47,12.45 25.99,12.45 24.76,13.34 25.23,14.79 24,13.9 22.77,14.79 23.24,13.34 22.01,12.45 23.53,12.45"/>
+        <polygon points="20,14.5 20.47,15.95 21.99,15.95 20.76,16.84 21.23,18.29 20,17.4 18.77,18.29 19.24,16.84 18.01,15.95 19.53,15.95"/>
+      </g>
+    </svg>
+  </button>
+
+</div>
 
 <!-- LOGO MARK -->
 <svg width="0" height="0" style="position:absolute;">
@@ -623,10 +790,10 @@
       <span class="brand-name">Explorer<em>Focus</em></span>
     </div>
     <nav class="nav">
-      <a href="#features">Features</a>
-      <a href="#shortcuts">Atalhos</a>
-      <a href="#stack">Stack</a>
-      <a href="#download">Obter</a>
+      <a href="#features" data-i18n="nav_features">Features</a>
+      <a href="#shortcuts" data-i18n="nav_shortcuts">Atalhos</a>
+      <a href="#stack" data-i18n="nav_stack">Stack</a>
+      <a href="#download" data-i18n="nav_download">Obter</a>
       <span class="nav-version">v0.9.0</span>
     </nav>
   </div>
@@ -635,18 +802,18 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <div class="hero-eyebrow">Um explorador de ficheiros · WPF · .NET 10</div>
-    <h1>O explorer<br>que <em>se foca</em><br>no que <span class="strike">não</span> importa.</h1>
-    <p class="hero-lede">
+    <div class="hero-eyebrow" data-i18n="hero_eyebrow">Um explorador de ficheiros · WPF · .NET 10</div>
+    <h1 data-i18n-html="hero_title">O explorer<br>que <em>se foca</em><br>no que <span class="strike">não</span> importa.</h1>
+    <p class="hero-lede" data-i18n="hero_lede">
       ExplorerFocus é um substituto leve do Windows Explorer, desenhado para quem
       trabalha sempre nas mesmas pastas. Perfis configuráveis, árvores limpas,
       pré-visualização rica, operações que dão informação a sério —
       sem o ruído do shell.
     </p>
     <div class="hero-meta">
-      <span>Windows 10 / 11</span>
-      <span>Self-contained · single-file</span>
-      <span>~30 MB</span>
+      <span data-i18n="hero_meta_os">Windows 10 / 11</span>
+      <span data-i18n="hero_meta_pkg">Self-contained · single-file</span>
+      <span data-i18n="hero_meta_size">~30 MB</span>
     </div>
   </div>
 
@@ -667,7 +834,7 @@
 
       <div class="app-body">
         <div class="app-tree">
-          <div class="label">Árvore</div>
+          <div class="label" data-i18n="app_tree_label">Árvore</div>
           <div class="node">▾ ExplorerFocus</div>
           <div class="node">&nbsp;&nbsp;Core/</div>
           <div class="node">&nbsp;&nbsp;Models/</div>
@@ -679,9 +846,9 @@
 
         <div class="app-list">
           <div class="head">
-            <span>NOME</span>
-            <span>EXT</span>
-            <span>TAMANHO</span>
+            <span data-i18n="app_col_name">NOME</span>
+            <span data-i18n="app_col_ext">EXT</span>
+            <span data-i18n="app_col_size">TAMANHO</span>
           </div>
           <div class="row">
             <span>📁 FileOperations</span>
@@ -716,7 +883,7 @@
         </div>
 
         <div class="app-preview">
-          <div class="head">PRÉ-VISUALIZAÇÃO</div>
+          <div class="head" data-i18n="app_preview_label">PRÉ-VISUALIZAÇÃO</div>
           <div class="ln"><span class="lno">1</span><span><span class="kw">using</span> System.IO;</span></div>
           <div class="ln"><span class="lno">2</span></div>
           <div class="ln"><span class="lno">3</span><span class="cmt">// Main view-model</span></div>
@@ -735,15 +902,15 @@
 
     <div class="ops-widget">
       <div class="head">
-        <span><span class="ic">📋</span> Copiar · 47 ficheiros</span>
-        <span class="pill">EM EXECUÇÃO</span>
+        <span><span class="ic">📋</span> <span data-i18n="ops_action">Copiar · 47 ficheiros</span></span>
+        <span class="pill" data-i18n="ops_status">EM EXECUÇÃO</span>
       </div>
       <div style="color: var(--fg-2); margin-top: 6px;">project_dump_2025.zip</div>
       <div class="bar"><div class="fill"></div></div>
       <div class="bar sm"><div class="fill"></div></div>
       <div class="meta">
         <span>134 / 248 MB</span>
-        <span class="speed">89 MB/s · 1.3 s</span>
+        <span class="speed" data-i18n="ops_speed">89 MB/s · 1.3 s</span>
       </div>
     </div>
   </div>
@@ -753,10 +920,10 @@
 <div id="features"></div>
 <div class="section-header">
   <div>
-    <div class="section-num">§ 01 · Catálogo</div>
-    <h2 class="section-title">O que <em>realmente</em><br>faz a diferença.</h2>
+    <div class="section-num" data-i18n="cat_num">§ 01 · Catálogo</div>
+    <h2 class="section-title" data-i18n-html="cat_title">O que <em>realmente</em><br>faz a diferença.</h2>
   </div>
-  <p class="section-blurb">
+  <p class="section-blurb" data-i18n="cat_blurb">
     Cada feature foi adicionada para responder a um problema concreto do
     trabalho diário sobre uma árvore de ficheiros conhecida. Nenhuma está lá
     por bonita. Quase todas podem ser ligadas ou desligadas.
@@ -767,53 +934,53 @@
 
   <div class="feat hero-card w8">
     <div class="pad">
-      <div class="num">01 — PERFIS</div>
-      <h3>Multi-tab por contexto. Cada perfil é uma vista própria, com a sua árvore, filtros e estado.</h3>
-      <p>Drag-reorder, F2 para renomear, Ctrl+1..9 para saltar entre tabs, Ctrl+T para criar.
+      <div class="num" data-i18n="f01_num">01 — PERFIS</div>
+      <h3 data-i18n="f01_h">Multi-tab por contexto. Cada perfil é uma vista própria, com a sua árvore, filtros e estado.</h3>
+      <p data-i18n="f01_p">Drag-reorder, F2 para renomear, Ctrl+1..9 para saltar entre tabs, Ctrl+T para criar.
          As tabs lembram a última pasta visitada e o estado da árvore.</p>
     </div>
     <div class="visual">
-      <span><span class="k">tabs</span> · <span class="v">●</span> default · <span class="v">○</span> scripts · <span class="v">○</span> research</span>
-      <span><span class="k">ativa</span> <span class="v">←</span> destacada com âmbar</span>
-      <span><span class="k">●</span> incluída na pesquisa global</span>
+      <span><span class="k" data-i18n="f01_v1_k">tabs</span> · <span class="v">●</span> default · <span class="v">○</span> scripts · <span class="v">○</span> research</span>
+      <span><span class="k" data-i18n="f01_v2_k">ativa</span> <span class="v">←</span> <span data-i18n="f01_v2_t">destacada com âmbar</span></span>
+      <span><span class="k">●</span> <span data-i18n="f01_v3_t">incluída na pesquisa global</span></span>
     </div>
   </div>
 
   <div class="feat w4">
-    <div class="num">02 — ÁRVORES</div>
-    <h3>Árvores configuráveis.</h3>
-    <p>Defines manualmente as raízes que queres ver. Filesystem e <em>registry</em> entram lado a lado.
+    <div class="num" data-i18n="f02_num">02 — ÁRVORES</div>
+    <h3 data-i18n="f02_h">Árvores configuráveis.</h3>
+    <p data-i18n-html="f02_p">Defines manualmente as raízes que queres ver. Filesystem e <em>registry</em> entram lado a lado.
        Sem a lateral cheia de itens que nunca abres.</p>
-    <div class="feat-mark">Folder + Registry</div>
+    <div class="feat-mark" data-i18n="f02_mark">Folder + Registry</div>
   </div>
 
   <div class="feat w6">
-    <div class="num">03 — PESQUISA</div>
-    <h3>Pesquisa multi-padrão com curingas em qualquer posição.</h3>
-    <p>Escreve <code style="font-family:var(--font-mono);background:var(--bg-2);padding:1px 6px;border-radius:2px;color:var(--accent);">*.cs *.json</code>
+    <div class="num" data-i18n="f03_num">03 — PESQUISA</div>
+    <h3 data-i18n="f03_h">Pesquisa multi-padrão com curingas em qualquer posição.</h3>
+    <p data-i18n-html="f03_p">Escreve <code style="font-family:var(--font-mono);background:var(--bg-2);padding:1px 6px;border-radius:2px;color:var(--accent);">*.cs *.json</code>
        e tens semântica OR. <em>?</em>onfig.json, Test*Run.cs — todos funcionam.</p>
-    <div class="feat-mark">Wildcards · Regex interno</div>
+    <div class="feat-mark" data-i18n="f03_mark">Wildcards · Regex interno</div>
   </div>
 
   <div class="feat w6">
-    <div class="num">04 — PESQUISA GLOBAL</div>
-    <h3>Procurar entre perfis, com opt-in explícito.</h3>
-    <p>Botão direito numa tab → "Incluir na pesquisa global". O dot indicator (●/○)
+    <div class="num" data-i18n="f04_num">04 — PESQUISA GLOBAL</div>
+    <h3 data-i18n="f04_h">Procurar entre perfis, com opt-in explícito.</h3>
+    <p data-i18n="f04_p">Botão direito numa tab → "Incluir na pesquisa global". O dot indicator (●/○)
        diz logo o que entra. Resultados numa janela não modal.</p>
-    <div class="feat-mark">Opt-in · Resultados não modais</div>
+    <div class="feat-mark" data-i18n="f04_mark">Opt-in · Resultados não modais</div>
   </div>
 
   <div class="feat hero-card w12">
     <div class="pad">
-      <div class="num">05 — PRÉ-VISUALIZAÇÃO</div>
-      <h3>Painel de preview rico. Cada tipo de ficheiro com a sua renderização ideal.</h3>
-      <p>Texto com <em>syntax highlight</em> via AvalonEdit, imagens com decode em background,
+      <div class="num" data-i18n="f05_num">05 — PRÉ-VISUALIZAÇÃO</div>
+      <h3 data-i18n="f05_h">Painel de preview rico. Cada tipo de ficheiro com a sua renderização ideal.</h3>
+      <p data-i18n-html="f05_p">Texto com <em>syntax highlight</em> via AvalonEdit, imagens com decode em background,
          PDFs renderizados pelo motor do Edge (WebView2), Markdown convertido em HTML com tema escuro
          pelo Markdig. Tudo individualmente ativável. Cancela load anterior se mudares de selecção.</p>
     </div>
     <div class="preview-demo">
       <div class="src">
-        <div class="h">SOURCE · MainViewModel.cs · C#</div>
+        <div class="h" data-i18n="f05_src_h">SOURCE · MainViewModel.cs · C#</div>
         <div><span class="lno" style="color:var(--fg-3);">1&nbsp;&nbsp;</span><span class="kw">namespace</span> ExplorerFocus.ViewModels;</div>
         <div>&nbsp;</div>
         <div><span class="cmt">/// &lt;summary&gt;Main view-model.&lt;/summary&gt;</span></div>
@@ -830,12 +997,12 @@
         <div>}</div>
       </div>
       <div class="rendered">
-        <div class="src h" style="margin-bottom:14px;">MARKDOWN · README.md</div>
+        <div class="src h" style="margin-bottom:14px;" data-i18n="f05_md_h">MARKDOWN · README.md</div>
         <h4>ExplorerFocus</h4>
-        <p>Substituto focado do Windows Explorer. Trabalha em torno de pastas
+        <p data-i18n-html="f05_md_p">Substituto focado do Windows Explorer. Trabalha em torno de pastas
            configuráveis e <em>esquece tudo</em> que não interessa.</p>
         <p><code>net10.0-windows</code> · <code>WPF</code> · single-file</p>
-        <p style="border-left: 3px solid var(--accent); padding: 4px 12px; background: var(--bg-2); margin-top: 12px;">
+        <p style="border-left: 3px solid var(--accent); padding: 4px 12px; background: var(--bg-2); margin-top: 12px;" data-i18n="f05_md_note">
           Nota — preview funciona com Edge WebView2 instalado (vem com Windows 10/11).
         </p>
       </div>
@@ -843,93 +1010,93 @@
   </div>
 
   <div class="feat w6">
-    <div class="num">06 — OPERAÇÕES DE FICHEIROS</div>
-    <h3>Copiar, mover, apagar — com informação a sério.</h3>
-    <p>Janela flutuante mostra <em>gauge por ficheiro</em>, velocidade real,
+    <div class="num" data-i18n="f06_num">06 — OPERAÇÕES DE FICHEIROS</div>
+    <h3 data-i18n="f06_h">Copiar, mover, apagar — com informação a sério.</h3>
+    <p data-i18n-html="f06_p">Janela flutuante mostra <em>gauge por ficheiro</em>, velocidade real,
        ETA, contagem global. Pausa, retoma, cancela. Até 6 operações em paralelo.
        Continua a tua vida noutra coisa enquanto corre.</p>
-    <div class="feat-mark">Buffer 1 MB · 10 Hz UI · histórico × 20</div>
+    <div class="feat-mark" data-i18n="f06_mark">Buffer 1 MB · 10 Hz UI · histórico × 20</div>
   </div>
 
   <div class="feat w3">
-    <div class="num">07 — CONFLITOS</div>
-    <h3>6-vias.</h3>
-    <p>Sobrepor / Saltar / Duplicar, individuais ou em bulk para o resto da operação.</p>
+    <div class="num" data-i18n="f07_num">07 — CONFLITOS</div>
+    <h3 data-i18n="f07_h">6-vias.</h3>
+    <p data-i18n="f07_p">Sobrepor / Saltar / Duplicar, individuais ou em bulk para o resto da operação.</p>
   </div>
 
   <div class="feat w3">
-    <div class="num">08 — DRAG &amp; DROP</div>
-    <h3>Entre tabs.</h3>
-    <p>Arrasta um ficheiro para uma tab e a tab comuta sozinha após 600ms. Dialog Copiar/Mover na largada.</p>
+    <div class="num" data-i18n="f08_num">08 — DRAG &amp; DROP</div>
+    <h3 data-i18n="f08_h">Entre tabs.</h3>
+    <p data-i18n="f08_p">Arrasta um ficheiro para uma tab e a tab comuta sozinha após 600ms. Dialog Copiar/Mover na largada.</p>
   </div>
 
   <div class="feat w8">
-    <div class="num">09 — APPS POR EXTENSÃO</div>
-    <h3>Detecção automática de extensões novas. Globais entre perfis.</h3>
-    <p>Entras numa pasta com <em>.dwg</em>, <em>.psd</em>, <em>.bak</em>?
+    <div class="num" data-i18n="f09_num">09 — APPS POR EXTENSÃO</div>
+    <h3 data-i18n="f09_h">Detecção automática de extensões novas. Globais entre perfis.</h3>
+    <p data-i18n-html="f09_p">Entras numa pasta com <em>.dwg</em>, <em>.psd</em>, <em>.bak</em>?
        Diálogo agregado pergunta de uma vez. Picker individual por linha
        (browse para o .exe; o nome é auto-resolvido por <em>FileVersionInfo</em>).
        Marca como ignoradas as que não interessam. Lista persiste.</p>
-    <div class="feat-mark">Mute por sessão · Toggle no Settings</div>
+    <div class="feat-mark" data-i18n="f09_mark">Mute por sessão · Toggle no Settings</div>
   </div>
 
   <div class="feat w4">
-    <div class="num">10 — TERMINAIS</div>
-    <h3>CMD, PowerShell, Git Bash — aqui, agora.</h3>
-    <p>Em qualquer pasta da árvore. Versões normais e <em>elevadas</em>.
+    <div class="num" data-i18n="f10_num">10 — TERMINAIS</div>
+    <h3 data-i18n="f10_h">CMD, PowerShell, Git Bash — aqui, agora.</h3>
+    <p data-i18n-html="f10_p">Em qualquer pasta da árvore. Versões normais e <em>elevadas</em>.
        <em>regedit</em> em chaves do registry.</p>
   </div>
 
   <div class="feat w4">
-    <div class="num">11 — CRIAR FICHEIROS</div>
-    <h3>Skeletons sensatos.</h3>
-    <p><em>.cs</em>, <em>.xaml</em>, <em>.json</em>, <em>.md</em>, <em>.cmd</em>, <em>.ps1</em> —
+    <div class="num" data-i18n="f11_num">11 — CRIAR FICHEIROS</div>
+    <h3 data-i18n="f11_h">Skeletons sensatos.</h3>
+    <p data-i18n-html="f11_p"><em>.cs</em>, <em>.xaml</em>, <em>.json</em>, <em>.md</em>, <em>.cmd</em>, <em>.ps1</em> —
        começam com a estrutura típica. O nome destaca-se sem apagar a extensão ao escrever.</p>
   </div>
 
   <div class="feat w4">
-    <div class="num">12 — DARK COMPLETO</div>
-    <h3>Tema escuro até ao fim.</h3>
-    <p>Title bar, scrollbars, datagrids, dialogs, tooltips, preview do Markdown — tudo
+    <div class="num" data-i18n="f12_num">12 — DARK COMPLETO</div>
+    <h3 data-i18n="f12_h">Tema escuro até ao fim.</h3>
+    <p data-i18n="f12_p">Title bar, scrollbars, datagrids, dialogs, tooltips, preview do Markdown — tudo
        no mesmo idioma visual. Sem brancos perdidos a partir lugares improváveis.</p>
   </div>
 
   <div class="feat w4">
-    <div class="num">13 — PERSISTÊNCIA</div>
-    <h3>Lembra-se de tudo.</h3>
-    <p>Geometria da janela principal e da janela de operações. Última tab activa.
+    <div class="num" data-i18n="f13_num">13 — PERSISTÊNCIA</div>
+    <h3 data-i18n="f13_h">Lembra-se de tudo.</h3>
+    <p data-i18n-html="f13_p">Geometria da janela principal e da janela de operações. Última tab activa.
        Largura do tree pane. Sort por coluna. Estado da árvore. Tudo em
        <em>%LOCALAPPDATA%\ExplorerFocus</em>.</p>
   </div>
 
   <div class="feat w4">
-    <div class="num">14 — TOOLTIP RICO</div>
-    <h3>Propriedades sem clique.</h3>
-    <p>Tooltip de 1.8s sobre qualquer ficheiro mostra tamanho computado,
+    <div class="num" data-i18n="f14_num">14 — TOOLTIP RICO</div>
+    <h3 data-i18n="f14_h">Propriedades sem clique.</h3>
+    <p data-i18n="f14_p">Tooltip de 1.8s sobre qualquer ficheiro mostra tamanho computado,
        datas, atributos. Dirs trazem o tamanho recursivo —
        calculado lazy, com semáforo para não martelar o disco.</p>
   </div>
 
   <div class="feat w4">
-    <div class="num">15 — ORDENAÇÃO</div>
-    <h3>Pastas primeiro, sempre.</h3>
-    <p>Comparador customizado garante que diretórios ficam no topo de
+    <div class="num" data-i18n="f15_num">15 — ORDENAÇÃO</div>
+    <h3 data-i18n="f15_h">Pastas primeiro, sempre.</h3>
+    <p data-i18n="f15_p">Comparador customizado garante que diretórios ficam no topo de
        qualquer ordenação, em qualquer coluna, em qualquer direção.
        Como deve ser.</p>
   </div>
 
   <div class="feat w6">
-    <div class="num">16 — MULTI-SELECT</div>
-    <h3>Selecção inteligente.</h3>
-    <p>Clique normal seleciona. Shift+clique estende com semântica
+    <div class="num" data-i18n="f16_num">16 — MULTI-SELECT</div>
+    <h3 data-i18n="f16_h">Selecção inteligente.</h3>
+    <p data-i18n="f16_p">Clique normal seleciona. Shift+clique estende com semântica
        "decide pela maioria" — se o range já está maioritariamente seleccionado, desmarca; senão, marca.
        Ctrl+clique alterna individual. Não há "perdi todas as selecções por acidente".</p>
   </div>
 
   <div class="feat w6">
-    <div class="num">17 — DEPLOYMENT</div>
-    <h3>Um único <em>.exe</em>. Sem instalador.</h3>
-    <p>Self-contained, single-file, com compressão. Copias para uma flash drive
+    <div class="num" data-i18n="f17_num">17 — DEPLOYMENT</div>
+    <h3 data-i18n-html="f17_h">Um único <em>.exe</em>. Sem instalador.</h3>
+    <p data-i18n-html="f17_p">Self-contained, single-file, com compressão. Copias para uma flash drive
        e arranca em qualquer Windows 10/11. <em>net10.0-windows</em> + WPF — sem dependências
        fora da pasta do executável.</p>
   </div>
@@ -940,52 +1107,52 @@
 <section class="shortcuts" id="shortcuts">
   <div class="shortcuts-inner">
     <div class="shortcuts-side">
-      <div class="section-num">§ 02 · Atalhos</div>
-      <h2>As mãos<br>na <em>home row</em>.</h2>
-      <p>Cada operação importante tem um atalho. Sem rato sempre que possível —
+      <div class="section-num" data-i18n="sc_num">§ 02 · Atalhos</div>
+      <h2 data-i18n-html="sc_title">As mãos<br>na <em>home row</em>.</h2>
+      <p data-i18n="sc_blurb">Cada operação importante tem um atalho. Sem rato sempre que possível —
          conforto para sessões longas.</p>
     </div>
 
     <div class="kbd-list">
       <div class="kbd-row">
         <div class="keys"><span class="kbd">F2</span></div>
-        <div class="desc">Renomear o item focado <em>— ficheiro, pasta ou tab</em></div>
+        <div class="desc" data-i18n-html="sc_f2">Renomear o item focado <em>— ficheiro, pasta ou tab</em></div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Enter</span></div>
-        <div class="desc">Abrir o ficheiro com a app associada</div>
+        <div class="desc" data-i18n="sc_enter">Abrir o ficheiro com a app associada</div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Delete</span></div>
-        <div class="desc">Mover para a Reciclagem <em>— via FileOperationsManager</em></div>
+        <div class="desc" data-i18n-html="sc_del">Mover para a Reciclagem <em>— via FileOperationsManager</em></div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">F5</span></div>
-        <div class="desc">Atualizar lista da pasta atual</div>
+        <div class="desc" data-i18n="sc_f5">Atualizar lista da pasta atual</div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">F</span><span class="kbd">/</span><span class="kbd">Ctrl</span><span class="kbd">L</span></div>
-        <div class="desc">Focar a caixa de pesquisa local</div>
+        <div class="desc" data-i18n="sc_find">Focar a caixa de pesquisa local</div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">T</span></div>
-        <div class="desc">Novo perfil (nova tab)</div>
+        <div class="desc" data-i18n="sc_newtab">Novo perfil (nova tab)</div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">W</span></div>
-        <div class="desc">Fechar tab atual</div>
+        <div class="desc" data-i18n="sc_closetab">Fechar tab atual</div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">Tab</span></div>
-        <div class="desc">Próxima tab <em>— Shift inverte</em></div>
+        <div class="desc" data-i18n-html="sc_nexttab">Próxima tab <em>— Shift inverte</em></div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">1</span> ... <span class="kbd">9</span></div>
-        <div class="desc">Saltar para a N-ésima tab</div>
+        <div class="desc" data-i18n="sc_jumptab">Saltar para a N-ésima tab</div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Shift</span>+drag</div>
-        <div class="desc">Forçar <em>Move</em> sem perguntar</div>
+        <div class="desc" data-i18n-html="sc_shiftdrag">Forçar <em>Move</em> sem perguntar</div>
       </div>
     </div>
   </div>
@@ -993,32 +1160,32 @@
 
 <!-- STACK -->
 <section class="stack" id="stack">
-  <div class="section-num">§ 03 · Stack</div>
-  <h2>Construído com <em>peças sérias</em>.</h2>
-  <p>Cada dependência foi escolhida pela maturidade, pelo tamanho ou pela ausência
+  <div class="section-num" data-i18n="st_num">§ 03 · Stack</div>
+  <h2 data-i18n-html="st_title">Construído com <em>peças sérias</em>.</h2>
+  <p data-i18n="st_blurb">Cada dependência foi escolhida pela maturidade, pelo tamanho ou pela ausência
      de alternativas razoáveis. Sem framework do dia.</p>
 
   <div class="stack-grid">
     <div class="stack-cell">
       <div class="ic">.NET</div>
       <h4>net10.0-windows</h4>
-      <p>WPF clássico, sem WinUI nem MAUI.
+      <p data-i18n="st_dotnet">WPF clássico, sem WinUI nem MAUI.
          Compatível com Windows 10 e 11.</p>
     </div>
     <div class="stack-cell">
       <div class="ic">MVVM</div>
       <h4>CommunityToolkit.Mvvm</h4>
-      <p>ObservableObject, ObservableProperty, RelayCommand — geração por source generators.</p>
+      <p data-i18n="st_mvvm">ObservableObject, ObservableProperty, RelayCommand — geração por source generators.</p>
     </div>
     <div class="stack-cell">
-      <div class="ic">PREVIEW</div>
+      <div class="ic" data-i18n="st_preview_ic">PREVIEW</div>
       <h4>AvalonEdit · Markdig · WebView2</h4>
-      <p>Syntax highlight, markdown renderer e embed do motor do Edge para PDF.</p>
+      <p data-i18n="st_preview">Syntax highlight, markdown renderer e embed do motor do Edge para PDF.</p>
     </div>
     <div class="stack-cell">
       <div class="ic">UTIL</div>
       <h4>Microsoft.VisualBasic.FileIO</h4>
-      <p>Para o envio à <em>Reciclagem</em> — a única forma honesta, e funciona.</p>
+      <p data-i18n-html="st_util">Para o envio à <em>Reciclagem</em> — a única forma honesta, e funciona.</p>
     </div>
   </div>
 </section>
@@ -1031,34 +1198,669 @@
         <svg class="brand-mark"><use href="#logo"/></svg>
         <span class="brand-name">Explorer<em>Focus</em></span>
       </div>
-      <p class="footer-tagline">
+      <p class="footer-tagline" data-i18n="ft_tagline">
         O explorer minimal para quem trabalha sempre nos mesmos sítios — e quer
         que a ferramenta saiba isso.
       </p>
     </div>
 
     <div class="footer-col">
-      <h5>Obter</h5>
+      <h5 data-i18n="ft_get">Obter</h5>
       <a href="#">ExplorerFocus.exe</a>
-      <a href="#">Releases</a>
-      <a href="#">Changelog</a>
+      <a href="#" data-i18n="ft_releases">Releases</a>
+      <a href="#" data-i18n="ft_changelog">Changelog</a>
     </div>
 
     <div class="footer-col">
-      <h5>Projecto</h5>
-      <a href="#features">Features</a>
-      <a href="#shortcuts">Atalhos</a>
-      <a href="#stack">Stack</a>
+      <h5 data-i18n="ft_project">Projecto</h5>
+      <a href="#features" data-i18n="nav_features">Features</a>
+      <a href="#shortcuts" data-i18n="nav_shortcuts">Atalhos</a>
+      <a href="#stack" data-i18n="nav_stack">Stack</a>
     </div>
   </div>
 
   <div class="footer-baseline">
     <span>v0.9.0 · WPF · net10.0-windows · single-file</span>
-    <span>desenhado para o quotidiano</span>
+    <span data-i18n="ft_baseline">desenhado para o quotidiano</span>
   </div>
+
+  <div class="mb-credit" data-i18n-html="mb_credit">Um produto <a href="https://nunex-mbrothers.github.io/mBrothers/#products" target="_blank" rel="noopener">mBrothers</a><span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
 </footer>
 
 <script>
+  /* ============================================================
+     i18n dictionary — PT (Português), EN (English US),
+                       DE (Deutsch), ZH (中文 简体)
+  ============================================================ */
+  const I18N = {
+    pt: {
+      page_title: "ExplorerFocus — um explorador de ficheiros sem distrações",
+      page_desc:  "Alternativa focada ao Windows Explorer. Perfis, árvores configuráveis, operações ricas, pré-visualização — tudo em torno do que importa.",
+
+      nav_features: "Features",
+      nav_shortcuts: "Atalhos",
+      nav_stack: "Stack",
+      nav_download: "Obter",
+
+      hero_eyebrow: "Um explorador de ficheiros · WPF · .NET 10",
+      hero_title: 'O explorer<br>que <em>se foca</em><br>no que <span class="strike">não</span> importa.',
+      hero_lede: "ExplorerFocus é um substituto leve do Windows Explorer, desenhado para quem trabalha sempre nas mesmas pastas. Perfis configuráveis, árvores limpas, pré-visualização rica, operações que dão informação a sério — sem o ruído do shell.",
+      hero_meta_os: "Windows 10 / 11",
+      hero_meta_pkg: "Self-contained · single-file",
+      hero_meta_size: "~30 MB",
+
+      app_tree_label: "Árvore",
+      app_col_name: "NOME",
+      app_col_ext: "EXT",
+      app_col_size: "TAMANHO",
+      app_preview_label: "PRÉ-VISUALIZAÇÃO",
+      ops_action: "Copiar · 47 ficheiros",
+      ops_status: "EM EXECUÇÃO",
+      ops_speed: "89 MB/s · 1.3 s",
+
+      cat_num: "§ 01 · Catálogo",
+      cat_title: "O que <em>realmente</em><br>faz a diferença.",
+      cat_blurb: "Cada feature foi adicionada para responder a um problema concreto do trabalho diário sobre uma árvore de ficheiros conhecida. Nenhuma está lá por bonita. Quase todas podem ser ligadas ou desligadas.",
+
+      f01_num: "01 — PERFIS",
+      f01_h: "Multi-tab por contexto. Cada perfil é uma vista própria, com a sua árvore, filtros e estado.",
+      f01_p: "Drag-reorder, F2 para renomear, Ctrl+1..9 para saltar entre tabs, Ctrl+T para criar. As tabs lembram a última pasta visitada e o estado da árvore.",
+      f01_v1_k: "tabs",
+      f01_v2_k: "ativa",
+      f01_v2_t: "destacada com âmbar",
+      f01_v3_t: "incluída na pesquisa global",
+
+      f02_num: "02 — ÁRVORES",
+      f02_h: "Árvores configuráveis.",
+      f02_p: "Defines manualmente as raízes que queres ver. Filesystem e <em>registry</em> entram lado a lado. Sem a lateral cheia de itens que nunca abres.",
+      f02_mark: "Folder + Registry",
+
+      f03_num: "03 — PESQUISA",
+      f03_h: "Pesquisa multi-padrão com curingas em qualquer posição.",
+      f03_p: 'Escreve <code style="font-family:var(--font-mono);background:var(--bg-2);padding:1px 6px;border-radius:2px;color:var(--accent);">*.cs *.json</code> e tens semântica OR. <em>?</em>onfig.json, Test*Run.cs — todos funcionam.',
+      f03_mark: "Wildcards · Regex interno",
+
+      f04_num: "04 — PESQUISA GLOBAL",
+      f04_h: "Procurar entre perfis, com opt-in explícito.",
+      f04_p: 'Botão direito numa tab → "Incluir na pesquisa global". O dot indicator (●/○) diz logo o que entra. Resultados numa janela não modal.',
+      f04_mark: "Opt-in · Resultados não modais",
+
+      f05_num: "05 — PRÉ-VISUALIZAÇÃO",
+      f05_h: "Painel de preview rico. Cada tipo de ficheiro com a sua renderização ideal.",
+      f05_p: "Texto com <em>syntax highlight</em> via AvalonEdit, imagens com decode em background, PDFs renderizados pelo motor do Edge (WebView2), Markdown convertido em HTML com tema escuro pelo Markdig. Tudo individualmente ativável. Cancela load anterior se mudares de selecção.",
+      f05_src_h: "SOURCE · MainViewModel.cs · C#",
+      f05_md_h: "MARKDOWN · README.md",
+      f05_md_p: "Substituto focado do Windows Explorer. Trabalha em torno de pastas configuráveis e <em>esquece tudo</em> que não interessa.",
+      f05_md_note: "Nota — preview funciona com Edge WebView2 instalado (vem com Windows 10/11).",
+
+      f06_num: "06 — OPERAÇÕES DE FICHEIROS",
+      f06_h: "Copiar, mover, apagar — com informação a sério.",
+      f06_p: "Janela flutuante mostra <em>gauge por ficheiro</em>, velocidade real, ETA, contagem global. Pausa, retoma, cancela. Até 6 operações em paralelo. Continua a tua vida noutra coisa enquanto corre.",
+      f06_mark: "Buffer 1 MB · 10 Hz UI · histórico × 20",
+
+      f07_num: "07 — CONFLITOS",
+      f07_h: "6-vias.",
+      f07_p: "Sobrepor / Saltar / Duplicar, individuais ou em bulk para o resto da operação.",
+
+      f08_num: "08 — DRAG &amp; DROP",
+      f08_h: "Entre tabs.",
+      f08_p: "Arrasta um ficheiro para uma tab e a tab comuta sozinha após 600ms. Dialog Copiar/Mover na largada.",
+
+      f09_num: "09 — APPS POR EXTENSÃO",
+      f09_h: "Detecção automática de extensões novas. Globais entre perfis.",
+      f09_p: "Entras numa pasta com <em>.dwg</em>, <em>.psd</em>, <em>.bak</em>? Diálogo agregado pergunta de uma vez. Picker individual por linha (browse para o .exe; o nome é auto-resolvido por <em>FileVersionInfo</em>). Marca como ignoradas as que não interessam. Lista persiste.",
+      f09_mark: "Mute por sessão · Toggle no Settings",
+
+      f10_num: "10 — TERMINAIS",
+      f10_h: "CMD, PowerShell, Git Bash — aqui, agora.",
+      f10_p: "Em qualquer pasta da árvore. Versões normais e <em>elevadas</em>. <em>regedit</em> em chaves do registry.",
+
+      f11_num: "11 — CRIAR FICHEIROS",
+      f11_h: "Skeletons sensatos.",
+      f11_p: "<em>.cs</em>, <em>.xaml</em>, <em>.json</em>, <em>.md</em>, <em>.cmd</em>, <em>.ps1</em> — começam com a estrutura típica. O nome destaca-se sem apagar a extensão ao escrever.",
+
+      f12_num: "12 — DARK COMPLETO",
+      f12_h: "Tema escuro até ao fim.",
+      f12_p: "Title bar, scrollbars, datagrids, dialogs, tooltips, preview do Markdown — tudo no mesmo idioma visual. Sem brancos perdidos a partir lugares improváveis.",
+
+      f13_num: "13 — PERSISTÊNCIA",
+      f13_h: "Lembra-se de tudo.",
+      f13_p: "Geometria da janela principal e da janela de operações. Última tab activa. Largura do tree pane. Sort por coluna. Estado da árvore. Tudo em <em>%LOCALAPPDATA%\\ExplorerFocus</em>.",
+
+      f14_num: "14 — TOOLTIP RICO",
+      f14_h: "Propriedades sem clique.",
+      f14_p: "Tooltip de 1.8s sobre qualquer ficheiro mostra tamanho computado, datas, atributos. Dirs trazem o tamanho recursivo — calculado lazy, com semáforo para não martelar o disco.",
+
+      f15_num: "15 — ORDENAÇÃO",
+      f15_h: "Pastas primeiro, sempre.",
+      f15_p: "Comparador customizado garante que diretórios ficam no topo de qualquer ordenação, em qualquer coluna, em qualquer direção. Como deve ser.",
+
+      f16_num: "16 — MULTI-SELECT",
+      f16_h: "Selecção inteligente.",
+      f16_p: 'Clique normal seleciona. Shift+clique estende com semântica "decide pela maioria" — se o range já está maioritariamente seleccionado, desmarca; senão, marca. Ctrl+clique alterna individual. Não há "perdi todas as selecções por acidente".',
+
+      f17_num: "17 — DEPLOYMENT",
+      f17_h: "Um único <em>.exe</em>. Sem instalador.",
+      f17_p: "Self-contained, single-file, com compressão. Copias para uma flash drive e arranca em qualquer Windows 10/11. <em>net10.0-windows</em> + WPF — sem dependências fora da pasta do executável.",
+
+      sc_num: "§ 02 · Atalhos",
+      sc_title: "As mãos<br>na <em>home row</em>.",
+      sc_blurb: "Cada operação importante tem um atalho. Sem rato sempre que possível — conforto para sessões longas.",
+      sc_f2: "Renomear o item focado <em>— ficheiro, pasta ou tab</em>",
+      sc_enter: "Abrir o ficheiro com a app associada",
+      sc_del: "Mover para a Reciclagem <em>— via FileOperationsManager</em>",
+      sc_f5: "Atualizar lista da pasta atual",
+      sc_find: "Focar a caixa de pesquisa local",
+      sc_newtab: "Novo perfil (nova tab)",
+      sc_closetab: "Fechar tab atual",
+      sc_nexttab: "Próxima tab <em>— Shift inverte</em>",
+      sc_jumptab: "Saltar para a N-ésima tab",
+      sc_shiftdrag: "Forçar <em>Move</em> sem perguntar",
+
+      st_num: "§ 03 · Stack",
+      st_title: "Construído com <em>peças sérias</em>.",
+      st_blurb: "Cada dependência foi escolhida pela maturidade, pelo tamanho ou pela ausência de alternativas razoáveis. Sem framework do dia.",
+      st_dotnet: "WPF clássico, sem WinUI nem MAUI. Compatível com Windows 10 e 11.",
+      st_mvvm: "ObservableObject, ObservableProperty, RelayCommand — geração por source generators.",
+      st_preview_ic: "PREVIEW",
+      st_preview: "Syntax highlight, markdown renderer e embed do motor do Edge para PDF.",
+      st_util: "Para o envio à <em>Reciclagem</em> — a única forma honesta, e funciona.",
+
+      ft_tagline: "O explorer minimal para quem trabalha sempre nos mesmos sítios — e quer que a ferramenta saiba isso.",
+      ft_get: "Obter",
+      ft_releases: "Releases",
+      ft_changelog: "Changelog",
+      ft_project: "Projecto",
+      ft_baseline: "desenhado para o quotidiano",
+      mb_credit: 'Um produto <a href="https://nunex-mbrothers.github.io/mBrothers/#products" target="_blank" rel="noopener">mBrothers</a><span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems',
+    },
+
+    en: {
+      page_title: "ExplorerFocus — a distraction-free file explorer",
+      page_desc:  "A focused alternative to Windows Explorer. Profiles, configurable trees, rich operations, preview — all centered on what matters.",
+
+      nav_features: "Features",
+      nav_shortcuts: "Shortcuts",
+      nav_stack: "Stack",
+      nav_download: "Get it",
+
+      hero_eyebrow: "A file explorer · WPF · .NET 10",
+      hero_title: 'The explorer<br>that <em>focuses</em><br>on what <span class="strike">doesn\'t</span> matter.',
+      hero_lede: "ExplorerFocus is a lightweight Windows Explorer replacement, designed for people who always work in the same folders. Configurable profiles, clean trees, rich preview, operations that actually tell you what's happening — without the shell's noise.",
+      hero_meta_os: "Windows 10 / 11",
+      hero_meta_pkg: "Self-contained · single-file",
+      hero_meta_size: "~30 MB",
+
+      app_tree_label: "Tree",
+      app_col_name: "NAME",
+      app_col_ext: "EXT",
+      app_col_size: "SIZE",
+      app_preview_label: "PREVIEW",
+      ops_action: "Copy · 47 files",
+      ops_status: "RUNNING",
+      ops_speed: "89 MB/s · 1.3 s",
+
+      cat_num: "§ 01 · Catalog",
+      cat_title: "What <em>really</em><br>makes a difference.",
+      cat_blurb: "Each feature was added to answer a concrete problem in daily work over a known file tree. None is there for show. Almost all can be toggled on or off.",
+
+      f01_num: "01 — PROFILES",
+      f01_h: "Multi-tab by context. Each profile is its own view, with its tree, filters and state.",
+      f01_p: "Drag-reorder, F2 to rename, Ctrl+1..9 to jump between tabs, Ctrl+T to create. Tabs remember the last folder visited and the tree state.",
+      f01_v1_k: "tabs",
+      f01_v2_k: "active",
+      f01_v2_t: "highlighted in amber",
+      f01_v3_t: "included in global search",
+
+      f02_num: "02 — TREES",
+      f02_h: "Configurable trees.",
+      f02_p: "You manually define the roots you want to see. Filesystem and <em>registry</em> side by side. No sidebar full of items you never open.",
+      f02_mark: "Folder + Registry",
+
+      f03_num: "03 — SEARCH",
+      f03_h: "Multi-pattern search with wildcards in any position.",
+      f03_p: 'Type <code style="font-family:var(--font-mono);background:var(--bg-2);padding:1px 6px;border-radius:2px;color:var(--accent);">*.cs *.json</code> and get OR semantics. <em>?</em>onfig.json, Test*Run.cs — all work.',
+      f03_mark: "Wildcards · Internal regex",
+
+      f04_num: "04 — GLOBAL SEARCH",
+      f04_h: "Search across profiles, with explicit opt-in.",
+      f04_p: 'Right-click a tab → "Include in global search". The dot indicator (●/○) shows what\'s in. Results in a non-modal window.',
+      f04_mark: "Opt-in · Non-modal results",
+
+      f05_num: "05 — PREVIEW",
+      f05_h: "Rich preview pane. Each file type with its ideal rendering.",
+      f05_p: "Text with <em>syntax highlight</em> via AvalonEdit, images decoded in the background, PDFs rendered by the Edge engine (WebView2), Markdown converted to HTML with a dark theme by Markdig. Individually toggleable. Cancels previous load if you change selection.",
+      f05_src_h: "SOURCE · MainViewModel.cs · C#",
+      f05_md_h: "MARKDOWN · README.md",
+      f05_md_p: "A focused Windows Explorer replacement. Built around configurable folders, it <em>forgets everything</em> that doesn't matter.",
+      f05_md_note: "Note — preview works with Edge WebView2 installed (ships with Windows 10/11).",
+
+      f06_num: "06 — FILE OPERATIONS",
+      f06_h: "Copy, move, delete — with real information.",
+      f06_p: "Floating window shows <em>per-file gauge</em>, real speed, ETA, global count. Pause, resume, cancel. Up to 6 parallel operations. Get on with your life while it runs.",
+      f06_mark: "Buffer 1 MB · 10 Hz UI · history × 20",
+
+      f07_num: "07 — CONFLICTS",
+      f07_h: "6-way.",
+      f07_p: "Overwrite / Skip / Duplicate, individually or in bulk for the rest of the operation.",
+
+      f08_num: "08 — DRAG &amp; DROP",
+      f08_h: "Between tabs.",
+      f08_p: "Drag a file to a tab and the tab switches on its own after 600ms. Copy/Move dialog on drop.",
+
+      f09_num: "09 — APPS BY EXTENSION",
+      f09_h: "Auto-detect new extensions. Shared across profiles.",
+      f09_p: "Enter a folder with <em>.dwg</em>, <em>.psd</em>, <em>.bak</em>? An aggregated dialog asks once. Per-row picker (browse to the .exe; name auto-resolved by <em>FileVersionInfo</em>). Mark as ignored those you don't care about. The list persists.",
+      f09_mark: "Mute per session · Toggle in Settings",
+
+      f10_num: "10 — TERMINALS",
+      f10_h: "CMD, PowerShell, Git Bash — here, now.",
+      f10_p: "In any tree folder. Normal and <em>elevated</em> variants. <em>regedit</em> on registry keys.",
+
+      f11_num: "11 — CREATE FILES",
+      f11_h: "Sensible skeletons.",
+      f11_p: "<em>.cs</em>, <em>.xaml</em>, <em>.json</em>, <em>.md</em>, <em>.cmd</em>, <em>.ps1</em> — start with the typical structure. The name is highlighted without erasing the extension while typing.",
+
+      f12_num: "12 — FULL DARK",
+      f12_h: "Dark theme all the way.",
+      f12_p: "Title bar, scrollbars, datagrids, dialogs, tooltips, Markdown preview — all in the same visual language. No stray whites from unlikely places.",
+
+      f13_num: "13 — PERSISTENCE",
+      f13_h: "Remembers everything.",
+      f13_p: "Geometry of the main window and the operations window. Last active tab. Tree pane width. Column sort. Tree state. All in <em>%LOCALAPPDATA%\\ExplorerFocus</em>.",
+
+      f14_num: "14 — RICH TOOLTIP",
+      f14_h: "Properties without a click.",
+      f14_p: "A 1.8s tooltip over any file shows computed size, dates, attributes. Folders carry the recursive size — computed lazily, with a semaphore to avoid hammering the disk.",
+
+      f15_num: "15 — SORTING",
+      f15_h: "Folders first, always.",
+      f15_p: "A custom comparer guarantees directories stay on top of any sort, in any column, in any direction. As it should be.",
+
+      f16_num: "16 — MULTI-SELECT",
+      f16_h: "Smart selection.",
+      f16_p: 'Normal click selects. Shift+click extends with "majority decides" semantics — if the range is mostly already selected, it unmarks; otherwise it marks. Ctrl+click toggles individually. No more "I lost all selections by accident".',
+
+      f17_num: "17 — DEPLOYMENT",
+      f17_h: "A single <em>.exe</em>. No installer.",
+      f17_p: "Self-contained, single-file, compressed. Copy to a flash drive and it runs on any Windows 10/11. <em>net10.0-windows</em> + WPF — no dependencies outside the executable's folder.",
+
+      sc_num: "§ 02 · Shortcuts",
+      sc_title: "Hands on<br>the <em>home row</em>.",
+      sc_blurb: "Every important operation has a shortcut. Mouse-free whenever possible — comfort for long sessions.",
+      sc_f2: "Rename the focused item <em>— file, folder, or tab</em>",
+      sc_enter: "Open the file with the associated app",
+      sc_del: "Move to Recycle Bin <em>— via FileOperationsManager</em>",
+      sc_f5: "Refresh current folder listing",
+      sc_find: "Focus the local search box",
+      sc_newtab: "New profile (new tab)",
+      sc_closetab: "Close current tab",
+      sc_nexttab: "Next tab <em>— Shift reverses</em>",
+      sc_jumptab: "Jump to the Nth tab",
+      sc_shiftdrag: "Force <em>Move</em> without asking",
+
+      st_num: "§ 03 · Stack",
+      st_title: "Built with <em>serious parts</em>.",
+      st_blurb: "Each dependency was chosen for maturity, size, or the absence of reasonable alternatives. No framework-of-the-day.",
+      st_dotnet: "Classic WPF, no WinUI or MAUI. Compatible with Windows 10 and 11.",
+      st_mvvm: "ObservableObject, ObservableProperty, RelayCommand — generated by source generators.",
+      st_preview_ic: "PREVIEW",
+      st_preview: "Syntax highlight, markdown renderer, and embedded Edge engine for PDF.",
+      st_util: "For sending to the <em>Recycle Bin</em> — the only honest way, and it works.",
+
+      ft_tagline: "The minimal explorer for people who always work in the same places — and want the tool to know it.",
+      ft_get: "Get it",
+      ft_releases: "Releases",
+      ft_changelog: "Changelog",
+      ft_project: "Project",
+      ft_baseline: "designed for the daily grind",
+      mb_credit: 'An <a href="https://nunex-mbrothers.github.io/mBrothers/#products" target="_blank" rel="noopener">mBrothers</a> product<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems',
+    },
+
+    de: {
+      page_title: "ExplorerFocus — ein ablenkungsfreier Dateiexplorer",
+      page_desc:  "Eine fokussierte Alternative zum Windows-Explorer. Profile, konfigurierbare Bäume, mächtige Operationen, Vorschau — alles auf das Wesentliche ausgerichtet.",
+
+      nav_features: "Funktionen",
+      nav_shortcuts: "Tastenkürzel",
+      nav_stack: "Stack",
+      nav_download: "Herunterladen",
+
+      hero_eyebrow: "Ein Dateiexplorer · WPF · .NET 10",
+      hero_title: 'Der Explorer,<br>der sich <em>konzentriert</em><br>auf das, was <span class="strike">nicht</span> zählt.',
+      hero_lede: "ExplorerFocus ist ein schlanker Ersatz für den Windows-Explorer, entworfen für Menschen, die immer in denselben Ordnern arbeiten. Konfigurierbare Profile, aufgeräumte Bäume, reichhaltige Vorschau, Operationen mit echten Informationen — ohne den Lärm der Shell.",
+      hero_meta_os: "Windows 10 / 11",
+      hero_meta_pkg: "Self-contained · single-file",
+      hero_meta_size: "~30 MB",
+
+      app_tree_label: "Baum",
+      app_col_name: "NAME",
+      app_col_ext: "ERW.",
+      app_col_size: "GRÖSSE",
+      app_preview_label: "VORSCHAU",
+      ops_action: "Kopieren · 47 Dateien",
+      ops_status: "LÄUFT",
+      ops_speed: "89 MB/s · 1,3 s",
+
+      cat_num: "§ 01 · Katalog",
+      cat_title: "Was <em>wirklich</em><br>einen Unterschied macht.",
+      cat_blurb: "Jede Funktion wurde hinzugefügt, um ein konkretes Problem aus dem täglichen Arbeiten in einem bekannten Dateibaum zu lösen. Keine ist nur Zierde. Fast alle lassen sich ein- oder ausschalten.",
+
+      f01_num: "01 — PROFILE",
+      f01_h: "Multi-Tab nach Kontext. Jedes Profil ist eine eigene Ansicht mit eigenem Baum, Filtern und Zustand.",
+      f01_p: "Drag-Reorder, F2 zum Umbenennen, Strg+1..9 zum Wechseln zwischen Tabs, Strg+T zum Erstellen. Tabs merken sich den zuletzt besuchten Ordner und den Baumzustand.",
+      f01_v1_k: "Tabs",
+      f01_v2_k: "aktiv",
+      f01_v2_t: "in Bernstein hervorgehoben",
+      f01_v3_t: "in globaler Suche enthalten",
+
+      f02_num: "02 — BÄUME",
+      f02_h: "Konfigurierbare Bäume.",
+      f02_p: "Du definierst manuell die Wurzeln, die du sehen willst. Dateisystem und <em>Registry</em> Seite an Seite. Keine Seitenleiste voll mit Einträgen, die du nie öffnest.",
+      f02_mark: "Ordner + Registry",
+
+      f03_num: "03 — SUCHE",
+      f03_h: "Multi-Muster-Suche mit Wildcards an jeder Position.",
+      f03_p: 'Tippe <code style="font-family:var(--font-mono);background:var(--bg-2);padding:1px 6px;border-radius:2px;color:var(--accent);">*.cs *.json</code> und du erhältst OR-Semantik. <em>?</em>onfig.json, Test*Run.cs — alles funktioniert.',
+      f03_mark: "Wildcards · Interner Regex",
+
+      f04_num: "04 — GLOBALE SUCHE",
+      f04_h: "Über Profile hinweg suchen, mit explizitem Opt-in.",
+      f04_p: 'Rechtsklick auf einen Tab → „In globaler Suche einschließen". Der Punkt-Indikator (●/○) zeigt sofort, was dabei ist. Ergebnisse in einem nicht-modalen Fenster.',
+      f04_mark: "Opt-in · Nicht-modale Ergebnisse",
+
+      f05_num: "05 — VORSCHAU",
+      f05_h: "Reichhaltiges Vorschau-Panel. Jeder Dateityp mit idealer Darstellung.",
+      f05_p: "Text mit <em>Syntax-Highlighting</em> via AvalonEdit, Bilder mit Hintergrund-Dekodierung, PDFs gerendert durch die Edge-Engine (WebView2), Markdown in HTML mit dunklem Theme durch Markdig. Einzeln aktivierbar. Bricht vorherigen Ladevorgang ab, wenn du die Auswahl änderst.",
+      f05_src_h: "QUELLCODE · MainViewModel.cs · C#",
+      f05_md_h: "MARKDOWN · README.md",
+      f05_md_p: "Ein fokussierter Ersatz für den Windows-Explorer. Aufgebaut um konfigurierbare Ordner und <em>vergisst alles</em>, was nicht zählt.",
+      f05_md_note: "Hinweis — Vorschau funktioniert mit installiertem Edge WebView2 (kommt mit Windows 10/11).",
+
+      f06_num: "06 — DATEIOPERATIONEN",
+      f06_h: "Kopieren, verschieben, löschen — mit echter Information.",
+      f06_p: "Schwebendes Fenster zeigt <em>Anzeige pro Datei</em>, echte Geschwindigkeit, Restzeit, Gesamtzahl. Anhalten, fortsetzen, abbrechen. Bis zu 6 parallele Operationen. Mach weiter mit deinem Leben, während es läuft.",
+      f06_mark: "Puffer 1 MB · 10 Hz UI · Verlauf × 20",
+
+      f07_num: "07 — KONFLIKTE",
+      f07_h: "6-Wege.",
+      f07_p: "Überschreiben / Überspringen / Duplizieren, einzeln oder gesammelt für den Rest der Operation.",
+
+      f08_num: "08 — DRAG &amp; DROP",
+      f08_h: "Zwischen Tabs.",
+      f08_p: "Ziehe eine Datei auf einen Tab und der Tab wechselt nach 600ms von selbst. Kopieren/Verschieben-Dialog beim Ablegen.",
+
+      f09_num: "09 — APPS NACH ERWEITERUNG",
+      f09_h: "Auto-Erkennung neuer Erweiterungen. Geteilt über Profile.",
+      f09_p: "Du betrittst einen Ordner mit <em>.dwg</em>, <em>.psd</em>, <em>.bak</em>? Ein gebündelter Dialog fragt einmal. Picker pro Zeile (durchsuche zur .exe; Name wird durch <em>FileVersionInfo</em> automatisch aufgelöst). Markiere die uninteressanten als ignoriert. Die Liste bleibt erhalten.",
+      f09_mark: "Stumm pro Sitzung · Schalter in Einstellungen",
+
+      f10_num: "10 — TERMINALS",
+      f10_h: "CMD, PowerShell, Git Bash — hier, jetzt.",
+      f10_p: "In jedem Baum-Ordner. Normale und <em>erhöhte</em> Varianten. <em>regedit</em> auf Registry-Schlüsseln.",
+
+      f11_num: "11 — DATEIEN ERSTELLEN",
+      f11_h: "Vernünftige Grundgerüste.",
+      f11_p: "<em>.cs</em>, <em>.xaml</em>, <em>.json</em>, <em>.md</em>, <em>.cmd</em>, <em>.ps1</em> — beginnen mit der typischen Struktur. Der Name wird hervorgehoben, ohne die Erweiterung beim Tippen zu löschen.",
+
+      f12_num: "12 — VOLLSTÄNDIG DUNKEL",
+      f12_h: "Dunkles Theme bis zum Ende.",
+      f12_p: "Titelleiste, Bildlaufleisten, DataGrids, Dialoge, Tooltips, Markdown-Vorschau — alles in derselben visuellen Sprache. Keine verirrten Weißflächen an unwahrscheinlichen Stellen.",
+
+      f13_num: "13 — PERSISTENZ",
+      f13_h: "Merkt sich alles.",
+      f13_p: "Geometrie des Hauptfensters und des Operationenfensters. Letzter aktiver Tab. Breite des Baum-Panels. Spaltensortierung. Baumzustand. Alles in <em>%LOCALAPPDATA%\\ExplorerFocus</em>.",
+
+      f14_num: "14 — REICHHALTIGER TOOLTIP",
+      f14_h: "Eigenschaften ohne Klick.",
+      f14_p: "Ein 1,8s-Tooltip über jeder Datei zeigt berechnete Größe, Daten, Attribute. Ordner liefern die rekursive Größe — lazy berechnet, mit Semaphor, damit die Festplatte nicht gehämmert wird.",
+
+      f15_num: "15 — SORTIERUNG",
+      f15_h: "Ordner zuerst, immer.",
+      f15_p: "Ein eigener Comparer garantiert, dass Verzeichnisse bei jeder Sortierung oben bleiben, in jeder Spalte, in jede Richtung. So gehört es sich.",
+
+      f16_num: "16 — MEHRFACHAUSWAHL",
+      f16_h: "Intelligente Auswahl.",
+      f16_p: 'Normaler Klick wählt aus. Shift+Klick erweitert mit „Mehrheit entscheidet"-Semantik — ist der Bereich überwiegend ausgewählt, hebt es auf; sonst wählt es. Strg+Klick schaltet einzeln um. Kein „alle Auswahlen versehentlich verloren".',
+
+      f17_num: "17 — BEREITSTELLUNG",
+      f17_h: "Eine einzige <em>.exe</em>. Kein Installer.",
+      f17_p: "Self-contained, single-file, komprimiert. Kopiere auf einen USB-Stick und es läuft auf jedem Windows 10/11. <em>net10.0-windows</em> + WPF — keine Abhängigkeiten außerhalb des Programmordners.",
+
+      sc_num: "§ 02 · Tastenkürzel",
+      sc_title: "Hände auf<br>der <em>Home Row</em>.",
+      sc_blurb: "Jede wichtige Operation hat ein Kürzel. Mauslos wann immer möglich — Komfort für lange Sitzungen.",
+      sc_f2: "Fokussiertes Element umbenennen <em>— Datei, Ordner oder Tab</em>",
+      sc_enter: "Datei mit zugeordneter App öffnen",
+      sc_del: "In den Papierkorb verschieben <em>— über FileOperationsManager</em>",
+      sc_f5: "Liste des aktuellen Ordners aktualisieren",
+      sc_find: "Lokales Suchfeld fokussieren",
+      sc_newtab: "Neues Profil (neuer Tab)",
+      sc_closetab: "Aktuellen Tab schließen",
+      sc_nexttab: "Nächster Tab <em>— Shift kehrt um</em>",
+      sc_jumptab: "Zum N-ten Tab springen",
+      sc_shiftdrag: "<em>Verschieben</em> erzwingen ohne Nachfrage",
+
+      st_num: "§ 03 · Stack",
+      st_title: "Gebaut mit <em>ernsthaften Teilen</em>.",
+      st_blurb: "Jede Abhängigkeit wurde wegen Reife, Größe oder dem Fehlen vernünftiger Alternativen gewählt. Kein Framework-des-Tages.",
+      st_dotnet: "Klassisches WPF, kein WinUI oder MAUI. Kompatibel mit Windows 10 und 11.",
+      st_mvvm: "ObservableObject, ObservableProperty, RelayCommand — erzeugt durch Source Generators.",
+      st_preview_ic: "VORSCHAU",
+      st_preview: "Syntax-Highlight, Markdown-Renderer und eingebettete Edge-Engine für PDF.",
+      st_util: "Zum Senden in den <em>Papierkorb</em> — der einzige ehrliche Weg, und er funktioniert.",
+
+      ft_tagline: "Der minimale Explorer für Menschen, die immer an denselben Orten arbeiten — und wollen, dass das Werkzeug das weiß.",
+      ft_get: "Herunterladen",
+      ft_releases: "Releases",
+      ft_changelog: "Changelog",
+      ft_project: "Projekt",
+      ft_baseline: "für den Alltag gemacht",
+      mb_credit: 'Ein <a href="https://nunex-mbrothers.github.io/mBrothers/#products" target="_blank" rel="noopener">mBrothers</a>-Produkt<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems',
+    },
+
+    zh: {
+      page_title: "ExplorerFocus — 无干扰的文件浏览器",
+      page_desc:  "Windows 资源管理器的专注式替代品。配置文件、可定制目录树、丰富的文件操作、预览 — 一切只围绕真正重要的内容。",
+
+      nav_features: "功能",
+      nav_shortcuts: "快捷键",
+      nav_stack: "技术栈",
+      nav_download: "下载",
+
+      hero_eyebrow: "文件浏览器 · WPF · .NET 10",
+      hero_title: '专注于<br><em>真正</em>重要的事,<br><span class="strike">忽略</span>其它一切的浏览器。',
+      hero_lede: "ExplorerFocus 是一款轻量级的 Windows 资源管理器替代品,为那些总在相同文件夹中工作的人而设计。可配置的配置文件、整洁的目录树、丰富的预览、能告诉你真实情况的文件操作 — 没有 Shell 的喧嚣。",
+      hero_meta_os: "Windows 10 / 11",
+      hero_meta_pkg: "自包含 · 单文件",
+      hero_meta_size: "约 30 MB",
+
+      app_tree_label: "目录树",
+      app_col_name: "名称",
+      app_col_ext: "扩展",
+      app_col_size: "大小",
+      app_preview_label: "预览",
+      ops_action: "复制 · 47 个文件",
+      ops_status: "运行中",
+      ops_speed: "89 MB/秒 · 1.3 秒",
+
+      cat_num: "§ 01 · 功能目录",
+      cat_title: "什么<em>真正</em><br>带来改变。",
+      cat_blurb: "每项功能都为解决日常工作中对已知文件树的具体问题而添加。没有一项只为好看。几乎所有都可以开关。",
+
+      f01_num: "01 — 配置文件",
+      f01_h: "按场景多标签。每个配置文件都是独立视图,拥有自己的目录树、过滤器与状态。",
+      f01_p: "拖拽重排、F2 重命名、Ctrl+1..9 在标签间跳转、Ctrl+T 新建。标签会记住最后访问的文件夹和目录树状态。",
+      f01_v1_k: "标签",
+      f01_v2_k: "活动",
+      f01_v2_t: "以琥珀色高亮",
+      f01_v3_t: "包含在全局搜索中",
+
+      f02_num: "02 — 目录树",
+      f02_h: "可配置的目录树。",
+      f02_p: "手动定义想要看到的根节点。文件系统与<em>注册表</em>并列。没有满是从不打开项目的侧边栏。",
+      f02_mark: "文件夹 + 注册表",
+
+      f03_num: "03 — 搜索",
+      f03_h: "支持任意位置通配符的多模式搜索。",
+      f03_p: '输入 <code style="font-family:var(--font-mono);background:var(--bg-2);padding:1px 6px;border-radius:2px;color:var(--accent);">*.cs *.json</code> 即获得 OR 语义。<em>?</em>onfig.json、Test*Run.cs — 全部可用。',
+      f03_mark: "通配符 · 内部正则",
+
+      f04_num: "04 — 全局搜索",
+      f04_h: "跨配置文件搜索,需显式启用。",
+      f04_p: '右键点击标签 → "加入全局搜索"。点状指示符 (●/○) 立即显示参与情况。结果显示在非模态窗口中。',
+      f04_mark: "选择启用 · 非模态结果",
+
+      f05_num: "05 — 预览",
+      f05_h: "丰富的预览面板。每种文件类型都有理想的渲染方式。",
+      f05_p: "文本通过 AvalonEdit 进行<em>语法高亮</em>、图像后台解码、PDF 由 Edge 引擎 (WebView2) 渲染、Markdown 由 Markdig 转为 HTML 并以深色主题展示。各项可独立启用。切换选择时会取消上次加载。",
+      f05_src_h: "源码 · MainViewModel.cs · C#",
+      f05_md_h: "MARKDOWN · README.md",
+      f05_md_p: "专注式的 Windows 资源管理器替代品。围绕可配置的文件夹构建,<em>忽略一切</em>无关内容。",
+      f05_md_note: "注 — 预览功能需安装 Edge WebView2 (随 Windows 10/11 提供)。",
+
+      f06_num: "06 — 文件操作",
+      f06_h: "复制、移动、删除 — 提供真实信息。",
+      f06_p: "悬浮窗口显示<em>每个文件的进度条</em>、真实速度、剩余时间、总数。可暂停、恢复、取消。最多 6 个并行操作。运行时你可以继续做其它事。",
+      f06_mark: "缓冲 1 MB · 10 Hz UI · 历史 × 20",
+
+      f07_num: "07 — 冲突处理",
+      f07_h: "6 种方式。",
+      f07_p: "覆盖 / 跳过 / 复制为新名,可对单个或剩余整批操作生效。",
+
+      f08_num: "08 — 拖放",
+      f08_h: "在标签之间。",
+      f08_p: "把文件拖到某个标签上,600 毫秒后标签会自动切换。放下时会弹出复制/移动对话框。",
+
+      f09_num: "09 — 按扩展名关联应用",
+      f09_h: "自动检测新扩展名。在配置文件间共享。",
+      f09_p: "进入含有 <em>.dwg</em>、<em>.psd</em>、<em>.bak</em> 的文件夹? 聚合对话框一次性询问。逐行选择器 (浏览 .exe;名称通过 <em>FileVersionInfo</em> 自动解析)。把不在意的标记为忽略。列表持久保存。",
+      f09_mark: "会话内静音 · 设置中可切换",
+
+      f10_num: "10 — 终端",
+      f10_h: "CMD、PowerShell、Git Bash — 此时此地。",
+      f10_p: "可在目录树的任何文件夹中打开。提供普通和<em>提权</em>两种。可对注册表键打开 <em>regedit</em>。",
+
+      f11_num: "11 — 新建文件",
+      f11_h: "合理的模板骨架。",
+      f11_p: "<em>.cs</em>、<em>.xaml</em>、<em>.json</em>、<em>.md</em>、<em>.cmd</em>、<em>.ps1</em> — 以典型结构开始。输入时只高亮名称部分,不会擦除扩展名。",
+
+      f12_num: "12 — 全深色",
+      f12_h: "深色主题贯彻到底。",
+      f12_p: "标题栏、滚动条、DataGrid、对话框、提示框、Markdown 预览 — 全部统一视觉语言。没有从奇怪地方冒出来的白色。",
+
+      f13_num: "13 — 状态持久化",
+      f13_h: "记住一切。",
+      f13_p: "主窗口和操作窗口的几何形状。最后活动的标签。目录树面板宽度。列排序。目录树状态。全部保存在 <em>%LOCALAPPDATA%\\ExplorerFocus</em>。",
+
+      f14_num: "14 — 富文本提示",
+      f14_h: "无需点击的属性。",
+      f14_p: "在任何文件上停留 1.8 秒的提示框会显示计算后的大小、日期、属性。文件夹携带递归大小 — 延迟计算,带信号量以避免反复读盘。",
+
+      f15_num: "15 — 排序",
+      f15_h: "文件夹优先,始终如一。",
+      f15_p: "自定义比较器保证目录在任何排序下都位于顶部 — 任何列、任何方向。本应如此。",
+
+      f16_num: "16 — 多选",
+      f16_h: "智能选择。",
+      f16_p: '普通点击选中。Shift+点击以"多数决"语义扩展 — 若区间多数已选则取消选中,否则选中。Ctrl+点击逐项切换。不会再"不小心丢了所有选择"。',
+
+      f17_num: "17 — 部署",
+      f17_h: "单个 <em>.exe</em>。无需安装程序。",
+      f17_p: "自包含、单文件、压缩。复制到 U 盘,可在任意 Windows 10/11 上运行。<em>net10.0-windows</em> + WPF — 可执行文件之外没有任何依赖。",
+
+      sc_num: "§ 02 · 快捷键",
+      sc_title: "双手停留<br>在<em>主键行</em>。",
+      sc_blurb: "每项重要操作都有快捷键。能不用鼠标就不用 — 让长时间使用更舒适。",
+      sc_f2: "重命名当前项 <em>— 文件、文件夹或标签</em>",
+      sc_enter: "用关联应用打开文件",
+      sc_del: "移至回收站 <em>— 通过 FileOperationsManager</em>",
+      sc_f5: "刷新当前文件夹列表",
+      sc_find: "聚焦本地搜索框",
+      sc_newtab: "新建配置文件 (新标签)",
+      sc_closetab: "关闭当前标签",
+      sc_nexttab: "下一个标签 <em>— Shift 反向</em>",
+      sc_jumptab: "跳转到第 N 个标签",
+      sc_shiftdrag: "强制<em>移动</em>而不询问",
+
+      st_num: "§ 03 · 技术栈",
+      st_title: "由<em>严肃组件</em>构建。",
+      st_blurb: "每个依赖都因成熟度、体积,或缺少合理替代品而被选择。不追潮流框架。",
+      st_dotnet: "经典 WPF,不使用 WinUI 或 MAUI。兼容 Windows 10 与 11。",
+      st_mvvm: "ObservableObject、ObservableProperty、RelayCommand — 由 source generators 生成。",
+      st_preview_ic: "预览",
+      st_preview: "语法高亮、Markdown 渲染、嵌入 Edge 引擎用于 PDF。",
+      st_util: "用于送至<em>回收站</em> — 唯一诚实且可行的方式。",
+
+      ft_tagline: "为那些总在相同地方工作、并希望工具也知道这一点的人,设计的极简浏览器。",
+      ft_get: "下载",
+      ft_releases: "发行版",
+      ft_changelog: "更新日志",
+      ft_project: "项目",
+      ft_baseline: "为日常工作而设计",
+      mb_credit: '一款 <a href="https://nunex-mbrothers.github.io/mBrothers/#products" target="_blank" rel="noopener">mBrothers</a> 产品<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems',
+    },
+  };
+
+  /* Apply translation for a given lang code */
+  function applyI18n(lang) {
+    const dict = I18N[lang] || I18N.pt;
+
+    // <title> + <meta description>
+    const titleEl = document.querySelector('title[data-i18n]');
+    if (titleEl && dict.page_title) titleEl.textContent = dict.page_title;
+    const descEl = document.querySelector('meta[data-i18n]');
+    if (descEl && dict.page_desc) descEl.setAttribute('content', dict.page_desc);
+
+    // Plain text nodes
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      if (el.tagName === 'TITLE' || el.tagName === 'META') return;
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] != null) el.textContent = dict[key];
+    });
+
+    // HTML nodes (contain <em>, <br>, <span>, etc.)
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dict[key] != null) el.innerHTML = dict[key];
+    });
+
+    // <html lang>
+    const langMap = { pt: 'pt-PT', en: 'en-US', de: 'de-DE', zh: 'zh-CN' };
+    document.documentElement.setAttribute('lang', langMap[lang] || 'pt-PT');
+
+    // Active flag
+    document.querySelectorAll('.lang-flag').forEach(b => {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+
+    try { localStorage.setItem('ef_lang', lang); } catch (e) {}
+  }
+
+  /* Pick initial language: stored → browser → pt */
+  function pickInitialLang() {
+    let stored = null;
+    try { stored = localStorage.getItem('ef_lang'); } catch (e) {}
+    if (stored && I18N[stored]) return stored;
+    const nav = (navigator.language || 'pt').toLowerCase();
+    if (nav.startsWith('pt')) return 'pt';
+    if (nav.startsWith('en')) return 'en';
+    if (nav.startsWith('de')) return 'de';
+    if (nav.startsWith('zh')) return 'zh';
+    return 'pt';
+  }
+
+  /* Wire flag buttons */
+  document.querySelectorAll('.lang-flag').forEach(btn => {
+    btn.addEventListener('click', () => applyI18n(btn.getAttribute('data-lang')));
+  });
+
+  /* Apply on load */
+  applyI18n(pickInitialLang());
+
+  /* ============================================================
+     Stagger fade-in for feature cards (kept from original)
+  ============================================================ */
   const obs = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
       if (e.isIntersecting) {

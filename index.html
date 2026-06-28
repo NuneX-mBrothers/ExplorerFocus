@@ -416,6 +416,14 @@
     font-family: var(--font-mono); font-size: 10px;
     color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase;
   }
+  .badge-pro {
+    display: inline-block; margin-left: 8px; padding: 1px 7px; border-radius: 3px;
+    font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; font-weight: 700;
+    background: var(--accent); color: #18120a; vertical-align: middle;
+  }
+  .feat-note { margin-top: 16px; font-size: 12.5px; line-height: 1.55; color: var(--fg-2); }
+  .feat-note .soon { color: var(--fg-3); }
+  .footer-col a.soon { color: var(--fg-3); pointer-events: none; }
   .feat.w4 { grid-column: span 4; }
   .feat.w6 { grid-column: span 6; }
   .feat.w8 { grid-column: span 8; }
@@ -794,7 +802,7 @@
       <a href="#shortcuts" data-i18n="nav_shortcuts">Atalhos</a>
       <a href="#stack" data-i18n="nav_stack">Stack</a>
       <a href="#download" data-i18n="nav_download">Obter</a>
-      <span class="nav-version">v0.9.0</span>
+      <span class="nav-version">v1.1.0</span>
     </nav>
   </div>
 </header>
@@ -813,7 +821,7 @@
     <div class="hero-meta">
       <span data-i18n="hero_meta_os">Windows 10 / 11</span>
       <span data-i18n="hero_meta_pkg">Self-contained · single-file</span>
-      <span data-i18n="hero_meta_size">~30 MB</span>
+      <span data-i18n="hero_meta_size">~90 MB</span>
     </div>
   </div>
 
@@ -1101,6 +1109,20 @@
        fora da pasta do executável.</p>
   </div>
 
+  <div class="feat w12">
+    <div class="num"><span data-i18n="f18_num">18 — ACESSOS REMOTOS</span><span class="badge-pro" data-i18n="badge_pro">PREMIUM</span></div>
+    <h3 data-i18n="f18_h">SFTP, FTP/FTPS e WebDAV — o explorer chega ao servidor.</h3>
+    <p data-i18n-html="f18_p">Liga a SFTP, FTP/FTPS e WebDAV (Nextcloud, ownCloud, NAS, IIS). Navega, pré-visualiza,
+       envia e descarrega, cria pastas, renomeia e copia/move — com <em>progresso ao byte</em> e cancelamento.
+       Edita ficheiros remotos localmente e <em>sincroniza ao gravar</em>. Autenticação por password ou
+       <em>chave SSH</em>; segredos cifrados com DPAPI.</p>
+    <div class="feat-mark" data-i18n="f18_mark">SFTP · FTP/FTPS · WebDAV</div>
+    <p class="feat-note">
+      <span data-i18n="f18_free">Grátis: 1 ligação — navegar + preview. PREMIUM desbloqueia várias ligações e todas as operações.</span><br>
+      <span class="soon" data-i18n="f18_soon">Clouds (Dropbox, OneDrive, Google Drive, S3) — em breve.</span>
+    </p>
+  </div>
+
 </section>
 
 <!-- SHORTCUTS -->
@@ -1206,9 +1228,10 @@
 
     <div class="footer-col">
       <h5 data-i18n="ft_get">Obter</h5>
-      <a href="#">ExplorerFocus.exe</a>
-      <a href="#" data-i18n="ft_releases">Releases</a>
-      <a href="#" data-i18n="ft_changelog">Changelog</a>
+      <a href="#" class="soon"><span data-i18n="ft_ch_standalone">Standalone (.exe)</span> · <span data-i18n="ft_soon">em breve</span></a>
+      <a href="#" class="soon"><span data-i18n="ft_ch_portable">Portable (.zip)</span> · <span data-i18n="ft_soon">em breve</span></a>
+      <a href="#" class="soon"><span data-i18n="ft_ch_clickonce">ClickOnce</span> · <span data-i18n="ft_soon">em breve</span></a>
+      <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases" target="_blank" rel="noopener" data-i18n="ft_releases">Releases</a>
     </div>
 
     <div class="footer-col">
@@ -1220,7 +1243,7 @@
   </div>
 
   <div class="footer-baseline">
-    <span>v0.9.0 · WPF · net10.0-windows · single-file</span>
+    <span>v1.1.0 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">desenhado para o quotidiano</span>
   </div>
 
@@ -1247,7 +1270,7 @@
       hero_lede: "ExplorerFocus é um substituto leve do Windows Explorer, desenhado para quem trabalha sempre nas mesmas pastas. Perfis configuráveis, árvores limpas, pré-visualização rica, operações que dão informação a sério — sem o ruído do shell.",
       hero_meta_os: "Windows 10 / 11",
       hero_meta_pkg: "Self-contained · single-file",
-      hero_meta_size: "~30 MB",
+      hero_meta_size: "~90 MB",
 
       app_tree_label: "Árvore",
       app_col_name: "NOME",
@@ -1343,6 +1366,18 @@
       f17_h: "Um único <em>.exe</em>. Sem instalador.",
       f17_p: "Self-contained, single-file, com compressão. Copias para uma flash drive e arranca em qualquer Windows 10/11. <em>net10.0-windows</em> + WPF — sem dependências fora da pasta do executável.",
 
+      badge_pro: "PREMIUM",
+      f18_num: "18 — ACESSOS REMOTOS",
+      f18_h: "SFTP, FTP/FTPS e WebDAV — o explorer chega ao servidor.",
+      f18_p: "Liga a SFTP, FTP/FTPS e WebDAV (Nextcloud, ownCloud, NAS, IIS). Navega, pré-visualiza, envia e descarrega, cria pastas, renomeia e copia/move — com <em>progresso ao byte</em> e cancelamento. Edita ficheiros remotos localmente e <em>sincroniza ao gravar</em>. Autenticação por password ou <em>chave SSH</em>; segredos cifrados com DPAPI.",
+      f18_mark: "SFTP · FTP/FTPS · WebDAV",
+      f18_free: "Grátis: 1 ligação — navegar + preview. PREMIUM desbloqueia várias ligações e todas as operações.",
+      f18_soon: "Clouds (Dropbox, OneDrive, Google Drive, S3) — em breve.",
+      ft_ch_standalone: "Standalone (.exe)",
+      ft_ch_portable: "Portable (.zip)",
+      ft_ch_clickonce: "ClickOnce",
+      ft_soon: "em breve",
+
       sc_num: "§ 02 · Atalhos",
       sc_title: "As mãos<br>na <em>home row</em>.",
       sc_blurb: "Cada operação importante tem um atalho. Sem rato sempre que possível — conforto para sessões longas.",
@@ -1389,7 +1424,7 @@
       hero_lede: "ExplorerFocus is a lightweight Windows Explorer replacement, designed for people who always work in the same folders. Configurable profiles, clean trees, rich preview, operations that actually tell you what's happening — without the shell's noise.",
       hero_meta_os: "Windows 10 / 11",
       hero_meta_pkg: "Self-contained · single-file",
-      hero_meta_size: "~30 MB",
+      hero_meta_size: "~90 MB",
 
       app_tree_label: "Tree",
       app_col_name: "NAME",
@@ -1485,6 +1520,18 @@
       f17_h: "A single <em>.exe</em>. No installer.",
       f17_p: "Self-contained, single-file, compressed. Copy to a flash drive and it runs on any Windows 10/11. <em>net10.0-windows</em> + WPF — no dependencies outside the executable's folder.",
 
+      badge_pro: "PREMIUM",
+      f18_num: "18 — REMOTE ACCESS",
+      f18_h: "SFTP, FTP/FTPS and WebDAV — the explorer reaches the server.",
+      f18_p: "Connect to SFTP, FTP/FTPS and WebDAV (Nextcloud, ownCloud, NAS, IIS). Browse, preview, upload and download, create folders, rename and copy/move — with <em>byte-level progress</em> and cancel. Edit remote files locally and <em>sync on save</em>. Password or <em>SSH key</em> auth; secrets encrypted with DPAPI.",
+      f18_mark: "SFTP · FTP/FTPS · WebDAV",
+      f18_free: "Free: 1 connection — browse + preview. PREMIUM unlocks multiple connections and all operations.",
+      f18_soon: "Clouds (Dropbox, OneDrive, Google Drive, S3) — coming soon.",
+      ft_ch_standalone: "Standalone (.exe)",
+      ft_ch_portable: "Portable (.zip)",
+      ft_ch_clickonce: "ClickOnce",
+      ft_soon: "coming soon",
+
       sc_num: "§ 02 · Shortcuts",
       sc_title: "Hands on<br>the <em>home row</em>.",
       sc_blurb: "Every important operation has a shortcut. Mouse-free whenever possible — comfort for long sessions.",
@@ -1531,7 +1578,7 @@
       hero_lede: "ExplorerFocus ist ein schlanker Ersatz für den Windows-Explorer, entworfen für Menschen, die immer in denselben Ordnern arbeiten. Konfigurierbare Profile, aufgeräumte Bäume, reichhaltige Vorschau, Operationen mit echten Informationen — ohne den Lärm der Shell.",
       hero_meta_os: "Windows 10 / 11",
       hero_meta_pkg: "Self-contained · single-file",
-      hero_meta_size: "~30 MB",
+      hero_meta_size: "~90 MB",
 
       app_tree_label: "Baum",
       app_col_name: "NAME",
@@ -1627,6 +1674,18 @@
       f17_h: "Eine einzige <em>.exe</em>. Kein Installer.",
       f17_p: "Self-contained, single-file, komprimiert. Kopiere auf einen USB-Stick und es läuft auf jedem Windows 10/11. <em>net10.0-windows</em> + WPF — keine Abhängigkeiten außerhalb des Programmordners.",
 
+      badge_pro: "PREMIUM",
+      f18_num: "18 — REMOTE-ZUGRIFF",
+      f18_h: "SFTP, FTP/FTPS und WebDAV — der Explorer erreicht den Server.",
+      f18_p: "Verbinde dich mit SFTP, FTP/FTPS und WebDAV (Nextcloud, ownCloud, NAS, IIS). Durchsuchen, Vorschau, Hoch- und Herunterladen, Ordner erstellen, umbenennen und kopieren/verschieben — mit <em>Byte-genauem Fortschritt</em> und Abbrechen. Bearbeite entfernte Dateien lokal und <em>synchronisiere beim Speichern</em>. Passwort- oder <em>SSH-Schlüssel</em>-Authentifizierung; Geheimnisse mit DPAPI verschlüsselt.",
+      f18_mark: "SFTP · FTP/FTPS · WebDAV",
+      f18_free: "Kostenlos: 1 Verbindung — Durchsuchen + Vorschau. PREMIUM schaltet mehrere Verbindungen und alle Operationen frei.",
+      f18_soon: "Clouds (Dropbox, OneDrive, Google Drive, S3) — bald verfügbar.",
+      ft_ch_standalone: "Standalone (.exe)",
+      ft_ch_portable: "Portable (.zip)",
+      ft_ch_clickonce: "ClickOnce",
+      ft_soon: "bald",
+
       sc_num: "§ 02 · Tastenkürzel",
       sc_title: "Hände auf<br>der <em>Home Row</em>.",
       sc_blurb: "Jede wichtige Operation hat ein Kürzel. Mauslos wann immer möglich — Komfort für lange Sitzungen.",
@@ -1673,7 +1732,7 @@
       hero_lede: "ExplorerFocus 是一款轻量级的 Windows 资源管理器替代品,为那些总在相同文件夹中工作的人而设计。可配置的配置文件、整洁的目录树、丰富的预览、能告诉你真实情况的文件操作 — 没有 Shell 的喧嚣。",
       hero_meta_os: "Windows 10 / 11",
       hero_meta_pkg: "自包含 · 单文件",
-      hero_meta_size: "约 30 MB",
+      hero_meta_size: "约 90 MB",
 
       app_tree_label: "目录树",
       app_col_name: "名称",
@@ -1768,6 +1827,18 @@
       f17_num: "17 — 部署",
       f17_h: "单个 <em>.exe</em>。无需安装程序。",
       f17_p: "自包含、单文件、压缩。复制到 U 盘,可在任意 Windows 10/11 上运行。<em>net10.0-windows</em> + WPF — 可执行文件之外没有任何依赖。",
+
+      badge_pro: "PREMIUM",
+      f18_num: "18 — 远程访问",
+      f18_h: "SFTP、FTP/FTPS 和 WebDAV — 资源管理器直达服务器。",
+      f18_p: "连接 SFTP、FTP/FTPS 和 WebDAV(Nextcloud、ownCloud、NAS、IIS)。浏览、预览、上传下载、新建文件夹、重命名与复制/移动 — 具备<em>字节级进度</em>与取消。在本地编辑远程文件并<em>保存即同步</em>。支持密码或 <em>SSH 密钥</em>认证;凭据以 DPAPI 加密。",
+      f18_mark: "SFTP · FTP/FTPS · WebDAV",
+      f18_free: "免费版:1 个连接 — 浏览 + 预览。PREMIUM 解锁多连接与全部操作。",
+      f18_soon: "云端(Dropbox、OneDrive、Google Drive、S3)— 即将推出。",
+      ft_ch_standalone: "独立版 (.exe)",
+      ft_ch_portable: "便携版 (.zip)",
+      ft_ch_clickonce: "ClickOnce",
+      ft_soon: "即将推出",
 
       sc_num: "§ 02 · 快捷键",
       sc_title: "双手停留<br>在<em>主键行</em>。",

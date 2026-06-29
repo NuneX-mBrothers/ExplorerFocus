@@ -1,0 +1,22 @@
+# ════════════════════════════════════════════════════════════════════
+#  ExplorerFocus — repo PÚBLICO (site + GitHub Pages)
+#  Só o site (index.html) deve ser versionado. Os binários vivem nas
+#  GitHub Releases, NUNCA no repo. Ferramentas de build ficam locais.
+# ════════════════════════════════════════════════════════════════════
+
+# Artefactos de build (gerados pelo 1-prepare; publicados via Releases)
+StandAlone/
+*.exe
+*.zip
+*.pdb
+
+# Ferramentas de build/publicação (não fazem parte do site)
+*.cmd
+*.ps1
+LEIA-ME*.md
+
+# Lixo do SO / editores
+Thumbs.db
+desktop.ini
+.DS_Store
+*.tmp

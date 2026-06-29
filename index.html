@@ -198,6 +198,34 @@
     border-radius: 50%;
   }
 
+  /* Hero download CTA */
+  .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+  .hero-cta .btn {
+    display: inline-flex; align-items: center; gap: 9px;
+    padding: 13px 22px; border-radius: 6px;
+    font-size: 14px; font-weight: 600; letter-spacing: 0.01em;
+    border: 1px solid transparent; cursor: pointer;
+    transition: transform .12s ease, background .15s ease, border-color .15s ease, color .15s ease;
+  }
+  .hero-cta .btn:hover { transform: translateY(-1px); }
+  .hero-cta .btn-primary {
+    background: var(--accent); color: #1a1408;
+    box-shadow: 0 8px 24px -10px var(--accent);
+  }
+  .hero-cta .btn-primary:hover { background: #ecb066; }
+  .hero-cta .btn-ghost {
+    background: var(--bg-2); color: var(--fg-0); border-color: var(--border-2);
+  }
+  .hero-cta .btn-ghost:hover { border-color: var(--accent-dim); color: var(--accent); }
+
+  /* Versão mais recente (lida do version.json, até à revision) */
+  .hero-latest {
+    margin-top: 14px; font-family: var(--font-mono); font-size: 12px;
+    color: var(--fg-2); letter-spacing: 0.04em;
+  }
+  .hero-latest strong { color: var(--accent); font-weight: 600; }
+  .hero-latest #heroReleased { opacity: .8; }
+
   /* App preview */
   .hero-preview {
     position: relative;
@@ -823,6 +851,21 @@
       <span data-i18n="hero_meta_pkg">Self-contained · single-file</span>
       <span data-i18n="hero_meta_size">~90 MB</span>
     </div>
+
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.exe">
+        <span aria-hidden="true">⬇</span> <span data-i18n="hero_dl_exe">Descarregar · .exe</span>
+      </a>
+      <a class="btn btn-ghost" href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip"
+         title="Para organizações que bloqueiam o download de .exe">
+        <span aria-hidden="true">⬇</span> <span data-i18n="hero_dl_zip">.zip</span>
+      </a>
+    </div>
+
+    <div class="hero-latest" id="heroLatest" hidden>
+      <span data-i18n="hero_latest">Versão mais recente</span>:
+      <strong id="heroVersion"></strong><span id="heroReleased"></span>
+    </div>
   </div>
 
   <div class="hero-preview">
@@ -1119,6 +1162,7 @@
     <div class="feat-mark" data-i18n="f18_mark">SFTP · FTP/FTPS · WebDAV</div>
     <p class="feat-note">
       <span data-i18n="f18_free">Grátis: 1 ligação — navegar + preview. PREMIUM desbloqueia várias ligações e todas as operações.</span><br>
+      <span data-i18n="f18_premium">PREMIUM: donativo mínimo de 9,99 € (PayPal) — ativa-se na app com o teu Machine ID.</span><br>
       <span class="soon" data-i18n="f18_soon">Clouds (Dropbox, OneDrive, Google Drive, S3) — em breve.</span>
     </p>
   </div>
@@ -1228,9 +1272,8 @@
 
     <div class="footer-col">
       <h5 data-i18n="ft_get">Obter</h5>
-      <a href="#" class="soon"><span data-i18n="ft_ch_standalone">Standalone (.exe)</span> · <span data-i18n="ft_soon">em breve</span></a>
-      <a href="#" class="soon"><span data-i18n="ft_ch_portable">Portable (.zip)</span> · <span data-i18n="ft_soon">em breve</span></a>
-      <a href="#" class="soon"><span data-i18n="ft_ch_clickonce">ClickOnce</span> · <span data-i18n="ft_soon">em breve</span></a>
+      <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.exe"><span data-i18n="ft_ch_standalone">Standalone (.exe)</span></a>
+      <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip" title="Para organizações que bloqueiam o download de .exe"><span data-i18n="ft_ch_portable">Standalone (.zip)</span></a>
       <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases" target="_blank" rel="noopener" data-i18n="ft_releases">Releases</a>
     </div>
 
@@ -1271,6 +1314,9 @@
       hero_meta_os: "Windows 10 / 11",
       hero_meta_pkg: "Self-contained · single-file",
       hero_meta_size: "~90 MB",
+      hero_dl_exe: "Descarregar · .exe",
+      hero_dl_zip: ".zip",
+      hero_latest: "Versão mais recente",
 
       app_tree_label: "Árvore",
       app_col_name: "NOME",
@@ -1372,9 +1418,10 @@
       f18_p: "Liga a SFTP, FTP/FTPS e WebDAV (Nextcloud, ownCloud, NAS, IIS). Navega, pré-visualiza, envia e descarrega, cria pastas, renomeia e copia/move — com <em>progresso ao byte</em> e cancelamento. Edita ficheiros remotos localmente e <em>sincroniza ao gravar</em>. Autenticação por password ou <em>chave SSH</em>; segredos cifrados com DPAPI.",
       f18_mark: "SFTP · FTP/FTPS · WebDAV",
       f18_free: "Grátis: 1 ligação — navegar + preview. PREMIUM desbloqueia várias ligações e todas as operações.",
+      f18_premium: "PREMIUM: donativo mínimo de 9,99 € (PayPal) — ativa-se na app com o teu Machine ID.",
       f18_soon: "Clouds (Dropbox, OneDrive, Google Drive, S3) — em breve.",
       ft_ch_standalone: "Standalone (.exe)",
-      ft_ch_portable: "Portable (.zip)",
+      ft_ch_portable: "Standalone (.zip)",
       ft_ch_clickonce: "ClickOnce",
       ft_soon: "em breve",
 
@@ -1425,6 +1472,9 @@
       hero_meta_os: "Windows 10 / 11",
       hero_meta_pkg: "Self-contained · single-file",
       hero_meta_size: "~90 MB",
+      hero_dl_exe: "Download · .exe",
+      hero_dl_zip: ".zip",
+      hero_latest: "Latest version",
 
       app_tree_label: "Tree",
       app_col_name: "NAME",
@@ -1526,9 +1576,10 @@
       f18_p: "Connect to SFTP, FTP/FTPS and WebDAV (Nextcloud, ownCloud, NAS, IIS). Browse, preview, upload and download, create folders, rename and copy/move — with <em>byte-level progress</em> and cancel. Edit remote files locally and <em>sync on save</em>. Password or <em>SSH key</em> auth; secrets encrypted with DPAPI.",
       f18_mark: "SFTP · FTP/FTPS · WebDAV",
       f18_free: "Free: 1 connection — browse + preview. PREMIUM unlocks multiple connections and all operations.",
+      f18_premium: "PREMIUM: minimum €9.99 donation (PayPal) — activated in the app with your Machine ID.",
       f18_soon: "Clouds (Dropbox, OneDrive, Google Drive, S3) — coming soon.",
       ft_ch_standalone: "Standalone (.exe)",
-      ft_ch_portable: "Portable (.zip)",
+      ft_ch_portable: "Standalone (.zip)",
       ft_ch_clickonce: "ClickOnce",
       ft_soon: "coming soon",
 
@@ -1579,6 +1630,9 @@
       hero_meta_os: "Windows 10 / 11",
       hero_meta_pkg: "Self-contained · single-file",
       hero_meta_size: "~90 MB",
+      hero_dl_exe: "Herunterladen · .exe",
+      hero_dl_zip: ".zip",
+      hero_latest: "Neueste Version",
 
       app_tree_label: "Baum",
       app_col_name: "NAME",
@@ -1680,9 +1734,10 @@
       f18_p: "Verbinde dich mit SFTP, FTP/FTPS und WebDAV (Nextcloud, ownCloud, NAS, IIS). Durchsuchen, Vorschau, Hoch- und Herunterladen, Ordner erstellen, umbenennen und kopieren/verschieben — mit <em>Byte-genauem Fortschritt</em> und Abbrechen. Bearbeite entfernte Dateien lokal und <em>synchronisiere beim Speichern</em>. Passwort- oder <em>SSH-Schlüssel</em>-Authentifizierung; Geheimnisse mit DPAPI verschlüsselt.",
       f18_mark: "SFTP · FTP/FTPS · WebDAV",
       f18_free: "Kostenlos: 1 Verbindung — Durchsuchen + Vorschau. PREMIUM schaltet mehrere Verbindungen und alle Operationen frei.",
+      f18_premium: "PREMIUM: Mindestspende 9,99 € (PayPal) — Aktivierung in der App mit deiner Machine ID.",
       f18_soon: "Clouds (Dropbox, OneDrive, Google Drive, S3) — bald verfügbar.",
       ft_ch_standalone: "Standalone (.exe)",
-      ft_ch_portable: "Portable (.zip)",
+      ft_ch_portable: "Standalone (.zip)",
       ft_ch_clickonce: "ClickOnce",
       ft_soon: "bald",
 
@@ -1733,6 +1788,9 @@
       hero_meta_os: "Windows 10 / 11",
       hero_meta_pkg: "自包含 · 单文件",
       hero_meta_size: "约 90 MB",
+      hero_dl_exe: "下载 · .exe",
+      hero_dl_zip: ".zip",
+      hero_latest: "最新版本",
 
       app_tree_label: "目录树",
       app_col_name: "名称",
@@ -1834,9 +1892,10 @@
       f18_p: "连接 SFTP、FTP/FTPS 和 WebDAV(Nextcloud、ownCloud、NAS、IIS)。浏览、预览、上传下载、新建文件夹、重命名与复制/移动 — 具备<em>字节级进度</em>与取消。在本地编辑远程文件并<em>保存即同步</em>。支持密码或 <em>SSH 密钥</em>认证;凭据以 DPAPI 加密。",
       f18_mark: "SFTP · FTP/FTPS · WebDAV",
       f18_free: "免费版:1 个连接 — 浏览 + 预览。PREMIUM 解锁多连接与全部操作。",
+      f18_premium: "PREMIUM：通过 PayPal 最低捐赠 €9.99 — 在应用中用你的 Machine ID 激活。",
       f18_soon: "云端(Dropbox、OneDrive、Google Drive、S3)— 即将推出。",
       ft_ch_standalone: "独立版 (.exe)",
-      ft_ch_portable: "便携版 (.zip)",
+      ft_ch_portable: "独立版 (.zip)",
       ft_ch_clickonce: "ClickOnce",
       ft_soon: "即将推出",
 
@@ -1928,6 +1987,23 @@
 
   /* Apply on load */
   applyI18n(pickInitialLang());
+
+  /* ============================================================
+     Versão mais recente (até à revision) — lida do version.json
+     publicado no GitHub Pages. Só aparece se o ficheiro existir.
+  ============================================================ */
+  fetch('version.json', { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (v) {
+      if (!v || !v.version) return;
+      var box = document.getElementById('heroLatest');
+      var ver = document.getElementById('heroVersion');
+      var rel = document.getElementById('heroReleased');
+      if (ver) ver.textContent = 'v' + v.version;
+      if (rel && v.released) rel.textContent = '  ·  ' + v.released;
+      if (box) box.hidden = false;
+    })
+    .catch(function () { /* sem version.json ainda — fica escondido */ });
 
   /* ============================================================
      Stagger fade-in for feature cards (kept from original)

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ExplorerFocus — Privacy Policy</title>
+<meta name="description" content="Privacy policy for ExplorerFocus, a focused file explorer for Windows. The app has no backend server; your data stays on your device.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0E0F11">
+<link rel="canonical" href="https://nunex-mbrothers.github.io/ExplorerFocus/privacy.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='6'%20fill='%230E0F11'/%3E%3Cpath%20d='M16%204l12%2012-12%2012L4%2016z'%20fill='%23E0A458'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Geist:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-0:#0E0F11; --bg-1:#16181B; --bg-2:#1A1C1F; --border-1:#2A2722; --border-2:#3A3530;
+    --accent:#E0A458; --accent-soft:#5C401E; --fg-0:#E8E5DF; --fg-1:#C8C5BF; --fg-2:#8E8B86;
+    --font-display:"Cormorant Garamond","Times New Roman",serif;
+    --font-body:"Geist",-apple-system,sans-serif;
+    --font-mono:"JetBrains Mono","Consolas",monospace;
+  }
+  *,*::before,*::after { box-sizing:border-box; }
+  html,body { margin:0; padding:0; }
+  body {
+    background:var(--bg-0); color:var(--fg-0); font-family:var(--font-body);
+    font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(ellipse at top left, rgba(224,164,88,.04), transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(224,164,88,.025), transparent 60%);
+  }
+  ::selection { background:var(--accent-soft); color:var(--fg-0); }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { color:var(--fg-0); }
+  .wrap { max-width:820px; margin:0 auto; padding:48px 24px 80px; }
+  .back { font-family:var(--font-mono); font-size:13px; color:var(--fg-2); }
+  .logo { display:flex; align-items:center; gap:12px; margin:28px 0 6px; }
+  .logo svg { width:40px; height:40px; }
+  h1 { font-family:var(--font-display); font-weight:600; font-size:40px; line-height:1.1; margin:0; }
+  .updated { font-family:var(--font-mono); font-size:12px; color:var(--fg-2); margin:6px 0 36px; }
+  h2 {
+    font-family:var(--font-display); font-weight:600; font-size:26px; color:var(--accent);
+    margin:38px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--border-1);
+  }
+  p, li { color:var(--fg-1); }
+  strong { color:var(--fg-0); font-weight:600; }
+  code { font-family:var(--font-mono); font-size:.88em; background:var(--bg-2); padding:1px 6px; border-radius:3px; color:var(--fg-0); }
+  ul { padding-left:22px; }
+  li { margin:6px 0; }
+  .lead { font-size:17px; color:var(--fg-0); }
+  .card { background:var(--bg-1); border:1px solid var(--border-1); border-radius:8px; padding:16px 20px; margin:18px 0; }
+  footer { margin-top:54px; padding-top:20px; border-top:1px solid var(--border-1); font-family:var(--font-mono); font-size:12px; color:var(--fg-2); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="./index.html">← ExplorerFocus</a>
+
+  <div class="logo">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="6" fill="#16181B"/><path d="M16 4l12 12-12 12L4 16z" fill="#E0A458"/></svg>
+    <h1>Privacy Policy</h1>
+  </div>
+  <div class="updated">ExplorerFocus · Last updated: 30 June 2026</div>
+
+  <p class="lead">ExplorerFocus is a desktop file explorer for Windows. It runs entirely on
+  your own computer. <strong>There is no ExplorerFocus server, and we do not collect, store,
+  transmit or sell your data.</strong> This page explains what the app touches and where it stays.</p>
+
+  <div class="card">
+    <strong>The short version</strong>
+    <ul>
+      <li>No backend. Everything happens locally on your device.</li>
+      <li>Cloud and server connections go <strong>directly</strong> from your machine to the
+          provider — never through us.</li>
+      <li>Tokens and passwords are stored on your machine, <strong>encrypted with Windows DPAPI</strong>.</li>
+      <li>The app only ever accesses the accounts and files <strong>you</strong> connect.</li>
+    </ul>
+  </div>
+
+  <h2>Data we collect</h2>
+  <p>None on any server — we don't operate one. The app stores its settings, your configured
+  folders/trees, and your saved connections <strong>locally</strong>, in your Windows user profile.
+  This information never leaves your device except when <em>you</em> ask the app to connect to a
+  service you chose.</p>
+
+  <h2>Cloud connections (Dropbox, OneDrive, Google Drive)</h2>
+  <p>Connecting a cloud account is optional. When you do:</p>
+  <ul>
+    <li>Authentication uses the provider's official <strong>OAuth 2</strong> flow (with PKCE).
+        You sign in on the provider's own page; the app never sees your password.</li>
+    <li>The app receives an access/refresh token that grants access to <strong>your own account
+        only</strong>. The token is stored locally and <strong>encrypted with Windows DPAPI</strong>;
+        it is never sent to us or any third party.</li>
+    <li>All file operations happen <strong>directly between your computer and the provider's API</strong>.
+        Your files do not pass through any ExplorerFocus infrastructure.</li>
+  </ul>
+  <p>Permissions requested, and why:</p>
+  <ul>
+    <li><strong>Dropbox</strong> — <code>account_info.read</code> (show which account is linked),
+        <code>files.metadata.read</code> (browse folders/files), <code>files.content.read</code>
+        (preview/open/download), <code>files.content.write</code> (upload, create folders,
+        rename, move, delete your files).</li>
+    <li><strong>OneDrive</strong> (Microsoft Graph) — <code>Files.ReadWrite</code> and
+        <code>offline_access</code>, to browse and manage your own OneDrive files and keep the
+        connection working between sessions.</li>
+    <li><strong>Google Drive</strong> — the Drive scope, to browse and manage your own Drive files.</li>
+  </ul>
+  <p>You can disconnect at any time inside the app, and you can revoke access entirely from your
+  provider's account/security settings (Dropbox connected apps, Microsoft account apps, Google
+  account third-party access).</p>
+
+  <h2>Remote servers (SFTP / FTP / FTPS / WebDAV)</h2>
+  <p>If you add a remote server, its host, username and credentials are stored locally and
+  <strong>encrypted with Windows DPAPI</strong>. Connections are made directly from your machine
+  to that server. We never see your servers or credentials.</p>
+
+  <h2>Local files</h2>
+  <p>The app reads and writes the files and folders you choose to work with, on your own device,
+  just like Windows Explorer. Nothing is uploaded anywhere unless you explicitly perform an upload
+  to a destination you connected.</p>
+
+  <h2>Software updates</h2>
+  <p>The app can check for new versions by fetching a small <code>version.json</code> file hosted on
+  GitHub Pages. This is an ordinary web request and sends <strong>no personal data</strong>. You can
+  turn automatic checks off in the app's settings.</p>
+
+  <h2>Licensing &amp; payments</h2>
+  <p>The optional PREMIUM tier is tied to a device using a locally-computed <strong>machine ID</strong>
+  (a hash derived from your Windows installation and system volume). It is not personally identifying
+  and is used only to bind a licence to a machine. Donations/payments are handled by
+  <strong>PayPal</strong>; their <a href="https://www.paypal.com/privacy" target="_blank" rel="noopener">privacy policy</a>
+  applies to the payment itself. We do not receive or store your payment card details.</p>
+
+  <h2>Website analytics</h2>
+  <p>This website uses a privacy-friendly page-view counter
+  (<a href="https://abacus.jasoncameron.dev" target="_blank" rel="noopener">abacus.jasoncameron.dev</a>)
+  that counts hits only. It sets no tracking cookies and collects no personal data.</p>
+
+  <h2>Data sharing</h2>
+  <p>We do not sell, rent or share your data. We have no servers that collect it. The only parties
+  your data reaches are the services <em>you</em> connect to, directly.</p>
+
+  <h2>Children</h2>
+  <p>ExplorerFocus is a general-purpose utility and is not directed at children under 13.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the updated version will be posted on this page with a new "last updated"
+  date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about privacy? Email <a href="mailto:nunommendonca@gmail.com">nunommendonca@gmail.com</a>.</p>
+
+  <footer>
+    © 2026 mBrothers · ExplorerFocus · <a href="./index.html">Home</a>
+  </footer>
+
+</div>
+</body>
+</html>

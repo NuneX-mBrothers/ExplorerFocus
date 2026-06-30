@@ -6,6 +6,44 @@
 <title data-i18n="page_title">ExplorerFocus — um explorador de ficheiros sem distrações</title>
 <meta name="description" data-i18n-attr="content" data-i18n="page_desc" content="Alternativa focada ao Windows Explorer. Perfis, árvores configuráveis, operações ricas, pré-visualização — tudo em torno do que importa.">
 
+<!-- ===== SEO ===== -->
+<meta name="keywords" content="ExplorerFocus, explorador de ficheiros, file explorer, alternativa ao Windows Explorer, gestor de ficheiros, file manager, cliente SFTP, FTP, FTPS, WebDAV, Dropbox, OneDrive, pré-visualização, file preview, Windows 10, Windows 11, .NET 10, WPF, perfis, produtividade">
+<meta name="author" content="mBrothers">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0E0F11">
+<link rel="canonical" href="https://nunex-mbrothers.github.io/ExplorerFocus/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='6'%20fill='%230E0F11'/%3E%3Cpath%20d='M16%204l12%2012-12%2012L4%2016z'%20fill='%23E0A458'/%3E%3C/svg%3E">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ExplorerFocus">
+<meta property="og:title" content="ExplorerFocus — um explorador de ficheiros sem distrações">
+<meta property="og:description" content="Alternativa focada ao Windows Explorer: perfis, árvores configuráveis, operações ricas, pré-visualização e acessos remotos (SFTP/FTP/FTPS/WebDAV).">
+<meta property="og:url" content="https://nunex-mbrothers.github.io/ExplorerFocus/">
+<meta property="og:locale" content="pt_PT">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ExplorerFocus — explorador de ficheiros sem distrações">
+<meta name="twitter:description" content="Alternativa focada ao Windows Explorer, com acessos remotos SFTP/FTP/FTPS/WebDAV e pré-visualização rica.">
+
+<!-- Dados estruturados (Schema.org) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ExplorerFocus",
+  "operatingSystem": "Windows 10, Windows 11",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "Alternativa focada ao Windows Explorer: perfis, árvores configuráveis, operações ricas, pré-visualização e acessos remotos (SFTP/FTP/FTPS/WebDAV).",
+  "url": "https://nunex-mbrothers.github.io/ExplorerFocus/",
+  "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
+  "softwareVersion": "1.2.0",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "author": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/" }
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Geist:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet">
@@ -1300,6 +1338,7 @@
   <div class="footer-baseline">
     <span>v1.2.0 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">desenhado para o quotidiano</span>
+    <span id="viewCounter" hidden title="Visitas à página"></span>
   </div>
 
   <div class="mb-credit" data-i18n-html="mb_credit">Um produto <a href="https://nunex-mbrothers.github.io/mBrothers/#products" target="_blank" rel="noopener">mBrothers</a><span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
@@ -2040,6 +2079,20 @@
       if (box) box.hidden = false;
     })
     .catch(function () { /* sem version.json ainda — fica escondido */ });
+
+  /* ============================================================
+     Contador de visitas à página. Serviço gratuito e sem conta
+     (abacus.jasoncameron.dev) — só conta hits, sem dados pessoais.
+     Falha em silêncio: se o serviço estiver em baixo, fica escondido.
+  ============================================================ */
+  fetch('https://abacus.jasoncameron.dev/hit/explorerfocus-mbrothers/site')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (!d || typeof d.value !== 'number') return;
+      var el = document.getElementById('viewCounter');
+      if (el) { el.textContent = '👁 ' + d.value.toLocaleString('pt-PT'); el.hidden = false; }
+    })
+    .catch(function () { /* serviço indisponível — contador fica escondido */ });
 
   /* ============================================================
      Stagger fade-in for feature cards (kept from original)

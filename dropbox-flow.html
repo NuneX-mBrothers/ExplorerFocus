@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ExplorerFocus — Connecting Dropbox (walkthrough)</title>
+<meta name="description" content="Step-by-step walkthrough of connecting a Dropbox account in ExplorerFocus and working with cloud files: browse, preview, upload, download, rename, move and delete.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0E0F11">
+<link rel="canonical" href="https://nunex-mbrothers.github.io/ExplorerFocus/dropbox-flow.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='6'%20fill='%230E0F11'/%3E%3Cpath%20d='M16%204l12%2012-12%2012L4%2016z'%20fill='%23E0A458'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Geist:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-0:#0E0F11; --bg-1:#16181B; --bg-2:#1A1C1F; --border-1:#2A2722; --border-2:#3A3530;
+    --accent:#E0A458; --accent-soft:#5C401E; --fg-0:#E8E5DF; --fg-1:#C8C5BF; --fg-2:#8E8B86;
+    --font-display:"Cormorant Garamond","Times New Roman",serif;
+    --font-body:"Geist",-apple-system,sans-serif;
+    --font-mono:"JetBrains Mono","Consolas",monospace;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg-0); color:var(--fg-0); font-family:var(--font-body);
+    font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(ellipse at top left, rgba(224,164,88,.04), transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(224,164,88,.025), transparent 60%);
+  }
+  ::selection{background:var(--accent-soft); color:var(--fg-0);}
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{color:var(--fg-0);}
+  .wrap{max-width:900px; margin:0 auto; padding:44px 22px 90px;}
+  .back{font-family:var(--font-mono); font-size:13px; color:var(--fg-2);}
+  .head{display:flex; align-items:center; gap:13px; margin:26px 0 4px;}
+  .head svg{width:42px; height:42px;}
+  h1{font-family:var(--font-display); font-weight:600; font-size:42px; line-height:1.08; margin:0;}
+  .sub{font-family:var(--font-mono); font-size:12px; color:var(--fg-2); margin:6px 0 26px;}
+  .lead{font-size:17px; color:var(--fg-0); margin-bottom:10px;}
+  .note{
+    background:var(--bg-1); border:1px solid var(--border-1); border-left:3px solid var(--accent);
+    border-radius:6px; padding:12px 16px; margin:18px 0 34px; color:var(--fg-1); font-size:14px;
+  }
+  .step{margin:40px 0; padding-top:30px; border-top:1px solid var(--border-1);}
+  .step:first-of-type{border-top:0;}
+  .step-h{display:flex; align-items:baseline; gap:12px; margin-bottom:6px;}
+  .num{
+    flex:0 0 auto; width:30px; height:30px; border-radius:50%;
+    background:var(--accent-soft); color:var(--accent); border:1px solid var(--accent);
+    font-family:var(--font-mono); font-size:14px; font-weight:500;
+    display:inline-flex; align-items:center; justify-content:center; transform:translateY(4px);
+  }
+  .step h2{font-family:var(--font-display); font-weight:600; font-size:25px; color:var(--accent); margin:0;}
+  .step p{margin:8px 0 0; color:var(--fg-1);}
+  .step p strong{color:var(--fg-0); font-weight:600;}
+  .shot{
+    display:block; width:100%; height:auto; margin:16px 0 4px;
+    border:1px solid var(--border-2); border-radius:8px;
+    box-shadow:0 10px 34px rgba(0,0,0,.5);
+  }
+  .feat{
+    margin:12px 0 0; padding:0; list-style:none; font-size:14px; color:var(--fg-1);
+  }
+  .feat li{padding:3px 0 3px 20px; position:relative;}
+  .feat li::before{content:"◆"; color:var(--accent); position:absolute; left:0; font-size:10px; top:6px;}
+  code{font-family:var(--font-mono); font-size:.86em; background:var(--bg-2); padding:1px 6px; border-radius:3px; color:var(--fg-0);}
+  footer{margin-top:60px; padding-top:22px; border-top:1px solid var(--border-1); font-family:var(--font-mono); font-size:12px; color:var(--fg-2);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="./index.html">← ExplorerFocus</a>
+
+  <div class="head">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="6" fill="#16181B"/><path d="M16 4l12 12-12 12L4 16z" fill="#E0A458"/></svg>
+    <h1>Connecting Dropbox</h1>
+  </div>
+  <div class="sub">ExplorerFocus · a full walkthrough, start to finish</div>
+
+  <p class="lead">ExplorerFocus lets you connect <strong>your own</strong> Dropbox and work with your
+  files exactly like local folders — browse, preview, upload, download, rename, move and delete —
+  all from one focused window.</p>
+
+  <div class="note">
+    <strong>Local-first &amp; private.</strong> Everything runs on your machine — there is no
+    ExplorerFocus server. You sign in on Dropbox's own page (the app never sees your password), and
+    the access token is stored locally, encrypted with Windows DPAPI. Cloud connections are a
+    <strong>PREMIUM</strong> feature. Some account details in the screenshots below are blacked out
+    for privacy.
+  </div>
+
+  <!-- 1 -->
+  <div class="step">
+    <div class="step-h"><span class="num">1</span><h2>ExplorerFocus at a glance</h2></div>
+    <p>The main window keeps everything one glance away: tabbed <strong>profiles</strong> at the top,
+    your <strong>folder tree</strong> on the left, the <strong>file list</strong> in the centre and a
+    live <strong>preview</strong> on the right.</p>
+    <img class="shot" loading="lazy" src="dropbox-flow/00-cover.png" alt="ExplorerFocus main window">
+    <ul class="feat">
+      <li>Multiple profiles/tabs — a different workspace for each context.</li>
+      <li>Drag a folder straight from Windows Explorer or the Desktop into the tree to add it.</li>
+    </ul>
+  </div>
+
+  <!-- 2 -->
+  <div class="step">
+    <div class="step-h"><span class="num">2</span><h2>Open the tree manager</h2></div>
+    <p>Click <strong>TREE</strong> to open <em>Folders + Registry</em>, where you manage what appears
+    in your side tree. To add a cloud or a server, click <strong>+ Remote Folder</strong>.</p>
+    <img class="shot" loading="lazy" src="dropbox-flow/01-Remote%20Folder.png" alt="Folders and Registry manager">
+    <ul class="feat">
+      <li>Mix local folders, Windows Registry keys and remote connections in one tree.</li>
+      <li>Reorder, rename and annotate each root.</li>
+    </ul>
+  </div>
+
+  <!-- 3 -->
+  <div class="step">
+    <div class="step-h"><span class="num">3</span><h2>Pick Dropbox</h2></div>
+    <p>The <strong>Remote access</strong> window lists every connection type — <strong>SFTP, FTP,
+    FTPS, WebDAV</strong> and clouds (<strong>Dropbox, OneDrive</strong>), with S3 and rclone on the
+    way. Click <strong>Dropbox</strong>.</p>
+    <img class="shot" loading="lazy" src="dropbox-flow/02-Select%20DropBox.png" alt="Remote access — choose Dropbox">
+    <ul class="feat">
+      <li>One window for every protocol; manage, reconnect or remove connections here.</li>
+      <li>Cloud connections require PREMIUM; your activation <em>Machine ID</em> is shown at the bottom.</li>
+    </ul>
+  </div>
+
+  <!-- 4 -->
+  <div class="step">
+    <div class="step-h"><span class="num">4</span><h2>Local-first, by design</h2></div>
+    <p>Before any remote is added, ExplorerFocus tells you exactly how it works, then asks you to
+    confirm. Click <strong>OK</strong>.</p>
+    <img class="shot" loading="lazy" src="dropbox-flow/03-Privacy%20disclaimer.png" alt="Privacy and security notice">
+    <ul class="feat">
+      <li>Everything stays on your computer — no app server is involved.</li>
+      <li>Credentials are encrypted with Windows DPAPI; you sign in on the provider's own site.</li>
+      <li>The app connects directly to your cloud/server and only does what you ask — deletes are real.</li>
+    </ul>
+  </div>
+
+  <!-- 5 -->
+  <div class="step">
+    <div class="step-h"><span class="num">5</span><h2>Dropbox sign-in opens</h2></div>
+    <p>Your default browser opens Dropbox's <strong>official</strong> OAuth page. Because the app is
+    new and still has a small number of users, Dropbox shows a heads-up — click
+    <strong>Continue</strong>.</p>
+    <img class="shot" loading="lazy" src="dropbox-flow/05-DropBox%20alert.png" alt="Dropbox connect warning">
+    <ul class="feat">
+      <li>Authentication happens entirely on dropbox.com — the app never sees your password.</li>
+    </ul>
+  </div>
+
+  <!-- 6 -->
+  <div class="step">
+    <div class="step-h"><span class="num">6</span><h2>Grant access</h2></div>
+    <p>Review what the app requests — edit and view your Dropbox files, plus basic account info — then
+    click <strong>Allow</strong>.</p>
+    <img class="shot" loading="lazy" src="dropbox-flow/06-DropBox%20permissions.png" alt="Dropbox permissions consent">
+    <ul class="feat">
+      <li>Access is limited to <strong>your own</strong> account only.</li>
+      <li>You can revoke it anytime from Dropbox → <em>Connected apps</em>.</li>
+    </ul>
+  </div>
+
+  <!-- 7 -->
+  <div class="step">
+    <div class="step-h"><span class="num">7</span><h2>Connected</h2></div>
+    <p>Your Dropbox now appears in the tree and expands like any folder — Camera Uploads, Photos,
+    and the rest. The address bar shows the live <code>dropbox://</code> path.</p>
+    <img class="shot" loading="lazy" src="dropbox-flow/04-DropBox%20added.png" alt="Dropbox added to the tree">
+    <ul class="feat">
+      <li>Browse the cloud exactly like a local drive — expand, navigate, search.</li>
+      <li>Folders and files load on demand as you open them.</li>
+    </ul>
+  </div>
+
+  <!-- 8 -->
+  <div class="step">
+    <div class="step-h"><span class="num">8</span><h2>Saved &amp; managed</h2></div>
+    <p>The connection is saved in <strong>Remote access</strong>. Reconnect, edit, reorder or remove
+    it whenever you like.</p>
+    <img class="shot" loading="lazy" src="dropbox-flow/07-DropBox%20folder%20added.png" alt="Dropbox connection saved">
+    <ul class="feat">
+      <li>Reconnects automatically on next launch (refresh token kept encrypted with DPAPI).</li>
+      <li>Run several connections side by side under PREMIUM.</li>
+    </ul>
+  </div>
+
+  <!-- 9 -->
+  <div class="step">
+    <div class="step-h"><span class="num">9</span><h2>Instant preview</h2></div>
+    <p>Select any file for a built-in preview — no need to download it first.</p>
+    <img class="shot" loading="lazy" src="dropbox-flow/08-DropBox%20file%20preview.png" alt="Dropbox file preview">
+    <ul class="feat">
+      <li>Images, Markdown and PDF render inline.</li>
+      <li>Text and code are syntax-highlighted, with brace/tag folding to collapse blocks.</li>
+    </ul>
+  </div>
+
+  <!-- 10 -->
+  <div class="step">
+    <div class="step-h"><span class="num">10</span><h2>Full file operations</h2></div>
+    <p>Right-click for the works — your cloud files behave just like local ones.</p>
+    <img class="shot" loading="lazy" src="dropbox-flow/09-DropBox%20file%20options%20sample.png" alt="Dropbox file operations menu">
+    <ul class="feat">
+      <li>Open, edit, open-with, rename, copy/cut, move, delete.</li>
+      <li>Download to your PC or upload files and whole folders to the cloud.</li>
+      <li>Edit-in-place: open a cloud file, edit it, and changes sync back on save.</li>
+    </ul>
+  </div>
+
+  <p style="margin-top:40px; color:var(--fg-1);">The flow is the same for <strong>OneDrive</strong> —
+  pick OneDrive in step&nbsp;3 and sign in with your Microsoft account.</p>
+
+  <footer>
+    © 2026 mBrothers · ExplorerFocus · <a href="./index.html">Home</a> · <a href="./privacy.html">Privacy</a>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1212,7 +1212,7 @@
        Os teus ficheiros nunca passam por servidores nossos.</p>
     <div class="feat-mark" data-i18n="f19_mark">Dropbox · OneDrive</div>
     <p class="feat-note">
-      <span class="soon" data-i18n="f19_soon">Dropbox e OneDrive — em breve.</span><br>
+      <span data-i18n="f19_soon">Dropbox — disponível agora. OneDrive — em breve.</span><br>
       <span data-i18n="f19_premium">PREMIUM (tal como o SFTP/FTP/FTPS): várias ligações e todas as operações. Donativo 9,99 € (PayPal).</span>
     </p>
   </div>
@@ -1476,7 +1476,7 @@
       f19_h: "Dropbox e OneDrive — a tua cloud dentro do explorer.",
       f19_p: "Liga a <em>Dropbox</em> e <em>OneDrive</em> por OAuth seguro — sem guardares palavras-passe. Navega, pré-visualiza, envia e descarrega, cria pastas, renomeia e copia/move, como numa pasta local. Os teus ficheiros nunca passam por servidores nossos.",
       f19_mark: "Dropbox · OneDrive",
-      f19_soon: "Dropbox e OneDrive — em breve.",
+      f19_soon: "Dropbox — disponível agora. OneDrive — em breve.",
       f19_premium: "PREMIUM (tal como o SFTP/FTP/FTPS): várias ligações e todas as operações. Donativo 9,99 € (PayPal).",
       f18_soon: "Clouds (Dropbox, OneDrive, S3) — em breve.",
       ft_ch_standalone: "Standalone (.exe)",
@@ -1642,7 +1642,7 @@
       f19_h: "Dropbox and OneDrive — your cloud inside the explorer.",
       f19_p: "Connect to <em>Dropbox</em> and <em>OneDrive</em> via secure OAuth — no passwords stored. Browse, preview, upload and download, create folders, rename and copy/move, like a local folder. Your files never pass through our servers.",
       f19_mark: "Dropbox · OneDrive",
-      f19_soon: "Dropbox and OneDrive — coming soon.",
+      f19_soon: "Dropbox — available now. OneDrive — coming soon.",
       f19_premium: "PREMIUM (like SFTP/FTP/FTPS): multiple connections and all operations. €9.99 donation (PayPal).",
       f18_soon: "Clouds (Dropbox, OneDrive, S3) — coming soon.",
       ft_ch_standalone: "Standalone (.exe)",
@@ -1808,7 +1808,7 @@
       f19_h: "Dropbox und OneDrive — deine Cloud im Explorer.",
       f19_p: "Verbinde dich mit <em>Dropbox</em> und <em>OneDrive</em> per sicherem OAuth — ohne Passwörter zu speichern. Durchsuchen, Vorschau, Hoch- und Herunterladen, Ordner erstellen, umbenennen und kopieren/verschieben, wie ein lokaler Ordner. Deine Dateien laufen nie über unsere Server.",
       f19_mark: "Dropbox · OneDrive",
-      f19_soon: "Dropbox und OneDrive — bald verfügbar.",
+      f19_soon: "Dropbox — jetzt verfügbar. OneDrive — bald verfügbar.",
       f19_premium: "PREMIUM (wie SFTP/FTP/FTPS): mehrere Verbindungen und alle Operationen. Spende 9,99 € (PayPal).",
       f18_soon: "Clouds (Dropbox, OneDrive, S3) — bald verfügbar.",
       ft_ch_standalone: "Standalone (.exe)",
@@ -1974,7 +1974,7 @@
       f19_h: "Dropbox 和 OneDrive — 把云端装进资源管理器。",
       f19_p: "通过安全的 OAuth 连接 <em>Dropbox</em> 和 <em>OneDrive</em>——不存储密码。浏览、预览、上传下载、新建文件夹、重命名和复制/移动，就像本地文件夹。你的文件绝不经过我们的服务器。",
       f19_mark: "Dropbox · OneDrive",
-      f19_soon: "Dropbox 和 OneDrive — 即将推出。",
+      f19_soon: "Dropbox — 现已上线。OneDrive — 即将推出。",
       f19_premium: "PREMIUM（与 SFTP/FTP/FTPS 一样）：多个连接和全部操作。捐赠 €9.99（PayPal）。",
       f18_soon: "云端(Dropbox、OneDrive、S3)— 即将推出。",
       ft_ch_standalone: "独立版 (.exe)",
@@ -2091,18 +2091,36 @@
     .catch(function () { /* sem version.json ainda — fica escondido */ });
 
   /* ============================================================
-     Contador de visitas à página. Serviço gratuito e sem conta
-     (abacus.jasoncameron.dev) — só conta hits, sem dados pessoais.
-     Falha em silêncio: se o serviço estiver em baixo, fica escondido.
+     Contador de visitas à página — GoatCounter (privacy-friendly:
+     sem cookies, sem dados pessoais). Lê o total público e mostra-o
+     no rodapé. Falha em silêncio (fica escondido se indisponível).
+     Requer "Allow public access to counts" ativado no GoatCounter.
   ============================================================ */
-  fetch('https://abacus.jasoncameron.dev/hit/explorerfocus-mbrothers/site')
+  fetch('https://nunex.goatcounter.com/counter/TOTAL.json')
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (d) {
-      if (!d || typeof d.value !== 'number') return;
+      if (!d || d.count == null) return;
       var el = document.getElementById('viewCounter');
-      if (el) { el.textContent = '👁 ' + d.value.toLocaleString('pt-PT'); el.hidden = false; }
+      if (el) { el.textContent = '👁 ' + d.count; el.hidden = false; }
     })
-    .catch(function () { /* serviço indisponível — contador fica escondido */ });
+    .catch(function () { /* indisponível — contador fica escondido */ });
+
+  /* ============================================================
+     Contadores de download SEPARADOS (GoatCounter events, cookieless):
+       .exe → /download/exe    ·    .zip → /download/zip
+     Só aparecem na estatística; não são mostrados no site.
+  ============================================================ */
+  document.querySelectorAll('a[href$="ExplorerFocus.exe"], a[href$="ExplorerFocus.zip"]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      if (!window.goatcounter || !window.goatcounter.count) return;
+      var isZip = /\.zip$/i.test(a.getAttribute('href') || '');
+      window.goatcounter.count({
+        path:  isZip ? '/download/zip' : '/download/exe',
+        title: isZip ? 'Download ZIP'  : 'Download EXE',
+        event: true
+      });
+    });
+  });
 
   /* ============================================================
      Stagger fade-in for feature cards (kept from original)
@@ -2118,6 +2136,12 @@
 
   document.querySelectorAll('.feat').forEach(el => obs.observe(el));
 </script>
+
+<!-- GoatCounter — analytics privacy-friendly (sem cookies, sem PII). Conta a
+     visita à página e disponibiliza window.goatcounter.count() para os eventos
+     de download acima. -->
+<script data-goatcounter="https://nunex.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>

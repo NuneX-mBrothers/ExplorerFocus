@@ -264,6 +264,60 @@
   .hero-latest strong { color: var(--accent); font-weight: 600; }
   .hero-latest #heroReleased { opacity: .8; }
 
+  /* Verificação do ficheiro (SHA-256 junto ao download) + card de primeira abertura */
+  .hero-verify { margin-top: 16px; }
+  .hero-sha { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 11px; }
+  .hero-sha-lbl { color: var(--accent); font-weight: 600; letter-spacing: .08em; }
+  .hero-sha code { color: var(--fg-2); word-break: break-all; }
+  .hero-sha-copy { background: transparent; border: 1px solid var(--border-2); color: var(--fg-2); border-radius: 4px; min-width: 22px; height: 20px; cursor: pointer; font-size: 11px; line-height: 1; padding: 0 4px; }
+  .hero-sha-copy:hover { border-color: var(--accent-dim); color: var(--accent); }
+  .hero-verify-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 9px; font-size: 12.5px; color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent-dim); padding-bottom: 1px; }
+  .hero-verify-link:hover { color: var(--fg-0); border-color: var(--fg-0); }
+
+  .ef-modal { position: fixed; inset: 0; z-index: 1000; display: none; align-items: flex-start; justify-content: center; padding: 40px 16px; overflow-y: auto; background: rgba(0,0,0,.62); }
+  .ef-modal.open { display: flex; }
+  .ef-card { position: relative; background: var(--bg-1); border: 1px solid var(--border-1); border-radius: 14px; max-width: 600px; width: 100%; padding: 26px 24px 28px; box-shadow: 0 40px 90px -20px rgba(0,0,0,.7); }
+  .ef-card-x { position: absolute; top: 14px; right: 14px; width: 30px; height: 30px; border-radius: 6px; background: transparent; border: 1px solid var(--border-2); color: var(--fg-2); font-size: 14px; cursor: pointer; }
+  .ef-card-x:hover { border-color: var(--accent-dim); color: var(--accent); }
+  .ef-card-hd { display: flex; gap: 12px; align-items: flex-start; background: rgba(224,164,88,.10); border: 1px solid rgba(224,164,88,.22); border-radius: 10px; padding: 14px 16px; }
+  .ef-card-hd-ic { font-size: 20px; line-height: 1.2; }
+  .ef-card-hd-t { margin: 0; font-weight: 600; color: var(--accent); font-size: 15px; }
+  .ef-card-hd-p { margin: 5px 0 0; color: var(--fg-1); font-size: 13px; line-height: 1.6; }
+  .ef-sec { margin-top: 20px; }
+  .ef-sec-top { padding-top: 18px; border-top: 1px solid var(--border-1); }
+  .ef-sec-h { margin: 0 0 11px; font-weight: 600; font-size: 14px; color: var(--fg-0); }
+  .ef-opt { color: var(--fg-2); font-weight: 400; font-size: 13px; }
+  .ef-sec-sub { margin: 0 0 12px; font-size: 13px; color: var(--fg-2); line-height: 1.6; }
+  .ef-step { display: flex; gap: 10px; align-items: flex-start; margin: 0 0 9px; font-size: 13.5px; line-height: 1.55; color: var(--fg-1); }
+  .ef-step-mt { margin-top: 10px; }
+  .ef-num { flex: 0 0 auto; width: 20px; height: 20px; margin-top: 1px; border-radius: 50%; background: var(--bg-2); border: 1px solid var(--border-2); color: var(--fg-2); font-family: var(--font-mono); font-size: 11px; display: inline-flex; align-items: center; justify-content: center; }
+  .ef-step strong, .ef-find strong { color: var(--fg-0); font-weight: 600; }
+  .ef-step code, .ef-find code, .ef-card-hd-p code { font-family: var(--font-mono); font-size: 12px; background: var(--bg-0); padding: 1px 5px; border-radius: 3px; color: var(--accent); }
+  .ef-find { margin: 0 0 14px; background: var(--bg-2); border: 1px solid var(--border-1); border-radius: 8px; padding: 11px 13px; font-size: 13px; line-height: 1.6; color: var(--fg-1); }
+  .ef-find::before { content: "📁"; margin-right: 7px; }
+  .ef-method { border: 1px solid var(--border-1); border-radius: 10px; padding: 14px; margin-top: 12px; }
+  .ef-method-h { margin: 0 0 10px; font-size: 13px; font-weight: 600; color: var(--fg-0); }
+  .ef-cmd { display: flex; gap: 8px; align-items: center; margin-top: 8px; }
+  .ef-cmd code { flex: 1; background: var(--bg-0); border: 1px solid var(--border-1); border-radius: 6px; padding: 8px 10px; font-family: var(--font-mono); font-size: 12.5px; color: var(--fg-0); overflow-x: auto; white-space: nowrap; }
+  .ef-copy { flex: 0 0 auto; width: 30px; height: 30px; border-radius: 6px; border: 1px solid var(--border-2); background: transparent; color: var(--fg-2); cursor: pointer; font-size: 13px; }
+  .ef-copy:hover { border-color: var(--accent-dim); color: var(--accent); }
+  .ef-hashbox { margin-top: 14px; background: var(--bg-2); border: 1px solid var(--border-1); border-radius: 10px; padding: 13px 14px; }
+  .ef-hashbox-note { margin: 0 0 7px; font-size: 12px; color: var(--fg-2); }
+  .ef-hashbox-ver { color: var(--accent); }
+  .ef-hashbox-val { margin: 0; font-family: var(--font-mono); font-size: 12.5px; word-break: break-all; color: var(--fg-0); line-height: 1.55; }
+  .ef-hashbox-ok { margin: 9px 0 0; font-size: 13px; color: #7FA77A; display: flex; align-items: center; gap: 6px; }
+  .efkbd { font-family: var(--font-mono); font-size: 11px; background: var(--bg-0); border: 1px solid var(--border-2); border-radius: 4px; padding: 1px 5px; color: var(--fg-1); }
+  .efmuted { color: var(--fg-2); }
+  .hero-sha-what { margin-left: 6px; font-family: var(--font-sans); font-size: 11px; color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent-dim); white-space: nowrap; }
+  .hero-sha-what:hover { color: var(--fg-0); border-color: var(--fg-0); }
+  .ef-sha-title { margin: 0 0 14px; font-size: 17px; font-weight: 600; color: var(--fg-0); padding-right: 36px; }
+  .ef-prose { margin: 0 0 12px; font-size: 13.5px; line-height: 1.65; color: var(--fg-1); }
+  .ef-prose strong, .ef-list strong { color: var(--fg-0); font-weight: 600; }
+  .ef-prose code { font-family: var(--font-mono); font-size: 12px; background: var(--bg-0); padding: 1px 5px; border-radius: 3px; color: var(--accent); }
+  .ef-list { margin: 0 0 12px; padding-left: 0; list-style: none; }
+  .ef-list li { position: relative; padding-left: 22px; margin: 0 0 8px; font-size: 13.5px; line-height: 1.6; color: var(--fg-1); }
+  .ef-list li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
+
   /* App preview */
   .hero-preview {
     position: relative;
@@ -904,6 +958,19 @@
       <span data-i18n="hero_latest">Versão mais recente</span>:
       <strong id="heroVersion"></strong><span id="heroReleased"></span>
     </div>
+
+    <div class="hero-verify" id="heroVerify" hidden>
+      <div class="hero-sha">
+        <span class="hero-sha-lbl">SHA-256</span>
+        <code id="heroSha" class="js-sha"></code>
+        <button class="hero-sha-copy" id="heroShaCopy" type="button" aria-label="Copiar SHA-256" title="Copiar">⧉</button>
+        <a href="#sha256" class="hero-sha-what" data-modal="shaModal" data-i18n="sha_link">O que é o SHA-256?</a>
+      </div>
+      <a href="#verify" class="hero-verify-link" id="openVerify" data-modal="verifyModal">
+        <span data-i18n="dl_firsttime">Primeira vez a abrir? Aviso do Windows?</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
   </div>
 
   <div class="hero-preview">
@@ -1401,6 +1468,103 @@
   <div class="mb-credit" data-i18n-html="mb_credit">Um produto <a href="https://nunex-mbrothers.github.io/mBrothers/#products" target="_blank" rel="noopener">mBrothers</a><span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
 </footer>
 
+<div class="ef-modal" id="verifyModal" role="dialog" aria-modal="true" aria-labelledby="verifyModalTitle">
+  <div class="ef-card">
+    <button class="ef-card-x" id="verifyClose" type="button" aria-label="Fechar">✕</button>
+
+    <div class="ef-card-hd">
+      <span class="ef-card-hd-ic" aria-hidden="true">🛡️</span>
+      <div>
+        <p class="ef-card-hd-t" id="verifyModalTitle" data-i18n="card_title">Primeira vez a abrir? É normal.</p>
+        <p class="ef-card-hd-p" data-i18n-html="card_intro">Como o ExplorerFocus é novo e ainda não tem assinatura digital, o Windows pode mostrar um aviso azul (SmartScreen). O ficheiro é seguro — aqui fica como continuar.</p>
+      </div>
+    </div>
+
+    <div class="ef-sec">
+      <p class="ef-sec-h" data-i18n="card_open_h">Abrir o programa</p>
+      <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_open_1">No aviso <em>"O Windows protegeu o seu PC"</em>, clica em <strong>Mais informações</strong>.</span></div>
+      <div class="ef-step"><span class="ef-num">2</span><span data-i18n-html="card_open_2">Clica em <strong>Executar mesmo assim</strong>.</span></div>
+    </div>
+
+    <div class="ef-sec ef-sec-top">
+      <p class="ef-sec-h" data-i18n="card_pin_h">Fixaste na barra e não abre por aí?</p>
+      <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_pin_1">Botão direito no <code>ExplorerFocus.exe</code> → <strong>Propriedades</strong>.</span></div>
+      <div class="ef-step"><span class="ef-num">2</span><span data-i18n-html="card_pin_2">Marca <strong>Desbloquear</strong> (em baixo) → <strong>OK</strong>, e volta a fixar.</span></div>
+    </div>
+
+    <div class="ef-sec ef-sec-top">
+      <p class="ef-sec-h"><span data-i18n="card_verify_h">Verificar o ficheiro</span> <span class="ef-opt" data-i18n="card_verify_opt">— opcional</span></p>
+      <p class="ef-sec-sub" data-i18n-html="card_verify_intro">Só se quiseres ter a certeza absoluta de que descarregaste o ficheiro oficial, sem alterações. Escolhe <strong>um</strong> dos dois métodos.</p>
+
+      <div class="ef-find" data-i18n-html="card_find">Primeiro, encontra o ficheiro: abre o <strong>Explorador de Ficheiros</strong> do Windows (a pasta amarela na barra de tarefas, ou <span class="efkbd">⊞ Win</span> + <span class="efkbd">E</span>) e clica em <strong>Transferências</strong> à esquerda — é lá que o <code>ExplorerFocus.exe</code> fica ao descarregar. Isto faz-se no Explorador, <strong>não no browser</strong>.</div>
+
+      <div class="ef-method">
+        <p class="ef-method-h" data-i18n="card_mA_h">Método A — PowerShell</p>
+        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mA_1">Na janela do Explorador aberta em <strong>Transferências</strong>, com o <span class="efkbd">Shift</span> premido, clica com o botão direito num espaço vazio → <strong>Abrir a janela do PowerShell aqui</strong>.</span></div>
+        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Cola este comando e prime Enter:</span></div>
+        <div class="ef-cmd"><code>Get-FileHash .\ExplorerFocus.exe</code><button class="ef-copy" type="button" data-copy="Get-FileHash .\ExplorerFocus.exe" aria-label="Copiar comando">⧉</button></div>
+        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mA_3">Compara o valor SHA256 mostrado com o de baixo.</span></div>
+      </div>
+
+      <div class="ef-method">
+        <p class="ef-method-h" data-i18n="card_mB_h">Método B — Linha de comandos (cmd)</p>
+        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mB_1">Na janela do Explorador aberta em <strong>Transferências</strong>, clica na <strong>barra de endereço</strong> (em cima, onde aparece o caminho da pasta), escreve <code>cmd</code> e prime <strong>Enter</strong>.</span></div>
+        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Cola este comando e prime Enter:</span></div>
+        <div class="ef-cmd"><code>certutil -hashfile ExplorerFocus.exe SHA256</code><button class="ef-copy" type="button" data-copy="certutil -hashfile ExplorerFocus.exe SHA256" aria-label="Copiar comando">⧉</button></div>
+        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mB_3">Compara a linha do hash com o de baixo.</span></div>
+      </div>
+
+      <div class="ef-hashbox">
+        <p class="ef-hashbox-note"><span data-i18n-html="card_hash_note">Deve ser igual a este valor <span class="efmuted">(maiúsculas/minúsculas não importam)</span>:</span> <span class="ef-hashbox-ver js-ver"></span></p>
+        <p class="ef-hashbox-val js-sha">—</p>
+        <p class="ef-hashbox-ok"><span aria-hidden="true">✓</span> <span data-i18n="card_hash_ok">Iguais? É o ficheiro oficial, sem alterações.</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ef-modal" id="shaModal" role="dialog" aria-modal="true" aria-labelledby="shaModalTitle">
+  <div class="ef-card">
+    <button class="ef-card-x" type="button" aria-label="Fechar">✕</button>
+    <p class="ef-sha-title" id="shaModalTitle" data-i18n="sha_title">O que é o SHA-256?</p>
+    <p class="ef-prose" data-i18n-html="sha_p1">Pensa nele como a <strong>impressão digital</strong> do ficheiro. Um algoritmo lê todos os bytes do <code>ExplorerFocus.exe</code> e resume-os num código de <strong>64 caracteres</strong> (letras A–F e números). Esse código é o SHA-256.</p>
+    <p class="ef-prose" data-i18n-html="sha_p2">Tem duas propriedades que o tornam útil:</p>
+    <ul class="ef-list">
+      <li data-i18n-html="sha_li1">O <strong>mesmo ficheiro</strong> dá <strong>sempre</strong> o mesmo código.</li>
+      <li data-i18n-html="sha_li2">Se <strong>um único bit</strong> mudar — um download corrompido, ou alguém que adulterou o ficheiro — o código sai <strong>completamente diferente</strong>.</li>
+    </ul>
+    <p class="ef-prose" data-i18n-html="sha_p3">Por isso a verificação é simples: se o código que <strong>calculas</strong> no teu ficheiro for <strong>igual</strong> ao que está <strong>publicado aqui</strong>, tens a certeza de que é exatamente o ficheiro oficial, byte a byte — sem corrupção nem alterações. O código não se pode inverter: serve só para comparar, nunca revela o conteúdo.</p>
+
+    <div class="ef-sec ef-sec-top">
+      <p class="ef-sec-h" data-i18n="sha_how_h">Como confirmar</p>
+
+      <div class="ef-find" data-i18n-html="card_find">Primeiro, encontra o ficheiro: abre o <strong>Explorador de Ficheiros</strong> do Windows (a pasta amarela na barra de tarefas, ou <span class="efkbd">⊞ Win</span> + <span class="efkbd">E</span>) e clica em <strong>Transferências</strong> à esquerda — é lá que o <code>ExplorerFocus.exe</code> fica ao descarregar. Isto faz-se no Explorador, <strong>não no browser</strong>.</div>
+
+      <div class="ef-method">
+        <p class="ef-method-h" data-i18n="card_mA_h">Método A — PowerShell</p>
+        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mA_1">Na janela do Explorador aberta em <strong>Transferências</strong>, com o <span class="efkbd">Shift</span> premido, clica com o botão direito num espaço vazio → <strong>Abrir a janela do PowerShell aqui</strong>.</span></div>
+        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Cola este comando e prime Enter:</span></div>
+        <div class="ef-cmd"><code>Get-FileHash .\ExplorerFocus.exe</code><button class="ef-copy" type="button" data-copy="Get-FileHash .\ExplorerFocus.exe" aria-label="Copiar comando">⧉</button></div>
+        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mA_3">Compara o valor SHA256 mostrado com o de baixo.</span></div>
+      </div>
+
+      <div class="ef-method">
+        <p class="ef-method-h" data-i18n="card_mB_h">Método B — Linha de comandos (cmd)</p>
+        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mB_1">Na janela do Explorador aberta em <strong>Transferências</strong>, clica na <strong>barra de endereço</strong> (em cima, onde aparece o caminho da pasta), escreve <code>cmd</code> e prime <strong>Enter</strong>.</span></div>
+        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Cola este comando e prime Enter:</span></div>
+        <div class="ef-cmd"><code>certutil -hashfile ExplorerFocus.exe SHA256</code><button class="ef-copy" type="button" data-copy="certutil -hashfile ExplorerFocus.exe SHA256" aria-label="Copiar comando">⧉</button></div>
+        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mB_3">Compara a linha do hash com o de baixo.</span></div>
+      </div>
+
+      <div class="ef-hashbox">
+        <p class="ef-hashbox-note"><span data-i18n-html="card_hash_note">Deve ser igual a este valor <span class="efmuted">(maiúsculas/minúsculas não importam)</span>:</span> <span class="ef-hashbox-ver js-ver"></span></p>
+        <p class="ef-hashbox-val js-sha">—</p>
+        <p class="ef-hashbox-ok"><span aria-hidden="true">✓</span> <span data-i18n="card_hash_ok">Iguais? É o ficheiro oficial, sem alterações.</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
   /* ============================================================
      i18n dictionary — PT (Português), EN (English US),
@@ -1425,6 +1589,37 @@
       hero_dl_exe: "Descarregar · .exe",
       hero_dl_zip: ".zip",
       hero_latest: "Versão mais recente",
+
+      dl_firsttime: "Primeira vez a abrir? Aviso do Windows?",
+      sha_link: "O que é o SHA-256?",
+      sha_title: "O que é o SHA-256?",
+      sha_p1: 'Pensa nele como a <strong>impressão digital</strong> do ficheiro. Um algoritmo lê todos os bytes do <code>ExplorerFocus.exe</code> e resume-os num código de <strong>64 caracteres</strong> (letras A–F e números). Esse código é o SHA-256.',
+      sha_p2: "Tem duas propriedades que o tornam útil:",
+      sha_li1: 'O <strong>mesmo ficheiro</strong> dá <strong>sempre</strong> o mesmo código.',
+      sha_li2: 'Se <strong>um único bit</strong> mudar — um download corrompido, ou alguém que adulterou o ficheiro — o código sai <strong>completamente diferente</strong>.',
+      sha_p3: 'Por isso a verificação é simples: se o código que <strong>calculas</strong> no teu ficheiro for <strong>igual</strong> ao que está <strong>publicado aqui</strong>, tens a certeza de que é exatamente o ficheiro oficial, byte a byte — sem corrupção nem alterações. O código não se pode inverter: serve só para comparar, nunca revela o conteúdo.',
+      sha_how_h: "Como confirmar",
+      card_title: "Primeira vez a abrir? É normal.",
+      card_intro: 'Como o ExplorerFocus é novo e ainda não tem assinatura digital, o Windows pode mostrar um aviso azul (SmartScreen). O ficheiro é seguro — aqui fica como continuar.',
+      card_open_h: "Abrir o programa",
+      card_open_1: 'No aviso <em>"O Windows protegeu o seu PC"</em>, clica em <strong>Mais informações</strong>.',
+      card_open_2: 'Clica em <strong>Executar mesmo assim</strong>.',
+      card_pin_h: "Fixaste na barra e não abre por aí?",
+      card_pin_1: 'Botão direito no <code>ExplorerFocus.exe</code> → <strong>Propriedades</strong>.',
+      card_pin_2: 'Marca <strong>Desbloquear</strong> (em baixo) → <strong>OK</strong>, e volta a fixar.',
+      card_verify_h: "Verificar o ficheiro",
+      card_verify_opt: "— opcional",
+      card_verify_intro: 'Só se quiseres ter a certeza absoluta de que descarregaste o ficheiro oficial, sem alterações. Escolhe <strong>um</strong> dos dois métodos.',
+      card_find: 'Primeiro, encontra o ficheiro: abre o <strong>Explorador de Ficheiros</strong> do Windows (a pasta amarela na barra de tarefas, ou <span class="efkbd">⊞ Win</span> + <span class="efkbd">E</span>) e clica em <strong>Transferências</strong> à esquerda — é lá que o <code>ExplorerFocus.exe</code> fica ao descarregar. Isto faz-se no Explorador, <strong>não no browser</strong>.',
+      card_mA_h: "Método A — PowerShell",
+      card_mA_1: 'Na janela do Explorador aberta em <strong>Transferências</strong>, com o <span class="efkbd">Shift</span> premido, clica com o botão direito num espaço vazio → <strong>Abrir a janela do PowerShell aqui</strong>.',
+      card_cmd_paste: "Cola este comando e prime Enter:",
+      card_mA_3: "Compara o valor SHA256 mostrado com o de baixo.",
+      card_mB_h: "Método B — Linha de comandos (cmd)",
+      card_mB_1: 'Na janela do Explorador aberta em <strong>Transferências</strong>, clica na <strong>barra de endereço</strong> (em cima, onde aparece o caminho da pasta), escreve <code>cmd</code> e prime <strong>Enter</strong>.',
+      card_mB_3: "Compara a linha do hash com o de baixo.",
+      card_hash_note: 'Deve ser igual a este valor <span class="efmuted">(maiúsculas/minúsculas não importam)</span>:',
+      card_hash_ok: "Iguais? É o ficheiro oficial, sem alterações.",
 
       app_tree_label: "Árvore",
       app_col_name: "NOME",
@@ -1616,6 +1811,37 @@
       hero_dl_zip: ".zip",
       hero_latest: "Latest version",
 
+      dl_firsttime: "First time opening it? Windows warning?",
+      sha_link: "What is SHA-256?",
+      sha_title: "What is SHA-256?",
+      sha_p1: 'Think of it as the file\'s <strong>fingerprint</strong>. An algorithm reads every byte of <code>ExplorerFocus.exe</code> and boils them down to a <strong>64-character</strong> code (letters A–F and digits). That code is the SHA-256.',
+      sha_p2: "It has two properties that make it useful:",
+      sha_li1: 'The <strong>same file</strong> always produces the <strong>same</strong> code.',
+      sha_li2: 'If <strong>a single bit</strong> changes — a corrupted download, or someone tampering with the file — the code comes out <strong>completely different</strong>.',
+      sha_p3: 'So verifying is simple: if the code you <strong>compute</strong> on your file <strong>matches</strong> the one <strong>published here</strong>, you can be sure it\'s exactly the official file, byte for byte — no corruption, no changes. The code can\'t be reversed: it\'s only for comparison and never reveals the contents.',
+      sha_how_h: "How to confirm",
+      card_title: "First time opening it? That's normal.",
+      card_intro: 'Because ExplorerFocus is new and not yet code-signed, Windows may show a blue warning (SmartScreen). The file is safe — here\'s how to continue.',
+      card_open_h: "Open the program",
+      card_open_1: 'On the <em>"Windows protected your PC"</em> notice, click <strong>More info</strong>.',
+      card_open_2: 'Click <strong>Run anyway</strong>.',
+      card_pin_h: "Pinned it to the taskbar and it won't open?",
+      card_pin_1: 'Right-click <code>ExplorerFocus.exe</code> → <strong>Properties</strong>.',
+      card_pin_2: 'Tick <strong>Unblock</strong> (at the bottom) → <strong>OK</strong>, then pin it again.',
+      card_verify_h: "Verify the file",
+      card_verify_opt: "— optional",
+      card_verify_intro: 'Only if you want to be absolutely sure you downloaded the official file, unaltered. Pick <strong>one</strong> of the two methods.',
+      card_find: 'First, find the file: open the Windows <strong>File Explorer</strong> (the yellow folder on the taskbar, or <span class="efkbd">⊞ Win</span> + <span class="efkbd">E</span>) and click <strong>Downloads</strong> on the left — that\'s where <code>ExplorerFocus.exe</code> lands when you download it. Do this in File Explorer, <strong>not in the browser</strong>.',
+      card_mA_h: "Method A — PowerShell",
+      card_mA_1: 'In the File Explorer window at <strong>Downloads</strong>, hold <span class="efkbd">Shift</span> and right-click an empty area → <strong>Open PowerShell window here</strong>.',
+      card_cmd_paste: "Paste this command and press Enter:",
+      card_mA_3: "Compare the SHA256 value shown with the one below.",
+      card_mB_h: "Method B — Command line (cmd)",
+      card_mB_1: 'In the File Explorer window at <strong>Downloads</strong>, click the <strong>address bar</strong> (at the top, where the folder path appears), type <code>cmd</code> and press <strong>Enter</strong>.',
+      card_mB_3: "Compare the hash line with the one below.",
+      card_hash_note: 'It should match this value <span class="efmuted">(upper/lowercase doesn\'t matter)</span>:',
+      card_hash_ok: "Match? It's the official file, unaltered.",
+
       app_tree_label: "Tree",
       app_col_name: "NAME",
       app_col_ext: "EXT",
@@ -1806,6 +2032,37 @@
       hero_dl_zip: ".zip",
       hero_latest: "Neueste Version",
 
+      dl_firsttime: "Zum ersten Mal öffnen? Windows-Warnung?",
+      sha_link: "Was ist SHA-256?",
+      sha_title: "Was ist SHA-256?",
+      sha_p1: 'Stell es dir als den <strong>Fingerabdruck</strong> der Datei vor. Ein Algorithmus liest jedes Byte von <code>ExplorerFocus.exe</code> und fasst sie zu einem <strong>64-stelligen</strong> Code zusammen (Buchstaben A–F und Ziffern). Dieser Code ist der SHA-256.',
+      sha_p2: "Er hat zwei nützliche Eigenschaften:",
+      sha_li1: 'Dieselbe <strong>Datei</strong> ergibt <strong>immer</strong> denselben Code.',
+      sha_li2: 'Ändert sich <strong>ein einziges Bit</strong> — ein beschädigter Download oder eine manipulierte Datei — wird der Code <strong>völlig anders</strong>.',
+      sha_p3: 'Die Prüfung ist also einfach: Stimmt der Code, den du auf deiner Datei <strong>berechnest</strong>, mit dem <strong>hier veröffentlichten</strong> überein, ist es garantiert genau die offizielle Datei, Byte für Byte — ohne Beschädigung oder Änderung. Der Code lässt sich nicht umkehren: er dient nur zum Vergleich und verrät nie den Inhalt.',
+      sha_how_h: "So bestätigst du es",
+      card_title: "Zum ersten Mal öffnen? Das ist normal.",
+      card_intro: 'Da ExplorerFocus neu und noch nicht signiert ist, zeigt Windows eventuell eine blaue Warnung (SmartScreen). Die Datei ist sicher — so geht es weiter.',
+      card_open_h: "Programm öffnen",
+      card_open_1: 'Bei der Meldung <em>"Der Computer wurde durch Windows geschützt"</em> auf <strong>Weitere Informationen</strong> klicken.',
+      card_open_2: 'Auf <strong>Trotzdem ausführen</strong> klicken.',
+      card_pin_h: "An die Taskleiste angeheftet und es öffnet nicht?",
+      card_pin_1: 'Rechtsklick auf <code>ExplorerFocus.exe</code> → <strong>Eigenschaften</strong>.',
+      card_pin_2: '<strong>Zulassen</strong> (unten) anhaken → <strong>OK</strong>, und erneut anheften.',
+      card_verify_h: "Datei überprüfen",
+      card_verify_opt: "— optional",
+      card_verify_intro: 'Nur wenn du ganz sicher sein willst, dass du die offizielle, unveränderte Datei geladen hast. Wähle <strong>eine</strong> der zwei Methoden.',
+      card_find: 'Zuerst die Datei finden: öffne den Windows-<strong>Datei-Explorer</strong> (der gelbe Ordner in der Taskleiste, oder <span class="efkbd">⊞ Win</span> + <span class="efkbd">E</span>) und klicke links auf <strong>Downloads</strong> — dort landet <code>ExplorerFocus.exe</code> beim Herunterladen. Das machst du im Datei-Explorer, <strong>nicht im Browser</strong>.',
+      card_mA_h: "Methode A — PowerShell",
+      card_mA_1: 'Im Datei-Explorer-Fenster unter <strong>Downloads</strong> die <span class="efkbd">Umschalt</span>-Taste halten und mit der rechten Maustaste auf eine leere Stelle klicken → <strong>PowerShell-Fenster hier öffnen</strong>.',
+      card_cmd_paste: "Diesen Befehl einfügen und Enter drücken:",
+      card_mA_3: "Vergleiche den angezeigten SHA256-Wert mit dem unten.",
+      card_mB_h: "Methode B — Eingabeaufforderung (cmd)",
+      card_mB_1: 'Im Datei-Explorer-Fenster unter <strong>Downloads</strong> in die <strong>Adressleiste</strong> klicken (oben, wo der Ordnerpfad steht), <code>cmd</code> eingeben und <strong>Enter</strong> drücken.',
+      card_mB_3: "Vergleiche die Hash-Zeile mit dem Wert unten.",
+      card_hash_note: 'Er sollte mit diesem Wert übereinstimmen <span class="efmuted">(Groß-/Kleinschreibung egal)</span>:',
+      card_hash_ok: "Gleich? Es ist die offizielle, unveränderte Datei.",
+
       app_tree_label: "Baum",
       app_col_name: "NAME",
       app_col_ext: "ERW.",
@@ -1995,6 +2252,37 @@
       hero_dl_exe: "下载 · .exe",
       hero_dl_zip: ".zip",
       hero_latest: "最新版本",
+
+      dl_firsttime: "第一次打开？Windows 警告？",
+      sha_link: "SHA-256 是什么？",
+      sha_title: "SHA-256 是什么？",
+      sha_p1: '把它想成文件的<strong>指纹</strong>。一种算法读取 <code>ExplorerFocus.exe</code> 的每一个字节，把它们浓缩成一个 <strong>64 个字符</strong>的代码（字母 A–F 和数字）。这个代码就是 SHA-256。',
+      sha_p2: "它有两个有用的特性：",
+      sha_li1: '<strong>同一个文件</strong>永远得到<strong>相同</strong>的代码。',
+      sha_li2: '只要<strong>一个比特</strong>发生变化——下载损坏，或有人篡改了文件——代码就会<strong>完全不同</strong>。',
+      sha_p3: '所以验证很简单：如果你在自己文件上<strong>计算</strong>出的代码与<strong>这里公布</strong>的<strong>一致</strong>，就能确定它正是官方文件，逐字节相同——没有损坏，也没有改动。代码无法逆推：它只用于比较，绝不会泄露文件内容。',
+      sha_how_h: "如何确认",
+      card_title: "第一次打开？这很正常。",
+      card_intro: '由于 ExplorerFocus 是新程序，尚未进行数字签名，Windows 可能会显示蓝色警告（SmartScreen）。文件是安全的——按以下步骤继续。',
+      card_open_h: "打开程序",
+      card_open_1: '在<em>"Windows 已保护你的电脑"</em>提示中，点击<strong>更多信息</strong>。',
+      card_open_2: '点击<strong>仍要运行</strong>。',
+      card_pin_h: "固定到任务栏后无法打开？",
+      card_pin_1: '右键点击 <code>ExplorerFocus.exe</code> → <strong>属性</strong>。',
+      card_pin_2: '勾选<strong>解除锁定</strong>（在底部）→ <strong>确定</strong>，然后重新固定。',
+      card_verify_h: "验证文件",
+      card_verify_opt: "— 可选",
+      card_verify_intro: '仅当你想完全确认下载的是未经改动的官方文件时。<strong>二选一</strong>即可。',
+      card_find: '首先，找到文件：打开 Windows <strong>文件资源管理器</strong>（任务栏上的黄色文件夹，或按 <span class="efkbd">⊞ Win</span> + <span class="efkbd">E</span>），点击左侧的<strong>下载</strong>——<code>ExplorerFocus.exe</code> 下载后就在那里。这要在文件资源管理器里做，<strong>不是在浏览器里</strong>。',
+      card_mA_h: "方法 A — PowerShell",
+      card_mA_1: '在打开到<strong>下载</strong>的文件资源管理器窗口中，按住 <span class="efkbd">Shift</span> 并右键点击空白处 → <strong>在此处打开 PowerShell 窗口</strong>。',
+      card_cmd_paste: "粘贴此命令并按 Enter：",
+      card_mA_3: "把显示的 SHA256 值与下面的比较。",
+      card_mB_h: "方法 B — 命令行（cmd）",
+      card_mB_1: '在打开到<strong>下载</strong>的文件资源管理器窗口中，点击<strong>地址栏</strong>（顶部显示文件夹路径的位置），输入 <code>cmd</code> 并按 <strong>Enter</strong>。',
+      card_mB_3: "把哈希那一行与下面的比较。",
+      card_hash_note: '应与此值一致 <span class="efmuted">（大小写无关）</span>：',
+      card_hash_ok: "一致？就是未经改动的官方文件。",
 
       app_tree_label: "目录树",
       app_col_name: "名称",
@@ -2228,18 +2516,62 @@
      Versão mais recente (até à revision) — lida do version.json
      publicado no GitHub Pages. Só aparece se o ficheiro existir.
   ============================================================ */
+  /* Fallback só para pré-visualização local (file://, sem version.json);
+     no site publicado o version.json manda sempre e sobrepõe-se a isto. */
+  var VERIFY_FALLBACK = { version: '1.2.1', sha256: '531D24D52F429E46EE5918051B43F2A9318E6EDC2F2792F18F3331BCB82A9DBB' };
+  function fillVerify(sha, ver) {
+    sha = (sha || '').toUpperCase();
+    document.querySelectorAll('.js-sha').forEach(function (el) { el.textContent = sha; });
+    if (ver) document.querySelectorAll('.js-ver').forEach(function (el) { el.textContent = 'v' + ver; });
+    var hv = document.getElementById('heroVerify'); if (hv && sha) hv.hidden = false;
+  }
   fetch('version.json', { cache: 'no-store' })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (v) {
-      if (!v || !v.version) return;
-      var box = document.getElementById('heroLatest');
-      var ver = document.getElementById('heroVersion');
-      var rel = document.getElementById('heroReleased');
-      if (ver) ver.textContent = 'v' + v.version;
-      if (rel && v.released) rel.textContent = '  ·  ' + v.released;
-      if (box) box.hidden = false;
+      if (v && v.version) {
+        var box = document.getElementById('heroLatest');
+        var ver = document.getElementById('heroVersion');
+        var rel = document.getElementById('heroReleased');
+        if (ver) ver.textContent = 'v' + v.version;
+        if (rel && v.released) rel.textContent = '  ·  ' + v.released;
+        if (box) box.hidden = false;
+      }
+      if (v && v.sha256) fillVerify(v.sha256, v.version);
+      else fillVerify(VERIFY_FALLBACK.sha256, VERIFY_FALLBACK.version);
     })
-    .catch(function () { /* sem version.json ainda — fica escondido */ });
+    .catch(function () { fillVerify(VERIFY_FALLBACK.sha256, VERIFY_FALLBACK.version); });
+
+  /* ============================================================
+     Card "primeira vez a abrir" — abrir/fechar + copiar comandos/SHA
+  ============================================================ */
+  (function () {
+    function show(m) { m.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function hide(m) { m.classList.remove('open'); document.body.style.overflow = ''; }
+    document.querySelectorAll('[data-modal]').forEach(function (op) {
+      op.addEventListener('click', function (e) {
+        e.preventDefault();
+        var m = document.getElementById(op.getAttribute('data-modal'));
+        if (m) show(m);
+      });
+    });
+    document.querySelectorAll('.ef-modal').forEach(function (m) {
+      m.addEventListener('click', function (e) { if (e.target === m) hide(m); });
+      var x = m.querySelector('.ef-card-x');
+      if (x) x.addEventListener('click', function () { hide(m); });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') document.querySelectorAll('.ef-modal.open').forEach(hide);
+    });
+
+    document.querySelectorAll('.ef-copy, .hero-sha-copy').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var t = b.getAttribute('data-copy');
+        if (!t) { var hs = document.getElementById('heroSha'); t = hs ? hs.textContent : ''; }
+        try { if (navigator.clipboard) navigator.clipboard.writeText(t); } catch (e) {}
+        var o = b.textContent; b.textContent = '✓'; setTimeout(function () { b.textContent = o; }, 1200);
+      });
+    });
+  })();
 
   /* ============================================================
      Contador de visitas à página — GoatCounter (privacy-friendly:

@@ -38,7 +38,7 @@
   "description": "Alternativa focada ao Windows Explorer: perfis, árvores configuráveis, operações ricas, pré-visualização e acessos remotos (SFTP/FTP/FTPS/WebDAV).",
   "url": "https://nunex-mbrothers.github.io/ExplorerFocus/",
   "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
-  "softwareVersion": "1.2.4",
+  "softwareVersion": "1.2.5",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
   "author": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/" }
 }
@@ -922,7 +922,7 @@
       <a href="#shortcuts" data-i18n="nav_shortcuts">Atalhos</a>
       <a href="#stack" data-i18n="nav_stack">Stack</a>
       <a href="#download" data-i18n="nav_download">Obter</a>
-      <span class="nav-version">v1.2.4</span>
+      <span class="nav-version">v1.2.5</span>
     </nav>
   </div>
 </header>
@@ -1279,7 +1279,7 @@
        Os teus ficheiros nunca passam por servidores nossos.</p>
     <div class="feat-mark" data-i18n="f19_mark">Dropbox · OneDrive</div>
     <p class="feat-note">
-      <span data-i18n="f19_soon">Dropbox — disponível agora. OneDrive — em breve.</span><br>
+      <span data-i18n="f19_soon">Dropbox e OneDrive — disponíveis agora.</span><br>
       <span data-i18n="f19_premium">PREMIUM (tal como o SFTP/FTP/FTPS): várias ligações e todas as operações. Donativo 9,99 € (PayPal).</span>
     </p>
   </div>
@@ -1321,10 +1321,13 @@
     <p data-i18n-html="f23_p">Pré-visualização ao vivo da <em>câmara</em>, com escolha de câmara e microfone, resolução e
        formato — <em>MP4</em>, <em>WMV</em> ou <em>AVI</em>. Guarda na pasta atual com um clique.</p>
     <div class="feat-mark" data-i18n="f23_mark">Câmara · Microfone · MP4 · WMV · AVI</div>
+    <p class="feat-note">
+      <span data-i18n="f23_premium">Grátis com marca de água discreta no rodapé. PREMIUM: sem marca de água.</span>
+    </p>
   </div>
 
   <div class="feat w12">
-    <div class="num"><span data-i18n="f24_num">24 — DIGITALIZAR</span><span class="badge-pro" data-i18n="badge_pro">PREMIUM</span></div>
+    <div class="num" data-i18n="f24_num">24 — DIGITALIZAR</div>
     <h3 data-i18n="f24_h">Do scanner para a pasta — imagem ou PDF.</h3>
     <p data-i18n-html="f24_p">Digitaliza do <em>vidro</em> ou do <em>alimentador (ADF)</em>, várias folhas de uma vez.
        Escolhe a resolução e a cor — <em>cor</em>, tons de cinzento ou <em>preto e branco</em>. Guarda como
@@ -1332,7 +1335,7 @@
        mesmo PDF.</p>
     <div class="feat-mark" data-i18n="f24_mark">Vidro · Alimentador (ADF) · Cor · PDF multipágina</div>
     <p class="feat-note">
-      <span data-i18n="f24_premium">PREMIUM: donativo mínimo de 9,99 € (PayPal) — ativa-se na app com o teu Machine ID.</span>
+      <span data-i18n="f24_premium">Grátis: 1 página do vidro, com marca de água. PREMIUM: várias páginas, alimentador (ADF) e sem marca de água.</span>
     </p>
   </div>
 
@@ -1346,14 +1349,14 @@
   </div>
 
   <div class="feat w12">
-    <div class="num"><span data-i18n="f26_num">26 — GRAVAR ECRÃ</span><span class="badge-pro" data-i18n="badge_pro">PREMIUM</span></div>
+    <div class="num" data-i18n="f26_num">26 — GRAVAR ECRÃ</div>
     <h3 data-i18n="f26_h">Grava o ecrã direto para a pasta — com câmara opcional.</h3>
     <p data-i18n-html="f26_p">Escolhe uma <em>região de qualquer monitor</em> (ou o ecrã inteiro) e grava para <em>MP4</em> com o
        <em>microfone</em>. Junta a <em>câmara</em>: alterna ecrã⇄câmara com <em>transições</em> (fundido, cortina,
        deslizar, mosaico), mostra-a em <em>PiP</em> num canto, ou lado a lado em <em>ecrã dividido</em>.</p>
-    <div class="feat-mark" data-i18n="f26_mark">Região · Microfone · Câmara · PiP · Ecrã dividido · Transições · MP4</div>
+    <div class="feat-mark" data-i18n="f26_mark">Região · Microfone · Som do sistema · Câmara · PiP · Ecrã dividido · Transições · MP4</div>
     <p class="feat-note">
-      <span data-i18n="f26_premium">PREMIUM: donativo mínimo de 9,99 € (PayPal) — ativa-se na app com o teu Machine ID.</span>
+      <span data-i18n="f26_premium">Grátis: marca de água + 15 s e sem som. PREMIUM: sem marca, sem limite de tempo e com som (microfone + sistema).</span>
     </p>
   </div>
 
@@ -1478,7 +1481,7 @@
   </div>
 
   <div class="footer-baseline">
-    <span>v1.2.4 · WPF · net10.0-windows · single-file</span>
+    <span>v1.2.5 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">desenhado para o quotidiano</span>
     <span id="viewCounter" hidden title="Visitas à página"></span>
   </div>
@@ -1744,7 +1747,7 @@
       f19_h: "Dropbox e OneDrive — a tua cloud dentro do explorer.",
       f19_p: "Liga a <em>Dropbox</em> e <em>OneDrive</em> por OAuth seguro — sem guardares palavras-passe. Navega, pré-visualiza, envia e descarrega, cria pastas, renomeia e copia/move, como numa pasta local. Os teus ficheiros nunca passam por servidores nossos.",
       f19_mark: "Dropbox · OneDrive",
-      f19_soon: "Dropbox — disponível agora. OneDrive — em breve.",
+      f19_soon: "Dropbox e OneDrive — disponíveis agora.",
       f19_premium: "PREMIUM (tal como o SFTP/FTP/FTPS): várias ligações e todas as operações. Donativo 9,99 € (PayPal).",
       f20_num: "20 — LIVROS / EPUB",
       f20_h: "EPUB — pré-visualiza e lê, sem sair do explorer.",
@@ -1759,12 +1762,11 @@
       f22_num: "22 — GRAVAR ÁUDIO",
       f22_h: "Grava o microfone direto para a pasta.",
       f22_p: "Um clique grava do <em>microfone</em> para a pasta atual. Escolhe o microfone, vê o <em>medidor de nível</em> ao vivo, ajusta o volume de gravação e guarda em <em>WAV</em> ou <em>M4A/AAC</em>.",
-      f22_mark: "Microfone · Medidor de nível · WAV · M4A",
-      f23_num: "23 — GRAVAR VÍDEO",
+      f22_mark: "Microfone · Medidor de nível · WAV · M4A",      f23_num: "23 — GRAVAR VÍDEO",
       f23_h: "Grava da câmara direto para a pasta.",
       f23_p: "Pré-visualização ao vivo da <em>câmara</em>, com escolha de câmara e microfone, resolução e formato — <em>MP4</em>, <em>WMV</em> ou <em>AVI</em>. Guarda na pasta atual com um clique.",
       f23_mark: "Câmara · Microfone · MP4 · WMV · AVI",
-      f23_premium: "PREMIUM: donativo mínimo de 9,99 € (PayPal) — ativa-se na app com o teu Machine ID.",
+      f23_premium: "Grátis com marca de água discreta no rodapé. PREMIUM: sem marca de água.",
       f24_num: "24 — DIGITALIZAR",
       f24_h: "Do scanner para a pasta — imagem ou PDF.",
       f24_p: "Digitaliza do <em>vidro</em> ou do <em>alimentador (ADF)</em>, várias folhas de uma vez. Escolhe a resolução e a cor — <em>cor</em>, tons de cinzento ou <em>preto e branco</em>. Guarda como <em>JPEG/PNG</em> ou junta tudo num <em>PDF de várias páginas</em>, e continua a adicionar folhas ao mesmo PDF.",
@@ -1776,10 +1778,10 @@
       f26_num: "26 — GRAVAR ECRÃ",
       f26_h: "Grava o ecrã direto para a pasta — com câmara opcional.",
       f26_p: "Escolhe uma <em>região de qualquer monitor</em> (ou o ecrã inteiro) e grava para <em>MP4</em> com o <em>microfone</em>. Junta a <em>câmara</em>: alterna ecrã⇄câmara com <em>transições</em> (fundido, cortina, deslizar, mosaico), mostra-a em <em>PiP</em> num canto, ou lado a lado em <em>ecrã dividido</em>.",
-      f26_mark: "Região · Microfone · Câmara · PiP · Ecrã dividido · Transições · MP4",
-      f26_premium: "PREMIUM: donativo mínimo de 9,99 € (PayPal) — ativa-se na app com o teu Machine ID.",
-      f24_premium: "PREMIUM: donativo mínimo de 9,99 € (PayPal) — ativa-se na app com o teu Machine ID.",
-      f18_soon: "Clouds (Dropbox, OneDrive, S3) — em breve.",
+      f26_mark: "Região · Microfone · Som do sistema · Câmara · PiP · Ecrã dividido · Transições · MP4",
+      f26_premium: "Grátis: marca de água + 15 s e sem som. PREMIUM: sem marca, sem limite de tempo e com som (microfone + sistema).",
+      f24_premium: "Grátis: 1 página do vidro, com marca de água. PREMIUM: várias páginas, alimentador (ADF) e sem marca de água.",
+      f18_soon: "Clouds (Dropbox, OneDrive) — disponíveis. S3 e rclone — em breve.",
       ft_ch_standalone: "Standalone (.exe)",
       ft_ch_portable: "Standalone (.zip)",
       ft_ch_clickonce: "ClickOnce",
@@ -1974,7 +1976,7 @@
       f19_h: "Dropbox and OneDrive — your cloud inside the explorer.",
       f19_p: "Connect to <em>Dropbox</em> and <em>OneDrive</em> via secure OAuth — no passwords stored. Browse, preview, upload and download, create folders, rename and copy/move, like a local folder. Your files never pass through our servers.",
       f19_mark: "Dropbox · OneDrive",
-      f19_soon: "Dropbox — available now. OneDrive — coming soon.",
+      f19_soon: "Dropbox and OneDrive — available now.",
       f19_premium: "PREMIUM (like SFTP/FTP/FTPS): multiple connections and all operations. €9.99 donation (PayPal).",
       f20_num: "20 — BOOKS / EPUB",
       f20_h: "EPUB — preview and read, without leaving the explorer.",
@@ -1989,12 +1991,11 @@
       f22_num: "22 — RECORD AUDIO",
       f22_h: "Record the microphone straight into the folder.",
       f22_p: "One click records the <em>microphone</em> into the current folder. Pick the microphone, watch the live <em>level meter</em>, adjust the recording volume and save as <em>WAV</em> or <em>M4A/AAC</em>.",
-      f22_mark: "Microphone · Level meter · WAV · M4A",
-      f23_num: "23 — RECORD VIDEO",
+      f22_mark: "Microphone · Level meter · WAV · M4A",      f23_num: "23 — RECORD VIDEO",
       f23_h: "Record the camera straight into the folder.",
       f23_p: "Live <em>camera</em> preview, with a choice of camera and microphone, resolution and format — <em>MP4</em>, <em>WMV</em> or <em>AVI</em>. Saves into the current folder with one click.",
       f23_mark: "Camera · Microphone · MP4 · WMV · AVI",
-      f23_premium: "PREMIUM: minimum €9.99 donation (PayPal) — activated in the app with your Machine ID.",
+      f23_premium: "Free with a discreet footer watermark. PREMIUM: no watermark.",
       f24_num: "24 — SCAN",
       f24_h: "From the scanner into the folder — image or PDF.",
       f24_p: "Scan from the <em>flatbed</em> or the <em>feeder (ADF)</em>, many sheets at once. Choose the resolution and colour — <em>colour</em>, grayscale or <em>black &amp; white</em>. Save as <em>JPEG/PNG</em> or merge everything into a <em>multi-page PDF</em>, and keep adding sheets to the same PDF.",
@@ -2006,10 +2007,10 @@
       f26_num: "26 — RECORD SCREEN",
       f26_h: "Record the screen straight into the folder — with an optional camera.",
       f26_p: "Pick a <em>region of any monitor</em> (or the whole screen) and record to <em>MP4</em> with the <em>microphone</em>. Add the <em>camera</em>: switch screen⇄camera with <em>transitions</em> (fade, wipe, slide, mosaic), show it as <em>PiP</em> in a corner, or side by side in <em>split screen</em>.",
-      f26_mark: "Region · Microphone · Camera · PiP · Split screen · Transitions · MP4",
-      f26_premium: "PREMIUM: minimum €9.99 donation (PayPal) — activated in the app with your Machine ID.",
-      f24_premium: "PREMIUM: minimum €9.99 donation (PayPal) — activated in the app with your Machine ID.",
-      f18_soon: "Clouds (Dropbox, OneDrive, S3) — coming soon.",
+      f26_mark: "Region · Microphone · System sound · Camera · PiP · Split screen · Transitions · MP4",
+      f26_premium: "Free: watermark + 15 s and no sound. PREMIUM: no watermark, no time limit and with sound (microphone + system).",
+      f24_premium: "Free: 1 flatbed page, with a watermark. PREMIUM: multiple pages, feeder (ADF) and no watermark.",
+      f18_soon: "Clouds (Dropbox, OneDrive) — available. S3 and rclone — coming soon.",
       ft_ch_standalone: "Standalone (.exe)",
       ft_ch_portable: "Standalone (.zip)",
       ft_ch_clickonce: "ClickOnce",
@@ -2204,7 +2205,7 @@
       f19_h: "Dropbox und OneDrive — deine Cloud im Explorer.",
       f19_p: "Verbinde dich mit <em>Dropbox</em> und <em>OneDrive</em> per sicherem OAuth — ohne Passwörter zu speichern. Durchsuchen, Vorschau, Hoch- und Herunterladen, Ordner erstellen, umbenennen und kopieren/verschieben, wie ein lokaler Ordner. Deine Dateien laufen nie über unsere Server.",
       f19_mark: "Dropbox · OneDrive",
-      f19_soon: "Dropbox — jetzt verfügbar. OneDrive — bald verfügbar.",
+      f19_soon: "Dropbox und OneDrive — jetzt verfügbar.",
       f19_premium: "PREMIUM (wie SFTP/FTP/FTPS): mehrere Verbindungen und alle Operationen. Spende 9,99 € (PayPal).",
       f20_num: "20 — BÜCHER / EPUB",
       f20_h: "EPUB — Vorschau und Lesen, ohne den Explorer zu verlassen.",
@@ -2219,12 +2220,11 @@
       f22_num: "22 — AUDIO AUFNEHMEN",
       f22_h: "Nimm das Mikrofon direkt in den Ordner auf.",
       f22_p: "Ein Klick nimmt das <em>Mikrofon</em> in den aktuellen Ordner auf. Wähle das Mikrofon, sieh die Live-<em>Pegelanzeige</em>, stelle die Aufnahmelautstärke ein und speichere als <em>WAV</em> oder <em>M4A/AAC</em>.",
-      f22_mark: "Mikrofon · Pegelanzeige · WAV · M4A",
-      f23_num: "23 — VIDEO AUFNEHMEN",
+      f22_mark: "Mikrofon · Pegelanzeige · WAV · M4A",      f23_num: "23 — VIDEO AUFNEHMEN",
       f23_h: "Nimm die Kamera direkt in den Ordner auf.",
       f23_p: "Live-<em>Kameravorschau</em>, mit Auswahl von Kamera und Mikrofon, Auflösung und Format — <em>MP4</em>, <em>WMV</em> oder <em>AVI</em>. Speichert mit einem Klick in den aktuellen Ordner.",
       f23_mark: "Kamera · Mikrofon · MP4 · WMV · AVI",
-      f23_premium: "PREMIUM: Mindestspende 9,99 € (PayPal) — Aktivierung in der App mit deiner Machine ID.",
+      f23_premium: "Kostenlos mit dezentem Wasserzeichen. PREMIUM: ohne Wasserzeichen.",
       f24_num: "24 — SCANNEN",
       f24_h: "Vom Scanner in den Ordner — Bild oder PDF.",
       f24_p: "Scanne vom <em>Flachbett</em> oder vom <em>Einzug (ADF)</em>, viele Blätter auf einmal. Wähle Auflösung und Farbe — <em>Farbe</em>, Graustufen oder <em>Schwarzweiß</em>. Speichere als <em>JPEG/PNG</em> oder füge alles zu einem <em>mehrseitigen PDF</em> zusammen — und füge weitere Blätter zum selben PDF hinzu.",
@@ -2236,10 +2236,10 @@
       f26_num: "26 — BILDSCHIRM AUFNEHMEN",
       f26_h: "Nimm den Bildschirm direkt in den Ordner auf — mit optionaler Kamera.",
       f26_p: "Wähle einen <em>Bereich eines beliebigen Bildschirms</em> (oder den ganzen Bildschirm) und nimm als <em>MP4</em> mit dem <em>Mikrofon</em> auf. Kamera dazu: Bildschirm⇄Kamera mit <em>Übergängen</em> umschalten (Überblendung, Wischen, Schieben, Mosaik), als <em>PiP</em> in einer Ecke zeigen oder nebeneinander im <em>geteilten Bildschirm</em>.",
-      f26_mark: "Bereich · Mikrofon · Kamera · PiP · Geteilter Bildschirm · Übergänge · MP4",
-      f26_premium: "PREMIUM: Mindestspende 9,99 € (PayPal) — Aktivierung in der App mit deiner Machine ID.",
-      f24_premium: "PREMIUM: Mindestspende 9,99 € (PayPal) — Aktivierung in der App mit deiner Machine ID.",
-      f18_soon: "Clouds (Dropbox, OneDrive, S3) — bald verfügbar.",
+      f26_mark: "Bereich · Mikrofon · Systemton · Kamera · PiP · Geteilter Bildschirm · Übergänge · MP4",
+      f26_premium: "Kostenlos: Wasserzeichen + 15 s und ohne Ton. PREMIUM: ohne Wasserzeichen, ohne Zeitlimit und mit Ton (Mikrofon + System).",
+      f24_premium: "Kostenlos: 1 Flachbett-Seite, mit Wasserzeichen. PREMIUM: mehrere Seiten, Einzug (ADF) und ohne Wasserzeichen.",
+      f18_soon: "Clouds (Dropbox, OneDrive) — verfügbar. S3 und rclone — bald.",
       ft_ch_standalone: "Standalone (.exe)",
       ft_ch_portable: "Standalone (.zip)",
       ft_ch_clickonce: "ClickOnce",
@@ -2434,7 +2434,7 @@
       f19_h: "Dropbox 和 OneDrive — 把云端装进资源管理器。",
       f19_p: "通过安全的 OAuth 连接 <em>Dropbox</em> 和 <em>OneDrive</em>——不存储密码。浏览、预览、上传下载、新建文件夹、重命名和复制/移动，就像本地文件夹。你的文件绝不经过我们的服务器。",
       f19_mark: "Dropbox · OneDrive",
-      f19_soon: "Dropbox — 现已上线。OneDrive — 即将推出。",
+      f19_soon: "Dropbox 和 OneDrive — 现已上线。",
       f19_premium: "PREMIUM（与 SFTP/FTP/FTPS 一样）：多个连接和全部操作。捐赠 €9.99（PayPal）。",
       f20_num: "20 — 图书 / EPUB",
       f20_h: "EPUB — 在文件管理器内直接预览与阅读。",
@@ -2449,12 +2449,11 @@
       f22_num: "22 — 录制音频",
       f22_h: "将麦克风直接录制到文件夹。",
       f22_p: "一键将<em>麦克风</em>录制到当前文件夹。选择麦克风，查看实时<em>电平表</em>，调整录制音量，保存为 <em>WAV</em> 或 <em>M4A/AAC</em>。",
-      f22_mark: "麦克风 · 电平表 · WAV · M4A",
-      f23_num: "23 — 录制视频",
+      f22_mark: "麦克风 · 电平表 · WAV · M4A",      f23_num: "23 — 录制视频",
       f23_h: "将摄像头直接录制到文件夹。",
       f23_p: "实时<em>摄像头</em>预览，可选择摄像头和麦克风、分辨率和格式 — <em>MP4</em>、<em>WMV</em> 或 <em>AVI</em>。一键保存到当前文件夹。",
       f23_mark: "摄像头 · 麦克风 · MP4 · WMV · AVI",
-      f23_premium: "PREMIUM：通过 PayPal 最低捐赠 €9.99 — 在应用中用你的 Machine ID 激活。",
+      f23_premium: "免费，带不显眼的页脚水印。PREMIUM：无水印。",
       f24_num: "24 — 扫描",
       f24_h: "从扫描仪到文件夹 — 图像或 PDF。",
       f24_p: "从<em>平板</em>或<em>进纸器（ADF）</em>扫描，一次多张。选择分辨率和颜色 — <em>彩色</em>、灰度或<em>黑白</em>。保存为 <em>JPEG/PNG</em>，或合并为<em>多页 PDF</em>，并继续向同一 PDF 添加页面。",
@@ -2466,10 +2465,10 @@
       f26_num: "26 — 录制屏幕",
       f26_h: "将屏幕直接录制到文件夹——可选摄像头。",
       f26_p: "选择<em>任意显示器的区域</em>（或整个屏幕），用<em>麦克风</em>录制为 <em>MP4</em>。加入<em>摄像头</em>：用<em>过渡效果</em>（淡入淡出、擦除、滑动、马赛克）在屏幕⇄摄像头之间切换，在角落以<em>画中画</em>显示，或在<em>分屏</em>中并排显示。",
-      f26_mark: "区域 · 麦克风 · 摄像头 · 画中画 · 分屏 · 过渡 · MP4",
-      f26_premium: "PREMIUM：通过 PayPal 最低捐赠 €9.99 — 在应用中用你的 Machine ID 激活。",
-      f24_premium: "PREMIUM：通过 PayPal 最低捐赠 €9.99 — 在应用中用你的 Machine ID 激活。",
-      f18_soon: "云端(Dropbox、OneDrive、S3)— 即将推出。",
+      f26_mark: "区域 · 麦克风 · 系统声音 · 摄像头 · 画中画 · 分屏 · 过渡 · MP4",
+      f26_premium: "免费：水印 + 15 秒且无声音。PREMIUM：无水印、无时间限制且有声音（麦克风 + 系统）。",
+      f24_premium: "免费：平板 1 页，带水印。PREMIUM：多页、送稿器（ADF）且无水印。",
+      f18_soon: "云端（Dropbox、OneDrive）— 已上线。S3 和 rclone — 即将推出。",
       ft_ch_standalone: "独立版 (.exe)",
       ft_ch_portable: "独立版 (.zip)",
       ft_ch_clickonce: "ClickOnce",

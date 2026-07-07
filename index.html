@@ -7,7 +7,7 @@
 <meta name="description" data-i18n-attr="content" data-i18n="page_desc" content="Alternativa focada ao Windows Explorer. Perfis, árvores configuráveis, operações ricas, pré-visualização — tudo em torno do que importa.">
 
 <!-- ===== SEO ===== -->
-<meta name="keywords" content="ExplorerFocus, explorador de ficheiros, file explorer, alternativa ao Windows Explorer, gestor de ficheiros, file manager, cliente SFTP, FTP, FTPS, WebDAV, Dropbox, OneDrive, pré-visualização, file preview, Word, Excel, PowerPoint, RTF, OpenDocument, EPUB, ebook, leitor de EPUB, epub reader, gravar áudio, gravar vídeo, digitalizar, scanner, ADF, PDF, câmara, microfone, Windows 10, Windows 11, .NET 10, WPF, perfis, produtividade">
+<meta name="keywords" content="ExplorerFocus, explorador de ficheiros, file explorer, alternativa ao Windows Explorer, gestor de ficheiros, file manager, cliente SFTP, FTP, FTPS, WebDAV, Dropbox, OneDrive, pré-visualização, file preview, Word, Excel, PowerPoint, RTF, OpenDocument, EPUB, ebook, leitor de EPUB, epub reader, gravar áudio, gravar vídeo, gravar ecrã, screen recording, captura de ecrã, screen capture, PiP, picture-in-picture, ecrã dividido, digitalizar, scanner, ADF, PDF, câmara, microfone, Windows 10, Windows 11, .NET 10, WPF, perfis, produtividade">
 <meta name="author" content="mBrothers">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0E0F11">
@@ -38,7 +38,7 @@
   "description": "Alternativa focada ao Windows Explorer: perfis, árvores configuráveis, operações ricas, pré-visualização e acessos remotos (SFTP/FTP/FTPS/WebDAV).",
   "url": "https://nunex-mbrothers.github.io/ExplorerFocus/",
   "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
-  "softwareVersion": "1.2.3",
+  "softwareVersion": "1.2.4",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
   "author": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/" }
 }
@@ -922,7 +922,7 @@
       <a href="#shortcuts" data-i18n="nav_shortcuts">Atalhos</a>
       <a href="#stack" data-i18n="nav_stack">Stack</a>
       <a href="#download" data-i18n="nav_download">Obter</a>
-      <span class="nav-version">v1.2.3</span>
+      <span class="nav-version">v1.2.4</span>
     </nav>
   </div>
 </header>
@@ -1316,14 +1316,11 @@
   </div>
 
   <div class="feat w12">
-    <div class="num"><span data-i18n="f23_num">23 — GRAVAR VÍDEO</span><span class="badge-pro" data-i18n="badge_pro">PREMIUM</span></div>
+    <div class="num" data-i18n="f23_num">23 — GRAVAR VÍDEO</div>
     <h3 data-i18n="f23_h">Grava da câmara direto para a pasta.</h3>
     <p data-i18n-html="f23_p">Pré-visualização ao vivo da <em>câmara</em>, com escolha de câmara e microfone, resolução e
        formato — <em>MP4</em>, <em>WMV</em> ou <em>AVI</em>. Guarda na pasta atual com um clique.</p>
     <div class="feat-mark" data-i18n="f23_mark">Câmara · Microfone · MP4 · WMV · AVI</div>
-    <p class="feat-note">
-      <span data-i18n="f23_premium">PREMIUM: donativo mínimo de 9,99 € (PayPal) — ativa-se na app com o teu Machine ID.</span>
-    </p>
   </div>
 
   <div class="feat w12">
@@ -1346,6 +1343,18 @@
        <em>pré-visualizas</em> e <em>copias ficheiros para fora</em> sem extrair tudo. Só leitura;
        o <em>Abrir com…</em> continua a abrir no WinRAR/WinZip/7-Zip.</p>
     <div class="feat-mark" data-i18n="f25_mark">ZIP · RAR · 7z · TAR · Copiar para fora</div>
+  </div>
+
+  <div class="feat w12">
+    <div class="num"><span data-i18n="f26_num">26 — GRAVAR ECRÃ</span><span class="badge-pro" data-i18n="badge_pro">PREMIUM</span></div>
+    <h3 data-i18n="f26_h">Grava o ecrã direto para a pasta — com câmara opcional.</h3>
+    <p data-i18n-html="f26_p">Escolhe uma <em>região de qualquer monitor</em> (ou o ecrã inteiro) e grava para <em>MP4</em> com o
+       <em>microfone</em>. Junta a <em>câmara</em>: alterna ecrã⇄câmara com <em>transições</em> (fundido, cortina,
+       deslizar, mosaico), mostra-a em <em>PiP</em> num canto, ou lado a lado em <em>ecrã dividido</em>.</p>
+    <div class="feat-mark" data-i18n="f26_mark">Região · Microfone · Câmara · PiP · Ecrã dividido · Transições · MP4</div>
+    <p class="feat-note">
+      <span data-i18n="f26_premium">PREMIUM: donativo mínimo de 9,99 € (PayPal) — ativa-se na app com o teu Machine ID.</span>
+    </p>
   </div>
 
 </section>
@@ -1469,7 +1478,7 @@
   </div>
 
   <div class="footer-baseline">
-    <span>v1.2.3 · WPF · net10.0-windows · single-file</span>
+    <span>v1.2.4 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">desenhado para o quotidiano</span>
     <span id="viewCounter" hidden title="Visitas à página"></span>
   </div>
@@ -1764,6 +1773,11 @@
       f25_h: "Abre ZIP, RAR, 7z e TAR como se fossem pastas.",
       f25_p: "Duplo-clique (ou <em>Navegar dentro</em>) e entras no arquivo — navegas o conteúdo, <em>pré-visualizas</em> e <em>copias ficheiros para fora</em> sem extrair tudo. Só leitura; o <em>Abrir com…</em> continua a abrir no WinRAR/WinZip/7-Zip.",
       f25_mark: "ZIP · RAR · 7z · TAR · Copiar para fora",
+      f26_num: "26 — GRAVAR ECRÃ",
+      f26_h: "Grava o ecrã direto para a pasta — com câmara opcional.",
+      f26_p: "Escolhe uma <em>região de qualquer monitor</em> (ou o ecrã inteiro) e grava para <em>MP4</em> com o <em>microfone</em>. Junta a <em>câmara</em>: alterna ecrã⇄câmara com <em>transições</em> (fundido, cortina, deslizar, mosaico), mostra-a em <em>PiP</em> num canto, ou lado a lado em <em>ecrã dividido</em>.",
+      f26_mark: "Região · Microfone · Câmara · PiP · Ecrã dividido · Transições · MP4",
+      f26_premium: "PREMIUM: donativo mínimo de 9,99 € (PayPal) — ativa-se na app com o teu Machine ID.",
       f24_premium: "PREMIUM: donativo mínimo de 9,99 € (PayPal) — ativa-se na app com o teu Machine ID.",
       f18_soon: "Clouds (Dropbox, OneDrive, S3) — em breve.",
       ft_ch_standalone: "Standalone (.exe)",
@@ -1989,6 +2003,11 @@
       f25_h: "Open ZIP, RAR, 7z and TAR like folders.",
       f25_p: "Double-click (or <em>Browse inside</em>) to enter the archive — browse the contents, <em>preview</em> and <em>copy files out</em> without extracting everything. Read-only; <em>Open with…</em> still opens them in WinRAR/WinZip/7-Zip.",
       f25_mark: "ZIP · RAR · 7z · TAR · Copy files out",
+      f26_num: "26 — RECORD SCREEN",
+      f26_h: "Record the screen straight into the folder — with an optional camera.",
+      f26_p: "Pick a <em>region of any monitor</em> (or the whole screen) and record to <em>MP4</em> with the <em>microphone</em>. Add the <em>camera</em>: switch screen⇄camera with <em>transitions</em> (fade, wipe, slide, mosaic), show it as <em>PiP</em> in a corner, or side by side in <em>split screen</em>.",
+      f26_mark: "Region · Microphone · Camera · PiP · Split screen · Transitions · MP4",
+      f26_premium: "PREMIUM: minimum €9.99 donation (PayPal) — activated in the app with your Machine ID.",
       f24_premium: "PREMIUM: minimum €9.99 donation (PayPal) — activated in the app with your Machine ID.",
       f18_soon: "Clouds (Dropbox, OneDrive, S3) — coming soon.",
       ft_ch_standalone: "Standalone (.exe)",
@@ -2214,6 +2233,11 @@
       f25_h: "ZIP, RAR, 7z und TAR wie Ordner öffnen.",
       f25_p: "Doppelklick (oder <em>Inhalt durchsuchen</em>) und du bist im Archiv — Inhalt durchblättern, <em>Vorschau</em> und <em>Dateien herauskopieren</em>, ohne alles zu entpacken. Nur Lesen; <em>Öffnen mit…</em> öffnet sie weiterhin in WinRAR/WinZip/7-Zip.",
       f25_mark: "ZIP · RAR · 7z · TAR · Dateien herauskopieren",
+      f26_num: "26 — BILDSCHIRM AUFNEHMEN",
+      f26_h: "Nimm den Bildschirm direkt in den Ordner auf — mit optionaler Kamera.",
+      f26_p: "Wähle einen <em>Bereich eines beliebigen Bildschirms</em> (oder den ganzen Bildschirm) und nimm als <em>MP4</em> mit dem <em>Mikrofon</em> auf. Kamera dazu: Bildschirm⇄Kamera mit <em>Übergängen</em> umschalten (Überblendung, Wischen, Schieben, Mosaik), als <em>PiP</em> in einer Ecke zeigen oder nebeneinander im <em>geteilten Bildschirm</em>.",
+      f26_mark: "Bereich · Mikrofon · Kamera · PiP · Geteilter Bildschirm · Übergänge · MP4",
+      f26_premium: "PREMIUM: Mindestspende 9,99 € (PayPal) — Aktivierung in der App mit deiner Machine ID.",
       f24_premium: "PREMIUM: Mindestspende 9,99 € (PayPal) — Aktivierung in der App mit deiner Machine ID.",
       f18_soon: "Clouds (Dropbox, OneDrive, S3) — bald verfügbar.",
       ft_ch_standalone: "Standalone (.exe)",
@@ -2439,6 +2463,11 @@
       f25_h: "像文件夹一样打开 ZIP、RAR、7z 和 TAR。",
       f25_p: "双击（或<em>浏览内容</em>）即可进入压缩包 — 浏览内容、<em>预览</em>并把<em>文件复制出来</em>，无需全部解压。只读；<em>打开方式…</em>仍会用 WinRAR/WinZip/7-Zip 打开。",
       f25_mark: "ZIP · RAR · 7z · TAR · 复制文件出来",
+      f26_num: "26 — 录制屏幕",
+      f26_h: "将屏幕直接录制到文件夹——可选摄像头。",
+      f26_p: "选择<em>任意显示器的区域</em>（或整个屏幕），用<em>麦克风</em>录制为 <em>MP4</em>。加入<em>摄像头</em>：用<em>过渡效果</em>（淡入淡出、擦除、滑动、马赛克）在屏幕⇄摄像头之间切换，在角落以<em>画中画</em>显示，或在<em>分屏</em>中并排显示。",
+      f26_mark: "区域 · 麦克风 · 摄像头 · 画中画 · 分屏 · 过渡 · MP4",
+      f26_premium: "PREMIUM：通过 PayPal 最低捐赠 €9.99 — 在应用中用你的 Machine ID 激活。",
       f24_premium: "PREMIUM：通过 PayPal 最低捐赠 €9.99 — 在应用中用你的 Machine ID 激活。",
       f18_soon: "云端(Dropbox、OneDrive、S3)— 即将推出。",
       ft_ch_standalone: "独立版 (.exe)",

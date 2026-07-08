@@ -38,7 +38,7 @@
   "description": "Alternativa focada ao Windows Explorer: perfis, árvores configuráveis, operações ricas, pré-visualização e acessos remotos (SFTP/FTP/FTPS/WebDAV).",
   "url": "https://nunex-mbrothers.github.io/ExplorerFocus/",
   "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
-  "softwareVersion": "1.2.6",
+  "softwareVersion": "1.2.7",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
   "author": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/" }
 }
@@ -183,7 +183,7 @@
   /* HERO */
   .hero {
     max-width: 1280px; margin: 0 auto;
-    padding: 110px 32px 140px;
+    padding: 110px 32px 48px;
     display: grid;
     grid-template-columns: 1.05fr 0.95fr;
     gap: 80px;
@@ -273,6 +273,36 @@
   .hero-sha-copy:hover { border-color: var(--accent-dim); color: var(--accent); }
   .hero-verify-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 9px; font-size: 12.5px; color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent-dim); padding-bottom: 1px; }
   .hero-verify-link:hover { color: var(--fg-0); border-color: var(--fg-0); }
+
+  /* Novidades — tira de "chamada de atenção" para as features mais recentes (curada por release) */
+  .whatsnew {
+    max-width: 1280px; margin: 0 auto; padding: 13px 40px;
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    border-top: 1px solid var(--border-1); border-bottom: 1px solid var(--border-1);
+    background: linear-gradient(90deg, var(--accent-soft) -10%, transparent 42%);
+  }
+  .whatsnew-label {
+    font-weight: 700; font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--accent); white-space: nowrap;
+  }
+  .whatsnew-pills { display: flex; gap: 8px; flex-wrap: wrap; flex: 1; }
+  .whatsnew-pills a {
+    display: inline-flex; align-items: center; gap: 6px; padding: 6px 13px; border-radius: 999px;
+    font-size: 12.5px; font-weight: 500; color: var(--fg-1); text-decoration: none;
+    background: var(--bg-2); border: 1px solid var(--border-2);
+    transition: background .15s, border-color .15s, color .15s, transform .15s;
+  }
+  .whatsnew-pills a:hover { background: var(--accent); border-color: var(--accent); color: #1A1208; transform: translateY(-1px); }
+  .whatsnew-ver { font-family: var(--font-mono); font-size: 11px; color: var(--fg-2); opacity: .75; white-space: nowrap; }
+
+  /* Salto suave para o card + destaque breve ao clicar num pill */
+  .feat { scroll-margin-top: 88px; }
+  .feat.flash { animation: featflash 1.8s ease-out; }
+  @keyframes featflash {
+    0%, 12% { box-shadow: 0 0 0 2px var(--accent), 0 0 26px -4px var(--accent); border-color: var(--accent); }
+    100% { box-shadow: 0 0 0 0 transparent; }
+  }
+  @media (max-width: 620px) { .whatsnew { padding: 12px 20px; } .whatsnew-ver { display: none; } }
 
   .ef-modal { position: fixed; inset: 0; z-index: 1000; display: none; align-items: flex-start; justify-content: center; padding: 40px 16px; overflow-y: auto; background: rgba(0,0,0,.62); }
   .ef-modal.open { display: flex; }
@@ -474,7 +504,7 @@
   /* CATALOG */
   .section-header {
     max-width: 1280px; margin: 0 auto;
-    padding: 0 32px 28px;
+    padding: 44px 32px 28px;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 60px;
@@ -750,10 +780,10 @@
 
   /* RESPONSIVE */
   @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; padding: 60px 24px 80px; gap: 60px; }
+    .hero { grid-template-columns: 1fr; padding: 60px 24px 36px; gap: 60px; }
     .hero-preview { transform: scale(0.85); transform-origin: top left; }
     .ops-widget { right: -8px; }
-    .section-header { grid-template-columns: 1fr; gap: 24px; padding: 0 24px 24px; }
+    .section-header { grid-template-columns: 1fr; gap: 24px; padding: 32px 24px 24px; }
     .features { padding: 40px 24px 80px; }
     .feat.w4, .feat.w6, .feat.w8, .feat.w3 { grid-column: span 12; }
     .shortcuts-inner { grid-template-columns: 1fr; gap: 40px; }
@@ -922,7 +952,7 @@
       <a href="#shortcuts" data-i18n="nav_shortcuts">Atalhos</a>
       <a href="#stack" data-i18n="nav_stack">Stack</a>
       <a href="#download" data-i18n="nav_download">Obter</a>
-      <span class="nav-version">v1.2.6</span>
+      <span class="nav-version">v1.2.7</span>
     </nav>
   </div>
 </header>
@@ -1071,6 +1101,18 @@
     </div>
   </div>
 </section>
+
+<!-- NOVIDADES (teaser das features mais recentes → salto para o card) -->
+<div class="whatsnew">
+  <span class="whatsnew-label" data-i18n="wn_label">✦ Novidades</span>
+  <nav class="whatsnew-pills">
+    <a href="#feat28" data-i18n="wn_voice">🎙 Voice over</a>
+    <a href="#feat27" data-i18n="wn_cards">🎬 Cartões de marca</a>
+    <a href="#feat26" data-i18n="wn_screen">🖥 Gravação de ecrã</a>
+    <a href="#feat19" data-i18n="wn_cloud">☁ Nuvens &amp; remotos</a>
+  </nav>
+  <span class="whatsnew-ver">v1.2.7</span>
+</div>
 
 <!-- CATALOG -->
 <div id="features"></div>
@@ -1271,7 +1313,7 @@
     </p>
   </div>
 
-  <div class="feat w12">
+  <div class="feat w12" id="feat19">
     <div class="num"><span data-i18n="f19_num">19 — CLOUDS</span><span class="badge-pro" data-i18n="badge_pro">PREMIUM</span></div>
     <h3 data-i18n="f19_h">Dropbox e OneDrive — a tua cloud dentro do explorer.</h3>
     <p data-i18n-html="f19_p">Liga a <em>Dropbox</em> e <em>OneDrive</em> por OAuth seguro — sem guardares palavras-passe.
@@ -1348,7 +1390,7 @@
     <div class="feat-mark" data-i18n="f25_mark">ZIP · RAR · 7z · TAR · Copiar para fora</div>
   </div>
 
-  <div class="feat w12">
+  <div class="feat w12" id="feat26">
     <div class="num" data-i18n="f26_num">26 — GRAVAR ECRÃ</div>
     <h3 data-i18n="f26_h">Grava o ecrã direto para a pasta — com câmara opcional.</h3>
     <p data-i18n-html="f26_p">Escolhe uma <em>região de qualquer monitor</em> (ou o ecrã inteiro) e grava para <em>MP4</em> com o
@@ -1360,7 +1402,7 @@
     </p>
   </div>
 
-  <div class="feat w12">
+  <div class="feat w12" id="feat27">
     <div class="num" data-i18n="f27_num">27 — CARTÕES DE MARCA</div>
     <h3 data-i18n="f27_h">Cartões de abertura e fim para os teus vídeos — direto na gravação.</h3>
     <p data-i18n-html="f27_p">Dá às tuas gravações (ecrã e câmara) um <em>cartão de abertura</em>, uma <em>faixa de texto</em>
@@ -1370,6 +1412,18 @@
     <div class="feat-mark" data-i18n="f27_mark">Abertura · Faixa · Fim (créditos) · 5 modelos · Logo · Badge de episódio</div>
     <p class="feat-note">
       <span data-i18n="f27_premium">PREMIUM. Assinatura discreta “Made with ExplorerFocus” no cartão de fim.</span>
+    </p>
+  </div>
+
+  <div class="feat w12" id="feat28">
+    <div class="num" data-i18n="f28_num">28 — VOICE OVER</div>
+    <h3 data-i18n="f28_h">Narra os teus vídeos depois de gravar — mesmo estando sozinho.</h3>
+    <p data-i18n-html="f28_p">Grava o ecrã <em>em silêncio</em> e depois, numa <em>box própria</em>, reproduz o vídeo
+       enquanto <em>narras por cima</em>. A narração fica num ficheiro à parte; juntas uma <em>música de fundo</em>,
+       acertas os volumes (para a música não abafar a voz) e <em>geras o vídeo final</em> com as três fontes.</p>
+    <div class="feat-mark" data-i18n="f28_mark">Gravar mudo · Narrar sobre o vídeo · Música · Volumes · Vídeo + narração + música → final</div>
+    <p class="feat-note">
+      <span data-i18n="f28_premium">PREMIUM. O vídeo e a narração ficam em ficheiros separados; só “Gerar final” cria o vídeo misturado.</span>
     </p>
   </div>
 
@@ -1494,7 +1548,7 @@
   </div>
 
   <div class="footer-baseline">
-    <span>v1.2.6 · WPF · net10.0-windows · single-file</span>
+    <span>v1.2.7 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">desenhado para o quotidiano</span>
     <span id="viewCounter" hidden title="Visitas à página"></span>
   </div>
@@ -1798,6 +1852,16 @@
       f27_p: "Dá às tuas gravações (ecrã e câmara) um <em>cartão de abertura</em>, uma <em>faixa de texto</em> permanente e um <em>cartão de fim</em> estilo créditos (até 10 linhas). <em>5 modelos</em> independentes, cada um com 3 apresentações, logótipo, cor de fundo e um <em>badge de episódio</em> — feito para uma série de vídeos coerente.",
       f27_mark: "Abertura · Faixa · Fim (créditos) · 5 modelos · Logo · Badge de episódio",
       f27_premium: "PREMIUM. Assinatura discreta “Made with ExplorerFocus” no cartão de fim.",
+      f28_num: "28 — VOICE OVER",
+      f28_h: "Narra os teus vídeos depois de gravar — mesmo estando sozinho.",
+      f28_p: "Grava o ecrã <em>em silêncio</em> e depois, numa <em>box própria</em>, reproduz o vídeo enquanto <em>narras por cima</em>. A narração fica num ficheiro à parte; juntas uma <em>música de fundo</em>, acertas os volumes (para a música não abafar a voz) e <em>geras o vídeo final</em> com as três fontes.",
+      f28_mark: "Gravar mudo · Narrar sobre o vídeo · Música · Volumes · Vídeo + narração + música → final",
+      f28_premium: "PREMIUM. O vídeo e a narração ficam em ficheiros separados; só “Gerar final” cria o vídeo misturado.",
+      wn_label: "✦ Novidades",
+      wn_voice: "🎙 Voice over",
+      wn_cards: "🎬 Cartões de marca",
+      wn_screen: "🖥 Gravação de ecrã",
+      wn_cloud: "☁ Nuvens & remotos",
       f24_premium: "Grátis: 1 página do vidro, com marca de água. PREMIUM: várias páginas, alimentador (ADF) e sem marca de água.",
       f18_soon: "Clouds (Dropbox, OneDrive) — disponíveis. S3 e rclone — em breve.",
       ft_ch_standalone: "Standalone (.exe)",
@@ -2032,6 +2096,16 @@
       f27_p: "Give your recordings (screen and camera) an <em>intro card</em>, a permanent <em>text banner</em> and a credits-style <em>end card</em> (up to 10 lines). <em>5 independent models</em>, each with 3 presentations, logo, background colour and an <em>episode badge</em> — built for a consistent video series.",
       f27_mark: "Intro · Banner · End (credits) · 5 models · Logo · Episode badge",
       f27_premium: "PREMIUM. Discreet “Made with ExplorerFocus” signature on the end card.",
+      f28_num: "28 — VOICE OVER",
+      f28_h: "Narrate your videos after recording — even on your own.",
+      f28_p: "Record the screen <em>silently</em>, then in a <em>dedicated box</em> play the video while you <em>narrate over it</em>. The narration lands in a separate file; add <em>background music</em>, balance the volumes (so the music won't drown the voice) and <em>generate the final video</em> with all three sources.",
+      f28_mark: "Record silent · Narrate over the video · Music · Volumes · Video + narration + music → final",
+      f28_premium: "PREMIUM. The video and narration stay as separate files; only “Generate final” creates the mixed video.",
+      wn_label: "✦ What's new",
+      wn_voice: "🎙 Voice over",
+      wn_cards: "🎬 Branding cards",
+      wn_screen: "🖥 Screen recording",
+      wn_cloud: "☁ Clouds & remotes",
       f24_premium: "Free: 1 flatbed page, with a watermark. PREMIUM: multiple pages, feeder (ADF) and no watermark.",
       f18_soon: "Clouds (Dropbox, OneDrive) — available. S3 and rclone — coming soon.",
       ft_ch_standalone: "Standalone (.exe)",
@@ -2266,6 +2340,16 @@
       f27_p: "Gib deinen Aufnahmen (Bildschirm und Kamera) eine <em>Intro-Karte</em>, ein permanentes <em>Textband</em> und eine <em>Endkarte</em> im Abspann-Stil (bis zu 10 Zeilen). <em>5 unabhängige Modelle</em>, je 3 Darstellungen, Logo, Hintergrundfarbe und ein <em>Episoden-Badge</em> — für eine einheitliche Videoserie.",
       f27_mark: "Intro · Band · Ende (Abspann) · 5 Modelle · Logo · Episoden-Badge",
       f27_premium: "PREMIUM. Dezente Signatur „Made with ExplorerFocus“ auf der Endkarte.",
+      f28_num: "28 — VOICE-OVER",
+      f28_h: "Vertone deine Videos nach der Aufnahme — auch allein.",
+      f28_p: "Nimm den Bildschirm <em>stumm</em> auf und sprich dann in einem <em>eigenen Fenster</em> darüber, während das Video läuft. Die Erzählung landet in einer separaten Datei; füge <em>Hintergrundmusik</em> hinzu, regle die Lautstärken (damit die Musik die Stimme nicht übertönt) und <em>erzeuge das finale Video</em> aus allen drei Quellen.",
+      f28_mark: "Stumm aufnehmen · Über das Video sprechen · Musik · Lautstärken · Video + Erzählung + Musik → final",
+      f28_premium: "PREMIUM. Video und Erzählung bleiben getrennte Dateien; erst „Finale erzeugen“ erstellt das gemischte Video.",
+      wn_label: "✦ Neu",
+      wn_voice: "🎙 Voice-over",
+      wn_cards: "🎬 Marken-Karten",
+      wn_screen: "🖥 Bildschirmaufnahme",
+      wn_cloud: "☁ Clouds & Remote",
       f24_premium: "Kostenlos: 1 Flachbett-Seite, mit Wasserzeichen. PREMIUM: mehrere Seiten, Einzug (ADF) und ohne Wasserzeichen.",
       f18_soon: "Clouds (Dropbox, OneDrive) — verfügbar. S3 und rclone — bald.",
       ft_ch_standalone: "Standalone (.exe)",
@@ -2500,6 +2584,16 @@
       f27_p: "为你的录制（屏幕与摄像头）添加<em>开场卡</em>、常驻<em>文字横幅</em>和片尾字幕风格的<em>片尾卡</em>（最多 10 行）。<em>5 个独立模型</em>，每个有 3 种呈现方式、徽标、背景色和<em>集数徽章</em>——为连贯的视频系列而生。",
       f27_mark: "开场 · 横幅 · 片尾（字幕）· 5 个模型 · 徽标 · 集数徽章",
       f27_premium: "PREMIUM。片尾卡带有低调的“Made with ExplorerFocus”签名。",
+      f28_num: "28 — 配音",
+      f28_h: "录制后为你的视频配音——即使只有你一个人。",
+      f28_p: "以<em>静音</em>方式录制屏幕，然后在<em>专用窗口</em>中一边播放视频一边<em>为其配音</em>。旁白保存为单独文件；添加<em>背景音乐</em>，调整音量（以免音乐盖过人声），并用三个来源<em>生成最终视频</em>。",
+      f28_mark: "静音录制 · 为视频配音 · 音乐 · 音量 · 视频 + 旁白 + 音乐 → 最终",
+      f28_premium: "PREMIUM。视频与旁白保持为单独文件；只有“生成最终”才会创建混合后的视频。",
+      wn_label: "✦ 新功能",
+      wn_voice: "🎙 配音",
+      wn_cards: "🎬 品牌卡片",
+      wn_screen: "🖥 屏幕录制",
+      wn_cloud: "☁ 云端与远程",
       f24_premium: "免费：平板 1 页，带水印。PREMIUM：多页、送稿器（ADF）且无水印。",
       f18_soon: "云端（Dropbox、OneDrive）— 已上线。S3 和 rclone — 即将推出。",
       ft_ch_standalone: "独立版 (.exe)",
@@ -2704,6 +2798,25 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 
   document.querySelectorAll('.feat').forEach(el => obs.observe(el));
+
+  /* ============================================================
+     Novidades: salto suave até ao card + destaque breve (flash)
+  ============================================================ */
+  document.querySelectorAll('.whatsnew-pills a').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var href = a.getAttribute('href') || '';
+      if (href.charAt(0) !== '#') return;
+      var el = document.querySelector(href);
+      if (!el) return;
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      el.classList.remove('flash');
+      void el.offsetWidth;            // reinicia a animação se já estava aplicada
+      el.classList.add('flash');
+      setTimeout(function () { el.classList.remove('flash'); }, 2000);
+      if (history.replaceState) history.replaceState(null, '', href);
+    });
+  });
 </script>
 
 <!-- GoatCounter — analytics privacy-friendly (sem cookies, sem PII). Conta a

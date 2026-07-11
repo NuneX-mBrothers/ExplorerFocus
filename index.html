@@ -38,7 +38,7 @@
   "description": "Alternativa focada ao Windows Explorer: perfis, árvores configuráveis, operações ricas, pré-visualização e acessos remotos (SFTP/FTP/FTPS/WebDAV).",
   "url": "https://nunex-mbrothers.github.io/ExplorerFocus/",
   "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
-  "softwareVersion": "1.2.7",
+  "softwareVersion": "1.2.8",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
   "author": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/" }
 }
@@ -891,6 +891,23 @@
     </svg>
   </button>
 
+  <!-- FRANCE -->
+  <button class="lang-flag" data-lang="fr" aria-label="Français" title="Français">
+    <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+      <rect width="20" height="40" fill="#0055A4"/>
+      <rect x="20" width="20" height="40" fill="#FFFFFF"/>
+      <rect x="40" width="20" height="40" fill="#EF4135"/>
+    </svg>
+  </button>
+
+  <!-- SPAIN -->
+  <button class="lang-flag" data-lang="es" aria-label="Español" title="Español">
+    <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+      <rect width="60" height="40" fill="#AA151B"/>
+      <rect y="10" width="60" height="20" fill="#F1BF00"/>
+    </svg>
+  </button>
+
   <!-- GERMANY -->
   <button class="lang-flag" data-lang="de" aria-label="Deutsch" title="Deutsch">
     <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
@@ -952,7 +969,7 @@
       <a href="#shortcuts" data-i18n="nav_shortcuts">Atalhos</a>
       <a href="#stack" data-i18n="nav_stack">Stack</a>
       <a href="#download" data-i18n="nav_download">Obter</a>
-      <span class="nav-version">v1.2.7</span>
+      <span class="nav-version">v1.2.8</span>
     </nav>
   </div>
 </header>
@@ -1111,7 +1128,7 @@
     <a href="#feat26" data-i18n="wn_screen">🖥 Gravação de ecrã</a>
     <a href="#feat19" data-i18n="wn_cloud">☁ Nuvens &amp; remotos</a>
   </nav>
-  <span class="whatsnew-ver">v1.2.7</span>
+  <span class="whatsnew-ver">v1.2.8</span>
 </div>
 
 <!-- CATALOG -->
@@ -1548,7 +1565,7 @@
   </div>
 
   <div class="footer-baseline">
-    <span>v1.2.7 · WPF · net10.0-windows · single-file</span>
+    <span>v1.2.8 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">desenhado para o quotidiano</span>
     <span id="viewCounter" hidden title="Visitas à página"></span>
   </div>
@@ -2634,6 +2651,496 @@
       ft_baseline: "为日常工作而设计",
       mb_credit: '一款 <a href="https://nunex-mbrothers.github.io/mBrothers/#products" target="_blank" rel="noopener">mBrothers</a> 产品<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems',
     },
+
+    fr: {
+      page_title: "ExplorerFocus — un explorateur de fichiers sans distraction",
+      page_desc:  "Une alternative ciblée à l'Explorateur Windows. Profils, arborescences configurables, opérations riches, aperçu — tout centré sur l'essentiel.",
+
+      nav_features: "Fonctions",
+      nav_shortcuts: "Raccourcis",
+      nav_stack: "Stack",
+      nav_download: "Télécharger",
+
+      hero_eyebrow: "Un explorateur de fichiers · WPF · .NET 10",
+      hero_title: "L'explorateur<br>qui se <em>concentre</em><br>sur ce qui compte <span class=\"strike\">le moins</span>.",
+      hero_lede: "ExplorerFocus est un remplaçant léger de l'Explorateur Windows, conçu pour ceux qui travaillent toujours dans les mêmes dossiers. Profils configurables, arborescences épurées, aperçu riche, des opérations qui vous disent vraiment ce qui se passe — sans le bruit du shell.",
+      hero_meta_os: "Windows 10 / 11",
+      hero_meta_pkg: "Autonome · fichier unique",
+      hero_meta_size: "~107 Mo",
+      hero_dl_exe: "Télécharger · .exe",
+      hero_dl_zip: ".zip",
+      hero_latest: "Dernière version",
+
+      dl_firsttime: "Première ouverture ? Un avertissement Windows ?",
+      sha_link: "Qu'est-ce que le SHA-256 ?",
+      sha_title: "Qu'est-ce que le SHA-256 ?",
+      sha_p1: "Voyez-le comme l'<strong>empreinte</strong> du fichier. Un algorithme lit chaque octet de <code>ExplorerFocus.exe</code> et les réduit à un code de <strong>64 caractères</strong> (lettres A–F et chiffres). Ce code est le SHA-256.",
+      sha_p2: "Il a deux propriétés qui le rendent utile :",
+      sha_li1: "Le <strong>même fichier</strong> produit toujours le <strong>même</strong> code.",
+      sha_li2: "Si <strong>un seul bit</strong> change — un téléchargement corrompu, ou quelqu'un qui altère le fichier — le code sort <strong>complètement différent</strong>.",
+      sha_p3: "Vérifier est donc simple : si le code que vous <strong>calculez</strong> sur votre fichier <strong>correspond</strong> à celui <strong>publié ici</strong>, vous pouvez être sûr qu'il s'agit exactement du fichier officiel, octet pour octet — sans corruption ni modification. Le code n'est pas réversible : il ne sert qu'à la comparaison et ne révèle jamais le contenu.",
+      sha_how_h: "Comment vérifier",
+      card_title: "Première ouverture ? C'est normal.",
+      card_intro: "Comme ExplorerFocus est récent et pas encore signé, Windows peut afficher un avertissement bleu (SmartScreen). Le fichier est sûr — voici comment continuer.",
+      card_open_h: "Ouvrir le programme",
+      card_open_1: "Sur l'avis <em>« Windows a protégé votre ordinateur »</em>, cliquez sur <strong>Informations complémentaires</strong>.",
+      card_open_2: "Cliquez sur <strong>Exécuter quand même</strong>.",
+      card_pin_h: "Épinglé à la barre des tâches et il ne s'ouvre pas ?",
+      card_pin_1: "Clic droit sur <code>ExplorerFocus.exe</code> → <strong>Propriétés</strong>.",
+      card_pin_2: "Cochez <strong>Débloquer</strong> (en bas) → <strong>OK</strong>, puis épinglez-le à nouveau.",
+      card_verify_h: "Vérifier le fichier",
+      card_verify_opt: "— facultatif",
+      card_verify_intro: "Uniquement si vous voulez être absolument sûr d'avoir téléchargé le fichier officiel, intact. Choisissez <strong>l'une</strong> des deux méthodes.",
+      card_find: "D'abord, trouvez le fichier : ouvrez l'<strong>Explorateur de fichiers</strong> de Windows (le dossier jaune dans la barre des tâches, ou <span class=\"efkbd\">⊞ Win</span> + <span class=\"efkbd\">E</span>) et cliquez sur <strong>Téléchargements</strong> à gauche — c'est là que <code>ExplorerFocus.exe</code> arrive au téléchargement. Faites-le dans l'Explorateur de fichiers, <strong>pas dans le navigateur</strong>.",
+      card_mA_h: "Méthode A — PowerShell",
+      card_mA_1: "Dans la fenêtre de l'Explorateur ouverte sur <strong>Téléchargements</strong>, maintenez <span class=\"efkbd\">Shift</span> et faites un clic droit sur une zone vide → <strong>Ouvrir la fenêtre PowerShell ici</strong>.",
+      card_cmd_paste: "Collez cette commande et appuyez sur Entrée :",
+      card_mA_3: "Comparez la valeur SHA256 affichée avec celle ci-dessous.",
+      card_mB_h: "Méthode B — Ligne de commande (cmd)",
+      card_mB_1: "Dans la fenêtre de l'Explorateur ouverte sur <strong>Téléchargements</strong>, cliquez sur la <strong>barre d'adresse</strong> (en haut, là où apparaît le chemin du dossier), tapez <code>cmd</code> et appuyez sur <strong>Entrée</strong>.",
+      card_mB_3: "Comparez la ligne de hachage avec celle ci-dessous.",
+      card_hash_note: "Elle doit correspondre à cette valeur <span class=\"efmuted\">(majuscules/minuscules sans importance)</span> :",
+      card_hash_ok: "Ça correspond ? C'est le fichier officiel, intact.",
+
+      app_tree_label: "Arbre",
+      app_col_name: "NOM",
+      app_col_ext: "EXT",
+      app_col_size: "TAILLE",
+      app_preview_label: "APERÇU",
+      ops_action: "Copie · 47 fichiers",
+      ops_status: "EN COURS",
+      ops_speed: "89 Mo/s · 1,3 s",
+
+      cat_num: "§ 01 · Catalogue",
+      cat_title: "Ce qui fait <em>vraiment</em><br>la différence.",
+      cat_blurb: "Chaque fonction a été ajoutée pour répondre à un problème concret du travail quotidien sur une arborescence connue. Aucune n'est là pour la façade. Presque toutes peuvent s'activer ou se désactiver.",
+
+      f01_num: "01 — PROFILS",
+      f01_h: "Multi-onglets par contexte. Chaque profil est sa propre vue, avec son arbre, ses filtres et son état.",
+      f01_p: "Réorganisez par glissement, F2 pour renommer, Ctrl+1..9 pour passer d'un onglet à l'autre, Ctrl+T pour créer. Les onglets se souviennent du dernier dossier visité et de l'état de l'arbre.",
+      f01_v1_k: "onglets",
+      f01_v2_k: "actif",
+      f01_v2_t: "surligné en ambre",
+      f01_v3_t: "inclus dans la recherche globale",
+
+      f02_num: "02 — ARBRES",
+      f02_h: "Arborescences configurables.",
+      f02_p: "Vous définissez manuellement les racines que vous voulez voir. Système de fichiers et <em>registre</em> côte à côte. Pas de barre latérale pleine d'éléments que vous n'ouvrez jamais.",
+      f02_mark: "Dossier + Registre",
+
+      f03_num: "03 — RECHERCHE",
+      f03_h: "Recherche multi-motifs avec jokers à n'importe quelle position.",
+      f03_p: "Tapez <code style=\"font-family:var(--font-mono);background:var(--bg-2);padding:1px 6px;border-radius:2px;color:var(--accent);\">*.cs *.json</code> et obtenez une sémantique OU. <em>?</em>onfig.json, Test*Run.cs — tout fonctionne.",
+      f03_mark: "Jokers · Regex interne",
+
+      f04_num: "04 — RECHERCHE GLOBALE",
+      f04_h: "Recherche entre profils, avec activation explicite.",
+      f04_p: "Clic droit sur un onglet → « Inclure dans la recherche globale ». L'indicateur (●/○) montre ce qui est inclus. Résultats dans une fenêtre non modale.",
+      f04_mark: "Opt-in · Résultats non modaux",
+
+      f05_num: "05 — APERÇU",
+      f05_h: "Volet d'aperçu riche. Chaque type de fichier avec son rendu idéal.",
+      f05_p: "Texte avec <em>coloration syntaxique</em> via AvalonEdit, images décodées en arrière-plan, PDF rendus par le moteur Edge (WebView2), Markdown converti en HTML avec un thème sombre par Markdig. Activable individuellement. Annule le chargement précédent si vous changez de sélection.",
+      f05_src_h: "SOURCE · MainViewModel.cs · C#",
+      f05_md_h: "MARKDOWN · README.md",
+      f05_md_p: "Un remplaçant ciblé de l'Explorateur Windows. Construit autour de dossiers configurables, il <em>oublie tout</em> ce qui ne compte pas.",
+      f05_md_note: "Note — l'aperçu fonctionne avec Edge WebView2 installé (fourni avec Windows 10/11).",
+
+      f06_num: "06 — OPÉRATIONS SUR FICHIERS",
+      f06_h: "Copier, déplacer, supprimer — avec de vraies informations.",
+      f06_p: "Une fenêtre flottante affiche une <em>jauge par fichier</em>, la vitesse réelle, le temps restant, le décompte global. Pause, reprise, annulation. Jusqu'à 6 opérations en parallèle. Vaquez à vos occupations pendant que ça tourne.",
+      f06_mark: "Buffer 1 Mo · UI 10 Hz · historique × 20",
+
+      f07_num: "07 — CONFLITS",
+      f07_h: "6 façons.",
+      f07_p: "Écraser / Ignorer / Dupliquer, individuellement ou en bloc pour le reste de l'opération.",
+
+      f08_num: "08 — GLISSER-DÉPOSER",
+      f08_h: "Entre onglets.",
+      f08_p: "Glissez un fichier vers un onglet et l'onglet bascule tout seul après 600 ms. Dialogue Copier/Déplacer au dépôt.",
+
+      f09_num: "09 — APPS PAR EXTENSION",
+      f09_h: "Détection automatique des nouvelles extensions. Partagée entre les profils.",
+      f09_p: "Vous entrez dans un dossier avec des <em>.dwg</em>, <em>.psd</em>, <em>.bak</em> ? Un dialogue groupé demande une seule fois. Sélecteur par ligne (parcourez jusqu'au .exe ; nom résolu automatiquement par <em>FileVersionInfo</em>). Marquez comme ignorées celles qui ne vous intéressent pas. La liste persiste.",
+      f09_mark: "Muet par session · À basculer dans les Réglages",
+
+      f10_num: "10 — TERMINAUX",
+      f10_h: "CMD, PowerShell, Git Bash — ici, maintenant.",
+      f10_p: "Dans n'importe quel dossier de l'arbre. Variantes normale et <em>élevée</em>. <em>regedit</em> sur les clés de registre.",
+
+      f11_num: "11 — CRÉER DES FICHIERS",
+      f11_h: "Squelettes sensés.",
+      f11_p: "<em>.cs</em>, <em>.xaml</em>, <em>.json</em>, <em>.md</em>, <em>.cmd</em>, <em>.ps1</em> — démarrez avec la structure typique. Le nom est surligné sans effacer l'extension pendant la saisie.",
+
+      f12_num: "12 — SOMBRE INTÉGRAL",
+      f12_h: "Thème sombre jusqu'au bout.",
+      f12_p: "Barre de titre, barres de défilement, grilles, dialogues, info-bulles, aperçu Markdown — tout dans le même langage visuel. Aucun blanc parasite venu d'endroits improbables.",
+
+      f13_num: "13 — PERSISTANCE",
+      f13_h: "Se souvient de tout.",
+      f13_p: "Géométrie de la fenêtre principale et de la fenêtre d'opérations. Dernier onglet actif. Largeur du volet de l'arbre. Tri des colonnes. État de l'arbre. Tout dans <em>%LOCALAPPDATA%\\ExplorerFocus</em>.",
+
+      f14_num: "14 — INFO-BULLE RICHE",
+      f14_h: "Les propriétés sans un clic.",
+      f14_p: "Une info-bulle de 1,8 s sur n'importe quel fichier affiche la taille calculée, les dates, les attributs. Les dossiers portent la taille récursive — calculée paresseusement, avec un sémaphore pour ne pas marteler le disque.",
+
+      f15_num: "15 — TRI",
+      f15_h: "Les dossiers d'abord, toujours.",
+      f15_p: "Un comparateur personnalisé garantit que les répertoires restent en haut de n'importe quel tri, dans n'importe quelle colonne, dans n'importe quel sens. Comme il se doit.",
+
+      f16_num: "16 — SÉLECTION MULTIPLE",
+      f16_h: "Sélection intelligente.",
+      f16_p: "Un clic normal sélectionne. Shift+clic étend avec la sémantique « la majorité décide » — si la plage est déjà majoritairement sélectionnée, il désélectionne ; sinon il sélectionne. Ctrl+clic bascule individuellement. Fini le « j'ai perdu toute ma sélection par accident ».",
+
+      f17_num: "17 — DÉPLOIEMENT",
+      f17_h: "Un seul <em>.exe</em>. Pas d'installateur.",
+      f17_p: "Autonome, fichier unique, compressé. Copiez-le sur une clé USB et il tourne sur n'importe quel Windows 10/11. <em>net10.0-windows</em> + WPF — aucune dépendance hors du dossier de l'exécutable.",
+
+      badge_pro: "PREMIUM",
+      f18_num: "18 — ACCÈS DISTANT",
+      f18_h: "SFTP, FTP/FTPS et WebDAV — l'explorateur atteint le serveur.",
+      f18_p: "Connectez-vous en SFTP, FTP/FTPS et WebDAV (Nextcloud, ownCloud, NAS, IIS). Naviguez, prévisualisez, envoyez et téléchargez, créez des dossiers, renommez et copiez/déplacez — avec une <em>progression à l'octet près</em> et l'annulation. Éditez les fichiers distants en local et <em>synchronisez à l'enregistrement</em>. Authentification par mot de passe ou <em>clé SSH</em> ; secrets chiffrés avec DPAPI.",
+      f18_mark: "SFTP · FTP/FTPS · WebDAV",
+      f18_free: "Gratuit : 1 connexion — navigation + aperçu. PREMIUM débloque plusieurs connexions et toutes les opérations.",
+      f18_premium: "PREMIUM : don minimum de 9,99 € (PayPal) — activé dans l'app avec votre Machine ID.",
+      f19_num: "19 — CLOUDS",
+      f19_h: "Dropbox et OneDrive — votre cloud dans l'explorateur.",
+      f19_p: "Connectez-vous à <em>Dropbox</em> et <em>OneDrive</em> via OAuth sécurisé — aucun mot de passe stocké. Naviguez, prévisualisez, envoyez et téléchargez, créez des dossiers, renommez et copiez/déplacez, comme un dossier local. Vos fichiers ne passent jamais par nos serveurs.",
+      f19_mark: "Dropbox · OneDrive",
+      f19_soon: "Dropbox et OneDrive — disponibles dès maintenant.",
+      f19_premium: "PREMIUM (comme SFTP/FTP/FTPS) : plusieurs connexions et toutes les opérations. Don de 9,99 € (PayPal).",
+      f20_num: "20 — LIVRES / EPUB",
+      f20_h: "EPUB — prévisualisez et lisez, sans quitter l'explorateur.",
+      f20_p: "Aperçu instantané de n'importe quel <em>.epub</em> : couverture, table des matières et un extrait de texte. Ouvrez le livre entier dans son propre lecteur, avec navigation par chapitre, saut de page, <em>défilement automatique</em> et votre position de lecture mémorisée.",
+      f20_mark: "Couverture · Sommaire · Extrait · Lecteur",
+      f20_free: "Gratuit : aperçu — couverture, sommaire et un extrait de texte.",
+      f20_premium: "PREMIUM : lecteur complet — navigation, saut de page, défilement automatique, tourne-page et mémoire de vos 20 derniers livres.",
+      f21_num: "21 — VISIONNEUSES DE DOCUMENTS",
+      f21_h: "Word, Excel, PowerPoint et plus — voir sans rien ouvrir.",
+      f21_p: "Prévisualisez <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> et <em>OpenDocument</em> (texte, feuille et présentation) directement dans le volet. L'audio et la vidéo se lisent dans l'aperçu, avec une <em>fenêtre flottante</em> et des contrôles de volume/vitesse. Un marqueur signale les fichiers qui ont un aperçu ; les fichiers protégés par mot de passe sont signalés sans demander le mot de passe.",
+      f21_mark: "Word · Excel · PowerPoint · RTF · OpenDocument · Audio · Vidéo",
+      f22_num: "22 — ENREGISTRER L'AUDIO",
+      f22_h: "Enregistrez le microphone directement dans le dossier.",
+      f22_p: "Un clic enregistre le <em>microphone</em> dans le dossier courant. Choisissez le microphone, surveillez le <em>vumètre</em> en direct, ajustez le volume d'enregistrement et sauvegardez en <em>WAV</em> ou <em>M4A/AAC</em>.",
+      f22_mark: "Microphone · Vumètre · WAV · M4A",
+      f23_num: "23 — ENREGISTRER LA VIDÉO",
+      f23_h: "Enregistrez la caméra directement dans le dossier.",
+      f23_p: "Aperçu <em>caméra</em> en direct, avec choix de la caméra et du microphone, résolution et format — <em>MP4</em>, <em>WMV</em> ou <em>AVI</em>. Sauvegarde dans le dossier courant en un clic.",
+      f23_mark: "Caméra · Microphone · MP4 · WMV · AVI",
+      f23_premium: "Gratuit avec un discret filigrane en pied. PREMIUM : sans filigrane.",
+      f24_num: "24 — NUMÉRISER",
+      f24_h: "Du scanner au dossier — image ou PDF.",
+      f24_p: "Numérisez depuis la <em>vitre</em> ou le <em>chargeur (ADF)</em>, plusieurs feuilles à la fois. Choisissez la résolution et la couleur — <em>couleur</em>, niveaux de gris ou <em>noir &amp; blanc</em>. Sauvegardez en <em>JPEG/PNG</em> ou fusionnez tout dans un <em>PDF multipage</em>, et continuez d'ajouter des feuilles au même PDF.",
+      f24_mark: "Vitre · Chargeur (ADF) · Couleur · PDF multipage",
+      f25_num: "25 — ARCHIVES COMME DOSSIERS",
+      f25_h: "Ouvrez ZIP, RAR, 7z et TAR comme des dossiers.",
+      f25_p: "Double-clic (ou <em>Parcourir à l'intérieur</em>) pour entrer dans l'archive — parcourez le contenu, <em>prévisualisez</em> et <em>copiez des fichiers vers l'extérieur</em> sans tout extraire. Lecture seule ; <em>Ouvrir avec…</em> les ouvre toujours dans WinRAR/WinZip/7-Zip.",
+      f25_mark: "ZIP · RAR · 7z · TAR · Copier vers l'extérieur",
+      f26_num: "26 — ENREGISTRER L'ÉCRAN",
+      f26_h: "Enregistrez l'écran directement dans le dossier — avec une caméra en option.",
+      f26_p: "Choisissez une <em>région de n'importe quel moniteur</em> (ou tout l'écran) et enregistrez en <em>MP4</em> avec le <em>microphone</em>. Ajoutez la <em>caméra</em> : basculez écran⇄caméra avec des <em>transitions</em> (fondu, balayage, glissement, mosaïque), affichez-la en <em>PiP</em> dans un coin, ou côte à côte en <em>écran partagé</em>.",
+      f26_mark: "Région · Microphone · Son système · Caméra · PiP · Écran partagé · Transitions · MP4",
+      f26_premium: "Gratuit : filigrane + 15 s et sans son. PREMIUM : sans filigrane, sans limite de temps et avec le son (microphone + système).",
+      f27_num: "27 — CARTES DE MARQUE",
+      f27_h: "Cartes d'intro et de fin pour vos vidéos — dans l'enregistrement même.",
+      f27_p: "Donnez à vos enregistrements (écran et caméra) une <em>carte d'intro</em>, un <em>bandeau de texte</em> permanent et une <em>carte de fin</em> façon générique (jusqu'à 10 lignes). <em>5 modèles indépendants</em>, chacun avec 3 présentations, logo, couleur de fond et un <em>badge d'épisode</em> — pensé pour une série vidéo cohérente.",
+      f27_mark: "Intro · Bandeau · Fin (générique) · 5 modèles · Logo · Badge d'épisode",
+      f27_premium: "PREMIUM. Discrète signature « Made with ExplorerFocus » sur la carte de fin.",
+      f28_num: "28 — VOIX OFF",
+      f28_h: "Narrez vos vidéos après l'enregistrement — même seul.",
+      f28_p: "Enregistrez l'écran <em>en silence</em>, puis dans une <em>boîte dédiée</em> lisez la vidéo pendant que vous <em>la commentez en voix off</em>. La narration arrive dans un fichier séparé ; ajoutez une <em>musique de fond</em>, équilibrez les volumes (pour que la musique ne couvre pas la voix) et <em>générez la vidéo finale</em> avec les trois sources.",
+      f28_mark: "Enregistrer muet · Commenter la vidéo · Musique · Volumes · Vidéo + narration + musique → finale",
+      f28_premium: "PREMIUM. La vidéo et la narration restent des fichiers séparés ; seul « Générer la finale » crée la vidéo mixée.",
+      wn_label: "✦ Nouveautés",
+      wn_voice: "🎙 Voix off",
+      wn_cards: "🎬 Cartes de marque",
+      wn_screen: "🖥 Enregistrement d'écran",
+      wn_cloud: "☁ Clouds & distants",
+      f24_premium: "Gratuit : 1 page à plat, avec filigrane. PREMIUM : plusieurs pages, chargeur (ADF) et sans filigrane.",
+      f18_soon: "Clouds (Dropbox, OneDrive) — disponibles. S3 et rclone — bientôt.",
+      ft_ch_standalone: "Autonome (.exe)",
+      ft_ch_portable: "Autonome (.zip)",
+      ft_ch_clickonce: "ClickOnce",
+      ft_soon: "bientôt",
+
+      sc_num: "§ 02 · Raccourcis",
+      sc_title: "Les mains sur<br>la <em>rangée de repos</em>.",
+      sc_blurb: "Chaque opération importante a un raccourci. Sans souris autant que possible — du confort pour les longues sessions.",
+      sc_f2: "Renommer l'élément ciblé <em>— fichier, dossier ou onglet</em>",
+      sc_enter: "Ouvrir le fichier avec l'app associée",
+      sc_del: "Envoyer à la Corbeille <em>— via FileOperationsManager</em>",
+      sc_f5: "Rafraîchir la liste du dossier courant",
+      sc_find: "Placer le focus sur la recherche locale",
+      sc_newtab: "Nouveau profil (nouvel onglet)",
+      sc_closetab: "Fermer l'onglet courant",
+      sc_nexttab: "Onglet suivant <em>— Shift inverse</em>",
+      sc_jumptab: "Sauter au Nième onglet",
+      sc_shiftdrag: "Forcer le <em>Déplacement</em> sans demander",
+
+      st_num: "§ 03 · Stack",
+      st_title: "Construit avec des <em>pièces sérieuses</em>.",
+      st_blurb: "Chaque dépendance a été choisie pour sa maturité, sa taille, ou l'absence d'alternative raisonnable. Aucun framework à la mode.",
+      st_dotnet: "WPF classique, sans WinUI ni MAUI. Compatible avec Windows 10 et 11.",
+      st_mvvm: "ObservableObject, ObservableProperty, RelayCommand — générés par des source generators.",
+      st_preview_ic: "APERÇU",
+      st_preview: "Coloration syntaxique, moteur de rendu markdown, et moteur Edge embarqué pour les PDF.",
+      st_util: "Pour l'envoi à la <em>Corbeille</em> — la seule façon honnête, et ça marche.",
+
+      ft_tagline: "L'explorateur minimal pour ceux qui travaillent toujours aux mêmes endroits — et qui veulent que l'outil le sache.",
+      ft_get: "Télécharger",
+      ft_releases: "Versions",
+      ft_changelog: "Journal des changements",
+      ft_project: "Projet",
+      nav_guide: "Comment ça marche",
+      nav_privacy: "Confidentialité",
+      ft_baseline: "conçu pour le quotidien",
+      mb_credit: "Un produit <a href=\"https://nunex-mbrothers.github.io/mBrothers/#products\" target=\"_blank\" rel=\"noopener\">mBrothers</a><span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
+    },
+
+    es: {
+      page_title: "ExplorerFocus — un explorador de archivos sin distracciones",
+      page_desc:  "Una alternativa centrada al Explorador de Windows. Perfiles, árboles configurables, operaciones ricas, vista previa — todo centrado en lo que importa.",
+
+      nav_features: "Funciones",
+      nav_shortcuts: "Atajos",
+      nav_stack: "Stack",
+      nav_download: "Descargar",
+
+      hero_eyebrow: "Un explorador de archivos · WPF · .NET 10",
+      hero_title: "El explorador<br>que se <em>centra</em><br>en lo que <span class=\"strike\">no</span> importa.",
+      hero_lede: "ExplorerFocus es un reemplazo ligero del Explorador de Windows, diseñado para quienes trabajan siempre en las mismas carpetas. Perfiles configurables, árboles limpios, vista previa rica, operaciones que de verdad te dicen qué está pasando — sin el ruido del shell.",
+      hero_meta_os: "Windows 10 / 11",
+      hero_meta_pkg: "Autónomo · archivo único",
+      hero_meta_size: "~107 MB",
+      hero_dl_exe: "Descargar · .exe",
+      hero_dl_zip: ".zip",
+      hero_latest: "Última versión",
+
+      dl_firsttime: "¿La abres por primera vez? ¿Una advertencia de Windows?",
+      sha_link: "¿Qué es el SHA-256?",
+      sha_title: "¿Qué es el SHA-256?",
+      sha_p1: "Piénsalo como la <strong>huella</strong> del archivo. Un algoritmo lee cada byte de <code>ExplorerFocus.exe</code> y los reduce a un código de <strong>64 caracteres</strong> (letras A–F y dígitos). Ese código es el SHA-256.",
+      sha_p2: "Tiene dos propiedades que lo hacen útil:",
+      sha_li1: "El <strong>mismo archivo</strong> produce siempre el <strong>mismo</strong> código.",
+      sha_li2: "Si cambia <strong>un solo bit</strong> — una descarga corrupta, o alguien manipulando el archivo — el código sale <strong>completamente distinto</strong>.",
+      sha_p3: "Así que verificar es sencillo: si el código que <strong>calculas</strong> sobre tu archivo <strong>coincide</strong> con el <strong>publicado aquí</strong>, puedes estar seguro de que es exactamente el archivo oficial, byte a byte — sin corrupción ni cambios. El código no se puede revertir: solo sirve para comparar y nunca revela el contenido.",
+      sha_how_h: "Cómo confirmarlo",
+      card_title: "¿La abres por primera vez? Es normal.",
+      card_intro: "Como ExplorerFocus es nuevo y aún no está firmado, Windows puede mostrar una advertencia azul (SmartScreen). El archivo es seguro — así continúas.",
+      card_open_h: "Abrir el programa",
+      card_open_1: "En el aviso <em>«Windows protegió su PC»</em>, haz clic en <strong>Más información</strong>.",
+      card_open_2: "Haz clic en <strong>Ejecutar de todas formas</strong>.",
+      card_pin_h: "¿Lo anclaste a la barra de tareas y no se abre?",
+      card_pin_1: "Clic derecho en <code>ExplorerFocus.exe</code> → <strong>Propiedades</strong>.",
+      card_pin_2: "Marca <strong>Desbloquear</strong> (abajo) → <strong>Aceptar</strong>, y ánclalo de nuevo.",
+      card_verify_h: "Verificar el archivo",
+      card_verify_opt: "— opcional",
+      card_verify_intro: "Solo si quieres estar totalmente seguro de haber descargado el archivo oficial, sin alterar. Elige <strong>uno</strong> de los dos métodos.",
+      card_find: "Primero, encuentra el archivo: abre el <strong>Explorador de archivos</strong> de Windows (la carpeta amarilla en la barra de tareas, o <span class=\"efkbd\">⊞ Win</span> + <span class=\"efkbd\">E</span>) y haz clic en <strong>Descargas</strong> a la izquierda — ahí es donde aterriza <code>ExplorerFocus.exe</code> al descargarlo. Hazlo en el Explorador de archivos, <strong>no en el navegador</strong>.",
+      card_mA_h: "Método A — PowerShell",
+      card_mA_1: "En la ventana del Explorador en <strong>Descargas</strong>, mantén <span class=\"efkbd\">Shift</span> y haz clic derecho en un área vacía → <strong>Abrir la ventana de PowerShell aquí</strong>.",
+      card_cmd_paste: "Pega este comando y pulsa Enter:",
+      card_mA_3: "Compara el valor SHA256 mostrado con el de abajo.",
+      card_mB_h: "Método B — Línea de comandos (cmd)",
+      card_mB_1: "En la ventana del Explorador en <strong>Descargas</strong>, haz clic en la <strong>barra de direcciones</strong> (arriba, donde aparece la ruta de la carpeta), escribe <code>cmd</code> y pulsa <strong>Enter</strong>.",
+      card_mB_3: "Compara la línea del hash con la de abajo.",
+      card_hash_note: "Debe coincidir con este valor <span class=\"efmuted\">(mayúsculas/minúsculas no importan)</span>:",
+      card_hash_ok: "¿Coincide? Es el archivo oficial, sin alterar.",
+
+      app_tree_label: "Árbol",
+      app_col_name: "NOMBRE",
+      app_col_ext: "EXT",
+      app_col_size: "TAMAÑO",
+      app_preview_label: "VISTA PREVIA",
+      ops_action: "Copiar · 47 archivos",
+      ops_status: "EN CURSO",
+      ops_speed: "89 MB/s · 1,3 s",
+
+      cat_num: "§ 01 · Catálogo",
+      cat_title: "Lo que <em>de verdad</em><br>marca la diferencia.",
+      cat_blurb: "Cada función se añadió para responder a un problema concreto del trabajo diario sobre un árbol de archivos conocido. Ninguna está para lucir. Casi todas se pueden activar o desactivar.",
+
+      f01_num: "01 — PERFILES",
+      f01_h: "Multipestaña por contexto. Cada perfil es su propia vista, con su árbol, filtros y estado.",
+      f01_p: "Reordena arrastrando, F2 para renombrar, Ctrl+1..9 para saltar entre pestañas, Ctrl+T para crear. Las pestañas recuerdan la última carpeta visitada y el estado del árbol.",
+      f01_v1_k: "pestañas",
+      f01_v2_k: "activa",
+      f01_v2_t: "resaltada en ámbar",
+      f01_v3_t: "incluida en la búsqueda global",
+
+      f02_num: "02 — ÁRBOLES",
+      f02_h: "Árboles configurables.",
+      f02_p: "Defines manualmente las raíces que quieres ver. Sistema de archivos y <em>registro</em> lado a lado. Sin una barra lateral llena de elementos que nunca abres.",
+      f02_mark: "Carpeta + Registro",
+
+      f03_num: "03 — BÚSQUEDA",
+      f03_h: "Búsqueda multipatrón con comodines en cualquier posición.",
+      f03_p: "Escribe <code style=\"font-family:var(--font-mono);background:var(--bg-2);padding:1px 6px;border-radius:2px;color:var(--accent);\">*.cs *.json</code> y obtienes semántica O. <em>?</em>onfig.json, Test*Run.cs — todo funciona.",
+      f03_mark: "Comodines · Regex interno",
+
+      f04_num: "04 — BÚSQUEDA GLOBAL",
+      f04_h: "Búsqueda entre perfiles, con inclusión explícita.",
+      f04_p: "Clic derecho en una pestaña → «Incluir en la búsqueda global». El indicador (●/○) muestra qué está incluido. Resultados en una ventana no modal.",
+      f04_mark: "Opt-in · Resultados no modales",
+
+      f05_num: "05 — VISTA PREVIA",
+      f05_h: "Panel de vista previa rico. Cada tipo de archivo con su representación ideal.",
+      f05_p: "Texto con <em>resaltado de sintaxis</em> vía AvalonEdit, imágenes decodificadas en segundo plano, PDF renderizados por el motor Edge (WebView2), Markdown convertido a HTML con tema oscuro por Markdig. Activable individualmente. Cancela la carga anterior si cambias de selección.",
+      f05_src_h: "SOURCE · MainViewModel.cs · C#",
+      f05_md_h: "MARKDOWN · README.md",
+      f05_md_p: "Un reemplazo centrado del Explorador de Windows. Construido en torno a carpetas configurables, <em>olvida todo</em> lo que no importa.",
+      f05_md_note: "Nota — la vista previa funciona con Edge WebView2 instalado (viene con Windows 10/11).",
+
+      f06_num: "06 — OPERACIONES DE ARCHIVO",
+      f06_h: "Copiar, mover, eliminar — con información real.",
+      f06_p: "Una ventana flotante muestra un <em>medidor por archivo</em>, velocidad real, tiempo estimado, recuento global. Pausa, reanuda, cancela. Hasta 6 operaciones en paralelo. Sigue con lo tuyo mientras corre.",
+      f06_mark: "Buffer 1 MB · UI 10 Hz · historial × 20",
+
+      f07_num: "07 — CONFLICTOS",
+      f07_h: "6 vías.",
+      f07_p: "Sobrescribir / Omitir / Duplicar, individualmente o en bloque para el resto de la operación.",
+
+      f08_num: "08 — ARRASTRAR Y SOLTAR",
+      f08_h: "Entre pestañas.",
+      f08_p: "Arrastra un archivo a una pestaña y la pestaña cambia sola tras 600 ms. Diálogo Copiar/Mover al soltar.",
+
+      f09_num: "09 — APPS POR EXTENSIÓN",
+      f09_h: "Detección automática de nuevas extensiones. Compartida entre perfiles.",
+      f09_p: "¿Entras en una carpeta con <em>.dwg</em>, <em>.psd</em>, <em>.bak</em>? Un diálogo agrupado pregunta una sola vez. Selector por fila (busca el .exe; el nombre se resuelve automáticamente por <em>FileVersionInfo</em>). Marca como ignoradas las que no te importan. La lista persiste.",
+      f09_mark: "Silenciar por sesión · Alternar en Ajustes",
+
+      f10_num: "10 — TERMINALES",
+      f10_h: "CMD, PowerShell, Git Bash — aquí, ahora.",
+      f10_p: "En cualquier carpeta del árbol. Variantes normal y <em>elevada</em>. <em>regedit</em> en claves del registro.",
+
+      f11_num: "11 — CREAR ARCHIVOS",
+      f11_h: "Esqueletos con sentido.",
+      f11_p: "<em>.cs</em>, <em>.xaml</em>, <em>.json</em>, <em>.md</em>, <em>.cmd</em>, <em>.ps1</em> — empieza con la estructura típica. El nombre se resalta sin borrar la extensión mientras escribes.",
+
+      f12_num: "12 — OSCURO TOTAL",
+      f12_h: "Tema oscuro hasta el final.",
+      f12_p: "Barra de título, barras de desplazamiento, cuadrículas, diálogos, información sobre herramientas, vista previa de Markdown — todo en el mismo lenguaje visual. Sin blancos sueltos de lugares improbables.",
+
+      f13_num: "13 — PERSISTENCIA",
+      f13_h: "Lo recuerda todo.",
+      f13_p: "Geometría de la ventana principal y de la ventana de operaciones. Última pestaña activa. Ancho del panel del árbol. Orden de columnas. Estado del árbol. Todo en <em>%LOCALAPPDATA%\\ExplorerFocus</em>.",
+
+      f14_num: "14 — TOOLTIP RICO",
+      f14_h: "Propiedades sin un clic.",
+      f14_p: "Un tooltip de 1,8 s sobre cualquier archivo muestra el tamaño calculado, fechas, atributos. Las carpetas llevan el tamaño recursivo — calculado de forma perezosa, con un semáforo para no machacar el disco.",
+
+      f15_num: "15 — ORDENACIÓN",
+      f15_h: "Las carpetas primero, siempre.",
+      f15_p: "Un comparador personalizado garantiza que los directorios queden arriba en cualquier orden, en cualquier columna, en cualquier sentido. Como debe ser.",
+
+      f16_num: "16 — SELECCIÓN MÚLTIPLE",
+      f16_h: "Selección inteligente.",
+      f16_p: "Un clic normal selecciona. Shift+clic extiende con la semántica «manda la mayoría» — si el rango ya está mayormente seleccionado, desmarca; si no, marca. Ctrl+clic alterna individualmente. Se acabó el «perdí toda la selección sin querer».",
+
+      f17_num: "17 — DESPLIEGUE",
+      f17_h: "Un solo <em>.exe</em>. Sin instalador.",
+      f17_p: "Autónomo, archivo único, comprimido. Cópialo a un pendrive y corre en cualquier Windows 10/11. <em>net10.0-windows</em> + WPF — sin dependencias fuera de la carpeta del ejecutable.",
+
+      badge_pro: "PREMIUM",
+      f18_num: "18 — ACCESO REMOTO",
+      f18_h: "SFTP, FTP/FTPS y WebDAV — el explorador llega al servidor.",
+      f18_p: "Conéctate por SFTP, FTP/FTPS y WebDAV (Nextcloud, ownCloud, NAS, IIS). Navega, previsualiza, sube y descarga, crea carpetas, renombra y copia/mueve — con <em>progreso byte a byte</em> y cancelación. Edita archivos remotos en local y <em>sincroniza al guardar</em>. Autenticación por contraseña o <em>clave SSH</em>; secretos cifrados con DPAPI.",
+      f18_mark: "SFTP · FTP/FTPS · WebDAV",
+      f18_free: "Gratis: 1 conexión — navegar + vista previa. PREMIUM desbloquea varias conexiones y todas las operaciones.",
+      f18_premium: "PREMIUM: donación mínima de 9,99 € (PayPal) — activada en la app con tu Machine ID.",
+      f19_num: "19 — NUBES",
+      f19_h: "Dropbox y OneDrive — tu nube dentro del explorador.",
+      f19_p: "Conéctate a <em>Dropbox</em> y <em>OneDrive</em> vía OAuth seguro — sin contraseñas almacenadas. Navega, previsualiza, sube y descarga, crea carpetas, renombra y copia/mueve, como una carpeta local. Tus archivos nunca pasan por nuestros servidores.",
+      f19_mark: "Dropbox · OneDrive",
+      f19_soon: "Dropbox y OneDrive — disponibles ahora.",
+      f19_premium: "PREMIUM (como SFTP/FTP/FTPS): varias conexiones y todas las operaciones. Donación de 9,99 € (PayPal).",
+      f20_num: "20 — LIBROS / EPUB",
+      f20_h: "EPUB — previsualiza y lee, sin salir del explorador.",
+      f20_p: "Vista previa instantánea de cualquier <em>.epub</em> : portada, índice y un extracto de texto. Abre el libro completo en su propio lector, con navegación por capítulos, salto de página, <em>desplazamiento automático</em> y tu posición de lectura recordada.",
+      f20_mark: "Portada · Índice · Extracto · Lector",
+      f20_free: "Gratis: vista previa — portada, índice y un extracto de texto.",
+      f20_premium: "PREMIUM: lector completo — navegación, salto de página, desplazamiento automático, paso de página y memoria de tus últimos 20 libros.",
+      f21_num: "21 — VISORES DE DOCUMENTOS",
+      f21_h: "Word, Excel, PowerPoint y más — ver sin abrir nada.",
+      f21_p: "Previsualiza <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> y <em>OpenDocument</em> (texto, hoja y presentación) en el propio panel. El audio y el vídeo se reproducen en la vista previa, con una <em>ventana flotante</em> y controles de volumen/velocidad. Un marcador señala los archivos con vista previa; los archivos protegidos con contraseña se señalan sin pedir la contraseña.",
+      f21_mark: "Word · Excel · PowerPoint · RTF · OpenDocument · Audio · Vídeo",
+      f22_num: "22 — GRABAR AUDIO",
+      f22_h: "Graba el micrófono directo en la carpeta.",
+      f22_p: "Un clic graba el <em>micrófono</em> en la carpeta actual. Elige el micrófono, mira el <em>medidor de nivel</em> en vivo, ajusta el volumen de grabación y guarda como <em>WAV</em> o <em>M4A/AAC</em>.",
+      f22_mark: "Micrófono · Medidor de nivel · WAV · M4A",
+      f23_num: "23 — GRABAR VÍDEO",
+      f23_h: "Graba la cámara directo en la carpeta.",
+      f23_p: "Vista previa de <em>cámara</em> en vivo, con elección de cámara y micrófono, resolución y formato — <em>MP4</em>, <em>WMV</em> o <em>AVI</em>. Guarda en la carpeta actual con un clic.",
+      f23_mark: "Cámara · Micrófono · MP4 · WMV · AVI",
+      f23_premium: "Gratis con una discreta marca de agua en el pie. PREMIUM: sin marca de agua.",
+      f24_num: "24 — ESCANEAR",
+      f24_h: "Del escáner a la carpeta — imagen o PDF.",
+      f24_p: "Escanea desde el <em>cristal</em> o el <em>alimentador (ADF)</em>, muchas hojas de una vez. Elige la resolución y el color — <em>color</em>, escala de grises o <em>blanco &amp; negro</em>. Guarda como <em>JPEG/PNG</em> o fusiona todo en un <em>PDF multipágina</em>, y sigue añadiendo hojas al mismo PDF.",
+      f24_mark: "Cristal · Alimentador (ADF) · Color · PDF multipágina",
+      f25_num: "25 — ARCHIVOS COMO CARPETAS",
+      f25_h: "Abre ZIP, RAR, 7z y TAR como carpetas.",
+      f25_p: "Doble clic (o <em>Explorar dentro</em>) para entrar en el archivo comprimido — navega el contenido, <em>previsualiza</em> y <em>copia archivos hacia fuera</em> sin extraerlo todo. Solo lectura; <em>Abrir con…</em> sigue abriéndolos en WinRAR/WinZip/7-Zip.",
+      f25_mark: "ZIP · RAR · 7z · TAR · Copiar hacia fuera",
+      f26_num: "26 — GRABAR PANTALLA",
+      f26_h: "Graba la pantalla directo en la carpeta — con cámara opcional.",
+      f26_p: "Elige una <em>región de cualquier monitor</em> (o toda la pantalla) y graba en <em>MP4</em> con el <em>micrófono</em>. Añade la <em>cámara</em> : alterna pantalla⇄cámara con <em>transiciones</em> (fundido, barrido, deslizamiento, mosaico), muéstrala como <em>PiP</em> en una esquina, o lado a lado en <em>pantalla dividida</em>.",
+      f26_mark: "Región · Micrófono · Sonido del sistema · Cámara · PiP · Pantalla dividida · Transiciones · MP4",
+      f26_premium: "Gratis: marca de agua + 15 s y sin sonido. PREMIUM: sin marca de agua, sin límite de tiempo y con sonido (micrófono + sistema).",
+      f27_num: "27 — TARJETAS DE MARCA",
+      f27_h: "Tarjetas de intro y cierre para tus vídeos — en la propia grabación.",
+      f27_p: "Dale a tus grabaciones (pantalla y cámara) una <em>tarjeta de intro</em>, un <em>banner de texto</em> permanente y una <em>tarjeta de cierre</em> estilo créditos (hasta 10 líneas). <em>5 modelos independientes</em>, cada uno con 3 presentaciones, logo, color de fondo y una <em>insignia de episodio</em> — pensado para una serie de vídeos coherente.",
+      f27_mark: "Intro · Banner · Cierre (créditos) · 5 modelos · Logo · Insignia de episodio",
+      f27_premium: "PREMIUM. Discreta firma «Made with ExplorerFocus» en la tarjeta de cierre.",
+      f28_num: "28 — VOZ EN OFF",
+      f28_h: "Narra tus vídeos tras grabarlos — incluso a solas.",
+      f28_p: "Graba la pantalla <em>en silencio</em> y luego, en una <em>caja dedicada</em>, reproduce el vídeo mientras <em>narras encima</em>. La narración cae en un archivo separado; añade <em>música de fondo</em>, equilibra los volúmenes (para que la música no tape la voz) y <em>genera el vídeo final</em> con las tres fuentes.",
+      f28_mark: "Grabar en silencio · Narrar sobre el vídeo · Música · Volúmenes · Vídeo + narración + música → final",
+      f28_premium: "PREMIUM. El vídeo y la narración quedan como archivos separados; solo «Generar final» crea el vídeo mezclado.",
+      wn_label: "✦ Novedades",
+      wn_voice: "🎙 Voz en off",
+      wn_cards: "🎬 Tarjetas de marca",
+      wn_screen: "🖥 Grabación de pantalla",
+      wn_cloud: "☁ Nubes y remotos",
+      f24_premium: "Gratis: 1 página en plano, con marca de agua. PREMIUM: varias páginas, alimentador (ADF) y sin marca de agua.",
+      f18_soon: "Nubes (Dropbox, OneDrive) — disponibles. S3 y rclone — pronto.",
+      ft_ch_standalone: "Autónomo (.exe)",
+      ft_ch_portable: "Autónomo (.zip)",
+      ft_ch_clickonce: "ClickOnce",
+      ft_soon: "pronto",
+
+      sc_num: "§ 02 · Atajos",
+      sc_title: "Las manos en<br>la <em>fila central</em>.",
+      sc_blurb: "Cada operación importante tiene un atajo. Sin ratón siempre que se pueda — comodidad para sesiones largas.",
+      sc_f2: "Renombrar el elemento enfocado <em>— archivo, carpeta o pestaña</em>",
+      sc_enter: "Abrir el archivo con la app asociada",
+      sc_del: "Enviar a la Papelera <em>— vía FileOperationsManager</em>",
+      sc_f5: "Actualizar la lista de la carpeta actual",
+      sc_find: "Enfocar el cuadro de búsqueda local",
+      sc_newtab: "Nuevo perfil (nueva pestaña)",
+      sc_closetab: "Cerrar la pestaña actual",
+      sc_nexttab: "Pestaña siguiente <em>— Shift invierte</em>",
+      sc_jumptab: "Saltar a la pestaña N",
+      sc_shiftdrag: "Forzar <em>Mover</em> sin preguntar",
+
+      st_num: "§ 03 · Stack",
+      st_title: "Construido con <em>piezas serias</em>.",
+      st_blurb: "Cada dependencia se eligió por madurez, tamaño o la ausencia de alternativas razonables. Sin framework de moda.",
+      st_dotnet: "WPF clásico, sin WinUI ni MAUI. Compatible con Windows 10 y 11.",
+      st_mvvm: "ObservableObject, ObservableProperty, RelayCommand — generados por source generators.",
+      st_preview_ic: "VISTA PREVIA",
+      st_preview: "Resaltado de sintaxis, renderizador de markdown y motor Edge embebido para PDF.",
+      st_util: "Para enviar a la <em>Papelera</em> — la única forma honesta, y funciona.",
+
+      ft_tagline: "El explorador mínimo para quienes trabajan siempre en los mismos sitios — y quieren que la herramienta lo sepa.",
+      ft_get: "Descargar",
+      ft_releases: "Versiones",
+      ft_changelog: "Registro de cambios",
+      ft_project: "Proyecto",
+      nav_guide: "Cómo funciona",
+      nav_privacy: "Privacidad",
+      ft_baseline: "diseñado para el día a día",
+      mb_credit: "Un producto <a href=\"https://nunex-mbrothers.github.io/mBrothers/#products\" target=\"_blank\" rel=\"noopener\">mBrothers</a><span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
+    },
   };
 
   /* Apply translation for a given lang code */
@@ -2660,7 +3167,7 @@
     });
 
     // <html lang>
-    const langMap = { pt: 'pt-PT', en: 'en-US', de: 'de-DE', zh: 'zh-CN' };
+    const langMap = { pt: 'pt-PT', en: 'en-US', fr: 'fr-FR', es: 'es-ES', de: 'de-DE', zh: 'zh-CN' };
     document.documentElement.setAttribute('lang', langMap[lang] || 'pt-PT');
 
     // Active flag
@@ -2679,6 +3186,8 @@
     const nav = (navigator.language || 'pt').toLowerCase();
     if (nav.startsWith('pt')) return 'pt';
     if (nav.startsWith('en')) return 'en';
+    if (nav.startsWith('fr')) return 'fr';
+    if (nav.startsWith('es')) return 'es';
     if (nav.startsWith('de')) return 'de';
     if (nav.startsWith('zh')) return 'zh';
     return 'pt';

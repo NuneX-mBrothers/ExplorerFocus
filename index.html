@@ -1,31 +1,42 @@
 <!doctype html>
-<html lang="pt-PT">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title data-i18n="page_title">ExplorerFocus — um explorador de ficheiros sem distrações</title>
-<meta name="description" data-i18n-attr="content" data-i18n="page_desc" content="Alternativa focada ao Windows Explorer. Perfis, árvores configuráveis, operações ricas, pré-visualização — tudo em torno do que importa.">
+<title data-i18n="page_title">ExplorerFocus — a distraction-free file explorer</title>
+<meta name="description" data-i18n-attr="content" data-i18n="page_desc" content="A focused alternative to Windows Explorer. Profiles, configurable trees, rich operations, preview — all centered on what matters.">
 
 <!-- ===== SEO ===== -->
-<meta name="keywords" content="ExplorerFocus, explorador de ficheiros, file explorer, alternativa ao Windows Explorer, gestor de ficheiros, file manager, cliente SFTP, FTP, FTPS, WebDAV, Dropbox, OneDrive, pré-visualização, file preview, Word, Excel, PowerPoint, RTF, OpenDocument, EPUB, ebook, leitor de EPUB, epub reader, gravar áudio, gravar vídeo, gravar ecrã, screen recording, captura de ecrã, screen capture, PiP, picture-in-picture, ecrã dividido, digitalizar, scanner, ADF, PDF, câmara, microfone, Windows 10, Windows 11, .NET 10, WPF, perfis, produtividade">
+<meta name="keywords" content="ExplorerFocus, file explorer, windows explorer alternative, file manager, explorador de ficheiros, alternativa ao Windows Explorer, gestor de ficheiros, file manager, cliente SFTP, FTP, FTPS, WebDAV, Dropbox, OneDrive, pré-visualização, file preview, Word, Excel, PowerPoint, RTF, OpenDocument, EPUB, ebook, leitor de EPUB, epub reader, gravar áudio, gravar vídeo, gravar ecrã, screen recording, captura de ecrã, screen capture, PiP, picture-in-picture, ecrã dividido, digitalizar, scanner, ADF, PDF, câmara, microfone, Windows 10, Windows 11, .NET 10, WPF, perfis, produtividade">
 <meta name="author" content="mBrothers">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#0E0F11">
 <link rel="canonical" href="https://nunex-mbrothers.github.io/ExplorerFocus/">
+<link rel="alternate" hreflang="x-default" href="https://nunex-mbrothers.github.io/ExplorerFocus/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='6'%20fill='%230E0F11'/%3E%3Cpath%20d='M16%204l12%2012-12%2012L4%2016z'%20fill='%23E0A458'/%3E%3C/svg%3E">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ExplorerFocus">
-<meta property="og:title" content="ExplorerFocus — um explorador de ficheiros sem distrações">
-<meta property="og:description" content="Alternativa focada ao Windows Explorer: perfis, árvores configuráveis, operações ricas, pré-visualização e acessos remotos (SFTP/FTP/FTPS/WebDAV).">
+<meta property="og:title" content="ExplorerFocus — a distraction-free file explorer for Windows">
+<meta property="og:description" content="A focused alternative to Windows Explorer: profiles, configurable trees, honest file operations, rich preview and remote access (SFTP/FTP/FTPS/WebDAV).">
 <meta property="og:url" content="https://nunex-mbrothers.github.io/ExplorerFocus/">
-<meta property="og:locale" content="pt_PT">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_PT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:image" content="https://nunex-mbrothers.github.io/ExplorerFocus/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ExplorerFocus — a file explorer that stays out of the way">
 
 <!-- Twitter -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ExplorerFocus — explorador de ficheiros sem distrações">
-<meta name="twitter:description" content="Alternativa focada ao Windows Explorer, com acessos remotos SFTP/FTP/FTPS/WebDAV e pré-visualização rica.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ExplorerFocus — distraction-free file explorer">
+<meta name="twitter:description" content="A focused alternative to Windows Explorer, with SFTP/FTP/FTPS/WebDAV remote access and a rich preview pane.">
+<meta name="twitter:image" content="https://nunex-mbrothers.github.io/ExplorerFocus/og-cover.png">
 
 <!-- Dados estruturados (Schema.org) -->
 <script type="application/ld+json">
@@ -35,7 +46,7 @@
   "name": "ExplorerFocus",
   "operatingSystem": "Windows 10, Windows 11",
   "applicationCategory": "UtilitiesApplication",
-  "description": "Alternativa focada ao Windows Explorer: perfis, árvores configuráveis, operações ricas, pré-visualização e acessos remotos (SFTP/FTP/FTPS/WebDAV).",
+  "description": "A focused alternative to Windows Explorer: profiles, configurable trees, honest file operations, rich preview and remote access (SFTP/FTP/FTPS/WebDAV).",
   "url": "https://nunex-mbrothers.github.io/ExplorerFocus/",
   "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
   "softwareVersion": "1.2.20",
@@ -1054,10 +1065,10 @@
     </div>
     <nav class="nav">
       <a href="#features" data-i18n="nav_features">Features</a>
-      <a href="#shortcuts" data-i18n="nav_shortcuts">Atalhos</a>
+      <a href="#shortcuts" data-i18n="nav_shortcuts">Shortcuts</a>
       <a href="#stack" data-i18n="nav_stack">Stack</a>
       <a href="#premium" data-i18n="nav_premium">Premium</a>
-      <a href="#download" data-i18n="nav_download">Obter</a>
+      <a href="#download" data-i18n="nav_download">Get it</a>
       <span class="nav-version">v1.2.20</span>
     </nav>
   </div>
@@ -1066,14 +1077,9 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <div class="hero-eyebrow" data-i18n="hero_eyebrow">Um explorador de ficheiros · WPF · .NET 10</div>
-    <h1 data-i18n-html="hero_title">O explorer<br>que <em>se foca</em><br>no que <span class="strike">não</span> importa.</h1>
-    <p class="hero-lede" data-i18n="hero_lede">
-      ExplorerFocus é um substituto leve do Windows Explorer, desenhado para quem
-      trabalha sempre nas mesmas pastas. Perfis configuráveis, árvores limpas,
-      pré-visualização rica, operações que dão informação a sério —
-      sem o ruído do shell.
-    </p>
+    <div class="hero-eyebrow" data-i18n="hero_eyebrow">A file explorer · WPF · .NET 10</div>
+    <h1 data-i18n-html="hero_title">The explorer<br>that <em>focuses</em><br>on what <span class="strike">doesn't</span> matter.</h1>
+    <p class="hero-lede" data-i18n="hero_lede">ExplorerFocus is a lightweight Windows Explorer replacement, designed for people who always work in the same folders. Configurable profiles, clean trees, rich preview, operations that actually tell you what's happening — without the shell's noise.</p>
     <div class="hero-meta">
       <span data-i18n="hero_meta_os">Windows 10 / 11</span>
       <span data-i18n="hero_meta_pkg">Self-contained · single-file</span>
@@ -1082,7 +1088,7 @@
 
     <div class="hero-cta">
       <a class="btn btn-primary" href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.exe">
-        <span aria-hidden="true">⬇</span> <span data-i18n="hero_dl_exe">Descarregar · .exe</span>
+        <span aria-hidden="true">⬇</span> <span data-i18n="hero_dl_exe">Download · .exe</span>
       </a>
       <a class="btn btn-ghost" href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip"
          title="Para organizações que bloqueiam o download de .exe">
@@ -1091,7 +1097,7 @@
     </div>
 
     <div class="hero-latest" id="heroLatest" hidden>
-      <span data-i18n="hero_latest">Versão mais recente</span>:
+      <span data-i18n="hero_latest">Latest version</span>:
       <strong id="heroVersion"></strong><span id="heroReleased"></span>
     </div>
 
@@ -1100,10 +1106,10 @@
         <span class="hero-sha-lbl">SHA-256</span>
         <code id="heroSha" class="js-sha"></code>
         <button class="hero-sha-copy" id="heroShaCopy" type="button" aria-label="Copiar SHA-256" title="Copiar">⧉</button>
-        <a href="#sha256" class="hero-sha-what" data-modal="shaModal" data-i18n="sha_link">O que é o SHA-256?</a>
+        <a href="#sha256" class="hero-sha-what" data-modal="shaModal" data-i18n="sha_link">What is SHA-256?</a>
       </div>
       <a href="#verify" class="hero-verify-link" id="openVerify" data-modal="verifyModal">
-        <span data-i18n="dl_firsttime">Primeira vez a abrir? Aviso do Windows?</span>
+        <span data-i18n="dl_firsttime">First time opening it? Windows warning?</span>
         <span aria-hidden="true">→</span>
       </a>
     </div>
@@ -1126,7 +1132,7 @@
 
       <div class="app-body">
         <div class="app-tree">
-          <div class="label" data-i18n="app_tree_label">Árvore</div>
+          <div class="label" data-i18n="app_tree_label">Tree</div>
           <div class="node">▾ ExplorerFocus</div>
           <div class="node">&nbsp;&nbsp;Core/</div>
           <div class="node">&nbsp;&nbsp;Models/</div>
@@ -1138,9 +1144,9 @@
 
         <div class="app-list">
           <div class="head">
-            <span data-i18n="app_col_name">NOME</span>
+            <span data-i18n="app_col_name">NAME</span>
             <span data-i18n="app_col_ext">EXT</span>
-            <span data-i18n="app_col_size">TAMANHO</span>
+            <span data-i18n="app_col_size">SIZE</span>
           </div>
           <div class="row">
             <span>📁 FileOperations</span>
@@ -1175,7 +1181,7 @@
         </div>
 
         <div class="app-preview">
-          <div class="head" data-i18n="app_preview_label">PRÉ-VISUALIZAÇÃO</div>
+          <div class="head" data-i18n="app_preview_label">PREVIEW</div>
           <div class="ln"><span class="lno">1</span><span><span class="kw">using</span> System.IO;</span></div>
           <div class="ln"><span class="lno">2</span></div>
           <div class="ln"><span class="lno">3</span><span class="cmt">// Main view-model</span></div>
@@ -1194,8 +1200,8 @@
 
     <div class="ops-widget">
       <div class="head">
-        <span><span class="ic">📋</span> <span data-i18n="ops_action">Copiar · 47 ficheiros</span></span>
-        <span class="pill" data-i18n="ops_status">EM EXECUÇÃO</span>
+        <span><span class="ic">📋</span> <span data-i18n="ops_action">Copy · 47 files</span></span>
+        <span class="pill" data-i18n="ops_status">RUNNING</span>
       </div>
       <div style="color: var(--fg-2); margin-top: 6px;">project_dump_2025.zip</div>
       <div class="bar"><div class="fill"></div></div>
@@ -1210,12 +1216,12 @@
 
 <!-- NOVIDADES (teaser das features mais recentes → salto para o card) -->
 <div class="whatsnew">
-  <span class="whatsnew-label" data-i18n="wn_label">✦ Novidades</span>
+  <span class="whatsnew-label" data-i18n="wn_label">✦ What's new</span>
   <nav class="whatsnew-pills">
     <a href="#feat28" data-i18n="wn_voice">🎙 Voice over</a>
-    <a href="#feat27" data-i18n="wn_cards">🎬 Cartões de marca</a>
-    <a href="#feat26" data-i18n="wn_screen">🖥 Gravação de ecrã</a>
-    <a href="#feat19" data-i18n="wn_cloud">☁ Nuvens &amp; remotos</a>
+    <a href="#feat27" data-i18n="wn_cards">🎬 Branding cards</a>
+    <a href="#feat26" data-i18n="wn_screen">🖥 Screen recording</a>
+    <a href="#feat19" data-i18n="wn_cloud">☁ Clouds & remotes</a>
   </nav>
   <span class="whatsnew-ver">v1.2.20</span>
 </div>
@@ -1224,63 +1230,53 @@
 <div id="features"></div>
 <div class="section-header">
   <div>
-    <div class="section-num" data-i18n="cat_num">§ 01 · Catálogo</div>
-    <h2 class="section-title" data-i18n-html="cat_title">O que <em>realmente</em><br>faz a diferença.</h2>
+    <div class="section-num" data-i18n="cat_num">§ 01 · Catalog</div>
+    <h2 class="section-title" data-i18n-html="cat_title">What <em>really</em><br>makes a difference.</h2>
   </div>
-  <p class="section-blurb" data-i18n="cat_blurb">
-    Cada feature foi adicionada para responder a um problema concreto do
-    trabalho diário sobre uma árvore de ficheiros conhecida. Nenhuma está lá
-    por bonita. Quase todas podem ser ligadas ou desligadas.
-  </p>
+  <p class="section-blurb" data-i18n="cat_blurb">Each feature was added to answer a concrete problem in daily work over a known file tree. None is there for show. Almost all can be toggled on or off.</p>
 </div>
 
 <section class="features">
 
   <div class="feat hero-card w8">
     <div class="pad">
-      <div class="num" data-i18n="f01_num">01 — PERFIS</div>
-      <h3 data-i18n="f01_h">Multi-tab por contexto. Cada perfil é uma vista própria, com a sua árvore, filtros e estado.</h3>
-      <p data-i18n="f01_p">Drag-reorder, F2 para renomear, Ctrl+1..9 para saltar entre tabs, Ctrl+T para criar.
-         As tabs lembram a última pasta visitada e o estado da árvore.</p>
+      <div class="num" data-i18n="f01_num">01 — PROFILES</div>
+      <h3 data-i18n="f01_h">Multi-tab by context. Each profile is its own view, with its tree, filters and state.</h3>
+      <p data-i18n="f01_p">Drag-reorder, F2 to rename, Ctrl+1..9 to jump between tabs, Ctrl+T to create. Tabs remember the last folder visited and the tree state.</p>
     </div>
     <div class="visual">
       <span><span class="k" data-i18n="f01_v1_k">tabs</span> · <span class="v">●</span> default · <span class="v">○</span> scripts · <span class="v">○</span> research</span>
-      <span><span class="k" data-i18n="f01_v2_k">ativa</span> <span class="v">←</span> <span data-i18n="f01_v2_t">destacada com âmbar</span></span>
-      <span><span class="k">●</span> <span data-i18n="f01_v3_t">incluída na pesquisa global</span></span>
+      <span><span class="k" data-i18n="f01_v2_k">active</span> <span class="v">←</span> <span data-i18n="f01_v2_t">highlighted in amber</span></span>
+      <span><span class="k">●</span> <span data-i18n="f01_v3_t">included in global search</span></span>
     </div>
   </div>
 
   <div class="feat w4">
-    <div class="num" data-i18n="f02_num">02 — ÁRVORES</div>
-    <h3 data-i18n="f02_h">Árvores configuráveis.</h3>
-    <p data-i18n-html="f02_p">Defines manualmente as raízes que queres ver. Filesystem e <em>registry</em> entram lado a lado.
-       Sem a lateral cheia de itens que nunca abres.</p>
+    <div class="num" data-i18n="f02_num">02 — TREES</div>
+    <h3 data-i18n="f02_h">Configurable trees.</h3>
+    <p data-i18n-html="f02_p">You manually define the roots you want to see. Filesystem and <em>registry</em> side by side. No sidebar full of items you never open.</p>
     <div class="feat-mark" data-i18n="f02_mark">Folder + Registry</div>
   </div>
 
   <div class="feat w6">
-    <div class="num" data-i18n="f03_num">03 — PESQUISA</div>
-    <h3 data-i18n="f03_h">Pesquisa multi-padrão com curingas em qualquer posição.</h3>
-    <p data-i18n-html="f03_p">Escreve <code style="font-family:var(--font-mono);background:var(--bg-2);padding:1px 6px;border-radius:2px;color:var(--accent);">*.cs *.json</code>
-       e tens semântica OR. <em>?</em>onfig.json, Test*Run.cs — todos funcionam.</p>
-    <div class="feat-mark" data-i18n="f03_mark">Wildcards · Regex interno</div>
+    <div class="num" data-i18n="f03_num">03 — SEARCH</div>
+    <h3 data-i18n="f03_h">Multi-pattern search with wildcards in any position.</h3>
+    <p data-i18n-html="f03_p">Type <code style="font-family:var(--font-mono);background:var(--bg-2);padding:1px 6px;border-radius:2px;color:var(--accent);">*.cs *.json</code> and get OR semantics. <em>?</em>onfig.json, Test*Run.cs — all work.</p>
+    <div class="feat-mark" data-i18n="f03_mark">Wildcards · Internal regex</div>
   </div>
 
   <div class="feat w6">
-    <div class="num" data-i18n="f04_num">04 — PESQUISA GLOBAL</div>
-    <h3 data-i18n="f04_h">Procurar entre perfis, com opt-in explícito.</h3>
-    <p data-i18n="f04_p">Botão direito numa tab → "Incluir na pesquisa global". O dot indicator (●/○)
-       diz logo o que entra. Resultados numa janela não modal.</p>
-    <div class="feat-mark" data-i18n="f04_mark">Opt-in · Resultados não modais</div>
+    <div class="num" data-i18n="f04_num">04 — GLOBAL SEARCH</div>
+    <h3 data-i18n="f04_h">Search across profiles, with explicit opt-in.</h3>
+    <p data-i18n="f04_p">Right-click a tab → "Include in global search". The dot indicator (●/○) shows what's in. Results in a non-modal window.</p>
+    <div class="feat-mark" data-i18n="f04_mark">Opt-in · Non-modal results</div>
   </div>
 
   <div class="feat hero-card w12">
     <div class="pad">
-      <div class="num" data-i18n="f05_num">05 — PRÉ-VISUALIZAÇÃO</div>
-      <h3 data-i18n="f05_h">Painel de preview rico. Cada tipo de ficheiro com a sua renderização ideal.</h3>
-      <p data-i18n-html="f05_p">Texto com <em>syntax highlight</em> via AvalonEdit, imagens com decode em background,
-         PDFs renderizados pelo motor do Edge (WebView2), Markdown convertido em HTML com tema escuro
-         pelo Markdig. Tudo individualmente ativável. Cancela load anterior se mudares de selecção.</p>
+      <div class="num" data-i18n="f05_num">05 — PREVIEW</div>
+      <h3 data-i18n="f05_h">Rich preview pane. Each file type with its ideal rendering.</h3>
+      <p data-i18n-html="f05_p">Text with <em>syntax highlight</em> via AvalonEdit, images decoded in the background, PDFs rendered by the Edge engine (WebView2), Markdown converted to HTML with a dark theme by Markdig. Individually toggleable. Cancels previous load if you change selection.</p>
     </div>
     <div class="preview-demo">
       <div class="src">
@@ -1303,233 +1299,188 @@
       <div class="rendered">
         <div class="src h" style="margin-bottom:14px;" data-i18n="f05_md_h">MARKDOWN · README.md</div>
         <h4>ExplorerFocus</h4>
-        <p data-i18n-html="f05_md_p">Substituto focado do Windows Explorer. Trabalha em torno de pastas
-           configuráveis e <em>esquece tudo</em> que não interessa.</p>
+        <p data-i18n-html="f05_md_p">A focused Windows Explorer replacement. Built around configurable folders, it <em>forgets everything</em> that doesn't matter.</p>
         <p><code>net10.0-windows</code> · <code>WPF</code> · single-file</p>
-        <p style="border-left: 3px solid var(--accent); padding: 4px 12px; background: var(--bg-2); margin-top: 12px;" data-i18n="f05_md_note">
-          Nota — preview funciona com Edge WebView2 instalado (vem com Windows 10/11).
-        </p>
+        <p style="border-left: 3px solid var(--accent); padding: 4px 12px; background: var(--bg-2); margin-top: 12px;" data-i18n="f05_md_note">Note — preview works with Edge WebView2 installed (ships with Windows 10/11).</p>
       </div>
     </div>
   </div>
 
   <div class="feat w6">
-    <div class="num" data-i18n="f06_num">06 — OPERAÇÕES DE FICHEIROS</div>
-    <h3 data-i18n="f06_h">Copiar, mover, apagar — com informação a sério.</h3>
-    <p data-i18n-html="f06_p">Janela flutuante mostra <em>gauge por ficheiro</em>, velocidade real,
-       ETA, contagem global. Pausa, retoma, cancela. Até 6 operações em paralelo.
-       Continua a tua vida noutra coisa enquanto corre.</p>
-    <div class="feat-mark" data-i18n="f06_mark">Buffer 1 MB · 10 Hz UI · histórico × 20</div>
+    <div class="num" data-i18n="f06_num">06 — FILE OPERATIONS</div>
+    <h3 data-i18n="f06_h">Copy, move, delete — with real information.</h3>
+    <p data-i18n-html="f06_p">Floating window shows <em>per-file gauge</em>, real speed, ETA, global count. Pause, resume, cancel. Up to 6 parallel operations. Get on with your life while it runs.</p>
+    <div class="feat-mark" data-i18n="f06_mark">Buffer 1 MB · 10 Hz UI · history × 20</div>
   </div>
 
   <div class="feat w3">
-    <div class="num" data-i18n="f07_num">07 — CONFLITOS</div>
-    <h3 data-i18n="f07_h">6-vias.</h3>
-    <p data-i18n="f07_p">Sobrepor / Saltar / Duplicar, individuais ou em bulk para o resto da operação.</p>
+    <div class="num" data-i18n="f07_num">07 — CONFLICTS</div>
+    <h3 data-i18n="f07_h">6-way.</h3>
+    <p data-i18n="f07_p">Overwrite / Skip / Duplicate, individually or in bulk for the rest of the operation.</p>
   </div>
 
   <div class="feat w3">
     <div class="num" data-i18n="f08_num">08 — DRAG &amp; DROP</div>
-    <h3 data-i18n="f08_h">Entre tabs.</h3>
-    <p data-i18n="f08_p">Arrasta um ficheiro para uma tab e a tab comuta sozinha após 600ms. Dialog Copiar/Mover na largada.</p>
+    <h3 data-i18n="f08_h">Between tabs.</h3>
+    <p data-i18n="f08_p">Drag a file to a tab and the tab switches on its own after 600ms. Copy/Move dialog on drop.</p>
   </div>
 
   <div class="feat w8">
-    <div class="num" data-i18n="f09_num">09 — APPS POR EXTENSÃO</div>
-    <h3 data-i18n="f09_h">Detecção automática de extensões novas. Globais entre perfis.</h3>
-    <p data-i18n-html="f09_p">Entras numa pasta com <em>.dwg</em>, <em>.psd</em>, <em>.bak</em>?
-       Diálogo agregado pergunta de uma vez. Picker individual por linha
-       (browse para o .exe; o nome é auto-resolvido por <em>FileVersionInfo</em>).
-       Marca como ignoradas as que não interessam. Lista persiste.</p>
-    <div class="feat-mark" data-i18n="f09_mark">Mute por sessão · Toggle no Settings</div>
+    <div class="num" data-i18n="f09_num">09 — APPS BY EXTENSION</div>
+    <h3 data-i18n="f09_h">Auto-detect new extensions. Shared across profiles.</h3>
+    <p data-i18n-html="f09_p">Enter a folder with <em>.dwg</em>, <em>.psd</em>, <em>.bak</em>? An aggregated dialog asks once. Per-row picker (browse to the .exe; name auto-resolved by <em>FileVersionInfo</em>). Mark as ignored those you don't care about. The list persists.</p>
+    <div class="feat-mark" data-i18n="f09_mark">Mute per session · Toggle in Settings</div>
   </div>
 
   <div class="feat w4">
-    <div class="num" data-i18n="f10_num">10 — TERMINAIS</div>
-    <h3 data-i18n="f10_h">CMD, PowerShell, Git Bash — aqui, agora.</h3>
-    <p data-i18n-html="f10_p">Em qualquer pasta da árvore. Versões normais e <em>elevadas</em>.
-       <em>regedit</em> em chaves do registry.</p>
+    <div class="num" data-i18n="f10_num">10 — TERMINALS</div>
+    <h3 data-i18n="f10_h">CMD, PowerShell, Git Bash — here, now.</h3>
+    <p data-i18n-html="f10_p">In any tree folder. Normal and <em>elevated</em> variants. <em>regedit</em> on registry keys.</p>
   </div>
 
   <div class="feat w4">
-    <div class="num" data-i18n="f11_num">11 — CRIAR FICHEIROS</div>
-    <h3 data-i18n="f11_h">Skeletons sensatos.</h3>
-    <p data-i18n-html="f11_p"><em>.cs</em>, <em>.xaml</em>, <em>.json</em>, <em>.md</em>, <em>.cmd</em>, <em>.ps1</em> —
-       começam com a estrutura típica. O nome destaca-se sem apagar a extensão ao escrever.</p>
+    <div class="num" data-i18n="f11_num">11 — CREATE FILES</div>
+    <h3 data-i18n="f11_h">Sensible skeletons.</h3>
+    <p data-i18n-html="f11_p"><em>.cs</em>, <em>.xaml</em>, <em>.json</em>, <em>.md</em>, <em>.cmd</em>, <em>.ps1</em> — start with the typical structure. The name is highlighted without erasing the extension while typing.</p>
   </div>
 
   <div class="feat w4">
-    <div class="num" data-i18n="f12_num">12 — DARK COMPLETO</div>
-    <h3 data-i18n="f12_h">Tema escuro até ao fim.</h3>
-    <p data-i18n="f12_p">Title bar, scrollbars, datagrids, dialogs, tooltips, preview do Markdown — tudo
-       no mesmo idioma visual. Sem brancos perdidos a partir lugares improváveis.</p>
+    <div class="num" data-i18n="f12_num">12 — FULL DARK</div>
+    <h3 data-i18n="f12_h">Dark theme all the way.</h3>
+    <p data-i18n="f12_p">Title bar, scrollbars, datagrids, dialogs, tooltips, Markdown preview — all in the same visual language. No stray whites from unlikely places.</p>
   </div>
 
   <div class="feat w4">
-    <div class="num" data-i18n="f13_num">13 — PERSISTÊNCIA</div>
-    <h3 data-i18n="f13_h">Lembra-se de tudo.</h3>
-    <p data-i18n-html="f13_p">Geometria da janela principal e da janela de operações. Última tab activa.
-       Largura do tree pane. Sort por coluna. Estado da árvore. Tudo em
-       <em>%LOCALAPPDATA%\ExplorerFocus</em>.</p>
+    <div class="num" data-i18n="f13_num">13 — PERSISTENCE</div>
+    <h3 data-i18n="f13_h">Remembers everything.</h3>
+    <p data-i18n-html="f13_p">Geometry of the main window and the operations window. Last active tab. Tree pane width. Column sort. Tree state. All in <em>%LOCALAPPDATA%\ExplorerFocus</em>.</p>
   </div>
 
   <div class="feat w4">
-    <div class="num" data-i18n="f14_num">14 — TOOLTIP RICO</div>
-    <h3 data-i18n="f14_h">Propriedades sem clique.</h3>
-    <p data-i18n="f14_p">Tooltip de 1.8s sobre qualquer ficheiro mostra tamanho computado,
-       datas, atributos. Dirs trazem o tamanho recursivo —
-       calculado lazy, com semáforo para não martelar o disco.</p>
+    <div class="num" data-i18n="f14_num">14 — RICH TOOLTIP</div>
+    <h3 data-i18n="f14_h">Properties without a click.</h3>
+    <p data-i18n="f14_p">A 1.8s tooltip over any file shows computed size, dates, attributes. Folders carry the recursive size — computed lazily, with a semaphore to avoid hammering the disk.</p>
   </div>
 
   <div class="feat w4">
-    <div class="num" data-i18n="f15_num">15 — ORDENAÇÃO</div>
-    <h3 data-i18n="f15_h">Pastas primeiro, sempre.</h3>
-    <p data-i18n="f15_p">Comparador customizado garante que diretórios ficam no topo de
-       qualquer ordenação, em qualquer coluna, em qualquer direção.
-       Como deve ser.</p>
+    <div class="num" data-i18n="f15_num">15 — SORTING</div>
+    <h3 data-i18n="f15_h">Folders first, always.</h3>
+    <p data-i18n="f15_p">A custom comparer guarantees directories stay on top of any sort, in any column, in any direction. As it should be.</p>
   </div>
 
   <div class="feat w6">
     <div class="num" data-i18n="f16_num">16 — MULTI-SELECT</div>
-    <h3 data-i18n="f16_h">Selecção inteligente.</h3>
-    <p data-i18n="f16_p">Clique normal seleciona. Shift+clique estende com semântica
-       "decide pela maioria" — se o range já está maioritariamente seleccionado, desmarca; senão, marca.
-       Ctrl+clique alterna individual. Não há "perdi todas as selecções por acidente".</p>
+    <h3 data-i18n="f16_h">Smart selection.</h3>
+    <p data-i18n="f16_p">Normal click selects. Shift+click extends with "majority decides" semantics — if the range is mostly already selected, it unmarks; otherwise it marks. Ctrl+click toggles individually. No more "I lost all selections by accident".</p>
   </div>
 
   <div class="feat w6">
     <div class="num" data-i18n="f17_num">17 — DEPLOYMENT</div>
-    <h3 data-i18n-html="f17_h">Um único <em>.exe</em>. Sem instalador.</h3>
-    <p data-i18n-html="f17_p">Self-contained, single-file, com compressão. Copias para uma flash drive
-       e arranca em qualquer Windows 10/11. <em>net10.0-windows</em> + WPF — sem dependências
-       fora da pasta do executável.</p>
+    <h3 data-i18n-html="f17_h">A single <em>.exe</em>. No installer.</h3>
+    <p data-i18n-html="f17_p">Self-contained, single-file, compressed. Copy to a flash drive and it runs on any Windows 10/11. <em>net10.0-windows</em> + WPF — no dependencies outside the executable's folder.</p>
   </div>
 
   <div class="feat w12">
-    <div class="num"><span data-i18n="f18_num">18 — ACESSOS REMOTOS</span><span class="badge-pro" data-i18n="badge_pro">PREMIUM</span></div>
-    <h3 data-i18n="f18_h">SFTP, FTP/FTPS e WebDAV — o explorer chega ao servidor.</h3>
-    <p data-i18n-html="f18_p">Liga a SFTP, FTP/FTPS e WebDAV (Nextcloud, ownCloud, NAS, IIS). Navega, pré-visualiza,
-       envia e descarrega, cria pastas, renomeia e copia/move — com <em>progresso ao byte</em> e cancelamento.
-       Edita ficheiros remotos localmente e <em>sincroniza ao gravar</em>. Autenticação por password ou
-       <em>chave SSH</em>; segredos cifrados com DPAPI.</p>
+    <div class="num"><span data-i18n="f18_num">18 — REMOTE ACCESS</span><span class="badge-pro" data-i18n="badge_pro">PREMIUM</span></div>
+    <h3 data-i18n="f18_h">SFTP, FTP/FTPS and WebDAV — the explorer reaches the server.</h3>
+    <p data-i18n-html="f18_p">Connect to SFTP, FTP/FTPS and WebDAV (Nextcloud, ownCloud, NAS, IIS). Browse, preview, upload and download, create folders, rename and copy/move — with <em>byte-level progress</em> and cancel. Edit remote files locally and <em>sync on save</em>. Password or <em>SSH key</em> auth; secrets encrypted with DPAPI.</p>
     <div class="feat-mark" data-i18n="f18_mark">SFTP · FTP/FTPS · WebDAV</div>
     <p class="feat-note">
-      <span data-i18n="f18_free">Grátis: 1 ligação — navegar + preview. PREMIUM desbloqueia várias ligações e todas as operações.</span><br>
-      <span data-i18n="f18_premium">PREMIUM: donativo mínimo de 9,99 € (PayPal) — ativa-se na app com o teu Machine ID.</span>
+      <span data-i18n="f18_free">Free: 1 connection — browse + preview. PREMIUM unlocks multiple connections and all operations.</span><br>
+      <span data-i18n="f18_premium">PREMIUM: minimum €9.99 donation (PayPal) — activated in the app with your Machine ID.</span>
     </p>
   </div>
 
   <div class="feat w12" id="feat19">
     <div class="num"><span data-i18n="f19_num">19 — CLOUDS</span><span class="badge-pro" data-i18n="badge_pro">PREMIUM</span></div>
-    <h3 data-i18n="f19_h">Dropbox e OneDrive — a tua cloud dentro do explorer.</h3>
-    <p data-i18n-html="f19_p">Liga a <em>Dropbox</em> e <em>OneDrive</em> por OAuth seguro — sem guardares palavras-passe.
-       Navega, pré-visualiza, envia e descarrega, cria pastas, renomeia e copia/move, como numa pasta local.
-       Os teus ficheiros nunca passam por servidores nossos.</p>
+    <h3 data-i18n="f19_h">Dropbox and OneDrive — your cloud inside the explorer.</h3>
+    <p data-i18n-html="f19_p">Connect to <em>Dropbox</em> and <em>OneDrive</em> via secure OAuth — no passwords stored. Browse, preview, upload and download, create folders, rename and copy/move, like a local folder. Your files never pass through our servers.</p>
     <div class="feat-mark" data-i18n="f19_mark">Dropbox · OneDrive</div>
     <p class="feat-note">
-      <span data-i18n="f19_soon">Dropbox e OneDrive — disponíveis agora.</span><br>
-      <span data-i18n="f19_premium">PREMIUM (tal como o SFTP/FTP/FTPS): várias ligações e todas as operações. Donativo 9,99 € (PayPal).</span>
+      <span data-i18n="f19_soon">Dropbox and OneDrive — available now.</span><br>
+      <span data-i18n="f19_premium">PREMIUM (like SFTP/FTP/FTPS): multiple connections and all operations. €9.99 donation (PayPal).</span>
     </p>
   </div>
 
   <div class="feat w12">
-    <div class="num"><span data-i18n="f20_num">20 — LIVROS / EPUB</span><span class="badge-pro" data-i18n="badge_pro">PREMIUM</span></div>
-    <h3 data-i18n="f20_h">EPUB — pré-visualiza e lê, sem sair do explorer.</h3>
-    <p data-i18n-html="f20_p">Preview instantâneo de qualquer <em>.epub</em>: capa, índice e um excerto do texto.
-       Abre o livro completo num leitor próprio, com navegação por capítulos, salto de página,
-       <em>scroll automático</em> e o teu ponto de leitura guardado.</p>
-    <div class="feat-mark" data-i18n="f20_mark">Capa · Índice · Excerto · Leitor</div>
+    <div class="num"><span data-i18n="f20_num">20 — BOOKS / EPUB</span><span class="badge-pro" data-i18n="badge_pro">PREMIUM</span></div>
+    <h3 data-i18n="f20_h">EPUB — preview and read, without leaving the explorer.</h3>
+    <p data-i18n-html="f20_p">Instant preview of any <em>.epub</em>: cover, table of contents and a text excerpt. Open the full book in its own reader, with chapter navigation, page jump, <em>auto-scroll</em> and your reading position remembered.</p>
+    <div class="feat-mark" data-i18n="f20_mark">Cover · Contents · Excerpt · Reader</div>
     <p class="feat-note">
-      <span data-i18n="f20_free">Grátis: pré-visualização — capa, índice e excerto do texto.</span><br>
-      <span data-i18n="f20_premium">PREMIUM: leitor completo — navegação, salto de página, scroll automático, virar de página e memória dos últimos 20 livros.</span>
+      <span data-i18n="f20_free">Free: preview — cover, contents and a text excerpt.</span><br>
+      <span data-i18n="f20_premium">PREMIUM: full reader — navigation, page jump, auto-scroll, page-turn and memory of your last 20 books.</span>
     </p>
   </div>
 
   <div class="feat w12">
-    <div class="num" data-i18n="f21_num">21 — VIEWERS DE DOCUMENTOS</div>
-    <h3 data-i18n="f21_h">Word, Excel, PowerPoint e mais — vê sem abrir nada.</h3>
-    <p data-i18n-html="f21_p">Pré-visualiza <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> e
-       <em>OpenDocument</em> (texto, folha e apresentação) direto no painel. Áudio e vídeo tocam no preview,
-       com <em>janela flutuante</em> e controlos de volume e velocidade. Uma marca assinala os ficheiros com
-       preview disponível; os protegidos por palavra-passe são avisados sem pedir a senha.</p>
-    <div class="feat-mark" data-i18n="f21_mark">Word · Excel · PowerPoint · RTF · OpenDocument · Áudio · Vídeo</div>
+    <div class="num" data-i18n="f21_num">21 — DOCUMENT VIEWERS</div>
+    <h3 data-i18n="f21_h">Word, Excel, PowerPoint and more — see without opening anything.</h3>
+    <p data-i18n-html="f21_p">Preview <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> and <em>OpenDocument</em> (text, sheet and presentation) right in the pane. Audio and video play in the preview, with a <em>floating window</em> and volume/speed controls. A marker flags files that have a preview; password-protected files are flagged without asking for the password.</p>
+    <div class="feat-mark" data-i18n="f21_mark">Word · Excel · PowerPoint · RTF · OpenDocument · Audio · Video</div>
   </div>
 
   <div class="feat w12">
-    <div class="num" data-i18n="f22_num">22 — GRAVAR ÁUDIO</div>
-    <h3 data-i18n="f22_h">Grava o microfone direto para a pasta.</h3>
-    <p data-i18n-html="f22_p">Um clique grava do <em>microfone</em> para a pasta atual. Escolhe o microfone, vê o
-       <em>medidor de nível</em> ao vivo, ajusta o volume de gravação e guarda em <em>WAV</em> ou <em>M4A/AAC</em>.</p>
-    <div class="feat-mark" data-i18n="f22_mark">Microfone · Medidor de nível · WAV · M4A</div>
+    <div class="num" data-i18n="f22_num">22 — RECORD AUDIO</div>
+    <h3 data-i18n="f22_h">Record the microphone straight into the folder.</h3>
+    <p data-i18n-html="f22_p">One click records the <em>microphone</em> into the current folder. Pick the microphone, watch the live <em>level meter</em>, adjust the recording volume and save as <em>WAV</em> or <em>M4A/AAC</em>.</p>
+    <div class="feat-mark" data-i18n="f22_mark">Microphone · Level meter · WAV · M4A</div>
   </div>
 
   <div class="feat w12">
-    <div class="num" data-i18n="f23_num">23 — GRAVAR VÍDEO</div>
-    <h3 data-i18n="f23_h">Grava da câmara direto para a pasta.</h3>
-    <p data-i18n-html="f23_p">Pré-visualização ao vivo da <em>câmara</em>, com escolha de câmara e microfone, resolução e
-       formato — <em>MP4</em>, <em>WMV</em> ou <em>AVI</em>. Guarda na pasta atual com um clique.</p>
-    <div class="feat-mark" data-i18n="f23_mark">Câmara · Microfone · MP4 · WMV · AVI</div>
+    <div class="num" data-i18n="f23_num">23 — RECORD VIDEO</div>
+    <h3 data-i18n="f23_h">Record the camera straight into the folder.</h3>
+    <p data-i18n-html="f23_p">Live <em>camera</em> preview, with a choice of camera and microphone, resolution and format — <em>MP4</em>, <em>WMV</em> or <em>AVI</em>. Saves into the current folder with one click.</p>
+    <div class="feat-mark" data-i18n="f23_mark">Camera · Microphone · MP4 · WMV · AVI</div>
     <p class="feat-note">
-      <span data-i18n="f23_premium">Grátis com marca de água discreta no rodapé. PREMIUM: sem marca de água.</span>
+      <span data-i18n="f23_premium">Free with a discreet footer watermark. PREMIUM: no watermark.</span>
     </p>
   </div>
 
   <div class="feat w12">
-    <div class="num" data-i18n="f24_num">24 — DIGITALIZAR</div>
-    <h3 data-i18n="f24_h">Do scanner para a pasta — imagem ou PDF.</h3>
-    <p data-i18n-html="f24_p">Digitaliza do <em>vidro</em> ou do <em>alimentador (ADF)</em>, várias folhas de uma vez.
-       Escolhe a resolução e a cor — <em>cor</em>, tons de cinzento ou <em>preto e branco</em>. Guarda como
-       <em>JPEG/PNG</em> ou junta tudo num <em>PDF de várias páginas</em>, e continua a adicionar folhas ao
-       mesmo PDF.</p>
-    <div class="feat-mark" data-i18n="f24_mark">Vidro · Alimentador (ADF) · Cor · PDF multipágina</div>
+    <div class="num" data-i18n="f24_num">24 — SCAN</div>
+    <h3 data-i18n="f24_h">From the scanner into the folder — image or PDF.</h3>
+    <p data-i18n-html="f24_p">Scan from the <em>flatbed</em> or the <em>feeder (ADF)</em>, many sheets at once. Choose the resolution and colour — <em>colour</em>, grayscale or <em>black &amp; white</em>. Save as <em>JPEG/PNG</em> or merge everything into a <em>multi-page PDF</em>, and keep adding sheets to the same PDF.</p>
+    <div class="feat-mark" data-i18n="f24_mark">Flatbed · Feeder (ADF) · Colour · Multi-page PDF</div>
     <p class="feat-note">
-      <span data-i18n="f24_premium">Grátis: 1 página do vidro, com marca de água. PREMIUM: várias páginas, alimentador (ADF) e sem marca de água.</span>
+      <span data-i18n="f24_premium">Free: 1 flatbed page, with a watermark. PREMIUM: multiple pages, feeder (ADF) and no watermark.</span>
     </p>
   </div>
 
   <div class="feat w12">
-    <div class="num" data-i18n="f25_num">25 — ARQUIVOS COMO PASTAS</div>
-    <h3 data-i18n="f25_h">Abre ZIP, RAR, 7z e TAR como se fossem pastas.</h3>
-    <p data-i18n-html="f25_p">Duplo-clique (ou <em>Navegar dentro</em>) e entras no arquivo — navegas o conteúdo,
-       <em>pré-visualizas</em> e <em>copias ficheiros para fora</em> sem extrair tudo. Só leitura;
-       o <em>Abrir com…</em> continua a abrir no WinRAR/WinZip/7-Zip.</p>
-    <div class="feat-mark" data-i18n="f25_mark">ZIP · RAR · 7z · TAR · Copiar para fora</div>
+    <div class="num" data-i18n="f25_num">25 — ARCHIVES AS FOLDERS</div>
+    <h3 data-i18n="f25_h">Open ZIP, RAR, 7z and TAR like folders.</h3>
+    <p data-i18n-html="f25_p">Double-click (or <em>Browse inside</em>) to enter the archive — browse the contents, <em>preview</em> and <em>copy files out</em> without extracting everything. Read-only; <em>Open with…</em> still opens them in WinRAR/WinZip/7-Zip.</p>
+    <div class="feat-mark" data-i18n="f25_mark">ZIP · RAR · 7z · TAR · Copy files out</div>
   </div>
 
   <div class="feat w12" id="feat26">
-    <div class="num" data-i18n="f26_num">26 — GRAVAR ECRÃ</div>
-    <h3 data-i18n="f26_h">Grava o ecrã direto para a pasta — com câmara opcional.</h3>
-    <p data-i18n-html="f26_p">Escolhe uma <em>região de qualquer monitor</em> (ou o ecrã inteiro) e grava para <em>MP4</em> com o
-       <em>microfone</em>. Junta a <em>câmara</em>: alterna ecrã⇄câmara com <em>transições</em> (fundido, cortina,
-       deslizar, mosaico), mostra-a em <em>PiP</em> num canto, ou lado a lado em <em>ecrã dividido</em>.</p>
-    <div class="feat-mark" data-i18n="f26_mark">Região · Microfone · Som do sistema · Câmara · PiP · Ecrã dividido · Transições · MP4</div>
+    <div class="num" data-i18n="f26_num">26 — RECORD SCREEN</div>
+    <h3 data-i18n="f26_h">Record the screen straight into the folder — with an optional camera.</h3>
+    <p data-i18n-html="f26_p">Pick a <em>region of any monitor</em> (or the whole screen) and record to <em>MP4</em> with the <em>microphone</em>. Add the <em>camera</em>: switch screen⇄camera with <em>transitions</em> (fade, wipe, slide, mosaic), show it as <em>PiP</em> in a corner, or side by side in <em>split screen</em>.</p>
+    <div class="feat-mark" data-i18n="f26_mark">Region · Microphone · System sound · Camera · PiP · Split screen · Transitions · MP4</div>
     <p class="feat-note">
-      <span data-i18n="f26_premium">Grátis: marca de água + 15 s e sem som. PREMIUM: sem marca, sem limite de tempo e com som (microfone + sistema).</span>
+      <span data-i18n="f26_premium">Free: watermark + 15 s and no sound. PREMIUM: no watermark, no time limit and with sound (microphone + system).</span>
     </p>
   </div>
 
   <div class="feat w12" id="feat27">
-    <div class="num" data-i18n="f27_num">27 — CARTÕES DE MARCA</div>
-    <h3 data-i18n="f27_h">Cartões de abertura e fim para os teus vídeos — direto na gravação.</h3>
-    <p data-i18n-html="f27_p">Dá às tuas gravações (ecrã e câmara) um <em>cartão de abertura</em>, uma <em>faixa de texto</em>
-       permanente e um <em>cartão de fim</em> estilo créditos (até 10 linhas). <em>5 modelos</em> independentes,
-       cada um com 3 apresentações, logótipo, cor de fundo e um <em>badge de episódio</em> — feito para uma
-       série de vídeos coerente.</p>
-    <div class="feat-mark" data-i18n="f27_mark">Abertura · Faixa · Fim (créditos) · 5 modelos · Logo · Badge de episódio</div>
+    <div class="num" data-i18n="f27_num">27 — BRANDING CARDS</div>
+    <h3 data-i18n="f27_h">Intro and end cards for your videos — right in the recording.</h3>
+    <p data-i18n-html="f27_p">Give your recordings (screen and camera) an <em>intro card</em>, a permanent <em>text banner</em> and a credits-style <em>end card</em> (up to 10 lines). <em>5 independent models</em>, each with 3 presentations, logo, background colour and an <em>episode badge</em> — built for a consistent video series.</p>
+    <div class="feat-mark" data-i18n="f27_mark">Intro · Banner · End (credits) · 5 models · Logo · Episode badge</div>
     <p class="feat-note">
-      <span data-i18n="f27_premium">PREMIUM. Assinatura discreta “Made with ExplorerFocus” no cartão de fim.</span>
+      <span data-i18n="f27_premium">PREMIUM. Discreet “Made with ExplorerFocus” signature on the end card.</span>
     </p>
   </div>
 
   <div class="feat w12" id="feat28">
     <div class="num" data-i18n="f28_num">28 — VOICE OVER</div>
-    <h3 data-i18n="f28_h">Narra os teus vídeos depois de gravar — mesmo estando sozinho.</h3>
-    <p data-i18n-html="f28_p">Grava o ecrã <em>em silêncio</em> e depois, numa <em>box própria</em>, reproduz o vídeo
-       enquanto <em>narras por cima</em>. A narração fica num ficheiro à parte; juntas uma <em>música de fundo</em>,
-       acertas os volumes (para a música não abafar a voz) e <em>geras o vídeo final</em> com as três fontes.</p>
-    <div class="feat-mark" data-i18n="f28_mark">Gravar mudo · Narrar sobre o vídeo · Música · Volumes · Vídeo + narração + música → final</div>
+    <h3 data-i18n="f28_h">Narrate your videos after recording — even on your own.</h3>
+    <p data-i18n-html="f28_p">Record the screen <em>silently</em>, then in a <em>dedicated box</em> play the video while you <em>narrate over it</em>. The narration lands in a separate file; add <em>background music</em>, balance the volumes (so the music won't drown the voice) and <em>generate the final video</em> with all three sources.</p>
+    <div class="feat-mark" data-i18n="f28_mark">Record silent · Narrate over the video · Music · Volumes · Video + narration + music → final</div>
     <p class="feat-note">
-      <span data-i18n="f28_premium">PREMIUM. O vídeo e a narração ficam em ficheiros separados; só “Gerar final” cria o vídeo misturado.</span>
+      <span data-i18n="f28_premium">PREMIUM. The video and narration stay as separate files; only “Generate final” creates the mixed video.</span>
     </p>
   </div>
 
@@ -1539,52 +1490,51 @@
 <section class="shortcuts" id="shortcuts">
   <div class="shortcuts-inner">
     <div class="shortcuts-side">
-      <div class="section-num" data-i18n="sc_num">§ 02 · Atalhos</div>
-      <h2 data-i18n-html="sc_title">As mãos<br>na <em>home row</em>.</h2>
-      <p data-i18n="sc_blurb">Cada operação importante tem um atalho. Sem rato sempre que possível —
-         conforto para sessões longas.</p>
+      <div class="section-num" data-i18n="sc_num">§ 02 · Shortcuts</div>
+      <h2 data-i18n-html="sc_title">Hands on<br>the <em>home row</em>.</h2>
+      <p data-i18n="sc_blurb">Every important operation has a shortcut. Mouse-free whenever possible — comfort for long sessions.</p>
     </div>
 
     <div class="kbd-list">
       <div class="kbd-row">
         <div class="keys"><span class="kbd">F2</span></div>
-        <div class="desc" data-i18n-html="sc_f2">Renomear o item focado <em>— ficheiro, pasta ou tab</em></div>
+        <div class="desc" data-i18n-html="sc_f2">Rename the focused item <em>— file, folder, or tab</em></div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Enter</span></div>
-        <div class="desc" data-i18n="sc_enter">Abrir o ficheiro com a app associada</div>
+        <div class="desc" data-i18n="sc_enter">Open the file with the associated app</div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Delete</span></div>
-        <div class="desc" data-i18n-html="sc_del">Mover para a Reciclagem <em>— via FileOperationsManager</em></div>
+        <div class="desc" data-i18n-html="sc_del">Move to Recycle Bin <em>— via FileOperationsManager</em></div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">F5</span></div>
-        <div class="desc" data-i18n="sc_f5">Atualizar lista da pasta atual</div>
+        <div class="desc" data-i18n="sc_f5">Refresh current folder listing</div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">F</span><span class="kbd">/</span><span class="kbd">Ctrl</span><span class="kbd">L</span></div>
-        <div class="desc" data-i18n="sc_find">Focar a caixa de pesquisa local</div>
+        <div class="desc" data-i18n="sc_find">Focus the local search box</div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">T</span></div>
-        <div class="desc" data-i18n="sc_newtab">Novo perfil (nova tab)</div>
+        <div class="desc" data-i18n="sc_newtab">New profile (new tab)</div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">W</span></div>
-        <div class="desc" data-i18n="sc_closetab">Fechar tab atual</div>
+        <div class="desc" data-i18n="sc_closetab">Close current tab</div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">Tab</span></div>
-        <div class="desc" data-i18n-html="sc_nexttab">Próxima tab <em>— Shift inverte</em></div>
+        <div class="desc" data-i18n-html="sc_nexttab">Next tab <em>— Shift reverses</em></div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">1</span> ... <span class="kbd">9</span></div>
-        <div class="desc" data-i18n="sc_jumptab">Saltar para a N-ésima tab</div>
+        <div class="desc" data-i18n="sc_jumptab">Jump to the Nth tab</div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Shift</span>+drag</div>
-        <div class="desc" data-i18n-html="sc_shiftdrag">Forçar <em>Move</em> sem perguntar</div>
+        <div class="desc" data-i18n-html="sc_shiftdrag">Force <em>Move</em> without asking</div>
       </div>
     </div>
   </div>
@@ -1593,91 +1543,60 @@
 <!-- STACK -->
 <section class="stack" id="stack">
   <div class="section-num" data-i18n="st_num">§ 03 · Stack</div>
-  <h2 data-i18n-html="st_title">Construído com <em>peças sérias</em>.</h2>
-  <p data-i18n="st_blurb">Cada dependência foi escolhida pela maturidade, pelo tamanho ou pela ausência
-     de alternativas razoáveis. Sem framework do dia.</p>
+  <h2 data-i18n-html="st_title">Built with <em>serious parts</em>.</h2>
+  <p data-i18n="st_blurb">Each dependency was chosen for maturity, size, or the absence of reasonable alternatives. No framework-of-the-day.</p>
 
   <div class="stack-grid">
     <div class="stack-cell">
       <div class="ic">.NET</div>
       <h4>net10.0-windows</h4>
-      <p data-i18n="st_dotnet">WPF clássico, sem WinUI nem MAUI.
-         Compatível com Windows 10 e 11.</p>
+      <p data-i18n="st_dotnet">Classic WPF, no WinUI or MAUI. Compatible with Windows 10 and 11.</p>
     </div>
     <div class="stack-cell">
       <div class="ic">MVVM</div>
       <h4>CommunityToolkit.Mvvm</h4>
-      <p data-i18n="st_mvvm">ObservableObject, ObservableProperty, RelayCommand — geração por source generators.</p>
+      <p data-i18n="st_mvvm">ObservableObject, ObservableProperty, RelayCommand — generated by source generators.</p>
     </div>
     <div class="stack-cell">
       <div class="ic" data-i18n="st_preview_ic">PREVIEW</div>
       <h4>AvalonEdit · Markdig · WebView2</h4>
-      <p data-i18n="st_preview">Syntax highlight, markdown renderer e embed do motor do Edge para PDF.</p>
+      <p data-i18n="st_preview">Syntax highlight, markdown renderer, and embedded Edge engine for PDF.</p>
     </div>
     <div class="stack-cell">
       <div class="ic">UTIL</div>
       <h4>Microsoft.VisualBasic.FileIO</h4>
-      <p data-i18n-html="st_util">Para o envio à <em>Reciclagem</em> — a única forma honesta, e funciona.</p>
+      <p data-i18n-html="st_util">For sending to the <em>Recycle Bin</em> — the only honest way, and it works.</p>
     </div>
   </div>
 </section>
 
 <!-- PREMIUM -->
 <section class="premium" id="premium">
-  <div class="section-num" data-i18n="pr_num">§ 04 · Grátis e Premium</div>
-  <h2 data-i18n-html="pr_title">Tudo o que é local é <em>grátis</em>.</h2>
-  <p class="prem-blurb" data-i18n="pr_blurb">Sempre foi e continuará a ser: sem subscrição, sem conta, sem anúncios.
-     O Premium é um donativo único — uma pequena recompensa pelas noites e dias a implementar
-     funcionalidades muito específicas e tecnicamente exigentes. Não estou nisto pelo dinheiro:
-     estou pelas ideias que aparecem pelo caminho. A maioria das pessoas nunca vai sentir falta
-     do Premium — e é assim que deve ser.</p>
+  <div class="section-num" data-i18n="pr_num">§ 04 · Free and Premium</div>
+  <h2 data-i18n-html="pr_title">Everything local is <em>free</em>.</h2>
+  <p class="prem-blurb" data-i18n="pr_blurb">It always has been and always will be: no subscription, no account, no ads. Premium is a one-time donation — a small reward for the nights and days spent building very specific, technically demanding features. I'm not in this for the money: I'm in it for the ideas that come along. Most people will never miss Premium — and that's how it should be.</p>
 
   <div class="prem-grid">
     <div class="prem-card">
-      <h4 data-i18n="pr_free_h">Grátis</h4>
-      <span class="prem-tag" data-i18n="pr_free_tag">para sempre · sem conta</span>
-      <ul data-i18n-html="pr_free_list">
-        <li>Perfis, árvores configuráveis, pesquisa multi-padrão</li>
-        <li>Pré-visualização: código, PDF, Word/Excel, Markdown, imagens</li>
-        <li>Operações com progresso real, velocidade, ETA, histórico e conflitos</li>
-        <li>Terminais, associações por extensão, arquivos como pastas</li>
-        <li>Tema escuro completo, 12 idiomas, atualizações automáticas</li>
-        <li>Gravar áudio (microfone)</li>
-        <li><strong>1 ligação remota</strong> (SFTP/FTP/FTPS) — navegar e pré-visualizar</li>
-      </ul>
+      <h4 data-i18n="pr_free_h">Free</h4>
+      <span class="prem-tag" data-i18n="pr_free_tag">forever · no account</span>
+      <ul data-i18n-html="pr_free_list"><li>Profiles, configurable trees, multi-pattern search</li><li>Preview: code, PDF, Word/Excel, Markdown, images</li><li>File operations with real progress, speed, ETA, history and conflicts</li><li>Terminals, per-extension app associations, archives as folders</li><li>Complete dark theme, 12 languages, auto-updates</li><li>Audio recording (microphone)</li><li><strong>1 remote connection</strong> (SFTP/FTP/FTPS) — browse and preview</li></ul>
     </div>
 
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
-      <span class="prem-tag" data-i18n="pr_prem_tag">donativo único de 9,99 € · por máquina</span>
-      <ul data-i18n-html="pr_prem_list">
-        <li><strong>Acessos remotos completos</strong>: várias ligações, todas as operações, WebDAV, Dropbox, OneDrive</li>
-        <li>Gravação de ecrã <strong>sem marca de água, sem limite de tempo e com som</strong></li>
-        <li>Gravação de vídeo sem marca de água</li>
-        <li>Áudio com mistura de microfone + som do sistema</li>
-        <li>Digitalização multi-página com alimentador (ADF)</li>
-        <li>Leitor de EPUB completo</li>
-        <li>Cartões de abertura/fim e faixa de texto nas gravações</li>
-      </ul>
+      <span class="prem-tag" data-i18n="pr_prem_tag">one-time €9.99 donation · per machine</span>
+      <ul data-i18n-html="pr_prem_list"><li><strong>Full remote access</strong>: multiple connections, all operations, WebDAV, Dropbox, OneDrive</li><li>Screen recording <strong>with no watermark, no time limit and with sound</strong></li><li>Video recording without watermark</li><li>Audio mixing microphone + system sound</li><li>Multi-page scanning with document feeder (ADF)</li><li>Full EPUB reader</li><li>Intro/end cards and text banner on recordings</li></ul>
     </div>
   </div>
 
   <div class="prem-how">
-    <h4 data-i18n="pr_how_h">Como obter</h4>
-    <ol data-i18n-html="pr_how_list">
-      <li>Na app, clica no botão <strong>PREMIUM</strong> (canto superior direito).</li>
-      <li>Escreve o teu email — a app copia o teu <strong>Machine ID</strong> para a área de transferência.</li>
-      <li>Abre-se o PayPal: donativo mínimo de 9,99 €.</li>
-      <li>Envio-te a <strong>chave de ativação por email</strong>.</li>
-      <li>Colas a chave na app. A licença fica ligada a essa máquina.</li>
-    </ol>
-    <p class="prem-note" data-i18n-html="pr_note"><strong>Nota:</strong> a chave é enviada à mão, por mim — por isso pode não ser imediata.
-       O PayPal aparece em nome de <strong>LogViewer</strong>, o outro projeto da mesma casa (o PayPal só permite um destino por conta);
-       a página confirma que sou o autor de ambos.</p>
+    <h4 data-i18n="pr_how_h">How to get it</h4>
+    <ol data-i18n-html="pr_how_list"><li>In the app, click the <strong>PREMIUM</strong> button (top right).</li><li>Enter your email — the app copies your <strong>Machine ID</strong> to the clipboard.</li><li>PayPal opens: minimum €9.99 donation.</li><li>I send you the <strong>activation key by email</strong>.</li><li>Paste the key into the app. The licence is tied to that machine.</li></ol>
+    <p class="prem-note" data-i18n-html="pr_note"><strong>Note:</strong> the key is sent by hand, by me — so it may not be instant. PayPal shows up under <strong>LogViewer</strong>, the other project from the same house (PayPal only allows one destination per account); the page confirms I'm the author of both.</p>
   </div>
 
-  <p class="prem-idea" data-i18n-html="pr_idea"><strong>Tens uma boa ideia?</strong> Se a tua sugestão tornar o ExplorerFocus melhor,
-     dou-te acesso Premium completo. Escreve para <a href="mailto:NunexmBrothers@gmail.com">NunexmBrothers@gmail.com</a>.</p>
+  <p class="prem-idea" data-i18n-html="pr_idea"><strong>Got a good idea?</strong> If your suggestion makes ExplorerFocus better, I'll give you full Premium access. Write to <a href="mailto:NunexmBrothers@gmail.com">NunexmBrothers@gmail.com</a>.</p>
 </section>
 
 <!-- FOOTER -->
@@ -1688,37 +1607,34 @@
         <svg class="brand-mark"><use href="#logo"/></svg>
         <span class="brand-name">Explorer<em>Focus</em></span>
       </div>
-      <p class="footer-tagline" data-i18n="ft_tagline">
-        O explorer minimal para quem trabalha sempre nos mesmos sítios — e quer
-        que a ferramenta saiba isso.
-      </p>
+      <p class="footer-tagline" data-i18n="ft_tagline">The minimal explorer for people who always work in the same places — and want the tool to know it.</p>
     </div>
 
     <div class="footer-col">
-      <h5 data-i18n="ft_get">Obter</h5>
+      <h5 data-i18n="ft_get">Get it</h5>
       <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.exe"><span data-i18n="ft_ch_standalone">Standalone (.exe)</span></a>
       <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip" title="Para organizações que bloqueiam o download de .exe"><span data-i18n="ft_ch_portable">Standalone (.zip)</span></a>
       <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases" target="_blank" rel="noopener" data-i18n="ft_releases">Releases</a>
     </div>
 
     <div class="footer-col">
-      <h5 data-i18n="ft_project">Projecto</h5>
+      <h5 data-i18n="ft_project">Project</h5>
       <a href="#features" data-i18n="nav_features">Features</a>
-      <a href="#shortcuts" data-i18n="nav_shortcuts">Atalhos</a>
+      <a href="#shortcuts" data-i18n="nav_shortcuts">Shortcuts</a>
       <a href="#stack" data-i18n="nav_stack">Stack</a>
       <a href="#premium" data-i18n="nav_premium">Premium</a>
-      <a href="dropbox-flow.html" data-i18n="nav_guide">Como funciona</a>
-      <a href="privacy.html" data-i18n="nav_privacy">Privacidade</a>
+      <a href="dropbox-flow.html" data-i18n="nav_guide">How it works</a>
+      <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
     </div>
   </div>
 
   <div class="footer-baseline">
     <span>v1.2.20 · WPF · net10.0-windows · single-file</span>
-    <span data-i18n="ft_baseline">desenhado para o quotidiano</span>
+    <span data-i18n="ft_baseline">designed for the daily grind</span>
     <span id="viewCounter" hidden title="Visitas à página"></span>
   </div>
 
-  <div class="mb-credit" data-i18n-html="mb_credit">Um produto <a href="https://nunex-mbrothers.github.io/mBrothers/#products" target="_blank" rel="noopener">mBrothers</a><span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
+  <div class="mb-credit" data-i18n-html="mb_credit">An <a href="https://nunex-mbrothers.github.io/mBrothers/#products" target="_blank" rel="noopener">mBrothers</a> product<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
 </footer>
 
 <div class="ef-modal" id="verifyModal" role="dialog" aria-modal="true" aria-labelledby="verifyModalTitle">
@@ -1728,49 +1644,49 @@
     <div class="ef-card-hd">
       <span class="ef-card-hd-ic" aria-hidden="true">🛡️</span>
       <div>
-        <p class="ef-card-hd-t" id="verifyModalTitle" data-i18n="card_title">Primeira vez a abrir? É normal.</p>
-        <p class="ef-card-hd-p" data-i18n-html="card_intro">Como o ExplorerFocus é novo e ainda não tem assinatura digital, o Windows pode mostrar um aviso azul (SmartScreen). O ficheiro é seguro — aqui fica como continuar.</p>
+        <p class="ef-card-hd-t" id="verifyModalTitle" data-i18n="card_title">First time opening it? That's normal.</p>
+        <p class="ef-card-hd-p" data-i18n-html="card_intro">Because ExplorerFocus is new and not yet code-signed, Windows may show a blue warning (SmartScreen). The file is safe — here's how to continue.</p>
       </div>
     </div>
 
     <div class="ef-sec">
-      <p class="ef-sec-h" data-i18n="card_open_h">Abrir o programa</p>
-      <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_open_1">No aviso <em>"O Windows protegeu o seu PC"</em>, clica em <strong>Mais informações</strong>.</span></div>
-      <div class="ef-step"><span class="ef-num">2</span><span data-i18n-html="card_open_2">Clica em <strong>Executar mesmo assim</strong>.</span></div>
+      <p class="ef-sec-h" data-i18n="card_open_h">Open the program</p>
+      <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_open_1">On the <em>"Windows protected your PC"</em> notice, click <strong>More info</strong>.</span></div>
+      <div class="ef-step"><span class="ef-num">2</span><span data-i18n-html="card_open_2">Click <strong>Run anyway</strong>.</span></div>
     </div>
 
     <div class="ef-sec ef-sec-top">
-      <p class="ef-sec-h" data-i18n="card_pin_h">Fixaste na barra e não abre por aí?</p>
-      <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_pin_1">Botão direito no <code>ExplorerFocus.exe</code> → <strong>Propriedades</strong>.</span></div>
-      <div class="ef-step"><span class="ef-num">2</span><span data-i18n-html="card_pin_2">Marca <strong>Desbloquear</strong> (em baixo) → <strong>OK</strong>, e volta a fixar.</span></div>
+      <p class="ef-sec-h" data-i18n="card_pin_h">Pinned it to the taskbar and it won't open?</p>
+      <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_pin_1">Right-click <code>ExplorerFocus.exe</code> → <strong>Properties</strong>.</span></div>
+      <div class="ef-step"><span class="ef-num">2</span><span data-i18n-html="card_pin_2">Tick <strong>Unblock</strong> (at the bottom) → <strong>OK</strong>, then pin it again.</span></div>
     </div>
 
     <div class="ef-sec ef-sec-top">
-      <p class="ef-sec-h"><span data-i18n="card_verify_h">Verificar o ficheiro</span> <span class="ef-opt" data-i18n="card_verify_opt">— opcional</span></p>
-      <p class="ef-sec-sub" data-i18n-html="card_verify_intro">Só se quiseres ter a certeza absoluta de que descarregaste o ficheiro oficial, sem alterações. Escolhe <strong>um</strong> dos dois métodos.</p>
+      <p class="ef-sec-h"><span data-i18n="card_verify_h">Verify the file</span> <span class="ef-opt" data-i18n="card_verify_opt">— optional</span></p>
+      <p class="ef-sec-sub" data-i18n-html="card_verify_intro">Only if you want to be absolutely sure you downloaded the official file, unaltered. Pick <strong>one</strong> of the two methods.</p>
 
-      <div class="ef-find" data-i18n-html="card_find">Primeiro, encontra o ficheiro: abre o <strong>Explorador de Ficheiros</strong> do Windows (a pasta amarela na barra de tarefas, ou <span class="efkbd">⊞ Win</span> + <span class="efkbd">E</span>) e clica em <strong>Transferências</strong> à esquerda — é lá que o <code>ExplorerFocus.exe</code> fica ao descarregar. Isto faz-se no Explorador, <strong>não no browser</strong>.</div>
+      <div class="ef-find" data-i18n-html="card_find">First, find the file: open the Windows <strong>File Explorer</strong> (the yellow folder on the taskbar, or <span class="efkbd">⊞ Win</span> + <span class="efkbd">E</span>) and click <strong>Downloads</strong> on the left — that's where <code>ExplorerFocus.exe</code> lands when you download it. Do this in File Explorer, <strong>not in the browser</strong>.</div>
 
       <div class="ef-method">
-        <p class="ef-method-h" data-i18n="card_mA_h">Método A — PowerShell</p>
-        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mA_1">Na janela do Explorador aberta em <strong>Transferências</strong>, com o <span class="efkbd">Shift</span> premido, clica com o botão direito num espaço vazio → <strong>Abrir a janela do PowerShell aqui</strong>.</span></div>
-        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Cola este comando e prime Enter:</span></div>
+        <p class="ef-method-h" data-i18n="card_mA_h">Method A — PowerShell</p>
+        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mA_1">In the File Explorer window at <strong>Downloads</strong>, hold <span class="efkbd">Shift</span> and right-click an empty area → <strong>Open PowerShell window here</strong>.</span></div>
+        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Paste this command and press Enter:</span></div>
         <div class="ef-cmd"><code>Get-FileHash .\ExplorerFocus.exe</code><button class="ef-copy" type="button" data-copy="Get-FileHash .\ExplorerFocus.exe" aria-label="Copiar comando">⧉</button></div>
-        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mA_3">Compara o valor SHA256 mostrado com o de baixo.</span></div>
+        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mA_3">Compare the SHA256 value shown with the one below.</span></div>
       </div>
 
       <div class="ef-method">
-        <p class="ef-method-h" data-i18n="card_mB_h">Método B — Linha de comandos (cmd)</p>
-        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mB_1">Na janela do Explorador aberta em <strong>Transferências</strong>, clica na <strong>barra de endereço</strong> (em cima, onde aparece o caminho da pasta), escreve <code>cmd</code> e prime <strong>Enter</strong>.</span></div>
-        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Cola este comando e prime Enter:</span></div>
+        <p class="ef-method-h" data-i18n="card_mB_h">Method B — Command line (cmd)</p>
+        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mB_1">In the File Explorer window at <strong>Downloads</strong>, click the <strong>address bar</strong> (at the top, where the folder path appears), type <code>cmd</code> and press <strong>Enter</strong>.</span></div>
+        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Paste this command and press Enter:</span></div>
         <div class="ef-cmd"><code>certutil -hashfile ExplorerFocus.exe SHA256</code><button class="ef-copy" type="button" data-copy="certutil -hashfile ExplorerFocus.exe SHA256" aria-label="Copiar comando">⧉</button></div>
-        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mB_3">Compara a linha do hash com o de baixo.</span></div>
+        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mB_3">Compare the hash line with the one below.</span></div>
       </div>
 
       <div class="ef-hashbox">
-        <p class="ef-hashbox-note"><span data-i18n-html="card_hash_note">Deve ser igual a este valor <span class="efmuted">(maiúsculas/minúsculas não importam)</span>:</span> <span class="ef-hashbox-ver js-ver"></span></p>
+        <p class="ef-hashbox-note"><span data-i18n-html="card_hash_note">It should match this value <span class="efmuted">(upper/lowercase doesn't matter)</span>:</span> <span class="ef-hashbox-ver js-ver"></span></p>
         <p class="ef-hashbox-val js-sha">—</p>
-        <p class="ef-hashbox-ok"><span aria-hidden="true">✓</span> <span data-i18n="card_hash_ok">Iguais? É o ficheiro oficial, sem alterações.</span></p>
+        <p class="ef-hashbox-ok"><span aria-hidden="true">✓</span> <span data-i18n="card_hash_ok">Match? It's the official file, unaltered.</span></p>
       </div>
     </div>
   </div>
@@ -1779,40 +1695,40 @@
 <div class="ef-modal" id="shaModal" role="dialog" aria-modal="true" aria-labelledby="shaModalTitle">
   <div class="ef-card">
     <button class="ef-card-x" type="button" aria-label="Fechar">✕</button>
-    <p class="ef-sha-title" id="shaModalTitle" data-i18n="sha_title">O que é o SHA-256?</p>
-    <p class="ef-prose" data-i18n-html="sha_p1">Pensa nele como a <strong>impressão digital</strong> do ficheiro. Um algoritmo lê todos os bytes do <code>ExplorerFocus.exe</code> e resume-os num código de <strong>64 caracteres</strong> (letras A–F e números). Esse código é o SHA-256.</p>
-    <p class="ef-prose" data-i18n-html="sha_p2">Tem duas propriedades que o tornam útil:</p>
+    <p class="ef-sha-title" id="shaModalTitle" data-i18n="sha_title">What is SHA-256?</p>
+    <p class="ef-prose" data-i18n-html="sha_p1">Think of it as the file's <strong>fingerprint</strong>. An algorithm reads every byte of <code>ExplorerFocus.exe</code> and boils them down to a <strong>64-character</strong> code (letters A–F and digits). That code is the SHA-256.</p>
+    <p class="ef-prose" data-i18n-html="sha_p2">It has two properties that make it useful:</p>
     <ul class="ef-list">
-      <li data-i18n-html="sha_li1">O <strong>mesmo ficheiro</strong> dá <strong>sempre</strong> o mesmo código.</li>
-      <li data-i18n-html="sha_li2">Se <strong>um único bit</strong> mudar — um download corrompido, ou alguém que adulterou o ficheiro — o código sai <strong>completamente diferente</strong>.</li>
+      <li data-i18n-html="sha_li1">The <strong>same file</strong> always produces the <strong>same</strong> code.</li>
+      <li data-i18n-html="sha_li2">If <strong>a single bit</strong> changes — a corrupted download, or someone tampering with the file — the code comes out <strong>completely different</strong>.</li>
     </ul>
-    <p class="ef-prose" data-i18n-html="sha_p3">Por isso a verificação é simples: se o código que <strong>calculas</strong> no teu ficheiro for <strong>igual</strong> ao que está <strong>publicado aqui</strong>, tens a certeza de que é exatamente o ficheiro oficial, byte a byte — sem corrupção nem alterações. O código não se pode inverter: serve só para comparar, nunca revela o conteúdo.</p>
+    <p class="ef-prose" data-i18n-html="sha_p3">So verifying is simple: if the code you <strong>compute</strong> on your file <strong>matches</strong> the one <strong>published here</strong>, you can be sure it's exactly the official file, byte for byte — no corruption, no changes. The code can't be reversed: it's only for comparison and never reveals the contents.</p>
 
     <div class="ef-sec ef-sec-top">
-      <p class="ef-sec-h" data-i18n="sha_how_h">Como confirmar</p>
+      <p class="ef-sec-h" data-i18n="sha_how_h">How to confirm</p>
 
-      <div class="ef-find" data-i18n-html="card_find">Primeiro, encontra o ficheiro: abre o <strong>Explorador de Ficheiros</strong> do Windows (a pasta amarela na barra de tarefas, ou <span class="efkbd">⊞ Win</span> + <span class="efkbd">E</span>) e clica em <strong>Transferências</strong> à esquerda — é lá que o <code>ExplorerFocus.exe</code> fica ao descarregar. Isto faz-se no Explorador, <strong>não no browser</strong>.</div>
+      <div class="ef-find" data-i18n-html="card_find">First, find the file: open the Windows <strong>File Explorer</strong> (the yellow folder on the taskbar, or <span class="efkbd">⊞ Win</span> + <span class="efkbd">E</span>) and click <strong>Downloads</strong> on the left — that's where <code>ExplorerFocus.exe</code> lands when you download it. Do this in File Explorer, <strong>not in the browser</strong>.</div>
 
       <div class="ef-method">
-        <p class="ef-method-h" data-i18n="card_mA_h">Método A — PowerShell</p>
-        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mA_1">Na janela do Explorador aberta em <strong>Transferências</strong>, com o <span class="efkbd">Shift</span> premido, clica com o botão direito num espaço vazio → <strong>Abrir a janela do PowerShell aqui</strong>.</span></div>
-        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Cola este comando e prime Enter:</span></div>
+        <p class="ef-method-h" data-i18n="card_mA_h">Method A — PowerShell</p>
+        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mA_1">In the File Explorer window at <strong>Downloads</strong>, hold <span class="efkbd">Shift</span> and right-click an empty area → <strong>Open PowerShell window here</strong>.</span></div>
+        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Paste this command and press Enter:</span></div>
         <div class="ef-cmd"><code>Get-FileHash .\ExplorerFocus.exe</code><button class="ef-copy" type="button" data-copy="Get-FileHash .\ExplorerFocus.exe" aria-label="Copiar comando">⧉</button></div>
-        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mA_3">Compara o valor SHA256 mostrado com o de baixo.</span></div>
+        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mA_3">Compare the SHA256 value shown with the one below.</span></div>
       </div>
 
       <div class="ef-method">
-        <p class="ef-method-h" data-i18n="card_mB_h">Método B — Linha de comandos (cmd)</p>
-        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mB_1">Na janela do Explorador aberta em <strong>Transferências</strong>, clica na <strong>barra de endereço</strong> (em cima, onde aparece o caminho da pasta), escreve <code>cmd</code> e prime <strong>Enter</strong>.</span></div>
-        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Cola este comando e prime Enter:</span></div>
+        <p class="ef-method-h" data-i18n="card_mB_h">Method B — Command line (cmd)</p>
+        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mB_1">In the File Explorer window at <strong>Downloads</strong>, click the <strong>address bar</strong> (at the top, where the folder path appears), type <code>cmd</code> and press <strong>Enter</strong>.</span></div>
+        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Paste this command and press Enter:</span></div>
         <div class="ef-cmd"><code>certutil -hashfile ExplorerFocus.exe SHA256</code><button class="ef-copy" type="button" data-copy="certutil -hashfile ExplorerFocus.exe SHA256" aria-label="Copiar comando">⧉</button></div>
-        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mB_3">Compara a linha do hash com o de baixo.</span></div>
+        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mB_3">Compare the hash line with the one below.</span></div>
       </div>
 
       <div class="ef-hashbox">
-        <p class="ef-hashbox-note"><span data-i18n-html="card_hash_note">Deve ser igual a este valor <span class="efmuted">(maiúsculas/minúsculas não importam)</span>:</span> <span class="ef-hashbox-ver js-ver"></span></p>
+        <p class="ef-hashbox-note"><span data-i18n-html="card_hash_note">It should match this value <span class="efmuted">(upper/lowercase doesn't matter)</span>:</span> <span class="ef-hashbox-ver js-ver"></span></p>
         <p class="ef-hashbox-val js-sha">—</p>
-        <p class="ef-hashbox-ok"><span aria-hidden="true">✓</span> <span data-i18n="card_hash_ok">Iguais? É o ficheiro oficial, sem alterações.</span></p>
+        <p class="ef-hashbox-ok"><span aria-hidden="true">✓</span> <span data-i18n="card_hash_ok">Match? It's the official file, unaltered.</span></p>
       </div>
     </div>
   </div>
@@ -3421,14 +3337,14 @@
     let stored = null;
     try { stored = localStorage.getItem('ef_lang'); } catch (e) {}
     if (stored && I18N[stored]) return stored;
-    const nav = (navigator.language || 'pt').toLowerCase();
+    const nav = (navigator.language || 'en').toLowerCase();
     if (nav.startsWith('pt')) return 'pt';
     if (nav.startsWith('en')) return 'en';
     if (nav.startsWith('fr')) return 'fr';
     if (nav.startsWith('es')) return 'es';
     if (nav.startsWith('de')) return 'de';
     if (nav.startsWith('zh')) return 'zh';
-    return 'pt';
+    return 'en';
   }
 
   /* Wire flag buttons */

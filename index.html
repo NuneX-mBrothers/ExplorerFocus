@@ -770,11 +770,15 @@
     text-transform: uppercase;
     color: var(--fg-3);
   }
+  /* A marca escreve-se SEMPRE "mBrothers" — nunca em maiúsculas.
+     Estas duas regras protegem-na dos text-transform em redor. */
+  .brand-mb { text-transform: none; }
   .mb-credit a {
     color: var(--accent);
     border-bottom: 1px dotted var(--accent-dim);
     padding-bottom: 1px;
     transition: color .2s, border-color .2s;
+    text-transform: none;
   }
   .mb-credit a:hover {
     color: var(--fg-0);
@@ -1629,12 +1633,12 @@
   </div>
 
   <div class="footer-baseline">
-    <span>© 2026 mBrothers · v1.2.20 · WPF · net10.0-windows · single-file</span>
+    <span>© 2026 <span class="brand-mb">mBrothers</span> · v1.2.20 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">designed for the daily grind</span>
     <span id="viewCounter" hidden title="Visitas à página"></span>
   </div>
 
-  <div class="mb-credit" data-i18n-html="mb_credit">An <a href="https://nunex-mbrothers.github.io/mBrothers/#products" target="_blank" rel="noopener">mBrothers</a> product<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
+  <div class="mb-credit" data-i18n-html="mb_credit">An <a href="https://nunex-mbrothers.github.io/mBrothers/" target="_blank" rel="noopener">mBrothers</a> product<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
 </footer>
 
 <div class="ef-modal" id="verifyModal" role="dialog" aria-modal="true" aria-labelledby="verifyModalTitle">
@@ -1996,7 +2000,7 @@
       nav_guide: "Como funciona",
       nav_privacy: "Privacidade",
       ft_baseline: "desenhado para o quotidiano",
-      mb_credit: 'Um produto <a href="https://nunex-mbrothers.github.io/mBrothers/#products" target="_blank" rel="noopener">mBrothers</a><span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems',
+      mb_credit: 'Um produto <a href="https://nunex-mbrothers.github.io/mBrothers/" target="_blank" rel="noopener">mBrothers</a><span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems',
     },
 
     en: {
@@ -2255,7 +2259,7 @@
       nav_guide: "How it works",
       nav_privacy: "Privacy",
       ft_baseline: "designed for the daily grind",
-      mb_credit: 'An <a href="https://nunex-mbrothers.github.io/mBrothers/#products" target="_blank" rel="noopener">mBrothers</a> product<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems',
+      mb_credit: 'An <a href="https://nunex-mbrothers.github.io/mBrothers/" target="_blank" rel="noopener">mBrothers</a> product<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems',
     },
 
     de: {
@@ -2514,7 +2518,7 @@
       nav_guide: "So funktioniert's",
       nav_privacy: "Datenschutz",
       ft_baseline: "für den Alltag gemacht",
-      mb_credit: 'Ein <a href="https://nunex-mbrothers.github.io/mBrothers/#products" target="_blank" rel="noopener">mBrothers</a>-Produkt<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems',
+      mb_credit: 'Ein <a href="https://nunex-mbrothers.github.io/mBrothers/" target="_blank" rel="noopener">mBrothers</a>-Produkt<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems',
     },
 
     zh: {
@@ -2773,7 +2777,7 @@
       nav_guide: "操作演示",
       nav_privacy: "隐私",
       ft_baseline: "为日常工作而设计",
-      mb_credit: '一款 <a href="https://nunex-mbrothers.github.io/mBrothers/#products" target="_blank" rel="noopener">mBrothers</a> 产品<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems',
+      mb_credit: '一款 <a href="https://nunex-mbrothers.github.io/mBrothers/" target="_blank" rel="noopener">mBrothers</a> 产品<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems',
     },
 
     fr: {
@@ -3033,7 +3037,7 @@
       nav_guide: "Comment ça marche",
       nav_privacy: "Confidentialité",
       ft_baseline: "conçu pour le quotidien",
-      mb_credit: "Un produit <a href=\"https://nunex-mbrothers.github.io/mBrothers/#products\" target=\"_blank\" rel=\"noopener\">mBrothers</a><span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
+      mb_credit: "Un produit <a href=\"https://nunex-mbrothers.github.io/mBrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a><span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
     },
 
     es: {
@@ -3293,7 +3297,7 @@
       nav_guide: "Cómo funciona",
       nav_privacy: "Privacidad",
       ft_baseline: "diseñado para el día a día",
-      mb_credit: "Un producto <a href=\"https://nunex-mbrothers.github.io/mBrothers/#products\" target=\"_blank\" rel=\"noopener\">mBrothers</a><span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
+      mb_credit: "Un producto <a href=\"https://nunex-mbrothers.github.io/mBrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a><span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
     },
   };
 

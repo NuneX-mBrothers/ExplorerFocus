@@ -593,14 +593,15 @@
   /* FREE: mesma família, escalão abaixo. Contorno em vez de cor nova — verde ao lado
      de âmbar leria-se como semáforo, e o premium não é um aviso. O cheio ganha sempre
      o olho; o vazado diz apenas "há aqui parte grátis". Sem etiqueta = tudo grátis. */
-  .badge-free {
-    display: inline-block; margin-left: 8px; padding: 1px 7px; border-radius: 3px;
+  .badge-free, .free-word {
+    display: inline-block; padding: 1px 7px; border-radius: 3px;
     font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; font-weight: 700;
     background: transparent; color: var(--accent-dim); border: 1px solid var(--accent-soft);
     vertical-align: middle; text-decoration: none; cursor: pointer;
     text-transform: uppercase; transition: color .15s, border-color .15s;
   }
-  .badge-free:hover { color: var(--fg-0); border-color: var(--fg-0); }
+  .badge-free { margin-left: 8px; }
+  .badge-free:hover, .free-word:hover { color: var(--fg-0); border-color: var(--fg-0); }
   .badge-free + .badge-pro { margin-left: 5px; }
   .badge-pro, .prem-word {
     display: inline-block; padding: 1px 7px; border-radius: 3px;
@@ -3448,24 +3449,36 @@
       b.classList.toggle('active', b.getAttribute('data-lang') === lang);
     });
 
-    highlightPremium();
+    highlightTiers(dict);
 
     try { localStorage.setItem('ef_lang', lang); } catch (e) {}
   }
 
-  /* Destaca a palavra PREMIUM nas notas dos cartões — preto sobre amarelo, como o selo
-     do topo. Ninguém deve ficar iludido a pensar que a funcionalidade inteira é grátis.
+  /* Nas notas dos cartões, as duas palavras levam a MESMA etiqueta que está no topo:
+     PREMIUM a cheio, o grátis vazado. Na mesma linha, uma marcada e outra em texto
+     simples fazia a comparação coxear.
 
-     Porquê em JS e não nas traduções: "PREMIUM" é a mesma palavra nas 6 línguas, por
-     isso um só sítio chega. Marcá-la à mão obrigaria a um <b> em cada string traduzida
-     (e o applyI18n escreve textContent, que apagaria a marcação na troca de língua).
-     Corre no fim do applyI18n, portanto também na carga inicial. */
-  function highlightPremium() {
+     Porquê em JS e não nas traduções: obrigaria a marcar à mão 5 notas × 6 idiomas, e
+     o applyI18n escreve textContent — apagaria tudo à primeira troca de bandeira.
+     Corre no fim do applyI18n, portanto também na carga inicial.
+
+     "PREMIUM" é igual nas 6 línguas; a palavra do grátis não é, por isso vem do
+     dicionário (badge_free). ⚠ E só se marca quando ABRE a frase: a meio seria texto
+     corrido e marcá-la faria confusão. Verificado: nas 5 notas que a têm, em todos os
+     idiomas, ela abre sempre — e não há nenhuma ocorrência a meio por tratar. */
+  function highlightTiers(dict) {
     const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const free = (dict && dict.badge_free) || 'Free';
     document.querySelectorAll('.feat-note span').forEach(el => {
       const t = el.textContent;
-      if (!t.includes('PREMIUM')) return;
-      el.innerHTML = esc(t).replace(/PREMIUM/g, '<a class="prem-word" href="#premium">PREMIUM</a>');
+      const abreComGratis = t.indexOf(free) === 0;
+      if (!t.includes('PREMIUM') && !abreComGratis) return;
+      let out = esc(t).replace(/PREMIUM/g, '<a class="prem-word" href="#premium">PREMIUM</a>');
+      if (abreComGratis) {
+        const f = esc(free);
+        out = '<a class="free-word" href="#free">' + f + '</a>' + out.slice(f.length);
+      }
+      el.innerHTML = out;
     });
   }
 

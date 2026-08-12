@@ -19,7 +19,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ExplorerFocus">
 <meta property="og:title" content="ExplorerFocus — a distraction-free file explorer for Windows">
-<meta property="og:description" content="A focused alternative to Windows Explorer: profiles, configurable trees, honest file operations, rich preview and remote access (SFTP/FTP/FTPS/WebDAV).">
+<meta property="og:description" content="A focused alternative to Windows Explorer: profiles, configurable trees, honest file operations, rich preview, a built-in book reader (EPUB, MOBI/AZW, comics) and remote access (SFTP/FTP/FTPS/WebDAV).">
 <meta property="og:url" content="https://nunex-mbrothers.github.io/ExplorerFocus/">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="pt_PT">
@@ -35,7 +35,7 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ExplorerFocus — distraction-free file explorer">
-<meta name="twitter:description" content="A focused alternative to Windows Explorer, with SFTP/FTP/FTPS/WebDAV remote access and a rich preview pane.">
+<meta name="twitter:description" content="A focused alternative to Windows Explorer, with SFTP/FTP/FTPS/WebDAV remote access, a built-in book reader (EPUB, MOBI/AZW, comics) and a rich preview pane.">
 <meta name="twitter:image" content="https://nunex-mbrothers.github.io/ExplorerFocus/og-cover.png">
 
 <!-- Dados estruturados (Schema.org) -->
@@ -46,7 +46,17 @@
   "name": "ExplorerFocus",
   "operatingSystem": "Windows 10, Windows 11",
   "applicationCategory": "UtilitiesApplication",
-  "description": "A focused alternative to Windows Explorer: profiles, configurable trees, honest file operations, rich preview and remote access (SFTP/FTP/FTPS/WebDAV).",
+  "description": "A focused alternative to Windows Explorer: profiles, configurable trees, honest file operations, rich preview, a built-in book reader (EPUB, MOBI/AZW, comics) and remote access (SFTP/FTP/FTPS/WebDAV).",
+  "featureList": [
+    "Profiles: each tab with its own folder tree, filters and remembered state",
+    "Rich preview: code with syntax highlighting, PDF, Word, Excel, PowerPoint, Markdown, images",
+    "Book reader: EPUB, MOBI, AZW, AZW3, PRC, FB2, CBZ and CBR",
+    "File operations with real progress, speed, ETA, history and conflict handling",
+    "Remote and cloud access: SFTP, FTP, FTPS, WebDAV, Dropbox and OneDrive",
+    "Built-in capture: screen recording, camera, audio and scanner",
+    "12 interface languages",
+    "Single self-contained .exe, no installer"
+  ],
   "url": "https://nunex-mbrothers.github.io/ExplorerFocus/",
   "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
   "softwareVersion": "1.2.21",
@@ -307,7 +317,7 @@
   .whatsnew-ver { font-family: var(--font-mono); font-size: 11px; color: var(--fg-2); opacity: .75; white-space: nowrap; }
 
   /* Salto suave para o card + destaque breve ao clicar num pill */
-  .feat { scroll-margin-top: 88px; }
+  .feat, .premium { scroll-margin-top: 88px; }
   .feat.flash { animation: featflash 1.8s ease-out; }
   @keyframes featflash {
     0%, 12% { box-shadow: 0 0 0 2px var(--accent), 0 0 26px -4px var(--accent); border-color: var(--accent); }
@@ -577,11 +587,29 @@
     font-family: var(--font-mono); font-size: 10px;
     color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase;
   }
-  .badge-pro {
+  /* O selo do topo e a palavra PREMIUM na nota são a MESMA etiqueta: preto sobre
+     amarelo, mesmo tamanho, e ambas saltam para o §04. Assim ninguém confunde o
+     que é grátis com o que é pago. */
+  /* FREE: mesma família, escalão abaixo. Contorno em vez de cor nova — verde ao lado
+     de âmbar leria-se como semáforo, e o premium não é um aviso. O cheio ganha sempre
+     o olho; o vazado diz apenas "há aqui parte grátis". Sem etiqueta = tudo grátis. */
+  .badge-free {
     display: inline-block; margin-left: 8px; padding: 1px 7px; border-radius: 3px;
-    font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em; font-weight: 700;
-    background: var(--accent); color: #18120a; vertical-align: middle;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; font-weight: 700;
+    background: transparent; color: var(--accent-dim); border: 1px solid var(--accent-soft);
+    vertical-align: middle; text-decoration: none; cursor: pointer;
+    text-transform: uppercase; transition: color .15s, border-color .15s;
   }
+  .badge-free:hover { color: var(--fg-0); border-color: var(--fg-0); }
+  .badge-free + .badge-pro { margin-left: 5px; }
+  .badge-pro, .prem-word {
+    display: inline-block; padding: 1px 7px; border-radius: 3px;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; font-weight: 700;
+    background: var(--accent); color: #18120a; vertical-align: middle;
+    text-decoration: none; cursor: pointer; transition: filter .15s;
+  }
+  .badge-pro { margin-left: 8px; }
+  .badge-pro:hover, .prem-word:hover { filter: brightness(1.15); }
   .feat-note { margin-top: 16px; font-size: 12.5px; line-height: 1.55; color: var(--fg-2); }
   /* Nota de rodapé do cartão — deliberadamente discreta: quem chega aqui já desceu
      o cartão todo. Não trava ninguém à entrada. */
@@ -710,24 +738,32 @@
     background: var(--border-1);
     border: 1px solid var(--border-1);
   }
+  /* Células apertadas: passaram de 4 para 8 e ocupavam ecrã a mais. O h4 desceu de
+     22 para 17 px porque era ele que as fazia altas — nomes como
+     "AvalonEdit · Markdig · WebView2" partiam em três linhas. */
   .stack-cell {
     background: var(--bg-0);
-    padding: 32px 28px;
+    padding: 20px 18px;
   }
   .stack-cell .ic {
-    font-family: var(--font-mono); font-size: 10px;
+    font-family: var(--font-mono); font-size: 9.5px;
     color: var(--accent); letter-spacing: 0.18em; text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 9px;
   }
   .stack-cell h4 {
     font-family: var(--font-display); font-weight: 500;
-    font-size: 22px; margin: 0 0 8px;
+    font-size: 17px; margin: 0 0 6px; line-height: 1.25;
     color: var(--fg-0);
   }
   .stack-cell p {
-    color: var(--fg-2); font-size: 13px; line-height: 1.55;
+    color: var(--fg-2); font-size: 12px; line-height: 1.5;
     margin: 0;
   }
+  .stack-licences {
+    color: var(--fg-2); font-size: 13px; line-height: 1.6;
+    margin: 0 0 26px;
+  }
+  .stack-licences strong { color: var(--fg-1); font-weight: 500; }
 
   /* FOOTER */
   footer {
@@ -866,7 +902,29 @@
     font-family: var(--font-display); font-weight: 500;
     font-size: 24px; margin: 0 0 6px; color: var(--fg-0);
   }
-  .prem-card.is-prem h4 { color: var(--accent); }
+  /* O título do cartão pago é a MESMA etiqueta dos cartões e das notas — preto sobre
+     amarelo. Era o único sítio da página onde PREMIUM aparecia como texto corrido, e
+     destoava. O ">" é essencial: sem ele apanhava também o "How to get it", que agora
+     vive dentro deste cartão (e que assim volta ao seu tom próprio). O lado grátis
+     mantém a serifa — a assimetria é que faz o sinal. */
+  .prem-card.is-prem > h4 {
+    display: inline-block; margin: 0 0 14px;
+    font-family: var(--font-mono); font-size: 18px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    background: var(--accent); color: #18120a;
+    padding: 4px 12px; border-radius: 4px;
+  }
+  /* E o título do lado grátis é a etiqueta vazada, pelas mesmas razões: as duas
+     colunas do §04 passam a ser as mesmas duas etiquetas que estão nos 28 cartões. */
+  .prem-card:not(.is-prem) > h4 {
+    display: inline-block; margin: 0 0 14px;
+    font-family: var(--font-mono); font-size: 18px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    background: transparent; color: var(--accent); border: 1px solid var(--accent-dim);
+    padding: 4px 12px; border-radius: 4px;
+  }
+  /* O salto das etiquetas FREE aterra no cartão, não debaixo da barra de topo. */
+  .prem-card { scroll-margin-top: 88px; }
   .prem-card .prem-tag {
     font-family: var(--font-mono); font-size: 10px;
     letter-spacing: 0.18em; text-transform: uppercase;
@@ -885,10 +943,11 @@
   .prem-card.is-prem li::before { color: var(--accent); }
   .prem-card li strong { color: var(--fg-0); font-weight: 600; }
 
+  /* Já não é uma faixa própria à largura toda — vive dentro do cartão do Premium,
+     separada da lista por um filete. Sem fundo nem caixa: herda o cartão. */
   .prem-how {
-    margin-top: 1px; background: var(--bg-0);
-    border: 1px solid var(--border-1); border-top: none;
-    padding: 30px 28px;
+    margin-top: 26px; padding-top: 24px;
+    border-top: 1px solid var(--border-1);
   }
   .prem-how h4 {
     font-family: var(--font-display); font-weight: 500;
@@ -1086,7 +1145,7 @@
   <div class="hero-text">
     <div class="hero-eyebrow" data-i18n="hero_eyebrow">A file explorer · WPF · .NET 10</div>
     <h1 data-i18n-html="hero_title">The explorer<br>that <em>focuses</em><br>on what <span class="strike">doesn't</span> matter.</h1>
-    <p class="hero-lede" data-i18n="hero_lede">ExplorerFocus is a lightweight Windows Explorer replacement, designed for people who always work in the same folders. Configurable profiles, clean trees, rich preview, operations that actually tell you what's happening — without the shell's noise.</p>
+    <p class="hero-lede" data-i18n="hero_lede">ExplorerFocus is a Windows Explorer replacement for people who always work in the same folders. Configurable profiles, clean trees, a preview that opens almost anything — code, documents, books — and operations that actually tell you what's happening. Without the shell's noise.</p>
     <div class="hero-meta">
       <span data-i18n="hero_meta_os">Windows 10 / 11</span>
       <span data-i18n="hero_meta_pkg">Self-contained · single-file</span>
@@ -1225,10 +1284,10 @@
 <div class="whatsnew">
   <span class="whatsnew-label" data-i18n="wn_label">✦ What's new</span>
   <nav class="whatsnew-pills">
+    <a href="#feat20" data-i18n="wn_books">📚 Books &amp; comics</a>
     <a href="#feat28" data-i18n="wn_voice">🎙 Voice over</a>
     <a href="#feat27" data-i18n="wn_cards">🎬 Branding cards</a>
     <a href="#feat26" data-i18n="wn_screen">🖥 Screen recording</a>
-    <a href="#feat19" data-i18n="wn_cloud">☁ Clouds & remotes</a>
   </nav>
   <span class="whatsnew-ver">v1.2.21</span>
 </div>
@@ -1247,7 +1306,7 @@
 
   <div class="feat hero-card w8">
     <div class="pad">
-      <div class="num" data-i18n="f01_num">01 — PROFILES</div>
+      <div class="num"><span data-i18n="f01_num">01 — PROFILES</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
       <h3 data-i18n="f01_h">Multi-tab by context. Each profile is its own view, with its tree, filters and state.</h3>
       <p data-i18n="f01_p">Drag-reorder, F2 to rename, Ctrl+1..9 to jump between tabs, Ctrl+T to create. Tabs remember the last folder visited and the tree state.</p>
     </div>
@@ -1259,21 +1318,21 @@
   </div>
 
   <div class="feat w4">
-    <div class="num" data-i18n="f02_num">02 — TREES</div>
+    <div class="num"><span data-i18n="f02_num">02 — TREES</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
     <h3 data-i18n="f02_h">Configurable trees.</h3>
     <p data-i18n-html="f02_p">You manually define the roots you want to see. Filesystem and <em>registry</em> side by side. No sidebar full of items you never open.</p>
     <div class="feat-mark" data-i18n="f02_mark">Folder + Registry</div>
   </div>
 
   <div class="feat w6">
-    <div class="num" data-i18n="f03_num">03 — SEARCH</div>
+    <div class="num"><span data-i18n="f03_num">03 — SEARCH</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
     <h3 data-i18n="f03_h">Multi-pattern search with wildcards in any position.</h3>
     <p data-i18n-html="f03_p">Type <code style="font-family:var(--font-mono);background:var(--bg-2);padding:1px 6px;border-radius:2px;color:var(--accent);">*.cs *.json</code> and get OR semantics. <em>?</em>onfig.json, Test*Run.cs — all work.</p>
     <div class="feat-mark" data-i18n="f03_mark">Wildcards · Internal regex</div>
   </div>
 
   <div class="feat w6">
-    <div class="num" data-i18n="f04_num">04 — GLOBAL SEARCH</div>
+    <div class="num"><span data-i18n="f04_num">04 — GLOBAL SEARCH</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
     <h3 data-i18n="f04_h">Search across profiles, with explicit opt-in.</h3>
     <p data-i18n="f04_p">Right-click a tab → "Include in global search". The dot indicator (●/○) shows what's in. Results in a non-modal window.</p>
     <div class="feat-mark" data-i18n="f04_mark">Opt-in · Non-modal results</div>
@@ -1281,7 +1340,7 @@
 
   <div class="feat hero-card w12">
     <div class="pad">
-      <div class="num" data-i18n="f05_num">05 — PREVIEW</div>
+      <div class="num"><span data-i18n="f05_num">05 — PREVIEW</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
       <h3 data-i18n="f05_h">Rich preview pane. Each file type with its ideal rendering.</h3>
       <p data-i18n-html="f05_p">Text with <em>syntax highlight</em> via AvalonEdit, images decoded in the background, PDFs rendered by the Edge engine (WebView2), Markdown converted to HTML with a dark theme by Markdig. Individually toggleable. Cancels previous load if you change selection.</p>
     </div>
@@ -1314,103 +1373,101 @@
   </div>
 
   <div class="feat w6">
-    <div class="num" data-i18n="f06_num">06 — FILE OPERATIONS</div>
+    <div class="num"><span data-i18n="f06_num">06 — FILE OPERATIONS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
     <h3 data-i18n="f06_h">Copy, move, delete — with real information.</h3>
     <p data-i18n-html="f06_p">Floating window shows <em>per-file gauge</em>, real speed, ETA, global count. Pause, resume, cancel. Up to 6 parallel operations. Get on with your life while it runs.</p>
     <div class="feat-mark" data-i18n="f06_mark">Buffer 1 MB · 10 Hz UI · history × 20</div>
   </div>
 
   <div class="feat w3">
-    <div class="num" data-i18n="f07_num">07 — CONFLICTS</div>
+    <div class="num"><span data-i18n="f07_num">07 — CONFLICTS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
     <h3 data-i18n="f07_h">6-way.</h3>
     <p data-i18n="f07_p">Overwrite / Skip / Duplicate, individually or in bulk for the rest of the operation.</p>
   </div>
 
   <div class="feat w3">
-    <div class="num" data-i18n="f08_num">08 — DRAG &amp; DROP</div>
+    <div class="num"><span data-i18n="f08_num">08 — DRAG &amp; DROP</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
     <h3 data-i18n="f08_h">Between tabs.</h3>
     <p data-i18n="f08_p">Drag a file to a tab and the tab switches on its own after 600ms. Copy/Move dialog on drop.</p>
   </div>
 
   <div class="feat w8">
-    <div class="num" data-i18n="f09_num">09 — APPS BY EXTENSION</div>
+    <div class="num"><span data-i18n="f09_num">09 — APPS BY EXTENSION</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
     <h3 data-i18n="f09_h">Auto-detect new extensions. Shared across profiles.</h3>
     <p data-i18n-html="f09_p">Enter a folder with <em>.dwg</em>, <em>.psd</em>, <em>.bak</em>? An aggregated dialog asks once. Per-row picker (browse to the .exe; name auto-resolved by <em>FileVersionInfo</em>). Mark as ignored those you don't care about. The list persists.</p>
     <div class="feat-mark" data-i18n="f09_mark">Mute per session · Toggle in Settings</div>
   </div>
 
   <div class="feat w4">
-    <div class="num" data-i18n="f10_num">10 — TERMINALS</div>
+    <div class="num"><span data-i18n="f10_num">10 — TERMINALS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
     <h3 data-i18n="f10_h">CMD, PowerShell, Git Bash — here, now.</h3>
     <p data-i18n-html="f10_p">In any tree folder. Normal and <em>elevated</em> variants. <em>regedit</em> on registry keys.</p>
   </div>
 
   <div class="feat w4">
-    <div class="num" data-i18n="f11_num">11 — CREATE FILES</div>
+    <div class="num"><span data-i18n="f11_num">11 — CREATE FILES</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
     <h3 data-i18n="f11_h">Sensible skeletons.</h3>
     <p data-i18n-html="f11_p"><em>.cs</em>, <em>.xaml</em>, <em>.json</em>, <em>.md</em>, <em>.cmd</em>, <em>.ps1</em> — start with the typical structure. The name is highlighted without erasing the extension while typing.</p>
   </div>
 
   <div class="feat w4">
-    <div class="num" data-i18n="f12_num">12 — FULL DARK</div>
+    <div class="num"><span data-i18n="f12_num">12 — FULL DARK</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
     <h3 data-i18n="f12_h">Dark theme all the way.</h3>
     <p data-i18n="f12_p">Title bar, scrollbars, datagrids, dialogs, tooltips, Markdown preview — all in the same visual language. No stray whites from unlikely places.</p>
   </div>
 
   <div class="feat w4">
-    <div class="num" data-i18n="f13_num">13 — PERSISTENCE</div>
+    <div class="num"><span data-i18n="f13_num">13 — PERSISTENCE</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
     <h3 data-i18n="f13_h">Remembers everything.</h3>
     <p data-i18n-html="f13_p">Geometry of the main window and the operations window. Last active tab. Tree pane width. Column sort. Tree state. All in <em>%LOCALAPPDATA%\ExplorerFocus</em>.</p>
   </div>
 
   <div class="feat w4">
-    <div class="num" data-i18n="f14_num">14 — RICH TOOLTIP</div>
+    <div class="num"><span data-i18n="f14_num">14 — RICH TOOLTIP</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
     <h3 data-i18n="f14_h">Properties without a click.</h3>
     <p data-i18n="f14_p">A 1.8s tooltip over any file shows computed size, dates, attributes. Folders carry the recursive size — computed lazily, with a semaphore to avoid hammering the disk.</p>
   </div>
 
   <div class="feat w4">
-    <div class="num" data-i18n="f15_num">15 — SORTING</div>
+    <div class="num"><span data-i18n="f15_num">15 — SORTING</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
     <h3 data-i18n="f15_h">Folders first, always.</h3>
     <p data-i18n="f15_p">A custom comparer guarantees directories stay on top of any sort, in any column, in any direction. As it should be.</p>
   </div>
 
   <div class="feat w6">
-    <div class="num" data-i18n="f16_num">16 — MULTI-SELECT</div>
+    <div class="num"><span data-i18n="f16_num">16 — MULTI-SELECT</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
     <h3 data-i18n="f16_h">Smart selection.</h3>
     <p data-i18n="f16_p">Normal click selects. Shift+click extends with "majority decides" semantics — if the range is mostly already selected, it unmarks; otherwise it marks. Ctrl+click toggles individually. No more "I lost all selections by accident".</p>
   </div>
 
   <div class="feat w6">
-    <div class="num" data-i18n="f17_num">17 — DEPLOYMENT</div>
+    <div class="num"><span data-i18n="f17_num">17 — DEPLOYMENT</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
     <h3 data-i18n-html="f17_h">A single <em>.exe</em>. No installer.</h3>
     <p data-i18n-html="f17_p">Self-contained, single-file, compressed. Copy to a flash drive and it runs on any Windows 10/11. <em>net10.0-windows</em> + WPF — no dependencies outside the executable's folder.</p>
   </div>
 
   <div class="feat w12">
-    <div class="num"><span data-i18n="f18_num">18 — REMOTE ACCESS</span><span class="badge-pro" data-i18n="badge_pro">PREMIUM</span></div>
+    <div class="num"><span data-i18n="f18_num">18 — REMOTE ACCESS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f18_h">SFTP, FTP/FTPS and WebDAV — the explorer reaches the server.</h3>
     <p data-i18n-html="f18_p">Connect to SFTP, FTP/FTPS and WebDAV (Nextcloud, ownCloud, NAS, IIS). Browse, preview, upload and download, create folders, rename and copy/move — with <em>byte-level progress</em> and cancel. Edit remote files locally and <em>sync on save</em>. Password or <em>SSH key</em> auth; secrets encrypted with DPAPI.</p>
     <div class="feat-mark" data-i18n="f18_mark">SFTP · FTP/FTPS · WebDAV</div>
     <p class="feat-note">
-      <span data-i18n="f18_free">Free: 1 connection — browse + preview. PREMIUM unlocks multiple connections and all operations.</span><br>
-      <span data-i18n="f18_premium">PREMIUM: minimum €19.99 donation (PayPal) — activated in the app with your Machine ID.</span>
+      <span data-i18n="f18_free">Free: 1 SFTP/FTP/FTPS connection — browse and preview only. PREMIUM unlocks WebDAV, multiple connections and all operations.</span>
     </p>
   </div>
 
   <div class="feat w12" id="feat19">
-    <div class="num"><span data-i18n="f19_num">19 — CLOUDS</span><span class="badge-pro" data-i18n="badge_pro">PREMIUM</span></div>
+    <div class="num"><span data-i18n="f19_num">19 — CLOUDS</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f19_h">Dropbox and OneDrive — your cloud inside the explorer.</h3>
     <p data-i18n-html="f19_p">Connect to <em>Dropbox</em> and <em>OneDrive</em> via secure OAuth — no passwords stored. Browse, preview, upload and download, create folders, rename and copy/move, like a local folder. Your files never pass through our servers.</p>
     <div class="feat-mark" data-i18n="f19_mark">Dropbox · OneDrive</div>
     <p class="feat-note">
-      <span data-i18n="f19_soon">Dropbox and OneDrive — available now.</span><br>
-      <span data-i18n="f19_premium">PREMIUM (like SFTP/FTP/FTPS): multiple connections and all operations. €19.99 donation (PayPal).</span>
+      <span data-i18n="f19_premium">PREMIUM: required from the first connection — browsing, preview and all operations.</span>
     </p>
   </div>
 
-  <div class="feat w12">
-    <div class="num"><span data-i18n="f20_num">20 — BOOKS &amp; COMICS</span><span class="badge-pro" data-i18n="badge_pro">PREMIUM</span></div>
+  <div class="feat w12" id="feat20">
+    <div class="num"><span data-i18n="f20_num">20 — BOOKS &amp; COMICS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f20_h">Eight book formats — preview and read, without leaving the explorer.</h3>
     <p data-i18n-html="f20_p">Instant preview of any <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> or <em>.fb2</em>: cover, table of contents and the opening text. Open the full book in its own reader, with chapter navigation, page jump, <em>auto-scroll</em> and your reading position remembered. Comics too: <em>.cbz</em> and <em>.cbr</em> open page by page, without unpacking hundreds of megabytes first.</p>
     <div class="feat-mark" data-i18n="f20_mark">EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR</div>
@@ -1422,21 +1479,21 @@
   </div>
 
   <div class="feat w12">
-    <div class="num" data-i18n="f21_num">21 — DOCUMENT VIEWERS</div>
+    <div class="num"><span data-i18n="f21_num">21 — DOCUMENT VIEWERS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
     <h3 data-i18n="f21_h">Word, Excel, PowerPoint and more — see without opening anything.</h3>
     <p data-i18n-html="f21_p">Preview <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> and <em>OpenDocument</em> (text, sheet and presentation) right in the pane. Audio and video play in the preview, with a <em>floating window</em> and volume/speed controls. A marker flags files that have a preview; password-protected files are flagged without asking for the password.</p>
     <div class="feat-mark" data-i18n="f21_mark">Word · Excel · PowerPoint · RTF · OpenDocument · Audio · Video</div>
   </div>
 
   <div class="feat w12">
-    <div class="num" data-i18n="f22_num">22 — RECORD AUDIO</div>
+    <div class="num"><span data-i18n="f22_num">22 — RECORD AUDIO</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
     <h3 data-i18n="f22_h">Record the microphone straight into the folder.</h3>
     <p data-i18n-html="f22_p">One click records the <em>microphone</em> into the current folder. Pick the microphone, watch the live <em>level meter</em>, adjust the recording volume and save as <em>WAV</em> or <em>M4A/AAC</em>.</p>
     <div class="feat-mark" data-i18n="f22_mark">Microphone · Level meter · WAV · M4A</div>
   </div>
 
   <div class="feat w12">
-    <div class="num" data-i18n="f23_num">23 — RECORD VIDEO</div>
+    <div class="num"><span data-i18n="f23_num">23 — RECORD VIDEO</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f23_h">Record the camera straight into the folder.</h3>
     <p data-i18n-html="f23_p">Live <em>camera</em> preview, with a choice of camera and microphone, resolution and format — <em>MP4</em>, <em>WMV</em> or <em>AVI</em>. Saves into the current folder with one click.</p>
     <div class="feat-mark" data-i18n="f23_mark">Camera · Microphone · MP4 · WMV · AVI</div>
@@ -1446,7 +1503,7 @@
   </div>
 
   <div class="feat w12">
-    <div class="num" data-i18n="f24_num">24 — SCAN</div>
+    <div class="num"><span data-i18n="f24_num">24 — SCAN</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f24_h">From the scanner into the folder — image or PDF.</h3>
     <p data-i18n-html="f24_p">Scan from the <em>flatbed</em> or the <em>feeder (ADF)</em>, many sheets at once. Choose the resolution and colour — <em>colour</em>, grayscale or <em>black &amp; white</em>. Save as <em>JPEG/PNG</em> or merge everything into a <em>multi-page PDF</em>, and keep adding sheets to the same PDF.</p>
     <div class="feat-mark" data-i18n="f24_mark">Flatbed · Feeder (ADF) · Colour · Multi-page PDF</div>
@@ -1456,14 +1513,14 @@
   </div>
 
   <div class="feat w12">
-    <div class="num" data-i18n="f25_num">25 — ARCHIVES AS FOLDERS</div>
+    <div class="num"><span data-i18n="f25_num">25 — ARCHIVES AS FOLDERS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
     <h3 data-i18n="f25_h">Open ZIP, RAR, 7z and TAR like folders.</h3>
     <p data-i18n-html="f25_p">Double-click (or <em>Browse inside</em>) to enter the archive — browse the contents, <em>preview</em> and <em>copy files out</em> without extracting everything. Read-only; <em>Open with…</em> still opens them in WinRAR/WinZip/7-Zip.</p>
     <div class="feat-mark" data-i18n="f25_mark">ZIP · RAR · 7z · TAR · Copy files out</div>
   </div>
 
   <div class="feat w12" id="feat26">
-    <div class="num" data-i18n="f26_num">26 — RECORD SCREEN</div>
+    <div class="num"><span data-i18n="f26_num">26 — RECORD SCREEN</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f26_h">Record the screen straight into the folder — with an optional camera.</h3>
     <p data-i18n-html="f26_p">Pick a <em>region of any monitor</em> (or the whole screen) and record to <em>MP4</em> with the <em>microphone</em>. Add the <em>camera</em>: switch screen⇄camera with <em>transitions</em> (fade, wipe, slide, mosaic), show it as <em>PiP</em> in a corner, or side by side in <em>split screen</em>.</p>
     <div class="feat-mark" data-i18n="f26_mark">Region · Microphone · System sound · Camera · PiP · Split screen · Transitions · MP4</div>
@@ -1473,7 +1530,7 @@
   </div>
 
   <div class="feat w12" id="feat27">
-    <div class="num" data-i18n="f27_num">27 — BRANDING CARDS</div>
+    <div class="num"><span data-i18n="f27_num">27 — BRANDING CARDS</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f27_h">Intro and end cards for your videos — right in the recording.</h3>
     <p data-i18n-html="f27_p">Give your recordings (screen and camera) an <em>intro card</em>, a permanent <em>text banner</em> and a credits-style <em>end card</em> (up to 10 lines). <em>5 independent models</em>, each with 3 presentations, logo, background colour and an <em>episode badge</em> — built for a consistent video series.</p>
     <div class="feat-mark" data-i18n="f27_mark">Intro · Banner · End (credits) · 5 models · Logo · Episode badge</div>
@@ -1483,7 +1540,7 @@
   </div>
 
   <div class="feat w12" id="feat28">
-    <div class="num" data-i18n="f28_num">28 — VOICE OVER</div>
+    <div class="num"><span data-i18n="f28_num">28 — VOICE OVER</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f28_h">Narrate your videos after recording — even on your own.</h3>
     <p data-i18n-html="f28_p">Record the screen <em>silently</em>, then in a <em>dedicated box</em> play the video while you <em>narrate over it</em>. The narration lands in a separate file; add <em>background music</em>, balance the volumes (so the music won't drown the voice) and <em>generate the final video</em> with all three sources.</p>
     <div class="feat-mark" data-i18n="f28_mark">Record silent · Narrate over the video · Music · Volumes · Video + narration + music → final</div>
@@ -1553,6 +1610,7 @@
   <div class="section-num" data-i18n="st_num">§ 03 · Stack</div>
   <h2 data-i18n-html="st_title">Built with <em>serious parts</em>.</h2>
   <p data-i18n="st_blurb">Each dependency was chosen for maturity, size, or the absence of reasonable alternatives. No framework-of-the-day.</p>
+  <p class="stack-licences" data-i18n-html="st_licences">The <strong>complete list travels inside the program</strong>, with every author and the full licence texts — under <em>About → Third-party licences</em>.</p>
 
   <div class="stack-grid">
     <div class="stack-cell">
@@ -1575,6 +1633,26 @@
       <h4>Microsoft.VisualBasic.FileIO</h4>
       <p data-i18n-html="st_util">For sending to the <em>Recycle Bin</em> — the only honest way, and it works.</p>
     </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_remote_ic">REMOTE</div>
+      <h4>SSH.NET · FluentFTP</h4>
+      <p data-i18n="st_remote">SFTP through SSH.NET; FTP and FTPS through FluentFTP. Mature, and boring in the good way.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_nosdk_ic">NO SDK</div>
+      <h4>HttpClient</h4>
+      <p data-i18n="st_nosdk">WebDAV, Dropbox and OneDrive are written by hand against their HTTP APIs. No vendor SDK to age badly.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_capture_ic">CAPTURE</div>
+      <h4>NAudio · NTwain</h4>
+      <p data-i18n="st_capture">Microphone and system sound through NAudio and WASAPI; the scanner through NTwain, the TWAIN standard.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_archives_ic">ARCHIVES</div>
+      <h4>SharpCompress</h4>
+      <p data-i18n="st_archives">ZIP, RAR, 7z and TAR read in place, so an archive opens like a folder.</p>
+    </div>
   </div>
 </section>
 
@@ -1585,7 +1663,7 @@
   <p class="prem-blurb" data-i18n="pr_blurb">It always has been and always will be: no subscription, no account, no ads. Premium is a one-time donation — a small reward for the nights and days spent building very specific, technically demanding features. I'm not in this for the money: I'm in it for the ideas that come along. Most people will never miss Premium — and that's how it should be.</p>
 
   <div class="prem-grid">
-    <div class="prem-card">
+    <div class="prem-card" id="free">
       <h4 data-i18n="pr_free_h">Free</h4>
       <span class="prem-tag" data-i18n="pr_free_tag">forever · no account</span>
       <ul data-i18n-html="pr_free_list"><li>Profiles, configurable trees, multi-pattern search</li><li>Preview: code, PDF, Word/Excel, Markdown, images, books</li><li>File operations with real progress, speed, ETA, history and conflicts</li><li>Terminals, per-extension app associations, archives as folders</li><li>Complete dark theme, 12 languages, auto-updates</li><li>Audio recording (microphone)</li><li><strong>1 remote connection</strong> (SFTP/FTP/FTPS) — browse and preview</li></ul>
@@ -1595,13 +1673,16 @@
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag">one-time €19.99 donation · per machine</span>
       <ul data-i18n-html="pr_prem_list"><li><strong>Full remote access</strong>: multiple connections, all operations, WebDAV, Dropbox, OneDrive</li><li>Screen recording <strong>with no watermark, no time limit and with sound</strong></li><li>Video recording without watermark</li><li>Audio mixing microphone + system sound</li><li>Multi-page scanning with document feeder (ADF)</li><li>Full book reader — EPUB, Kindle formats, FB2 and comics</li><li>Intro/end cards and text banner on recordings</li></ul>
-    </div>
-  </div>
 
-  <div class="prem-how">
-    <h4 data-i18n="pr_how_h">How to get it</h4>
-    <ol data-i18n-html="pr_how_list"><li>In the app, click the <strong>PREMIUM</strong> button (top right).</li><li>Enter your email — the app copies your <strong>Machine ID</strong> to the clipboard.</li><li>PayPal opens: minimum €19.99 donation.</li><li>I send you the <strong>activation key by email</strong>.</li><li>Paste the key into the app. The licence is tied to that machine.</li></ol>
-    <p class="prem-note" data-i18n-html="pr_note"><strong>Note:</strong> the key is sent by hand, by me — so it may not be instant. PayPal shows up under <strong>LogViewer</strong>, the other project from the same house (PayPal only allows one destination per account); the page confirms I'm the author of both.</p>
+      <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
+           no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo
+           das duas colunas, e não se percebia a que lado pertencia. -->
+      <div class="prem-how">
+        <h4 data-i18n="pr_how_h">How to get it</h4>
+        <ol data-i18n-html="pr_how_list"><li>In the app, click the <strong>PREMIUM</strong> button (top right).</li><li>Enter your email — the app copies your <strong>Machine ID</strong> to the clipboard.</li><li>PayPal opens: minimum €19.99 donation.</li><li>I send you the <strong>activation key by email</strong>.</li><li>Paste the key into the app. The licence is tied to that machine.</li></ol>
+        <p class="prem-note" data-i18n-html="pr_note"><strong>Note:</strong> the key is sent by hand, by me — so it may not be instant. PayPal shows up under <strong>LogViewer</strong>, the other project from the same house (PayPal only allows one destination per account); the page confirms I'm the author of both.</p>
+      </div>
+    </div>
   </div>
 
   <p class="prem-idea" data-i18n-html="pr_idea"><strong>Got a good idea?</strong> If your suggestion makes ExplorerFocus better, I'll give you full Premium access. Write to <a href="mailto:NunexmBrothers@gmail.com">NunexmBrothers@gmail.com</a>.</p>
@@ -1759,7 +1840,7 @@
 
       hero_eyebrow: "Um explorador de ficheiros · WPF · .NET 10",
       hero_title: 'O explorer<br>que <em>se foca</em><br>no que <span class="strike">não</span> importa.',
-      hero_lede: "ExplorerFocus é um substituto leve do Windows Explorer, desenhado para quem trabalha sempre nas mesmas pastas. Perfis configuráveis, árvores limpas, pré-visualização rica, operações que dão informação a sério — sem o ruído do shell.",
+      hero_lede: "O ExplorerFocus é um substituto do Windows Explorer para quem trabalha sempre nas mesmas pastas. Perfis configuráveis, árvores limpas, uma pré-visualização que abre quase tudo — código, documentos, livros — e operações que dizem mesmo o que está a acontecer. Sem o ruído do shell.",
       hero_meta_os: "Windows 10 / 11",
       hero_meta_pkg: "Self-contained · single-file",
       hero_meta_size: "~112 MB",
@@ -1893,18 +1974,17 @@
       f17_p: "Self-contained, single-file, com compressão. Copias para uma flash drive e arranca em qualquer Windows 10/11. <em>net10.0-windows</em> + WPF — sem dependências fora da pasta do executável.",
 
       badge_pro: "PREMIUM",
+      badge_free: "Grátis",
       f18_num: "18 — ACESSOS REMOTOS",
       f18_h: "SFTP, FTP/FTPS e WebDAV — o explorer chega ao servidor.",
       f18_p: "Liga a SFTP, FTP/FTPS e WebDAV (Nextcloud, ownCloud, NAS, IIS). Navega, pré-visualiza, envia e descarrega, cria pastas, renomeia e copia/move — com <em>progresso ao byte</em> e cancelamento. Edita ficheiros remotos localmente e <em>sincroniza ao gravar</em>. Autenticação por password ou <em>chave SSH</em>; segredos cifrados com DPAPI.",
       f18_mark: "SFTP · FTP/FTPS · WebDAV",
-      f18_free: "Grátis: 1 ligação — navegar + preview. PREMIUM desbloqueia várias ligações e todas as operações.",
-      f18_premium: "PREMIUM: donativo mínimo de 19,99 € (PayPal) — ativa-se na app com o teu Machine ID.",
+      f18_free: "Grátis: 1 ligação SFTP/FTP/FTPS — só navegar e pré-visualizar. PREMIUM desbloqueia o WebDAV, várias ligações e todas as operações.",
       f19_num: "19 — CLOUDS",
       f19_h: "Dropbox e OneDrive — a tua cloud dentro do explorer.",
       f19_p: "Liga a <em>Dropbox</em> e <em>OneDrive</em> por OAuth seguro — sem guardares palavras-passe. Navega, pré-visualiza, envia e descarrega, cria pastas, renomeia e copia/move, como numa pasta local. Os teus ficheiros nunca passam por servidores nossos.",
       f19_mark: "Dropbox · OneDrive",
-      f19_soon: "Dropbox e OneDrive — disponíveis agora.",
-      f19_premium: "PREMIUM (tal como o SFTP/FTP/FTPS): várias ligações e todas as operações. Donativo 19,99 € (PayPal).",
+      f19_premium: "PREMIUM: necessário desde a primeira ligação — navegar, pré-visualizar e todas as operações.",
       f20_num: "20 — LIVROS E BD",
       f20_h: "Oito formatos de livro — pré-visualiza e lê, sem sair do explorador.",
       f20_p: "Preview instantâneo de qualquer <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> ou <em>.fb2</em>: capa, índice e o início do texto. Abre o livro completo num leitor próprio, com navegação por capítulos, salto de página, <em>scroll automático</em> e o teu ponto de leitura guardado. E banda desenhada: <em>.cbz</em> e <em>.cbr</em> abrem página a página, sem desempacotar centenas de megabytes primeiro.",
@@ -1948,16 +2028,13 @@
       f28_mark: "Gravar mudo · Narrar sobre o vídeo · Música · Volumes · Vídeo + narração + música → final",
       f28_premium: "PREMIUM. O vídeo e a narração ficam em ficheiros separados; só “Gerar final” cria o vídeo misturado.",
       wn_label: "✦ Novidades",
+      wn_books: "📚 Livros e BD",
       wn_voice: "🎙 Voice over",
       wn_cards: "🎬 Cartões de marca",
       wn_screen: "🖥 Gravação de ecrã",
-      wn_cloud: "☁ Nuvens & remotos",
       f24_premium: "Grátis: 1 página do vidro, com marca de água. PREMIUM: várias páginas, alimentador (ADF) e sem marca de água.",
-      f18_soon: "Clouds (Dropbox, OneDrive) — disponíveis. S3 e rclone — em breve.",
       ft_ch_standalone: "Standalone (.exe)",
       ft_ch_portable: "Standalone (.zip)",
-      ft_ch_clickonce: "ClickOnce",
-      ft_soon: "em breve",
 
       sc_num: "§ 02 · Atalhos",
       sc_title: "As mãos<br>na <em>home row</em>.",
@@ -1981,6 +2058,15 @@
       st_preview_ic: "PREVIEW",
       st_preview: "Syntax highlight, markdown renderer e embed do motor do Edge para PDF.",
       st_util: "Para o envio à <em>Reciclagem</em> — a única forma honesta, e funciona.",
+      st_licences: "A <strong>lista completa viaja dentro do programa</strong>, com todos os autores e os textos integrais das licenças — em <em>Acerca → Licenças de terceiros</em>.",
+      st_remote_ic: "REMOTO",
+      st_remote: "SFTP pelo SSH.NET; FTP e FTPS pelo FluentFTP. Maduros, e aborrecidos no bom sentido.",
+      st_nosdk_ic: "SEM SDK",
+      st_nosdk: "O WebDAV, o Dropbox e o OneDrive são escritos à mão contra as APIs HTTP deles. Sem SDK do fornecedor para envelhecer mal.",
+      st_capture_ic: "CAPTURA",
+      st_capture: "Microfone e som do sistema com o NAudio e o WASAPI; o scanner com o NTwain, a norma TWAIN.",
+      st_archives_ic: "ARQUIVOS",
+      st_archives: "ZIP, RAR, 7z e TAR lidos no lugar, para um arquivo abrir como se fosse uma pasta.",
 
       nav_premium: "Premium",
       pr_num: "§ 04 · Grátis e Premium",
@@ -2000,7 +2086,6 @@
       ft_tagline: "O explorer minimal para quem trabalha sempre nos mesmos sítios — e quer que a ferramenta saiba isso.",
       ft_get: "Obter",
       ft_releases: "Releases",
-      ft_changelog: "Changelog",
       ft_project: "Projecto",
       nav_guide: "Como funciona",
       nav_privacy: "Privacidade",
@@ -2019,7 +2104,7 @@
 
       hero_eyebrow: "A file explorer · WPF · .NET 10",
       hero_title: 'The explorer<br>that <em>focuses</em><br>on what <span class="strike">doesn\'t</span> matter.',
-      hero_lede: "ExplorerFocus is a lightweight Windows Explorer replacement, designed for people who always work in the same folders. Configurable profiles, clean trees, rich preview, operations that actually tell you what's happening — without the shell's noise.",
+      hero_lede: "ExplorerFocus is a Windows Explorer replacement for people who always work in the same folders. Configurable profiles, clean trees, a preview that opens almost anything — code, documents, books — and operations that actually tell you what's happening. Without the shell's noise.",
       hero_meta_os: "Windows 10 / 11",
       hero_meta_pkg: "Self-contained · single-file",
       hero_meta_size: "~112 MB",
@@ -2153,18 +2238,17 @@
       f17_p: "Self-contained, single-file, compressed. Copy to a flash drive and it runs on any Windows 10/11. <em>net10.0-windows</em> + WPF — no dependencies outside the executable's folder.",
 
       badge_pro: "PREMIUM",
+      badge_free: "Free",
       f18_num: "18 — REMOTE ACCESS",
       f18_h: "SFTP, FTP/FTPS and WebDAV — the explorer reaches the server.",
       f18_p: "Connect to SFTP, FTP/FTPS and WebDAV (Nextcloud, ownCloud, NAS, IIS). Browse, preview, upload and download, create folders, rename and copy/move — with <em>byte-level progress</em> and cancel. Edit remote files locally and <em>sync on save</em>. Password or <em>SSH key</em> auth; secrets encrypted with DPAPI.",
       f18_mark: "SFTP · FTP/FTPS · WebDAV",
-      f18_free: "Free: 1 connection — browse + preview. PREMIUM unlocks multiple connections and all operations.",
-      f18_premium: "PREMIUM: minimum €19.99 donation (PayPal) — activated in the app with your Machine ID.",
+      f18_free: "Free: 1 SFTP/FTP/FTPS connection — browse and preview only. PREMIUM unlocks WebDAV, multiple connections and all operations.",
       f19_num: "19 — CLOUDS",
       f19_h: "Dropbox and OneDrive — your cloud inside the explorer.",
       f19_p: "Connect to <em>Dropbox</em> and <em>OneDrive</em> via secure OAuth — no passwords stored. Browse, preview, upload and download, create folders, rename and copy/move, like a local folder. Your files never pass through our servers.",
       f19_mark: "Dropbox · OneDrive",
-      f19_soon: "Dropbox and OneDrive — available now.",
-      f19_premium: "PREMIUM (like SFTP/FTP/FTPS): multiple connections and all operations. €19.99 donation (PayPal).",
+      f19_premium: "PREMIUM: required from the first connection — browsing, preview and all operations.",
       f20_num: "20 — BOOKS & COMICS",
       f20_h: "Eight book formats — preview and read, without leaving the explorer.",
       f20_p: "Instant preview of any <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> or <em>.fb2</em>: cover, table of contents and the opening text. Open the full book in its own reader, with chapter navigation, page jump, <em>auto-scroll</em> and your reading position remembered. Comics too: <em>.cbz</em> and <em>.cbr</em> open page by page, without unpacking hundreds of megabytes first.",
@@ -2208,16 +2292,13 @@
       f28_mark: "Record silent · Narrate over the video · Music · Volumes · Video + narration + music → final",
       f28_premium: "PREMIUM. The video and narration stay as separate files; only “Generate final” creates the mixed video.",
       wn_label: "✦ What's new",
+      wn_books: "📚 Books & comics",
       wn_voice: "🎙 Voice over",
       wn_cards: "🎬 Branding cards",
       wn_screen: "🖥 Screen recording",
-      wn_cloud: "☁ Clouds & remotes",
       f24_premium: "Free: 1 flatbed page, with a watermark. PREMIUM: multiple pages, feeder (ADF) and no watermark.",
-      f18_soon: "Clouds (Dropbox, OneDrive) — available. S3 and rclone — coming soon.",
       ft_ch_standalone: "Standalone (.exe)",
       ft_ch_portable: "Standalone (.zip)",
-      ft_ch_clickonce: "ClickOnce",
-      ft_soon: "coming soon",
 
       sc_num: "§ 02 · Shortcuts",
       sc_title: "Hands on<br>the <em>home row</em>.",
@@ -2241,6 +2322,15 @@
       st_preview_ic: "PREVIEW",
       st_preview: "Syntax highlight, markdown renderer, and embedded Edge engine for PDF.",
       st_util: "For sending to the <em>Recycle Bin</em> — the only honest way, and it works.",
+      st_licences: "The <strong>complete list travels inside the program</strong>, with every author and the full licence texts — under <em>About → Third-party licences</em>.",
+      st_remote_ic: "REMOTE",
+      st_remote: "SFTP through SSH.NET; FTP and FTPS through FluentFTP. Mature, and boring in the good way.",
+      st_nosdk_ic: "NO SDK",
+      st_nosdk: "WebDAV, Dropbox and OneDrive are written by hand against their HTTP APIs. No vendor SDK to age badly.",
+      st_capture_ic: "CAPTURE",
+      st_capture: "Microphone and system sound through NAudio and WASAPI; the scanner through NTwain, the TWAIN standard.",
+      st_archives_ic: "ARCHIVES",
+      st_archives: "ZIP, RAR, 7z and TAR read in place, so an archive opens like a folder.",
 
       nav_premium: "Premium",
       pr_num: "§ 04 · Free and Premium",
@@ -2260,7 +2350,6 @@
       ft_tagline: "The minimal explorer for people who always work in the same places — and want the tool to know it.",
       ft_get: "Get it",
       ft_releases: "Releases",
-      ft_changelog: "Changelog",
       ft_project: "Project",
       nav_guide: "How it works",
       nav_privacy: "Privacy",
@@ -2279,7 +2368,7 @@
 
       hero_eyebrow: "Ein Dateiexplorer · WPF · .NET 10",
       hero_title: 'Der Explorer,<br>der sich <em>konzentriert</em><br>auf das, was <span class="strike">nicht</span> zählt.',
-      hero_lede: "ExplorerFocus ist ein schlanker Ersatz für den Windows-Explorer, entworfen für Menschen, die immer in denselben Ordnern arbeiten. Konfigurierbare Profile, aufgeräumte Bäume, reichhaltige Vorschau, Operationen mit echten Informationen — ohne den Lärm der Shell.",
+      hero_lede: "ExplorerFocus ist ein Ersatz für den Windows-Explorer, für Menschen, die immer in denselben Ordnern arbeiten. Konfigurierbare Profile, aufgeräumte Bäume, eine Vorschau, die fast alles öffnet — Code, Dokumente, Bücher — und Operationen, die dir wirklich sagen, was passiert. Ohne den Lärm der Shell.",
       hero_meta_os: "Windows 10 / 11",
       hero_meta_pkg: "Self-contained · single-file",
       hero_meta_size: "~112 MB",
@@ -2413,18 +2502,17 @@
       f17_p: "Self-contained, single-file, komprimiert. Kopiere auf einen USB-Stick und es läuft auf jedem Windows 10/11. <em>net10.0-windows</em> + WPF — keine Abhängigkeiten außerhalb des Programmordners.",
 
       badge_pro: "PREMIUM",
+      badge_free: "Kostenlos",
       f18_num: "18 — REMOTE-ZUGRIFF",
       f18_h: "SFTP, FTP/FTPS und WebDAV — der Explorer erreicht den Server.",
       f18_p: "Verbinde dich mit SFTP, FTP/FTPS und WebDAV (Nextcloud, ownCloud, NAS, IIS). Durchsuchen, Vorschau, Hoch- und Herunterladen, Ordner erstellen, umbenennen und kopieren/verschieben — mit <em>Byte-genauem Fortschritt</em> und Abbrechen. Bearbeite entfernte Dateien lokal und <em>synchronisiere beim Speichern</em>. Passwort- oder <em>SSH-Schlüssel</em>-Authentifizierung; Geheimnisse mit DPAPI verschlüsselt.",
       f18_mark: "SFTP · FTP/FTPS · WebDAV",
-      f18_free: "Kostenlos: 1 Verbindung — Durchsuchen + Vorschau. PREMIUM schaltet mehrere Verbindungen und alle Operationen frei.",
-      f18_premium: "PREMIUM: Mindestspende 19,99 € (PayPal) — Aktivierung in der App mit deiner Machine ID.",
+      f18_free: "Kostenlos: 1 SFTP/FTP/FTPS-Verbindung — nur Durchsuchen und Vorschau. PREMIUM schaltet WebDAV, mehrere Verbindungen und alle Operationen frei.",
       f19_num: "19 — CLOUDS",
       f19_h: "Dropbox und OneDrive — deine Cloud im Explorer.",
       f19_p: "Verbinde dich mit <em>Dropbox</em> und <em>OneDrive</em> per sicherem OAuth — ohne Passwörter zu speichern. Durchsuchen, Vorschau, Hoch- und Herunterladen, Ordner erstellen, umbenennen und kopieren/verschieben, wie ein lokaler Ordner. Deine Dateien laufen nie über unsere Server.",
       f19_mark: "Dropbox · OneDrive",
-      f19_soon: "Dropbox und OneDrive — jetzt verfügbar.",
-      f19_premium: "PREMIUM (wie SFTP/FTP/FTPS): mehrere Verbindungen und alle Operationen. Spende 19,99 € (PayPal).",
+      f19_premium: "PREMIUM: schon ab der ersten Verbindung nötig — Durchsuchen, Vorschau und alle Operationen.",
       f20_num: "20 — BÜCHER & COMICS",
       f20_h: "Acht Buchformate — Vorschau und Lesen, ohne den Explorer zu verlassen.",
       f20_p: "Sofortige Vorschau jeder <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> oder <em>.fb2</em>: Cover, Inhaltsverzeichnis und der Textanfang. Öffne das ganze Buch in einem eigenen Reader — mit Kapitelnavigation, Seitensprung, <em>Auto-Scrollen</em> und gemerkter Leseposition. Auch Comics: <em>.cbz</em> und <em>.cbr</em> öffnen Seite für Seite, ohne vorher Hunderte Megabyte zu entpacken.",
@@ -2468,16 +2556,13 @@
       f28_mark: "Stumm aufnehmen · Über das Video sprechen · Musik · Lautstärken · Video + Erzählung + Musik → final",
       f28_premium: "PREMIUM. Video und Erzählung bleiben getrennte Dateien; erst „Finale erzeugen“ erstellt das gemischte Video.",
       wn_label: "✦ Neu",
+      wn_books: "📚 Bücher & Comics",
       wn_voice: "🎙 Voice-over",
       wn_cards: "🎬 Marken-Karten",
       wn_screen: "🖥 Bildschirmaufnahme",
-      wn_cloud: "☁ Clouds & Remote",
       f24_premium: "Kostenlos: 1 Flachbett-Seite, mit Wasserzeichen. PREMIUM: mehrere Seiten, Einzug (ADF) und ohne Wasserzeichen.",
-      f18_soon: "Clouds (Dropbox, OneDrive) — verfügbar. S3 und rclone — bald.",
       ft_ch_standalone: "Standalone (.exe)",
       ft_ch_portable: "Standalone (.zip)",
-      ft_ch_clickonce: "ClickOnce",
-      ft_soon: "bald",
 
       sc_num: "§ 02 · Tastenkürzel",
       sc_title: "Hände auf<br>der <em>Home Row</em>.",
@@ -2501,6 +2586,15 @@
       st_preview_ic: "VORSCHAU",
       st_preview: "Syntax-Highlight, Markdown-Renderer und eingebettete Edge-Engine für PDF.",
       st_util: "Zum Senden in den <em>Papierkorb</em> — der einzige ehrliche Weg, und er funktioniert.",
+      st_licences: "Die <strong>vollständige Liste reist im Programm mit</strong>, mit allen Autoren und den vollständigen Lizenztexten — unter <em>Über → Lizenzen Dritter</em>.",
+      st_remote_ic: "REMOTE",
+      st_remote: "SFTP über SSH.NET; FTP und FTPS über FluentFTP. Ausgereift, und langweilig im guten Sinne.",
+      st_nosdk_ic: "OHNE SDK",
+      st_nosdk: "WebDAV, Dropbox und OneDrive sind von Hand gegen ihre HTTP-APIs geschrieben. Kein Hersteller-SDK, das schlecht altert.",
+      st_capture_ic: "AUFNAHME",
+      st_capture: "Mikrofon und Systemton über NAudio und WASAPI; der Scanner über NTwain, den TWAIN-Standard.",
+      st_archives_ic: "ARCHIVE",
+      st_archives: "ZIP, RAR, 7z und TAR werden an Ort und Stelle gelesen, damit ein Archiv sich wie ein Ordner öffnet.",
 
       nav_premium: "Premium",
       pr_num: "§ 04 · Kostenlos und Premium",
@@ -2520,7 +2614,6 @@
       ft_tagline: "Der minimale Explorer für Menschen, die immer an denselben Orten arbeiten — und wollen, dass das Werkzeug das weiß.",
       ft_get: "Herunterladen",
       ft_releases: "Releases",
-      ft_changelog: "Changelog",
       ft_project: "Projekt",
       nav_guide: "So funktioniert's",
       nav_privacy: "Datenschutz",
@@ -2539,7 +2632,7 @@
 
       hero_eyebrow: "文件浏览器 · WPF · .NET 10",
       hero_title: '专注于<br><em>真正</em>重要的事,<br><span class="strike">忽略</span>其它一切的浏览器。',
-      hero_lede: "ExplorerFocus 是一款轻量级的 Windows 资源管理器替代品,为那些总在相同文件夹中工作的人而设计。可配置的配置文件、整洁的目录树、丰富的预览、能告诉你真实情况的文件操作 — 没有 Shell 的喧嚣。",
+      hero_lede: "ExplorerFocus 是 Windows 资源管理器的替代品，为那些总在相同文件夹中工作的人而设计。可配置的配置文件、整洁的目录树、几乎什么都能打开的预览 — 代码、文档、图书 — 以及能告诉你真实情况的文件操作。没有 Shell 的喧嚣。",
       hero_meta_os: "Windows 10 / 11",
       hero_meta_pkg: "自包含 · 单文件",
       hero_meta_size: "约 112 MB",
@@ -2673,18 +2766,17 @@
       f17_p: "自包含、单文件、压缩。复制到 U 盘,可在任意 Windows 10/11 上运行。<em>net10.0-windows</em> + WPF — 可执行文件之外没有任何依赖。",
 
       badge_pro: "PREMIUM",
+      badge_free: "免费",
       f18_num: "18 — 远程访问",
       f18_h: "SFTP、FTP/FTPS 和 WebDAV — 资源管理器直达服务器。",
       f18_p: "连接 SFTP、FTP/FTPS 和 WebDAV(Nextcloud、ownCloud、NAS、IIS)。浏览、预览、上传下载、新建文件夹、重命名与复制/移动 — 具备<em>字节级进度</em>与取消。在本地编辑远程文件并<em>保存即同步</em>。支持密码或 <em>SSH 密钥</em>认证;凭据以 DPAPI 加密。",
       f18_mark: "SFTP · FTP/FTPS · WebDAV",
-      f18_free: "免费版:1 个连接 — 浏览 + 预览。PREMIUM 解锁多连接与全部操作。",
-      f18_premium: "PREMIUM：通过 PayPal 最低捐赠 €19.99 — 在应用中用你的 Machine ID 激活。",
+      f18_free: "免费版：1 个 SFTP/FTP/FTPS 连接 — 仅浏览与预览。PREMIUM 解锁 WebDAV、多连接与全部操作。",
       f19_num: "19 — 云端",
       f19_h: "Dropbox 和 OneDrive — 把云端装进资源管理器。",
       f19_p: "通过安全的 OAuth 连接 <em>Dropbox</em> 和 <em>OneDrive</em>——不存储密码。浏览、预览、上传下载、新建文件夹、重命名和复制/移动，就像本地文件夹。你的文件绝不经过我们的服务器。",
       f19_mark: "Dropbox · OneDrive",
-      f19_soon: "Dropbox 和 OneDrive — 现已上线。",
-      f19_premium: "PREMIUM（与 SFTP/FTP/FTPS 一样）：多个连接和全部操作。捐赠 €19.99（PayPal）。",
+      f19_premium: "PREMIUM：从第一个连接起就需要 — 浏览、预览和全部操作。",
       f20_num: "20 — 图书与漫画",
       f20_h: "八种图书格式 — 在文件管理器内直接预览与阅读。",
       f20_p: "即时预览任意 <em>.epub</em>、<em>.mobi</em>、<em>.azw</em>、<em>.azw3</em>、<em>.prc</em> 或 <em>.fb2</em>：封面、目录和正文开头。在独立阅读器中打开整本书，支持章节导航、页面跳转、<em>自动滚动</em>，并记住你的阅读位置。漫画同样支持：<em>.cbz</em> 和 <em>.cbr</em> 逐页打开，无需先解压数百兆的文件。",
@@ -2728,16 +2820,13 @@
       f28_mark: "静音录制 · 为视频配音 · 音乐 · 音量 · 视频 + 旁白 + 音乐 → 最终",
       f28_premium: "PREMIUM。视频与旁白保持为单独文件；只有“生成最终”才会创建混合后的视频。",
       wn_label: "✦ 新功能",
+      wn_books: "📚 图书与漫画",
       wn_voice: "🎙 配音",
       wn_cards: "🎬 品牌卡片",
       wn_screen: "🖥 屏幕录制",
-      wn_cloud: "☁ 云端与远程",
       f24_premium: "免费：平板 1 页，带水印。PREMIUM：多页、送稿器（ADF）且无水印。",
-      f18_soon: "云端（Dropbox、OneDrive）— 已上线。S3 和 rclone — 即将推出。",
       ft_ch_standalone: "独立版 (.exe)",
       ft_ch_portable: "独立版 (.zip)",
-      ft_ch_clickonce: "ClickOnce",
-      ft_soon: "即将推出",
 
       sc_num: "§ 02 · 快捷键",
       sc_title: "双手停留<br>在<em>主键行</em>。",
@@ -2761,6 +2850,15 @@
       st_preview_ic: "预览",
       st_preview: "语法高亮、Markdown 渲染、嵌入 Edge 引擎用于 PDF。",
       st_util: "用于送至<em>回收站</em> — 唯一诚实且可行的方式。",
+      st_licences: "<strong>完整清单随程序一起提供</strong>，包含每一位作者与完整的许可证文本 — 见<em>「关于 → 第三方许可证」</em>。",
+      st_remote_ic: "远程",
+      st_remote: "SFTP 通过 SSH.NET；FTP 和 FTPS 通过 FluentFTP。成熟，而且是那种好的无趣。",
+      st_nosdk_ic: "无 SDK",
+      st_nosdk: "WebDAV、Dropbox 和 OneDrive 都是直接对着它们的 HTTP API 手写的。没有会过时的厂商 SDK。",
+      st_capture_ic: "采集",
+      st_capture: "麦克风与系统声音通过 NAudio 和 WASAPI；扫描仪通过 NTwain，即 TWAIN 标准。",
+      st_archives_ic: "压缩包",
+      st_archives: "ZIP、RAR、7z 和 TAR 就地读取，压缩包像文件夹一样打开。",
 
       nav_premium: "高级版",
       pr_num: "§ 04 · 免费与高级版",
@@ -2769,7 +2867,7 @@
       pr_free_h: "免费",
       pr_free_tag: "永久 · 无需账号",
       pr_free_list: "<li>配置档、可自定义目录树、多模式搜索</li><li>预览：代码、PDF、Word/Excel、Markdown、图片、图书</li><li>文件操作：真实进度、速度、剩余时间、历史记录与冲突处理</li><li>终端、按扩展名关联应用、把压缩包当文件夹浏览</li><li>完整深色主题、12 种语言、自动更新</li><li>录音（麦克风）</li><li><strong>1 个远程连接</strong>（SFTP/FTP/FTPS）— 浏览与预览</li>",
-      pr_prem_h: "高级版",
+      pr_prem_h: "PREMIUM",
       pr_prem_tag: "一次性捐赠 19,99 € · 按设备授权",
       pr_prem_list: "<li><strong>完整远程访问</strong>：多个连接、全部操作、WebDAV、Dropbox、OneDrive</li><li>屏幕录制<strong>无水印、无时长限制、带声音</strong></li><li>摄像头录制无水印</li><li>音频混合麦克风 + 系统声音</li><li>多页扫描，支持自动进纸器（ADF）</li><li>完整图书阅读器 — EPUB、Kindle 格式、FB2 和漫画</li><li>录制的片头/片尾卡片与文字横幅</li>",
       pr_how_h: "如何获得",
@@ -2780,7 +2878,6 @@
       ft_tagline: "为那些总在相同地方工作、并希望工具也知道这一点的人,设计的极简浏览器。",
       ft_get: "下载",
       ft_releases: "发行版",
-      ft_changelog: "更新日志",
       ft_project: "项目",
       nav_guide: "操作演示",
       nav_privacy: "隐私",
@@ -2799,7 +2896,7 @@
 
       hero_eyebrow: "Un explorateur de fichiers · WPF · .NET 10",
       hero_title: "L'explorateur<br>qui se <em>concentre</em><br>sur ce qui compte <span class=\"strike\">le moins</span>.",
-      hero_lede: "ExplorerFocus est un remplaçant léger de l'Explorateur Windows, conçu pour ceux qui travaillent toujours dans les mêmes dossiers. Profils configurables, arborescences épurées, aperçu riche, des opérations qui vous disent vraiment ce qui se passe — sans le bruit du shell.",
+      hero_lede: "ExplorerFocus est un remplaçant de l'Explorateur Windows, pour ceux qui travaillent toujours dans les mêmes dossiers. Profils configurables, arborescences épurées, un aperçu qui ouvre presque tout — code, documents, livres — et des opérations qui vous disent vraiment ce qui se passe. Sans le bruit du shell.",
       hero_meta_os: "Windows 10 / 11",
       hero_meta_pkg: "Autonome · fichier unique",
       hero_meta_size: "~112 Mo",
@@ -2933,18 +3030,17 @@
       f17_p: "Autonome, fichier unique, compressé. Copiez-le sur une clé USB et il tourne sur n'importe quel Windows 10/11. <em>net10.0-windows</em> + WPF — aucune dépendance hors du dossier de l'exécutable.",
 
       badge_pro: "PREMIUM",
+      badge_free: "Gratuit",
       f18_num: "18 — ACCÈS DISTANT",
       f18_h: "SFTP, FTP/FTPS et WebDAV — l'explorateur atteint le serveur.",
       f18_p: "Connectez-vous en SFTP, FTP/FTPS et WebDAV (Nextcloud, ownCloud, NAS, IIS). Naviguez, prévisualisez, envoyez et téléchargez, créez des dossiers, renommez et copiez/déplacez — avec une <em>progression à l'octet près</em> et l'annulation. Éditez les fichiers distants en local et <em>synchronisez à l'enregistrement</em>. Authentification par mot de passe ou <em>clé SSH</em> ; secrets chiffrés avec DPAPI.",
       f18_mark: "SFTP · FTP/FTPS · WebDAV",
-      f18_free: "Gratuit : 1 connexion — navigation + aperçu. PREMIUM débloque plusieurs connexions et toutes les opérations.",
-      f18_premium: "PREMIUM : don minimum de 19,99 € (PayPal) — activé dans l'app avec votre Machine ID.",
+      f18_free: "Gratuit : 1 connexion SFTP/FTP/FTPS — navigation et aperçu seulement. PREMIUM débloque WebDAV, plusieurs connexions et toutes les opérations.",
       f19_num: "19 — CLOUDS",
       f19_h: "Dropbox et OneDrive — votre cloud dans l'explorateur.",
       f19_p: "Connectez-vous à <em>Dropbox</em> et <em>OneDrive</em> via OAuth sécurisé — aucun mot de passe stocké. Naviguez, prévisualisez, envoyez et téléchargez, créez des dossiers, renommez et copiez/déplacez, comme un dossier local. Vos fichiers ne passent jamais par nos serveurs.",
       f19_mark: "Dropbox · OneDrive",
-      f19_soon: "Dropbox et OneDrive — disponibles dès maintenant.",
-      f19_premium: "PREMIUM (comme SFTP/FTP/FTPS) : plusieurs connexions et toutes les opérations. Don de 19,99 € (PayPal).",
+      f19_premium: "PREMIUM : nécessaire dès la première connexion — navigation, aperçu et toutes les opérations.",
       f20_num: "20 — LIVRES ET BD",
       f20_h: "Huit formats de livre — prévisualisez et lisez, sans quitter l'explorateur.",
       f20_p: "Aperçu instantané de n'importe quel <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> ou <em>.fb2</em> : couverture, table des matières et le début du texte. Ouvrez le livre entier dans son propre lecteur, avec navigation par chapitre, saut de page, <em>défilement automatique</em> et votre position de lecture mémorisée. La BD aussi : <em>.cbz</em> et <em>.cbr</em> s'ouvrent page par page, sans décompresser des centaines de mégaoctets au préalable.",
@@ -2989,16 +3085,13 @@
       f28_mark: "Enregistrer muet · Commenter la vidéo · Musique · Volumes · Vidéo + narration + musique → finale",
       f28_premium: "PREMIUM. La vidéo et la narration restent des fichiers séparés ; seul « Générer la finale » crée la vidéo mixée.",
       wn_label: "✦ Nouveautés",
+      wn_books: "📚 Livres et BD",
       wn_voice: "🎙 Voix off",
       wn_cards: "🎬 Cartes de marque",
       wn_screen: "🖥 Enregistrement d'écran",
-      wn_cloud: "☁ Clouds & distants",
       f24_premium: "Gratuit : 1 page à plat, avec filigrane. PREMIUM : plusieurs pages, chargeur (ADF) et sans filigrane.",
-      f18_soon: "Clouds (Dropbox, OneDrive) — disponibles. S3 et rclone — bientôt.",
       ft_ch_standalone: "Autonome (.exe)",
       ft_ch_portable: "Autonome (.zip)",
-      ft_ch_clickonce: "ClickOnce",
-      ft_soon: "bientôt",
 
       sc_num: "§ 02 · Raccourcis",
       sc_title: "Les mains sur<br>la <em>rangée de repos</em>.",
@@ -3022,6 +3115,15 @@
       st_preview_ic: "APERÇU",
       st_preview: "Coloration syntaxique, moteur de rendu markdown, et moteur Edge embarqué pour les PDF.",
       st_util: "Pour l'envoi à la <em>Corbeille</em> — la seule façon honnête, et ça marche.",
+      st_licences: "La <strong>liste complète voyage dans le programme</strong>, avec chaque auteur et les textes intégraux des licences — dans <em>À propos → Licences tierces</em>.",
+      st_remote_ic: "DISTANT",
+      st_remote: "SFTP via SSH.NET ; FTP et FTPS via FluentFTP. Matures, et ennuyeux dans le bon sens.",
+      st_nosdk_ic: "SANS SDK",
+      st_nosdk: "WebDAV, Dropbox et OneDrive sont écrits à la main contre leurs API HTTP. Aucun SDK d'éditeur qui vieillit mal.",
+      st_capture_ic: "CAPTURE",
+      st_capture: "Microphone et son système via NAudio et WASAPI ; le scanner via NTwain, le standard TWAIN.",
+      st_archives_ic: "ARCHIVES",
+      st_archives: "ZIP, RAR, 7z et TAR lus sur place, pour qu'une archive s'ouvre comme un dossier.",
 
       nav_premium: "Premium",
       pr_num: "§ 04 · Gratuit et Premium",
@@ -3041,7 +3143,6 @@
       ft_tagline: "L'explorateur minimal pour ceux qui travaillent toujours aux mêmes endroits — et qui veulent que l'outil le sache.",
       ft_get: "Télécharger",
       ft_releases: "Versions",
-      ft_changelog: "Journal des changements",
       ft_project: "Projet",
       nav_guide: "Comment ça marche",
       nav_privacy: "Confidentialité",
@@ -3060,7 +3161,7 @@
 
       hero_eyebrow: "Un explorador de archivos · WPF · .NET 10",
       hero_title: "El explorador<br>que se <em>centra</em><br>en lo que <span class=\"strike\">no</span> importa.",
-      hero_lede: "ExplorerFocus es un reemplazo ligero del Explorador de Windows, diseñado para quienes trabajan siempre en las mismas carpetas. Perfiles configurables, árboles limpios, vista previa rica, operaciones que de verdad te dicen qué está pasando — sin el ruido del shell.",
+      hero_lede: "ExplorerFocus es un reemplazo del Explorador de Windows, para quienes trabajan siempre en las mismas carpetas. Perfiles configurables, árboles limpios, una vista previa que abre casi todo — código, documentos, libros — y operaciones que de verdad te dicen qué está pasando. Sin el ruido del shell.",
       hero_meta_os: "Windows 10 / 11",
       hero_meta_pkg: "Autónomo · archivo único",
       hero_meta_size: "~112 MB",
@@ -3194,18 +3295,17 @@
       f17_p: "Autónomo, archivo único, comprimido. Cópialo a un pendrive y corre en cualquier Windows 10/11. <em>net10.0-windows</em> + WPF — sin dependencias fuera de la carpeta del ejecutable.",
 
       badge_pro: "PREMIUM",
+      badge_free: "Gratis",
       f18_num: "18 — ACCESO REMOTO",
       f18_h: "SFTP, FTP/FTPS y WebDAV — el explorador llega al servidor.",
       f18_p: "Conéctate por SFTP, FTP/FTPS y WebDAV (Nextcloud, ownCloud, NAS, IIS). Navega, previsualiza, sube y descarga, crea carpetas, renombra y copia/mueve — con <em>progreso byte a byte</em> y cancelación. Edita archivos remotos en local y <em>sincroniza al guardar</em>. Autenticación por contraseña o <em>clave SSH</em>; secretos cifrados con DPAPI.",
       f18_mark: "SFTP · FTP/FTPS · WebDAV",
-      f18_free: "Gratis: 1 conexión — navegar + vista previa. PREMIUM desbloquea varias conexiones y todas las operaciones.",
-      f18_premium: "PREMIUM: donación mínima de 19,99 € (PayPal) — activada en la app con tu Machine ID.",
+      f18_free: "Gratis: 1 conexión SFTP/FTP/FTPS — solo navegar y previsualizar. PREMIUM desbloquea WebDAV, varias conexiones y todas las operaciones.",
       f19_num: "19 — NUBES",
       f19_h: "Dropbox y OneDrive — tu nube dentro del explorador.",
       f19_p: "Conéctate a <em>Dropbox</em> y <em>OneDrive</em> vía OAuth seguro — sin contraseñas almacenadas. Navega, previsualiza, sube y descarga, crea carpetas, renombra y copia/mueve, como una carpeta local. Tus archivos nunca pasan por nuestros servidores.",
       f19_mark: "Dropbox · OneDrive",
-      f19_soon: "Dropbox y OneDrive — disponibles ahora.",
-      f19_premium: "PREMIUM (como SFTP/FTP/FTPS): varias conexiones y todas las operaciones. Donación de 19,99 € (PayPal).",
+      f19_premium: "PREMIUM: necesario desde la primera conexión — navegar, previsualizar y todas las operaciones.",
       f20_num: "20 — LIBROS Y CÓMICS",
       f20_h: "Ocho formatos de libro — previsualiza y lee, sin salir del explorador.",
       f20_p: "Vista previa instantánea de cualquier <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> o <em>.fb2</em>: portada, índice y el comienzo del texto. Abre el libro completo en su propio lector, con navegación por capítulos, salto de página, <em>desplazamiento automático</em> y tu posición de lectura recordada. También cómics: <em>.cbz</em> y <em>.cbr</em> se abren página a página, sin descomprimir cientos de megabytes primero.",
@@ -3250,16 +3350,13 @@
       f28_mark: "Grabar en silencio · Narrar sobre el vídeo · Música · Volúmenes · Vídeo + narración + música → final",
       f28_premium: "PREMIUM. El vídeo y la narración quedan como archivos separados; solo «Generar final» crea el vídeo mezclado.",
       wn_label: "✦ Novedades",
+      wn_books: "📚 Libros y cómics",
       wn_voice: "🎙 Voz en off",
       wn_cards: "🎬 Tarjetas de marca",
       wn_screen: "🖥 Grabación de pantalla",
-      wn_cloud: "☁ Nubes y remotos",
       f24_premium: "Gratis: 1 página en plano, con marca de agua. PREMIUM: varias páginas, alimentador (ADF) y sin marca de agua.",
-      f18_soon: "Nubes (Dropbox, OneDrive) — disponibles. S3 y rclone — pronto.",
       ft_ch_standalone: "Autónomo (.exe)",
       ft_ch_portable: "Autónomo (.zip)",
-      ft_ch_clickonce: "ClickOnce",
-      ft_soon: "pronto",
 
       sc_num: "§ 02 · Atajos",
       sc_title: "Las manos en<br>la <em>fila central</em>.",
@@ -3283,6 +3380,15 @@
       st_preview_ic: "VISTA PREVIA",
       st_preview: "Resaltado de sintaxis, renderizador de markdown y motor Edge embebido para PDF.",
       st_util: "Para enviar a la <em>Papelera</em> — la única forma honesta, y funciona.",
+      st_licences: "La <strong>lista completa viaja dentro del programa</strong>, con cada autor y los textos íntegros de las licencias — en <em>Acerca de → Licencias de terceros</em>.",
+      st_remote_ic: "REMOTO",
+      st_remote: "SFTP mediante SSH.NET; FTP y FTPS mediante FluentFTP. Maduros, y aburridos en el buen sentido.",
+      st_nosdk_ic: "SIN SDK",
+      st_nosdk: "WebDAV, Dropbox y OneDrive están escritos a mano contra sus APIs HTTP. Sin SDK del proveedor que envejezca mal.",
+      st_capture_ic: "CAPTURA",
+      st_capture: "Micrófono y sonido del sistema con NAudio y WASAPI; el escáner con NTwain, el estándar TWAIN.",
+      st_archives_ic: "ARCHIVOS",
+      st_archives: "ZIP, RAR, 7z y TAR leídos en el sitio, para que un archivo se abra como una carpeta.",
 
       nav_premium: "Premium",
       pr_num: "§ 04 · Gratis y Premium",
@@ -3302,7 +3408,6 @@
       ft_tagline: "El explorador mínimo para quienes trabajan siempre en los mismos sitios — y quieren que la herramienta lo sepa.",
       ft_get: "Descargar",
       ft_releases: "Versiones",
-      ft_changelog: "Registro de cambios",
       ft_project: "Proyecto",
       nav_guide: "Cómo funciona",
       nav_privacy: "Privacidad",
@@ -3343,7 +3448,25 @@
       b.classList.toggle('active', b.getAttribute('data-lang') === lang);
     });
 
+    highlightPremium();
+
     try { localStorage.setItem('ef_lang', lang); } catch (e) {}
+  }
+
+  /* Destaca a palavra PREMIUM nas notas dos cartões — preto sobre amarelo, como o selo
+     do topo. Ninguém deve ficar iludido a pensar que a funcionalidade inteira é grátis.
+
+     Porquê em JS e não nas traduções: "PREMIUM" é a mesma palavra nas 6 línguas, por
+     isso um só sítio chega. Marcá-la à mão obrigaria a um <b> em cada string traduzida
+     (e o applyI18n escreve textContent, que apagaria a marcação na troca de língua).
+     Corre no fim do applyI18n, portanto também na carga inicial. */
+  function highlightPremium() {
+    const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    document.querySelectorAll('.feat-note span').forEach(el => {
+      const t = el.textContent;
+      if (!t.includes('PREMIUM')) return;
+      el.innerHTML = esc(t).replace(/PREMIUM/g, '<a class="prem-word" href="#premium">PREMIUM</a>');
+    });
   }
 
   /* Pick initial language: stored → browser → pt */

@@ -7,7 +7,7 @@
 <meta name="description" data-i18n-attr="content" data-i18n="page_desc" content="A focused alternative to Windows Explorer. Profiles, configurable trees, rich operations, preview — all centered on what matters.">
 
 <!-- ===== SEO ===== -->
-<meta name="keywords" content="ExplorerFocus, file explorer, windows explorer alternative, file manager, explorador de ficheiros, alternativa ao Windows Explorer, gestor de ficheiros, file manager, cliente SFTP, FTP, FTPS, WebDAV, Dropbox, OneDrive, pré-visualização, file preview, Word, Excel, PowerPoint, RTF, OpenDocument, EPUB, ebook, leitor de EPUB, epub reader, gravar áudio, gravar vídeo, gravar ecrã, screen recording, captura de ecrã, screen capture, PiP, picture-in-picture, ecrã dividido, digitalizar, scanner, ADF, PDF, câmara, microfone, Windows 10, Windows 11, .NET 10, WPF, perfis, produtividade">
+<meta name="keywords" content="ExplorerFocus, file explorer, windows explorer alternative, file manager, explorador de ficheiros, alternativa ao Windows Explorer, gestor de ficheiros, file manager, cliente SFTP, FTP, FTPS, WebDAV, Dropbox, OneDrive, pré-visualização, file preview, Word, Excel, PowerPoint, RTF, OpenDocument, EPUB, MOBI, AZW, AZW3, PRC, FB2, CBZ, CBR, ebook, ebook reader, leitor de livros, epub reader, mobi reader, kindle formats, comic reader, banda desenhada, gravar áudio, gravar vídeo, gravar ecrã, screen recording, captura de ecrã, screen capture, PiP, picture-in-picture, ecrã dividido, digitalizar, scanner, ADF, PDF, câmara, microfone, Windows 10, Windows 11, .NET 10, WPF, perfis, produtividade">
 <meta name="author" content="mBrothers">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#0E0F11">
@@ -49,7 +49,7 @@
   "description": "A focused alternative to Windows Explorer: profiles, configurable trees, honest file operations, rich preview and remote access (SFTP/FTP/FTPS/WebDAV).",
   "url": "https://nunex-mbrothers.github.io/ExplorerFocus/",
   "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
-  "softwareVersion": "1.2.20",
+  "softwareVersion": "1.2.21",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
   "author": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/" }
 }
@@ -583,6 +583,9 @@
     background: var(--accent); color: #18120a; vertical-align: middle;
   }
   .feat-note { margin-top: 16px; font-size: 12.5px; line-height: 1.55; color: var(--fg-2); }
+  /* Nota de rodapé do cartão — deliberadamente discreta: quem chega aqui já desceu
+     o cartão todo. Não trava ninguém à entrada. */
+  .feat-drm { display: block; margin-top: 9px; font-size: 11.5px; color: var(--fg-3); }
   .feat-note .soon { color: var(--fg-3); }
   .footer-col a.soon { color: var(--fg-3); pointer-events: none; }
   .feat.w4 { grid-column: span 4; }
@@ -1073,7 +1076,7 @@
       <a href="#stack" data-i18n="nav_stack">Stack</a>
       <a href="#premium" data-i18n="nav_premium">Premium</a>
       <a href="#download" data-i18n="nav_download">Get it</a>
-      <span class="nav-version">v1.2.20</span>
+      <span class="nav-version">v1.2.21</span>
     </nav>
   </div>
 </header>
@@ -1227,7 +1230,7 @@
     <a href="#feat26" data-i18n="wn_screen">🖥 Screen recording</a>
     <a href="#feat19" data-i18n="wn_cloud">☁ Clouds & remotes</a>
   </nav>
-  <span class="whatsnew-ver">v1.2.20</span>
+  <span class="whatsnew-ver">v1.2.21</span>
 </div>
 
 <!-- CATALOG -->
@@ -1407,13 +1410,14 @@
   </div>
 
   <div class="feat w12">
-    <div class="num"><span data-i18n="f20_num">20 — BOOKS / EPUB</span><span class="badge-pro" data-i18n="badge_pro">PREMIUM</span></div>
-    <h3 data-i18n="f20_h">EPUB — preview and read, without leaving the explorer.</h3>
-    <p data-i18n-html="f20_p">Instant preview of any <em>.epub</em>: cover, table of contents and a text excerpt. Open the full book in its own reader, with chapter navigation, page jump, <em>auto-scroll</em> and your reading position remembered.</p>
-    <div class="feat-mark" data-i18n="f20_mark">Cover · Contents · Excerpt · Reader</div>
+    <div class="num"><span data-i18n="f20_num">20 — BOOKS &amp; COMICS</span><span class="badge-pro" data-i18n="badge_pro">PREMIUM</span></div>
+    <h3 data-i18n="f20_h">Eight book formats — preview and read, without leaving the explorer.</h3>
+    <p data-i18n-html="f20_p">Instant preview of any <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> or <em>.fb2</em>: cover, table of contents and the opening text. Open the full book in its own reader, with chapter navigation, page jump, <em>auto-scroll</em> and your reading position remembered. Comics too: <em>.cbz</em> and <em>.cbr</em> open page by page, without unpacking hundreds of megabytes first.</p>
+    <div class="feat-mark" data-i18n="f20_mark">EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR</div>
     <p class="feat-note">
-      <span data-i18n="f20_free">Free: preview — cover, contents and a text excerpt.</span><br>
+      <span data-i18n="f20_free">Free: preview — cover, contents and a first look inside.</span><br>
       <span data-i18n="f20_premium">PREMIUM: full reader — navigation, page jump, auto-scroll, page-turn and memory of your last 20 books.</span>
+      <span class="feat-drm" data-i18n="f20_note">Books you own open. Books bought with DRM stay locked to the store that sold them — the app explains why when it finds one.</span>
     </p>
   </div>
 
@@ -1584,13 +1588,13 @@
     <div class="prem-card">
       <h4 data-i18n="pr_free_h">Free</h4>
       <span class="prem-tag" data-i18n="pr_free_tag">forever · no account</span>
-      <ul data-i18n-html="pr_free_list"><li>Profiles, configurable trees, multi-pattern search</li><li>Preview: code, PDF, Word/Excel, Markdown, images</li><li>File operations with real progress, speed, ETA, history and conflicts</li><li>Terminals, per-extension app associations, archives as folders</li><li>Complete dark theme, 12 languages, auto-updates</li><li>Audio recording (microphone)</li><li><strong>1 remote connection</strong> (SFTP/FTP/FTPS) — browse and preview</li></ul>
+      <ul data-i18n-html="pr_free_list"><li>Profiles, configurable trees, multi-pattern search</li><li>Preview: code, PDF, Word/Excel, Markdown, images, books</li><li>File operations with real progress, speed, ETA, history and conflicts</li><li>Terminals, per-extension app associations, archives as folders</li><li>Complete dark theme, 12 languages, auto-updates</li><li>Audio recording (microphone)</li><li><strong>1 remote connection</strong> (SFTP/FTP/FTPS) — browse and preview</li></ul>
     </div>
 
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag">one-time €19.99 donation · per machine</span>
-      <ul data-i18n-html="pr_prem_list"><li><strong>Full remote access</strong>: multiple connections, all operations, WebDAV, Dropbox, OneDrive</li><li>Screen recording <strong>with no watermark, no time limit and with sound</strong></li><li>Video recording without watermark</li><li>Audio mixing microphone + system sound</li><li>Multi-page scanning with document feeder (ADF)</li><li>Full EPUB reader</li><li>Intro/end cards and text banner on recordings</li></ul>
+      <ul data-i18n-html="pr_prem_list"><li><strong>Full remote access</strong>: multiple connections, all operations, WebDAV, Dropbox, OneDrive</li><li>Screen recording <strong>with no watermark, no time limit and with sound</strong></li><li>Video recording without watermark</li><li>Audio mixing microphone + system sound</li><li>Multi-page scanning with document feeder (ADF)</li><li>Full book reader — EPUB, Kindle formats, FB2 and comics</li><li>Intro/end cards and text banner on recordings</li></ul>
     </div>
   </div>
 
@@ -1633,7 +1637,7 @@
   </div>
 
   <div class="footer-baseline">
-    <span>© 2026 <span class="brand-mb">mBrothers</span> · v1.2.20 · WPF · net10.0-windows · single-file</span>
+    <span>© 2026 <span class="brand-mb">mBrothers</span> · v1.2.21 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">designed for the daily grind</span>
     <span id="viewCounter" hidden title="Visitas à página"></span>
   </div>
@@ -1901,12 +1905,13 @@
       f19_mark: "Dropbox · OneDrive",
       f19_soon: "Dropbox e OneDrive — disponíveis agora.",
       f19_premium: "PREMIUM (tal como o SFTP/FTP/FTPS): várias ligações e todas as operações. Donativo 19,99 € (PayPal).",
-      f20_num: "20 — LIVROS / EPUB",
-      f20_h: "EPUB — pré-visualiza e lê, sem sair do explorer.",
-      f20_p: "Preview instantâneo de qualquer <em>.epub</em>: capa, índice e um excerto do texto. Abre o livro completo num leitor próprio, com navegação por capítulos, salto de página, <em>scroll automático</em> e o teu ponto de leitura guardado.",
-      f20_mark: "Capa · Índice · Excerto · Leitor",
-      f20_free: "Grátis: pré-visualização — capa, índice e excerto do texto.",
+      f20_num: "20 — LIVROS E BD",
+      f20_h: "Oito formatos de livro — pré-visualiza e lê, sem sair do explorador.",
+      f20_p: "Preview instantâneo de qualquer <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> ou <em>.fb2</em>: capa, índice e o início do texto. Abre o livro completo num leitor próprio, com navegação por capítulos, salto de página, <em>scroll automático</em> e o teu ponto de leitura guardado. E banda desenhada: <em>.cbz</em> e <em>.cbr</em> abrem página a página, sem desempacotar centenas de megabytes primeiro.",
+      f20_mark: "EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR",
+      f20_free: "Grátis: pré-visualização — capa, índice e um primeiro olhar lá dentro.",
       f20_premium: "PREMIUM: leitor completo — navegação, salto de página, scroll automático, virar de página e memória dos últimos 20 livros.",
+      f20_note: "Os livros que são teus abrem. Os comprados com DRM ficam presos à loja que os vendeu — a app explica porquê quando encontra um.",
       f21_num: "21 — VIEWERS DE DOCUMENTOS",
       f21_h: "Word, Excel, PowerPoint e mais — vê sem abrir nada.",
       f21_p: "Pré-visualiza <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> e <em>OpenDocument</em> (texto, folha e apresentação) direto no painel. Áudio e vídeo tocam no preview, com <em>janela flutuante</em> e controlos de volume e velocidade. Uma marca assinala os ficheiros com preview disponível; os protegidos por palavra-passe são avisados sem pedir a senha.",
@@ -1983,10 +1988,10 @@
       pr_blurb: "Sempre foi e continuará a ser: sem subscrição, sem conta, sem anúncios. O Premium é um donativo único — uma pequena recompensa pelas noites e dias a implementar funcionalidades muito específicas e tecnicamente exigentes. Não estou nisto pelo dinheiro: estou pelas ideias que aparecem pelo caminho. A maioria das pessoas nunca vai sentir falta do Premium — e é assim que deve ser.",
       pr_free_h: "Grátis",
       pr_free_tag: "para sempre · sem conta",
-      pr_free_list: "<li>Perfis, árvores configuráveis, pesquisa multi-padrão</li><li>Pré-visualização: código, PDF, Word/Excel, Markdown, imagens</li><li>Operações com progresso real, velocidade, ETA, histórico e conflitos</li><li>Terminais, associações por extensão, arquivos como pastas</li><li>Tema escuro completo, 12 idiomas, atualizações automáticas</li><li>Gravar áudio (microfone)</li><li><strong>1 ligação remota</strong> (SFTP/FTP/FTPS) — navegar e pré-visualizar</li>",
+      pr_free_list: "<li>Perfis, árvores configuráveis, pesquisa multi-padrão</li><li>Pré-visualização: código, PDF, Word/Excel, Markdown, imagens, livros</li><li>Operações com progresso real, velocidade, ETA, histórico e conflitos</li><li>Terminais, associações por extensão, arquivos como pastas</li><li>Tema escuro completo, 12 idiomas, atualizações automáticas</li><li>Gravar áudio (microfone)</li><li><strong>1 ligação remota</strong> (SFTP/FTP/FTPS) — navegar e pré-visualizar</li>",
       pr_prem_h: "Premium",
       pr_prem_tag: "donativo único de 19,99 € · por máquina",
-      pr_prem_list: "<li><strong>Acessos remotos completos</strong>: várias ligações, todas as operações, WebDAV, Dropbox, OneDrive</li><li>Gravação de ecrã <strong>sem marca de água, sem limite de tempo e com som</strong></li><li>Gravação de vídeo sem marca de água</li><li>Áudio com mistura de microfone + som do sistema</li><li>Digitalização multi-página com alimentador (ADF)</li><li>Leitor de EPUB completo</li><li>Cartões de abertura/fim e faixa de texto nas gravações</li>",
+      pr_prem_list: "<li><strong>Acessos remotos completos</strong>: várias ligações, todas as operações, WebDAV, Dropbox, OneDrive</li><li>Gravação de ecrã <strong>sem marca de água, sem limite de tempo e com som</strong></li><li>Gravação de vídeo sem marca de água</li><li>Áudio com mistura de microfone + som do sistema</li><li>Digitalização multi-página com alimentador (ADF)</li><li>Leitor de livros completo — EPUB, formatos Kindle, FB2 e BD</li><li>Cartões de abertura/fim e faixa de texto nas gravações</li>",
       pr_how_h: "Como obter",
       pr_how_list: "<li>Na app, clica no botão <strong>PREMIUM</strong> (canto superior direito).</li><li>Escreve o teu email — a app copia o teu <strong>Machine ID</strong> para a área de transferência.</li><li>Abre-se o PayPal: donativo mínimo de 19,99 €.</li><li>Envio-te a <strong>chave de ativação por email</strong>.</li><li>Colas a chave na app. A licença fica ligada a essa máquina.</li>",
       pr_note: "<strong>Nota:</strong> a chave é enviada à mão, por mim — por isso pode não ser imediata. O PayPal aparece em nome de <strong>LogViewer</strong>, o outro projeto da mesma casa (o PayPal só permite um destino por conta); a página confirma que sou o autor de ambos.",
@@ -2160,12 +2165,13 @@
       f19_mark: "Dropbox · OneDrive",
       f19_soon: "Dropbox and OneDrive — available now.",
       f19_premium: "PREMIUM (like SFTP/FTP/FTPS): multiple connections and all operations. €19.99 donation (PayPal).",
-      f20_num: "20 — BOOKS / EPUB",
-      f20_h: "EPUB — preview and read, without leaving the explorer.",
-      f20_p: "Instant preview of any <em>.epub</em>: cover, table of contents and a text excerpt. Open the full book in its own reader, with chapter navigation, page jump, <em>auto-scroll</em> and your reading position remembered.",
-      f20_mark: "Cover · Contents · Excerpt · Reader",
-      f20_free: "Free: preview — cover, contents and a text excerpt.",
+      f20_num: "20 — BOOKS & COMICS",
+      f20_h: "Eight book formats — preview and read, without leaving the explorer.",
+      f20_p: "Instant preview of any <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> or <em>.fb2</em>: cover, table of contents and the opening text. Open the full book in its own reader, with chapter navigation, page jump, <em>auto-scroll</em> and your reading position remembered. Comics too: <em>.cbz</em> and <em>.cbr</em> open page by page, without unpacking hundreds of megabytes first.",
+      f20_mark: "EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR",
+      f20_free: "Free: preview — cover, contents and a first look inside.",
       f20_premium: "PREMIUM: full reader — navigation, page jump, auto-scroll, page-turn and memory of your last 20 books.",
+      f20_note: "Books you own open. Books bought with DRM stay locked to the store that sold them — the app explains why when it finds one.",
       f21_num: "21 — DOCUMENT VIEWERS",
       f21_h: "Word, Excel, PowerPoint and more — see without opening anything.",
       f21_p: "Preview <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> and <em>OpenDocument</em> (text, sheet and presentation) right in the pane. Audio and video play in the preview, with a <em>floating window</em> and volume/speed controls. A marker flags files that have a preview; password-protected files are flagged without asking for the password.",
@@ -2242,10 +2248,10 @@
       pr_blurb: "It always has been and always will be: no subscription, no account, no ads. Premium is a one-time donation — a small reward for the nights and days spent building very specific, technically demanding features. I'm not in this for the money: I'm in it for the ideas that come along. Most people will never miss Premium — and that's how it should be.",
       pr_free_h: "Free",
       pr_free_tag: "forever · no account",
-      pr_free_list: "<li>Profiles, configurable trees, multi-pattern search</li><li>Preview: code, PDF, Word/Excel, Markdown, images</li><li>File operations with real progress, speed, ETA, history and conflicts</li><li>Terminals, per-extension app associations, archives as folders</li><li>Complete dark theme, 12 languages, auto-updates</li><li>Audio recording (microphone)</li><li><strong>1 remote connection</strong> (SFTP/FTP/FTPS) — browse and preview</li>",
+      pr_free_list: "<li>Profiles, configurable trees, multi-pattern search</li><li>Preview: code, PDF, Word/Excel, Markdown, images, books</li><li>File operations with real progress, speed, ETA, history and conflicts</li><li>Terminals, per-extension app associations, archives as folders</li><li>Complete dark theme, 12 languages, auto-updates</li><li>Audio recording (microphone)</li><li><strong>1 remote connection</strong> (SFTP/FTP/FTPS) — browse and preview</li>",
       pr_prem_h: "Premium",
       pr_prem_tag: "one-time €19.99 donation · per machine",
-      pr_prem_list: "<li><strong>Full remote access</strong>: multiple connections, all operations, WebDAV, Dropbox, OneDrive</li><li>Screen recording <strong>with no watermark, no time limit and with sound</strong></li><li>Video recording without watermark</li><li>Audio mixing microphone + system sound</li><li>Multi-page scanning with document feeder (ADF)</li><li>Full EPUB reader</li><li>Intro/end cards and text banner on recordings</li>",
+      pr_prem_list: "<li><strong>Full remote access</strong>: multiple connections, all operations, WebDAV, Dropbox, OneDrive</li><li>Screen recording <strong>with no watermark, no time limit and with sound</strong></li><li>Video recording without watermark</li><li>Audio mixing microphone + system sound</li><li>Multi-page scanning with document feeder (ADF)</li><li>Full book reader — EPUB, Kindle formats, FB2 and comics</li><li>Intro/end cards and text banner on recordings</li>",
       pr_how_h: "How to get it",
       pr_how_list: "<li>In the app, click the <strong>PREMIUM</strong> button (top right).</li><li>Enter your email — the app copies your <strong>Machine ID</strong> to the clipboard.</li><li>PayPal opens: minimum €19.99 donation.</li><li>I send you the <strong>activation key by email</strong>.</li><li>Paste the key into the app. The licence is tied to that machine.</li>",
       pr_note: "<strong>Note:</strong> the key is sent by hand, by me — so it may not be instant. PayPal shows up under <strong>LogViewer</strong>, the other project from the same house (PayPal only allows one destination per account); the page confirms I'm the author of both.",
@@ -2419,12 +2425,13 @@
       f19_mark: "Dropbox · OneDrive",
       f19_soon: "Dropbox und OneDrive — jetzt verfügbar.",
       f19_premium: "PREMIUM (wie SFTP/FTP/FTPS): mehrere Verbindungen und alle Operationen. Spende 19,99 € (PayPal).",
-      f20_num: "20 — BÜCHER / EPUB",
-      f20_h: "EPUB — Vorschau und Lesen, ohne den Explorer zu verlassen.",
-      f20_p: "Sofortige Vorschau jeder <em>.epub</em>: Cover, Inhaltsverzeichnis und ein Textauszug. Öffne das ganze Buch in einem eigenen Reader — mit Kapitelnavigation, Seitensprung, <em>Auto-Scrollen</em> und gemerkter Leseposition.",
-      f20_mark: "Cover · Inhalt · Auszug · Reader",
-      f20_free: "Kostenlos: Vorschau — Cover, Inhalt und ein Textauszug.",
+      f20_num: "20 — BÜCHER & COMICS",
+      f20_h: "Acht Buchformate — Vorschau und Lesen, ohne den Explorer zu verlassen.",
+      f20_p: "Sofortige Vorschau jeder <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> oder <em>.fb2</em>: Cover, Inhaltsverzeichnis und der Textanfang. Öffne das ganze Buch in einem eigenen Reader — mit Kapitelnavigation, Seitensprung, <em>Auto-Scrollen</em> und gemerkter Leseposition. Auch Comics: <em>.cbz</em> und <em>.cbr</em> öffnen Seite für Seite, ohne vorher Hunderte Megabyte zu entpacken.",
+      f20_mark: "EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR",
+      f20_free: "Kostenlos: Vorschau — Cover, Inhalt und ein erster Blick hinein.",
       f20_premium: "PREMIUM: voller Reader — Navigation, Seitensprung, Auto-Scrollen, Umblättern und Merken der letzten 20 Bücher.",
+      f20_note: "Bücher, die dir gehören, öffnen sich. Mit DRM gekaufte Bücher bleiben an den Shop gebunden, der sie verkauft hat — die App erklärt es, wenn sie eines findet.",
       f21_num: "21 — DOKUMENT-VIEWER",
       f21_h: "Word, Excel, PowerPoint und mehr — ansehen, ohne etwas zu öffnen.",
       f21_p: "Vorschau von <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> und <em>OpenDocument</em> (Text, Tabelle und Präsentation) direkt im Bereich. Audio und Video laufen in der Vorschau, mit <em>schwebendem Fenster</em> und Lautstärke-/Geschwindigkeitsreglern. Eine Markierung kennzeichnet Dateien mit Vorschau; passwortgeschützte Dateien werden gekennzeichnet, ohne nach dem Passwort zu fragen.",
@@ -2501,10 +2508,10 @@
       pr_blurb: "Das war immer so und bleibt so: kein Abo, kein Konto, keine Werbung. Premium ist eine einmalige Spende — eine kleine Anerkennung für die Nächte und Tage, in denen sehr spezielle und technisch anspruchsvolle Funktionen entstanden sind. Mir geht es nicht ums Geld: Mir geht es um die Ideen, die dabei entstehen. Die meisten Menschen werden Premium nie vermissen — und so soll es sein.",
       pr_free_h: "Kostenlos",
       pr_free_tag: "für immer · ohne Konto",
-      pr_free_list: "<li>Profile, konfigurierbare Bäume, Multi-Muster-Suche</li><li>Vorschau: Code, PDF, Word/Excel, Markdown, Bilder</li><li>Dateioperationen mit echtem Fortschritt, Tempo, ETA, Verlauf und Konflikten</li><li>Terminals, Zuordnungen pro Dateiendung, Archive als Ordner</li><li>Vollständiges dunkles Design, 12 Sprachen, automatische Updates</li><li>Audioaufnahme (Mikrofon)</li><li><strong>1 Remote-Verbindung</strong> (SFTP/FTP/FTPS) — durchsuchen und Vorschau</li>",
+      pr_free_list: "<li>Profile, konfigurierbare Bäume, Multi-Muster-Suche</li><li>Vorschau: Code, PDF, Word/Excel, Markdown, Bilder, Bücher</li><li>Dateioperationen mit echtem Fortschritt, Tempo, ETA, Verlauf und Konflikten</li><li>Terminals, Zuordnungen pro Dateiendung, Archive als Ordner</li><li>Vollständiges dunkles Design, 12 Sprachen, automatische Updates</li><li>Audioaufnahme (Mikrofon)</li><li><strong>1 Remote-Verbindung</strong> (SFTP/FTP/FTPS) — durchsuchen und Vorschau</li>",
       pr_prem_h: "Premium",
       pr_prem_tag: "einmalige Spende von 19,99 € · pro Gerät",
-      pr_prem_list: "<li><strong>Voller Remote-Zugriff</strong>: mehrere Verbindungen, alle Operationen, WebDAV, Dropbox, OneDrive</li><li>Bildschirmaufnahme <strong>ohne Wasserzeichen, ohne Zeitlimit und mit Ton</strong></li><li>Videoaufnahme ohne Wasserzeichen</li><li>Audio mit Mischung aus Mikrofon + Systemton</li><li>Mehrseitiges Scannen mit Einzug (ADF)</li><li>Vollständiger EPUB-Reader</li><li>Intro-/Endkarten und Textbanner in Aufnahmen</li>",
+      pr_prem_list: "<li><strong>Voller Remote-Zugriff</strong>: mehrere Verbindungen, alle Operationen, WebDAV, Dropbox, OneDrive</li><li>Bildschirmaufnahme <strong>ohne Wasserzeichen, ohne Zeitlimit und mit Ton</strong></li><li>Videoaufnahme ohne Wasserzeichen</li><li>Audio mit Mischung aus Mikrofon + Systemton</li><li>Mehrseitiges Scannen mit Einzug (ADF)</li><li>Vollständiger Buch-Reader — EPUB, Kindle-Formate, FB2 und Comics</li><li>Intro-/Endkarten und Textbanner in Aufnahmen</li>",
       pr_how_h: "So bekommst du es",
       pr_how_list: "<li>Klicke in der App auf die Schaltfläche <strong>PREMIUM</strong> (oben rechts).</li><li>Gib deine E-Mail ein — die App kopiert deine <strong>Machine ID</strong> in die Zwischenablage.</li><li>PayPal öffnet sich: Mindestspende 19,99 €.</li><li>Ich schicke dir den <strong>Aktivierungsschlüssel per E-Mail</strong>.</li><li>Füge den Schlüssel in der App ein. Die Lizenz gilt für dieses Gerät.</li>",
       pr_note: "<strong>Hinweis:</strong> Der Schlüssel wird von mir von Hand verschickt — es kann also etwas dauern. PayPal erscheint unter <strong>LogViewer</strong>, dem anderen Projekt aus demselben Haus (PayPal erlaubt nur ein Ziel pro Konto); die Seite bestätigt, dass ich der Autor von beiden bin.",
@@ -2678,12 +2685,13 @@
       f19_mark: "Dropbox · OneDrive",
       f19_soon: "Dropbox 和 OneDrive — 现已上线。",
       f19_premium: "PREMIUM（与 SFTP/FTP/FTPS 一样）：多个连接和全部操作。捐赠 €19.99（PayPal）。",
-      f20_num: "20 — 图书 / EPUB",
-      f20_h: "EPUB — 在文件管理器内直接预览与阅读。",
-      f20_p: "即时预览任意 <em>.epub</em>：封面、目录和一段正文摘录。在独立阅读器中打开整本书，支持章节导航、页面跳转、<em>自动滚动</em>，并记住你的阅读位置。",
-      f20_mark: "封面 · 目录 · 摘录 · 阅读器",
-      f20_free: "免费：预览 — 封面、目录和正文摘录。",
+      f20_num: "20 — 图书与漫画",
+      f20_h: "八种图书格式 — 在文件管理器内直接预览与阅读。",
+      f20_p: "即时预览任意 <em>.epub</em>、<em>.mobi</em>、<em>.azw</em>、<em>.azw3</em>、<em>.prc</em> 或 <em>.fb2</em>：封面、目录和正文开头。在独立阅读器中打开整本书，支持章节导航、页面跳转、<em>自动滚动</em>，并记住你的阅读位置。漫画同样支持：<em>.cbz</em> 和 <em>.cbr</em> 逐页打开，无需先解压数百兆的文件。",
+      f20_mark: "EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR",
+      f20_free: "免费：预览 — 封面、目录，以及先看上一眼。",
       f20_premium: "PREMIUM：完整阅读器 — 导航、页面跳转、自动滚动、翻页，以及记住最近 20 本书。",
+      f20_note: "你自己的书可以打开。带 DRM 购买的书仍绑定在售出它们的商店 — 遇到时应用会说明原因。",
       f21_num: "21 — 文档查看器",
       f21_h: "Word、Excel、PowerPoint 等 — 无需打开即可查看。",
       f21_p: "在预览窗格中直接预览 <em>Word (.doc/.docx)</em>、<em>Excel</em>、<em>PowerPoint</em>、<em>RTF</em> 和 <em>OpenDocument</em>（文本、表格和演示文稿）。音频和视频在预览中播放，带<em>浮动窗口</em>和音量/速度控制。标记会标示可预览的文件；受密码保护的文件会被提示，而不询问密码。",
@@ -2760,10 +2768,10 @@
       pr_blurb: "一直如此，今后也不会变：没有订阅、无需账号、没有广告。高级版是一次性捐赠 — 是对那些为实现高度专门、技术要求极高的功能而付出的日日夜夜的一点回报。我做这个不是为了钱：而是为了沿途出现的想法。大多数人永远不会觉得少了高级版 — 本该如此。",
       pr_free_h: "免费",
       pr_free_tag: "永久 · 无需账号",
-      pr_free_list: "<li>配置档、可自定义目录树、多模式搜索</li><li>预览：代码、PDF、Word/Excel、Markdown、图片</li><li>文件操作：真实进度、速度、剩余时间、历史记录与冲突处理</li><li>终端、按扩展名关联应用、把压缩包当文件夹浏览</li><li>完整深色主题、12 种语言、自动更新</li><li>录音（麦克风）</li><li><strong>1 个远程连接</strong>（SFTP/FTP/FTPS）— 浏览与预览</li>",
+      pr_free_list: "<li>配置档、可自定义目录树、多模式搜索</li><li>预览：代码、PDF、Word/Excel、Markdown、图片、图书</li><li>文件操作：真实进度、速度、剩余时间、历史记录与冲突处理</li><li>终端、按扩展名关联应用、把压缩包当文件夹浏览</li><li>完整深色主题、12 种语言、自动更新</li><li>录音（麦克风）</li><li><strong>1 个远程连接</strong>（SFTP/FTP/FTPS）— 浏览与预览</li>",
       pr_prem_h: "高级版",
       pr_prem_tag: "一次性捐赠 19,99 € · 按设备授权",
-      pr_prem_list: "<li><strong>完整远程访问</strong>：多个连接、全部操作、WebDAV、Dropbox、OneDrive</li><li>屏幕录制<strong>无水印、无时长限制、带声音</strong></li><li>摄像头录制无水印</li><li>音频混合麦克风 + 系统声音</li><li>多页扫描，支持自动进纸器（ADF）</li><li>完整 EPUB 阅读器</li><li>录制的片头/片尾卡片与文字横幅</li>",
+      pr_prem_list: "<li><strong>完整远程访问</strong>：多个连接、全部操作、WebDAV、Dropbox、OneDrive</li><li>屏幕录制<strong>无水印、无时长限制、带声音</strong></li><li>摄像头录制无水印</li><li>音频混合麦克风 + 系统声音</li><li>多页扫描，支持自动进纸器（ADF）</li><li>完整图书阅读器 — EPUB、Kindle 格式、FB2 和漫画</li><li>录制的片头/片尾卡片与文字横幅</li>",
       pr_how_h: "如何获得",
       pr_how_list: "<li>在应用中点击右上角的 <strong>PREMIUM</strong> 按钮。</li><li>输入你的邮箱 — 应用会把你的 <strong>Machine ID</strong> 复制到剪贴板。</li><li>PayPal 打开：最低捐赠 19,99 €。</li><li>我会通过<strong>邮件把激活密钥</strong>发给你。</li><li>把密钥粘贴到应用中。授权绑定该设备。</li>",
       pr_note: "<strong>说明：</strong>密钥由我手动发送 — 因此可能不是即时的。PayPal 显示的名称是 <strong>LogViewer</strong>，同一作者的另一个项目（PayPal 每个账号只允许一个收款名称）；该页面会确认两者均由我开发。",
@@ -2937,12 +2945,13 @@
       f19_mark: "Dropbox · OneDrive",
       f19_soon: "Dropbox et OneDrive — disponibles dès maintenant.",
       f19_premium: "PREMIUM (comme SFTP/FTP/FTPS) : plusieurs connexions et toutes les opérations. Don de 19,99 € (PayPal).",
-      f20_num: "20 — LIVRES / EPUB",
-      f20_h: "EPUB — prévisualisez et lisez, sans quitter l'explorateur.",
-      f20_p: "Aperçu instantané de n'importe quel <em>.epub</em> : couverture, table des matières et un extrait de texte. Ouvrez le livre entier dans son propre lecteur, avec navigation par chapitre, saut de page, <em>défilement automatique</em> et votre position de lecture mémorisée.",
-      f20_mark: "Couverture · Sommaire · Extrait · Lecteur",
-      f20_free: "Gratuit : aperçu — couverture, sommaire et un extrait de texte.",
+      f20_num: "20 — LIVRES ET BD",
+      f20_h: "Huit formats de livre — prévisualisez et lisez, sans quitter l'explorateur.",
+      f20_p: "Aperçu instantané de n'importe quel <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> ou <em>.fb2</em> : couverture, table des matières et le début du texte. Ouvrez le livre entier dans son propre lecteur, avec navigation par chapitre, saut de page, <em>défilement automatique</em> et votre position de lecture mémorisée. La BD aussi : <em>.cbz</em> et <em>.cbr</em> s'ouvrent page par page, sans décompresser des centaines de mégaoctets au préalable.",
+      f20_mark: "EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR",
+      f20_free: "Gratuit : aperçu — couverture, sommaire et un premier coup d'œil à l'intérieur.",
       f20_premium: "PREMIUM : lecteur complet — navigation, saut de page, défilement automatique, tourne-page et mémoire de vos 20 derniers livres.",
+      f20_note: "Les livres qui vous appartiennent s'ouvrent. Les livres achetés avec DRM restent liés à la boutique qui les a vendus — l'app explique pourquoi lorsqu'elle en rencontre un.",
       f21_num: "21 — VISIONNEUSES DE DOCUMENTS",
       f21_h: "Word, Excel, PowerPoint et plus — voir sans rien ouvrir.",
       f21_p: "Prévisualisez <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> et <em>OpenDocument</em> (texte, feuille et présentation) directement dans le volet. L'audio et la vidéo se lisent dans l'aperçu, avec une <em>fenêtre flottante</em> et des contrôles de volume/vitesse. Un marqueur signale les fichiers qui ont un aperçu ; les fichiers protégés par mot de passe sont signalés sans demander le mot de passe.",
@@ -3020,10 +3029,10 @@
       pr_blurb: "Ça l'a toujours été et ça le restera : pas d'abonnement, pas de compte, pas de publicité. Le Premium est un don unique — une petite récompense pour les nuits et les jours passés à développer des fonctionnalités très spécifiques et techniquement exigeantes. Je ne fais pas ça pour l'argent : je le fais pour les idées qui surgissent en chemin. La plupart des gens ne manqueront jamais le Premium — et c'est très bien ainsi.",
       pr_free_h: "Gratuit",
       pr_free_tag: "pour toujours · sans compte",
-      pr_free_list: "<li>Profils, arbres configurables, recherche multi-motifs</li><li>Aperçu : code, PDF, Word/Excel, Markdown, images</li><li>Opérations avec progression réelle, vitesse, ETA, historique et conflits</li><li>Terminaux, associations par extension, archives comme dossiers</li><li>Thème sombre complet, 12 langues, mises à jour automatiques</li><li>Enregistrement audio (microphone)</li><li><strong>1 connexion distante</strong> (SFTP/FTP/FTPS) — naviguer et prévisualiser</li>",
+      pr_free_list: "<li>Profils, arbres configurables, recherche multi-motifs</li><li>Aperçu : code, PDF, Word/Excel, Markdown, images, livres</li><li>Opérations avec progression réelle, vitesse, ETA, historique et conflits</li><li>Terminaux, associations par extension, archives comme dossiers</li><li>Thème sombre complet, 12 langues, mises à jour automatiques</li><li>Enregistrement audio (microphone)</li><li><strong>1 connexion distante</strong> (SFTP/FTP/FTPS) — naviguer et prévisualiser</li>",
       pr_prem_h: "Premium",
       pr_prem_tag: "don unique de 19,99 € · par machine",
-      pr_prem_list: "<li><strong>Accès distant complet</strong> : plusieurs connexions, toutes les opérations, WebDAV, Dropbox, OneDrive</li><li>Enregistrement d'écran <strong>sans filigrane, sans limite de temps et avec le son</strong></li><li>Enregistrement vidéo sans filigrane</li><li>Audio avec mixage microphone + son système</li><li>Numérisation multipage avec chargeur (ADF)</li><li>Lecteur EPUB complet</li><li>Cartons de début/fin et bandeau de texte sur les enregistrements</li>",
+      pr_prem_list: "<li><strong>Accès distant complet</strong> : plusieurs connexions, toutes les opérations, WebDAV, Dropbox, OneDrive</li><li>Enregistrement d'écran <strong>sans filigrane, sans limite de temps et avec le son</strong></li><li>Enregistrement vidéo sans filigrane</li><li>Audio avec mixage microphone + son système</li><li>Numérisation multipage avec chargeur (ADF)</li><li>Lecteur de livres complet — EPUB, formats Kindle, FB2 et BD</li><li>Cartons de début/fin et bandeau de texte sur les enregistrements</li>",
       pr_how_h: "Comment l'obtenir",
       pr_how_list: "<li>Dans l'app, clique sur le bouton <strong>PREMIUM</strong> (en haut à droite).</li><li>Saisis ton e-mail — l'app copie ton <strong>Machine ID</strong> dans le presse-papiers.</li><li>PayPal s'ouvre : don minimum de 19,99 €.</li><li>Je t'envoie la <strong>clé d'activation par e-mail</strong>.</li><li>Colle la clé dans l'app. La licence est liée à cette machine.</li>",
       pr_note: "<strong>Note :</strong> la clé est envoyée à la main, par moi — elle peut donc ne pas être immédiate. PayPal apparaît au nom de <strong>LogViewer</strong>, l'autre projet de la même maison (PayPal n'autorise qu'une seule destination par compte) ; la page confirme que je suis l'auteur des deux.",
@@ -3197,12 +3206,13 @@
       f19_mark: "Dropbox · OneDrive",
       f19_soon: "Dropbox y OneDrive — disponibles ahora.",
       f19_premium: "PREMIUM (como SFTP/FTP/FTPS): varias conexiones y todas las operaciones. Donación de 19,99 € (PayPal).",
-      f20_num: "20 — LIBROS / EPUB",
-      f20_h: "EPUB — previsualiza y lee, sin salir del explorador.",
-      f20_p: "Vista previa instantánea de cualquier <em>.epub</em> : portada, índice y un extracto de texto. Abre el libro completo en su propio lector, con navegación por capítulos, salto de página, <em>desplazamiento automático</em> y tu posición de lectura recordada.",
-      f20_mark: "Portada · Índice · Extracto · Lector",
-      f20_free: "Gratis: vista previa — portada, índice y un extracto de texto.",
+      f20_num: "20 — LIBROS Y CÓMICS",
+      f20_h: "Ocho formatos de libro — previsualiza y lee, sin salir del explorador.",
+      f20_p: "Vista previa instantánea de cualquier <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> o <em>.fb2</em>: portada, índice y el comienzo del texto. Abre el libro completo en su propio lector, con navegación por capítulos, salto de página, <em>desplazamiento automático</em> y tu posición de lectura recordada. También cómics: <em>.cbz</em> y <em>.cbr</em> se abren página a página, sin descomprimir cientos de megabytes primero.",
+      f20_mark: "EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR",
+      f20_free: "Gratis: vista previa — portada, índice y un primer vistazo al interior.",
       f20_premium: "PREMIUM: lector completo — navegación, salto de página, desplazamiento automático, paso de página y memoria de tus últimos 20 libros.",
+      f20_note: "Los libros que son tuyos se abren. Los comprados con DRM siguen atados a la tienda que los vendió — la app explica por qué cuando encuentra uno.",
       f21_num: "21 — VISORES DE DOCUMENTOS",
       f21_h: "Word, Excel, PowerPoint y más — ver sin abrir nada.",
       f21_p: "Previsualiza <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> y <em>OpenDocument</em> (texto, hoja y presentación) en el propio panel. El audio y el vídeo se reproducen en la vista previa, con una <em>ventana flotante</em> y controles de volumen/velocidad. Un marcador señala los archivos con vista previa; los archivos protegidos con contraseña se señalan sin pedir la contraseña.",
@@ -3280,10 +3290,10 @@
       pr_blurb: "Siempre lo ha sido y lo seguirá siendo: sin suscripción, sin cuenta, sin anuncios. Premium es una donación única — una pequeña recompensa por las noches y los días dedicados a implementar funciones muy específicas y técnicamente exigentes. No estoy en esto por el dinero: estoy por las ideas que aparecen por el camino. La mayoría de la gente nunca echará de menos Premium — y así debe ser.",
       pr_free_h: "Gratis",
       pr_free_tag: "para siempre · sin cuenta",
-      pr_free_list: "<li>Perfiles, árboles configurables, búsqueda multipatrón</li><li>Vista previa: código, PDF, Word/Excel, Markdown, imágenes</li><li>Operaciones con progreso real, velocidad, ETA, historial y conflictos</li><li>Terminales, asociaciones por extensión, archivos comprimidos como carpetas</li><li>Tema oscuro completo, 12 idiomas, actualizaciones automáticas</li><li>Grabación de audio (micrófono)</li><li><strong>1 conexión remota</strong> (SFTP/FTP/FTPS) — navegar y previsualizar</li>",
+      pr_free_list: "<li>Perfiles, árboles configurables, búsqueda multipatrón</li><li>Vista previa: código, PDF, Word/Excel, Markdown, imágenes, libros</li><li>Operaciones con progreso real, velocidad, ETA, historial y conflictos</li><li>Terminales, asociaciones por extensión, archivos comprimidos como carpetas</li><li>Tema oscuro completo, 12 idiomas, actualizaciones automáticas</li><li>Grabación de audio (micrófono)</li><li><strong>1 conexión remota</strong> (SFTP/FTP/FTPS) — navegar y previsualizar</li>",
       pr_prem_h: "Premium",
       pr_prem_tag: "donación única de 19,99 € · por máquina",
-      pr_prem_list: "<li><strong>Acceso remoto completo</strong>: varias conexiones, todas las operaciones, WebDAV, Dropbox, OneDrive</li><li>Grabación de pantalla <strong>sin marca de agua, sin límite de tiempo y con sonido</strong></li><li>Grabación de vídeo sin marca de agua</li><li>Audio con mezcla de micrófono + sonido del sistema</li><li>Escaneo multipágina con alimentador (ADF)</li><li>Lector EPUB completo</li><li>Tarjetas de inicio/fin y banda de texto en las grabaciones</li>",
+      pr_prem_list: "<li><strong>Acceso remoto completo</strong>: varias conexiones, todas las operaciones, WebDAV, Dropbox, OneDrive</li><li>Grabación de pantalla <strong>sin marca de agua, sin límite de tiempo y con sonido</strong></li><li>Grabación de vídeo sin marca de agua</li><li>Audio con mezcla de micrófono + sonido del sistema</li><li>Escaneo multipágina con alimentador (ADF)</li><li>Lector de libros completo — EPUB, formatos Kindle, FB2 y cómics</li><li>Tarjetas de inicio/fin y banda de texto en las grabaciones</li>",
       pr_how_h: "Cómo conseguirlo",
       pr_how_list: "<li>En la app, pulsa el botón <strong>PREMIUM</strong> (arriba a la derecha).</li><li>Escribe tu correo — la app copia tu <strong>Machine ID</strong> al portapapeles.</li><li>Se abre PayPal: donación mínima de 19,99 €.</li><li>Te envío la <strong>clave de activación por correo</strong>.</li><li>Pega la clave en la app. La licencia queda ligada a esa máquina.</li>",
       pr_note: "<strong>Nota:</strong> la clave la envío a mano, yo mismo — así que puede no ser inmediata. PayPal aparece a nombre de <strong>LogViewer</strong>, el otro proyecto de la misma casa (PayPal solo permite un destino por cuenta); la página confirma que soy el autor de ambos.",

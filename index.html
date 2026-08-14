@@ -54,7 +54,7 @@
     "File operations with real progress, speed, ETA, history and conflict handling",
     "Remote and cloud access: SFTP, FTP, FTPS, WebDAV, Dropbox and OneDrive",
     "Built-in capture: screen recording, camera, audio and scanner",
-    "12 interface languages",
+    "16 interface languages: Portuguese (Portugal and Brazil), English (UK and US), Spanish, French, Italian, German, Polish, Russian, Arabic, Hindi, Chinese (Simplified and Traditional), Japanese and Korean",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://nunex-mbrothers.github.io/ExplorerFocus/",
@@ -798,6 +798,16 @@
     color: var(--fg-3); letter-spacing: 0.1em; text-transform: uppercase;
     display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
   }
+  /* A tira dos 16 idiomas da app. Mesmo registo da baseline técnica logo
+     acima — é informação de referência, não argumento de venda. */
+  .footer-langs {
+    max-width: 1280px; margin: 14px auto 0;
+    font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    display: flex; gap: 14px; flex-wrap: wrap; align-items: baseline;
+  }
+  .footer-langs > span:first-child { color: var(--accent); white-space: nowrap; }
+  .footer-langs-list { color: var(--fg-3); }
   .mb-credit {
     text-align: center;
     width: 100%;
@@ -1285,10 +1295,10 @@
 <div class="whatsnew">
   <span class="whatsnew-label" data-i18n="wn_label">✦ What's new</span>
   <nav class="whatsnew-pills">
-    <a href="#feat20" data-i18n="wn_books">📚 Books &amp; comics</a>
-    <a href="#feat28" data-i18n="wn_voice">🎙 Voice over</a>
-    <a href="#feat27" data-i18n="wn_cards">🎬 Branding cards</a>
-    <a href="#feat26" data-i18n="wn_screen">🖥 Screen recording</a>
+    <a href="#feat21" data-i18n="wn_books">📚 Books &amp; comics</a>
+    <a href="#feat29" data-i18n="wn_voice">🎙 Voice over</a>
+    <a href="#feat28" data-i18n="wn_cards">🎬 Branding cards</a>
+    <a href="#feat27" data-i18n="wn_screen">🖥 Screen recording</a>
   </nav>
   <span class="whatsnew-ver">v1.2.21</span>
 </div>
@@ -1447,106 +1457,120 @@
     <p data-i18n-html="f17_p">Self-contained, single-file, compressed. Copy to a flash drive and it runs on any Windows 10/11. <em>net10.0-windows</em> + WPF — no dependencies outside the executable's folder.</p>
   </div>
 
-  <div class="feat w12">
-    <div class="num"><span data-i18n="f18_num">18 — REMOTE ACCESS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-    <h3 data-i18n="f18_h">SFTP, FTP/FTPS and WebDAV — the explorer reaches the server.</h3>
-    <p data-i18n-html="f18_p">Connect to SFTP, FTP/FTPS and WebDAV (Nextcloud, ownCloud, NAS, IIS). Browse, preview, upload and download, create folders, rename and copy/move — with <em>byte-level progress</em> and cancel. Edit remote files locally and <em>sync on save</em>. Password or <em>SSH key</em> auth; secrets encrypted with DPAPI.</p>
-    <div class="feat-mark" data-i18n="f18_mark">SFTP · FTP/FTPS · WebDAV</div>
-    <p class="feat-note">
-      <span data-i18n="f18_free">Free: 1 SFTP/FTP/FTPS connection — browse and preview only. PREMIUM unlocks WebDAV, multiple connections and all operations.</span>
-    </p>
+  <!-- Cartão novo (2026-08-14). Entrou AQUI, no fim da zona grátis e a seguir
+       ao «single .exe», porque é da mesma família: qualidade de produto, não
+       funcionalidade. Para lhe abrir espaço, os antigos 18–28 passaram a 19–29
+       — chaves, âncoras e rótulos, tudo renumerado.
+       O «troca sem reiniciar» não é figura de estilo: o LocalizationService
+       levanta PropertyChanged em todas as strings, e cada {loc:T …} reavalia
+       na hora (está escrito no cabeçalho do próprio ficheiro). -->
+  <div class="feat w6">
+    <div class="num"><span data-i18n="f18_num">18 — 16 LANGUAGES</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
+    <h3 data-i18n-html="f18_h">The whole app, in <em>sixteen</em> languages.</h3>
+    <p data-i18n-html="f18_p">Not just the menus — every dialog, every message, every tooltip. Pick one and the interface changes <em>on the spot</em>: nothing to restart, nothing to reinstall.</p>
+    <div class="feat-mark" data-i18n="f18_mark">PT · BR · EN · US · ES · FR · IT · DE · PL · RU · AR · HI · CN · TW · JA · KO</div>
   </div>
 
-  <div class="feat w12" id="feat19">
-    <div class="num"><span data-i18n="f19_num">19 — CLOUDS</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-    <h3 data-i18n="f19_h">Dropbox and OneDrive — your cloud inside the explorer.</h3>
-    <p data-i18n-html="f19_p">Connect to <em>Dropbox</em> and <em>OneDrive</em> via secure OAuth — no passwords stored. Browse, preview, upload and download, create folders, rename and copy/move, like a local folder. Your files never pass through our servers.</p>
-    <div class="feat-mark" data-i18n="f19_mark">Dropbox · OneDrive</div>
+  <div class="feat w12">
+    <div class="num"><span data-i18n="f19_num">19 — REMOTE ACCESS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f19_h">SFTP, FTP/FTPS and WebDAV — the explorer reaches the server.</h3>
+    <p data-i18n-html="f19_p">Connect to SFTP, FTP/FTPS and WebDAV (Nextcloud, ownCloud, NAS, IIS). Browse, preview, upload and download, create folders, rename and copy/move — with <em>byte-level progress</em> and cancel. Edit remote files locally and <em>sync on save</em>. Password or <em>SSH key</em> auth; secrets encrypted with DPAPI.</p>
+    <div class="feat-mark" data-i18n="f19_mark">SFTP · FTP/FTPS · WebDAV</div>
     <p class="feat-note">
-      <span data-i18n="f19_premium">PREMIUM: required from the first connection — browsing, preview and all operations.</span>
+      <span data-i18n="f19_free">Free: 1 SFTP/FTP/FTPS connection — browse and preview only. PREMIUM unlocks WebDAV, multiple connections and all operations.</span>
     </p>
   </div>
 
   <div class="feat w12" id="feat20">
-    <div class="num"><span data-i18n="f20_num">20 — BOOKS &amp; COMICS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-    <h3 data-i18n="f20_h">Eight book formats — preview and read, without leaving the explorer.</h3>
-    <p data-i18n-html="f20_p">Instant preview of any <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> or <em>.fb2</em>: cover, table of contents and the opening text. Open the full book in its own reader, with chapter navigation, page jump, <em>auto-scroll</em> and your reading position remembered. Comics too: <em>.cbz</em> and <em>.cbr</em> open page by page, without unpacking hundreds of megabytes first.</p>
-    <div class="feat-mark" data-i18n="f20_mark">EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR</div>
+    <div class="num"><span data-i18n="f20_num">20 — CLOUDS</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f20_h">Dropbox and OneDrive — your cloud inside the explorer.</h3>
+    <p data-i18n-html="f20_p">Connect to <em>Dropbox</em> and <em>OneDrive</em> via secure OAuth — no passwords stored. Browse, preview, upload and download, create folders, rename and copy/move, like a local folder. Your files never pass through our servers.</p>
+    <div class="feat-mark" data-i18n="f20_mark">Dropbox · OneDrive</div>
     <p class="feat-note">
-      <span data-i18n="f20_free">Free: preview — cover, contents and a first look inside.</span><br>
-      <span data-i18n="f20_premium">PREMIUM: full reader — navigation, page jump, auto-scroll, page-turn and memory of your last 20 books.</span>
-      <span class="feat-drm" data-i18n="f20_note">Books you own open. Books bought with DRM stay locked to the store that sold them — the app explains why when it finds one.</span>
+      <span data-i18n="f20_premium">PREMIUM: required from the first connection — browsing, preview and all operations.</span>
+    </p>
+  </div>
+
+  <div class="feat w12" id="feat21">
+    <div class="num"><span data-i18n="f21_num">21 — BOOKS &amp; COMICS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f21_h">Eight book formats — preview and read, without leaving the explorer.</h3>
+    <p data-i18n-html="f21_p">Instant preview of any <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> or <em>.fb2</em>: cover, table of contents and the opening text. Open the full book in its own reader, with chapter navigation, page jump, <em>auto-scroll</em> and your reading position remembered. Comics too: <em>.cbz</em> and <em>.cbr</em> open page by page, without unpacking hundreds of megabytes first.</p>
+    <div class="feat-mark" data-i18n="f21_mark">EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR</div>
+    <p class="feat-note">
+      <span data-i18n="f21_free">Free: preview — cover, contents and a first look inside.</span><br>
+      <span data-i18n="f21_premium">PREMIUM: full reader — navigation, page jump, auto-scroll, page-turn and memory of your last 20 books.</span>
+      <span class="feat-drm" data-i18n="f21_note">Books you own open. Books bought with DRM stay locked to the store that sold them — the app explains why when it finds one.</span>
     </p>
   </div>
 
   <div class="feat w12">
-    <div class="num"><span data-i18n="f21_num">21 — DOCUMENT VIEWERS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f21_h">Word, Excel, PowerPoint and more — see without opening anything.</h3>
-    <p data-i18n-html="f21_p">Preview <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> and <em>OpenDocument</em> (text, sheet and presentation) right in the pane. Audio and video play in the preview, with a <em>floating window</em> and volume/speed controls. A marker flags files that have a preview; password-protected files are flagged without asking for the password.</p>
-    <div class="feat-mark" data-i18n="f21_mark">Word · Excel · PowerPoint · RTF · OpenDocument · Audio · Video</div>
+    <div class="num"><span data-i18n="f22_num">22 — DOCUMENT VIEWERS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
+    <h3 data-i18n="f22_h">Word, Excel, PowerPoint and more — see without opening anything.</h3>
+    <p data-i18n-html="f22_p">Preview <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> and <em>OpenDocument</em> (text, sheet and presentation) right in the pane. Audio and video play in the preview, with a <em>floating window</em> and volume/speed controls. A marker flags files that have a preview; password-protected files are flagged without asking for the password.</p>
+    <div class="feat-mark" data-i18n="f22_mark">Word · Excel · PowerPoint · RTF · OpenDocument · Audio · Video</div>
   </div>
 
   <div class="feat w12">
-    <div class="num"><span data-i18n="f22_num">22 — RECORD AUDIO</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f22_h">Record the microphone straight into the folder.</h3>
-    <p data-i18n-html="f22_p">One click records the <em>microphone</em> into the current folder. Pick the microphone, watch the live <em>level meter</em>, adjust the recording volume and save as <em>WAV</em> or <em>M4A/AAC</em>.</p>
-    <div class="feat-mark" data-i18n="f22_mark">Microphone · Level meter · WAV · M4A</div>
+    <div class="num"><span data-i18n="f23_num">23 — RECORD AUDIO</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
+    <h3 data-i18n="f23_h">Record the microphone straight into the folder.</h3>
+    <p data-i18n-html="f23_p">One click records the <em>microphone</em> into the current folder. Pick the microphone, watch the live <em>level meter</em>, adjust the recording volume and save as <em>WAV</em> or <em>M4A/AAC</em>.</p>
+    <div class="feat-mark" data-i18n="f23_mark">Microphone · Level meter · WAV · M4A</div>
   </div>
 
   <div class="feat w12">
-    <div class="num"><span data-i18n="f23_num">23 — RECORD VIDEO</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-    <h3 data-i18n="f23_h">Record the camera straight into the folder.</h3>
-    <p data-i18n-html="f23_p">Live <em>camera</em> preview, with a choice of camera and microphone, resolution and format — <em>MP4</em>, <em>WMV</em> or <em>AVI</em>. Saves into the current folder with one click.</p>
-    <div class="feat-mark" data-i18n="f23_mark">Camera · Microphone · MP4 · WMV · AVI</div>
+    <div class="num"><span data-i18n="f24_num">24 — RECORD VIDEO</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f24_h">Record the camera straight into the folder.</h3>
+    <p data-i18n-html="f24_p">Live <em>camera</em> preview, with a choice of camera and microphone, resolution and format — <em>MP4</em>, <em>WMV</em> or <em>AVI</em>. Saves into the current folder with one click.</p>
+    <div class="feat-mark" data-i18n="f24_mark">Camera · Microphone · MP4 · WMV · AVI</div>
     <p class="feat-note">
-      <span data-i18n="f23_premium">Free with a discreet footer watermark. PREMIUM: no watermark.</span>
+      <span data-i18n="f24_premium">Free with a discreet footer watermark. PREMIUM: no watermark.</span>
     </p>
   </div>
 
   <div class="feat w12">
-    <div class="num"><span data-i18n="f24_num">24 — SCAN</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-    <h3 data-i18n="f24_h">From the scanner into the folder — image or PDF.</h3>
-    <p data-i18n-html="f24_p">Scan from the <em>flatbed</em> or the <em>feeder (ADF)</em>, many sheets at once. Choose the resolution and colour — <em>colour</em>, grayscale or <em>black &amp; white</em>. Save as <em>JPEG/PNG</em> or merge everything into a <em>multi-page PDF</em>, and keep adding sheets to the same PDF.</p>
-    <div class="feat-mark" data-i18n="f24_mark">Flatbed · Feeder (ADF) · Colour · Multi-page PDF</div>
+    <div class="num"><span data-i18n="f25_num">25 — SCAN</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f25_h">From the scanner into the folder — image or PDF.</h3>
+    <p data-i18n-html="f25_p">Scan from the <em>flatbed</em> or the <em>feeder (ADF)</em>, many sheets at once. Choose the resolution and colour — <em>colour</em>, grayscale or <em>black &amp; white</em>. Save as <em>JPEG/PNG</em> or merge everything into a <em>multi-page PDF</em>, and keep adding sheets to the same PDF.</p>
+    <div class="feat-mark" data-i18n="f25_mark">Flatbed · Feeder (ADF) · Colour · Multi-page PDF</div>
     <p class="feat-note">
-      <span data-i18n="f24_premium">Free: 1 flatbed page, with a watermark. PREMIUM: multiple pages, feeder (ADF) and no watermark.</span>
+      <span data-i18n="f25_premium">Free: 1 flatbed page, with a watermark. PREMIUM: multiple pages, feeder (ADF) and no watermark.</span>
     </p>
   </div>
 
   <div class="feat w12">
-    <div class="num"><span data-i18n="f25_num">25 — ARCHIVES AS FOLDERS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f25_h">Open ZIP, RAR, 7z and TAR like folders.</h3>
-    <p data-i18n-html="f25_p">Double-click (or <em>Browse inside</em>) to enter the archive — browse the contents, <em>preview</em> and <em>copy files out</em> without extracting everything. Read-only; <em>Open with…</em> still opens them in WinRAR/WinZip/7-Zip.</p>
-    <div class="feat-mark" data-i18n="f25_mark">ZIP · RAR · 7z · TAR · Copy files out</div>
-  </div>
-
-  <div class="feat w12" id="feat26">
-    <div class="num"><span data-i18n="f26_num">26 — RECORD SCREEN</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-    <h3 data-i18n="f26_h">Record the screen straight into the folder — with an optional camera.</h3>
-    <p data-i18n-html="f26_p">Pick a <em>region of any monitor</em> (or the whole screen) and record to <em>MP4</em> with the <em>microphone</em>. Add the <em>camera</em>: switch screen⇄camera with <em>transitions</em> (fade, wipe, slide, mosaic), show it as <em>PiP</em> in a corner, or side by side in <em>split screen</em>.</p>
-    <div class="feat-mark" data-i18n="f26_mark">Region · Microphone · System sound · Camera · PiP · Split screen · Transitions · MP4</div>
-    <p class="feat-note">
-      <span data-i18n="f26_premium">Free: watermark + 15 s and no sound. PREMIUM: no watermark, no time limit and with sound (microphone + system).</span>
-    </p>
+    <div class="num"><span data-i18n="f26_num">26 — ARCHIVES AS FOLDERS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
+    <h3 data-i18n="f26_h">Open ZIP, RAR, 7z and TAR like folders.</h3>
+    <p data-i18n-html="f26_p">Double-click (or <em>Browse inside</em>) to enter the archive — browse the contents, <em>preview</em> and <em>copy files out</em> without extracting everything. Read-only; <em>Open with…</em> still opens them in WinRAR/WinZip/7-Zip.</p>
+    <div class="feat-mark" data-i18n="f26_mark">ZIP · RAR · 7z · TAR · Copy files out</div>
   </div>
 
   <div class="feat w12" id="feat27">
-    <div class="num"><span data-i18n="f27_num">27 — BRANDING CARDS</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-    <h3 data-i18n="f27_h">Intro and end cards for your videos — right in the recording.</h3>
-    <p data-i18n-html="f27_p">Give your recordings (screen and camera) an <em>intro card</em>, a permanent <em>text banner</em> and a credits-style <em>end card</em> (up to 10 lines). <em>5 independent models</em>, each with 3 presentations, logo, background colour and an <em>episode badge</em> — built for a consistent video series.</p>
-    <div class="feat-mark" data-i18n="f27_mark">Intro · Banner · End (credits) · 5 models · Logo · Episode badge</div>
+    <div class="num"><span data-i18n="f27_num">27 — RECORD SCREEN</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f27_h">Record the screen straight into the folder — with an optional camera.</h3>
+    <p data-i18n-html="f27_p">Pick a <em>region of any monitor</em> (or the whole screen) and record to <em>MP4</em> with the <em>microphone</em>. Add the <em>camera</em>: switch screen⇄camera with <em>transitions</em> (fade, wipe, slide, mosaic), show it as <em>PiP</em> in a corner, or side by side in <em>split screen</em>.</p>
+    <div class="feat-mark" data-i18n="f27_mark">Region · Microphone · System sound · Camera · PiP · Split screen · Transitions · MP4</div>
     <p class="feat-note">
-      <span data-i18n="f27_premium">PREMIUM. Discreet “Made with ExplorerFocus” signature on the end card.</span>
+      <span data-i18n="f27_premium">Free: watermark + 15 s and no sound. PREMIUM: no watermark, no time limit and with sound (microphone + system).</span>
     </p>
   </div>
 
   <div class="feat w12" id="feat28">
-    <div class="num"><span data-i18n="f28_num">28 — VOICE OVER</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-    <h3 data-i18n="f28_h">Narrate your videos after recording — even on your own.</h3>
-    <p data-i18n-html="f28_p">Record the screen <em>silently</em>, then in a <em>dedicated box</em> play the video while you <em>narrate over it</em>. The narration lands in a separate file; add <em>background music</em>, balance the volumes (so the music won't drown the voice) and <em>generate the final video</em> with all three sources.</p>
-    <div class="feat-mark" data-i18n="f28_mark">Record silent · Narrate over the video · Music · Volumes · Video + narration + music → final</div>
+    <div class="num"><span data-i18n="f28_num">28 — BRANDING CARDS</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f28_h">Intro and end cards for your videos — right in the recording.</h3>
+    <p data-i18n-html="f28_p">Give your recordings (screen and camera) an <em>intro card</em>, a permanent <em>text banner</em> and a credits-style <em>end card</em> (up to 10 lines). <em>5 independent models</em>, each with 3 presentations, logo, background colour and an <em>episode badge</em> — built for a consistent video series.</p>
+    <div class="feat-mark" data-i18n="f28_mark">Intro · Banner · End (credits) · 5 models · Logo · Episode badge</div>
     <p class="feat-note">
-      <span data-i18n="f28_premium">PREMIUM. The video and narration stay as separate files; only “Generate final” creates the mixed video.</span>
+      <span data-i18n="f28_premium">PREMIUM. Discreet “Made with ExplorerFocus” signature on the end card.</span>
+    </p>
+  </div>
+
+  <div class="feat w12" id="feat29">
+    <div class="num"><span data-i18n="f29_num">29 — VOICE OVER</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f29_h">Narrate your videos after recording — even on your own.</h3>
+    <p data-i18n-html="f29_p">Record the screen <em>silently</em>, then in a <em>dedicated box</em> play the video while you <em>narrate over it</em>. The narration lands in a separate file; add <em>background music</em>, balance the volumes (so the music won't drown the voice) and <em>generate the final video</em> with all three sources.</p>
+    <div class="feat-mark" data-i18n="f29_mark">Record silent · Narrate over the video · Music · Volumes · Video + narration + music → final</div>
+    <p class="feat-note">
+      <span data-i18n="f29_premium">PREMIUM. The video and narration stay as separate files; only “Generate final” creates the mixed video.</span>
     </p>
   </div>
 
@@ -1667,7 +1691,7 @@
     <div class="prem-card" id="free">
       <h4 data-i18n="pr_free_h">Free</h4>
       <span class="prem-tag" data-i18n="pr_free_tag">forever · no account</span>
-      <ul data-i18n-html="pr_free_list"><li>Profiles, configurable trees, multi-pattern search</li><li>Preview: code, PDF, Word/Excel, Markdown, images, books</li><li>File operations with real progress, speed, ETA, history and conflicts</li><li>Terminals, per-extension app associations, archives as folders</li><li>Complete dark theme, 12 languages, auto-updates</li><li>Audio recording (microphone)</li><li><strong>1 remote connection</strong> (SFTP/FTP/FTPS) — browse and preview</li></ul>
+      <ul data-i18n-html="pr_free_list"><li>Profiles, configurable trees, multi-pattern search</li><li>Preview: code, PDF, Word/Excel, Markdown, images, books</li><li>File operations with real progress, speed, ETA, history and conflicts</li><li>Terminals, per-extension app associations, archives as folders</li><li>Complete dark theme, 16 languages, auto-updates</li><li>Audio recording (microphone)</li><li><strong>1 remote connection</strong> (SFTP/FTP/FTPS) — browse and preview</li></ul>
     </div>
 
     <div class="prem-card is-prem">
@@ -1722,6 +1746,16 @@
     <span>© 2026 <span class="brand-mb">mBrothers</span> · v1.2.21 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">designed for the daily grind</span>
     <span id="viewCounter" hidden title="Visitas à página"></span>
+  </div>
+
+  <!-- Os 16 idiomas da APP, pela ordem da barra de bandeiras dela. Vive no
+       rodapé porque é informação de referência: só interessa a quem procura o
+       seu. Em texto, e não só no JSON-LD, para ser indexável e para se poder
+       procurar na página com Ctrl+F.
+       ⚠ NÃO confundir com as 6 línguas do SITE (o seletor lá em cima). -->
+  <div class="footer-langs">
+    <span data-i18n="ft_langs_h">App interface</span>
+    <span class="footer-langs-list">PT · BR · EN · US · ES · FR · IT · DE · PL · RU · AR · HI · CN · TW · JA · KO</span>
   </div>
 
   <div class="mb-credit" data-i18n-html="mb_credit">An <a href="https://nunex-mbrothers.github.io/mBrothers/" target="_blank" rel="noopener">mBrothers</a> product<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
@@ -1973,67 +2007,71 @@
       f17_num: "17 — DEPLOYMENT",
       f17_h: "Um único <em>.exe</em>. Sem instalador.",
       f17_p: "Self-contained, single-file, com compressão. Copias para uma flash drive e arranca em qualquer Windows 10/11. <em>net10.0-windows</em> + WPF — sem dependências fora da pasta do executável.",
+      f18_num: "18 — 16 IDIOMAS",
+      f18_h: "A app inteira, em <em>dezasseis</em> idiomas.",
+      f18_p: "Não são só os menus — cada caixa, cada mensagem, cada dica. Escolhe-se um e a interface muda <em>na hora</em>: nada para reiniciar, nada para reinstalar.",
+      f18_mark: "PT · BR · EN · US · ES · FR · IT · DE · PL · RU · AR · HI · CN · TW · JA · KO",
 
       badge_pro: "PREMIUM",
       badge_free: "Grátis",
-      f18_num: "18 — ACESSOS REMOTOS",
-      f18_h: "SFTP, FTP/FTPS e WebDAV — o explorer chega ao servidor.",
-      f18_p: "Liga a SFTP, FTP/FTPS e WebDAV (Nextcloud, ownCloud, NAS, IIS). Navega, pré-visualiza, envia e descarrega, cria pastas, renomeia e copia/move — com <em>progresso ao byte</em> e cancelamento. Edita ficheiros remotos localmente e <em>sincroniza ao gravar</em>. Autenticação por password ou <em>chave SSH</em>; segredos cifrados com DPAPI.",
-      f18_mark: "SFTP · FTP/FTPS · WebDAV",
-      f18_free: "Grátis: 1 ligação SFTP/FTP/FTPS — só navegar e pré-visualizar. PREMIUM desbloqueia o WebDAV, várias ligações e todas as operações.",
-      f19_num: "19 — CLOUDS",
-      f19_h: "Dropbox e OneDrive — a tua cloud dentro do explorer.",
-      f19_p: "Liga a <em>Dropbox</em> e <em>OneDrive</em> por OAuth seguro — sem guardares palavras-passe. Navega, pré-visualiza, envia e descarrega, cria pastas, renomeia e copia/move, como numa pasta local. Os teus ficheiros nunca passam por servidores nossos.",
-      f19_mark: "Dropbox · OneDrive",
-      f19_premium: "PREMIUM: necessário desde a primeira ligação — navegar, pré-visualizar e todas as operações.",
-      f20_num: "20 — LIVROS E BD",
-      f20_h: "Oito formatos de livro — pré-visualiza e lê, sem sair do explorador.",
-      f20_p: "Preview instantâneo de qualquer <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> ou <em>.fb2</em>: capa, índice e o início do texto. Abre o livro completo num leitor próprio, com navegação por capítulos, salto de página, <em>scroll automático</em> e o teu ponto de leitura guardado. E banda desenhada: <em>.cbz</em> e <em>.cbr</em> abrem página a página, sem desempacotar centenas de megabytes primeiro.",
-      f20_mark: "EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR",
-      f20_free: "Grátis: pré-visualização — capa, índice e um primeiro olhar lá dentro.",
-      f20_premium: "PREMIUM: leitor completo — navegação, salto de página, scroll automático, virar de página e memória dos últimos 20 livros.",
-      f20_note: "Os livros que são teus abrem. Os comprados com DRM ficam presos à loja que os vendeu — a app explica porquê quando encontra um.",
-      f21_num: "21 — VIEWERS DE DOCUMENTOS",
-      f21_h: "Word, Excel, PowerPoint e mais — vê sem abrir nada.",
-      f21_p: "Pré-visualiza <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> e <em>OpenDocument</em> (texto, folha e apresentação) direto no painel. Áudio e vídeo tocam no preview, com <em>janela flutuante</em> e controlos de volume e velocidade. Uma marca assinala os ficheiros com preview disponível; os protegidos por palavra-passe são avisados sem pedir a senha.",
-      f21_mark: "Word · Excel · PowerPoint · RTF · OpenDocument · Áudio · Vídeo",
-      f22_num: "22 — GRAVAR ÁUDIO",
-      f22_h: "Grava o microfone direto para a pasta.",
-      f22_p: "Um clique grava do <em>microfone</em> para a pasta atual. Escolhe o microfone, vê o <em>medidor de nível</em> ao vivo, ajusta o volume de gravação e guarda em <em>WAV</em> ou <em>M4A/AAC</em>.",
-      f22_mark: "Microfone · Medidor de nível · WAV · M4A",      f23_num: "23 — GRAVAR VÍDEO",
-      f23_h: "Grava da câmara direto para a pasta.",
-      f23_p: "Pré-visualização ao vivo da <em>câmara</em>, com escolha de câmara e microfone, resolução e formato — <em>MP4</em>, <em>WMV</em> ou <em>AVI</em>. Guarda na pasta atual com um clique.",
-      f23_mark: "Câmara · Microfone · MP4 · WMV · AVI",
-      f23_premium: "Grátis com marca de água discreta no rodapé. PREMIUM: sem marca de água.",
-      f24_num: "24 — DIGITALIZAR",
-      f24_h: "Do scanner para a pasta — imagem ou PDF.",
-      f24_p: "Digitaliza do <em>vidro</em> ou do <em>alimentador (ADF)</em>, várias folhas de uma vez. Escolhe a resolução e a cor — <em>cor</em>, tons de cinzento ou <em>preto e branco</em>. Guarda como <em>JPEG/PNG</em> ou junta tudo num <em>PDF de várias páginas</em>, e continua a adicionar folhas ao mesmo PDF.",
-      f24_mark: "Vidro · Alimentador (ADF) · Cor · PDF multipágina",
-      f25_num: "25 — ARQUIVOS COMO PASTAS",
-      f25_h: "Abre ZIP, RAR, 7z e TAR como se fossem pastas.",
-      f25_p: "Duplo-clique (ou <em>Navegar dentro</em>) e entras no arquivo — navegas o conteúdo, <em>pré-visualizas</em> e <em>copias ficheiros para fora</em> sem extrair tudo. Só leitura; o <em>Abrir com…</em> continua a abrir no WinRAR/WinZip/7-Zip.",
-      f25_mark: "ZIP · RAR · 7z · TAR · Copiar para fora",
-      f26_num: "26 — GRAVAR ECRÃ",
-      f26_h: "Grava o ecrã direto para a pasta — com câmara opcional.",
-      f26_p: "Escolhe uma <em>região de qualquer monitor</em> (ou o ecrã inteiro) e grava para <em>MP4</em> com o <em>microfone</em>. Junta a <em>câmara</em>: alterna ecrã⇄câmara com <em>transições</em> (fundido, cortina, deslizar, mosaico), mostra-a em <em>PiP</em> num canto, ou lado a lado em <em>ecrã dividido</em>.",
-      f26_mark: "Região · Microfone · Som do sistema · Câmara · PiP · Ecrã dividido · Transições · MP4",
-      f26_premium: "Grátis: marca de água + 15 s e sem som. PREMIUM: sem marca, sem limite de tempo e com som (microfone + sistema).",
-      f27_num: "27 — CARTÕES DE MARCA",
-      f27_h: "Cartões de abertura e fim para os teus vídeos — direto na gravação.",
-      f27_p: "Dá às tuas gravações (ecrã e câmara) um <em>cartão de abertura</em>, uma <em>faixa de texto</em> permanente e um <em>cartão de fim</em> estilo créditos (até 10 linhas). <em>5 modelos</em> independentes, cada um com 3 apresentações, logótipo, cor de fundo e um <em>badge de episódio</em> — feito para uma série de vídeos coerente.",
-      f27_mark: "Abertura · Faixa · Fim (créditos) · 5 modelos · Logo · Badge de episódio",
-      f27_premium: "PREMIUM. Assinatura discreta “Made with ExplorerFocus” no cartão de fim.",
-      f28_num: "28 — VOICE OVER",
-      f28_h: "Narra os teus vídeos depois de gravar — mesmo estando sozinho.",
-      f28_p: "Grava o ecrã <em>em silêncio</em> e depois, numa <em>box própria</em>, reproduz o vídeo enquanto <em>narras por cima</em>. A narração fica num ficheiro à parte; juntas uma <em>música de fundo</em>, acertas os volumes (para a música não abafar a voz) e <em>geras o vídeo final</em> com as três fontes.",
-      f28_mark: "Gravar mudo · Narrar sobre o vídeo · Música · Volumes · Vídeo + narração + música → final",
-      f28_premium: "PREMIUM. O vídeo e a narração ficam em ficheiros separados; só “Gerar final” cria o vídeo misturado.",
+      f19_num: "19 — ACESSOS REMOTOS",
+      f19_h: "SFTP, FTP/FTPS e WebDAV — o explorer chega ao servidor.",
+      f19_p: "Liga a SFTP, FTP/FTPS e WebDAV (Nextcloud, ownCloud, NAS, IIS). Navega, pré-visualiza, envia e descarrega, cria pastas, renomeia e copia/move — com <em>progresso ao byte</em> e cancelamento. Edita ficheiros remotos localmente e <em>sincroniza ao gravar</em>. Autenticação por password ou <em>chave SSH</em>; segredos cifrados com DPAPI.",
+      f19_mark: "SFTP · FTP/FTPS · WebDAV",
+      f19_free: "Grátis: 1 ligação SFTP/FTP/FTPS — só navegar e pré-visualizar. PREMIUM desbloqueia o WebDAV, várias ligações e todas as operações.",
+      f20_num: "20 — CLOUDS",
+      f20_h: "Dropbox e OneDrive — a tua cloud dentro do explorer.",
+      f20_p: "Liga a <em>Dropbox</em> e <em>OneDrive</em> por OAuth seguro — sem guardares palavras-passe. Navega, pré-visualiza, envia e descarrega, cria pastas, renomeia e copia/move, como numa pasta local. Os teus ficheiros nunca passam por servidores nossos.",
+      f20_mark: "Dropbox · OneDrive",
+      f20_premium: "PREMIUM: necessário desde a primeira ligação — navegar, pré-visualizar e todas as operações.",
+      f21_num: "21 — LIVROS E BD",
+      f21_h: "Oito formatos de livro — pré-visualiza e lê, sem sair do explorador.",
+      f21_p: "Preview instantâneo de qualquer <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> ou <em>.fb2</em>: capa, índice e o início do texto. Abre o livro completo num leitor próprio, com navegação por capítulos, salto de página, <em>scroll automático</em> e o teu ponto de leitura guardado. E banda desenhada: <em>.cbz</em> e <em>.cbr</em> abrem página a página, sem desempacotar centenas de megabytes primeiro.",
+      f21_mark: "EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR",
+      f21_free: "Grátis: pré-visualização — capa, índice e um primeiro olhar lá dentro.",
+      f21_premium: "PREMIUM: leitor completo — navegação, salto de página, scroll automático, virar de página e memória dos últimos 20 livros.",
+      f21_note: "Os livros que são teus abrem. Os comprados com DRM ficam presos à loja que os vendeu — a app explica porquê quando encontra um.",
+      f22_num: "22 — VIEWERS DE DOCUMENTOS",
+      f22_h: "Word, Excel, PowerPoint e mais — vê sem abrir nada.",
+      f22_p: "Pré-visualiza <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> e <em>OpenDocument</em> (texto, folha e apresentação) direto no painel. Áudio e vídeo tocam no preview, com <em>janela flutuante</em> e controlos de volume e velocidade. Uma marca assinala os ficheiros com preview disponível; os protegidos por palavra-passe são avisados sem pedir a senha.",
+      f22_mark: "Word · Excel · PowerPoint · RTF · OpenDocument · Áudio · Vídeo",
+      f23_num: "23 — GRAVAR ÁUDIO",
+      f23_h: "Grava o microfone direto para a pasta.",
+      f23_p: "Um clique grava do <em>microfone</em> para a pasta atual. Escolhe o microfone, vê o <em>medidor de nível</em> ao vivo, ajusta o volume de gravação e guarda em <em>WAV</em> ou <em>M4A/AAC</em>.",
+      f23_mark: "Microfone · Medidor de nível · WAV · M4A",      f24_num: "24 — GRAVAR VÍDEO",
+      f24_h: "Grava da câmara direto para a pasta.",
+      f24_p: "Pré-visualização ao vivo da <em>câmara</em>, com escolha de câmara e microfone, resolução e formato — <em>MP4</em>, <em>WMV</em> ou <em>AVI</em>. Guarda na pasta atual com um clique.",
+      f24_mark: "Câmara · Microfone · MP4 · WMV · AVI",
+      f24_premium: "Grátis com marca de água discreta no rodapé. PREMIUM: sem marca de água.",
+      f25_num: "25 — DIGITALIZAR",
+      f25_h: "Do scanner para a pasta — imagem ou PDF.",
+      f25_p: "Digitaliza do <em>vidro</em> ou do <em>alimentador (ADF)</em>, várias folhas de uma vez. Escolhe a resolução e a cor — <em>cor</em>, tons de cinzento ou <em>preto e branco</em>. Guarda como <em>JPEG/PNG</em> ou junta tudo num <em>PDF de várias páginas</em>, e continua a adicionar folhas ao mesmo PDF.",
+      f25_mark: "Vidro · Alimentador (ADF) · Cor · PDF multipágina",
+      f26_num: "26 — ARQUIVOS COMO PASTAS",
+      f26_h: "Abre ZIP, RAR, 7z e TAR como se fossem pastas.",
+      f26_p: "Duplo-clique (ou <em>Navegar dentro</em>) e entras no arquivo — navegas o conteúdo, <em>pré-visualizas</em> e <em>copias ficheiros para fora</em> sem extrair tudo. Só leitura; o <em>Abrir com…</em> continua a abrir no WinRAR/WinZip/7-Zip.",
+      f26_mark: "ZIP · RAR · 7z · TAR · Copiar para fora",
+      f27_num: "27 — GRAVAR ECRÃ",
+      f27_h: "Grava o ecrã direto para a pasta — com câmara opcional.",
+      f27_p: "Escolhe uma <em>região de qualquer monitor</em> (ou o ecrã inteiro) e grava para <em>MP4</em> com o <em>microfone</em>. Junta a <em>câmara</em>: alterna ecrã⇄câmara com <em>transições</em> (fundido, cortina, deslizar, mosaico), mostra-a em <em>PiP</em> num canto, ou lado a lado em <em>ecrã dividido</em>.",
+      f27_mark: "Região · Microfone · Som do sistema · Câmara · PiP · Ecrã dividido · Transições · MP4",
+      f27_premium: "Grátis: marca de água + 15 s e sem som. PREMIUM: sem marca, sem limite de tempo e com som (microfone + sistema).",
+      f28_num: "28 — CARTÕES DE MARCA",
+      f28_h: "Cartões de abertura e fim para os teus vídeos — direto na gravação.",
+      f28_p: "Dá às tuas gravações (ecrã e câmara) um <em>cartão de abertura</em>, uma <em>faixa de texto</em> permanente e um <em>cartão de fim</em> estilo créditos (até 10 linhas). <em>5 modelos</em> independentes, cada um com 3 apresentações, logótipo, cor de fundo e um <em>badge de episódio</em> — feito para uma série de vídeos coerente.",
+      f28_mark: "Abertura · Faixa · Fim (créditos) · 5 modelos · Logo · Badge de episódio",
+      f28_premium: "PREMIUM. Assinatura discreta “Made with ExplorerFocus” no cartão de fim.",
+      f29_num: "29 — VOICE OVER",
+      f29_h: "Narra os teus vídeos depois de gravar — mesmo estando sozinho.",
+      f29_p: "Grava o ecrã <em>em silêncio</em> e depois, numa <em>box própria</em>, reproduz o vídeo enquanto <em>narras por cima</em>. A narração fica num ficheiro à parte; juntas uma <em>música de fundo</em>, acertas os volumes (para a música não abafar a voz) e <em>geras o vídeo final</em> com as três fontes.",
+      f29_mark: "Gravar mudo · Narrar sobre o vídeo · Música · Volumes · Vídeo + narração + música → final",
+      f29_premium: "PREMIUM. O vídeo e a narração ficam em ficheiros separados; só “Gerar final” cria o vídeo misturado.",
       wn_label: "✦ Novidades",
       wn_books: "📚 Livros e BD",
       wn_voice: "🎙 Voice over",
       wn_cards: "🎬 Cartões de marca",
       wn_screen: "🖥 Gravação de ecrã",
-      f24_premium: "Grátis: 1 página do vidro, com marca de água. PREMIUM: várias páginas, alimentador (ADF) e sem marca de água.",
+      f25_premium: "Grátis: 1 página do vidro, com marca de água. PREMIUM: várias páginas, alimentador (ADF) e sem marca de água.",
       ft_ch_standalone: "Standalone (.exe)",
       ft_ch_portable: "Standalone (.zip)",
 
@@ -2075,7 +2113,7 @@
       pr_blurb: "Sempre foi e continuará a ser: sem subscrição, sem conta, sem anúncios. O Premium é um donativo único — uma pequena recompensa pelas noites e dias a implementar funcionalidades muito específicas e tecnicamente exigentes. Não estou nisto pelo dinheiro: estou pelas ideias que aparecem pelo caminho. A maioria das pessoas nunca vai sentir falta do Premium — e é assim que deve ser.",
       pr_free_h: "Grátis",
       pr_free_tag: "para sempre · sem conta",
-      pr_free_list: "<li>Perfis, árvores configuráveis, pesquisa multi-padrão</li><li>Pré-visualização: código, PDF, Word/Excel, Markdown, imagens, livros</li><li>Operações com progresso real, velocidade, ETA, histórico e conflitos</li><li>Terminais, associações por extensão, arquivos como pastas</li><li>Tema escuro completo, 12 idiomas, atualizações automáticas</li><li>Gravar áudio (microfone)</li><li><strong>1 ligação remota</strong> (SFTP/FTP/FTPS) — navegar e pré-visualizar</li>",
+      pr_free_list: "<li>Perfis, árvores configuráveis, pesquisa multi-padrão</li><li>Pré-visualização: código, PDF, Word/Excel, Markdown, imagens, livros</li><li>Operações com progresso real, velocidade, ETA, histórico e conflitos</li><li>Terminais, associações por extensão, arquivos como pastas</li><li>Tema escuro completo, 16 idiomas, atualizações automáticas</li><li>Gravar áudio (microfone)</li><li><strong>1 ligação remota</strong> (SFTP/FTP/FTPS) — navegar e pré-visualizar</li>",
       pr_prem_h: "Premium",
       pr_prem_tag: "donativo único de 19,99 € · por máquina",
       pr_prem_list: "<li><strong>Acessos remotos completos</strong>: várias ligações, todas as operações, WebDAV, Dropbox, OneDrive</li><li>Gravação de ecrã <strong>sem marca de água, sem limite de tempo e com som</strong></li><li>Gravação de vídeo sem marca de água</li><li>Áudio com mistura de microfone + som do sistema</li><li>Digitalização multi-página com alimentador (ADF)</li><li>Leitor de livros completo — EPUB, formatos Kindle, FB2 e BD</li><li>Cartões de abertura/fim e faixa de texto nas gravações</li>",
@@ -2237,67 +2275,71 @@
       f17_num: "17 — DEPLOYMENT",
       f17_h: "A single <em>.exe</em>. No installer.",
       f17_p: "Self-contained, single-file, compressed. Copy to a flash drive and it runs on any Windows 10/11. <em>net10.0-windows</em> + WPF — no dependencies outside the executable's folder.",
+      f18_num: "18 — 16 LANGUAGES",
+      f18_h: "The whole app, in <em>sixteen</em> languages.",
+      f18_p: "Not just the menus — every dialog, every message, every tooltip. Pick one and the interface changes <em>on the spot</em>: nothing to restart, nothing to reinstall.",
+      f18_mark: "PT · BR · EN · US · ES · FR · IT · DE · PL · RU · AR · HI · CN · TW · JA · KO",
 
       badge_pro: "PREMIUM",
       badge_free: "Free",
-      f18_num: "18 — REMOTE ACCESS",
-      f18_h: "SFTP, FTP/FTPS and WebDAV — the explorer reaches the server.",
-      f18_p: "Connect to SFTP, FTP/FTPS and WebDAV (Nextcloud, ownCloud, NAS, IIS). Browse, preview, upload and download, create folders, rename and copy/move — with <em>byte-level progress</em> and cancel. Edit remote files locally and <em>sync on save</em>. Password or <em>SSH key</em> auth; secrets encrypted with DPAPI.",
-      f18_mark: "SFTP · FTP/FTPS · WebDAV",
-      f18_free: "Free: 1 SFTP/FTP/FTPS connection — browse and preview only. PREMIUM unlocks WebDAV, multiple connections and all operations.",
-      f19_num: "19 — CLOUDS",
-      f19_h: "Dropbox and OneDrive — your cloud inside the explorer.",
-      f19_p: "Connect to <em>Dropbox</em> and <em>OneDrive</em> via secure OAuth — no passwords stored. Browse, preview, upload and download, create folders, rename and copy/move, like a local folder. Your files never pass through our servers.",
-      f19_mark: "Dropbox · OneDrive",
-      f19_premium: "PREMIUM: required from the first connection — browsing, preview and all operations.",
-      f20_num: "20 — BOOKS & COMICS",
-      f20_h: "Eight book formats — preview and read, without leaving the explorer.",
-      f20_p: "Instant preview of any <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> or <em>.fb2</em>: cover, table of contents and the opening text. Open the full book in its own reader, with chapter navigation, page jump, <em>auto-scroll</em> and your reading position remembered. Comics too: <em>.cbz</em> and <em>.cbr</em> open page by page, without unpacking hundreds of megabytes first.",
-      f20_mark: "EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR",
-      f20_free: "Free: preview — cover, contents and a first look inside.",
-      f20_premium: "PREMIUM: full reader — navigation, page jump, auto-scroll, page-turn and memory of your last 20 books.",
-      f20_note: "Books you own open. Books bought with DRM stay locked to the store that sold them — the app explains why when it finds one.",
-      f21_num: "21 — DOCUMENT VIEWERS",
-      f21_h: "Word, Excel, PowerPoint and more — see without opening anything.",
-      f21_p: "Preview <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> and <em>OpenDocument</em> (text, sheet and presentation) right in the pane. Audio and video play in the preview, with a <em>floating window</em> and volume/speed controls. A marker flags files that have a preview; password-protected files are flagged without asking for the password.",
-      f21_mark: "Word · Excel · PowerPoint · RTF · OpenDocument · Audio · Video",
-      f22_num: "22 — RECORD AUDIO",
-      f22_h: "Record the microphone straight into the folder.",
-      f22_p: "One click records the <em>microphone</em> into the current folder. Pick the microphone, watch the live <em>level meter</em>, adjust the recording volume and save as <em>WAV</em> or <em>M4A/AAC</em>.",
-      f22_mark: "Microphone · Level meter · WAV · M4A",      f23_num: "23 — RECORD VIDEO",
-      f23_h: "Record the camera straight into the folder.",
-      f23_p: "Live <em>camera</em> preview, with a choice of camera and microphone, resolution and format — <em>MP4</em>, <em>WMV</em> or <em>AVI</em>. Saves into the current folder with one click.",
-      f23_mark: "Camera · Microphone · MP4 · WMV · AVI",
-      f23_premium: "Free with a discreet footer watermark. PREMIUM: no watermark.",
-      f24_num: "24 — SCAN",
-      f24_h: "From the scanner into the folder — image or PDF.",
-      f24_p: "Scan from the <em>flatbed</em> or the <em>feeder (ADF)</em>, many sheets at once. Choose the resolution and colour — <em>colour</em>, grayscale or <em>black &amp; white</em>. Save as <em>JPEG/PNG</em> or merge everything into a <em>multi-page PDF</em>, and keep adding sheets to the same PDF.",
-      f24_mark: "Flatbed · Feeder (ADF) · Colour · Multi-page PDF",
-      f25_num: "25 — ARCHIVES AS FOLDERS",
-      f25_h: "Open ZIP, RAR, 7z and TAR like folders.",
-      f25_p: "Double-click (or <em>Browse inside</em>) to enter the archive — browse the contents, <em>preview</em> and <em>copy files out</em> without extracting everything. Read-only; <em>Open with…</em> still opens them in WinRAR/WinZip/7-Zip.",
-      f25_mark: "ZIP · RAR · 7z · TAR · Copy files out",
-      f26_num: "26 — RECORD SCREEN",
-      f26_h: "Record the screen straight into the folder — with an optional camera.",
-      f26_p: "Pick a <em>region of any monitor</em> (or the whole screen) and record to <em>MP4</em> with the <em>microphone</em>. Add the <em>camera</em>: switch screen⇄camera with <em>transitions</em> (fade, wipe, slide, mosaic), show it as <em>PiP</em> in a corner, or side by side in <em>split screen</em>.",
-      f26_mark: "Region · Microphone · System sound · Camera · PiP · Split screen · Transitions · MP4",
-      f26_premium: "Free: watermark + 15 s and no sound. PREMIUM: no watermark, no time limit and with sound (microphone + system).",
-      f27_num: "27 — BRANDING CARDS",
-      f27_h: "Intro and end cards for your videos — right in the recording.",
-      f27_p: "Give your recordings (screen and camera) an <em>intro card</em>, a permanent <em>text banner</em> and a credits-style <em>end card</em> (up to 10 lines). <em>5 independent models</em>, each with 3 presentations, logo, background colour and an <em>episode badge</em> — built for a consistent video series.",
-      f27_mark: "Intro · Banner · End (credits) · 5 models · Logo · Episode badge",
-      f27_premium: "PREMIUM. Discreet “Made with ExplorerFocus” signature on the end card.",
-      f28_num: "28 — VOICE OVER",
-      f28_h: "Narrate your videos after recording — even on your own.",
-      f28_p: "Record the screen <em>silently</em>, then in a <em>dedicated box</em> play the video while you <em>narrate over it</em>. The narration lands in a separate file; add <em>background music</em>, balance the volumes (so the music won't drown the voice) and <em>generate the final video</em> with all three sources.",
-      f28_mark: "Record silent · Narrate over the video · Music · Volumes · Video + narration + music → final",
-      f28_premium: "PREMIUM. The video and narration stay as separate files; only “Generate final” creates the mixed video.",
+      f19_num: "19 — REMOTE ACCESS",
+      f19_h: "SFTP, FTP/FTPS and WebDAV — the explorer reaches the server.",
+      f19_p: "Connect to SFTP, FTP/FTPS and WebDAV (Nextcloud, ownCloud, NAS, IIS). Browse, preview, upload and download, create folders, rename and copy/move — with <em>byte-level progress</em> and cancel. Edit remote files locally and <em>sync on save</em>. Password or <em>SSH key</em> auth; secrets encrypted with DPAPI.",
+      f19_mark: "SFTP · FTP/FTPS · WebDAV",
+      f19_free: "Free: 1 SFTP/FTP/FTPS connection — browse and preview only. PREMIUM unlocks WebDAV, multiple connections and all operations.",
+      f20_num: "20 — CLOUDS",
+      f20_h: "Dropbox and OneDrive — your cloud inside the explorer.",
+      f20_p: "Connect to <em>Dropbox</em> and <em>OneDrive</em> via secure OAuth — no passwords stored. Browse, preview, upload and download, create folders, rename and copy/move, like a local folder. Your files never pass through our servers.",
+      f20_mark: "Dropbox · OneDrive",
+      f20_premium: "PREMIUM: required from the first connection — browsing, preview and all operations.",
+      f21_num: "21 — BOOKS & COMICS",
+      f21_h: "Eight book formats — preview and read, without leaving the explorer.",
+      f21_p: "Instant preview of any <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> or <em>.fb2</em>: cover, table of contents and the opening text. Open the full book in its own reader, with chapter navigation, page jump, <em>auto-scroll</em> and your reading position remembered. Comics too: <em>.cbz</em> and <em>.cbr</em> open page by page, without unpacking hundreds of megabytes first.",
+      f21_mark: "EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR",
+      f21_free: "Free: preview — cover, contents and a first look inside.",
+      f21_premium: "PREMIUM: full reader — navigation, page jump, auto-scroll, page-turn and memory of your last 20 books.",
+      f21_note: "Books you own open. Books bought with DRM stay locked to the store that sold them — the app explains why when it finds one.",
+      f22_num: "22 — DOCUMENT VIEWERS",
+      f22_h: "Word, Excel, PowerPoint and more — see without opening anything.",
+      f22_p: "Preview <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> and <em>OpenDocument</em> (text, sheet and presentation) right in the pane. Audio and video play in the preview, with a <em>floating window</em> and volume/speed controls. A marker flags files that have a preview; password-protected files are flagged without asking for the password.",
+      f22_mark: "Word · Excel · PowerPoint · RTF · OpenDocument · Audio · Video",
+      f23_num: "23 — RECORD AUDIO",
+      f23_h: "Record the microphone straight into the folder.",
+      f23_p: "One click records the <em>microphone</em> into the current folder. Pick the microphone, watch the live <em>level meter</em>, adjust the recording volume and save as <em>WAV</em> or <em>M4A/AAC</em>.",
+      f23_mark: "Microphone · Level meter · WAV · M4A",      f24_num: "24 — RECORD VIDEO",
+      f24_h: "Record the camera straight into the folder.",
+      f24_p: "Live <em>camera</em> preview, with a choice of camera and microphone, resolution and format — <em>MP4</em>, <em>WMV</em> or <em>AVI</em>. Saves into the current folder with one click.",
+      f24_mark: "Camera · Microphone · MP4 · WMV · AVI",
+      f24_premium: "Free with a discreet footer watermark. PREMIUM: no watermark.",
+      f25_num: "25 — SCAN",
+      f25_h: "From the scanner into the folder — image or PDF.",
+      f25_p: "Scan from the <em>flatbed</em> or the <em>feeder (ADF)</em>, many sheets at once. Choose the resolution and colour — <em>colour</em>, grayscale or <em>black &amp; white</em>. Save as <em>JPEG/PNG</em> or merge everything into a <em>multi-page PDF</em>, and keep adding sheets to the same PDF.",
+      f25_mark: "Flatbed · Feeder (ADF) · Colour · Multi-page PDF",
+      f26_num: "26 — ARCHIVES AS FOLDERS",
+      f26_h: "Open ZIP, RAR, 7z and TAR like folders.",
+      f26_p: "Double-click (or <em>Browse inside</em>) to enter the archive — browse the contents, <em>preview</em> and <em>copy files out</em> without extracting everything. Read-only; <em>Open with…</em> still opens them in WinRAR/WinZip/7-Zip.",
+      f26_mark: "ZIP · RAR · 7z · TAR · Copy files out",
+      f27_num: "27 — RECORD SCREEN",
+      f27_h: "Record the screen straight into the folder — with an optional camera.",
+      f27_p: "Pick a <em>region of any monitor</em> (or the whole screen) and record to <em>MP4</em> with the <em>microphone</em>. Add the <em>camera</em>: switch screen⇄camera with <em>transitions</em> (fade, wipe, slide, mosaic), show it as <em>PiP</em> in a corner, or side by side in <em>split screen</em>.",
+      f27_mark: "Region · Microphone · System sound · Camera · PiP · Split screen · Transitions · MP4",
+      f27_premium: "Free: watermark + 15 s and no sound. PREMIUM: no watermark, no time limit and with sound (microphone + system).",
+      f28_num: "28 — BRANDING CARDS",
+      f28_h: "Intro and end cards for your videos — right in the recording.",
+      f28_p: "Give your recordings (screen and camera) an <em>intro card</em>, a permanent <em>text banner</em> and a credits-style <em>end card</em> (up to 10 lines). <em>5 independent models</em>, each with 3 presentations, logo, background colour and an <em>episode badge</em> — built for a consistent video series.",
+      f28_mark: "Intro · Banner · End (credits) · 5 models · Logo · Episode badge",
+      f28_premium: "PREMIUM. Discreet “Made with ExplorerFocus” signature on the end card.",
+      f29_num: "29 — VOICE OVER",
+      f29_h: "Narrate your videos after recording — even on your own.",
+      f29_p: "Record the screen <em>silently</em>, then in a <em>dedicated box</em> play the video while you <em>narrate over it</em>. The narration lands in a separate file; add <em>background music</em>, balance the volumes (so the music won't drown the voice) and <em>generate the final video</em> with all three sources.",
+      f29_mark: "Record silent · Narrate over the video · Music · Volumes · Video + narration + music → final",
+      f29_premium: "PREMIUM. The video and narration stay as separate files; only “Generate final” creates the mixed video.",
       wn_label: "✦ What's new",
       wn_books: "📚 Books & comics",
       wn_voice: "🎙 Voice over",
       wn_cards: "🎬 Branding cards",
       wn_screen: "🖥 Screen recording",
-      f24_premium: "Free: 1 flatbed page, with a watermark. PREMIUM: multiple pages, feeder (ADF) and no watermark.",
+      f25_premium: "Free: 1 flatbed page, with a watermark. PREMIUM: multiple pages, feeder (ADF) and no watermark.",
       ft_ch_standalone: "Standalone (.exe)",
       ft_ch_portable: "Standalone (.zip)",
 
@@ -2339,7 +2381,7 @@
       pr_blurb: "It always has been and always will be: no subscription, no account, no ads. Premium is a one-time donation — a small reward for the nights and days spent building very specific, technically demanding features. I'm not in this for the money: I'm in it for the ideas that come along. Most people will never miss Premium — and that's how it should be.",
       pr_free_h: "Free",
       pr_free_tag: "forever · no account",
-      pr_free_list: "<li>Profiles, configurable trees, multi-pattern search</li><li>Preview: code, PDF, Word/Excel, Markdown, images, books</li><li>File operations with real progress, speed, ETA, history and conflicts</li><li>Terminals, per-extension app associations, archives as folders</li><li>Complete dark theme, 12 languages, auto-updates</li><li>Audio recording (microphone)</li><li><strong>1 remote connection</strong> (SFTP/FTP/FTPS) — browse and preview</li>",
+      pr_free_list: "<li>Profiles, configurable trees, multi-pattern search</li><li>Preview: code, PDF, Word/Excel, Markdown, images, books</li><li>File operations with real progress, speed, ETA, history and conflicts</li><li>Terminals, per-extension app associations, archives as folders</li><li>Complete dark theme, 16 languages, auto-updates</li><li>Audio recording (microphone)</li><li><strong>1 remote connection</strong> (SFTP/FTP/FTPS) — browse and preview</li>",
       pr_prem_h: "Premium",
       pr_prem_tag: "one-time €19.99 donation · per machine",
       pr_prem_list: "<li><strong>Full remote access</strong>: multiple connections, all operations, WebDAV, Dropbox, OneDrive</li><li>Screen recording <strong>with no watermark, no time limit and with sound</strong></li><li>Video recording without watermark</li><li>Audio mixing microphone + system sound</li><li>Multi-page scanning with document feeder (ADF)</li><li>Full book reader — EPUB, Kindle formats, FB2 and comics</li><li>Intro/end cards and text banner on recordings</li>",
@@ -2501,67 +2543,71 @@
       f17_num: "17 — BEREITSTELLUNG",
       f17_h: "Eine einzige <em>.exe</em>. Kein Installer.",
       f17_p: "Self-contained, single-file, komprimiert. Kopiere auf einen USB-Stick und es läuft auf jedem Windows 10/11. <em>net10.0-windows</em> + WPF — keine Abhängigkeiten außerhalb des Programmordners.",
+      f18_num: "18 — 16 SPRACHEN",
+      f18_h: "Die ganze App, in <em>sechzehn</em> Sprachen.",
+      f18_p: "Nicht nur die Menüs — jeder Dialog, jede Meldung, jeder Tooltip. Eine auswählen, und die Oberfläche wechselt <em>sofort</em>: nichts neu starten, nichts neu installieren.",
+      f18_mark: "PT · BR · EN · US · ES · FR · IT · DE · PL · RU · AR · HI · CN · TW · JA · KO",
 
       badge_pro: "PREMIUM",
       badge_free: "Kostenlos",
-      f18_num: "18 — REMOTE-ZUGRIFF",
-      f18_h: "SFTP, FTP/FTPS und WebDAV — der Explorer erreicht den Server.",
-      f18_p: "Verbinde dich mit SFTP, FTP/FTPS und WebDAV (Nextcloud, ownCloud, NAS, IIS). Durchsuchen, Vorschau, Hoch- und Herunterladen, Ordner erstellen, umbenennen und kopieren/verschieben — mit <em>Byte-genauem Fortschritt</em> und Abbrechen. Bearbeite entfernte Dateien lokal und <em>synchronisiere beim Speichern</em>. Passwort- oder <em>SSH-Schlüssel</em>-Authentifizierung; Geheimnisse mit DPAPI verschlüsselt.",
-      f18_mark: "SFTP · FTP/FTPS · WebDAV",
-      f18_free: "Kostenlos: 1 SFTP/FTP/FTPS-Verbindung — nur Durchsuchen und Vorschau. PREMIUM schaltet WebDAV, mehrere Verbindungen und alle Operationen frei.",
-      f19_num: "19 — CLOUDS",
-      f19_h: "Dropbox und OneDrive — deine Cloud im Explorer.",
-      f19_p: "Verbinde dich mit <em>Dropbox</em> und <em>OneDrive</em> per sicherem OAuth — ohne Passwörter zu speichern. Durchsuchen, Vorschau, Hoch- und Herunterladen, Ordner erstellen, umbenennen und kopieren/verschieben, wie ein lokaler Ordner. Deine Dateien laufen nie über unsere Server.",
-      f19_mark: "Dropbox · OneDrive",
-      f19_premium: "PREMIUM: schon ab der ersten Verbindung nötig — Durchsuchen, Vorschau und alle Operationen.",
-      f20_num: "20 — BÜCHER & COMICS",
-      f20_h: "Acht Buchformate — Vorschau und Lesen, ohne den Explorer zu verlassen.",
-      f20_p: "Sofortige Vorschau jeder <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> oder <em>.fb2</em>: Cover, Inhaltsverzeichnis und der Textanfang. Öffne das ganze Buch in einem eigenen Reader — mit Kapitelnavigation, Seitensprung, <em>Auto-Scrollen</em> und gemerkter Leseposition. Auch Comics: <em>.cbz</em> und <em>.cbr</em> öffnen Seite für Seite, ohne vorher Hunderte Megabyte zu entpacken.",
-      f20_mark: "EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR",
-      f20_free: "Kostenlos: Vorschau — Cover, Inhalt und ein erster Blick hinein.",
-      f20_premium: "PREMIUM: voller Reader — Navigation, Seitensprung, Auto-Scrollen, Umblättern und Merken der letzten 20 Bücher.",
-      f20_note: "Bücher, die dir gehören, öffnen sich. Mit DRM gekaufte Bücher bleiben an den Shop gebunden, der sie verkauft hat — die App erklärt es, wenn sie eines findet.",
-      f21_num: "21 — DOKUMENT-VIEWER",
-      f21_h: "Word, Excel, PowerPoint und mehr — ansehen, ohne etwas zu öffnen.",
-      f21_p: "Vorschau von <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> und <em>OpenDocument</em> (Text, Tabelle und Präsentation) direkt im Bereich. Audio und Video laufen in der Vorschau, mit <em>schwebendem Fenster</em> und Lautstärke-/Geschwindigkeitsreglern. Eine Markierung kennzeichnet Dateien mit Vorschau; passwortgeschützte Dateien werden gekennzeichnet, ohne nach dem Passwort zu fragen.",
-      f21_mark: "Word · Excel · PowerPoint · RTF · OpenDocument · Audio · Video",
-      f22_num: "22 — AUDIO AUFNEHMEN",
-      f22_h: "Nimm das Mikrofon direkt in den Ordner auf.",
-      f22_p: "Ein Klick nimmt das <em>Mikrofon</em> in den aktuellen Ordner auf. Wähle das Mikrofon, sieh die Live-<em>Pegelanzeige</em>, stelle die Aufnahmelautstärke ein und speichere als <em>WAV</em> oder <em>M4A/AAC</em>.",
-      f22_mark: "Mikrofon · Pegelanzeige · WAV · M4A",      f23_num: "23 — VIDEO AUFNEHMEN",
-      f23_h: "Nimm die Kamera direkt in den Ordner auf.",
-      f23_p: "Live-<em>Kameravorschau</em>, mit Auswahl von Kamera und Mikrofon, Auflösung und Format — <em>MP4</em>, <em>WMV</em> oder <em>AVI</em>. Speichert mit einem Klick in den aktuellen Ordner.",
-      f23_mark: "Kamera · Mikrofon · MP4 · WMV · AVI",
-      f23_premium: "Kostenlos mit dezentem Wasserzeichen. PREMIUM: ohne Wasserzeichen.",
-      f24_num: "24 — SCANNEN",
-      f24_h: "Vom Scanner in den Ordner — Bild oder PDF.",
-      f24_p: "Scanne vom <em>Flachbett</em> oder vom <em>Einzug (ADF)</em>, viele Blätter auf einmal. Wähle Auflösung und Farbe — <em>Farbe</em>, Graustufen oder <em>Schwarzweiß</em>. Speichere als <em>JPEG/PNG</em> oder füge alles zu einem <em>mehrseitigen PDF</em> zusammen — und füge weitere Blätter zum selben PDF hinzu.",
-      f24_mark: "Flachbett · Einzug (ADF) · Farbe · Mehrseitiges PDF",
-      f25_num: "25 — ARCHIVE ALS ORDNER",
-      f25_h: "ZIP, RAR, 7z und TAR wie Ordner öffnen.",
-      f25_p: "Doppelklick (oder <em>Inhalt durchsuchen</em>) und du bist im Archiv — Inhalt durchblättern, <em>Vorschau</em> und <em>Dateien herauskopieren</em>, ohne alles zu entpacken. Nur Lesen; <em>Öffnen mit…</em> öffnet sie weiterhin in WinRAR/WinZip/7-Zip.",
-      f25_mark: "ZIP · RAR · 7z · TAR · Dateien herauskopieren",
-      f26_num: "26 — BILDSCHIRM AUFNEHMEN",
-      f26_h: "Nimm den Bildschirm direkt in den Ordner auf — mit optionaler Kamera.",
-      f26_p: "Wähle einen <em>Bereich eines beliebigen Bildschirms</em> (oder den ganzen Bildschirm) und nimm als <em>MP4</em> mit dem <em>Mikrofon</em> auf. Kamera dazu: Bildschirm⇄Kamera mit <em>Übergängen</em> umschalten (Überblendung, Wischen, Schieben, Mosaik), als <em>PiP</em> in einer Ecke zeigen oder nebeneinander im <em>geteilten Bildschirm</em>.",
-      f26_mark: "Bereich · Mikrofon · Systemton · Kamera · PiP · Geteilter Bildschirm · Übergänge · MP4",
-      f26_premium: "Kostenlos: Wasserzeichen + 15 s und ohne Ton. PREMIUM: ohne Wasserzeichen, ohne Zeitlimit und mit Ton (Mikrofon + System).",
-      f27_num: "27 — MARKEN-KARTEN",
-      f27_h: "Intro- und Endkarten für deine Videos — direkt in der Aufnahme.",
-      f27_p: "Gib deinen Aufnahmen (Bildschirm und Kamera) eine <em>Intro-Karte</em>, ein permanentes <em>Textband</em> und eine <em>Endkarte</em> im Abspann-Stil (bis zu 10 Zeilen). <em>5 unabhängige Modelle</em>, je 3 Darstellungen, Logo, Hintergrundfarbe und ein <em>Episoden-Badge</em> — für eine einheitliche Videoserie.",
-      f27_mark: "Intro · Band · Ende (Abspann) · 5 Modelle · Logo · Episoden-Badge",
-      f27_premium: "PREMIUM. Dezente Signatur „Made with ExplorerFocus“ auf der Endkarte.",
-      f28_num: "28 — VOICE-OVER",
-      f28_h: "Vertone deine Videos nach der Aufnahme — auch allein.",
-      f28_p: "Nimm den Bildschirm <em>stumm</em> auf und sprich dann in einem <em>eigenen Fenster</em> darüber, während das Video läuft. Die Erzählung landet in einer separaten Datei; füge <em>Hintergrundmusik</em> hinzu, regle die Lautstärken (damit die Musik die Stimme nicht übertönt) und <em>erzeuge das finale Video</em> aus allen drei Quellen.",
-      f28_mark: "Stumm aufnehmen · Über das Video sprechen · Musik · Lautstärken · Video + Erzählung + Musik → final",
-      f28_premium: "PREMIUM. Video und Erzählung bleiben getrennte Dateien; erst „Finale erzeugen“ erstellt das gemischte Video.",
+      f19_num: "19 — REMOTE-ZUGRIFF",
+      f19_h: "SFTP, FTP/FTPS und WebDAV — der Explorer erreicht den Server.",
+      f19_p: "Verbinde dich mit SFTP, FTP/FTPS und WebDAV (Nextcloud, ownCloud, NAS, IIS). Durchsuchen, Vorschau, Hoch- und Herunterladen, Ordner erstellen, umbenennen und kopieren/verschieben — mit <em>Byte-genauem Fortschritt</em> und Abbrechen. Bearbeite entfernte Dateien lokal und <em>synchronisiere beim Speichern</em>. Passwort- oder <em>SSH-Schlüssel</em>-Authentifizierung; Geheimnisse mit DPAPI verschlüsselt.",
+      f19_mark: "SFTP · FTP/FTPS · WebDAV",
+      f19_free: "Kostenlos: 1 SFTP/FTP/FTPS-Verbindung — nur Durchsuchen und Vorschau. PREMIUM schaltet WebDAV, mehrere Verbindungen und alle Operationen frei.",
+      f20_num: "20 — CLOUDS",
+      f20_h: "Dropbox und OneDrive — deine Cloud im Explorer.",
+      f20_p: "Verbinde dich mit <em>Dropbox</em> und <em>OneDrive</em> per sicherem OAuth — ohne Passwörter zu speichern. Durchsuchen, Vorschau, Hoch- und Herunterladen, Ordner erstellen, umbenennen und kopieren/verschieben, wie ein lokaler Ordner. Deine Dateien laufen nie über unsere Server.",
+      f20_mark: "Dropbox · OneDrive",
+      f20_premium: "PREMIUM: schon ab der ersten Verbindung nötig — Durchsuchen, Vorschau und alle Operationen.",
+      f21_num: "21 — BÜCHER & COMICS",
+      f21_h: "Acht Buchformate — Vorschau und Lesen, ohne den Explorer zu verlassen.",
+      f21_p: "Sofortige Vorschau jeder <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> oder <em>.fb2</em>: Cover, Inhaltsverzeichnis und der Textanfang. Öffne das ganze Buch in einem eigenen Reader — mit Kapitelnavigation, Seitensprung, <em>Auto-Scrollen</em> und gemerkter Leseposition. Auch Comics: <em>.cbz</em> und <em>.cbr</em> öffnen Seite für Seite, ohne vorher Hunderte Megabyte zu entpacken.",
+      f21_mark: "EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR",
+      f21_free: "Kostenlos: Vorschau — Cover, Inhalt und ein erster Blick hinein.",
+      f21_premium: "PREMIUM: voller Reader — Navigation, Seitensprung, Auto-Scrollen, Umblättern und Merken der letzten 20 Bücher.",
+      f21_note: "Bücher, die dir gehören, öffnen sich. Mit DRM gekaufte Bücher bleiben an den Shop gebunden, der sie verkauft hat — die App erklärt es, wenn sie eines findet.",
+      f22_num: "22 — DOKUMENT-VIEWER",
+      f22_h: "Word, Excel, PowerPoint und mehr — ansehen, ohne etwas zu öffnen.",
+      f22_p: "Vorschau von <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> und <em>OpenDocument</em> (Text, Tabelle und Präsentation) direkt im Bereich. Audio und Video laufen in der Vorschau, mit <em>schwebendem Fenster</em> und Lautstärke-/Geschwindigkeitsreglern. Eine Markierung kennzeichnet Dateien mit Vorschau; passwortgeschützte Dateien werden gekennzeichnet, ohne nach dem Passwort zu fragen.",
+      f22_mark: "Word · Excel · PowerPoint · RTF · OpenDocument · Audio · Video",
+      f23_num: "23 — AUDIO AUFNEHMEN",
+      f23_h: "Nimm das Mikrofon direkt in den Ordner auf.",
+      f23_p: "Ein Klick nimmt das <em>Mikrofon</em> in den aktuellen Ordner auf. Wähle das Mikrofon, sieh die Live-<em>Pegelanzeige</em>, stelle die Aufnahmelautstärke ein und speichere als <em>WAV</em> oder <em>M4A/AAC</em>.",
+      f23_mark: "Mikrofon · Pegelanzeige · WAV · M4A",      f24_num: "24 — VIDEO AUFNEHMEN",
+      f24_h: "Nimm die Kamera direkt in den Ordner auf.",
+      f24_p: "Live-<em>Kameravorschau</em>, mit Auswahl von Kamera und Mikrofon, Auflösung und Format — <em>MP4</em>, <em>WMV</em> oder <em>AVI</em>. Speichert mit einem Klick in den aktuellen Ordner.",
+      f24_mark: "Kamera · Mikrofon · MP4 · WMV · AVI",
+      f24_premium: "Kostenlos mit dezentem Wasserzeichen. PREMIUM: ohne Wasserzeichen.",
+      f25_num: "25 — SCANNEN",
+      f25_h: "Vom Scanner in den Ordner — Bild oder PDF.",
+      f25_p: "Scanne vom <em>Flachbett</em> oder vom <em>Einzug (ADF)</em>, viele Blätter auf einmal. Wähle Auflösung und Farbe — <em>Farbe</em>, Graustufen oder <em>Schwarzweiß</em>. Speichere als <em>JPEG/PNG</em> oder füge alles zu einem <em>mehrseitigen PDF</em> zusammen — und füge weitere Blätter zum selben PDF hinzu.",
+      f25_mark: "Flachbett · Einzug (ADF) · Farbe · Mehrseitiges PDF",
+      f26_num: "26 — ARCHIVE ALS ORDNER",
+      f26_h: "ZIP, RAR, 7z und TAR wie Ordner öffnen.",
+      f26_p: "Doppelklick (oder <em>Inhalt durchsuchen</em>) und du bist im Archiv — Inhalt durchblättern, <em>Vorschau</em> und <em>Dateien herauskopieren</em>, ohne alles zu entpacken. Nur Lesen; <em>Öffnen mit…</em> öffnet sie weiterhin in WinRAR/WinZip/7-Zip.",
+      f26_mark: "ZIP · RAR · 7z · TAR · Dateien herauskopieren",
+      f27_num: "27 — BILDSCHIRM AUFNEHMEN",
+      f27_h: "Nimm den Bildschirm direkt in den Ordner auf — mit optionaler Kamera.",
+      f27_p: "Wähle einen <em>Bereich eines beliebigen Bildschirms</em> (oder den ganzen Bildschirm) und nimm als <em>MP4</em> mit dem <em>Mikrofon</em> auf. Kamera dazu: Bildschirm⇄Kamera mit <em>Übergängen</em> umschalten (Überblendung, Wischen, Schieben, Mosaik), als <em>PiP</em> in einer Ecke zeigen oder nebeneinander im <em>geteilten Bildschirm</em>.",
+      f27_mark: "Bereich · Mikrofon · Systemton · Kamera · PiP · Geteilter Bildschirm · Übergänge · MP4",
+      f27_premium: "Kostenlos: Wasserzeichen + 15 s und ohne Ton. PREMIUM: ohne Wasserzeichen, ohne Zeitlimit und mit Ton (Mikrofon + System).",
+      f28_num: "28 — MARKEN-KARTEN",
+      f28_h: "Intro- und Endkarten für deine Videos — direkt in der Aufnahme.",
+      f28_p: "Gib deinen Aufnahmen (Bildschirm und Kamera) eine <em>Intro-Karte</em>, ein permanentes <em>Textband</em> und eine <em>Endkarte</em> im Abspann-Stil (bis zu 10 Zeilen). <em>5 unabhängige Modelle</em>, je 3 Darstellungen, Logo, Hintergrundfarbe und ein <em>Episoden-Badge</em> — für eine einheitliche Videoserie.",
+      f28_mark: "Intro · Band · Ende (Abspann) · 5 Modelle · Logo · Episoden-Badge",
+      f28_premium: "PREMIUM. Dezente Signatur „Made with ExplorerFocus“ auf der Endkarte.",
+      f29_num: "29 — VOICE-OVER",
+      f29_h: "Vertone deine Videos nach der Aufnahme — auch allein.",
+      f29_p: "Nimm den Bildschirm <em>stumm</em> auf und sprich dann in einem <em>eigenen Fenster</em> darüber, während das Video läuft. Die Erzählung landet in einer separaten Datei; füge <em>Hintergrundmusik</em> hinzu, regle die Lautstärken (damit die Musik die Stimme nicht übertönt) und <em>erzeuge das finale Video</em> aus allen drei Quellen.",
+      f29_mark: "Stumm aufnehmen · Über das Video sprechen · Musik · Lautstärken · Video + Erzählung + Musik → final",
+      f29_premium: "PREMIUM. Video und Erzählung bleiben getrennte Dateien; erst „Finale erzeugen“ erstellt das gemischte Video.",
       wn_label: "✦ Neu",
       wn_books: "📚 Bücher & Comics",
       wn_voice: "🎙 Voice-over",
       wn_cards: "🎬 Marken-Karten",
       wn_screen: "🖥 Bildschirmaufnahme",
-      f24_premium: "Kostenlos: 1 Flachbett-Seite, mit Wasserzeichen. PREMIUM: mehrere Seiten, Einzug (ADF) und ohne Wasserzeichen.",
+      f25_premium: "Kostenlos: 1 Flachbett-Seite, mit Wasserzeichen. PREMIUM: mehrere Seiten, Einzug (ADF) und ohne Wasserzeichen.",
       ft_ch_standalone: "Standalone (.exe)",
       ft_ch_portable: "Standalone (.zip)",
 
@@ -2603,7 +2649,7 @@
       pr_blurb: "Das war immer so und bleibt so: kein Abo, kein Konto, keine Werbung. Premium ist eine einmalige Spende — eine kleine Anerkennung für die Nächte und Tage, in denen sehr spezielle und technisch anspruchsvolle Funktionen entstanden sind. Mir geht es nicht ums Geld: Mir geht es um die Ideen, die dabei entstehen. Die meisten Menschen werden Premium nie vermissen — und so soll es sein.",
       pr_free_h: "Kostenlos",
       pr_free_tag: "für immer · ohne Konto",
-      pr_free_list: "<li>Profile, konfigurierbare Bäume, Multi-Muster-Suche</li><li>Vorschau: Code, PDF, Word/Excel, Markdown, Bilder, Bücher</li><li>Dateioperationen mit echtem Fortschritt, Tempo, ETA, Verlauf und Konflikten</li><li>Terminals, Zuordnungen pro Dateiendung, Archive als Ordner</li><li>Vollständiges dunkles Design, 12 Sprachen, automatische Updates</li><li>Audioaufnahme (Mikrofon)</li><li><strong>1 Remote-Verbindung</strong> (SFTP/FTP/FTPS) — durchsuchen und Vorschau</li>",
+      pr_free_list: "<li>Profile, konfigurierbare Bäume, Multi-Muster-Suche</li><li>Vorschau: Code, PDF, Word/Excel, Markdown, Bilder, Bücher</li><li>Dateioperationen mit echtem Fortschritt, Tempo, ETA, Verlauf und Konflikten</li><li>Terminals, Zuordnungen pro Dateiendung, Archive als Ordner</li><li>Vollständiges dunkles Design, 16 Sprachen, automatische Updates</li><li>Audioaufnahme (Mikrofon)</li><li><strong>1 Remote-Verbindung</strong> (SFTP/FTP/FTPS) — durchsuchen und Vorschau</li>",
       pr_prem_h: "Premium",
       pr_prem_tag: "einmalige Spende von 19,99 € · pro Gerät",
       pr_prem_list: "<li><strong>Voller Remote-Zugriff</strong>: mehrere Verbindungen, alle Operationen, WebDAV, Dropbox, OneDrive</li><li>Bildschirmaufnahme <strong>ohne Wasserzeichen, ohne Zeitlimit und mit Ton</strong></li><li>Videoaufnahme ohne Wasserzeichen</li><li>Audio mit Mischung aus Mikrofon + Systemton</li><li>Mehrseitiges Scannen mit Einzug (ADF)</li><li>Vollständiger Buch-Reader — EPUB, Kindle-Formate, FB2 und Comics</li><li>Intro-/Endkarten und Textbanner in Aufnahmen</li>",
@@ -2765,67 +2811,71 @@
       f17_num: "17 — 部署",
       f17_h: "单个 <em>.exe</em>。无需安装程序。",
       f17_p: "自包含、单文件、压缩。复制到 U 盘,可在任意 Windows 10/11 上运行。<em>net10.0-windows</em> + WPF — 可执行文件之外没有任何依赖。",
+      f18_num: "18 — 16 种语言",
+      f18_h: "整个应用，<em>十六</em>种语言。",
+      f18_p: "不只是菜单 — 每个对话框、每条消息、每个提示。选一种，界面<em>当场</em>切换：无需重启，无需重装。",
+      f18_mark: "PT · BR · EN · US · ES · FR · IT · DE · PL · RU · AR · HI · CN · TW · JA · KO",
 
       badge_pro: "PREMIUM",
       badge_free: "免费",
-      f18_num: "18 — 远程访问",
-      f18_h: "SFTP、FTP/FTPS 和 WebDAV — 资源管理器直达服务器。",
-      f18_p: "连接 SFTP、FTP/FTPS 和 WebDAV(Nextcloud、ownCloud、NAS、IIS)。浏览、预览、上传下载、新建文件夹、重命名与复制/移动 — 具备<em>字节级进度</em>与取消。在本地编辑远程文件并<em>保存即同步</em>。支持密码或 <em>SSH 密钥</em>认证;凭据以 DPAPI 加密。",
-      f18_mark: "SFTP · FTP/FTPS · WebDAV",
-      f18_free: "免费版：1 个 SFTP/FTP/FTPS 连接 — 仅浏览与预览。PREMIUM 解锁 WebDAV、多连接与全部操作。",
-      f19_num: "19 — 云端",
-      f19_h: "Dropbox 和 OneDrive — 把云端装进资源管理器。",
-      f19_p: "通过安全的 OAuth 连接 <em>Dropbox</em> 和 <em>OneDrive</em>——不存储密码。浏览、预览、上传下载、新建文件夹、重命名和复制/移动，就像本地文件夹。你的文件绝不经过我们的服务器。",
-      f19_mark: "Dropbox · OneDrive",
-      f19_premium: "PREMIUM：从第一个连接起就需要 — 浏览、预览和全部操作。",
-      f20_num: "20 — 图书与漫画",
-      f20_h: "八种图书格式 — 在文件管理器内直接预览与阅读。",
-      f20_p: "即时预览任意 <em>.epub</em>、<em>.mobi</em>、<em>.azw</em>、<em>.azw3</em>、<em>.prc</em> 或 <em>.fb2</em>：封面、目录和正文开头。在独立阅读器中打开整本书，支持章节导航、页面跳转、<em>自动滚动</em>，并记住你的阅读位置。漫画同样支持：<em>.cbz</em> 和 <em>.cbr</em> 逐页打开，无需先解压数百兆的文件。",
-      f20_mark: "EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR",
-      f20_free: "免费：预览 — 封面、目录，以及先看上一眼。",
-      f20_premium: "PREMIUM：完整阅读器 — 导航、页面跳转、自动滚动、翻页，以及记住最近 20 本书。",
-      f20_note: "你自己的书可以打开。带 DRM 购买的书仍绑定在售出它们的商店 — 遇到时应用会说明原因。",
-      f21_num: "21 — 文档查看器",
-      f21_h: "Word、Excel、PowerPoint 等 — 无需打开即可查看。",
-      f21_p: "在预览窗格中直接预览 <em>Word (.doc/.docx)</em>、<em>Excel</em>、<em>PowerPoint</em>、<em>RTF</em> 和 <em>OpenDocument</em>（文本、表格和演示文稿）。音频和视频在预览中播放，带<em>浮动窗口</em>和音量/速度控制。标记会标示可预览的文件；受密码保护的文件会被提示，而不询问密码。",
-      f21_mark: "Word · Excel · PowerPoint · RTF · OpenDocument · 音频 · 视频",
-      f22_num: "22 — 录制音频",
-      f22_h: "将麦克风直接录制到文件夹。",
-      f22_p: "一键将<em>麦克风</em>录制到当前文件夹。选择麦克风，查看实时<em>电平表</em>，调整录制音量，保存为 <em>WAV</em> 或 <em>M4A/AAC</em>。",
-      f22_mark: "麦克风 · 电平表 · WAV · M4A",      f23_num: "23 — 录制视频",
-      f23_h: "将摄像头直接录制到文件夹。",
-      f23_p: "实时<em>摄像头</em>预览，可选择摄像头和麦克风、分辨率和格式 — <em>MP4</em>、<em>WMV</em> 或 <em>AVI</em>。一键保存到当前文件夹。",
-      f23_mark: "摄像头 · 麦克风 · MP4 · WMV · AVI",
-      f23_premium: "免费，带不显眼的页脚水印。PREMIUM：无水印。",
-      f24_num: "24 — 扫描",
-      f24_h: "从扫描仪到文件夹 — 图像或 PDF。",
-      f24_p: "从<em>平板</em>或<em>进纸器（ADF）</em>扫描，一次多张。选择分辨率和颜色 — <em>彩色</em>、灰度或<em>黑白</em>。保存为 <em>JPEG/PNG</em>，或合并为<em>多页 PDF</em>，并继续向同一 PDF 添加页面。",
-      f24_mark: "平板 · 进纸器（ADF）· 彩色 · 多页 PDF",
-      f25_num: "25 — 压缩包当作文件夹",
-      f25_h: "像文件夹一样打开 ZIP、RAR、7z 和 TAR。",
-      f25_p: "双击（或<em>浏览内容</em>）即可进入压缩包 — 浏览内容、<em>预览</em>并把<em>文件复制出来</em>，无需全部解压。只读；<em>打开方式…</em>仍会用 WinRAR/WinZip/7-Zip 打开。",
-      f25_mark: "ZIP · RAR · 7z · TAR · 复制文件出来",
-      f26_num: "26 — 录制屏幕",
-      f26_h: "将屏幕直接录制到文件夹——可选摄像头。",
-      f26_p: "选择<em>任意显示器的区域</em>（或整个屏幕），用<em>麦克风</em>录制为 <em>MP4</em>。加入<em>摄像头</em>：用<em>过渡效果</em>（淡入淡出、擦除、滑动、马赛克）在屏幕⇄摄像头之间切换，在角落以<em>画中画</em>显示，或在<em>分屏</em>中并排显示。",
-      f26_mark: "区域 · 麦克风 · 系统声音 · 摄像头 · 画中画 · 分屏 · 过渡 · MP4",
-      f26_premium: "免费：水印 + 15 秒且无声音。PREMIUM：无水印、无时间限制且有声音（麦克风 + 系统）。",
-      f27_num: "27 — 品牌卡片",
-      f27_h: "为你的视频添加开场和片尾卡片——就在录制中。",
-      f27_p: "为你的录制（屏幕与摄像头）添加<em>开场卡</em>、常驻<em>文字横幅</em>和片尾字幕风格的<em>片尾卡</em>（最多 10 行）。<em>5 个独立模型</em>，每个有 3 种呈现方式、徽标、背景色和<em>集数徽章</em>——为连贯的视频系列而生。",
-      f27_mark: "开场 · 横幅 · 片尾（字幕）· 5 个模型 · 徽标 · 集数徽章",
-      f27_premium: "PREMIUM。片尾卡带有低调的“Made with ExplorerFocus”签名。",
-      f28_num: "28 — 配音",
-      f28_h: "录制后为你的视频配音——即使只有你一个人。",
-      f28_p: "以<em>静音</em>方式录制屏幕，然后在<em>专用窗口</em>中一边播放视频一边<em>为其配音</em>。旁白保存为单独文件；添加<em>背景音乐</em>，调整音量（以免音乐盖过人声），并用三个来源<em>生成最终视频</em>。",
-      f28_mark: "静音录制 · 为视频配音 · 音乐 · 音量 · 视频 + 旁白 + 音乐 → 最终",
-      f28_premium: "PREMIUM。视频与旁白保持为单独文件；只有“生成最终”才会创建混合后的视频。",
+      f19_num: "19 — 远程访问",
+      f19_h: "SFTP、FTP/FTPS 和 WebDAV — 资源管理器直达服务器。",
+      f19_p: "连接 SFTP、FTP/FTPS 和 WebDAV(Nextcloud、ownCloud、NAS、IIS)。浏览、预览、上传下载、新建文件夹、重命名与复制/移动 — 具备<em>字节级进度</em>与取消。在本地编辑远程文件并<em>保存即同步</em>。支持密码或 <em>SSH 密钥</em>认证;凭据以 DPAPI 加密。",
+      f19_mark: "SFTP · FTP/FTPS · WebDAV",
+      f19_free: "免费版：1 个 SFTP/FTP/FTPS 连接 — 仅浏览与预览。PREMIUM 解锁 WebDAV、多连接与全部操作。",
+      f20_num: "20 — 云端",
+      f20_h: "Dropbox 和 OneDrive — 把云端装进资源管理器。",
+      f20_p: "通过安全的 OAuth 连接 <em>Dropbox</em> 和 <em>OneDrive</em>——不存储密码。浏览、预览、上传下载、新建文件夹、重命名和复制/移动，就像本地文件夹。你的文件绝不经过我们的服务器。",
+      f20_mark: "Dropbox · OneDrive",
+      f20_premium: "PREMIUM：从第一个连接起就需要 — 浏览、预览和全部操作。",
+      f21_num: "21 — 图书与漫画",
+      f21_h: "八种图书格式 — 在文件管理器内直接预览与阅读。",
+      f21_p: "即时预览任意 <em>.epub</em>、<em>.mobi</em>、<em>.azw</em>、<em>.azw3</em>、<em>.prc</em> 或 <em>.fb2</em>：封面、目录和正文开头。在独立阅读器中打开整本书，支持章节导航、页面跳转、<em>自动滚动</em>，并记住你的阅读位置。漫画同样支持：<em>.cbz</em> 和 <em>.cbr</em> 逐页打开，无需先解压数百兆的文件。",
+      f21_mark: "EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR",
+      f21_free: "免费：预览 — 封面、目录，以及先看上一眼。",
+      f21_premium: "PREMIUM：完整阅读器 — 导航、页面跳转、自动滚动、翻页，以及记住最近 20 本书。",
+      f21_note: "你自己的书可以打开。带 DRM 购买的书仍绑定在售出它们的商店 — 遇到时应用会说明原因。",
+      f22_num: "22 — 文档查看器",
+      f22_h: "Word、Excel、PowerPoint 等 — 无需打开即可查看。",
+      f22_p: "在预览窗格中直接预览 <em>Word (.doc/.docx)</em>、<em>Excel</em>、<em>PowerPoint</em>、<em>RTF</em> 和 <em>OpenDocument</em>（文本、表格和演示文稿）。音频和视频在预览中播放，带<em>浮动窗口</em>和音量/速度控制。标记会标示可预览的文件；受密码保护的文件会被提示，而不询问密码。",
+      f22_mark: "Word · Excel · PowerPoint · RTF · OpenDocument · 音频 · 视频",
+      f23_num: "23 — 录制音频",
+      f23_h: "将麦克风直接录制到文件夹。",
+      f23_p: "一键将<em>麦克风</em>录制到当前文件夹。选择麦克风，查看实时<em>电平表</em>，调整录制音量，保存为 <em>WAV</em> 或 <em>M4A/AAC</em>。",
+      f23_mark: "麦克风 · 电平表 · WAV · M4A",      f24_num: "24 — 录制视频",
+      f24_h: "将摄像头直接录制到文件夹。",
+      f24_p: "实时<em>摄像头</em>预览，可选择摄像头和麦克风、分辨率和格式 — <em>MP4</em>、<em>WMV</em> 或 <em>AVI</em>。一键保存到当前文件夹。",
+      f24_mark: "摄像头 · 麦克风 · MP4 · WMV · AVI",
+      f24_premium: "免费，带不显眼的页脚水印。PREMIUM：无水印。",
+      f25_num: "25 — 扫描",
+      f25_h: "从扫描仪到文件夹 — 图像或 PDF。",
+      f25_p: "从<em>平板</em>或<em>进纸器（ADF）</em>扫描，一次多张。选择分辨率和颜色 — <em>彩色</em>、灰度或<em>黑白</em>。保存为 <em>JPEG/PNG</em>，或合并为<em>多页 PDF</em>，并继续向同一 PDF 添加页面。",
+      f25_mark: "平板 · 进纸器（ADF）· 彩色 · 多页 PDF",
+      f26_num: "26 — 压缩包当作文件夹",
+      f26_h: "像文件夹一样打开 ZIP、RAR、7z 和 TAR。",
+      f26_p: "双击（或<em>浏览内容</em>）即可进入压缩包 — 浏览内容、<em>预览</em>并把<em>文件复制出来</em>，无需全部解压。只读；<em>打开方式…</em>仍会用 WinRAR/WinZip/7-Zip 打开。",
+      f26_mark: "ZIP · RAR · 7z · TAR · 复制文件出来",
+      f27_num: "27 — 录制屏幕",
+      f27_h: "将屏幕直接录制到文件夹——可选摄像头。",
+      f27_p: "选择<em>任意显示器的区域</em>（或整个屏幕），用<em>麦克风</em>录制为 <em>MP4</em>。加入<em>摄像头</em>：用<em>过渡效果</em>（淡入淡出、擦除、滑动、马赛克）在屏幕⇄摄像头之间切换，在角落以<em>画中画</em>显示，或在<em>分屏</em>中并排显示。",
+      f27_mark: "区域 · 麦克风 · 系统声音 · 摄像头 · 画中画 · 分屏 · 过渡 · MP4",
+      f27_premium: "免费：水印 + 15 秒且无声音。PREMIUM：无水印、无时间限制且有声音（麦克风 + 系统）。",
+      f28_num: "28 — 品牌卡片",
+      f28_h: "为你的视频添加开场和片尾卡片——就在录制中。",
+      f28_p: "为你的录制（屏幕与摄像头）添加<em>开场卡</em>、常驻<em>文字横幅</em>和片尾字幕风格的<em>片尾卡</em>（最多 10 行）。<em>5 个独立模型</em>，每个有 3 种呈现方式、徽标、背景色和<em>集数徽章</em>——为连贯的视频系列而生。",
+      f28_mark: "开场 · 横幅 · 片尾（字幕）· 5 个模型 · 徽标 · 集数徽章",
+      f28_premium: "PREMIUM。片尾卡带有低调的“Made with ExplorerFocus”签名。",
+      f29_num: "29 — 配音",
+      f29_h: "录制后为你的视频配音——即使只有你一个人。",
+      f29_p: "以<em>静音</em>方式录制屏幕，然后在<em>专用窗口</em>中一边播放视频一边<em>为其配音</em>。旁白保存为单独文件；添加<em>背景音乐</em>，调整音量（以免音乐盖过人声），并用三个来源<em>生成最终视频</em>。",
+      f29_mark: "静音录制 · 为视频配音 · 音乐 · 音量 · 视频 + 旁白 + 音乐 → 最终",
+      f29_premium: "PREMIUM。视频与旁白保持为单独文件；只有“生成最终”才会创建混合后的视频。",
       wn_label: "✦ 新功能",
       wn_books: "📚 图书与漫画",
       wn_voice: "🎙 配音",
       wn_cards: "🎬 品牌卡片",
       wn_screen: "🖥 屏幕录制",
-      f24_premium: "免费：平板 1 页，带水印。PREMIUM：多页、送稿器（ADF）且无水印。",
+      f25_premium: "免费：平板 1 页，带水印。PREMIUM：多页、送稿器（ADF）且无水印。",
       ft_ch_standalone: "独立版 (.exe)",
       ft_ch_portable: "独立版 (.zip)",
 
@@ -2867,7 +2917,7 @@
       pr_blurb: "一直如此，今后也不会变：没有订阅、无需账号、没有广告。高级版是一次性捐赠 — 是对那些为实现高度专门、技术要求极高的功能而付出的日日夜夜的一点回报。我做这个不是为了钱：而是为了沿途出现的想法。大多数人永远不会觉得少了高级版 — 本该如此。",
       pr_free_h: "免费",
       pr_free_tag: "永久 · 无需账号",
-      pr_free_list: "<li>配置档、可自定义目录树、多模式搜索</li><li>预览：代码、PDF、Word/Excel、Markdown、图片、图书</li><li>文件操作：真实进度、速度、剩余时间、历史记录与冲突处理</li><li>终端、按扩展名关联应用、把压缩包当文件夹浏览</li><li>完整深色主题、12 种语言、自动更新</li><li>录音（麦克风）</li><li><strong>1 个远程连接</strong>（SFTP/FTP/FTPS）— 浏览与预览</li>",
+      pr_free_list: "<li>配置档、可自定义目录树、多模式搜索</li><li>预览：代码、PDF、Word/Excel、Markdown、图片、图书</li><li>文件操作：真实进度、速度、剩余时间、历史记录与冲突处理</li><li>终端、按扩展名关联应用、把压缩包当文件夹浏览</li><li>完整深色主题、16 种语言、自动更新</li><li>录音（麦克风）</li><li><strong>1 个远程连接</strong>（SFTP/FTP/FTPS）— 浏览与预览</li>",
       pr_prem_h: "PREMIUM",
       pr_prem_tag: "一次性捐赠 19,99 € · 按设备授权",
       pr_prem_list: "<li><strong>完整远程访问</strong>：多个连接、全部操作、WebDAV、Dropbox、OneDrive</li><li>屏幕录制<strong>无水印、无时长限制、带声音</strong></li><li>摄像头录制无水印</li><li>音频混合麦克风 + 系统声音</li><li>多页扫描，支持自动进纸器（ADF）</li><li>完整图书阅读器 — EPUB、Kindle 格式、FB2 和漫画</li><li>录制的片头/片尾卡片与文字横幅</li>",
@@ -3029,68 +3079,72 @@
       f17_num: "17 — DÉPLOIEMENT",
       f17_h: "Un seul <em>.exe</em>. Pas d'installateur.",
       f17_p: "Autonome, fichier unique, compressé. Copiez-le sur une clé USB et il tourne sur n'importe quel Windows 10/11. <em>net10.0-windows</em> + WPF — aucune dépendance hors du dossier de l'exécutable.",
+      f18_num: "18 — 16 LANGUES",
+      f18_h: "L'app entière, en <em>seize</em> langues.",
+      f18_p: "Pas seulement les menus — chaque boîte de dialogue, chaque message, chaque infobulle. On en choisit une et l'interface change <em>sur-le-champ</em> : rien à redémarrer, rien à réinstaller.",
+      f18_mark: "PT · BR · EN · US · ES · FR · IT · DE · PL · RU · AR · HI · CN · TW · JA · KO",
 
       badge_pro: "PREMIUM",
       badge_free: "Gratuit",
-      f18_num: "18 — ACCÈS DISTANT",
-      f18_h: "SFTP, FTP/FTPS et WebDAV — l'explorateur atteint le serveur.",
-      f18_p: "Connectez-vous en SFTP, FTP/FTPS et WebDAV (Nextcloud, ownCloud, NAS, IIS). Naviguez, prévisualisez, envoyez et téléchargez, créez des dossiers, renommez et copiez/déplacez — avec une <em>progression à l'octet près</em> et l'annulation. Éditez les fichiers distants en local et <em>synchronisez à l'enregistrement</em>. Authentification par mot de passe ou <em>clé SSH</em> ; secrets chiffrés avec DPAPI.",
-      f18_mark: "SFTP · FTP/FTPS · WebDAV",
-      f18_free: "Gratuit : 1 connexion SFTP/FTP/FTPS — navigation et aperçu seulement. PREMIUM débloque WebDAV, plusieurs connexions et toutes les opérations.",
-      f19_num: "19 — CLOUDS",
-      f19_h: "Dropbox et OneDrive — votre cloud dans l'explorateur.",
-      f19_p: "Connectez-vous à <em>Dropbox</em> et <em>OneDrive</em> via OAuth sécurisé — aucun mot de passe stocké. Naviguez, prévisualisez, envoyez et téléchargez, créez des dossiers, renommez et copiez/déplacez, comme un dossier local. Vos fichiers ne passent jamais par nos serveurs.",
-      f19_mark: "Dropbox · OneDrive",
-      f19_premium: "PREMIUM : nécessaire dès la première connexion — navigation, aperçu et toutes les opérations.",
-      f20_num: "20 — LIVRES ET BD",
-      f20_h: "Huit formats de livre — prévisualisez et lisez, sans quitter l'explorateur.",
-      f20_p: "Aperçu instantané de n'importe quel <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> ou <em>.fb2</em> : couverture, table des matières et le début du texte. Ouvrez le livre entier dans son propre lecteur, avec navigation par chapitre, saut de page, <em>défilement automatique</em> et votre position de lecture mémorisée. La BD aussi : <em>.cbz</em> et <em>.cbr</em> s'ouvrent page par page, sans décompresser des centaines de mégaoctets au préalable.",
-      f20_mark: "EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR",
-      f20_free: "Gratuit : aperçu — couverture, sommaire et un premier coup d'œil à l'intérieur.",
-      f20_premium: "PREMIUM : lecteur complet — navigation, saut de page, défilement automatique, tourne-page et mémoire de vos 20 derniers livres.",
-      f20_note: "Les livres qui vous appartiennent s'ouvrent. Les livres achetés avec DRM restent liés à la boutique qui les a vendus — l'app explique pourquoi lorsqu'elle en rencontre un.",
-      f21_num: "21 — VISIONNEUSES DE DOCUMENTS",
-      f21_h: "Word, Excel, PowerPoint et plus — voir sans rien ouvrir.",
-      f21_p: "Prévisualisez <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> et <em>OpenDocument</em> (texte, feuille et présentation) directement dans le volet. L'audio et la vidéo se lisent dans l'aperçu, avec une <em>fenêtre flottante</em> et des contrôles de volume/vitesse. Un marqueur signale les fichiers qui ont un aperçu ; les fichiers protégés par mot de passe sont signalés sans demander le mot de passe.",
-      f21_mark: "Word · Excel · PowerPoint · RTF · OpenDocument · Audio · Vidéo",
-      f22_num: "22 — ENREGISTRER L'AUDIO",
-      f22_h: "Enregistrez le microphone directement dans le dossier.",
-      f22_p: "Un clic enregistre le <em>microphone</em> dans le dossier courant. Choisissez le microphone, surveillez le <em>vumètre</em> en direct, ajustez le volume d'enregistrement et sauvegardez en <em>WAV</em> ou <em>M4A/AAC</em>.",
-      f22_mark: "Microphone · Vumètre · WAV · M4A",
-      f23_num: "23 — ENREGISTRER LA VIDÉO",
-      f23_h: "Enregistrez la caméra directement dans le dossier.",
-      f23_p: "Aperçu <em>caméra</em> en direct, avec choix de la caméra et du microphone, résolution et format — <em>MP4</em>, <em>WMV</em> ou <em>AVI</em>. Sauvegarde dans le dossier courant en un clic.",
-      f23_mark: "Caméra · Microphone · MP4 · WMV · AVI",
-      f23_premium: "Gratuit avec un discret filigrane en pied. PREMIUM : sans filigrane.",
-      f24_num: "24 — NUMÉRISER",
-      f24_h: "Du scanner au dossier — image ou PDF.",
-      f24_p: "Numérisez depuis la <em>vitre</em> ou le <em>chargeur (ADF)</em>, plusieurs feuilles à la fois. Choisissez la résolution et la couleur — <em>couleur</em>, niveaux de gris ou <em>noir &amp; blanc</em>. Sauvegardez en <em>JPEG/PNG</em> ou fusionnez tout dans un <em>PDF multipage</em>, et continuez d'ajouter des feuilles au même PDF.",
-      f24_mark: "Vitre · Chargeur (ADF) · Couleur · PDF multipage",
-      f25_num: "25 — ARCHIVES COMME DOSSIERS",
-      f25_h: "Ouvrez ZIP, RAR, 7z et TAR comme des dossiers.",
-      f25_p: "Double-clic (ou <em>Parcourir à l'intérieur</em>) pour entrer dans l'archive — parcourez le contenu, <em>prévisualisez</em> et <em>copiez des fichiers vers l'extérieur</em> sans tout extraire. Lecture seule ; <em>Ouvrir avec…</em> les ouvre toujours dans WinRAR/WinZip/7-Zip.",
-      f25_mark: "ZIP · RAR · 7z · TAR · Copier vers l'extérieur",
-      f26_num: "26 — ENREGISTRER L'ÉCRAN",
-      f26_h: "Enregistrez l'écran directement dans le dossier — avec une caméra en option.",
-      f26_p: "Choisissez une <em>région de n'importe quel moniteur</em> (ou tout l'écran) et enregistrez en <em>MP4</em> avec le <em>microphone</em>. Ajoutez la <em>caméra</em> : basculez écran⇄caméra avec des <em>transitions</em> (fondu, balayage, glissement, mosaïque), affichez-la en <em>PiP</em> dans un coin, ou côte à côte en <em>écran partagé</em>.",
-      f26_mark: "Région · Microphone · Son système · Caméra · PiP · Écran partagé · Transitions · MP4",
-      f26_premium: "Gratuit : filigrane + 15 s et sans son. PREMIUM : sans filigrane, sans limite de temps et avec le son (microphone + système).",
-      f27_num: "27 — CARTES DE MARQUE",
-      f27_h: "Cartes d'intro et de fin pour vos vidéos — dans l'enregistrement même.",
-      f27_p: "Donnez à vos enregistrements (écran et caméra) une <em>carte d'intro</em>, un <em>bandeau de texte</em> permanent et une <em>carte de fin</em> façon générique (jusqu'à 10 lignes). <em>5 modèles indépendants</em>, chacun avec 3 présentations, logo, couleur de fond et un <em>badge d'épisode</em> — pensé pour une série vidéo cohérente.",
-      f27_mark: "Intro · Bandeau · Fin (générique) · 5 modèles · Logo · Badge d'épisode",
-      f27_premium: "PREMIUM. Discrète signature « Made with ExplorerFocus » sur la carte de fin.",
-      f28_num: "28 — VOIX OFF",
-      f28_h: "Narrez vos vidéos après l'enregistrement — même seul.",
-      f28_p: "Enregistrez l'écran <em>en silence</em>, puis dans une <em>boîte dédiée</em> lisez la vidéo pendant que vous <em>la commentez en voix off</em>. La narration arrive dans un fichier séparé ; ajoutez une <em>musique de fond</em>, équilibrez les volumes (pour que la musique ne couvre pas la voix) et <em>générez la vidéo finale</em> avec les trois sources.",
-      f28_mark: "Enregistrer muet · Commenter la vidéo · Musique · Volumes · Vidéo + narration + musique → finale",
-      f28_premium: "PREMIUM. La vidéo et la narration restent des fichiers séparés ; seul « Générer la finale » crée la vidéo mixée.",
+      f19_num: "19 — ACCÈS DISTANT",
+      f19_h: "SFTP, FTP/FTPS et WebDAV — l'explorateur atteint le serveur.",
+      f19_p: "Connectez-vous en SFTP, FTP/FTPS et WebDAV (Nextcloud, ownCloud, NAS, IIS). Naviguez, prévisualisez, envoyez et téléchargez, créez des dossiers, renommez et copiez/déplacez — avec une <em>progression à l'octet près</em> et l'annulation. Éditez les fichiers distants en local et <em>synchronisez à l'enregistrement</em>. Authentification par mot de passe ou <em>clé SSH</em> ; secrets chiffrés avec DPAPI.",
+      f19_mark: "SFTP · FTP/FTPS · WebDAV",
+      f19_free: "Gratuit : 1 connexion SFTP/FTP/FTPS — navigation et aperçu seulement. PREMIUM débloque WebDAV, plusieurs connexions et toutes les opérations.",
+      f20_num: "20 — CLOUDS",
+      f20_h: "Dropbox et OneDrive — votre cloud dans l'explorateur.",
+      f20_p: "Connectez-vous à <em>Dropbox</em> et <em>OneDrive</em> via OAuth sécurisé — aucun mot de passe stocké. Naviguez, prévisualisez, envoyez et téléchargez, créez des dossiers, renommez et copiez/déplacez, comme un dossier local. Vos fichiers ne passent jamais par nos serveurs.",
+      f20_mark: "Dropbox · OneDrive",
+      f20_premium: "PREMIUM : nécessaire dès la première connexion — navigation, aperçu et toutes les opérations.",
+      f21_num: "21 — LIVRES ET BD",
+      f21_h: "Huit formats de livre — prévisualisez et lisez, sans quitter l'explorateur.",
+      f21_p: "Aperçu instantané de n'importe quel <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> ou <em>.fb2</em> : couverture, table des matières et le début du texte. Ouvrez le livre entier dans son propre lecteur, avec navigation par chapitre, saut de page, <em>défilement automatique</em> et votre position de lecture mémorisée. La BD aussi : <em>.cbz</em> et <em>.cbr</em> s'ouvrent page par page, sans décompresser des centaines de mégaoctets au préalable.",
+      f21_mark: "EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR",
+      f21_free: "Gratuit : aperçu — couverture, sommaire et un premier coup d'œil à l'intérieur.",
+      f21_premium: "PREMIUM : lecteur complet — navigation, saut de page, défilement automatique, tourne-page et mémoire de vos 20 derniers livres.",
+      f21_note: "Les livres qui vous appartiennent s'ouvrent. Les livres achetés avec DRM restent liés à la boutique qui les a vendus — l'app explique pourquoi lorsqu'elle en rencontre un.",
+      f22_num: "22 — VISIONNEUSES DE DOCUMENTS",
+      f22_h: "Word, Excel, PowerPoint et plus — voir sans rien ouvrir.",
+      f22_p: "Prévisualisez <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> et <em>OpenDocument</em> (texte, feuille et présentation) directement dans le volet. L'audio et la vidéo se lisent dans l'aperçu, avec une <em>fenêtre flottante</em> et des contrôles de volume/vitesse. Un marqueur signale les fichiers qui ont un aperçu ; les fichiers protégés par mot de passe sont signalés sans demander le mot de passe.",
+      f22_mark: "Word · Excel · PowerPoint · RTF · OpenDocument · Audio · Vidéo",
+      f23_num: "23 — ENREGISTRER L'AUDIO",
+      f23_h: "Enregistrez le microphone directement dans le dossier.",
+      f23_p: "Un clic enregistre le <em>microphone</em> dans le dossier courant. Choisissez le microphone, surveillez le <em>vumètre</em> en direct, ajustez le volume d'enregistrement et sauvegardez en <em>WAV</em> ou <em>M4A/AAC</em>.",
+      f23_mark: "Microphone · Vumètre · WAV · M4A",
+      f24_num: "24 — ENREGISTRER LA VIDÉO",
+      f24_h: "Enregistrez la caméra directement dans le dossier.",
+      f24_p: "Aperçu <em>caméra</em> en direct, avec choix de la caméra et du microphone, résolution et format — <em>MP4</em>, <em>WMV</em> ou <em>AVI</em>. Sauvegarde dans le dossier courant en un clic.",
+      f24_mark: "Caméra · Microphone · MP4 · WMV · AVI",
+      f24_premium: "Gratuit avec un discret filigrane en pied. PREMIUM : sans filigrane.",
+      f25_num: "25 — NUMÉRISER",
+      f25_h: "Du scanner au dossier — image ou PDF.",
+      f25_p: "Numérisez depuis la <em>vitre</em> ou le <em>chargeur (ADF)</em>, plusieurs feuilles à la fois. Choisissez la résolution et la couleur — <em>couleur</em>, niveaux de gris ou <em>noir &amp; blanc</em>. Sauvegardez en <em>JPEG/PNG</em> ou fusionnez tout dans un <em>PDF multipage</em>, et continuez d'ajouter des feuilles au même PDF.",
+      f25_mark: "Vitre · Chargeur (ADF) · Couleur · PDF multipage",
+      f26_num: "26 — ARCHIVES COMME DOSSIERS",
+      f26_h: "Ouvrez ZIP, RAR, 7z et TAR comme des dossiers.",
+      f26_p: "Double-clic (ou <em>Parcourir à l'intérieur</em>) pour entrer dans l'archive — parcourez le contenu, <em>prévisualisez</em> et <em>copiez des fichiers vers l'extérieur</em> sans tout extraire. Lecture seule ; <em>Ouvrir avec…</em> les ouvre toujours dans WinRAR/WinZip/7-Zip.",
+      f26_mark: "ZIP · RAR · 7z · TAR · Copier vers l'extérieur",
+      f27_num: "27 — ENREGISTRER L'ÉCRAN",
+      f27_h: "Enregistrez l'écran directement dans le dossier — avec une caméra en option.",
+      f27_p: "Choisissez une <em>région de n'importe quel moniteur</em> (ou tout l'écran) et enregistrez en <em>MP4</em> avec le <em>microphone</em>. Ajoutez la <em>caméra</em> : basculez écran⇄caméra avec des <em>transitions</em> (fondu, balayage, glissement, mosaïque), affichez-la en <em>PiP</em> dans un coin, ou côte à côte en <em>écran partagé</em>.",
+      f27_mark: "Région · Microphone · Son système · Caméra · PiP · Écran partagé · Transitions · MP4",
+      f27_premium: "Gratuit : filigrane + 15 s et sans son. PREMIUM : sans filigrane, sans limite de temps et avec le son (microphone + système).",
+      f28_num: "28 — CARTES DE MARQUE",
+      f28_h: "Cartes d'intro et de fin pour vos vidéos — dans l'enregistrement même.",
+      f28_p: "Donnez à vos enregistrements (écran et caméra) une <em>carte d'intro</em>, un <em>bandeau de texte</em> permanent et une <em>carte de fin</em> façon générique (jusqu'à 10 lignes). <em>5 modèles indépendants</em>, chacun avec 3 présentations, logo, couleur de fond et un <em>badge d'épisode</em> — pensé pour une série vidéo cohérente.",
+      f28_mark: "Intro · Bandeau · Fin (générique) · 5 modèles · Logo · Badge d'épisode",
+      f28_premium: "PREMIUM. Discrète signature « Made with ExplorerFocus » sur la carte de fin.",
+      f29_num: "29 — VOIX OFF",
+      f29_h: "Narrez vos vidéos après l'enregistrement — même seul.",
+      f29_p: "Enregistrez l'écran <em>en silence</em>, puis dans une <em>boîte dédiée</em> lisez la vidéo pendant que vous <em>la commentez en voix off</em>. La narration arrive dans un fichier séparé ; ajoutez une <em>musique de fond</em>, équilibrez les volumes (pour que la musique ne couvre pas la voix) et <em>générez la vidéo finale</em> avec les trois sources.",
+      f29_mark: "Enregistrer muet · Commenter la vidéo · Musique · Volumes · Vidéo + narration + musique → finale",
+      f29_premium: "PREMIUM. La vidéo et la narration restent des fichiers séparés ; seul « Générer la finale » crée la vidéo mixée.",
       wn_label: "✦ Nouveautés",
       wn_books: "📚 Livres et BD",
       wn_voice: "🎙 Voix off",
       wn_cards: "🎬 Cartes de marque",
       wn_screen: "🖥 Enregistrement d'écran",
-      f24_premium: "Gratuit : 1 page à plat, avec filigrane. PREMIUM : plusieurs pages, chargeur (ADF) et sans filigrane.",
+      f25_premium: "Gratuit : 1 page à plat, avec filigrane. PREMIUM : plusieurs pages, chargeur (ADF) et sans filigrane.",
       ft_ch_standalone: "Autonome (.exe)",
       ft_ch_portable: "Autonome (.zip)",
 
@@ -3132,7 +3186,7 @@
       pr_blurb: "Ça l'a toujours été et ça le restera : pas d'abonnement, pas de compte, pas de publicité. Le Premium est un don unique — une petite récompense pour les nuits et les jours passés à développer des fonctionnalités très spécifiques et techniquement exigeantes. Je ne fais pas ça pour l'argent : je le fais pour les idées qui surgissent en chemin. La plupart des gens ne manqueront jamais le Premium — et c'est très bien ainsi.",
       pr_free_h: "Gratuit",
       pr_free_tag: "pour toujours · sans compte",
-      pr_free_list: "<li>Profils, arbres configurables, recherche multi-motifs</li><li>Aperçu : code, PDF, Word/Excel, Markdown, images, livres</li><li>Opérations avec progression réelle, vitesse, ETA, historique et conflits</li><li>Terminaux, associations par extension, archives comme dossiers</li><li>Thème sombre complet, 12 langues, mises à jour automatiques</li><li>Enregistrement audio (microphone)</li><li><strong>1 connexion distante</strong> (SFTP/FTP/FTPS) — naviguer et prévisualiser</li>",
+      pr_free_list: "<li>Profils, arbres configurables, recherche multi-motifs</li><li>Aperçu : code, PDF, Word/Excel, Markdown, images, livres</li><li>Opérations avec progression réelle, vitesse, ETA, historique et conflits</li><li>Terminaux, associations par extension, archives comme dossiers</li><li>Thème sombre complet, 16 langues, mises à jour automatiques</li><li>Enregistrement audio (microphone)</li><li><strong>1 connexion distante</strong> (SFTP/FTP/FTPS) — naviguer et prévisualiser</li>",
       pr_prem_h: "Premium",
       pr_prem_tag: "don unique de 19,99 € · par machine",
       pr_prem_list: "<li><strong>Accès distant complet</strong> : plusieurs connexions, toutes les opérations, WebDAV, Dropbox, OneDrive</li><li>Enregistrement d'écran <strong>sans filigrane, sans limite de temps et avec le son</strong></li><li>Enregistrement vidéo sans filigrane</li><li>Audio avec mixage microphone + son système</li><li>Numérisation multipage avec chargeur (ADF)</li><li>Lecteur de livres complet — EPUB, formats Kindle, FB2 et BD</li><li>Cartons de début/fin et bandeau de texte sur les enregistrements</li>",
@@ -3294,68 +3348,72 @@
       f17_num: "17 — DESPLIEGUE",
       f17_h: "Un solo <em>.exe</em>. Sin instalador.",
       f17_p: "Autónomo, archivo único, comprimido. Cópialo a un pendrive y corre en cualquier Windows 10/11. <em>net10.0-windows</em> + WPF — sin dependencias fuera de la carpeta del ejecutable.",
+      f18_num: "18 — 16 IDIOMAS",
+      f18_h: "La app entera, en <em>dieciséis</em> idiomas.",
+      f18_p: "No son solo los menús — cada diálogo, cada mensaje, cada sugerencia. Se elige uno y la interfaz cambia <em>al instante</em>: nada que reiniciar, nada que reinstalar.",
+      f18_mark: "PT · BR · EN · US · ES · FR · IT · DE · PL · RU · AR · HI · CN · TW · JA · KO",
 
       badge_pro: "PREMIUM",
       badge_free: "Gratis",
-      f18_num: "18 — ACCESO REMOTO",
-      f18_h: "SFTP, FTP/FTPS y WebDAV — el explorador llega al servidor.",
-      f18_p: "Conéctate por SFTP, FTP/FTPS y WebDAV (Nextcloud, ownCloud, NAS, IIS). Navega, previsualiza, sube y descarga, crea carpetas, renombra y copia/mueve — con <em>progreso byte a byte</em> y cancelación. Edita archivos remotos en local y <em>sincroniza al guardar</em>. Autenticación por contraseña o <em>clave SSH</em>; secretos cifrados con DPAPI.",
-      f18_mark: "SFTP · FTP/FTPS · WebDAV",
-      f18_free: "Gratis: 1 conexión SFTP/FTP/FTPS — solo navegar y previsualizar. PREMIUM desbloquea WebDAV, varias conexiones y todas las operaciones.",
-      f19_num: "19 — NUBES",
-      f19_h: "Dropbox y OneDrive — tu nube dentro del explorador.",
-      f19_p: "Conéctate a <em>Dropbox</em> y <em>OneDrive</em> vía OAuth seguro — sin contraseñas almacenadas. Navega, previsualiza, sube y descarga, crea carpetas, renombra y copia/mueve, como una carpeta local. Tus archivos nunca pasan por nuestros servidores.",
-      f19_mark: "Dropbox · OneDrive",
-      f19_premium: "PREMIUM: necesario desde la primera conexión — navegar, previsualizar y todas las operaciones.",
-      f20_num: "20 — LIBROS Y CÓMICS",
-      f20_h: "Ocho formatos de libro — previsualiza y lee, sin salir del explorador.",
-      f20_p: "Vista previa instantánea de cualquier <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> o <em>.fb2</em>: portada, índice y el comienzo del texto. Abre el libro completo en su propio lector, con navegación por capítulos, salto de página, <em>desplazamiento automático</em> y tu posición de lectura recordada. También cómics: <em>.cbz</em> y <em>.cbr</em> se abren página a página, sin descomprimir cientos de megabytes primero.",
-      f20_mark: "EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR",
-      f20_free: "Gratis: vista previa — portada, índice y un primer vistazo al interior.",
-      f20_premium: "PREMIUM: lector completo — navegación, salto de página, desplazamiento automático, paso de página y memoria de tus últimos 20 libros.",
-      f20_note: "Los libros que son tuyos se abren. Los comprados con DRM siguen atados a la tienda que los vendió — la app explica por qué cuando encuentra uno.",
-      f21_num: "21 — VISORES DE DOCUMENTOS",
-      f21_h: "Word, Excel, PowerPoint y más — ver sin abrir nada.",
-      f21_p: "Previsualiza <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> y <em>OpenDocument</em> (texto, hoja y presentación) en el propio panel. El audio y el vídeo se reproducen en la vista previa, con una <em>ventana flotante</em> y controles de volumen/velocidad. Un marcador señala los archivos con vista previa; los archivos protegidos con contraseña se señalan sin pedir la contraseña.",
-      f21_mark: "Word · Excel · PowerPoint · RTF · OpenDocument · Audio · Vídeo",
-      f22_num: "22 — GRABAR AUDIO",
-      f22_h: "Graba el micrófono directo en la carpeta.",
-      f22_p: "Un clic graba el <em>micrófono</em> en la carpeta actual. Elige el micrófono, mira el <em>medidor de nivel</em> en vivo, ajusta el volumen de grabación y guarda como <em>WAV</em> o <em>M4A/AAC</em>.",
-      f22_mark: "Micrófono · Medidor de nivel · WAV · M4A",
-      f23_num: "23 — GRABAR VÍDEO",
-      f23_h: "Graba la cámara directo en la carpeta.",
-      f23_p: "Vista previa de <em>cámara</em> en vivo, con elección de cámara y micrófono, resolución y formato — <em>MP4</em>, <em>WMV</em> o <em>AVI</em>. Guarda en la carpeta actual con un clic.",
-      f23_mark: "Cámara · Micrófono · MP4 · WMV · AVI",
-      f23_premium: "Gratis con una discreta marca de agua en el pie. PREMIUM: sin marca de agua.",
-      f24_num: "24 — ESCANEAR",
-      f24_h: "Del escáner a la carpeta — imagen o PDF.",
-      f24_p: "Escanea desde el <em>cristal</em> o el <em>alimentador (ADF)</em>, muchas hojas de una vez. Elige la resolución y el color — <em>color</em>, escala de grises o <em>blanco &amp; negro</em>. Guarda como <em>JPEG/PNG</em> o fusiona todo en un <em>PDF multipágina</em>, y sigue añadiendo hojas al mismo PDF.",
-      f24_mark: "Cristal · Alimentador (ADF) · Color · PDF multipágina",
-      f25_num: "25 — ARCHIVOS COMO CARPETAS",
-      f25_h: "Abre ZIP, RAR, 7z y TAR como carpetas.",
-      f25_p: "Doble clic (o <em>Explorar dentro</em>) para entrar en el archivo comprimido — navega el contenido, <em>previsualiza</em> y <em>copia archivos hacia fuera</em> sin extraerlo todo. Solo lectura; <em>Abrir con…</em> sigue abriéndolos en WinRAR/WinZip/7-Zip.",
-      f25_mark: "ZIP · RAR · 7z · TAR · Copiar hacia fuera",
-      f26_num: "26 — GRABAR PANTALLA",
-      f26_h: "Graba la pantalla directo en la carpeta — con cámara opcional.",
-      f26_p: "Elige una <em>región de cualquier monitor</em> (o toda la pantalla) y graba en <em>MP4</em> con el <em>micrófono</em>. Añade la <em>cámara</em> : alterna pantalla⇄cámara con <em>transiciones</em> (fundido, barrido, deslizamiento, mosaico), muéstrala como <em>PiP</em> en una esquina, o lado a lado en <em>pantalla dividida</em>.",
-      f26_mark: "Región · Micrófono · Sonido del sistema · Cámara · PiP · Pantalla dividida · Transiciones · MP4",
-      f26_premium: "Gratis: marca de agua + 15 s y sin sonido. PREMIUM: sin marca de agua, sin límite de tiempo y con sonido (micrófono + sistema).",
-      f27_num: "27 — TARJETAS DE MARCA",
-      f27_h: "Tarjetas de intro y cierre para tus vídeos — en la propia grabación.",
-      f27_p: "Dale a tus grabaciones (pantalla y cámara) una <em>tarjeta de intro</em>, un <em>banner de texto</em> permanente y una <em>tarjeta de cierre</em> estilo créditos (hasta 10 líneas). <em>5 modelos independientes</em>, cada uno con 3 presentaciones, logo, color de fondo y una <em>insignia de episodio</em> — pensado para una serie de vídeos coherente.",
-      f27_mark: "Intro · Banner · Cierre (créditos) · 5 modelos · Logo · Insignia de episodio",
-      f27_premium: "PREMIUM. Discreta firma «Made with ExplorerFocus» en la tarjeta de cierre.",
-      f28_num: "28 — VOZ EN OFF",
-      f28_h: "Narra tus vídeos tras grabarlos — incluso a solas.",
-      f28_p: "Graba la pantalla <em>en silencio</em> y luego, en una <em>caja dedicada</em>, reproduce el vídeo mientras <em>narras encima</em>. La narración cae en un archivo separado; añade <em>música de fondo</em>, equilibra los volúmenes (para que la música no tape la voz) y <em>genera el vídeo final</em> con las tres fuentes.",
-      f28_mark: "Grabar en silencio · Narrar sobre el vídeo · Música · Volúmenes · Vídeo + narración + música → final",
-      f28_premium: "PREMIUM. El vídeo y la narración quedan como archivos separados; solo «Generar final» crea el vídeo mezclado.",
+      f19_num: "19 — ACCESO REMOTO",
+      f19_h: "SFTP, FTP/FTPS y WebDAV — el explorador llega al servidor.",
+      f19_p: "Conéctate por SFTP, FTP/FTPS y WebDAV (Nextcloud, ownCloud, NAS, IIS). Navega, previsualiza, sube y descarga, crea carpetas, renombra y copia/mueve — con <em>progreso byte a byte</em> y cancelación. Edita archivos remotos en local y <em>sincroniza al guardar</em>. Autenticación por contraseña o <em>clave SSH</em>; secretos cifrados con DPAPI.",
+      f19_mark: "SFTP · FTP/FTPS · WebDAV",
+      f19_free: "Gratis: 1 conexión SFTP/FTP/FTPS — solo navegar y previsualizar. PREMIUM desbloquea WebDAV, varias conexiones y todas las operaciones.",
+      f20_num: "20 — NUBES",
+      f20_h: "Dropbox y OneDrive — tu nube dentro del explorador.",
+      f20_p: "Conéctate a <em>Dropbox</em> y <em>OneDrive</em> vía OAuth seguro — sin contraseñas almacenadas. Navega, previsualiza, sube y descarga, crea carpetas, renombra y copia/mueve, como una carpeta local. Tus archivos nunca pasan por nuestros servidores.",
+      f20_mark: "Dropbox · OneDrive",
+      f20_premium: "PREMIUM: necesario desde la primera conexión — navegar, previsualizar y todas las operaciones.",
+      f21_num: "21 — LIBROS Y CÓMICS",
+      f21_h: "Ocho formatos de libro — previsualiza y lee, sin salir del explorador.",
+      f21_p: "Vista previa instantánea de cualquier <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> o <em>.fb2</em>: portada, índice y el comienzo del texto. Abre el libro completo en su propio lector, con navegación por capítulos, salto de página, <em>desplazamiento automático</em> y tu posición de lectura recordada. También cómics: <em>.cbz</em> y <em>.cbr</em> se abren página a página, sin descomprimir cientos de megabytes primero.",
+      f21_mark: "EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR",
+      f21_free: "Gratis: vista previa — portada, índice y un primer vistazo al interior.",
+      f21_premium: "PREMIUM: lector completo — navegación, salto de página, desplazamiento automático, paso de página y memoria de tus últimos 20 libros.",
+      f21_note: "Los libros que son tuyos se abren. Los comprados con DRM siguen atados a la tienda que los vendió — la app explica por qué cuando encuentra uno.",
+      f22_num: "22 — VISORES DE DOCUMENTOS",
+      f22_h: "Word, Excel, PowerPoint y más — ver sin abrir nada.",
+      f22_p: "Previsualiza <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> y <em>OpenDocument</em> (texto, hoja y presentación) en el propio panel. El audio y el vídeo se reproducen en la vista previa, con una <em>ventana flotante</em> y controles de volumen/velocidad. Un marcador señala los archivos con vista previa; los archivos protegidos con contraseña se señalan sin pedir la contraseña.",
+      f22_mark: "Word · Excel · PowerPoint · RTF · OpenDocument · Audio · Vídeo",
+      f23_num: "23 — GRABAR AUDIO",
+      f23_h: "Graba el micrófono directo en la carpeta.",
+      f23_p: "Un clic graba el <em>micrófono</em> en la carpeta actual. Elige el micrófono, mira el <em>medidor de nivel</em> en vivo, ajusta el volumen de grabación y guarda como <em>WAV</em> o <em>M4A/AAC</em>.",
+      f23_mark: "Micrófono · Medidor de nivel · WAV · M4A",
+      f24_num: "24 — GRABAR VÍDEO",
+      f24_h: "Graba la cámara directo en la carpeta.",
+      f24_p: "Vista previa de <em>cámara</em> en vivo, con elección de cámara y micrófono, resolución y formato — <em>MP4</em>, <em>WMV</em> o <em>AVI</em>. Guarda en la carpeta actual con un clic.",
+      f24_mark: "Cámara · Micrófono · MP4 · WMV · AVI",
+      f24_premium: "Gratis con una discreta marca de agua en el pie. PREMIUM: sin marca de agua.",
+      f25_num: "25 — ESCANEAR",
+      f25_h: "Del escáner a la carpeta — imagen o PDF.",
+      f25_p: "Escanea desde el <em>cristal</em> o el <em>alimentador (ADF)</em>, muchas hojas de una vez. Elige la resolución y el color — <em>color</em>, escala de grises o <em>blanco &amp; negro</em>. Guarda como <em>JPEG/PNG</em> o fusiona todo en un <em>PDF multipágina</em>, y sigue añadiendo hojas al mismo PDF.",
+      f25_mark: "Cristal · Alimentador (ADF) · Color · PDF multipágina",
+      f26_num: "26 — ARCHIVOS COMO CARPETAS",
+      f26_h: "Abre ZIP, RAR, 7z y TAR como carpetas.",
+      f26_p: "Doble clic (o <em>Explorar dentro</em>) para entrar en el archivo comprimido — navega el contenido, <em>previsualiza</em> y <em>copia archivos hacia fuera</em> sin extraerlo todo. Solo lectura; <em>Abrir con…</em> sigue abriéndolos en WinRAR/WinZip/7-Zip.",
+      f26_mark: "ZIP · RAR · 7z · TAR · Copiar hacia fuera",
+      f27_num: "27 — GRABAR PANTALLA",
+      f27_h: "Graba la pantalla directo en la carpeta — con cámara opcional.",
+      f27_p: "Elige una <em>región de cualquier monitor</em> (o toda la pantalla) y graba en <em>MP4</em> con el <em>micrófono</em>. Añade la <em>cámara</em> : alterna pantalla⇄cámara con <em>transiciones</em> (fundido, barrido, deslizamiento, mosaico), muéstrala como <em>PiP</em> en una esquina, o lado a lado en <em>pantalla dividida</em>.",
+      f27_mark: "Región · Micrófono · Sonido del sistema · Cámara · PiP · Pantalla dividida · Transiciones · MP4",
+      f27_premium: "Gratis: marca de agua + 15 s y sin sonido. PREMIUM: sin marca de agua, sin límite de tiempo y con sonido (micrófono + sistema).",
+      f28_num: "28 — TARJETAS DE MARCA",
+      f28_h: "Tarjetas de intro y cierre para tus vídeos — en la propia grabación.",
+      f28_p: "Dale a tus grabaciones (pantalla y cámara) una <em>tarjeta de intro</em>, un <em>banner de texto</em> permanente y una <em>tarjeta de cierre</em> estilo créditos (hasta 10 líneas). <em>5 modelos independientes</em>, cada uno con 3 presentaciones, logo, color de fondo y una <em>insignia de episodio</em> — pensado para una serie de vídeos coherente.",
+      f28_mark: "Intro · Banner · Cierre (créditos) · 5 modelos · Logo · Insignia de episodio",
+      f28_premium: "PREMIUM. Discreta firma «Made with ExplorerFocus» en la tarjeta de cierre.",
+      f29_num: "29 — VOZ EN OFF",
+      f29_h: "Narra tus vídeos tras grabarlos — incluso a solas.",
+      f29_p: "Graba la pantalla <em>en silencio</em> y luego, en una <em>caja dedicada</em>, reproduce el vídeo mientras <em>narras encima</em>. La narración cae en un archivo separado; añade <em>música de fondo</em>, equilibra los volúmenes (para que la música no tape la voz) y <em>genera el vídeo final</em> con las tres fuentes.",
+      f29_mark: "Grabar en silencio · Narrar sobre el vídeo · Música · Volúmenes · Vídeo + narración + música → final",
+      f29_premium: "PREMIUM. El vídeo y la narración quedan como archivos separados; solo «Generar final» crea el vídeo mezclado.",
       wn_label: "✦ Novedades",
       wn_books: "📚 Libros y cómics",
       wn_voice: "🎙 Voz en off",
       wn_cards: "🎬 Tarjetas de marca",
       wn_screen: "🖥 Grabación de pantalla",
-      f24_premium: "Gratis: 1 página en plano, con marca de agua. PREMIUM: varias páginas, alimentador (ADF) y sin marca de agua.",
+      f25_premium: "Gratis: 1 página en plano, con marca de agua. PREMIUM: varias páginas, alimentador (ADF) y sin marca de agua.",
       ft_ch_standalone: "Autónomo (.exe)",
       ft_ch_portable: "Autónomo (.zip)",
 
@@ -3397,7 +3455,7 @@
       pr_blurb: "Siempre lo ha sido y lo seguirá siendo: sin suscripción, sin cuenta, sin anuncios. Premium es una donación única — una pequeña recompensa por las noches y los días dedicados a implementar funciones muy específicas y técnicamente exigentes. No estoy en esto por el dinero: estoy por las ideas que aparecen por el camino. La mayoría de la gente nunca echará de menos Premium — y así debe ser.",
       pr_free_h: "Gratis",
       pr_free_tag: "para siempre · sin cuenta",
-      pr_free_list: "<li>Perfiles, árboles configurables, búsqueda multipatrón</li><li>Vista previa: código, PDF, Word/Excel, Markdown, imágenes, libros</li><li>Operaciones con progreso real, velocidad, ETA, historial y conflictos</li><li>Terminales, asociaciones por extensión, archivos comprimidos como carpetas</li><li>Tema oscuro completo, 12 idiomas, actualizaciones automáticas</li><li>Grabación de audio (micrófono)</li><li><strong>1 conexión remota</strong> (SFTP/FTP/FTPS) — navegar y previsualizar</li>",
+      pr_free_list: "<li>Perfiles, árboles configurables, búsqueda multipatrón</li><li>Vista previa: código, PDF, Word/Excel, Markdown, imágenes, libros</li><li>Operaciones con progreso real, velocidad, ETA, historial y conflictos</li><li>Terminales, asociaciones por extensión, archivos comprimidos como carpetas</li><li>Tema oscuro completo, 16 idiomas, actualizaciones automáticas</li><li>Grabación de audio (micrófono)</li><li><strong>1 conexión remota</strong> (SFTP/FTP/FTPS) — navegar y previsualizar</li>",
       pr_prem_h: "Premium",
       pr_prem_tag: "donación única de 19,99 € · por máquina",
       pr_prem_list: "<li><strong>Acceso remoto completo</strong>: varias conexiones, todas las operaciones, WebDAV, Dropbox, OneDrive</li><li>Grabación de pantalla <strong>sin marca de agua, sin límite de tiempo y con sonido</strong></li><li>Grabación de vídeo sin marca de agua</li><li>Audio con mezcla de micrófono + sonido del sistema</li><li>Escaneo multipágina con alimentador (ADF)</li><li>Lector de libros completo — EPUB, formatos Kindle, FB2 y cómics</li><li>Tarjetas de inicio/fin y banda de texto en las grabaciones</li>",

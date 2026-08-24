@@ -767,6 +767,23 @@
     margin: 0 0 26px;
   }
   .stack-licences strong { color: var(--fg-1); font-weight: 500; }
+  /* Selo 100% Clean da Softpedia. Vive na seccao Stack, colado a linha das
+     licencas de terceiros, porque e a mesma familia: honestidade sobre o que
+     esta dentro do ficheiro. E o equivalente da banda "Every download is
+     verifiable" do LogViewer, que e onde o selo vive la.
+     ⚠ O selo e POR PRODUTO E POR VERSAO TESTADA -- se a Softpedia deixar de o
+       atribuir, sai daqui. Nao e um adorno permanente. */
+  .sp-award {
+    display: flex; align-items: center; gap: 14px;
+    margin-top: 16px; padding-top: 16px;
+    border-top: 1px solid var(--border-1);
+    text-decoration: none; max-width: 70ch;
+  }
+  .sp-award img { flex: 0 0 auto; border-radius: 6px; }
+  .sp-award span { font-size: .85rem; color: var(--fg-2); line-height: 1.55; }
+  .sp-award strong { color: var(--fg-1); font-weight: 500; }
+  .sp-award:hover span { color: var(--fg-1); }
+
 
   /* FOOTER */
   footer {
@@ -1652,6 +1669,11 @@
   <h2 data-i18n-html="st_title">Built with <em>serious parts</em>.</h2>
   <p data-i18n="st_blurb">Each dependency was chosen for maturity, size, or the absence of reasonable alternatives. No framework-of-the-day.</p>
   <p class="stack-licences" data-i18n-html="st_licences">The <strong>complete list travels inside the program</strong>, with every author and the full licence texts — under <em>About → Third-party licences</em>.</p>
+  <a class="sp-award" href="https://www.softpedia.com/get/File-managers/ExplorerFocus.shtml#status" target="_blank" rel="noopener">
+    <img src="softpedia-100-clean.webp" width="76" height="61" alt="Softpedia 100% Clean award" loading="lazy">
+    <span data-i18n-html="st_softpedia">And you don't have to take our word for it: <strong>Softpedia Labs</strong> tested it independently and awarded it <strong>100% Clean</strong> — no spyware, adware or viruses.</span>
+  </a>
+
 
   <div class="stack-grid">
     <div class="stack-cell">
@@ -2121,6 +2143,7 @@
       st_preview: "Syntax highlight, markdown renderer e embed do motor do Edge para PDF.",
       st_util: "Para o envio à <em>Reciclagem</em> — a única forma honesta, e funciona.",
       st_licences: "A <strong>lista completa viaja dentro do programa</strong>, com todos os autores e os textos integrais das licenças — em <em>Acerca → Licenças de terceiros</em>.",
+      st_softpedia: "E não tens de acreditar só na nossa palavra: os <strong>Softpedia Labs</strong> testaram-no de forma independente e deram-lhe o selo <strong>100% Clean</strong> — sem spyware, adware ou vírus.",
       st_remote_ic: "REMOTO",
       st_remote: "SFTP pelo SSH.NET; FTP e FTPS pelo FluentFTP. Maduros, e aborrecidos no bom sentido.",
       st_nosdk_ic: "SEM SDK",
@@ -2396,6 +2419,7 @@
       st_preview: "Syntax highlight, markdown renderer, and embedded Edge engine for PDF.",
       st_util: "For sending to the <em>Recycle Bin</em> — the only honest way, and it works.",
       st_licences: "The <strong>complete list travels inside the program</strong>, with every author and the full licence texts — under <em>About → Third-party licences</em>.",
+      st_softpedia: "And you don't have to take our word for it: <strong>Softpedia Labs</strong> tested it independently and awarded it <strong>100% Clean</strong> — no spyware, adware or viruses.",
       st_remote_ic: "REMOTE",
       st_remote: "SFTP through SSH.NET; FTP and FTPS through FluentFTP. Mature, and boring in the good way.",
       st_nosdk_ic: "NO SDK",
@@ -2671,6 +2695,7 @@
       st_preview: "Syntax-Highlight, Markdown-Renderer und eingebettete Edge-Engine für PDF.",
       st_util: "Zum Senden in den <em>Papierkorb</em> — der einzige ehrliche Weg, und er funktioniert.",
       st_licences: "Die <strong>vollständige Liste reist im Programm mit</strong>, mit allen Autoren und den vollständigen Lizenztexten — unter <em>Über → Lizenzen Dritter</em>.",
+      st_softpedia: "Und du musst uns das nicht einfach glauben: <strong>Softpedia Labs</strong> hat es unabhängig getestet und mit <strong>100% Clean</strong> ausgezeichnet — keine Spyware, keine Adware, keine Viren.",
       st_remote_ic: "REMOTE",
       st_remote: "SFTP über SSH.NET; FTP und FTPS über FluentFTP. Ausgereift, und langweilig im guten Sinne.",
       st_nosdk_ic: "OHNE SDK",
@@ -2946,6 +2971,7 @@
       st_preview: "语法高亮、Markdown 渲染、嵌入 Edge 引擎用于 PDF。",
       st_util: "用于送至<em>回收站</em> — 唯一诚实且可行的方式。",
       st_licences: "<strong>完整清单随程序一起提供</strong>，包含每一位作者与完整的许可证文本 — 见<em>「关于 → 第三方许可证」</em>。",
+      st_softpedia: "不必只听我们说：<strong>Softpedia Labs</strong> 独立测试后授予其 <strong>100% Clean</strong> 认证 — 无间谍软件、无广告软件、无病毒。",
       st_remote_ic: "远程",
       st_remote: "SFTP 通过 SSH.NET；FTP 和 FTPS 通过 FluentFTP。成熟，而且是那种好的无趣。",
       st_nosdk_ic: "无 SDK",
@@ -3221,6 +3247,7 @@
       st_preview: "Coloration syntaxique, moteur de rendu markdown, et moteur Edge embarqué pour les PDF.",
       st_util: "Pour l'envoi à la <em>Corbeille</em> — la seule façon honnête, et ça marche.",
       st_licences: "La <strong>liste complète voyage dans le programme</strong>, avec chaque auteur et les textes intégraux des licences — dans <em>À propos → Licences tierces</em>.",
+      st_softpedia: "Et vous n'avez pas à nous croire sur parole : les <strong>Softpedia Labs</strong> l'ont testé de façon indépendante et lui ont décerné le label <strong>100% Clean</strong> — ni spyware, ni adware, ni virus.",
       st_remote_ic: "DISTANT",
       st_remote: "SFTP via SSH.NET ; FTP et FTPS via FluentFTP. Matures, et ennuyeux dans le bon sens.",
       st_nosdk_ic: "SANS SDK",
@@ -3496,6 +3523,7 @@
       st_preview: "Resaltado de sintaxis, renderizador de markdown y motor Edge embebido para PDF.",
       st_util: "Para enviar a la <em>Papelera</em> — la única forma honesta, y funciona.",
       st_licences: "La <strong>lista completa viaja dentro del programa</strong>, con cada autor y los textos íntegros de las licencias — en <em>Acerca de → Licencias de terceros</em>.",
+      st_softpedia: "Y no tienes que fiarte solo de nuestra palabra: <strong>Softpedia Labs</strong> lo probó de forma independiente y le otorgó el sello <strong>100% Clean</strong> — sin spyware, adware ni virus.",
       st_remote_ic: "REMOTO",
       st_remote: "SFTP mediante SSH.NET; FTP y FTPS mediante FluentFTP. Maduros, y aburridos en el buen sentido.",
       st_nosdk_ic: "SIN SDK",

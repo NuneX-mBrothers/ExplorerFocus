@@ -374,6 +374,16 @@
   /* App preview */
   .hero-preview {
     position: relative;
+  }
+  /* 🚨 A MAQUETE TEM CAIXA PROPRIA, e nao e cosmetica: o .ops-widget e
+     "position:absolute; bottom:-40px" e agarra-se ao primeiro antepassado
+     posicionado. Enquanto isso era o .hero-preview, bastou por a caixa das
+     provas dentro da coluna para a coluna crescer -- e o widget desceu com
+     ela e foi cair EM CIMA da caixa. Agora agarra-se ao fundo da IMAGEM.
+     ⚠ A 'perspective' veio com ela: so vale para filhos DIRECTOS, e a
+       maquete deixou de ser filha directa do .hero-preview. */
+  .hero-mock {
+    position: relative;
     perspective: 1400px;
   }
   .app-frame {
@@ -777,16 +787,19 @@
      ⛔ FEITA PARA CRESCER: "isto quando comeca vai em domino". Acrescentar um
         directorio e uma linha de HTML -- o nome nao entra na traducao. */
   .awards {
-    margin-top: 18px; padding: 12px 14px 11px;
+    margin-top: 58px;   /* 40px do .ops-widget a pendurar + folga */ padding: 12px 14px 11px;
     border: 1px solid var(--border-1); border-radius: 8px;
-    background: var(--bg-1); max-width: 46ch;
+    background: var(--bg-1);
   }
   .aw-h {
     font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em;
     text-transform: uppercase; color: var(--fg-3); margin-bottom: 9px;
   }
   .aw-list { list-style: none; margin: 0; padding: 0; }
-  .aw-list li { display: flex; align-items: baseline; gap: 8px; padding: 3px 0; }
+  /* as duas linhas bem afastadas: encostadas, liam-se como um bloco so e
+     confundiam-se as pontuacoes uma com a outra */
+  .aw-list li { display: flex; align-items: baseline; gap: 10px; padding: 9px 0; }
+  .aw-list li + li { border-top: 1px solid var(--border-1); }
   /* o peso vem daqui: o numero em ambar, na serifa do titulo da casa */
   .aw-score { font-family: var(--font-display); font-size: 21px; font-weight: 500; color: var(--accent); line-height: 1; }
   .aw-of { font-style: normal; font-size: 11px; color: var(--fg-3); margin-left: -5px; }
@@ -1219,31 +1232,10 @@
         <span aria-hidden="true">→</span>
       </a>
     </div>
-      <!-- ⛔ ACRESCENTAR UM DIRECTORIO = uma linha na lista + duas chaves curtas
-           por lingua (a nota e a pontuacao). O NOME nao vai na traducao: e nome
-           proprio. Feito para crescer -- "isto quando comeca vai em domino".
-           ⛔ E NAO LEVA O SELO DA SOFTPEDIA: aquele autocolante branco/vermelho/
-              azul e a coisa mais clara da pagina, mais do que o botao de
-              descarga. O peso aqui vem do AMBAR da casa, nao de uma imagem
-              emprestada. -->
-      <div class="awards">
-        <div class="aw-h" data-i18n="aw_h">Tested by others before listing</div>
-        <ul class="aw-list">
-          <li>
-            <b class="aw-score" data-i18n="aw_sp_n">4.5</b><i class="aw-of">/5</i>
-            <a href="https://www.softpedia.com/get/File-managers/ExplorerFocus.shtml" target="_blank" rel="noopener">Softpedia</a>
-            <em data-i18n="aw_sp">100% Clean</em>
-          </li>
-          <li>
-            <b class="aw-score" data-i18n="aw_mg_n">5</b><i class="aw-of">/5</i>
-            <a href="https://www.majorgeeks.com/files/details/explorerfocus.html" target="_blank" rel="noopener">MajorGeeks</a>
-            <em data-i18n="aw_mg">virtual machine + VirusTotal</em>
-          </li>
-        </ul>
-      </div>
   </div>
 
   <div class="hero-preview">
+    <div class="hero-mock">
     <div class="app-frame">
       <div class="app-titlebar">
         <span class="app-titlebar-dot"></span>
@@ -1339,6 +1331,29 @@
         <span class="speed" data-i18n="ops_speed">89 MB/s · 1.3 s</span>
       </div>
     </div>
+    </div>
+      <!-- ⛔ ACRESCENTAR UM DIRECTORIO = uma linha na lista + duas chaves curtas
+           por lingua (a nota e a pontuacao). O NOME nao vai na traducao: e nome
+           proprio. Feito para crescer -- "isto quando comeca vai em domino".
+           ⛔ E NAO LEVA O SELO DA SOFTPEDIA: aquele autocolante branco/vermelho/
+              azul e a coisa mais clara da pagina, mais do que o botao de
+              descarga. O peso aqui vem do AMBAR da casa, nao de uma imagem
+              emprestada. -->
+      <div class="awards">
+        <div class="aw-h" data-i18n="aw_h">Tested by others before listing</div>
+        <ul class="aw-list">
+          <li>
+            <b class="aw-score" data-i18n="aw_sp_n">4.5</b><i class="aw-of">/5</i>
+            <a href="https://www.softpedia.com/get/File-managers/ExplorerFocus.shtml" target="_blank" rel="noopener">Softpedia</a>
+            <em data-i18n="aw_sp">100% Clean</em>
+          </li>
+          <li>
+            <b class="aw-score" data-i18n="aw_mg_n">5</b><i class="aw-of">/5</i>
+            <a href="https://www.majorgeeks.com/files/details/explorerfocus.html" target="_blank" rel="noopener">MajorGeeks</a>
+            <em data-i18n="aw_mg">virtual machine + VirusTotal</em>
+          </li>
+        </ul>
+      </div>
   </div>
 </section>
 

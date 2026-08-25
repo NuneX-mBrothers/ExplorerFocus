@@ -776,13 +776,23 @@
         softpedia-100-clean.webp, no disco, se um dia servir noutro sitio.
      ⛔ FEITA PARA CRESCER: "isto quando comeca vai em domino". Acrescentar um
         directorio e uma linha de HTML -- o nome nao entra na traducao. */
-  .awards { margin-top: 12px; font-size: 12.5px; line-height: 1.7; color: var(--fg-3); max-width: 70ch; }
-  .aw-list { margin-left: 4px; }
-  .aw-i + .aw-i::before { content: "\00B7"; color: var(--fg-3); margin: 0 8px; }
-  .aw-list a { color: var(--fg-2); text-decoration: none; border-bottom: 1px dotted var(--border-2); }
+  .awards {
+    margin-top: 18px; padding: 12px 14px 11px;
+    border: 1px solid var(--border-1); border-radius: 8px;
+    background: var(--bg-1); max-width: 46ch;
+  }
+  .aw-h {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--fg-3); margin-bottom: 9px;
+  }
+  .aw-list { list-style: none; margin: 0; padding: 0; }
+  .aw-list li { display: flex; align-items: baseline; gap: 8px; padding: 3px 0; }
+  /* o peso vem daqui: o numero em ambar, na serifa do titulo da casa */
+  .aw-score { font-family: var(--font-display); font-size: 21px; font-weight: 500; color: var(--accent); line-height: 1; }
+  .aw-of { font-style: normal; font-size: 11px; color: var(--fg-3); margin-left: -5px; }
+  .aw-list a { font-size: 13px; color: var(--fg-0); font-weight: 500; text-decoration: none; border-bottom: 1px solid transparent; }
   .aw-list a:hover { color: var(--accent); border-color: var(--accent-soft); }
-  .aw-i span::before { content: " ("; }
-  .aw-i span::after { content: ")"; }
+  .aw-list em { font-style: normal; font-size: 11.5px; color: var(--fg-3); margin-left: auto; }
 
 
   /* FOOTER */
@@ -1209,17 +1219,28 @@
         <span aria-hidden="true">→</span>
       </a>
     </div>
-      <!-- ⛔ ACRESCENTAR UM DIRECTORIO = uma linha na lista + (so se tiver algo
-           a mais) uma chave curta por lingua. O NOME nao vai na traducao: e
-           nome proprio. Uma frase com cinco nomes la dentro deixava de se ler
-           e obrigava a reescrever tudo em sete linguas de cada vez. -->
-      <p class="awards">
-        <span class="aw-h" data-i18n="aw_h">Independently tested and listed by:</span>
-        <span class="aw-list">
-          <span class="aw-i"><a href="https://www.softpedia.com/get/File-managers/ExplorerFocus.shtml" target="_blank" rel="noopener">Softpedia</a><span data-i18n="aw_sp">100% Clean &#183; 4.5/5</span></span>
-          <span class="aw-i"><a href="https://www.majorgeeks.com/files/details/explorerfocus.html" target="_blank" rel="noopener">MajorGeeks</a></span>
-        </span>
-      </p>
+      <!-- ⛔ ACRESCENTAR UM DIRECTORIO = uma linha na lista + duas chaves curtas
+           por lingua (a nota e a pontuacao). O NOME nao vai na traducao: e nome
+           proprio. Feito para crescer -- "isto quando comeca vai em domino".
+           ⛔ E NAO LEVA O SELO DA SOFTPEDIA: aquele autocolante branco/vermelho/
+              azul e a coisa mais clara da pagina, mais do que o botao de
+              descarga. O peso aqui vem do AMBAR da casa, nao de uma imagem
+              emprestada. -->
+      <div class="awards">
+        <div class="aw-h" data-i18n="aw_h">Tested by others before listing</div>
+        <ul class="aw-list">
+          <li>
+            <b class="aw-score" data-i18n="aw_sp_n">4.5</b><i class="aw-of">/5</i>
+            <a href="https://www.softpedia.com/get/File-managers/ExplorerFocus.shtml" target="_blank" rel="noopener">Softpedia</a>
+            <em data-i18n="aw_sp">100% Clean</em>
+          </li>
+          <li>
+            <b class="aw-score" data-i18n="aw_mg_n">5</b><i class="aw-of">/5</i>
+            <a href="https://www.majorgeeks.com/files/details/explorerfocus.html" target="_blank" rel="noopener">MajorGeeks</a>
+            <em data-i18n="aw_mg">virtual machine + VirusTotal</em>
+          </li>
+        </ul>
+      </div>
   </div>
 
   <div class="hero-preview">
@@ -2150,8 +2171,11 @@
       st_preview: "Syntax highlight, markdown renderer e embed do motor do Edge para PDF.",
       st_util: "Para o envio à <em>Reciclagem</em> — a única forma honesta, e funciona.",
       st_licences: "A <strong>lista completa viaja dentro do programa</strong>, com todos os autores e os textos integrais das licenças — em <em>Acerca → Licenças de terceiros</em>.",
-      aw_h: "Testado e listado, de forma independente, por:",
-      aw_sp: "100% Clean · 4,5/5",
+      aw_h: "Testado por terceiros, antes de ser listado",
+      aw_sp_n: "4,5",
+      aw_mg_n: "5",
+      aw_sp: "100% Clean",
+      aw_mg: "máquina virtual + VirusTotal",
       st_remote_ic: "REMOTO",
       st_remote: "SFTP pelo SSH.NET; FTP e FTPS pelo FluentFTP. Maduros, e aborrecidos no bom sentido.",
       st_nosdk_ic: "SEM SDK",
@@ -2427,8 +2451,11 @@
       st_preview: "Syntax highlight, markdown renderer, and embedded Edge engine for PDF.",
       st_util: "For sending to the <em>Recycle Bin</em> — the only honest way, and it works.",
       st_licences: "The <strong>complete list travels inside the program</strong>, with every author and the full licence texts — under <em>About → Third-party licences</em>.",
-      aw_h: "Independently tested and listed by:",
-      aw_sp: "100% Clean · 4.5/5",
+      aw_h: "Tested by others before listing",
+      aw_sp_n: "4.5",
+      aw_mg_n: "5",
+      aw_sp: "100% Clean",
+      aw_mg: "virtual machine + VirusTotal",
       st_remote_ic: "REMOTE",
       st_remote: "SFTP through SSH.NET; FTP and FTPS through FluentFTP. Mature, and boring in the good way.",
       st_nosdk_ic: "NO SDK",
@@ -2704,8 +2731,11 @@
       st_preview: "Syntax-Highlight, Markdown-Renderer und eingebettete Edge-Engine für PDF.",
       st_util: "Zum Senden in den <em>Papierkorb</em> — der einzige ehrliche Weg, und er funktioniert.",
       st_licences: "Die <strong>vollständige Liste reist im Programm mit</strong>, mit allen Autoren und den vollständigen Lizenztexten — unter <em>Über → Lizenzen Dritter</em>.",
-      aw_h: "Unabhängig geprüft und gelistet von:",
-      aw_sp: "100% Clean · 4,5/5",
+      aw_h: "Von Dritten geprüft, vor der Aufnahme",
+      aw_sp_n: "4,5",
+      aw_mg_n: "5",
+      aw_sp: "100% Clean",
+      aw_mg: "virtuelle Maschine + VirusTotal",
       st_remote_ic: "REMOTE",
       st_remote: "SFTP über SSH.NET; FTP und FTPS über FluentFTP. Ausgereift, und langweilig im guten Sinne.",
       st_nosdk_ic: "OHNE SDK",
@@ -2981,8 +3011,11 @@
       st_preview: "语法高亮、Markdown 渲染、嵌入 Edge 引擎用于 PDF。",
       st_util: "用于送至<em>回收站</em> — 唯一诚实且可行的方式。",
       st_licences: "<strong>完整清单随程序一起提供</strong>，包含每一位作者与完整的许可证文本 — 见<em>「关于 → 第三方许可证」</em>。",
-      aw_h: "已由第三方独立检测并收录：",
-      aw_sp: "100% Clean · 4.5/5",
+      aw_h: "上架前经第三方检测",
+      aw_sp_n: "4.5",
+      aw_mg_n: "5",
+      aw_sp: "100% Clean",
+      aw_mg: "虚拟机 + VirusTotal",
       st_remote_ic: "远程",
       st_remote: "SFTP 通过 SSH.NET；FTP 和 FTPS 通过 FluentFTP。成熟，而且是那种好的无趣。",
       st_nosdk_ic: "无 SDK",
@@ -3258,8 +3291,11 @@
       st_preview: "Coloration syntaxique, moteur de rendu markdown, et moteur Edge embarqué pour les PDF.",
       st_util: "Pour l'envoi à la <em>Corbeille</em> — la seule façon honnête, et ça marche.",
       st_licences: "La <strong>liste complète voyage dans le programme</strong>, avec chaque auteur et les textes intégraux des licences — dans <em>À propos → Licences tierces</em>.",
-      aw_h: "Testé et référencé de façon indépendante par :",
-      aw_sp: "100% Clean · 4,5/5",
+      aw_h: "Testé par des tiers, avant référencement",
+      aw_sp_n: "4,5",
+      aw_mg_n: "5",
+      aw_sp: "100% Clean",
+      aw_mg: "machine virtuelle + VirusTotal",
       st_remote_ic: "DISTANT",
       st_remote: "SFTP via SSH.NET ; FTP et FTPS via FluentFTP. Matures, et ennuyeux dans le bon sens.",
       st_nosdk_ic: "SANS SDK",
@@ -3535,8 +3571,11 @@
       st_preview: "Resaltado de sintaxis, renderizador de markdown y motor Edge embebido para PDF.",
       st_util: "Para enviar a la <em>Papelera</em> — la única forma honesta, y funciona.",
       st_licences: "La <strong>lista completa viaja dentro del programa</strong>, con cada autor y los textos íntegros de las licencias — en <em>Acerca de → Licencias de terceros</em>.",
-      aw_h: "Probado y catalogado de forma independiente por:",
-      aw_sp: "100% Clean · 4,5/5",
+      aw_h: "Probado por terceros, antes de ser catalogado",
+      aw_sp_n: "4,5",
+      aw_mg_n: "5",
+      aw_sp: "100% Clean",
+      aw_mg: "máquina virtual + VirusTotal",
       st_remote_ic: "REMOTO",
       st_remote: "SFTP mediante SSH.NET; FTP y FTPS mediante FluentFTP. Maduros, y aburridos en el buen sentido.",
       st_nosdk_ic: "SIN SDK",

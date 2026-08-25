@@ -767,23 +767,26 @@
     margin: 0 0 26px;
   }
   .stack-licences strong { color: var(--fg-1); font-weight: 500; }
-  /* Selo 100% Clean da Softpedia. VIVE NO HERO, colado ao aviso do Windows.
-     Comecou na seccao Stack -- tematicamente encaixava la, e ele foi procura-lo
-     e NAO O ENCONTROU. Um selo de confianca nao serve a quem ja leu a pagina
-     ate ao paragrafo 3: serve a quem tem o rato em cima do botao de descarga e
-     hesita. O sitio certo e ao lado da descarga, como no LogViewer.
-     ⚠ O selo e POR PRODUTO E POR VERSAO TESTADA -- se a Softpedia deixar de o
-       atribuir, sai daqui. Nao e um adorno permanente. */
-  .sp-award {
-    display: flex; align-items: center; gap: 14px;
+  /* Provas de terceiros. Vive no hero, colado ao aviso do Windows -- e onde
+     alguem hesita antes de descarregar. Comecou na seccao Stack e ele foi
+     procura-lo e nao o encontrou: encaixe tematico nao e visibilidade.
+     ⛔ FEITO PARA CRESCER, por ordem dele: "isto quando comeca vai em domino".
+        A lista embrulha sozinha -- dois cabem lado a lado, cinco caem para
+        baixo sem partir nada. */
+  .awards {
+    display: flex; align-items: flex-start; gap: 14px;
     margin-top: 16px; padding-top: 16px;
     border-top: 1px solid var(--border-1);
-    text-decoration: none; max-width: 70ch;
+    max-width: 70ch;
   }
-  .sp-award img { flex: 0 0 auto; border-radius: 6px; }
-  .sp-award span { font-size: .85rem; color: var(--fg-2); line-height: 1.55; }
-  .sp-award strong { color: var(--fg-1); font-weight: 500; }
-  .sp-award:hover span { color: var(--fg-1); }
+  .aw-seal { flex: 0 0 auto; border-radius: 6px; }
+  .aw-body { min-width: 0; }
+  .aw-h { font-size: .82rem; color: var(--fg-3); margin: 0 0 6px; line-height: 1.45; }
+  .aw-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; }
+  .aw-list li { font-size: .82rem; color: var(--fg-2); line-height: 1.5; }
+  .aw-list a { color: var(--fg-1); font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--border-2); }
+  .aw-list a:hover { color: var(--accent); border-color: var(--accent-soft); }
+  .aw-list span { display: block; color: var(--fg-3); font-size: .78rem; }
 
 
   /* FOOTER */
@@ -1210,10 +1213,20 @@
         <span aria-hidden="true">→</span>
       </a>
     </div>
-    <a class="sp-award" href="https://www.softpedia.com/get/File-managers/ExplorerFocus.shtml" target="_blank" rel="noopener">
-      <img src="softpedia-100-clean.webp" width="76" height="61" alt="Softpedia 100% Clean award" loading="lazy">
-      <span data-i18n-html="st_softpedia">And you don't have to take our word for it: <strong>Softpedia Labs</strong> tested it independently, awarded it <strong>100% Clean</strong> — no spyware, adware or viruses — and their editor rated it <strong>4.5/5</strong>.</span>
-    </a>
+      <div class="awards">
+        <img class="aw-seal" src="softpedia-100-clean.webp" width="76" height="61" alt="Softpedia 100% Clean award" loading="lazy">
+        <div class="aw-body">
+          <p class="aw-h" data-i18n="aw_h">Don't just take our word for it — independently tested before listing:</p>
+          <ul class="aw-list">
+            <!-- ⛔ ACRESCENTAR UM DIRECTORIO = uma linha aqui + uma chave curta
+                 por lingua. O NOME nao vai na traducao (e nome proprio). Manter
+                 assim: uma frase com cinco nomes la dentro deixa de se ler e
+                 obriga a reescrever tudo em sete linguas de cada vez. -->
+            <li><a href="https://www.softpedia.com/get/File-managers/ExplorerFocus.shtml" target="_blank" rel="noopener">Softpedia</a><span data-i18n="aw_sp">100% Clean · 4.5/5 from their editor</span></li>
+            <li><a href="https://www.majorgeeks.com/files/details/explorerfocus.html" target="_blank" rel="noopener">MajorGeeks</a></li>
+          </ul>
+        </div>
+      </div>
   </div>
 
   <div class="hero-preview">
@@ -2144,7 +2157,8 @@
       st_preview: "Syntax highlight, markdown renderer e embed do motor do Edge para PDF.",
       st_util: "Para o envio à <em>Reciclagem</em> — a única forma honesta, e funciona.",
       st_licences: "A <strong>lista completa viaja dentro do programa</strong>, com todos os autores e os textos integrais das licenças — em <em>Acerca → Licenças de terceiros</em>.",
-      st_softpedia: "E não tens de acreditar só na nossa palavra: os <strong>Softpedia Labs</strong> testaram-no de forma independente, deram-lhe o selo <strong>100% Clean</strong> — sem spyware, adware ou vírus — e o editor deles avaliou-o em <strong>4,5/5</strong>.",
+      aw_h: "E não tens de acreditar só na nossa palavra — testado de forma independente antes de ser listado:",
+      aw_sp: "100% Clean · 4,5/5 do editor",
       st_remote_ic: "REMOTO",
       st_remote: "SFTP pelo SSH.NET; FTP e FTPS pelo FluentFTP. Maduros, e aborrecidos no bom sentido.",
       st_nosdk_ic: "SEM SDK",
@@ -2420,7 +2434,8 @@
       st_preview: "Syntax highlight, markdown renderer, and embedded Edge engine for PDF.",
       st_util: "For sending to the <em>Recycle Bin</em> — the only honest way, and it works.",
       st_licences: "The <strong>complete list travels inside the program</strong>, with every author and the full licence texts — under <em>About → Third-party licences</em>.",
-      st_softpedia: "And you don't have to take our word for it: <strong>Softpedia Labs</strong> tested it independently, awarded it <strong>100% Clean</strong> — no spyware, adware or viruses — and their editor rated it <strong>4.5/5</strong>.",
+      aw_h: "Don't just take our word for it — independently tested before listing:",
+      aw_sp: "100% Clean · 4.5/5 from their editor",
       st_remote_ic: "REMOTE",
       st_remote: "SFTP through SSH.NET; FTP and FTPS through FluentFTP. Mature, and boring in the good way.",
       st_nosdk_ic: "NO SDK",
@@ -2696,7 +2711,8 @@
       st_preview: "Syntax-Highlight, Markdown-Renderer und eingebettete Edge-Engine für PDF.",
       st_util: "Zum Senden in den <em>Papierkorb</em> — der einzige ehrliche Weg, und er funktioniert.",
       st_licences: "Die <strong>vollständige Liste reist im Programm mit</strong>, mit allen Autoren und den vollständigen Lizenztexten — unter <em>Über → Lizenzen Dritter</em>.",
-      st_softpedia: "Und du musst uns das nicht einfach glauben: <strong>Softpedia Labs</strong> hat es unabhängig getestet, mit <strong>100% Clean</strong> ausgezeichnet — keine Spyware, keine Adware, keine Viren — und der Redakteur bewertete es mit <strong>4,5/5</strong>.",
+      aw_h: "Und du musst uns das nicht einfach glauben — unabhängig geprüft, bevor es gelistet wurde:",
+      aw_sp: "100% Clean · 4,5/5 vom Redakteur",
       st_remote_ic: "REMOTE",
       st_remote: "SFTP über SSH.NET; FTP und FTPS über FluentFTP. Ausgereift, und langweilig im guten Sinne.",
       st_nosdk_ic: "OHNE SDK",
@@ -2972,7 +2988,8 @@
       st_preview: "语法高亮、Markdown 渲染、嵌入 Edge 引擎用于 PDF。",
       st_util: "用于送至<em>回收站</em> — 唯一诚实且可行的方式。",
       st_licences: "<strong>完整清单随程序一起提供</strong>，包含每一位作者与完整的许可证文本 — 见<em>「关于 → 第三方许可证」</em>。",
-      st_softpedia: "不必只听我们说：<strong>Softpedia Labs</strong> 独立测试后授予其 <strong>100% Clean</strong> 认证 — 无间谍软件、无广告软件、无病毒 — 编辑评分 <strong>4.5/5</strong>。",
+      aw_h: "不必只听我们说 — 上架前均经过独立检测：",
+      aw_sp: "100% Clean · 编辑评分 4.5/5",
       st_remote_ic: "远程",
       st_remote: "SFTP 通过 SSH.NET；FTP 和 FTPS 通过 FluentFTP。成熟，而且是那种好的无趣。",
       st_nosdk_ic: "无 SDK",
@@ -3248,7 +3265,8 @@
       st_preview: "Coloration syntaxique, moteur de rendu markdown, et moteur Edge embarqué pour les PDF.",
       st_util: "Pour l'envoi à la <em>Corbeille</em> — la seule façon honnête, et ça marche.",
       st_licences: "La <strong>liste complète voyage dans le programme</strong>, avec chaque auteur et les textes intégraux des licences — dans <em>À propos → Licences tierces</em>.",
-      st_softpedia: "Et vous n'avez pas à nous croire sur parole : les <strong>Softpedia Labs</strong> l'ont testé de façon indépendante, lui ont décerné le label <strong>100% Clean</strong> — ni spyware, ni adware, ni virus — et leur rédacteur lui a donné <strong>4,5/5</strong>.",
+      aw_h: "Et vous n'avez pas à nous croire sur parole — testé de façon indépendante avant d'être référencé :",
+      aw_sp: "100% Clean · 4,5/5 du rédacteur",
       st_remote_ic: "DISTANT",
       st_remote: "SFTP via SSH.NET ; FTP et FTPS via FluentFTP. Matures, et ennuyeux dans le bon sens.",
       st_nosdk_ic: "SANS SDK",
@@ -3524,7 +3542,8 @@
       st_preview: "Resaltado de sintaxis, renderizador de markdown y motor Edge embebido para PDF.",
       st_util: "Para enviar a la <em>Papelera</em> — la única forma honesta, y funciona.",
       st_licences: "La <strong>lista completa viaja dentro del programa</strong>, con cada autor y los textos íntegros de las licencias — en <em>Acerca de → Licencias de terceros</em>.",
-      st_softpedia: "Y no tienes que fiarte solo de nuestra palabra: <strong>Softpedia Labs</strong> lo probó de forma independiente, le otorgó el sello <strong>100% Clean</strong> — sin spyware, adware ni virus — y su editor le dio un <strong>4,5/5</strong>.",
+      aw_h: "Y no tienes que fiarte solo de nuestra palabra: probado de forma independiente antes de ser catalogado:",
+      aw_sp: "100% Clean · 4,5/5 del editor",
       st_remote_ic: "REMOTO",
       st_remote: "SFTP mediante SSH.NET; FTP y FTPS mediante FluentFTP. Maduros, y aburridos en el buen sentido.",
       st_nosdk_ic: "SIN SDK",

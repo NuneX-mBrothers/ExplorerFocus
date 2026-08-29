@@ -799,6 +799,9 @@
   /* as duas linhas bem afastadas: encostadas, liam-se como um bloco so e
      confundiam-se as pontuacoes uma com a outra */
   .aw-list li { display: flex; align-items: baseline; gap: 10px; padding: 9px 0; }
+  /* coluna do numero com largura fixa: ha linhas SEM pontuacao (so entra quem
+     tem avaliacao EDITORIAL) e sem isto ficavam desalinhadas. */
+  .aw-num { display: inline-flex; align-items: baseline; min-width: 3.6em; justify-content: flex-end; }
   .aw-list li + li { border-top: 1px solid var(--border-1); }
   /* o peso vem daqui: o numero em ambar, na serifa do titulo da casa */
   .aw-score { font-family: var(--font-display); font-size: 21px; font-weight: 500; color: var(--accent); line-height: 1; }
@@ -1343,12 +1346,12 @@
         <div class="aw-h" data-i18n="aw_h">Tested by others before listing</div>
         <ul class="aw-list">
           <li>
-            <b class="aw-score" data-i18n="aw_sp_n">4.5</b><i class="aw-of">/5</i>
+            <span class="aw-num"><b class="aw-score" data-i18n="aw_sp_n">4.5</b><i class="aw-of">/5</i></span>
             <a href="https://www.softpedia.com/get/File-managers/ExplorerFocus.shtml" target="_blank" rel="noopener">Softpedia</a>
-            <em data-i18n="aw_sp">100% Clean</em>
+            <em data-i18n="aw_sp">100% Clean · editor's review</em>
           </li>
           <li>
-            <b class="aw-score" data-i18n="aw_mg_n">5</b><i class="aw-of">/5</i>
+            <span class="aw-num"></span>
             <a href="https://www.majorgeeks.com/files/details/explorerfocus.html" target="_blank" rel="noopener">MajorGeeks</a>
             <em data-i18n="aw_mg">virtual machine + VirusTotal</em>
           </li>
@@ -2188,8 +2191,7 @@
       st_licences: "A <strong>lista completa viaja dentro do programa</strong>, com todos os autores e os textos integrais das licenças — em <em>Acerca → Licenças de terceiros</em>.",
       aw_h: "Testado por terceiros, antes de ser listado",
       aw_sp_n: "4,5",
-      aw_mg_n: "5",
-      aw_sp: "100% Clean",
+      aw_sp: "100% Clean · avaliação do editor",
       aw_mg: "máquina virtual + VirusTotal",
       st_remote_ic: "REMOTO",
       st_remote: "SFTP pelo SSH.NET; FTP e FTPS pelo FluentFTP. Maduros, e aborrecidos no bom sentido.",
@@ -2468,8 +2470,7 @@
       st_licences: "The <strong>complete list travels inside the program</strong>, with every author and the full licence texts — under <em>About → Third-party licences</em>.",
       aw_h: "Tested by others before listing",
       aw_sp_n: "4.5",
-      aw_mg_n: "5",
-      aw_sp: "100% Clean",
+      aw_sp: "100% Clean · editor's review",
       aw_mg: "virtual machine + VirusTotal",
       st_remote_ic: "REMOTE",
       st_remote: "SFTP through SSH.NET; FTP and FTPS through FluentFTP. Mature, and boring in the good way.",
@@ -2748,8 +2749,7 @@
       st_licences: "Die <strong>vollständige Liste reist im Programm mit</strong>, mit allen Autoren und den vollständigen Lizenztexten — unter <em>Über → Lizenzen Dritter</em>.",
       aw_h: "Von Dritten geprüft, vor der Aufnahme",
       aw_sp_n: "4,5",
-      aw_mg_n: "5",
-      aw_sp: "100% Clean",
+      aw_sp: "100% Clean · Redaktionswertung",
       aw_mg: "virtuelle Maschine + VirusTotal",
       st_remote_ic: "REMOTE",
       st_remote: "SFTP über SSH.NET; FTP und FTPS über FluentFTP. Ausgereift, und langweilig im guten Sinne.",
@@ -3028,8 +3028,7 @@
       st_licences: "<strong>完整清单随程序一起提供</strong>，包含每一位作者与完整的许可证文本 — 见<em>「关于 → 第三方许可证」</em>。",
       aw_h: "上架前经第三方检测",
       aw_sp_n: "4.5",
-      aw_mg_n: "5",
-      aw_sp: "100% Clean",
+      aw_sp: "100% Clean · 编辑评测",
       aw_mg: "虚拟机 + VirusTotal",
       st_remote_ic: "远程",
       st_remote: "SFTP 通过 SSH.NET；FTP 和 FTPS 通过 FluentFTP。成熟，而且是那种好的无趣。",
@@ -3308,8 +3307,7 @@
       st_licences: "La <strong>liste complète voyage dans le programme</strong>, avec chaque auteur et les textes intégraux des licences — dans <em>À propos → Licences tierces</em>.",
       aw_h: "Testé par des tiers, avant référencement",
       aw_sp_n: "4,5",
-      aw_mg_n: "5",
-      aw_sp: "100% Clean",
+      aw_sp: "100% Clean · avis du rédacteur",
       aw_mg: "machine virtuelle + VirusTotal",
       st_remote_ic: "DISTANT",
       st_remote: "SFTP via SSH.NET ; FTP et FTPS via FluentFTP. Matures, et ennuyeux dans le bon sens.",
@@ -3588,8 +3586,7 @@
       st_licences: "La <strong>lista completa viaja dentro del programa</strong>, con cada autor y los textos íntegros de las licencias — en <em>Acerca de → Licencias de terceros</em>.",
       aw_h: "Probado por terceros, antes de ser catalogado",
       aw_sp_n: "4,5",
-      aw_mg_n: "5",
-      aw_sp: "100% Clean",
+      aw_sp: "100% Clean · reseña del editor",
       aw_mg: "máquina virtual + VirusTotal",
       st_remote_ic: "REMOTO",
       st_remote: "SFTP mediante SSH.NET; FTP y FTPS mediante FluentFTP. Maduros, y aburridos en el buen sentido.",

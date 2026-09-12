@@ -1,0 +1,2169 @@
+<!doctype html>
+<html lang="es" data-lang-fixa="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title data-i18n="page_title">ExplorerFocus — un explorador de archivos sin distracciones</title>
+<meta name="description" data-i18n-attr="content" data-i18n="page_desc" content="Una alternativa centrada al Explorador de Windows. Perfiles, árboles configurables, operaciones ricas, vista previa — todo centrado en lo que importa.">
+
+<!-- ===== SEO ===== -->
+<meta name="author" content="mBrothers">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#0E0F11">
+<link rel="canonical" href="https://nunex-mbrothers.github.io/ExplorerFocus/es/">
+<!-- Uma porta por lingua. Cada pagina tem canonical propria e hreflang
+     reciproco; o texto vai JA TRADUZIDO no HTML, sem JavaScript.
+     As pastas por idioma sao GERADAS por tools/gerar-linguas.py, que o
+     .cmd de publicar corre DEPOIS de injectar a versao.
+     Regresso: etiqueta antes-das-urls-por-idioma. -->
+<link rel="alternate" hreflang="x-default" href="https://nunex-mbrothers.github.io/ExplorerFocus/">
+<link rel="alternate" hreflang="pt" href="https://nunex-mbrothers.github.io/ExplorerFocus/pt/">
+<link rel="alternate" hreflang="en" href="https://nunex-mbrothers.github.io/ExplorerFocus/">
+<link rel="alternate" hreflang="es" href="https://nunex-mbrothers.github.io/ExplorerFocus/es/">
+<link rel="alternate" hreflang="fr" href="https://nunex-mbrothers.github.io/ExplorerFocus/fr/">
+<link rel="alternate" hreflang="de" href="https://nunex-mbrothers.github.io/ExplorerFocus/de/">
+<link rel="alternate" hreflang="zh-Hans" href="https://nunex-mbrothers.github.io/ExplorerFocus/zh/">
+<link rel="alternate" hreflang="ja" href="https://nunex-mbrothers.github.io/ExplorerFocus/ja/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='6'%20fill='%230E0F11'/%3E%3Cpath%20d='M16%204l12%2012-12%2012L4%2016z'%20fill='%23E0A458'/%3E%3C/svg%3E">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ExplorerFocus">
+<meta property="og:title" content="ExplorerFocus — un explorador de archivos sin distracciones">
+<meta property="og:description" content="Una alternativa centrada al Explorador de Windows. Perfiles, árboles configurables, operaciones ricas, vista previa — todo centrado en lo que importa.">
+<meta property="og:url" content="https://nunex-mbrothers.github.io/ExplorerFocus/es/">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="pt_PT">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:image" content="https://nunex-mbrothers.github.io/ExplorerFocus/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ExplorerFocus — a file explorer that stays out of the way">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ExplorerFocus — un explorador de archivos sin distracciones">
+<meta name="twitter:description" content="Una alternativa centrada al Explorador de Windows. Perfiles, árboles configurables, operaciones ricas, vista previa — todo centrado en lo que importa.">
+<meta name="twitter:image" content="https://nunex-mbrothers.github.io/ExplorerFocus/og-cover.png">
+
+<!-- Dados estruturados (Schema.org) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ExplorerFocus",
+  "operatingSystem": "Windows 10, Windows 11",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "A focused alternative to Windows Explorer: profiles, configurable trees, honest file operations, rich preview, a built-in book reader (EPUB, MOBI/AZW, comics) and remote access (SFTP/FTP/FTPS/WebDAV).",
+  "featureList": [
+    "Profiles: each tab with its own folder tree, filters and remembered state",
+    "Rich preview: code with syntax highlighting, PDF, Word, Excel, PowerPoint, Markdown, images",
+    "Book reader: EPUB, MOBI, AZW, AZW3, PRC, FB2, CBZ and CBR",
+    "File operations with real progress, speed, ETA, history and conflict handling",
+    "Remote and cloud access: SFTP, FTP, FTPS, WebDAV, Dropbox and OneDrive",
+    "Built-in capture: screen recording, camera, audio and scanner",
+    "16 interface languages: Portuguese (Portugal and Brazil), English (UK and US), Spanish, French, Italian, German, Polish, Russian, Arabic, Hindi, Chinese (Simplified and Traditional), Japanese and Korean",
+    "Single self-contained .exe, no installer"
+  ],
+  "url": "https://nunex-mbrothers.github.io/ExplorerFocus/es/",
+  "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
+  "softwareVersion": "1.2.26",
+  "image": "https://nunex-mbrothers.github.io/ExplorerFocus/og-cover.png",
+  "screenshot": "https://nunex-mbrothers.github.io/ExplorerFocus/screenshots/main.png",
+  "publisher": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "author": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/" }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Geist:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg-0: #0E0F11;
+    --bg-1: #16181B;
+    --bg-2: #1A1C1F;
+    --bg-3: #22252A;
+    --border-1: #2A2722;
+    --border-2: #3A3530;
+    --accent: #E0A458;
+    --accent-dim: #B6884B;
+    --accent-soft: #5C401E;
+    --fg-0: #E8E5DF;
+    --fg-1: #C8C5BF;
+    --fg-2: #8E8B86;
+    --fg-3: #5E5C58;
+    --row-hover: #2A2722;
+    --row-sel: #5C401E;
+
+    --font-display: "Cormorant Garamond", "Times New Roman", serif;
+    --font-body: "Geist", -apple-system, sans-serif;
+    --font-mono: "JetBrains Mono", "Consolas", monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg-0);
+    color: var(--fg-0);
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+
+    background-image:
+      radial-gradient(ellipse at top left, rgba(224, 164, 88, 0.04), transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(224, 164, 88, 0.025), transparent 60%);
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    pointer-events: none;
+    opacity: .035;
+    z-index: 1000;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  ::selection { background: var(--accent-soft); color: var(--fg-0); }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: var(--fg-0); }
+
+  /* LANGUAGE SELECTOR */
+  .lang-switch {
+    position: fixed;
+    top: 16px;
+    right: 22px;
+    z-index: 200;
+    display: flex;
+    gap: 0;
+    padding: 4px;
+    background: #000;
+    border: 1px solid var(--border-2);
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  }
+  .lang-flag {
+    width: 32px; height: 22px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.55;
+    transition: opacity .15s, transform .15s;
+    display: block;
+  }
+  .lang-flag + .lang-flag { margin-left: 4px; }
+  .lang-flag:hover { opacity: 0.9; }
+  .lang-flag.active {
+    opacity: 1;
+    outline: 1.5px solid var(--accent);
+    outline-offset: 1px;
+    box-shadow: 0 0 6px rgba(224, 164, 88, 0.45);
+  }
+  .lang-flag svg {
+    width: 100%; height: 100%; display: block;
+  }
+
+  /* TOP BAR */
+  .topbar {
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(14px);
+    background: rgba(14, 15, 17, 0.78);
+    border-bottom: 1px solid var(--border-1);
+  }
+  .topbar-inner {
+    max-width: 1280px; margin: 0 auto;
+    padding: 14px 180px 14px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-mark { width: 28px; height: 28px; }
+  .brand-name {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--fg-0);
+  }
+  .brand-name em {
+    font-style: italic; color: var(--accent); font-weight: 500;
+  }
+  .nav { display: flex; gap: 28px; }
+  .nav a {
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--fg-2); text-transform: uppercase; letter-spacing: 0.12em;
+    padding: 4px 0;
+    border-bottom: 1px solid transparent;
+    transition: border-color .15s, color .15s;
+  }
+  .nav a:hover { color: var(--accent); border-color: var(--accent); }
+  .nav-version {
+    font-family: var(--font-mono); font-size: 11px; color: var(--fg-3);
+    padding-left: 28px; border-left: 1px solid var(--border-1);
+  }
+
+  /* HERO */
+  .hero {
+    max-width: 1280px; margin: 0 auto;
+    padding: 110px 32px 48px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+  }
+  .hero-eyebrow {
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--accent); text-transform: uppercase; letter-spacing: 0.25em;
+    margin-bottom: 24px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .hero-eyebrow::before {
+    content: ''; width: 36px; height: 1px; background: var(--accent);
+  }
+  .hero h1 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: clamp(48px, 6vw, 88px);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    margin: 0 0 28px;
+    color: var(--fg-0);
+  }
+  .hero h1 em {
+    font-style: italic; color: var(--accent); font-weight: 400;
+  }
+  .hero h1 .strike {
+    position: relative; display: inline-block;
+    color: var(--fg-3);
+  }
+  .hero h1 .strike::after {
+    content: ''; position: absolute;
+    left: -4px; right: -4px; top: 53%;
+    height: 2px; background: var(--accent);
+    transform: rotate(-3deg);
+  }
+  .hero-lede {
+    font-size: 18px; color: var(--fg-1); line-height: 1.65;
+    max-width: 540px;
+    margin-bottom: 38px;
+  }
+  .hero-meta {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--fg-2); text-transform: uppercase; letter-spacing: 0.12em;
+  }
+  .hero-meta span { display: flex; align-items: center; gap: 8px; }
+  .hero-meta span::before {
+    content: ''; width: 6px; height: 6px; background: var(--accent);
+    border-radius: 50%;
+  }
+
+  /* Hero download CTA */
+  .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+  .hero-cta .btn {
+    display: inline-flex; align-items: center; gap: 9px;
+    padding: 13px 22px; border-radius: 6px;
+    font-size: 14px; font-weight: 600; letter-spacing: 0.01em;
+    border: 1px solid transparent; cursor: pointer;
+    transition: transform .12s ease, background .15s ease, border-color .15s ease, color .15s ease;
+  }
+  .hero-cta .btn:hover { transform: translateY(-1px); }
+  .hero-cta .btn-primary {
+    background: var(--accent); color: #1a1408;
+    box-shadow: 0 8px 24px -10px var(--accent);
+  }
+  .hero-cta .btn-primary:hover { background: #ecb066; }
+  .hero-cta .btn-ghost {
+    background: var(--bg-2); color: var(--fg-0); border-color: var(--border-2);
+  }
+  .hero-cta .btn-ghost:hover { border-color: var(--accent-dim); color: var(--accent); }
+
+  /* Versão mais recente (lida do version.json, até à revision) */
+  .hero-latest {
+    margin-top: 14px; font-family: var(--font-mono); font-size: 12px;
+    color: var(--fg-2); letter-spacing: 0.04em;
+  }
+  .hero-latest strong { color: var(--accent); font-weight: 600; }
+  .hero-latest #heroReleased { opacity: .8; }
+
+  /* Verificação do ficheiro (SHA-256 junto ao download) + card de primeira abertura */
+  .hero-verify { margin-top: 16px; }
+  .hero-sha { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 11px; }
+  .hero-sha-lbl { color: var(--accent); font-weight: 600; letter-spacing: .08em; }
+  .hero-sha code { color: var(--fg-2); word-break: break-all; }
+  .hero-sha-copy { background: transparent; border: 1px solid var(--border-2); color: var(--fg-2); border-radius: 4px; min-width: 22px; height: 20px; cursor: pointer; font-size: 11px; line-height: 1; padding: 0 4px; }
+  .hero-sha-copy:hover { border-color: var(--accent-dim); color: var(--accent); }
+  .hero-verify-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 9px; font-size: 12.5px; color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent-dim); padding-bottom: 1px; }
+  .hero-verify-link:hover { color: var(--fg-0); border-color: var(--fg-0); }
+
+  /* Novidades — tira de "chamada de atenção" para as features mais recentes (curada por release) */
+  .whatsnew {
+    max-width: 1280px; margin: 0 auto; padding: 13px 40px;
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    border-top: 1px solid var(--border-1); border-bottom: 1px solid var(--border-1);
+    background: linear-gradient(90deg, var(--accent-soft) -10%, transparent 42%);
+  }
+  .whatsnew-label {
+    font-weight: 700; font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--accent); white-space: nowrap;
+  }
+  .whatsnew-pills { display: flex; gap: 8px; flex-wrap: wrap; flex: 1; }
+  .whatsnew-pills a {
+    display: inline-flex; align-items: center; gap: 6px; padding: 6px 13px; border-radius: 999px;
+    font-size: 12.5px; font-weight: 500; color: var(--fg-1); text-decoration: none;
+    background: var(--bg-2); border: 1px solid var(--border-2);
+    transition: background .15s, border-color .15s, color .15s, transform .15s;
+  }
+  .whatsnew-pills a:hover { background: var(--accent); border-color: var(--accent); color: #1A1208; transform: translateY(-1px); }
+  .whatsnew-ver { font-family: var(--font-mono); font-size: 11px; color: var(--fg-2); opacity: .75; white-space: nowrap; }
+
+  /* Salto suave para o card + destaque breve ao clicar num pill */
+  .feat, .premium { scroll-margin-top: 88px; }
+  .feat.flash { animation: featflash 1.8s ease-out; }
+  @keyframes featflash {
+    0%, 12% { box-shadow: 0 0 0 2px var(--accent), 0 0 26px -4px var(--accent); border-color: var(--accent); }
+    100% { box-shadow: 0 0 0 0 transparent; }
+  }
+  @media (max-width: 620px) { .whatsnew { padding: 12px 20px; } .whatsnew-ver { display: none; } }
+
+  .ef-modal { position: fixed; inset: 0; z-index: 1000; display: none; align-items: flex-start; justify-content: center; padding: 40px 16px; overflow-y: auto; background: rgba(0,0,0,.62); }
+  .ef-modal.open { display: flex; }
+  .ef-card { position: relative; background: var(--bg-1); border: 1px solid var(--border-1); border-radius: 14px; max-width: 600px; width: 100%; padding: 26px 24px 28px; box-shadow: 0 40px 90px -20px rgba(0,0,0,.7); }
+  .ef-card-x { position: absolute; top: 14px; right: 14px; width: 30px; height: 30px; border-radius: 6px; background: transparent; border: 1px solid var(--border-2); color: var(--fg-2); font-size: 14px; cursor: pointer; }
+  .ef-card-x:hover { border-color: var(--accent-dim); color: var(--accent); }
+  .ef-card-hd { display: flex; gap: 12px; align-items: flex-start; background: rgba(224,164,88,.10); border: 1px solid rgba(224,164,88,.22); border-radius: 10px; padding: 14px 16px; }
+  .ef-card-hd-ic { font-size: 20px; line-height: 1.2; }
+  .ef-card-hd-t { margin: 0; font-weight: 600; color: var(--accent); font-size: 15px; }
+  .ef-card-hd-p { margin: 5px 0 0; color: var(--fg-1); font-size: 13px; line-height: 1.6; }
+  .ef-sec { margin-top: 20px; }
+  .ef-sec-top { padding-top: 18px; border-top: 1px solid var(--border-1); }
+  .ef-sec-h { margin: 0 0 11px; font-weight: 600; font-size: 14px; color: var(--fg-0); }
+  .ef-opt { color: var(--fg-2); font-weight: 400; font-size: 13px; }
+  .ef-sec-sub { margin: 0 0 12px; font-size: 13px; color: var(--fg-2); line-height: 1.6; }
+  .ef-step { display: flex; gap: 10px; align-items: flex-start; margin: 0 0 9px; font-size: 13.5px; line-height: 1.55; color: var(--fg-1); }
+  .ef-step-mt { margin-top: 10px; }
+  .ef-num { flex: 0 0 auto; width: 20px; height: 20px; margin-top: 1px; border-radius: 50%; background: var(--bg-2); border: 1px solid var(--border-2); color: var(--fg-2); font-family: var(--font-mono); font-size: 11px; display: inline-flex; align-items: center; justify-content: center; }
+  .ef-step strong, .ef-find strong { color: var(--fg-0); font-weight: 600; }
+  .ef-step code, .ef-find code, .ef-card-hd-p code { font-family: var(--font-mono); font-size: 12px; background: var(--bg-0); padding: 1px 5px; border-radius: 3px; color: var(--accent); }
+  .ef-find { margin: 0 0 14px; background: var(--bg-2); border: 1px solid var(--border-1); border-radius: 8px; padding: 11px 13px; font-size: 13px; line-height: 1.6; color: var(--fg-1); }
+  .ef-find::before { content: "📁"; margin-right: 7px; }
+  .ef-method { border: 1px solid var(--border-1); border-radius: 10px; padding: 14px; margin-top: 12px; }
+  .ef-method-h { margin: 0 0 10px; font-size: 13px; font-weight: 600; color: var(--fg-0); }
+  .ef-cmd { display: flex; gap: 8px; align-items: center; margin-top: 8px; }
+  .ef-cmd code { flex: 1; background: var(--bg-0); border: 1px solid var(--border-1); border-radius: 6px; padding: 8px 10px; font-family: var(--font-mono); font-size: 12.5px; color: var(--fg-0); overflow-x: auto; white-space: nowrap; }
+  .ef-copy { flex: 0 0 auto; width: 30px; height: 30px; border-radius: 6px; border: 1px solid var(--border-2); background: transparent; color: var(--fg-2); cursor: pointer; font-size: 13px; }
+  .ef-copy:hover { border-color: var(--accent-dim); color: var(--accent); }
+  .ef-hashbox { margin-top: 14px; background: var(--bg-2); border: 1px solid var(--border-1); border-radius: 10px; padding: 13px 14px; }
+  .ef-hashbox-note { margin: 0 0 7px; font-size: 12px; color: var(--fg-2); }
+  .ef-hashbox-ver { color: var(--accent); }
+  .ef-hashbox-val { margin: 0; font-family: var(--font-mono); font-size: 12.5px; word-break: break-all; color: var(--fg-0); line-height: 1.55; }
+  .ef-hashbox-ok { margin: 9px 0 0; font-size: 13px; color: #7FA77A; display: flex; align-items: center; gap: 6px; }
+  .efkbd { font-family: var(--font-mono); font-size: 11px; background: var(--bg-0); border: 1px solid var(--border-2); border-radius: 4px; padding: 1px 5px; color: var(--fg-1); }
+  .efmuted { color: var(--fg-2); }
+  .hero-sha-what { margin-left: 6px; font-family: var(--font-sans); font-size: 11px; color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent-dim); white-space: nowrap; }
+  .hero-sha-what:hover { color: var(--fg-0); border-color: var(--fg-0); }
+  .ef-sha-title { margin: 0 0 14px; font-size: 17px; font-weight: 600; color: var(--fg-0); padding-right: 36px; }
+  .ef-prose { margin: 0 0 12px; font-size: 13.5px; line-height: 1.65; color: var(--fg-1); }
+  .ef-prose strong, .ef-list strong { color: var(--fg-0); font-weight: 600; }
+  .ef-prose code { font-family: var(--font-mono); font-size: 12px; background: var(--bg-0); padding: 1px 5px; border-radius: 3px; color: var(--accent); }
+  .ef-list { margin: 0 0 12px; padding-left: 0; list-style: none; }
+  .ef-list li { position: relative; padding-left: 22px; margin: 0 0 8px; font-size: 13.5px; line-height: 1.6; color: var(--fg-1); }
+  .ef-list li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
+
+  /* App preview */
+  .hero-preview {
+    position: relative;
+  }
+  /* 🚨 A MAQUETE TEM CAIXA PROPRIA, e nao e cosmetica: o .ops-widget e
+     "position:absolute; bottom:-40px" e agarra-se ao primeiro antepassado
+     posicionado. Enquanto isso era o .hero-preview, bastou por a caixa das
+     provas dentro da coluna para a coluna crescer -- e o widget desceu com
+     ela e foi cair EM CIMA da caixa. Agora agarra-se ao fundo da IMAGEM.
+     ⚠ A 'perspective' veio com ela: so vale para filhos DIRECTOS, e a
+       maquete deixou de ser filha directa do .hero-preview. */
+  .hero-mock {
+    position: relative;
+    perspective: 1400px;
+  }
+  .app-frame {
+    background: var(--bg-1);
+    border: 1px solid var(--border-1);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow:
+      0 40px 80px -20px rgba(0, 0, 0, 0.6),
+      0 20px 40px -10px rgba(224, 164, 88, 0.08),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+    transform: rotateY(-8deg) rotateX(3deg);
+    transform-origin: center center;
+    transition: transform .6s ease;
+  }
+  .hero-preview:hover .app-frame {
+    transform: rotateY(-2deg) rotateX(1deg) scale(1.01);
+  }
+  .app-titlebar {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--bg-1);
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-1);
+  }
+  .app-titlebar-dot { width: 9px; height: 9px; border-radius: 50%; background: #3a3a3a; }
+  .app-titlebar-name {
+    margin-left: 10px;
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--fg-2); letter-spacing: 0.08em;
+  }
+  .app-tabs {
+    display: flex; gap: 2px;
+    padding: 8px 14px 0;
+    background: var(--bg-1);
+    border-bottom: 1px solid var(--border-1);
+  }
+  .app-tab {
+    padding: 7px 14px 8px;
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--fg-2);
+    border: 1px solid transparent;
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .app-tab.active {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .app-tab .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+  .app-tab.muted .dot { background: transparent; border: 1px solid var(--fg-3); }
+  .app-body {
+    display: grid; grid-template-columns: 130px 1fr 130px;
+    height: 320px;
+  }
+  .app-tree {
+    background: var(--bg-1); padding: 12px 8px;
+    border-right: 1px solid var(--border-1);
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--fg-1);
+  }
+  .app-tree .label {
+    color: var(--fg-2); text-transform: uppercase; letter-spacing: 0.12em;
+    font-size: 9px; margin-bottom: 8px;
+  }
+  .app-tree .node { padding: 2px 6px; margin: 1px 0; border-radius: 2px; }
+  .app-tree .node.sel { background: var(--accent-soft); color: var(--accent); }
+  .app-list {
+    background: var(--bg-0); padding: 10px 0 0;
+    font-family: var(--font-mono); font-size: 10px;
+  }
+  .app-list .head {
+    display: grid; grid-template-columns: 1.6fr 0.5fr 0.7fr;
+    gap: 8px; padding: 4px 14px;
+    font-size: 9px; color: var(--fg-2); text-transform: uppercase; letter-spacing: 0.1em;
+    border-bottom: 1px solid var(--border-1);
+  }
+  .app-list .row {
+    display: grid; grid-template-columns: 1.6fr 0.5fr 0.7fr;
+    gap: 8px; padding: 5px 14px;
+    color: var(--fg-1);
+    border-left: 2px solid transparent;
+  }
+  .app-list .row.sel {
+    background: var(--row-sel);
+    border-left-color: var(--accent);
+    color: var(--accent);
+  }
+  .app-list .row:hover:not(.sel) { background: var(--row-hover); }
+  .app-list .row .ext {
+    display: inline-block;
+    background: rgba(224, 164, 88, 0.12);
+    color: var(--accent);
+    padding: 1px 5px; border-radius: 2px;
+    font-size: 9px;
+  }
+  .app-preview {
+    background: var(--bg-0);
+    border-left: 1px solid var(--border-1);
+    padding: 12px 10px;
+    font-family: var(--font-mono); font-size: 8px;
+    color: var(--fg-1);
+    overflow: hidden;
+  }
+  .app-preview .head {
+    color: var(--accent); font-size: 8px; text-transform: uppercase;
+    letter-spacing: 0.12em; margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .app-preview .ln { display: flex; gap: 6px; }
+  .app-preview .lno { color: var(--fg-3); width: 12px; text-align: right; }
+  .app-preview .kw { color: #c58fd9; }
+  .app-preview .str { color: #88b884; }
+  .app-preview .cmt { color: var(--fg-3); font-style: italic; }
+  .app-preview .fn { color: var(--accent); }
+
+  .ops-widget {
+    position: absolute;
+    bottom: -40px; right: -30px;
+    width: 240px;
+    background: var(--bg-1);
+    border: 1px solid var(--border-1);
+    border-radius: 5px;
+    padding: 12px;
+    box-shadow: 0 24px 60px -10px rgba(0, 0, 0, 0.7);
+    font-family: var(--font-mono); font-size: 9px;
+    transform: rotate(2deg);
+  }
+  .ops-widget .head {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 6px;
+  }
+  .ops-widget .head .ic { color: var(--accent); font-size: 11px; }
+  .ops-widget .head .pill {
+    background: var(--accent); color: var(--bg-0);
+    padding: 1px 5px; border-radius: 2px;
+    font-weight: 600; font-size: 8px;
+  }
+  .ops-widget .bar {
+    height: 3px; background: var(--bg-0); border-radius: 2px;
+    margin: 4px 0;
+    overflow: hidden;
+  }
+  .ops-widget .bar .fill { height: 100%; background: var(--accent); width: 65%; }
+  .ops-widget .bar.sm .fill { background: var(--accent-dim); width: 78%; }
+  .ops-widget .meta { display: flex; justify-content: space-between; color: var(--fg-2); margin-top: 4px; }
+  .ops-widget .meta .speed { color: var(--accent); }
+
+  /* CATALOG */
+  .section-header {
+    max-width: 1280px; margin: 0 auto;
+    padding: 44px 32px 28px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: end;
+    border-bottom: 1px solid var(--border-1);
+  }
+  .section-num {
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--accent); letter-spacing: 0.25em; text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .section-title {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: clamp(36px, 4.5vw, 60px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .section-title em { color: var(--accent); font-style: italic; }
+  .section-blurb {
+    color: var(--fg-1);
+    font-size: 16px;
+    line-height: 1.65;
+    max-width: 520px;
+  }
+
+  .features {
+    max-width: 1280px; margin: 0 auto;
+    padding: 60px 32px 120px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1px;
+    background: var(--border-1);
+  }
+  .feat {
+    background: var(--bg-0);
+    padding: 32px;
+    position: relative;
+    transition: background .25s;
+  }
+  .feat:hover { background: var(--bg-1); }
+  .feat .num {
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--fg-3); margin-bottom: 18px;
+    letter-spacing: 0.1em;
+  }
+  .feat h3 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 28px; line-height: 1.05;
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+    color: var(--fg-0);
+  }
+  .feat p {
+    color: var(--fg-1); font-size: 14px; line-height: 1.6; margin: 0;
+  }
+  .feat-mark {
+    margin-top: 20px;
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase;
+  }
+  /* O selo do topo e a palavra PREMIUM na nota são a MESMA etiqueta: preto sobre
+     amarelo, mesmo tamanho, e ambas saltam para o §04. Assim ninguém confunde o
+     que é grátis com o que é pago. */
+  /* FREE: mesma família, escalão abaixo. Contorno em vez de cor nova — verde ao lado
+     de âmbar leria-se como semáforo, e o premium não é um aviso. O cheio ganha sempre
+     o olho; o vazado diz apenas "há aqui parte grátis". Sem etiqueta = tudo grátis. */
+  .badge-free, .free-word {
+    display: inline-block; padding: 1px 7px; border-radius: 3px;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; font-weight: 700;
+    background: transparent; color: var(--accent-dim); border: 1px solid var(--accent-soft);
+    vertical-align: middle; text-decoration: none; cursor: pointer;
+    text-transform: uppercase; transition: color .15s, border-color .15s;
+  }
+  .badge-free { margin-left: 8px; }
+  .badge-free:hover, .free-word:hover { color: var(--fg-0); border-color: var(--fg-0); }
+  .badge-free + .badge-pro { margin-left: 5px; }
+  .badge-pro, .prem-word {
+    display: inline-block; padding: 1px 7px; border-radius: 3px;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; font-weight: 700;
+    background: var(--accent); color: #18120a; vertical-align: middle;
+    text-decoration: none; cursor: pointer; transition: filter .15s;
+  }
+  .badge-pro { margin-left: 8px; }
+  .badge-pro:hover, .prem-word:hover { filter: brightness(1.15); }
+  .feat-note { margin-top: 16px; font-size: 12.5px; line-height: 1.55; color: var(--fg-2); }
+  /* Nota de rodapé do cartão — deliberadamente discreta: quem chega aqui já desceu
+     o cartão todo. Não trava ninguém à entrada. */
+  .feat-drm { display: block; margin-top: 9px; font-size: 11.5px; color: var(--fg-3); }
+  .feat-note .soon { color: var(--fg-3); }
+  .footer-col a.soon { color: var(--fg-3); pointer-events: none; }
+  .feat.w4 { grid-column: span 4; }
+  .feat.w6 { grid-column: span 6; }
+  .feat.w8 { grid-column: span 8; }
+  .feat.w12 { grid-column: span 12; }
+  .feat.w3 { grid-column: span 3; }
+
+  .feat.hero-card { padding: 0; overflow: hidden; }
+  .feat.hero-card .pad { padding: 32px; }
+  .feat.hero-card .visual {
+    background: var(--bg-1);
+    border-top: 1px solid var(--border-1);
+    padding: 22px 32px;
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--fg-1);
+    display: flex; gap: 24px; flex-wrap: wrap;
+  }
+  .feat.hero-card .visual .k { color: var(--fg-2); }
+  .feat.hero-card .visual .v { color: var(--accent); }
+
+  .preview-demo {
+    background: var(--bg-1);
+    border-top: 1px solid var(--border-1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 200px;
+  }
+  .preview-demo .src {
+    padding: 18px 22px;
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--fg-1);
+    line-height: 1.55;
+    border-right: 1px solid var(--border-1);
+  }
+  .preview-demo .src .h { color: var(--accent); font-size: 9px; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 10px; }
+  .preview-demo .src .kw { color: #c58fd9; }
+  .preview-demo .src .str { color: #88b884; }
+  .preview-demo .src .cmt { color: var(--fg-3); font-style: italic; }
+  .preview-demo .src .fn { color: var(--accent); }
+  .preview-demo .rendered { padding: 18px 22px; }
+  .preview-demo .rendered h4 {
+    font-family: var(--font-display); font-weight: 600;
+    color: var(--accent); margin: 0 0 8px;
+    font-size: 18px;
+  }
+  .preview-demo .rendered p {
+    margin: 0 0 8px; font-size: 12px; color: var(--fg-1); line-height: 1.5;
+  }
+  .preview-demo .rendered code {
+    background: var(--bg-0); padding: 1px 5px; border-radius: 2px;
+    font-family: var(--font-mono); font-size: 11px; color: var(--accent);
+  }
+
+  /* SHORTCUTS */
+  .shortcuts {
+    background: var(--bg-1);
+    border-top: 1px solid var(--border-1);
+    border-bottom: 1px solid var(--border-1);
+    padding: 80px 32px;
+  }
+  .shortcuts-inner {
+    max-width: 1280px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .shortcuts-side h2 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 48px; line-height: 1;
+    letter-spacing: -0.02em;
+    margin: 0 0 16px;
+  }
+  .shortcuts-side h2 em { color: var(--accent); font-style: italic; }
+  .shortcuts-side p {
+    color: var(--fg-1); font-size: 15px;
+    margin: 0;
+  }
+  .kbd-list {
+    display: grid; gap: 1px;
+    background: var(--border-1);
+    border: 1px solid var(--border-1);
+  }
+  .kbd-row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 16px;
+    padding: 14px 20px;
+    background: var(--bg-0);
+    align-items: center;
+  }
+  .kbd-row .keys { display: flex; gap: 4px; }
+  .kbd {
+    font-family: var(--font-mono); font-size: 10px;
+    background: var(--bg-2);
+    color: var(--accent);
+    border: 1px solid var(--border-2);
+    border-bottom-width: 2px;
+    padding: 3px 7px;
+    border-radius: 3px;
+    letter-spacing: 0.04em;
+  }
+  .kbd-row .desc { color: var(--fg-1); font-size: 14px; }
+  .kbd-row .desc em { color: var(--accent); font-style: normal; font-family: var(--font-mono); font-size: 12px; }
+
+  /* STACK */
+  .stack {
+    max-width: 1280px; margin: 0 auto;
+    padding: 100px 32px;
+  }
+  .stack h2 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 48px; line-height: 1; letter-spacing: -0.02em;
+    margin: 0 0 14px;
+  }
+  .stack h2 em { color: var(--accent); font-style: italic; }
+  .stack p { color: var(--fg-1); margin: 0 0 40px; max-width: 540px; }
+  .stack-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border-1);
+    border: 1px solid var(--border-1);
+  }
+  /* Células apertadas: passaram de 4 para 8 e ocupavam ecrã a mais. O h4 desceu de
+     22 para 17 px porque era ele que as fazia altas — nomes como
+     "AvalonEdit · Markdig · WebView2" partiam em três linhas. */
+  .stack-cell {
+    background: var(--bg-0);
+    padding: 20px 18px;
+  }
+  .stack-cell .ic {
+    font-family: var(--font-mono); font-size: 9.5px;
+    color: var(--accent); letter-spacing: 0.18em; text-transform: uppercase;
+    margin-bottom: 9px;
+  }
+  .stack-cell h4 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 17px; margin: 0 0 6px; line-height: 1.25;
+    color: var(--fg-0);
+  }
+  .stack-cell p {
+    color: var(--fg-2); font-size: 12px; line-height: 1.5;
+    margin: 0;
+  }
+  .stack-licences {
+    color: var(--fg-2); font-size: 13px; line-height: 1.6;
+    margin: 0 0 26px;
+  }
+  .stack-licences strong { color: var(--fg-1); font-weight: 500; }
+  /* Prova de terceiros. Uma linha, na voz da pagina.
+     ⛔ NAO LEVA O SELO DA SOFTPEDIA, e a razao e de desenho, nao de direitos:
+        aquele autocolante branco/vermelho/azul e a coisa mais clara da pagina
+        inteira -- mais do que o botao de descarga -- numa pagina que e toda
+        carvao, ambar e serifa. Duas tentativas de o arrumar falharam; o
+        problema nunca foi o arranjo, era a imagem. O selo continua em
+        softpedia-100-clean.webp, no disco, se um dia servir noutro sitio.
+     ⛔ FEITA PARA CRESCER: "isto quando comeca vai em domino". Acrescentar um
+        directorio e uma linha de HTML -- o nome nao entra na traducao. */
+  .awards {
+    margin-top: 58px;   /* 40px do .ops-widget a pendurar + folga */ padding: 12px 14px 11px;
+    border: 1px solid var(--border-1); border-radius: 8px;
+    background: var(--bg-1);
+  }
+  .aw-h {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--fg-3); margin-bottom: 9px;
+  }
+  .aw-list { list-style: none; margin: 0; padding: 0; }
+  /* as duas linhas bem afastadas: encostadas, liam-se como um bloco so e
+     confundiam-se as pontuacoes uma com a outra */
+  .aw-list li { display: flex; align-items: baseline; gap: 10px; padding: 9px 0; }
+  /* coluna do numero com largura fixa: ha linhas SEM pontuacao (so entra quem
+     tem avaliacao EDITORIAL) e sem isto ficavam desalinhadas. */
+  .aw-num { display: inline-flex; align-items: baseline; min-width: 3.6em; justify-content: flex-end; }
+  .aw-list li + li { border-top: 1px solid var(--border-1); }
+  /* o peso vem daqui: o numero em ambar, na serifa do titulo da casa */
+  .aw-score { font-family: var(--font-display); font-size: 21px; font-weight: 500; color: var(--accent); line-height: 1; }
+  .aw-of { font-style: normal; font-size: 11px; color: var(--fg-3); margin-left: -5px; }
+  .aw-list a { font-size: 13px; color: var(--fg-0); font-weight: 500; text-decoration: none; border-bottom: 1px solid transparent; }
+  .aw-list a:hover { color: var(--accent); border-color: var(--accent-soft); }
+  .aw-list em { font-style: normal; font-size: 11.5px; color: var(--fg-3); margin-left: auto; }
+
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border-1);
+    padding: 60px 32px 40px;
+  }
+  .footer-inner {
+    max-width: 1280px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+  .footer-brand { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+  .footer-brand .brand-mark { width: 36px; height: 36px; }
+  .footer-brand .brand-name { font-size: 28px; }
+  .footer-tagline { color: var(--fg-2); max-width: 360px; }
+  .footer-col h5 {
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--accent); text-transform: uppercase; letter-spacing: 0.18em;
+    margin: 0 0 16px; font-weight: 500;
+  }
+  .footer-col a {
+    display: block; color: var(--fg-1); padding: 4px 0;
+    font-size: 14px;
+  }
+  .footer-baseline {
+    max-width: 1280px; margin: 0 auto;
+    padding-top: 28px;
+    border-top: 1px solid var(--border-1);
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--fg-3); letter-spacing: 0.1em; text-transform: uppercase;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+  }
+  /* A tira dos 16 idiomas da app. Mesmo registo da baseline técnica logo
+     acima — é informação de referência, não argumento de venda. */
+  .footer-langs {
+    max-width: 1280px; margin: 14px auto 0;
+    font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    display: flex; gap: 14px; flex-wrap: wrap; align-items: baseline;
+  }
+  .footer-langs > span:first-child { color: var(--accent); white-space: nowrap; }
+  .footer-langs-list { color: var(--fg-3); }
+  .mb-credit {
+    text-align: center;
+    width: 100%;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border-1);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--fg-3);
+  }
+  /* A marca escreve-se SEMPRE "mBrothers" — nunca em maiúsculas.
+     Estas duas regras protegem-na dos text-transform em redor. */
+  .brand-mb { text-transform: none; }
+  .mb-credit a {
+    color: var(--accent);
+    border-bottom: 1px dotted var(--accent-dim);
+    padding-bottom: 1px;
+    transition: color .2s, border-color .2s;
+    text-transform: none;
+  }
+  .mb-credit a:hover {
+    color: var(--fg-0);
+    border-bottom-color: var(--fg-0);
+  }
+  .mb-credit .sep {
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent-dim);
+    margin: 0 10px;
+    vertical-align: middle;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; padding: 60px 24px 36px; gap: 60px; }
+    .hero-preview { transform: scale(0.85); transform-origin: top left; }
+    .ops-widget { right: -8px; }
+    .section-header { grid-template-columns: 1fr; gap: 24px; padding: 32px 24px 24px; }
+    .features { padding: 40px 24px 80px; }
+    .feat.w4, .feat.w6, .feat.w8, .feat.w3 { grid-column: span 12; }
+    .shortcuts-inner { grid-template-columns: 1fr; gap: 40px; }
+    .stack-grid { grid-template-columns: 1fr 1fr; }
+    .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+    .topbar-inner { padding: 12px 150px 12px 20px; }
+    .nav { gap: 14px; }
+    .nav-version { display: none; }
+    .lang-switch { top: 10px; right: 12px; padding: 3px; }
+    .lang-flag { width: 26px; height: 18px; }
+    .lang-flag + .lang-flag { margin-left: 3px; }
+  }
+
+  @media (max-width: 620px) {
+    .nav { display: none; }
+    .topbar-inner { padding: 12px 130px 12px 16px; }
+    .lang-flag { width: 22px; height: 15px; }
+  }
+
+  /* ANIMATIONS */
+  @keyframes float-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-eyebrow, .hero h1, .hero-lede, .hero-meta {
+    animation: float-up .8s ease-out both;
+  }
+  .hero h1 { animation-delay: .08s; }
+  .hero-lede { animation-delay: .16s; }
+  .hero-meta { animation-delay: .24s; }
+  .hero-preview { animation: float-up 1s ease-out .32s both; }
+
+  .feat {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .6s, transform .6s, background .25s;
+  }
+  .feat.in-view { opacity: 1; transform: translateY(0); }
+
+  /* PREMIUM */
+  .premium {
+    max-width: 1280px; margin: 0 auto;
+    padding: 20px 32px 100px;
+  }
+  .premium h2 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 48px; line-height: 1; letter-spacing: -0.02em;
+    margin: 0 0 14px;
+  }
+  .premium h2 em { color: var(--accent); font-style: italic; }
+  .premium > p.prem-blurb {
+    color: var(--fg-1); margin: 0 0 40px; max-width: 620px; line-height: 1.7;
+  }
+  .prem-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1px; background: var(--border-1);
+    border: 1px solid var(--border-1);
+  }
+  .prem-card { background: var(--bg-0); padding: 30px 28px; }
+  .prem-card.is-prem { background: var(--bg-1); }
+  .prem-card h4 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 24px; margin: 0 0 6px; color: var(--fg-0);
+  }
+  /* O título do cartão pago é a MESMA etiqueta dos cartões e das notas — preto sobre
+     amarelo. Era o único sítio da página onde PREMIUM aparecia como texto corrido, e
+     destoava. O ">" é essencial: sem ele apanhava também o "How to get it", que agora
+     vive dentro deste cartão (e que assim volta ao seu tom próprio). O lado grátis
+     mantém a serifa — a assimetria é que faz o sinal. */
+  .prem-card.is-prem > h4 {
+    display: inline-block; margin: 0 0 14px;
+    font-family: var(--font-mono); font-size: 18px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    background: var(--accent); color: #18120a;
+    padding: 4px 12px; border-radius: 4px;
+  }
+  /* E o título do lado grátis é a etiqueta vazada, pelas mesmas razões: as duas
+     colunas do §04 passam a ser as mesmas duas etiquetas que estão nos 28 cartões. */
+  .prem-card:not(.is-prem) > h4 {
+    display: inline-block; margin: 0 0 14px;
+    font-family: var(--font-mono); font-size: 18px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    background: transparent; color: var(--accent); border: 1px solid var(--accent-dim);
+    padding: 4px 12px; border-radius: 4px;
+  }
+  /* O salto das etiquetas FREE aterra no cartão, não debaixo da barra de topo. */
+  .prem-card { scroll-margin-top: 88px; }
+  .prem-card .prem-tag {
+    font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--fg-2); margin-bottom: 18px; display: block;
+  }
+  .prem-card.is-prem .prem-tag { color: var(--accent-dim); }
+  .prem-card ul { list-style: none; margin: 0; padding: 0; }
+  .prem-card li {
+    position: relative; padding-left: 22px; margin: 0 0 10px;
+    font-size: 14px; line-height: 1.6; color: var(--fg-1);
+  }
+  .prem-card li::before {
+    content: '✓'; position: absolute; left: 0; color: var(--accent-dim);
+    font-size: 12px;
+  }
+  .prem-card.is-prem li::before { color: var(--accent); }
+  .prem-card li strong { color: var(--fg-0); font-weight: 600; }
+
+  /* Já não é uma faixa própria à largura toda — vive dentro do cartão do Premium,
+     separada da lista por um filete. Sem fundo nem caixa: herda o cartão. */
+  .prem-how {
+    margin-top: 26px; padding-top: 24px;
+    border-top: 1px solid var(--border-1);
+  }
+  .prem-how h4 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 24px; margin: 0 0 18px; color: var(--fg-0);
+  }
+  .prem-how ol { list-style: none; margin: 0; padding: 0; counter-reset: pstep; }
+  .prem-how li {
+    position: relative; padding-left: 34px; margin: 0 0 12px;
+    font-size: 14px; line-height: 1.6; color: var(--fg-1);
+    counter-increment: pstep;
+  }
+  .prem-how li::before {
+    content: counter(pstep);
+    position: absolute; left: 0; top: 1px;
+    width: 21px; height: 21px; border-radius: 50%;
+    background: var(--bg-2); border: 1px solid var(--border-2);
+    color: var(--accent); font-family: var(--font-mono); font-size: 11px;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .prem-how li strong { color: var(--fg-0); font-weight: 600; }
+  .prem-note {
+    margin: 20px 0 0; padding: 13px 15px;
+    background: var(--bg-2); border: 1px solid var(--border-1); border-radius: 8px;
+    font-size: 13px; line-height: 1.6; color: var(--fg-2);
+  }
+  .prem-note strong { color: var(--fg-1); font-weight: 600; }
+  .prem-idea {
+    margin-top: 26px; padding: 20px 24px;
+    background: rgba(224,164,88,.07);
+    border: 1px solid rgba(224,164,88,.22); border-radius: 10px;
+    font-size: 14.5px; line-height: 1.65; color: var(--fg-1);
+  }
+  .prem-idea strong { color: var(--accent); font-weight: 600; }
+  .prem-idea a { border-bottom: 1px dashed var(--accent-dim); }
+
+  @media (max-width: 900px) {
+    .premium { padding: 10px 24px 70px; }
+    .prem-grid { grid-template-columns: 1fr; }
+  }
+  /* ===== SELECTOR DE LINGUAS =====
+     Substituiu a fila de 7 bandeiras quando o site passou a ter uma porta por
+     lingua. <details> porque abre sem JavaScript e as ligacoes ficam no HTML.
+     Fica no mesmo canto onde estava a .lang-switch. */
+  .fl-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+  .lang-fl {
+    width: 20px; height: 14px; flex: none; display: block; border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(255,255,255,.14);
+  }
+  .lang-picker { position: fixed; top: 16px; right: 22px; z-index: 200; }
+  .lang-cur {
+    list-style: none; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: .72rem; font-weight: 700; color: var(--text-1);
+    background: rgba(0,0,0,.72); border: 1px solid var(--border-2);
+    padding: 5px 11px; border-radius: 999px; white-space: nowrap;
+    box-shadow: 0 6px 18px rgba(0,0,0,.5);
+    transition: border-color .15s, color .15s;
+  }
+  .lang-cur::-webkit-details-marker { display: none; }
+  .lang-cur::after { content: '\25BE'; color: var(--text-3); }
+  .lang-cur:hover, .lang-picker[open] .lang-cur { border-color: var(--accent); color: #fff; }
+  .lang-list {
+    position: absolute; right: 0; top: calc(100% + 8px);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+    min-width: 268px; padding: 6px;
+    background: #0d0e10; border: 1px solid var(--border-2);
+    border-radius: 10px; box-shadow: 0 18px 40px -12px #000;
+  }
+  .lang-btn {
+    display: flex; align-items: center; gap: 8px;
+    font-size: .78rem; font-weight: 600; color: var(--text-2);
+    text-decoration: none; padding: 7px 10px; border-radius: 7px;
+    white-space: nowrap; transition: color .15s, background .15s;
+  }
+  .lang-btn:hover { color: var(--text-1); background: rgba(255,255,255,.06); }
+  .lang-btn[aria-current="true"] { color: #1a1205; background: var(--accent); font-weight: 800; }
+  @media (max-width: 560px) {
+    .lang-list { grid-template-columns: 1fr; min-width: 176px; }
+    .lang-picker { top: 10px; right: 12px; }
+  }
+</style>
+<script>window.EF_FREE="Gratis";window.EF_ROOT="../";</script>
+</head>
+<body>
+<svg class="fl-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs>
+<symbol id="fl-pt" viewBox="0 0 20 14"><rect width="20" height="14" fill="#FF0000"/><rect width="8" height="14" fill="#006600"/><circle cx="8" cy="7" r="2.9" fill="#FFCC00"/><circle cx="8" cy="7" r="1.9" fill="#FFFFFF"/><rect x="7.1" y="5.9" width="1.8" height="2.2" fill="#003399"/></symbol>
+<symbol id="fl-br" viewBox="0 0 20 14"><rect width="20" height="14" fill="#009C3B"/><polygon points="10,1.4 18.6,7 10,12.6 1.4,7" fill="#FFDF00"/><circle cx="10" cy="7" r="2.9" fill="#002776"/><path d="M7.2 6.1a3.4 3.4 0 0 1 5.7 1.1l-.9.3a2.5 2.5 0 0 0-4.2-.8z" fill="#FFFFFF"/></symbol>
+<symbol id="fl-gb" viewBox="0 0 20 14"><rect width="20" height="14" fill="#012169"/><path d="M0 0l20 14M20 0L0 14" stroke="#FFFFFF" stroke-width="2.8"/><path d="M0 0l20 14M20 0L0 14" stroke="#C8102E" stroke-width="1.4"/><path d="M10 0v14M0 7h20" stroke="#FFFFFF" stroke-width="4.6"/><path d="M10 0v14M0 7h20" stroke="#C8102E" stroke-width="2.8"/></symbol>
+<symbol id="fl-us" viewBox="0 0 20 14"><rect width="20" height="14" fill="#FFFFFF"/><g fill="#B22234"><rect width="20" height="1.08"/><rect y="2.15" width="20" height="1.08"/><rect y="4.31" width="20" height="1.08"/><rect y="6.46" width="20" height="1.08"/><rect y="8.62" width="20" height="1.08"/><rect y="10.77" width="20" height="1.08"/><rect y="12.92" width="20" height="1.08"/></g><rect width="8" height="7.54" fill="#3C3B6E"/><g fill="#FFFFFF"><circle cx="1.6" cy="1.5" r=".36"/><circle cx="4" cy="1.5" r=".36"/><circle cx="6.4" cy="1.5" r=".36"/><circle cx="2.8" cy="3" r=".36"/><circle cx="5.2" cy="3" r=".36"/><circle cx="1.6" cy="4.5" r=".36"/><circle cx="4" cy="4.5" r=".36"/><circle cx="6.4" cy="4.5" r=".36"/><circle cx="2.8" cy="6" r=".36"/><circle cx="5.2" cy="6" r=".36"/></g></symbol>
+<symbol id="fl-es" viewBox="0 0 20 14"><rect width="20" height="14" fill="#AA151B"/><rect y="3.5" width="20" height="7" fill="#F1BF00"/></symbol>
+<symbol id="fl-fr" viewBox="0 0 20 14"><rect width="20" height="14" fill="#FFFFFF"/><rect width="6.67" height="14" fill="#002395"/><rect x="13.33" width="6.67" height="14" fill="#ED2939"/></symbol>
+<symbol id="fl-it" viewBox="0 0 20 14"><rect width="20" height="14" fill="#FFFFFF"/><rect width="6.67" height="14" fill="#009246"/><rect x="13.33" width="6.67" height="14" fill="#CE2B37"/></symbol>
+<symbol id="fl-de" viewBox="0 0 20 14"><rect width="20" height="4.67" fill="#000000"/><rect y="4.67" width="20" height="4.66" fill="#DD0000"/><rect y="9.33" width="20" height="4.67" fill="#FFCE00"/></symbol>
+<symbol id="fl-pl" viewBox="0 0 20 14"><rect width="20" height="7" fill="#FFFFFF"/><rect y="7" width="20" height="7" fill="#DC143C"/></symbol>
+<symbol id="fl-ru" viewBox="0 0 20 14"><rect width="20" height="4.67" fill="#FFFFFF"/><rect y="4.67" width="20" height="4.66" fill="#0039A6"/><rect y="9.33" width="20" height="4.67" fill="#D52B1E"/></symbol>
+<symbol id="fl-sa" viewBox="0 0 20 14"><rect width="20" height="14" fill="#006C35"/><path d="M4.2 6.2q1.45-1.4 2.9 0t2.9 0t2.9 0t2.9 0" fill="none" stroke="#FFFFFF" stroke-width=".9" stroke-linecap="round"/><rect x="4.6" y="8.7" width="11" height=".8" rx=".4" fill="#FFFFFF"/><path d="M4.6 9.1l1.7-1.2v2.4z" fill="#FFFFFF"/></symbol>
+<symbol id="fl-in" viewBox="0 0 20 14"><rect width="20" height="4.67" fill="#FF9933"/><rect y="4.67" width="20" height="4.66" fill="#FFFFFF"/><rect y="9.33" width="20" height="4.67" fill="#138808"/><circle cx="10" cy="7" r="1.8" fill="none" stroke="#000080" stroke-width=".45"/><circle cx="10" cy="7" r=".45" fill="#000080"/></symbol>
+<symbol id="fl-cn" viewBox="0 0 20 14"><rect width="20" height="14" fill="#DE2910"/><g fill="#FFDE00"><polygon points="3.33,1.33 3.73,2.55 5,2.55 3.97,3.30 4.36,4.51 3.33,3.76 2.30,4.51 2.70,3.30 1.67,2.55 2.94,2.55"/><polygon points="6.67,0.83 6.82,1.32 7.33,1.32 6.92,1.61 7.08,2.10 6.67,1.80 6.26,2.10 6.41,1.61 6.00,1.32 6.51,1.32"/><polygon points="8.00,2.00 8.16,2.48 8.66,2.48 8.25,2.78 8.41,3.26 8.00,2.97 7.59,3.26 7.75,2.78 7.34,2.48 7.84,2.48"/><polygon points="8.00,3.67 8.16,4.15 8.66,4.15 8.25,4.45 8.41,4.93 8.00,4.63 7.59,4.93 7.75,4.45 7.34,4.15 7.84,4.15"/><polygon points="6.67,4.83 6.82,5.32 7.33,5.32 6.92,5.61 7.08,6.10 6.67,5.80 6.26,6.10 6.41,5.61 6.00,5.32 6.51,5.32"/></g></symbol>
+<symbol id="fl-tw" viewBox="0 0 20 14"><rect width="20" height="14" fill="#FE0000"/><rect width="10" height="7" fill="#000095"/><circle cx="5" cy="3.5" r="2.1" fill="#FFFFFF"/><circle cx="5" cy="3.5" r="1.4" fill="#000095"/><circle cx="5" cy="3.5" r="1" fill="#FFFFFF"/></symbol>
+<symbol id="fl-jp" viewBox="0 0 20 14"><rect width="20" height="14" fill="#FFFFFF"/><circle cx="10" cy="7" r="4.2" fill="#BC002D"/></symbol>
+<symbol id="fl-kr" viewBox="0 0 20 14"><rect width="20" height="14" fill="#FFFFFF"/><circle cx="10" cy="7" r="3" fill="#CD2E3A"/><path d="M7 7a1.5 1.5 0 0 1 3 0 1.5 1.5 0 0 0 3 0 3 3 0 0 1-6 0z" fill="#0047A0"/></symbol>
+</defs></svg>
+
+<!-- LANGUAGE SWITCHER
+     Dezasseis linguas nao cabem numa fila de bandeiras: e um <details>, que
+     abre sem JavaScript nenhum e deixa as LIGACOES no HTML -- que e o que os
+     motores de busca leem. As pastas por idioma sao GERADAS; este bloco e
+     reescrito por tools/gerar-linguas.py a cada corrida. -->
+      <details class="lang-picker">
+        <summary class="lang-cur" title="Language"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-es"/></svg><span>Español</span></summary>
+        <div class="lang-list">
+          <a class="lang-btn" href="../pt/" lang="pt"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-pt"/></svg><span>Português</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-br"/></svg><span>Português (BR)</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-gb"/></svg><span>English (GB)</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-us"/></svg><span>English (US)</span></a>
+          <a class="lang-btn" href="../es/" lang="es" aria-current="true"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-es"/></svg><span>Español</span></a>
+          <a class="lang-btn" href="../fr/" lang="fr"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-fr"/></svg><span>Français</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-it"/></svg><span>Italiano</span></a>
+          <a class="lang-btn" href="../de/" lang="de"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-de"/></svg><span>Deutsch</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-pl"/></svg><span>Polski</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-ru"/></svg><span>Русский</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-sa"/></svg><span>العربية</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-in"/></svg><span>हिन्दी</span></a>
+          <a class="lang-btn" href="../zh/" lang="zh-Hans"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-cn"/></svg><span>中文 (简体)</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-tw"/></svg><span>中文 (繁體)</span></a>
+          <a class="lang-btn" href="../ja/" lang="ja"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-jp"/></svg><span>日本語</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-kr"/></svg><span>한국어</span></a>
+        </div>
+      </details>
+
+<!-- LOGO MARK -->
+<svg width="0" height="0" style="position:absolute;">
+  <defs>
+    <symbol id="logo" viewBox="0 0 64 64">
+      <path d="M32 4 L60 32 L32 60 L4 32 Z"
+            fill="none" stroke="#E0A458" stroke-width="1.5" stroke-linejoin="miter"/>
+      <path d="M32 12 L52 32 L32 52 L12 32 Z"
+            fill="none" stroke="#E0A458" stroke-width="0.6"
+            stroke-opacity="0.4" stroke-linejoin="miter"/>
+      <path d="M30.5 22 L30.5 21.5
+               C30.5 19.5, 31.5 18.2, 33.4 18.2
+               C34.4 18.2, 35.2 18.5, 35.8 19
+               L34.9 21 C34.6 20.8, 34.2 20.6, 33.8 20.6
+               C33.2 20.6, 32.9 21, 32.9 21.9
+               L32.9 25.5 L35.2 25.5 L35.2 27.6 L32.9 27.6
+               L32.9 42 C32.9 44.5, 31.5 46, 29 46
+               L28 46 L28 43.8 L28.7 43.8
+               C29.7 43.8, 30.5 43.2, 30.5 41.8
+               L30.5 27.6 L28.6 27.6 L28.6 25.5 L30.5 25.5 Z"
+            fill="#E0A458"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="brand-mark"><use href="#logo"/></svg>
+      <span class="brand-name">Explorer<em>Focus</em></span>
+    </div>
+    <nav class="nav">
+      <a href="#features" data-i18n="nav_features">Funciones</a>
+      <a href="#shortcuts" data-i18n="nav_shortcuts">Atajos</a>
+      <a href="#stack" data-i18n="nav_stack">Stack</a>
+      <a href="#premium" data-i18n="nav_premium">Premium</a>
+      <a href="#download" data-i18n="nav_download">Descargar</a>
+      <span class="nav-version">v1.2.26</span>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow" data-i18n="hero_eyebrow">Un explorador de archivos · WPF · .NET 10</div>
+    <h1 data-i18n-html="hero_title">El explorador<br>que se <em>centra</em><br>en lo que <span class="strike">no</span> importa.</h1>
+    <p class="hero-lede" data-i18n="hero_lede">ExplorerFocus es un reemplazo del Explorador de Windows, para quienes trabajan siempre en las mismas carpetas. Perfiles configurables, árboles limpios, una vista previa que abre casi todo — código, documentos, libros — y operaciones que de verdad te dicen qué está pasando. Sin el ruido del shell.</p>
+    <div class="hero-meta">
+      <span data-i18n="hero_meta_os">Windows 10 / 11</span>
+      <span data-i18n="hero_meta_pkg">Autónomo · archivo único</span>
+      <span data-i18n="hero_meta_size">~115 MB</span>
+    </div>
+
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.exe">
+        <span aria-hidden="true">⬇</span> <span data-i18n="hero_dl_exe">Descargar · .exe</span>
+      </a>
+      <a class="btn btn-ghost" href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip"
+         title="Para organizações que bloqueiam o download de .exe">
+        <span aria-hidden="true">⬇</span> <span data-i18n="hero_dl_zip">.zip</span>
+      </a>
+    </div>
+
+    <div class="hero-latest" id="heroLatest" hidden>
+      <span data-i18n="hero_latest">Última versión</span>:
+      <strong id="heroVersion"></strong><span id="heroReleased"></span>
+    </div>
+
+    <div class="hero-verify" id="heroVerify" hidden>
+      <div class="hero-sha">
+        <span class="hero-sha-lbl">SHA-256</span>
+        <code id="heroSha" class="js-sha"></code>
+        <button class="hero-sha-copy" id="heroShaCopy" type="button" aria-label="Copiar SHA-256" title="Copiar">⧉</button>
+        <a href="#sha256" class="hero-sha-what" data-modal="shaModal" data-i18n="sha_link">¿Qué es el SHA-256?</a>
+      </div>
+      <a href="#verify" class="hero-verify-link" id="openVerify" data-modal="verifyModal">
+        <span data-i18n="dl_firsttime">¿La abres por primera vez? ¿Una advertencia de Windows?</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-preview">
+    <div class="hero-mock">
+    <div class="app-frame">
+      <div class="app-titlebar">
+        <span class="app-titlebar-dot"></span>
+        <span class="app-titlebar-dot"></span>
+        <span class="app-titlebar-dot"></span>
+        <span class="app-titlebar-name">ExplorerFocus — default · projects/ExplorerFocus</span>
+      </div>
+
+      <div class="app-tabs">
+        <div class="app-tab active"><span class="dot"></span>default</div>
+        <div class="app-tab muted"><span class="dot"></span>scripts</div>
+        <div class="app-tab muted"><span class="dot"></span>research</div>
+      </div>
+
+      <div class="app-body">
+        <div class="app-tree">
+          <div class="label" data-i18n="app_tree_label">Árbol</div>
+          <div class="node">▾ ExplorerFocus</div>
+          <div class="node">&nbsp;&nbsp;Core/</div>
+          <div class="node">&nbsp;&nbsp;Models/</div>
+          <div class="node sel">&nbsp;&nbsp;ViewModels/</div>
+          <div class="node">&nbsp;&nbsp;Views/</div>
+          <div class="node">&nbsp;&nbsp;Themes/</div>
+          <div class="node">▸ ExtensionFocus.cs</div>
+        </div>
+
+        <div class="app-list">
+          <div class="head">
+            <span data-i18n="app_col_name">NOMBRE</span>
+            <span data-i18n="app_col_ext">EXT</span>
+            <span data-i18n="app_col_size">TAMAÑO</span>
+          </div>
+          <div class="row">
+            <span>📁 FileOperations</span>
+            <span></span>
+            <span>248 KB</span>
+          </div>
+          <div class="row sel">
+            <span>🟦 MainViewModel.cs</span>
+            <span class="ext">cs</span>
+            <span>42 KB</span>
+          </div>
+          <div class="row">
+            <span>🟦 ShellViewModel.cs</span>
+            <span class="ext">cs</span>
+            <span>18 KB</span>
+          </div>
+          <div class="row">
+            <span>🟦 FileItemViewModel.cs</span>
+            <span class="ext">cs</span>
+            <span>7.2 KB</span>
+          </div>
+          <div class="row">
+            <span>🟦 PreviewViewModel.cs</span>
+            <span class="ext">cs</span>
+            <span>9.5 KB</span>
+          </div>
+          <div class="row">
+            <span>🟦 AppsManagerViewModel.cs</span>
+            <span class="ext">cs</span>
+            <span>4.8 KB</span>
+          </div>
+        </div>
+
+        <div class="app-preview">
+          <div class="head" data-i18n="app_preview_label">VISTA PREVIA</div>
+          <div class="ln"><span class="lno">1</span><span><span class="kw">using</span> System.IO;</span></div>
+          <div class="ln"><span class="lno">2</span></div>
+          <div class="ln"><span class="lno">3</span><span class="cmt">// Main view-model</span></div>
+          <div class="ln"><span class="lno">4</span><span><span class="kw">public partial class</span> <span class="fn">MainViewModel</span></span></div>
+          <div class="ln"><span class="lno">5</span><span>{</span></div>
+          <div class="ln"><span class="lno">6</span><span>&nbsp;&nbsp;<span class="kw">private readonly</span></span></div>
+          <div class="ln"><span class="lno">7</span><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">ProfileManager</span></span></div>
+          <div class="ln"><span class="lno">8</span><span>&nbsp;&nbsp;&nbsp;&nbsp;_profile;</span></div>
+          <div class="ln"><span class="lno">9</span></div>
+          <div class="ln"><span class="lno">10</span><span>&nbsp;&nbsp;<span class="kw">public</span> <span class="fn">PreviewVM</span></span></div>
+          <div class="ln"><span class="lno">11</span><span>&nbsp;&nbsp;{ <span class="kw">get</span>; }</span></div>
+          <div class="ln"><span class="lno">12</span><span>}</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ops-widget">
+      <div class="head">
+        <span><span class="ic">📋</span> <span data-i18n="ops_action">Copiar · 47 archivos</span></span>
+        <span class="pill" data-i18n="ops_status">EN CURSO</span>
+      </div>
+      <div style="color: var(--fg-2); margin-top: 6px;">project_dump_2025.zip</div>
+      <div class="bar"><div class="fill"></div></div>
+      <div class="bar sm"><div class="fill"></div></div>
+      <div class="meta">
+        <span>134 / 248 MB</span>
+        <span class="speed" data-i18n="ops_speed">89 MB/s · 1,3 s</span>
+      </div>
+    </div>
+    </div>
+      <!-- ⛔ ACRESCENTAR UM DIRECTORIO = uma linha na lista + duas chaves curtas
+           por lingua (a nota e a pontuacao). O NOME nao vai na traducao: e nome
+           proprio. Feito para crescer -- "isto quando comeca vai em domino".
+           ⛔ E NAO LEVA O SELO DA SOFTPEDIA: aquele autocolante branco/vermelho/
+              azul e a coisa mais clara da pagina, mais do que o botao de
+              descarga. O peso aqui vem do AMBAR da casa, nao de uma imagem
+              emprestada. -->
+      <div class="awards">
+        <div class="aw-h" data-i18n="aw_h">Probado por terceros, antes de ser catalogado</div>
+        <ul class="aw-list">
+          <li>
+            <span class="aw-num"><b class="aw-score" data-i18n="aw_sp_n">4,5</b><i class="aw-of">/5</i></span>
+            <a href="https://www.softpedia.com/get/File-managers/ExplorerFocus.shtml" target="_blank" rel="noopener">Softpedia</a>
+            <em data-i18n="aw_sp">100% Clean · reseña del editor</em>
+          </li>
+          <li>
+            <span class="aw-num"></span>
+            <a href="https://www.majorgeeks.com/files/details/explorerfocus.html" target="_blank" rel="noopener">MajorGeeks</a>
+            <em data-i18n="aw_mg">máquina virtual + VirusTotal</em>
+          </li>
+        </ul>
+      </div>
+  </div>
+</section>
+
+<!-- NOVIDADES (teaser das features mais recentes → salto para o card) -->
+<div class="whatsnew">
+  <span class="whatsnew-label" data-i18n="wn_label">✦ Novedades</span>
+  <nav class="whatsnew-pills">
+    <a href="#feat18" data-i18n="wn_langs">🌐 16 idiomas</a>
+    <a href="#feat19" data-i18n="wn_disk">💽 El disco al detalle</a>
+    <a href="#feat24" data-i18n="wn_books">📚 Libros y cómics</a>
+    <a href="#feat32" data-i18n="wn_voice">🎙 Voz en off</a>
+    <a href="#feat31" data-i18n="wn_cards">🎬 Tarjetas de marca</a>
+    <a href="#feat30" data-i18n="wn_screen">🖥 Grabación de pantalla</a>
+  </nav>
+  <span class="whatsnew-ver">v1.2.26</span>
+</div>
+
+<!-- CATALOG -->
+<div id="features"></div>
+<div class="section-header">
+  <div>
+    <div class="section-num" data-i18n="cat_num">§ 01 · Catálogo</div>
+    <h2 class="section-title" data-i18n-html="cat_title">Lo que <em>de verdad</em><br>marca la diferencia.</h2>
+  </div>
+  <p class="section-blurb" data-i18n="cat_blurb">Cada función se añadió para responder a un problema concreto del trabajo diario sobre un árbol de archivos conocido. Ninguna está para lucir. Casi todas se pueden activar o desactivar.</p>
+</div>
+
+<section class="features">
+
+  <div class="feat hero-card w8">
+    <div class="pad">
+      <div class="num"><span data-i18n="f01_num">01 — PERFILES</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+      <h3 data-i18n="f01_h">Multipestaña por contexto. Cada perfil es su propia vista, con su árbol, filtros y estado.</h3>
+      <p data-i18n="f01_p">Reordena arrastrando, F2 para renombrar, Ctrl+1..9 para saltar entre pestañas, Ctrl+T para crear. Las pestañas recuerdan la última carpeta visitada y el estado del árbol.</p>
+    </div>
+    <div class="visual">
+      <span><span class="k" data-i18n="f01_v1_k">pestañas</span> · <span class="v">●</span> default · <span class="v">○</span> scripts · <span class="v">○</span> research</span>
+      <span><span class="k" data-i18n="f01_v2_k">activa</span> <span class="v">←</span> <span data-i18n="f01_v2_t">resaltada en ámbar</span></span>
+      <span><span class="k">●</span> <span data-i18n="f01_v3_t">incluida en la búsqueda global</span></span>
+    </div>
+  </div>
+
+  <div class="feat w4">
+    <div class="num"><span data-i18n="f02_num">02 — ÁRBOLES</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f02_h">Árboles configurables.</h3>
+    <p data-i18n-html="f02_p">Defines manualmente las raíces que quieres ver. Sistema de archivos y <em>registro</em> lado a lado. Sin una barra lateral llena de elementos que nunca abres.</p>
+    <div class="feat-mark" data-i18n="f02_mark">Carpeta + Registro</div>
+  </div>
+
+  <div class="feat w6">
+    <div class="num"><span data-i18n="f03_num">03 — BÚSQUEDA</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f03_h">Búsqueda multipatrón con comodines en cualquier posición.</h3>
+    <p data-i18n-html="f03_p">Escribe <code style="font-family:var(--font-mono);background:var(--bg-2);padding:1px 6px;border-radius:2px;color:var(--accent);">*.cs *.json</code> y obtienes semántica O. <em>?</em>onfig.json, Test*Run.cs — todo funciona.</p>
+    <div class="feat-mark" data-i18n="f03_mark">Comodines · Regex interno</div>
+  </div>
+
+  <div class="feat w6">
+    <div class="num"><span data-i18n="f04_num">04 — BÚSQUEDA GLOBAL</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f04_h">Búsqueda entre perfiles, con inclusión explícita.</h3>
+    <p data-i18n="f04_p">Clic derecho en una pestaña → «Incluir en la búsqueda global». El indicador (●/○) muestra qué está incluido. Resultados en una ventana no modal.</p>
+    <div class="feat-mark" data-i18n="f04_mark">Opt-in · Resultados no modales</div>
+  </div>
+
+  <div class="feat hero-card w12">
+    <div class="pad">
+      <div class="num"><span data-i18n="f05_num">05 — VISTA PREVIA</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+      <h3 data-i18n="f05_h">Panel de vista previa rico. Cada tipo de archivo con su representación ideal.</h3>
+      <p data-i18n-html="f05_p">Texto con <em>resaltado de sintaxis</em> vía AvalonEdit, imágenes decodificadas en segundo plano, PDF renderizados por el motor Edge (WebView2), Markdown convertido a HTML con tema oscuro por Markdig. Activable individualmente. Cancela la carga anterior si cambias de selección.</p>
+    </div>
+    <div class="preview-demo">
+      <div class="src">
+        <div class="h" data-i18n="f05_src_h">SOURCE · MainViewModel.cs · C#</div>
+        <div><span class="lno" style="color:var(--fg-3);">1&nbsp;&nbsp;</span><span class="kw">namespace</span> ExplorerFocus.ViewModels;</div>
+        <div>&nbsp;</div>
+        <div><span class="cmt">/// &lt;summary&gt;Main view-model.&lt;/summary&gt;</span></div>
+        <div><span class="kw">public partial class</span> <span class="fn">MainViewModel</span></div>
+        <div>{</div>
+        <div>&nbsp;&nbsp;<span class="kw">private readonly</span> ProfileManager _profile;</div>
+        <div>&nbsp;&nbsp;<span class="kw">public</span> PreviewViewModel PreviewVM { <span class="kw">get</span>; }</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;&nbsp;<span class="kw">public</span> <span class="fn">MainViewModel</span>(ProfileManager p)</div>
+        <div>&nbsp;&nbsp;{</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;_profile = p;</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;PreviewVM = <span class="kw">new</span>(<span class="str">"appearance"</span>);</div>
+        <div>&nbsp;&nbsp;}</div>
+        <div>}</div>
+      </div>
+      <div class="rendered">
+        <div class="src h" style="margin-bottom:14px;" data-i18n="f05_md_h">MARKDOWN · README.md</div>
+        <h4>ExplorerFocus</h4>
+        <p data-i18n-html="f05_md_p">Un reemplazo centrado del Explorador de Windows. Construido en torno a carpetas configurables, <em>olvida todo</em> lo que no importa.</p>
+        <p><code>net10.0-windows</code> · <code>WPF</code> · single-file</p>
+        <p style="border-left: 3px solid var(--accent); padding: 4px 12px; background: var(--bg-2); margin-top: 12px;" data-i18n="f05_md_note">Nota — la vista previa funciona con Edge WebView2 instalado (viene con Windows 10/11).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="feat w6">
+    <div class="num"><span data-i18n="f06_num">06 — OPERACIONES DE ARCHIVO</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f06_h">Copiar, mover, eliminar — con información real.</h3>
+    <p data-i18n-html="f06_p">Una ventana flotante muestra un <em>medidor por archivo</em>, velocidad real, tiempo estimado, recuento global. Pausa, reanuda, cancela. Hasta 6 operaciones en paralelo. Sigue con lo tuyo mientras corre.</p>
+    <div class="feat-mark" data-i18n="f06_mark">Buffer 1 MB · UI 10 Hz · historial × 20</div>
+  </div>
+
+  <div class="feat w3">
+    <div class="num"><span data-i18n="f07_num">07 — CONFLICTOS</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f07_h">6 vías.</h3>
+    <p data-i18n="f07_p">Sobrescribir / Omitir / Duplicar, individualmente o en bloque para el resto de la operación.</p>
+  </div>
+
+  <div class="feat w3">
+    <div class="num"><span data-i18n="f08_num">08 — ARRASTRAR Y SOLTAR</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f08_h">Entre pestañas.</h3>
+    <p data-i18n="f08_p">Arrastra un archivo a una pestaña y la pestaña cambia sola tras 600 ms. Diálogo Copiar/Mover al soltar.</p>
+  </div>
+
+  <div class="feat w8">
+    <div class="num"><span data-i18n="f09_num">09 — APPS POR EXTENSIÓN</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f09_h">Detección automática de nuevas extensiones. Compartida entre perfiles.</h3>
+    <p data-i18n-html="f09_p">¿Entras en una carpeta con <em>.dwg</em>, <em>.psd</em>, <em>.bak</em>? Un diálogo agrupado pregunta una sola vez. Selector por fila (busca el .exe; el nombre se resuelve automáticamente por <em>FileVersionInfo</em>). Marca como ignoradas las que no te importan. La lista persiste.</p>
+    <div class="feat-mark" data-i18n="f09_mark">Silenciar por sesión · Alternar en Ajustes</div>
+  </div>
+
+  <div class="feat w4">
+    <div class="num"><span data-i18n="f10_num">10 — TERMINALES</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f10_h">CMD, PowerShell, Git Bash — aquí, ahora.</h3>
+    <p data-i18n-html="f10_p">En cualquier carpeta del árbol. Variantes normal y <em>elevada</em>. <em>regedit</em> en claves del registro.</p>
+  </div>
+
+  <div class="feat w4">
+    <div class="num"><span data-i18n="f11_num">11 — CREAR ARCHIVOS</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f11_h">Esqueletos con sentido.</h3>
+    <p data-i18n-html="f11_p"><em>.cs</em>, <em>.xaml</em>, <em>.json</em>, <em>.md</em>, <em>.cmd</em>, <em>.ps1</em> — empieza con la estructura típica. El nombre se resalta sin borrar la extensión mientras escribes.</p>
+  </div>
+
+  <div class="feat w4">
+    <div class="num"><span data-i18n="f12_num">12 — OSCURO TOTAL</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f12_h">Tema oscuro hasta el final.</h3>
+    <p data-i18n="f12_p">Barra de título, barras de desplazamiento, cuadrículas, diálogos, información sobre herramientas, vista previa de Markdown — todo en el mismo lenguaje visual. Sin blancos sueltos de lugares improbables.</p>
+  </div>
+
+  <div class="feat w4">
+    <div class="num"><span data-i18n="f13_num">13 — PERSISTENCIA</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f13_h">Lo recuerda todo.</h3>
+    <p data-i18n-html="f13_p">Geometría de la ventana principal y de la ventana de operaciones. Última pestaña activa. Ancho del panel del árbol. Orden de columnas. Estado del árbol. Todo en <em>%LOCALAPPDATA%\ExplorerFocus</em>.</p>
+  </div>
+
+  <div class="feat w4">
+    <div class="num"><span data-i18n="f14_num">14 — TOOLTIP RICO</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f14_h">Propiedades sin un clic.</h3>
+    <p data-i18n="f14_p">Un tooltip de 1,8 s sobre cualquier archivo muestra el tamaño calculado, fechas, atributos. Las carpetas llevan el tamaño recursivo — calculado de forma perezosa, con un semáforo para no machacar el disco.</p>
+  </div>
+
+  <div class="feat w4">
+    <div class="num"><span data-i18n="f15_num">15 — ORDENACIÓN</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f15_h">Las carpetas primero, siempre.</h3>
+    <p data-i18n="f15_p">Un comparador personalizado garantiza que los directorios queden arriba en cualquier orden, en cualquier columna, en cualquier sentido. Como debe ser.</p>
+  </div>
+
+  <div class="feat w6">
+    <div class="num"><span data-i18n="f16_num">16 — SELECCIÓN MÚLTIPLE</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f16_h">Selección inteligente.</h3>
+    <p data-i18n="f16_p">Un clic normal selecciona. Shift+clic extiende con la semántica «manda la mayoría» — si el rango ya está mayormente seleccionado, desmarca; si no, marca. Ctrl+clic alterna individualmente. Se acabó el «perdí toda la selección sin querer».</p>
+  </div>
+
+  <div class="feat w6">
+    <div class="num"><span data-i18n="f17_num">17 — DESPLIEGUE</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n-html="f17_h">Un solo <em>.exe</em>. Sin instalador.</h3>
+    <p data-i18n-html="f17_p">Autónomo, archivo único, comprimido y firmado digitalmente. Cópialo a un pendrive y corre en cualquier Windows 10/11. <em>net10.0-windows</em> + WPF — sin dependencias fuera de la carpeta del ejecutable.</p>
+  </div>
+
+  <!-- Cartão novo (2026-08-14). Entrou AQUI, no fim da zona grátis e a seguir
+       ao «single .exe», porque é da mesma família: qualidade de produto, não
+       funcionalidade. Para lhe abrir espaço, os antigos 18–28 passaram a 19–29
+       — chaves, âncoras e rótulos, tudo renumerado.
+       O «troca sem reiniciar» não é figura de estilo: o LocalizationService
+       levanta PropertyChanged em todas as strings, e cada {loc:T …} reavalia
+       na hora (está escrito no cabeçalho do próprio ficheiro). -->
+  <div class="feat w6" id="feat18">
+    <div class="num"><span data-i18n="f18_num">18 — 16 IDIOMAS</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n-html="f18_h">La app entera, en <em>dieciséis</em> idiomas.</h3>
+    <p data-i18n-html="f18_p">No son solo los menús — cada diálogo, cada mensaje, cada sugerencia. Se elige uno y la interfaz cambia <em>al instante</em>: nada que reiniciar, nada que reinstalar.</p>
+    <div class="feat-mark" data-i18n="f18_mark">PT · BR · EN · US · ES · FR · IT · DE · PL · RU · AR · HI · CN · TW · JA · KO</div>
+  </div>
+
+  <!-- A caixa "Caracteristicas do suporte": clicar num disco na arvore (ou em
+       "O meu armazenamento", onde estao todos) e ele diz o que e. Estava na app
+       ha muito e nao estava mencionada em lado nenhum -- nem no changelog.
+       FREE, confirmado por ele a 2026-08-16 — e bate certo com a regra da
+         propria pagina: tudo o que e local e gratis. -->
+  <div class="feat w6" id="feat19">
+    <div class="num"><span data-i18n="f19_num">19 — EL DISCO, AL DETALLE</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f19_h">Haz clic en un disco y dice exactamente qué es.</h3>
+    <p data-i18n-html="f19_p">Fabricante, modelo, firmware y número de serie. Platos o estado sólido — y lo dice, porque un disco de platos paga penalización de desplazamiento. Conexión, tamaño de sector, esquema de partición, el dispositivo de debajo. Lo que el sistema de archivos admite de verdad: cifrado EFS, compresión por archivo, enlaces duros, uniones y enlaces simbólicos, archivos dispersos, cuotas, permisos ACL, diario de cambios USN, distinción de mayúsculas. Y los <em>datos SMART</em>, cuando el disco los da.</p>
+    <div class="feat-mark" data-i18n="f19_mark">Fabricante · Modelo · Firmware · Serie · SMART · GPT/MBR · Tamaño de sector</div>
+  </div>
+  <!-- Cartoes 20 e 21, 2026-09-10. Entram AQUI, colados ao 19, porque sao
+       a mesma familia: a maquina vista de dentro do explorador. Os antigos
+       20..30 passaram a 22..32 -- renumerados por ordem DECRESCENTE, que e
+       a unica que nao faz dois cartoes com o mesmo numero.
+       ⛔ Os dois sao GRATIS, por decisao do Joao.
+       📌 O «A minha maquina» esteve deliberadamente SEM cartao desde 16/08
+          («e uma curiosidade»); o Joao reabriu essa decisao a 10/09, por a
+          pagina ter ficado «bastante poderosa e informativa». -->
+  <div class="feat w6" id="feat20">
+    <div class="num"><span data-i18n="f20_num">20 — MI MÁQUINA</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f20_h">Todo lo que la máquina sabe de sí misma — y nunca enseña.</h3>
+    <p data-i18n-html="f20_p">Identidad del firmware y números de serie, cuándo se fabricó la máquina, qué va soldado a la placa, la memoria <em>ranura a ranura</em>, y cómo se instaló Windows. <em>Solo lectura</em>: nunca sale a la red y nunca pide elevación.</p>
+    <div class="feat-mark" data-i18n="f20_mark">SMBIOS · Firmware · Memoria · Dispositivos · Instalación de Windows</div>
+  </div>
+
+  <div class="feat w6" id="feat21">
+    <div class="num"><span data-i18n="f21_num">21 — ADMINISTRADOR DE TAREAS</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f21_h">¿Qué programa está reteniendo este archivo?</h3>
+    <p data-i18n-html="f21_p">Windows dice que el archivo está abierto en algún sitio y nunca dice dónde. Este lo sabe, porque vive dentro del explorador. Y responde a tres preguntas más que el administrador del sistema no responde: qué se ejecuta desde tu carpeta de usuario, qué <em>no está firmado</em>, y qué versión es cada una de las dos copias del mismo programa. Terminar pregunta primero — con el nombre, el PID y el título de la ventana — y los que darían pantalla azul ni siquiera tienen botón.</p>
+    <div class="feat-mark" data-i18n="f21_mark">Quién lo retiene · AppData · Sin firmar · Versión</div>
+  </div>
+
+
+  <div class="feat w12">
+    <div class="num"><span data-i18n="f22_num">22 — ACCESO REMOTO</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f22_h">SFTP, FTP/FTPS y WebDAV — el explorador llega al servidor.</h3>
+    <p data-i18n-html="f22_p">Conéctate por SFTP, FTP/FTPS y WebDAV (Nextcloud, ownCloud, NAS, IIS). Navega, previsualiza, sube y descarga, crea carpetas, renombra y copia/mueve — con <em>progreso byte a byte</em> y cancelación. Edita archivos remotos en local y <em>sincroniza al guardar</em>. Autenticación por contraseña o <em>clave SSH</em>; secretos cifrados con DPAPI.</p>
+    <div class="feat-mark" data-i18n="f22_mark">SFTP · FTP/FTPS · WebDAV</div>
+    <p class="feat-note">
+      <span data-i18n="f22_free">Gratis: 1 conexión SFTP/FTP/FTPS — solo navegar y previsualizar. PREMIUM desbloquea WebDAV, varias conexiones y todas las operaciones.</span>
+    </p>
+  </div>
+
+  <div class="feat w12" id="feat23">
+    <div class="num"><span data-i18n="f23_num">23 — NUBES</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f23_h">Dropbox y OneDrive — tu nube dentro del explorador.</h3>
+    <p data-i18n-html="f23_p">Conéctate a <em>Dropbox</em> y <em>OneDrive</em> vía OAuth seguro — sin contraseñas almacenadas. Navega, previsualiza, sube y descarga, crea carpetas, renombra y copia/mueve, como una carpeta local. Tus archivos nunca pasan por nuestros servidores.</p>
+    <div class="feat-mark" data-i18n="f23_mark">Dropbox · OneDrive</div>
+    <p class="feat-note">
+      <span data-i18n="f23_premium">PREMIUM: necesario desde la primera conexión — navegar, previsualizar y todas las operaciones.</span>
+    </p>
+  </div>
+
+  <div class="feat w12" id="feat24">
+    <div class="num"><span data-i18n="f24_num">24 — LIBROS Y CÓMICS</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f24_h">Ocho formatos de libro — previsualiza y lee, sin salir del explorador.</h3>
+    <p data-i18n-html="f24_p">Vista previa instantánea de cualquier <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> o <em>.fb2</em>: portada, índice y el comienzo del texto. Abre el libro completo en su propio lector, con navegación por capítulos, salto de página, <em>desplazamiento automático</em> y tu posición de lectura recordada. También cómics: <em>.cbz</em> y <em>.cbr</em> se abren página a página, sin descomprimir cientos de megabytes primero.</p>
+    <div class="feat-mark" data-i18n="f24_mark">EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR</div>
+    <p class="feat-note">
+      <span data-i18n="f24_free">Gratis: vista previa — portada, índice y un primer vistazo al interior.</span><br>
+      <span data-i18n="f24_premium">PREMIUM: lector completo — navegación, salto de página, desplazamiento automático, paso de página y memoria de tus últimos 20 libros.</span>
+      <span class="feat-drm" data-i18n="f24_note">Los libros que son tuyos se abren. Los comprados con DRM siguen atados a la tienda que los vendió — la app explica por qué cuando encuentra uno.</span>
+    </p>
+  </div>
+
+  <div class="feat w12">
+    <div class="num"><span data-i18n="f25_num">25 — VISORES DE DOCUMENTOS</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f25_h">Word, Excel, PowerPoint y más — ver sin abrir nada.</h3>
+    <p data-i18n-html="f25_p">Previsualiza <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> y <em>OpenDocument</em> (texto, hoja y presentación) en el propio panel. El audio y el vídeo se reproducen en la vista previa, con una <em>ventana flotante</em> y controles de volumen/velocidad. Un marcador señala los archivos con vista previa; los archivos protegidos con contraseña se señalan sin pedir la contraseña.</p>
+    <div class="feat-mark" data-i18n="f25_mark">Word · Excel · PowerPoint · RTF · OpenDocument · Audio · Vídeo</div>
+  </div>
+
+  <div class="feat w12">
+    <div class="num"><span data-i18n="f26_num">26 — GRABAR AUDIO</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f26_h">Graba el micrófono directo en la carpeta.</h3>
+    <p data-i18n-html="f26_p">Un clic graba el <em>micrófono</em> en la carpeta actual. Elige el micrófono, mira el <em>medidor de nivel</em> en vivo, ajusta el volumen de grabación y guarda como <em>WAV</em> o <em>M4A/AAC</em>.</p>
+    <div class="feat-mark" data-i18n="f26_mark">Micrófono · Medidor de nivel · WAV · M4A</div>
+  </div>
+
+  <div class="feat w12">
+    <div class="num"><span data-i18n="f27_num">27 — GRABAR VÍDEO</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f27_h">Graba la cámara directo en la carpeta.</h3>
+    <p data-i18n-html="f27_p">Vista previa de <em>cámara</em> en vivo, con elección de cámara y micrófono, resolución y formato — <em>MP4</em>, <em>WMV</em> o <em>AVI</em>. Guarda en la carpeta actual con un clic.</p>
+    <div class="feat-mark" data-i18n="f27_mark">Cámara · Micrófono · MP4 · WMV · AVI</div>
+    <p class="feat-note">
+      <span data-i18n="f27_premium">Gratis con una discreta marca de agua en el pie. PREMIUM: sin marca de agua.</span>
+    </p>
+  </div>
+
+  <div class="feat w12">
+    <div class="num"><span data-i18n="f28_num">28 — ESCANEAR</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f28_h">Del escáner a la carpeta — imagen o PDF.</h3>
+    <p data-i18n-html="f28_p">Escanea desde el <em>cristal</em> o el <em>alimentador (ADF)</em>, muchas hojas de una vez. Elige la resolución y el color — <em>color</em>, escala de grises o <em>blanco &amp; negro</em>. Guarda como <em>JPEG/PNG</em> o fusiona todo en un <em>PDF multipágina</em>, y sigue añadiendo hojas al mismo PDF.</p>
+    <div class="feat-mark" data-i18n="f28_mark">Cristal · Alimentador (ADF) · Color · PDF multipágina</div>
+    <p class="feat-note">
+      <span data-i18n="f28_premium">Gratis: 1 página en plano, con marca de agua. PREMIUM: varias páginas, alimentador (ADF) y sin marca de agua.</span>
+    </p>
+  </div>
+
+  <div class="feat w12">
+    <div class="num"><span data-i18n="f29_num">29 — ARCHIVOS COMO CARPETAS</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f29_h">Abre ZIP, RAR, 7z y TAR como carpetas.</h3>
+    <p data-i18n-html="f29_p">Doble clic (o <em>Explorar dentro</em>) para entrar en el archivo comprimido — navega el contenido, <em>previsualiza</em> y <em>copia archivos hacia fuera</em> sin extraerlo todo. Solo lectura; <em>Abrir con…</em> sigue abriéndolos en WinRAR/WinZip/7-Zip.</p>
+    <div class="feat-mark" data-i18n="f29_mark">ZIP · RAR · 7z · TAR · Copiar hacia fuera</div>
+  </div>
+
+  <div class="feat w12" id="feat30">
+    <div class="num"><span data-i18n="f30_num">30 — GRABAR PANTALLA</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f30_h">Graba la pantalla directo en la carpeta — con cámara opcional.</h3>
+    <p data-i18n-html="f30_p">Elige una <em>región de cualquier monitor</em> (o toda la pantalla) y graba en <em>MP4</em> con el <em>micrófono</em>. Añade la <em>cámara</em> : alterna pantalla⇄cámara con <em>transiciones</em> (fundido, barrido, deslizamiento, mosaico), muéstrala como <em>PiP</em> en una esquina, o lado a lado en <em>pantalla dividida</em>.</p>
+    <div class="feat-mark" data-i18n="f30_mark">Región · Micrófono · Sonido del sistema · Cámara · PiP · Pantalla dividida · Transiciones · MP4</div>
+    <p class="feat-note">
+      <span data-i18n="f30_premium">Gratis: marca de agua + 15 s y sin sonido. PREMIUM: sin marca de agua, sin límite de tiempo y con sonido (micrófono + sistema).</span>
+    </p>
+  </div>
+
+  <div class="feat w12" id="feat31">
+    <div class="num"><span data-i18n="f31_num">31 — TARJETAS DE MARCA</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f31_h">Tarjetas de intro y cierre para tus vídeos — en la propia grabación.</h3>
+    <p data-i18n-html="f31_p">Dale a tus grabaciones (pantalla y cámara) una <em>tarjeta de intro</em>, un <em>banner de texto</em> permanente y una <em>tarjeta de cierre</em> estilo créditos (hasta 10 líneas). <em>5 modelos independientes</em>, cada uno con 3 presentaciones, logo, color de fondo y una <em>insignia de episodio</em> — pensado para una serie de vídeos coherente.</p>
+    <div class="feat-mark" data-i18n="f31_mark">Intro · Banner · Cierre (créditos) · 5 modelos · Logo · Insignia de episodio</div>
+    <p class="feat-note">
+      <span data-i18n="f31_premium">PREMIUM. Discreta firma «Made with ExplorerFocus» en la tarjeta de cierre.</span>
+    </p>
+  </div>
+
+  <div class="feat w12" id="feat32">
+    <div class="num"><span data-i18n="f32_num">32 — VOZ EN OFF</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f32_h">Narra tus vídeos tras grabarlos — incluso a solas.</h3>
+    <p data-i18n-html="f32_p">Graba la pantalla <em>en silencio</em> y luego, en una <em>caja dedicada</em>, reproduce el vídeo mientras <em>narras encima</em>. La narración cae en un archivo separado; añade <em>música de fondo</em>, equilibra los volúmenes (para que la música no tape la voz) y <em>genera el vídeo final</em> con las tres fuentes.</p>
+    <div class="feat-mark" data-i18n="f32_mark">Grabar en silencio · Narrar sobre el vídeo · Música · Volúmenes · Vídeo + narración + música → final</div>
+    <p class="feat-note">
+      <span data-i18n="f32_premium">PREMIUM. El vídeo y la narración quedan como archivos separados; solo «Generar final» crea el vídeo mezclado.</span>
+    </p>
+  </div>
+
+</section>
+
+<!-- SHORTCUTS -->
+<section class="shortcuts" id="shortcuts">
+  <div class="shortcuts-inner">
+    <div class="shortcuts-side">
+      <div class="section-num" data-i18n="sc_num">§ 02 · Atajos</div>
+      <h2 data-i18n-html="sc_title">Las manos en<br>la <em>fila central</em>.</h2>
+      <p data-i18n="sc_blurb">Cada operación importante tiene un atajo. Sin ratón siempre que se pueda — comodidad para sesiones largas.</p>
+    </div>
+
+    <div class="kbd-list">
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">F2</span></div>
+        <div class="desc" data-i18n-html="sc_f2">Renombrar el elemento enfocado <em>— archivo, carpeta o pestaña</em></div>
+      </div>
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">Enter</span></div>
+        <div class="desc" data-i18n="sc_enter">Abrir el archivo con la app asociada</div>
+      </div>
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">Delete</span></div>
+        <div class="desc" data-i18n-html="sc_del">Enviar a la Papelera <em>— vía FileOperationsManager</em></div>
+      </div>
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">F5</span></div>
+        <div class="desc" data-i18n="sc_f5">Actualizar la lista de la carpeta actual</div>
+      </div>
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">F</span><span class="kbd">/</span><span class="kbd">Ctrl</span><span class="kbd">L</span></div>
+        <div class="desc" data-i18n="sc_find">Enfocar el cuadro de búsqueda local</div>
+      </div>
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">T</span></div>
+        <div class="desc" data-i18n="sc_newtab">Nuevo perfil (nueva pestaña)</div>
+      </div>
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">W</span></div>
+        <div class="desc" data-i18n="sc_closetab">Cerrar la pestaña actual</div>
+      </div>
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">Tab</span></div>
+        <div class="desc" data-i18n-html="sc_nexttab">Pestaña siguiente <em>— Shift invierte</em></div>
+      </div>
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">1</span> ... <span class="kbd">9</span></div>
+        <div class="desc" data-i18n="sc_jumptab">Saltar a la pestaña N</div>
+      </div>
+      <div class="kbd-row">
+        <div class="keys"><span class="kbd">Shift</span>+drag</div>
+        <div class="desc" data-i18n-html="sc_shiftdrag">Forzar <em>Mover</em> sin preguntar</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section class="stack" id="stack">
+  <div class="section-num" data-i18n="st_num">§ 03 · Stack</div>
+  <h2 data-i18n-html="st_title">Construido con <em>piezas serias</em>.</h2>
+  <p data-i18n="st_blurb">Cada dependencia se eligió por madurez, tamaño o la ausencia de alternativas razonables. Sin framework de moda.</p>
+  <p class="stack-licences" data-i18n-html="st_licences">La <strong>lista completa viaja dentro del programa</strong>, con cada autor y los textos íntegros de las licencias — en <em>Acerca de → Licencias de terceros</em>.</p>
+
+
+  <div class="stack-grid">
+    <div class="stack-cell">
+      <div class="ic">.NET</div>
+      <h4>net10.0-windows</h4>
+      <p data-i18n="st_dotnet">WPF clásico, sin WinUI ni MAUI. Compatible con Windows 10 y 11.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic">MVVM</div>
+      <h4>CommunityToolkit.Mvvm</h4>
+      <p data-i18n="st_mvvm">ObservableObject, ObservableProperty, RelayCommand — generados por source generators.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_preview_ic">VISTA PREVIA</div>
+      <h4>AvalonEdit · Markdig · WebView2</h4>
+      <p data-i18n="st_preview">Resaltado de sintaxis, renderizador de markdown y motor Edge embebido para PDF.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic">UTIL</div>
+      <h4>Microsoft.VisualBasic.FileIO</h4>
+      <p data-i18n-html="st_util">Para enviar a la <em>Papelera</em> — la única forma honesta, y funciona.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_remote_ic">REMOTO</div>
+      <h4>SSH.NET · FluentFTP</h4>
+      <p data-i18n="st_remote">SFTP mediante SSH.NET; FTP y FTPS mediante FluentFTP. Maduros, y aburridos en el buen sentido.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_nosdk_ic">SIN SDK</div>
+      <h4>HttpClient</h4>
+      <p data-i18n="st_nosdk">WebDAV, Dropbox y OneDrive están escritos a mano contra sus APIs HTTP. Sin SDK del proveedor que envejezca mal.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_capture_ic">CAPTURA</div>
+      <h4>NAudio · NTwain</h4>
+      <p data-i18n="st_capture">Micrófono y sonido del sistema con NAudio y WASAPI; el escáner con NTwain, el estándar TWAIN.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_archives_ic">ARCHIVOS</div>
+      <h4>SharpCompress</h4>
+      <p data-i18n="st_archives">ZIP, RAR, 7z y TAR leídos en el sitio, para que un archivo se abra como una carpeta.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PREMIUM -->
+<section class="premium" id="premium">
+  <div class="section-num" data-i18n="pr_num">§ 04 · Gratis y Premium</div>
+  <h2 data-i18n-html="pr_title">Todo lo local es <em>gratis</em>.</h2>
+  <p class="prem-blurb" data-i18n="pr_blurb">Siempre lo ha sido y lo seguirá siendo: sin suscripción, sin cuenta, sin anuncios. Premium es una donación única — una pequeña recompensa por las noches y los días dedicados a implementar funciones muy específicas y técnicamente exigentes. No estoy en esto por el dinero: estoy por las ideas que aparecen por el camino. La mayoría de la gente nunca echará de menos Premium — y así debe ser.</p>
+
+  <div class="prem-grid">
+    <div class="prem-card" id="free">
+      <h4 data-i18n="pr_free_h">Gratis</h4>
+      <span class="prem-tag" data-i18n="pr_free_tag">para siempre · sin cuenta</span>
+      <ul data-i18n-html="pr_free_list"><li>Perfiles, árboles configurables, búsqueda multipatrón</li><li>Vista previa: código, PDF, Word/Excel, Markdown, imágenes, libros</li><li>Operaciones con progreso real, velocidad, ETA, historial y conflictos</li><li>Terminales, asociaciones por extensión, archivos comprimidos como carpetas</li><li>Tema oscuro completo, 16 idiomas, actualizaciones automáticas</li><li>Grabación de audio (micrófono)</li><li><strong>1 conexión remota</strong> (SFTP/FTP/FTPS) — navegar y previsualizar</li></ul>
+    </div>
+
+    <div class="prem-card is-prem">
+      <h4 data-i18n="pr_prem_h">Premium</h4>
+      <span class="prem-tag" data-i18n="pr_prem_tag">donación única de 19,99 € · por máquina</span>
+      <ul data-i18n-html="pr_prem_list"><li><strong>Acceso remoto completo</strong>: varias conexiones, todas las operaciones, WebDAV, Dropbox, OneDrive</li><li>Grabación de pantalla <strong>sin marca de agua, sin límite de tiempo y con sonido</strong></li><li>Grabación de vídeo sin marca de agua</li><li>Audio con mezcla de micrófono + sonido del sistema</li><li>Escaneo multipágina con alimentador (ADF)</li><li>Lector de libros completo — EPUB, formatos Kindle, FB2 y cómics</li><li>Tarjetas de inicio/fin y banda de texto en las grabaciones</li></ul>
+
+      <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
+           no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo
+           das duas colunas, e não se percebia a que lado pertencia. -->
+      <div class="prem-how">
+        <h4 data-i18n="pr_how_h">Cómo conseguirlo</h4>
+        <ol data-i18n-html="pr_how_list"><li>En la app, pulsar el botón <strong>PREMIUM</strong> (arriba a la derecha).</li><li>Escribir el correo — la app copia el <strong>Machine ID</strong> al portapapeles.</li><li>Se abre PayPal: donación mínima de 19,99 €.</li><li>En cuanto PayPal confirme el donativo, envío la <strong>clave de activación por correo</strong>.</li><li>Pegar la clave en la app. La licencia queda ligada a esa máquina.</li></ol>
+        <p class="prem-note" data-i18n-html="pr_note"><strong>Nota:</strong> la clave la envío a mano, yo mismo — así que puede no ser inmediata. PayPal aparece a nombre de <strong>LogViewer</strong>, el otro proyecto de la misma casa (PayPal solo permite un destino por cuenta); la página confirma que soy el autor de ambos.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="prem-idea" data-i18n-html="pr_idea"><strong>¿Tienes una buena idea?</strong> Si tu sugerencia mejora ExplorerFocus, te doy acceso Premium completo. Escribe a <a href="mailto:NunexmBrothers@gmail.com">NunexmBrothers@gmail.com</a>.</p>
+</section>
+
+<!-- FOOTER -->
+<footer id="download">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <svg class="brand-mark"><use href="#logo"/></svg>
+        <span class="brand-name">Explorer<em>Focus</em></span>
+      </div>
+      <p class="footer-tagline" data-i18n="ft_tagline">El explorador mínimo para quienes trabajan siempre en los mismos sitios — y quieren que la herramienta lo sepa.</p>
+    </div>
+
+    <div class="footer-col">
+      <h5 data-i18n="ft_get">Descargar</h5>
+      <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.exe"><span data-i18n="ft_ch_standalone">Autónomo (.exe)</span></a>
+      <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip" title="Para organizações que bloqueiam o download de .exe"><span data-i18n="ft_ch_portable">Autónomo (.zip)</span></a>
+      <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases" target="_blank" rel="noopener" data-i18n="ft_releases">Versiones</a>
+    </div>
+
+    <div class="footer-col">
+      <h5 data-i18n="ft_project">Proyecto</h5>
+      <a href="#features" data-i18n="nav_features">Funciones</a>
+      <a href="#shortcuts" data-i18n="nav_shortcuts">Atajos</a>
+      <a href="#stack" data-i18n="nav_stack">Stack</a>
+      <a href="#premium" data-i18n="nav_premium">Premium</a>
+      <a href="../dropbox-flow.html" data-i18n="nav_guide">Cómo funciona</a>
+      <a href="../privacy.html" data-i18n="nav_privacy">Privacidad</a>
+    </div>
+  </div>
+
+  <div class="footer-baseline">
+    <span>© 2026 <span class="brand-mb">mBrothers</span> · v1.2.26 · WPF · net10.0-windows · single-file</span>
+    <span data-i18n="ft_baseline">diseñado para el día a día</span>
+    <span id="viewCounter" hidden title="Visitas à página"></span>
+  </div>
+
+  <!-- Os 16 idiomas da APP, pela ordem da barra de bandeiras dela. Vive no
+       rodapé porque é informação de referência: só interessa a quem procura o
+       seu. Em texto, e não só no JSON-LD, para ser indexável e para se poder
+       procurar na página com Ctrl+F.
+       ⚠ NÃO confundir com as 6 línguas do SITE (o seletor lá em cima). -->
+  <div class="footer-langs">
+    <span data-i18n="ft_langs_h">Interfaz de la app</span>
+    <span class="footer-langs-list">PT · BR · EN · US · ES · FR · IT · DE · PL · RU · AR · HI · CN · TW · JA · KO</span>
+  </div>
+
+  <div class="mb-credit" data-i18n-html="mb_credit">Un producto <a href="https://nunex-mbrothers.github.io/mBrothers/" target="_blank" rel="noopener">mBrothers</a><span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
+</footer>
+
+<div class="ef-modal" id="verifyModal" role="dialog" aria-modal="true" aria-labelledby="verifyModalTitle">
+  <div class="ef-card">
+    <button class="ef-card-x" id="verifyClose" type="button" aria-label="Fechar">✕</button>
+
+    <div class="ef-card-hd">
+      <span class="ef-card-hd-ic" aria-hidden="true">🛡️</span>
+      <div>
+        <p class="ef-card-hd-t" id="verifyModalTitle" data-i18n="card_title">¿Un aviso de Windows? Mira qué versión tienes.</p>
+        <p class="ef-card-hd-p" data-i18n-html="card_intro">ExplorerFocus está firmado digitalmente desde la versión <strong>1.2.23</strong> (18 de agosto de 2026). Como la firma es reciente, Windows aún puede pedirte confirmación al abrir: tarda un tiempo en reconocer a un editor nuevo, y no es un problema del archivo. En cambio, una copia <strong>anterior</strong> a la 1.2.23 no está firmada y puede dejar de abrirse — en ese caso no esperes a la actualización automática, que vive dentro de la app y tampoco llega a ejecutarse. Descárgalo de nuevo en esta página.</p>
+      </div>
+    </div>
+
+    <div class="ef-sec">
+      <p class="ef-sec-h" data-i18n="card_open_h">Abrir el programa</p>
+      <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_open_1">En el aviso <em>«Windows protegió su PC»</em>, haz clic en <strong>Más información</strong>.</span></div>
+      <div class="ef-step"><span class="ef-num">2</span><span data-i18n-html="card_open_2">Haz clic en <strong>Ejecutar de todas formas</strong>.</span></div>
+    </div>
+
+    <div class="ef-sec ef-sec-top">
+      <p class="ef-sec-h" data-i18n="card_pin_h">¿Lo anclaste a la barra de tareas y no se abre?</p>
+      <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_pin_1">Clic derecho en <code>ExplorerFocus.exe</code> → <strong>Propiedades</strong>.</span></div>
+      <div class="ef-step"><span class="ef-num">2</span><span data-i18n-html="card_pin_2">Marca <strong>Desbloquear</strong> (abajo) → <strong>Aceptar</strong>, y ánclalo de nuevo.</span></div>
+    </div>
+
+    <div class="ef-sec ef-sec-top">
+      <p class="ef-sec-h"><span data-i18n="card_verify_h">Verificar el archivo</span> <span class="ef-opt" data-i18n="card_verify_opt">— opcional</span></p>
+      <p class="ef-sec-sub" data-i18n-html="card_verify_intro">Solo si quieres estar totalmente seguro de haber descargado el archivo oficial, sin alterar. Elige <strong>uno</strong> de los dos métodos.</p>
+
+      <div class="ef-find" data-i18n-html="card_find">Primero, encuentra el archivo: abre el <strong>Explorador de archivos</strong> de Windows (la carpeta amarilla en la barra de tareas, o <span class="efkbd">⊞ Win</span> + <span class="efkbd">E</span>) y haz clic en <strong>Descargas</strong> a la izquierda — ahí es donde aterriza <code>ExplorerFocus.exe</code> al descargarlo. Hazlo en el Explorador de archivos, <strong>no en el navegador</strong>.</div>
+
+      <div class="ef-method">
+        <p class="ef-method-h" data-i18n="card_mA_h">Método A — PowerShell</p>
+        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mA_1">En la ventana del Explorador en <strong>Descargas</strong>, mantén <span class="efkbd">Shift</span> y haz clic derecho en un área vacía → <strong>Abrir la ventana de PowerShell aquí</strong>.</span> and right-click an empty area → <strong>Open PowerShell window here</strong>.</span></div>
+        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Pega este comando y pulsa Enter:</span></div>
+        <div class="ef-cmd"><code>Get-FileHash .\ExplorerFocus.exe</code><button class="ef-copy" type="button" data-copy="Get-FileHash .\ExplorerFocus.exe" aria-label="Copiar comando">⧉</button></div>
+        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mA_3">Compara el valor SHA256 mostrado con el de abajo.</span></div>
+      </div>
+
+      <div class="ef-method">
+        <p class="ef-method-h" data-i18n="card_mB_h">Método B — Línea de comandos (cmd)</p>
+        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mB_1">En la ventana del Explorador en <strong>Descargas</strong>, haz clic en la <strong>barra de direcciones</strong> (arriba, donde aparece la ruta de la carpeta), escribe <code>cmd</code> y pulsa <strong>Enter</strong>.</span></div>
+        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Pega este comando y pulsa Enter:</span></div>
+        <div class="ef-cmd"><code>certutil -hashfile ExplorerFocus.exe SHA256</code><button class="ef-copy" type="button" data-copy="certutil -hashfile ExplorerFocus.exe SHA256" aria-label="Copiar comando">⧉</button></div>
+        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mB_3">Compara la línea del hash con la de abajo.</span></div>
+      </div>
+
+      <div class="ef-hashbox">
+        <p class="ef-hashbox-note"><span data-i18n-html="card_hash_note">Debe coincidir con este valor <span class="efmuted">(mayúsculas/minúsculas no importan)</span>:</span>:</span> <span class="ef-hashbox-ver js-ver"></span></p>
+        <p class="ef-hashbox-val js-sha">—</p>
+        <p class="ef-hashbox-ok"><span aria-hidden="true">✓</span> <span data-i18n="card_hash_ok">¿Coincide? Es el archivo oficial, sin alterar.</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ef-modal" id="shaModal" role="dialog" aria-modal="true" aria-labelledby="shaModalTitle">
+  <div class="ef-card">
+    <button class="ef-card-x" type="button" aria-label="Fechar">✕</button>
+    <p class="ef-sha-title" id="shaModalTitle" data-i18n="sha_title">¿Qué es el SHA-256?</p>
+    <p class="ef-prose" data-i18n-html="sha_p1">Piénsalo como la <strong>huella</strong> del archivo. Un algoritmo lee cada byte de <code>ExplorerFocus.exe</code> y los reduce a un código de <strong>64 caracteres</strong> (letras A–F y dígitos). Ese código es el SHA-256.</p>
+    <p class="ef-prose" data-i18n-html="sha_p2">Tiene dos propiedades que lo hacen útil:</p>
+    <ul class="ef-list">
+      <li data-i18n-html="sha_li1">El <strong>mismo archivo</strong> produce siempre el <strong>mismo</strong> código.</li>
+      <li data-i18n-html="sha_li2">Si cambia <strong>un solo bit</strong> — una descarga corrupta, o alguien manipulando el archivo — el código sale <strong>completamente distinto</strong>.</li>
+    </ul>
+    <p class="ef-prose" data-i18n-html="sha_p3">Así que verificar es sencillo: si el código que <strong>calculas</strong> sobre tu archivo <strong>coincide</strong> con el <strong>publicado aquí</strong>, puedes estar seguro de que es exactamente el archivo oficial, byte a byte — sin corrupción ni cambios. El código no se puede revertir: solo sirve para comparar y nunca revela el contenido.</p>
+
+    <div class="ef-sec ef-sec-top">
+      <p class="ef-sec-h" data-i18n="sha_how_h">Cómo confirmarlo</p>
+
+      <div class="ef-find" data-i18n-html="card_find">Primero, encuentra el archivo: abre el <strong>Explorador de archivos</strong> de Windows (la carpeta amarilla en la barra de tareas, o <span class="efkbd">⊞ Win</span> + <span class="efkbd">E</span>) y haz clic en <strong>Descargas</strong> a la izquierda — ahí es donde aterriza <code>ExplorerFocus.exe</code> al descargarlo. Hazlo en el Explorador de archivos, <strong>no en el navegador</strong>.</div>
+
+      <div class="ef-method">
+        <p class="ef-method-h" data-i18n="card_mA_h">Método A — PowerShell</p>
+        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mA_1">En la ventana del Explorador en <strong>Descargas</strong>, mantén <span class="efkbd">Shift</span> y haz clic derecho en un área vacía → <strong>Abrir la ventana de PowerShell aquí</strong>.</span> and right-click an empty area → <strong>Open PowerShell window here</strong>.</span></div>
+        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Pega este comando y pulsa Enter:</span></div>
+        <div class="ef-cmd"><code>Get-FileHash .\ExplorerFocus.exe</code><button class="ef-copy" type="button" data-copy="Get-FileHash .\ExplorerFocus.exe" aria-label="Copiar comando">⧉</button></div>
+        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mA_3">Compara el valor SHA256 mostrado con el de abajo.</span></div>
+      </div>
+
+      <div class="ef-method">
+        <p class="ef-method-h" data-i18n="card_mB_h">Método B — Línea de comandos (cmd)</p>
+        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mB_1">En la ventana del Explorador en <strong>Descargas</strong>, haz clic en la <strong>barra de direcciones</strong> (arriba, donde aparece la ruta de la carpeta), escribe <code>cmd</code> y pulsa <strong>Enter</strong>.</span></div>
+        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Pega este comando y pulsa Enter:</span></div>
+        <div class="ef-cmd"><code>certutil -hashfile ExplorerFocus.exe SHA256</code><button class="ef-copy" type="button" data-copy="certutil -hashfile ExplorerFocus.exe SHA256" aria-label="Copiar comando">⧉</button></div>
+        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mB_3">Compara la línea del hash con la de abajo.</span></div>
+      </div>
+
+      <div class="ef-hashbox">
+        <p class="ef-hashbox-note"><span data-i18n-html="card_hash_note">Debe coincidir con este valor <span class="efmuted">(mayúsculas/minúsculas no importan)</span>:</span>:</span> <span class="ef-hashbox-ver js-ver"></span></p>
+        <p class="ef-hashbox-val js-sha">—</p>
+        <p class="ef-hashbox-ok"><span aria-hidden="true">✓</span> <span data-i18n="card_hash_ok">¿Coincide? Es el archivo oficial, sin alterar.</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* ============================================================
+     As palavras PREMIUM e a do gratis, nas notas dos cartoes
+     ============================================================
+     Marcam-se aqui e nao nas traducoes porque obrigaria a marcar a mao 5 notas
+     x 15 idiomas. "PREMIUM" e igual em todas; a palavra do gratis nao e, e por
+     isso vem do dicionario -- o gerador injecta-a em `window.EF_FREE` com o
+     valor da lingua DESTA pagina.
+     ⚠ So se marca quando ABRE a frase: a meio seria texto corrido e marca-la
+       faria confusao.
+     ⛔ Era aqui que a mudanca para as paginas por idioma podia falhar em
+        silencio: com o i18n do lado do cliente fora, um `dict` inexistente
+        fazia isto cair no literal "Free" e as 5 notas das outras 14 linguas
+        perdiam o link sem a pagina dar um unico sinal. */
+  function highlightTiers() {
+    const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const free = window.EF_FREE || 'Free';
+    document.querySelectorAll('.feat-note span').forEach(el => {
+      const t = el.textContent;
+      const abreComGratis = t.indexOf(free) === 0;
+      if (!t.includes('PREMIUM') && !abreComGratis) return;
+      let out = esc(t).replace(/PREMIUM/g, '<a class="prem-word" href="#premium">PREMIUM</a>');
+      if (abreComGratis) {
+        const f = esc(free);
+        out = '<a class="free-word" href="#free">' + f + '</a>' + out.slice(f.length);
+      }
+      el.innerHTML = out;
+    });
+  }
+  highlightTiers();
+
+  /* ============================================================
+     O menu das linguas
+     ============================================================
+     Cada lingua e um ENDERECO, nao um botao: o texto vem ja traduzido no HTML
+     e a troca e uma navegacao. Aqui so falta fechar o <details> ao clicar fora
+     ou com Escape, que o elemento nao faz sozinho. */
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('details.lang-picker[open]').forEach(d => {
+      if (!d.contains(e.target)) d.open = false;
+    });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    document.querySelectorAll('details.lang-picker[open]').forEach(d => { d.open = false; });
+  });
+
+  /* ============================================================
+     Versão mais recente (até à revision) — lida do version.json
+     publicado no GitHub Pages. Só aparece se o ficheiro existir.
+  ============================================================ */
+  /* Fallback só para pré-visualização local (file://, sem version.json).
+     ⛔ E SÓ para isso, desde 2026-09-12. Antes aplicava-se sempre que o fetch
+        falhasse, e isso passou a ser perigoso quando o site ganhou uma pasta
+        por idioma: em /pt/ o `fetch('version.json')` ia buscar
+        /pt/version.json, dava 404, e a página anunciava a versão 1.2.1 com um
+        SHA-256 velho. Um SHA-256 que não bate com o ficheiro é o pior caso
+        que há: quem o verificasse pensava que lhe tinham adulterado a
+        descarga. No site publicado, se o version.json falhar, a caixa fica
+        ESCONDIDA — melhor calado do que errado. */
+  var VERIFY_FALLBACK = { version: '1.2.1', sha256: '531D24D52F429E46EE5918051B43F2A9318E6EDC2F2792F18F3331BCB82A9DBB' };
+  var EM_PRODUCAO = location.protocol.indexOf('http') === 0 &&
+                    location.hostname.indexOf('github.io') >= 0;
+  function verifyFallback() {
+    if (EM_PRODUCAO) return;
+    fillVerify(VERIFY_FALLBACK.sha256, VERIFY_FALLBACK.version);
+  }
+  function fillVerify(sha, ver) {
+    sha = (sha || '').toUpperCase();
+    document.querySelectorAll('.js-sha').forEach(function (el) { el.textContent = sha; });
+    if (ver) document.querySelectorAll('.js-ver').forEach(function (el) { el.textContent = 'v' + ver; });
+    var hv = document.getElementById('heroVerify'); if (hv && sha) hv.hidden = false;
+  }
+  /* ⛔ `version.json` vive na RAIZ do site, e esta página também corre de
+     /pt/, /de/, /zh/… Um `fetch('version.json')` resolve contra a PASTA da
+     página e ia buscar /pt/version.json — 404. O `window.EF_ROOT` é injectado
+     pelo gerador: '' na raiz, '../' nas pastas por idioma. Serve no site
+     publicado e na pré-visualização local, ao contrário de um URL absoluto.
+     ⚠ O `prefixar()` do gerador arruma os `src`/`href` do HTML e NÃO vê o que
+       está dentro do JavaScript — foi por isso que isto passou. */
+  fetch((window.EF_ROOT || '') + 'version.json', { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (v) {
+      if (v && v.version) {
+        var box = document.getElementById('heroLatest');
+        var ver = document.getElementById('heroVersion');
+        var rel = document.getElementById('heroReleased');
+        if (ver) ver.textContent = 'v' + v.version;
+        if (rel && v.released) rel.textContent = '  ·  ' + v.released;
+        if (box) box.hidden = false;
+      }
+      if (v && v.sha256) fillVerify(v.sha256, v.version);
+      else verifyFallback();
+    })
+    .catch(function () { verifyFallback(); });
+
+  /* ============================================================
+     Card "primeira vez a abrir" — abrir/fechar + copiar comandos/SHA
+  ============================================================ */
+  (function () {
+    function show(m) { m.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function hide(m) { m.classList.remove('open'); document.body.style.overflow = ''; }
+    document.querySelectorAll('[data-modal]').forEach(function (op) {
+      op.addEventListener('click', function (e) {
+        e.preventDefault();
+        var m = document.getElementById(op.getAttribute('data-modal'));
+        if (m) show(m);
+      });
+    });
+    document.querySelectorAll('.ef-modal').forEach(function (m) {
+      m.addEventListener('click', function (e) { if (e.target === m) hide(m); });
+      var x = m.querySelector('.ef-card-x');
+      if (x) x.addEventListener('click', function () { hide(m); });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') document.querySelectorAll('.ef-modal.open').forEach(hide);
+    });
+
+    document.querySelectorAll('.ef-copy, .hero-sha-copy').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var t = b.getAttribute('data-copy');
+        if (!t) { var hs = document.getElementById('heroSha'); t = hs ? hs.textContent : ''; }
+        try { if (navigator.clipboard) navigator.clipboard.writeText(t); } catch (e) {}
+        var o = b.textContent; b.textContent = '✓'; setTimeout(function () { b.textContent = o; }, 1200);
+      });
+    });
+  })();
+
+  /* ============================================================
+     Contador de visitas à página — GoatCounter (privacy-friendly:
+     sem cookies, sem dados pessoais). Lê o total público e mostra-o
+     no rodapé. Falha em silêncio (fica escondido se indisponível).
+     Requer "Allow public access to counts" ativado no GoatCounter.
+  ============================================================ */
+  fetch('https://nunex.goatcounter.com/counter/TOTAL.json')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (!d || d.count == null) return;
+      var el = document.getElementById('viewCounter');
+      if (el) { el.textContent = '👁 ' + d.count; el.hidden = false; }
+    })
+    .catch(function () { /* indisponível — contador fica escondido */ });
+
+  /* ============================================================
+     Contadores de download SEPARADOS (GoatCounter events, cookieless):
+       .exe → /explorerfocus/download/exe    ·    .zip → /explorerfocus/download/zip
+     Só aparecem na estatística; não são mostrados no site.
+  ============================================================ */
+  document.querySelectorAll('a[href$="ExplorerFocus.exe"], a[href$="ExplorerFocus.zip"]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      if (!window.goatcounter || !window.goatcounter.count) return;
+      var isZip = /\.zip$/i.test(a.getAttribute('href') || '');
+      window.goatcounter.count({
+        path:  isZip ? '/explorerfocus/download/zip' : '/explorerfocus/download/exe',
+        title: isZip ? 'Download ZIP'  : 'Download EXE',
+        event: true
+      });
+    });
+  });
+
+  /* ============================================================
+     Stagger fade-in for feature cards (kept from original)
+  ============================================================ */
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in-view'), i * 40);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.feat').forEach(el => obs.observe(el));
+
+  /* ============================================================
+     Novidades: salto suave até ao card + destaque breve (flash)
+  ============================================================ */
+  document.querySelectorAll('.whatsnew-pills a').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var href = a.getAttribute('href') || '';
+      if (href.charAt(0) !== '#') return;
+      var el = document.querySelector(href);
+      if (!el) return;
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      el.classList.remove('flash');
+      void el.offsetWidth;            // reinicia a animação se já estava aplicada
+      el.classList.add('flash');
+      setTimeout(function () { el.classList.remove('flash'); }, 2000);
+      if (history.replaceState) history.replaceState(null, '', href);
+    });
+  });
+</script>
+
+<!-- GoatCounter — analytics privacy-friendly (sem cookies, sem PII). Conta a
+     visita à página e disponibiliza window.goatcounter.count() para os eventos
+     de download acima. -->
+<script>
+  // Reescreve a visita automatica de /ExplorerFocus para /explorerfocus, para todo o
+  // trafego do EF ficar sob /explorerfocus* no dashboard partilhado (paralelo ao LogViewer).
+  // So afeta a visita automatica; os count() dos downloads mandam path explicito.
+  window.goatcounter = {
+    path: function (p) { return p.replace(/^\/ExplorerFocus/, "/explorerfocus") || "/explorerfocus"; }
+  };
+</script>
+<script data-goatcounter="https://nunex.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>

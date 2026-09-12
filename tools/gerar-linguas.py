@@ -53,10 +53,14 @@ LINGUAS = [
     ("br", "br", "Português (BR)", "pt-BR",   "pt_BR", "br"),
     ("en", "",   "English (US)",   "en",      "en_US", "us"),
     ("es", "es", "Español",      "es",      "es_ES", "es"),
-    ("fr", "fr", "Français",     "fr",      "fr_FR", "fr"),
-    ("de", "de", "Deutsch",      "de",      "de_DE", "de"),
+    ("fr", "fr", "Français",       "fr",      "fr_FR", "fr"),
+    ("it", "it", "Italiano",       "it",      "it_IT", "it"),
+    ("de", "de", "Deutsch",        "de",      "de_DE", "de"),
+    ("pl", "pl", "Polski",         "pl",      "pl_PL", "pl"),
+    ("ru", "ru", "Русский",        "ru",      "ru_RU", "ru"),
     ("zh", "zh", "中文 (简体)",    "zh-Hans", "zh_CN", "cn"),
-    ("ja", "ja", "日本語",        "ja",      "ja_JP", "jp"),
+    ("ja", "ja", "日本語",          "ja",      "ja_JP", "jp"),
+    ("ko", "ko", "한국어",          "ko",      "ko_KR", "kr"),
 ]
 
 # A barra de línguas da APP, espelhada: as 16, pela ordem dela, mesmo que

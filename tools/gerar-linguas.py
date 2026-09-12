@@ -58,7 +58,10 @@ LINGUAS = [
     ("de", "de", "Deutsch",        "de",      "de_DE", "de"),
     ("pl", "pl", "Polski",         "pl",      "pl_PL", "pl"),
     ("ru", "ru", "Русский",        "ru",      "ru_RU", "ru"),
-    ("zh", "zh", "中文 (简体)",    "zh-Hans", "zh_CN", "cn"),
+    ("ar", "ar", "العربية",         "ar",      "ar_AR", "sa"),
+    ("hi", "hi", "हिन्दी",           "hi",      "hi_IN", "in"),
+    ("zh",    "zh",    "中文 (简体)",  "zh-Hans", "zh_CN", "cn"),
+    ("zh-TW", "zh-tw", "中文 (繁體)",  "zh-Hant", "zh_TW", "tw"),
     ("ja", "ja", "日本語",          "ja",      "ja_JP", "jp"),
     ("ko", "ko", "한국어",          "ko",      "ko_KR", "kr"),
 ]

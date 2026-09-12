@@ -26,7 +26,10 @@
 <link rel="alternate" hreflang="de" href="https://nunex-mbrothers.github.io/ExplorerFocus/de/">
 <link rel="alternate" hreflang="pl" href="https://nunex-mbrothers.github.io/ExplorerFocus/pl/">
 <link rel="alternate" hreflang="ru" href="https://nunex-mbrothers.github.io/ExplorerFocus/ru/">
+<link rel="alternate" hreflang="ar" href="https://nunex-mbrothers.github.io/ExplorerFocus/ar/">
+<link rel="alternate" hreflang="hi" href="https://nunex-mbrothers.github.io/ExplorerFocus/hi/">
 <link rel="alternate" hreflang="zh-Hans" href="https://nunex-mbrothers.github.io/ExplorerFocus/zh/">
+<link rel="alternate" hreflang="zh-Hant" href="https://nunex-mbrothers.github.io/ExplorerFocus/zh-tw/">
 <link rel="alternate" hreflang="ja" href="https://nunex-mbrothers.github.io/ExplorerFocus/ja/">
 <link rel="alternate" hreflang="ko" href="https://nunex-mbrothers.github.io/ExplorerFocus/ko/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='6'%20fill='%230E0F11'/%3E%3Cpath%20d='M16%204l12%2012-12%2012L4%2016z'%20fill='%23E0A458'/%3E%3C/svg%3E">
@@ -46,7 +49,10 @@
 <meta property="og:locale:alternate" content="de_DE">
 <meta property="og:locale:alternate" content="pl_PL">
 <meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="hi_IN">
 <meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="zh_TW">
 <meta property="og:locale:alternate" content="ja_JP">
 <meta property="og:locale:alternate" content="ko_KR">
 <meta property="og:image" content="https://nunex-mbrothers.github.io/ExplorerFocus/og-cover.png">
@@ -1107,6 +1113,42 @@
     .lang-list { grid-template-columns: 1fr; min-width: 176px; }
     .lang-picker { top: 10px; right: 12px; }
   }
+
+  /* ===== DA DIREITA PARA A ESQUERDA (arabe) =====
+     O `dir="rtl"` do <html> vira o texto, o flex e a grelha sozinho. O que NAO
+     vira sao as propriedades fisicas -- e no CSS deste site sao 36, das quais
+     estas as que se veem.
+
+     ⛔ A MAQUETA DA APP fica em LTR a forca (.app-frame e .preview-demo). Sao
+        FOTOGRAFIAS do programa -- barra de titulo, arvore a esquerda, lista,
+        painel de pre-visualizacao, numeros de linha do codigo. Espelha-las
+        mostrava um programa que nao existe. Mesma decisao que o mock-up de log
+        do LogViewer e que o palco planetario do mBrothers.
+     ⚠ E as regras abaixo tem de VENCER a especificidade das originais: onde a
+        original leva um elemento ou dois seletores, esta leva o [dir] a mais.
+        Uma regra [dir=rtl] que perde nao da erro nenhum -- so nao faz nada. */
+  [dir="rtl"] .app-frame,
+  [dir="rtl"] .preview-demo { direction: ltr; }
+
+  [dir="rtl"] .lang-picker { right: auto; left: 22px; }
+  [dir="rtl"] .lang-list { right: auto; left: 0; }
+  [dir="rtl"] .nav-version { padding-left: 0; padding-right: 28px;
+    border-left: 0; border-right: 1px solid var(--border-2); }
+  [dir="rtl"] .ef-card-x { right: auto; left: 14px; }
+  [dir="rtl"] .ef-find::before { margin-right: 0; margin-left: 7px; }
+  [dir="rtl"] .hero-sha-what { margin-left: 0; margin-right: 6px; }
+  [dir="rtl"] .ef-list li { padding-left: 0; padding-right: 22px; }
+  [dir="rtl"] .ef-list li::before { left: auto; right: 0; }
+  [dir="rtl"] .badge-free,
+  [dir="rtl"] .badge-pro { margin-left: 0; margin-right: 8px; }
+  [dir="rtl"] .badge-free + .badge-pro { margin-left: 0; margin-right: 5px; }
+  [dir="rtl"] .prem-card li { padding-left: 0; padding-right: 22px; }
+  [dir="rtl"] .prem-card li::before { left: auto; right: 0; }
+  [dir="rtl"] .prem-how li { padding-left: 0; padding-right: 34px; }
+  [dir="rtl"] .prem-how li::before { left: auto; right: 0; }
+  @media (max-width: 560px) {
+    [dir="rtl"] .lang-picker { right: auto; left: 12px; }
+  }
 </style>
 <script>window.EF_FREE="Grátis";window.EF_ROOT="../";</script>
 </head>
@@ -1148,10 +1190,10 @@
           <a class="lang-btn" href="../de/" lang="de"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-de"/></svg><span>Deutsch</span></a>
           <a class="lang-btn" href="../pl/" lang="pl"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-pl"/></svg><span>Polski</span></a>
           <a class="lang-btn" href="../ru/" lang="ru"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-ru"/></svg><span>Русский</span></a>
-          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-sa"/></svg><span>العربية</span></a>
-          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-in"/></svg><span>हिन्दी</span></a>
+          <a class="lang-btn" href="../ar/" lang="ar"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-sa"/></svg><span>العربية</span></a>
+          <a class="lang-btn" href="../hi/" lang="hi"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-in"/></svg><span>हिन्दी</span></a>
           <a class="lang-btn" href="../zh/" lang="zh-Hans"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-cn"/></svg><span>中文 (简体)</span></a>
-          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-tw"/></svg><span>中文 (繁體)</span></a>
+          <a class="lang-btn" href="../zh-tw/" lang="zh-Hant"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-tw"/></svg><span>中文 (繁體)</span></a>
           <a class="lang-btn" href="../ja/" lang="ja"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-jp"/></svg><span>日本語</span></a>
           <a class="lang-btn" href="../ko/" lang="ko"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-kr"/></svg><span>한국어</span></a>
         </div>

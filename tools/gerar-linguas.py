@@ -49,8 +49,9 @@ BASE = "https://nunex-mbrothers.github.io/ExplorerFocus/"
 # ⏭️ As oito que faltam para as 16 da app (br, it, pl, ru, ar, hi, zh-TW, ko)
 #    entram aqui, uma linha cada, quando os dicionários existirem.
 LINGUAS = [
-    ("pt", "pt", "Português",    "pt",      "pt_PT", "pt"),
-    ("en", "",   "English (US)", "en",      "en_US", "us"),
+    ("pt", "pt", "Português",      "pt",      "pt_PT", "pt"),
+    ("br", "br", "Português (BR)", "pt-BR",   "pt_BR", "br"),
+    ("en", "",   "English (US)",   "en",      "en_US", "us"),
     ("es", "es", "Español",      "es",      "es_ES", "es"),
     ("fr", "fr", "Français",     "fr",      "fr_FR", "fr"),
     ("de", "de", "Deutsch",      "de",      "de_DE", "de"),

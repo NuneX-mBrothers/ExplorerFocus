@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja" data-lang-fixa="ja">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title data-i18n="page_title">ExplorerFocus — a distraction-free file explorer</title>
-<meta name="description" data-i18n-attr="content" data-i18n="page_desc" content="A focused alternative to Windows Explorer. Profiles, configurable trees, rich operations, preview — all centered on what matters.">
+<title data-i18n="page_title">ExplorerFocus — 集中できるファイルエクスプローラー</title>
+<meta name="description" data-i18n-attr="content" data-i18n="page_desc" content="Windows エクスプローラーの、集中のための代替。プロファイル、自由に組めるツリー、豊富なファイル操作、プレビュー — 大事なことだけに。">
 
 <!-- ===== SEO ===== -->
 <meta name="author" content="mBrothers">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#0E0F11">
-<link rel="canonical" href="https://nunex-mbrothers.github.io/ExplorerFocus/">
+<link rel="canonical" href="https://nunex-mbrothers.github.io/ExplorerFocus/ja/">
 <!-- Uma porta por lingua. Cada pagina tem canonical propria e hreflang
      reciproco; o texto vai JA TRADUZIDO no HTML, sem JavaScript.
      As pastas por idioma sao GERADAS por tools/gerar-linguas.py, que o
@@ -29,16 +29,16 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ExplorerFocus">
-<meta property="og:title" content="ExplorerFocus — a distraction-free file explorer">
-<meta property="og:description" content="A focused alternative to Windows Explorer. Profiles, configurable trees, rich operations, preview — all centered on what matters.">
-<meta property="og:url" content="https://nunex-mbrothers.github.io/ExplorerFocus/">
-<meta property="og:locale" content="en_US">
+<meta property="og:title" content="ExplorerFocus — 集中できるファイルエクスプローラー">
+<meta property="og:description" content="Windows エクスプローラーの、集中のための代替。プロファイル、自由に組めるツリー、豊富なファイル操作、プレビュー — 大事なことだけに。">
+<meta property="og:url" content="https://nunex-mbrothers.github.io/ExplorerFocus/ja/">
+<meta property="og:locale" content="ja_JP">
 <meta property="og:locale:alternate" content="pt_PT">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:locale:alternate" content="es_ES">
 <meta property="og:locale:alternate" content="fr_FR">
 <meta property="og:locale:alternate" content="de_DE">
 <meta property="og:locale:alternate" content="zh_CN">
-<meta property="og:locale:alternate" content="ja_JP">
 <meta property="og:image" content="https://nunex-mbrothers.github.io/ExplorerFocus/og-cover.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -46,8 +46,8 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ExplorerFocus — a distraction-free file explorer">
-<meta name="twitter:description" content="A focused alternative to Windows Explorer. Profiles, configurable trees, rich operations, preview — all centered on what matters.">
+<meta name="twitter:title" content="ExplorerFocus — 集中できるファイルエクスプローラー">
+<meta name="twitter:description" content="Windows エクスプローラーの、集中のための代替。プロファイル、自由に組めるツリー、豊富なファイル操作、プレビュー — 大事なことだけに。">
 <meta name="twitter:image" content="https://nunex-mbrothers.github.io/ExplorerFocus/og-cover.png">
 
 <!-- Dados estruturados (Schema.org) -->
@@ -69,7 +69,7 @@
     "16 interface languages: Portuguese (Portugal and Brazil), English (UK and US), Spanish, French, Italian, German, Polish, Russian, Arabic, Hindi, Chinese (Simplified and Traditional), Japanese and Korean",
     "Single self-contained .exe, no installer"
   ],
-  "url": "https://nunex-mbrothers.github.io/ExplorerFocus/",
+  "url": "https://nunex-mbrothers.github.io/ExplorerFocus/ja/",
   "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
   "softwareVersion": "1.2.26",
   "image": "https://nunex-mbrothers.github.io/ExplorerFocus/og-cover.png",
@@ -1098,7 +1098,7 @@
     .lang-picker { top: 10px; right: 12px; }
   }
 </style>
-<script>window.EF_FREE="Free";window.EF_ROOT="";</script>
+<script>window.EF_FREE="無料";window.EF_ROOT="../";</script>
 </head>
 <body>
 <svg class="fl-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs>
@@ -1126,24 +1126,24 @@
      motores de busca leem. As pastas por idioma sao GERADAS; este bloco e
      reescrito por tools/gerar-linguas.py a cada corrida. -->
       <details class="lang-picker">
-        <summary class="lang-cur" title="Language"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-gb"/></svg><span>English (GB)</span></summary>
+        <summary class="lang-cur" title="Language"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-jp"/></svg><span>日本語</span></summary>
         <div class="lang-list">
-          <a class="lang-btn" href="pt/" lang="pt"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-pt"/></svg><span>Português</span></a>
-          <a class="lang-btn" href="./" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-br"/></svg><span>Português (BR)</span></a>
-          <a class="lang-btn" href="./" lang="en" aria-current="true"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-gb"/></svg><span>English (GB)</span></a>
-          <a class="lang-btn" href="./" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-us"/></svg><span>English (US)</span></a>
-          <a class="lang-btn" href="es/" lang="es"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-es"/></svg><span>Español</span></a>
-          <a class="lang-btn" href="fr/" lang="fr"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-fr"/></svg><span>Français</span></a>
-          <a class="lang-btn" href="./" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-it"/></svg><span>Italiano</span></a>
-          <a class="lang-btn" href="de/" lang="de"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-de"/></svg><span>Deutsch</span></a>
-          <a class="lang-btn" href="./" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-pl"/></svg><span>Polski</span></a>
-          <a class="lang-btn" href="./" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-ru"/></svg><span>Русский</span></a>
-          <a class="lang-btn" href="./" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-sa"/></svg><span>العربية</span></a>
-          <a class="lang-btn" href="./" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-in"/></svg><span>हिन्दी</span></a>
-          <a class="lang-btn" href="zh/" lang="zh-Hans"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-cn"/></svg><span>中文 (简体)</span></a>
-          <a class="lang-btn" href="./" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-tw"/></svg><span>中文 (繁體)</span></a>
-          <a class="lang-btn" href="ja/" lang="ja"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-jp"/></svg><span>日本語</span></a>
-          <a class="lang-btn" href="./" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-kr"/></svg><span>한국어</span></a>
+          <a class="lang-btn" href="../pt/" lang="pt"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-pt"/></svg><span>Português</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-br"/></svg><span>Português (BR)</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-gb"/></svg><span>English (GB)</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-us"/></svg><span>English (US)</span></a>
+          <a class="lang-btn" href="../es/" lang="es"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-es"/></svg><span>Español</span></a>
+          <a class="lang-btn" href="../fr/" lang="fr"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-fr"/></svg><span>Français</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-it"/></svg><span>Italiano</span></a>
+          <a class="lang-btn" href="../de/" lang="de"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-de"/></svg><span>Deutsch</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-pl"/></svg><span>Polski</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-ru"/></svg><span>Русский</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-sa"/></svg><span>العربية</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-in"/></svg><span>हिन्दी</span></a>
+          <a class="lang-btn" href="../zh/" lang="zh-Hans"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-cn"/></svg><span>中文 (简体)</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-tw"/></svg><span>中文 (繁體)</span></a>
+          <a class="lang-btn" href="../ja/" lang="ja" aria-current="true"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-jp"/></svg><span>日本語</span></a>
+          <a class="lang-btn" href="../" lang="en"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-kr"/></svg><span>한국어</span></a>
         </div>
       </details>
 
@@ -1179,11 +1179,11 @@
       <span class="brand-name">Explorer<em>Focus</em></span>
     </div>
     <nav class="nav">
-      <a href="#features" data-i18n="nav_features">Features</a>
-      <a href="#shortcuts" data-i18n="nav_shortcuts">Shortcuts</a>
-      <a href="#stack" data-i18n="nav_stack">Stack</a>
-      <a href="#premium" data-i18n="nav_premium">Premium</a>
-      <a href="#download" data-i18n="nav_download">Get it</a>
+      <a href="#features" data-i18n="nav_features">機能</a>
+      <a href="#shortcuts" data-i18n="nav_shortcuts">ショートカット</a>
+      <a href="#stack" data-i18n="nav_stack">スタック</a>
+      <a href="#premium" data-i18n="nav_premium">PREMIUM</a>
+      <a href="#download" data-i18n="nav_download">入手する</a>
       <span class="nav-version">v1.2.26</span>
     </nav>
   </div>
@@ -1192,18 +1192,18 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <div class="hero-eyebrow" data-i18n="hero_eyebrow">A file explorer · WPF · .NET 10</div>
-    <h1 data-i18n-html="hero_title">The explorer<br>that <em>focuses</em><br>on what <span class="strike">doesn't</span> matter.</h1>
-    <p class="hero-lede" data-i18n="hero_lede">ExplorerFocus is a Windows Explorer replacement for people who always work in the same folders. Configurable profiles, clean trees, a preview that opens almost anything — code, documents, books — and operations that actually tell you what's happening. Without the shell's noise.</p>
+    <div class="hero-eyebrow" data-i18n="hero_eyebrow">ファイルエクスプローラー · WPF · .NET 10</div>
+    <h1 data-i18n-html="hero_title"><span class="strike">どうでもいい</span>大事なことだけに<br><em>集中</em>する<br>エクスプローラー。</h1>
+    <p class="hero-lede" data-i18n="hero_lede">ExplorerFocus は、いつも同じフォルダーで作業する人のための Windows エクスプローラーの置き換えです。自由に設定できるプロファイル、すっきりしたツリー、ほとんど何でも開くプレビュー — コード、書類、電子書籍 — そして、いま何が起きているかを本当に伝えるファイル操作。シェルのノイズはありません。</p>
     <div class="hero-meta">
       <span data-i18n="hero_meta_os">Windows 10 / 11</span>
-      <span data-i18n="hero_meta_pkg">Self-contained · single-file</span>
-      <span data-i18n="hero_meta_size">~115 MB</span>
+      <span data-i18n="hero_meta_pkg">自己完結型 · 単一ファイル</span>
+      <span data-i18n="hero_meta_size">約 115 MB</span>
     </div>
 
     <div class="hero-cta">
       <a class="btn btn-primary" href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.exe">
-        <span aria-hidden="true">⬇</span> <span data-i18n="hero_dl_exe">Download · .exe</span>
+        <span aria-hidden="true">⬇</span> <span data-i18n="hero_dl_exe">ダウンロード · .exe</span>
       </a>
       <a class="btn btn-ghost" href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip"
          title="Para organizações que bloqueiam o download de .exe">
@@ -1212,7 +1212,7 @@
     </div>
 
     <div class="hero-latest" id="heroLatest" hidden>
-      <span data-i18n="hero_latest">Latest version</span>:
+      <span data-i18n="hero_latest">最新バージョン</span>:
       <strong id="heroVersion"></strong><span id="heroReleased"></span>
     </div>
 
@@ -1221,10 +1221,10 @@
         <span class="hero-sha-lbl">SHA-256</span>
         <code id="heroSha" class="js-sha"></code>
         <button class="hero-sha-copy" id="heroShaCopy" type="button" aria-label="Copiar SHA-256" title="Copiar">⧉</button>
-        <a href="#sha256" class="hero-sha-what" data-modal="shaModal" data-i18n="sha_link">What is SHA-256?</a>
+        <a href="#sha256" class="hero-sha-what" data-modal="shaModal" data-i18n="sha_link">SHA-256 とは？</a>
       </div>
       <a href="#verify" class="hero-verify-link" id="openVerify" data-modal="verifyModal">
-        <span data-i18n="dl_firsttime">First time opening it? Windows warning?</span>
+        <span data-i18n="dl_firsttime">初めて開きますか？ Windows の警告が出ましたか？</span>
         <span aria-hidden="true">→</span>
       </a>
     </div>
@@ -1248,7 +1248,7 @@
 
       <div class="app-body">
         <div class="app-tree">
-          <div class="label" data-i18n="app_tree_label">Tree</div>
+          <div class="label" data-i18n="app_tree_label">ツリー</div>
           <div class="node">▾ ExplorerFocus</div>
           <div class="node">&nbsp;&nbsp;Core/</div>
           <div class="node">&nbsp;&nbsp;Models/</div>
@@ -1260,9 +1260,9 @@
 
         <div class="app-list">
           <div class="head">
-            <span data-i18n="app_col_name">NAME</span>
-            <span data-i18n="app_col_ext">EXT</span>
-            <span data-i18n="app_col_size">SIZE</span>
+            <span data-i18n="app_col_name">名前</span>
+            <span data-i18n="app_col_ext">拡張子</span>
+            <span data-i18n="app_col_size">サイズ</span>
           </div>
           <div class="row">
             <span>📁 FileOperations</span>
@@ -1297,7 +1297,7 @@
         </div>
 
         <div class="app-preview">
-          <div class="head" data-i18n="app_preview_label">PREVIEW</div>
+          <div class="head" data-i18n="app_preview_label">プレビュー</div>
           <div class="ln"><span class="lno">1</span><span><span class="kw">using</span> System.IO;</span></div>
           <div class="ln"><span class="lno">2</span></div>
           <div class="ln"><span class="lno">3</span><span class="cmt">// Main view-model</span></div>
@@ -1316,15 +1316,15 @@
 
     <div class="ops-widget">
       <div class="head">
-        <span><span class="ic">📋</span> <span data-i18n="ops_action">Copy · 47 files</span></span>
-        <span class="pill" data-i18n="ops_status">RUNNING</span>
+        <span><span class="ic">📋</span> <span data-i18n="ops_action">コピー · 47 個のファイル</span></span>
+        <span class="pill" data-i18n="ops_status">実行中</span>
       </div>
       <div style="color: var(--fg-2); margin-top: 6px;">project_dump_2025.zip</div>
       <div class="bar"><div class="fill"></div></div>
       <div class="bar sm"><div class="fill"></div></div>
       <div class="meta">
         <span>134 / 248 MB</span>
-        <span class="speed" data-i18n="ops_speed">89 MB/s · 1.3 s</span>
+        <span class="speed" data-i18n="ops_speed">89 MB/秒 · 1.3 秒</span>
       </div>
     </div>
     </div>
@@ -1336,17 +1336,17 @@
               descarga. O peso aqui vem do AMBAR da casa, nao de uma imagem
               emprestada. -->
       <div class="awards">
-        <div class="aw-h" data-i18n="aw_h">Tested by others before listing</div>
+        <div class="aw-h" data-i18n="aw_h">掲載前に第三者が検査</div>
         <ul class="aw-list">
           <li>
             <span class="aw-num"><b class="aw-score" data-i18n="aw_sp_n">4.5</b><i class="aw-of">/5</i></span>
             <a href="https://www.softpedia.com/get/File-managers/ExplorerFocus.shtml" target="_blank" rel="noopener">Softpedia</a>
-            <em data-i18n="aw_sp">100% Clean · editor's review</em>
+            <em data-i18n="aw_sp">100% Clean · 編集者レビュー</em>
           </li>
           <li>
             <span class="aw-num"></span>
             <a href="https://www.majorgeeks.com/files/details/explorerfocus.html" target="_blank" rel="noopener">MajorGeeks</a>
-            <em data-i18n="aw_mg">virtual machine + VirusTotal</em>
+            <em data-i18n="aw_mg">仮想マシン + VirusTotal</em>
           </li>
         </ul>
       </div>
@@ -1355,14 +1355,14 @@
 
 <!-- NOVIDADES (teaser das features mais recentes → salto para o card) -->
 <div class="whatsnew">
-  <span class="whatsnew-label" data-i18n="wn_label">✦ What's new</span>
+  <span class="whatsnew-label" data-i18n="wn_label">✦ 新着</span>
   <nav class="whatsnew-pills">
-    <a href="#feat18" data-i18n="wn_langs">🌐 16 languages</a>
-    <a href="#feat19" data-i18n="wn_disk">💽 The disk, in detail</a>
-    <a href="#feat24" data-i18n="wn_books">📚 Books &amp; comics</a>
-    <a href="#feat32" data-i18n="wn_voice">🎙 Voice over</a>
-    <a href="#feat31" data-i18n="wn_cards">🎬 Branding cards</a>
-    <a href="#feat30" data-i18n="wn_screen">🖥 Screen recording</a>
+    <a href="#feat18" data-i18n="wn_langs">🌐 16 の言語</a>
+    <a href="#feat19" data-i18n="wn_disk">💽 ディスクの詳細</a>
+    <a href="#feat24" data-i18n="wn_books">📚 書籍とコミック</a>
+    <a href="#feat32" data-i18n="wn_voice">🎙 ボイスオーバー</a>
+    <a href="#feat31" data-i18n="wn_cards">🎬 ブランドカード</a>
+    <a href="#feat30" data-i18n="wn_screen">🖥 画面録画</a>
   </nav>
   <span class="whatsnew-ver">v1.2.26</span>
 </div>
@@ -1371,53 +1371,53 @@
 <div id="features"></div>
 <div class="section-header">
   <div>
-    <div class="section-num" data-i18n="cat_num">§ 01 · Catalog</div>
-    <h2 class="section-title" data-i18n-html="cat_title">What <em>really</em><br>makes a difference.</h2>
+    <div class="section-num" data-i18n="cat_num">§ 01 · カタログ</div>
+    <h2 class="section-title" data-i18n-html="cat_title"><em>本当に</em>違いを<br>生むもの。</h2>
   </div>
-  <p class="section-blurb" data-i18n="cat_blurb">Each feature was added to answer a concrete problem in daily work over a known file tree. None is there for show. Almost all can be toggled on or off.</p>
+  <p class="section-blurb" data-i18n="cat_blurb">どの機能も、決まったファイルツリーの上で日々ぶつかる具体的な問題に答えるために足されたものです。見せるためだけのものはひとつもありません。ほとんどすべて、オンとオフを切り替えられます。</p>
 </div>
 
 <section class="features">
 
   <div class="feat hero-card w8">
     <div class="pad">
-      <div class="num"><span data-i18n="f01_num">01 — PROFILES</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-      <h3 data-i18n="f01_h">Multi-tab by context. Each profile is its own view, with its tree, filters and state.</h3>
-      <p data-i18n="f01_p">Drag-reorder, F2 to rename, Ctrl+1..9 to jump between tabs, Ctrl+T to create. Tabs remember the last folder visited and the tree state.</p>
+      <div class="num"><span data-i18n="f01_num">01 — プロファイル</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+      <h3 data-i18n="f01_h">文脈ごとのマルチタブ。プロファイルはそれぞれ独立したビューで、自分のツリー、フィルター、状態を持ちます。</h3>
+      <p data-i18n="f01_p">ドラッグで並べ替え、F2 で名前の変更、Ctrl+1..9 でタブの移動、Ctrl+T で新規作成。タブは最後に開いたフォルダーとツリーの状態を覚えています。</p>
     </div>
     <div class="visual">
-      <span><span class="k" data-i18n="f01_v1_k">tabs</span> · <span class="v">●</span> default · <span class="v">○</span> scripts · <span class="v">○</span> research</span>
-      <span><span class="k" data-i18n="f01_v2_k">active</span> <span class="v">←</span> <span data-i18n="f01_v2_t">highlighted in amber</span></span>
-      <span><span class="k">●</span> <span data-i18n="f01_v3_t">included in global search</span></span>
+      <span><span class="k" data-i18n="f01_v1_k">タブ</span> · <span class="v">●</span> default · <span class="v">○</span> scripts · <span class="v">○</span> research</span>
+      <span><span class="k" data-i18n="f01_v2_k">アクティブ</span> <span class="v">←</span> <span data-i18n="f01_v2_t">アンバーで強調</span></span>
+      <span><span class="k">●</span> <span data-i18n="f01_v3_t">全体検索の対象に含む</span></span>
     </div>
   </div>
 
   <div class="feat w4">
-    <div class="num"><span data-i18n="f02_num">02 — TREES</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f02_h">Configurable trees.</h3>
-    <p data-i18n-html="f02_p">You manually define the roots you want to see. Filesystem and <em>registry</em> side by side. No sidebar full of items you never open.</p>
-    <div class="feat-mark" data-i18n="f02_mark">Folder + Registry</div>
+    <div class="num"><span data-i18n="f02_num">02 — ツリー</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f02_h">自由に組めるツリー。</h3>
+    <p data-i18n-html="f02_p">見たいルートは自分で決めます。ファイルシステムと<em>レジストリ</em>が並びます。開いたこともない項目で埋まったサイドバーはありません。</p>
+    <div class="feat-mark" data-i18n="f02_mark">フォルダー + レジストリ</div>
   </div>
 
   <div class="feat w6">
-    <div class="num"><span data-i18n="f03_num">03 — SEARCH</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f03_h">Multi-pattern search with wildcards in any position.</h3>
-    <p data-i18n-html="f03_p">Type <code style="font-family:var(--font-mono);background:var(--bg-2);padding:1px 6px;border-radius:2px;color:var(--accent);">*.cs *.json</code> and get OR semantics. <em>?</em>onfig.json, Test*Run.cs — all work.</p>
-    <div class="feat-mark" data-i18n="f03_mark">Wildcards · Internal regex</div>
+    <div class="num"><span data-i18n="f03_num">03 — 検索</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f03_h">ワイルドカードをどこにでも置ける、複数パターンの検索。</h3>
+    <p data-i18n-html="f03_p"><code style="font-family:var(--font-mono);background:var(--bg-2);padding:1px 6px;border-radius:2px;color:var(--accent);">*.cs *.json</code> と入力すれば OR で探します。<em>?</em>onfig.json も Test*Run.cs も動きます。</p>
+    <div class="feat-mark" data-i18n="f03_mark">ワイルドカード · 内部は正規表現</div>
   </div>
 
   <div class="feat w6">
-    <div class="num"><span data-i18n="f04_num">04 — GLOBAL SEARCH</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f04_h">Search across profiles, with explicit opt-in.</h3>
-    <p data-i18n="f04_p">Right-click a tab → "Include in global search". The dot indicator (●/○) shows what's in. Results in a non-modal window.</p>
-    <div class="feat-mark" data-i18n="f04_mark">Opt-in · Non-modal results</div>
+    <div class="num"><span data-i18n="f04_num">04 — 全体検索</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f04_h">プロファイルをまたぐ検索。ただし、選んだものだけ。</h3>
+    <p data-i18n="f04_p">タブを右クリック →「全体検索に含める」。●/○ の印で、対象かどうかが分かります。結果は非モーダルのウィンドウに出ます。</p>
+    <div class="feat-mark" data-i18n="f04_mark">オプトイン · 非モーダルの結果</div>
   </div>
 
   <div class="feat hero-card w12">
     <div class="pad">
-      <div class="num"><span data-i18n="f05_num">05 — PREVIEW</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-      <h3 data-i18n="f05_h">Rich preview pane. Each file type with its ideal rendering.</h3>
-      <p data-i18n-html="f05_p">Text with <em>syntax highlight</em> via AvalonEdit, images decoded in the background, PDFs rendered by the Edge engine (WebView2), Markdown converted to HTML with a dark theme by Markdig. Individually toggleable. Cancels previous load if you change selection.</p>
+      <div class="num"><span data-i18n="f05_num">05 — プレビュー</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+      <h3 data-i18n="f05_h">充実したプレビュー枠。ファイルの種類ごとに、いちばん見やすい形で。</h3>
+      <p data-i18n-html="f05_p">テキストは AvalonEdit で<em>構文の色分け</em>、画像はバックグラウンドでデコード、PDF は Edge のエンジン（WebView2）で描画、Markdown は Markdig がダークテーマの HTML に変換します。ひとつずつ切り替えられます。選択を変えれば、前の読み込みは取り消されます。</p>
     </div>
     <div class="preview-demo">
       <div class="src">
@@ -1440,85 +1440,85 @@
       <div class="rendered">
         <div class="src h" style="margin-bottom:14px;" data-i18n="f05_md_h">MARKDOWN · README.md</div>
         <h4>ExplorerFocus</h4>
-        <p data-i18n-html="f05_md_p">A focused Windows Explorer replacement. Built around configurable folders, it <em>forgets everything</em> that doesn't matter.</p>
+        <p data-i18n-html="f05_md_p">集中のための Windows エクスプローラーの置き換え。設定できるフォルダーを軸に組まれ、大事でないことは<em>すべて忘れます</em>。</p>
         <p><code>net10.0-windows</code> · <code>WPF</code> · single-file</p>
-        <p style="border-left: 3px solid var(--accent); padding: 4px 12px; background: var(--bg-2); margin-top: 12px;" data-i18n="f05_md_note">Note — preview works with Edge WebView2 installed (ships with Windows 10/11).</p>
+        <p style="border-left: 3px solid var(--accent); padding: 4px 12px; background: var(--bg-2); margin-top: 12px;" data-i18n="f05_md_note">注 — プレビューには Edge WebView2 が必要です（Windows 10/11 に同梱されています）。</p>
       </div>
     </div>
   </div>
 
   <div class="feat w6">
-    <div class="num"><span data-i18n="f06_num">06 — FILE OPERATIONS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f06_h">Copy, move, delete — with real information.</h3>
-    <p data-i18n-html="f06_p">Floating window shows <em>per-file gauge</em>, real speed, ETA, global count. Pause, resume, cancel. Up to 6 parallel operations. Get on with your life while it runs.</p>
-    <div class="feat-mark" data-i18n="f06_mark">Buffer 1 MB · 10 Hz UI · history × 20</div>
+    <div class="num"><span data-i18n="f06_num">06 — ファイル操作</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f06_h">コピー、移動、削除 — 本当の情報とともに。</h3>
+    <p data-i18n-html="f06_p">フローティングウィンドウに<em>ファイルごとのゲージ</em>、実測の速度、残り時間、全体の件数が出ます。一時停止、再開、キャンセル。同時に 6 つまで。動いているあいだ、こちらは自分の仕事を続けられます。</p>
+    <div class="feat-mark" data-i18n="f06_mark">バッファ 1 MB · UI 10 Hz · 履歴 × 20</div>
   </div>
 
   <div class="feat w3">
-    <div class="num"><span data-i18n="f07_num">07 — CONFLICTS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f07_h">6-way.</h3>
-    <p data-i18n="f07_p">Overwrite / Skip / Duplicate, individually or in bulk for the rest of the operation.</p>
+    <div class="num"><span data-i18n="f07_num">07 — 競合</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f07_h">6 通りの答え。</h3>
+    <p data-i18n="f07_p">上書き / スキップ / 複製 — 1 件ずつでも、残り全部にまとめてでも。</p>
   </div>
 
   <div class="feat w3">
-    <div class="num"><span data-i18n="f08_num">08 — DRAG &amp; DROP</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f08_h">Between tabs.</h3>
-    <p data-i18n="f08_p">Drag a file to a tab and the tab switches on its own after 600ms. Copy/Move dialog on drop.</p>
+    <div class="num"><span data-i18n="f08_num">08 — ドラッグ &amp;amp; ドロップ</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f08_h">タブからタブへ。</h3>
+    <p data-i18n="f08_p">ファイルをタブへ運ぶと、600 ミリ秒でタブがひとりでに切り替わります。落とせばコピー / 移動のダイアログが出ます。</p>
   </div>
 
   <div class="feat w8">
-    <div class="num"><span data-i18n="f09_num">09 — APPS BY EXTENSION</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f09_h">Auto-detect new extensions. Shared across profiles.</h3>
-    <p data-i18n-html="f09_p">Enter a folder with <em>.dwg</em>, <em>.psd</em>, <em>.bak</em>? An aggregated dialog asks once. Per-row picker (browse to the .exe; name auto-resolved by <em>FileVersionInfo</em>). Mark as ignored those you don't care about. The list persists.</p>
-    <div class="feat-mark" data-i18n="f09_mark">Mute per session · Toggle in Settings</div>
+    <div class="num"><span data-i18n="f09_num">09 — 拡張子ごとのアプリ</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f09_h">新しい拡張子を自動で見つけます。プロファイルをまたいで共有。</h3>
+    <p data-i18n-html="f09_p"><em>.dwg</em>、<em>.psd</em>、<em>.bak</em> のあるフォルダーに入りましたか？ まとめたダイアログが一度だけ尋ねます。行ごとに選べます（.exe を指定すれば、名前は <em>FileVersionInfo</em> から自動で決まります）。どうでもいいものは無視に設定できます。一覧は残ります。</p>
+    <div class="feat-mark" data-i18n="f09_mark">セッション単位で黙らせる · 設定で切り替え</div>
   </div>
 
   <div class="feat w4">
-    <div class="num"><span data-i18n="f10_num">10 — TERMINALS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f10_h">CMD, PowerShell, Git Bash — here, now.</h3>
-    <p data-i18n-html="f10_p">In any tree folder. Normal and <em>elevated</em> variants. <em>regedit</em> on registry keys.</p>
+    <div class="num"><span data-i18n="f10_num">10 — ターミナル</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f10_h">CMD、PowerShell、Git Bash — ここで、いま。</h3>
+    <p data-i18n-html="f10_p">ツリーのどのフォルダーでも。通常版と<em>管理者</em>版。レジストリキーの上では <em>regedit</em>。</p>
   </div>
 
   <div class="feat w4">
-    <div class="num"><span data-i18n="f11_num">11 — CREATE FILES</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f11_h">Sensible skeletons.</h3>
-    <p data-i18n-html="f11_p"><em>.cs</em>, <em>.xaml</em>, <em>.json</em>, <em>.md</em>, <em>.cmd</em>, <em>.ps1</em> — start with the typical structure. The name is highlighted without erasing the extension while typing.</p>
+    <div class="num"><span data-i18n="f11_num">11 — ファイルの作成</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f11_h">理にかなったひな形。</h3>
+    <p data-i18n-html="f11_p"><em>.cs</em>、<em>.xaml</em>、<em>.json</em>、<em>.md</em>、<em>.cmd</em>、<em>.ps1</em> — よくある構造から始まります。入力のあいだ、拡張子は消さずに名前だけが選ばれています。</p>
   </div>
 
   <div class="feat w4">
-    <div class="num"><span data-i18n="f12_num">12 — FULL DARK</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f12_h">Dark theme all the way.</h3>
-    <p data-i18n="f12_p">Title bar, scrollbars, datagrids, dialogs, tooltips, Markdown preview — all in the same visual language. No stray whites from unlikely places.</p>
+    <div class="num"><span data-i18n="f12_num">12 — 隅々までダーク</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f12_h">最後までダークテーマ。</h3>
+    <p data-i18n="f12_p">タイトルバー、スクロールバー、データグリッド、ダイアログ、ツールチップ、Markdown のプレビュー — すべてが同じ視覚の言葉で。思わぬところから白が飛び出すことはありません。</p>
   </div>
 
   <div class="feat w4">
-    <div class="num"><span data-i18n="f13_num">13 — PERSISTENCE</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f13_h">Remembers everything.</h3>
-    <p data-i18n-html="f13_p">Geometry of the main window and the operations window. Last active tab. Tree pane width. Column sort. Tree state. All in <em>%LOCALAPPDATA%\ExplorerFocus</em>.</p>
+    <div class="num"><span data-i18n="f13_num">13 — 状態の記憶</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f13_h">すべて覚えています。</h3>
+    <p data-i18n-html="f13_p">メインウィンドウと操作ウィンドウの位置と大きさ。最後に使っていたタブ。ツリー枠の幅。列の並び順。ツリーの開閉。すべて <em>%LOCALAPPDATA%\ExplorerFocus</em> の中に。</p>
   </div>
 
   <div class="feat w4">
-    <div class="num"><span data-i18n="f14_num">14 — RICH TOOLTIP</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f14_h">Properties without a click.</h3>
-    <p data-i18n="f14_p">A 1.8s tooltip over any file shows computed size, dates, attributes. Folders carry the recursive size — computed lazily, with a semaphore to avoid hammering the disk.</p>
+    <div class="num"><span data-i18n="f14_num">14 — 詳しいツールチップ</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f14_h">クリックせずにプロパティを。</h3>
+    <p data-i18n="f14_p">ファイルの上で 1.8 秒待つとツールチップが出て、計算済みのサイズ、日付、属性を見せます。フォルダーには再帰的なサイズも — 必要になってから計算し、ディスクを叩きすぎないようセマフォで抑えています。</p>
   </div>
 
   <div class="feat w4">
-    <div class="num"><span data-i18n="f15_num">15 — SORTING</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f15_h">Folders first, always.</h3>
-    <p data-i18n="f15_p">A custom comparer guarantees directories stay on top of any sort, in any column, in any direction. As it should be.</p>
+    <div class="num"><span data-i18n="f15_num">15 — 並べ替え</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f15_h">フォルダーはいつでも先頭。</h3>
+    <p data-i18n="f15_p">専用の比較器が、どの列で、どちら向きに並べ替えても、ディレクトリを上に保ちます。そうあるべきだからです。</p>
   </div>
 
   <div class="feat w6">
-    <div class="num"><span data-i18n="f16_num">16 — MULTI-SELECT</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f16_h">Smart selection.</h3>
-    <p data-i18n="f16_p">Normal click selects. Shift+click extends with "majority decides" semantics — if the range is mostly already selected, it unmarks; otherwise it marks. Ctrl+click toggles individually. No more "I lost all selections by accident".</p>
+    <div class="num"><span data-i18n="f16_num">16 — 複数選択</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f16_h">賢い選択。</h3>
+    <p data-i18n="f16_p">普通のクリックで選択。Shift+クリックは「多数決」で広げます — 範囲の大半がすでに選ばれていれば外し、そうでなければ選びます。Ctrl+クリックは 1 件ずつ切り替え。「うっかり選択を全部なくした」はもうありません。</p>
   </div>
 
   <div class="feat w6">
-    <div class="num"><span data-i18n="f17_num">17 — DEPLOYMENT</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n-html="f17_h">A single <em>.exe</em>. No installer.</h3>
-    <p data-i18n-html="f17_p">Self-contained, single-file, compressed and digitally signed. Copy to a flash drive and it runs on any Windows 10/11. <em>net10.0-windows</em> + WPF — no dependencies outside the executable's folder.</p>
+    <div class="num"><span data-i18n="f17_num">17 — 配布</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n-html="f17_h"><em>.exe</em> ひとつ。インストーラーなし。</h3>
+    <p data-i18n-html="f17_p">自己完結型、単一ファイル、圧縮済み、電子署名済み。USB メモリーにコピーすれば、どの Windows 10/11 でも動きます。<em>net10.0-windows</em> + WPF — 実行ファイルのフォルダーの外に依存はありません。</p>
   </div>
 
   <!-- Cartão novo (2026-08-14). Entrou AQUI, no fim da zona grátis e a seguir
@@ -1529,9 +1529,9 @@
        levanta PropertyChanged em todas as strings, e cada {loc:T …} reavalia
        na hora (está escrito no cabeçalho do próprio ficheiro). -->
   <div class="feat w6" id="feat18">
-    <div class="num"><span data-i18n="f18_num">18 — 16 LANGUAGES</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n-html="f18_h">The whole app, in <em>sixteen</em> languages.</h3>
-    <p data-i18n-html="f18_p">Not just the menus — every dialog, every message, every tooltip. Pick one and the interface changes <em>on the spot</em>: nothing to restart, nothing to reinstall.</p>
+    <div class="num"><span data-i18n="f18_num">18 — 16 の言語</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n-html="f18_h">アプリのすべてが、<em>16</em> の言語で。</h3>
+    <p data-i18n-html="f18_p">メニューだけではありません — すべてのダイアログ、すべてのメッセージ、すべてのツールチップ。ひとつ選べば、インターフェイスは<em>その場で</em>変わります。再起動も、入れ直しも要りません。</p>
     <div class="feat-mark" data-i18n="f18_mark">PT · BR · EN · US · ES · FR · IT · DE · PL · RU · AR · HI · CN · TW · JA · KO</div>
   </div>
 
@@ -1541,10 +1541,10 @@
        FREE, confirmado por ele a 2026-08-16 — e bate certo com a regra da
          propria pagina: tudo o que e local e gratis. -->
   <div class="feat w6" id="feat19">
-    <div class="num"><span data-i18n="f19_num">19 — THE DISK, IN DETAIL</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f19_h">Click a disk and it says exactly what it is.</h3>
-    <p data-i18n-html="f19_p">Manufacturer, model, firmware and serial number. Platter or solid state — and it says which, because a platter pays a seek penalty. Bus, sector size, partition scheme, the device underneath. What the file system really supports: EFS, per-file compression, hard links, junctions and symbolic links, sparse files, quotas, ACLs, the USN change journal, case sensitivity. And <em>SMART data</em>, when the disk gives it.</p>
-    <div class="feat-mark" data-i18n="f19_mark">Manufacturer · Model · Firmware · Serial · SMART · GPT/MBR · Sector size</div>
+    <div class="num"><span data-i18n="f19_num">19 — ディスクの詳細</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f19_h">ディスクをクリックすれば、それが何なのかを正確に答えます。</h3>
+    <p data-i18n-html="f19_p">メーカー、モデル、ファームウェア、シリアル番号。プラッターか SSD か — シークの差があるので、はっきり言います。接続、セクターサイズ、パーティション方式、その下のデバイス。ファイルシステムが実際に対応しているもの：EFS 暗号化、ファイル単位の圧縮、ハードリンク、ジャンクションとシンボリックリンク、スパースファイル、クォータ、ACL、USN 変更ジャーナル、大文字小文字の区別。そして<em>SMART 情報</em>も、ディスクが出してくれるなら。</p>
+    <div class="feat-mark" data-i18n="f19_mark">メーカー · モデル · ファームウェア · シリアル · SMART · GPT/MBR · セクターサイズ</div>
   </div>
   <!-- Cartoes 20 e 21, 2026-09-10. Entram AQUI, colados ao 19, porque sao
        a mesma familia: a maquina vista de dentro do explorador. Os antigos
@@ -1555,120 +1555,120 @@
           («e uma curiosidade»); o Joao reabriu essa decisao a 10/09, por a
           pagina ter ficado «bastante poderosa e informativa». -->
   <div class="feat w6" id="feat20">
-    <div class="num"><span data-i18n="f20_num">20 — MY MACHINE</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f20_h">Everything the machine knows about itself — and never shows.</h3>
-    <p data-i18n-html="f20_p">Firmware identity and serial numbers, when the machine was built, what is soldered to the board, the memory <em>slot by slot</em>, and how Windows was installed. <em>Read-only</em>: it never goes online and never asks for elevation.</p>
-    <div class="feat-mark" data-i18n="f20_mark">SMBIOS · Firmware · Memory · Devices · Windows install</div>
+    <div class="num"><span data-i18n="f20_num">20 — このパソコン</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f20_h">パソコンが自分について知っていて、決して見せないこと。</h3>
+    <p data-i18n-html="f20_p">ファームウェアの識別情報とシリアル番号、いつ作られたか、基板に直付けされた機器、<em>スロットごと</em>のメモリー、そして Windows がどう入ったか。<em>読み取り専用</em>：ネットにはつながず、管理者権限も求めません。</p>
+    <div class="feat-mark" data-i18n="f20_mark">SMBIOS · ファームウェア · メモリー · デバイス · Windows のインストール</div>
   </div>
 
   <div class="feat w6" id="feat21">
-    <div class="num"><span data-i18n="f21_num">21 — TASK MANAGER</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f21_h">Which program is holding this file?</h3>
-    <p data-i18n-html="f21_p">Windows says the file is open somewhere and never says where. This one knows, because it lives inside the explorer. It also answers three questions the system's own manager doesn't: what runs from your user folder, what is <em>not signed</em>, and which of two copies of the same program is which version. Ending a process asks first — with the name, the PID and the window title — and the ones that would blue-screen the machine have no button at all.</p>
-    <div class="feat-mark" data-i18n="f21_mark">Who's holding it · AppData · Unsigned · Version</div>
+    <div class="num"><span data-i18n="f21_num">21 — タスクマネージャー</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f21_h">このファイルをつかんでいるのは、どのプログラム？</h3>
+    <p data-i18n-html="f21_p">Windows は「ファイルが開かれています」とだけ言い、どこでとは言いません。こちらは分かります — エクスプローラーの中にいるからです。さらに、標準のマネージャーが答えない三つの問いにも答えます：ユーザーフォルダーから動いているものは何か、<em>署名されていない</em>ものはどれか、同じ名前の二つのうちどちらがどのバージョンか。終了は必ず先に確認します — 名前と PID とウィンドウのタイトルつきで — そしてブルースクリーンになるものには、ボタンそのものがありません。</p>
+    <div class="feat-mark" data-i18n="f21_mark">つかんでいるのは誰 · AppData · 未署名 · バージョン</div>
   </div>
 
 
   <div class="feat w12">
-    <div class="num"><span data-i18n="f22_num">22 — REMOTE ACCESS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-    <h3 data-i18n="f22_h">SFTP, FTP/FTPS and WebDAV — the explorer reaches the server.</h3>
-    <p data-i18n-html="f22_p">Connect to SFTP, FTP/FTPS and WebDAV (Nextcloud, ownCloud, NAS, IIS). Browse, preview, upload and download, create folders, rename and copy/move — with <em>byte-level progress</em> and cancel. Edit remote files locally and <em>sync on save</em>. Password or <em>SSH key</em> auth; secrets encrypted with DPAPI.</p>
+    <div class="num"><span data-i18n="f22_num">22 — リモートアクセス</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f22_h">SFTP、FTP/FTPS、WebDAV — エクスプローラーがサーバーまで届きます。</h3>
+    <p data-i18n-html="f22_p">SFTP、FTP/FTPS、WebDAV（Nextcloud、ownCloud、NAS、IIS）へ接続。閲覧、プレビュー、アップロードとダウンロード、フォルダーの作成、名前の変更、コピー / 移動 — <em>バイト単位の進捗</em>とキャンセルつき。リモートのファイルは手元で編集し、<em>保存と同時に同期</em>できます。パスワードまたは <em>SSH 鍵</em>で認証し、秘密は DPAPI で暗号化します。</p>
     <div class="feat-mark" data-i18n="f22_mark">SFTP · FTP/FTPS · WebDAV</div>
     <p class="feat-note">
-      <span data-i18n="f22_free">Free: 1 SFTP/FTP/FTPS connection — browse and preview only. PREMIUM unlocks WebDAV, multiple connections and all operations.</span>
+      <span data-i18n="f22_free">無料：SFTP/FTP/FTPS の接続 1 件 — 閲覧とプレビューのみ。PREMIUM で WebDAV、複数接続、すべての操作が開きます。</span>
     </p>
   </div>
 
   <div class="feat w12" id="feat23">
-    <div class="num"><span data-i18n="f23_num">23 — CLOUDS</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-    <h3 data-i18n="f23_h">Dropbox and OneDrive — your cloud inside the explorer.</h3>
-    <p data-i18n-html="f23_p">Connect to <em>Dropbox</em> and <em>OneDrive</em> via secure OAuth — no passwords stored. Browse, preview, upload and download, create folders, rename and copy/move, like a local folder. Your files never pass through our servers.</p>
+    <div class="num"><span data-i18n="f23_num">23 — クラウド</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f23_h">Dropbox と OneDrive — クラウドをエクスプローラーの中に。</h3>
+    <p data-i18n-html="f23_p">安全な OAuth で <em>Dropbox</em> と <em>OneDrive</em> に接続 — パスワードは保存しません。閲覧、プレビュー、アップロードとダウンロード、フォルダーの作成、名前の変更、コピー / 移動を、ローカルのフォルダーと同じように。ファイルが私たちのサーバーを通ることはありません。</p>
     <div class="feat-mark" data-i18n="f23_mark">Dropbox · OneDrive</div>
     <p class="feat-note">
-      <span data-i18n="f23_premium">PREMIUM: required from the first connection — browsing, preview and all operations.</span>
+      <span data-i18n="f23_premium">PREMIUM：最初の接続から必要です — 閲覧、プレビュー、すべての操作。</span>
     </p>
   </div>
 
   <div class="feat w12" id="feat24">
-    <div class="num"><span data-i18n="f24_num">24 — BOOKS &amp; COMICS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-    <h3 data-i18n="f24_h">Eight book formats — preview and read, without leaving the explorer.</h3>
-    <p data-i18n-html="f24_p">Instant preview of any <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> or <em>.fb2</em>: cover, table of contents and the opening text. Open the full book in its own reader, with chapter navigation, page jump, <em>auto-scroll</em> and your reading position remembered. Comics too: <em>.cbz</em> and <em>.cbr</em> open page by page, without unpacking hundreds of megabytes first.</p>
+    <div class="num"><span data-i18n="f24_num">24 — 書籍とコミック</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f24_h">8 つの書籍フォーマット — エクスプローラーを離れずに、見て、読む。</h3>
+    <p data-i18n-html="f24_p"><em>.epub</em>、<em>.mobi</em>、<em>.azw</em>、<em>.azw3</em>、<em>.prc</em>、<em>.fb2</em> をその場でプレビュー：表紙、目次、書き出しの本文。専用のリーダーで全文を開けば、章の移動、ページの指定、<em>自動スクロール</em>、読みかけの位置の記憶まで。コミックも同じです：<em>.cbz</em> と <em>.cbr</em> は、何百 MB も先に展開せずに 1 ページずつ開きます。</p>
     <div class="feat-mark" data-i18n="f24_mark">EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR</div>
     <p class="feat-note">
-      <span data-i18n="f24_free">Free: preview — cover, contents and a first look inside.</span><br>
-      <span data-i18n="f24_premium">PREMIUM: full reader — navigation, page jump, auto-scroll, page-turn and memory of your last 20 books.</span>
-      <span class="feat-drm" data-i18n="f24_note">Books you own open. Books bought with DRM stay locked to the store that sold them — the app explains why when it finds one.</span>
+      <span data-i18n="f24_free">無料：プレビュー — 表紙、目次、そして中の最初のひと目。</span><br>
+      <span data-i18n="f24_premium">PREMIUM：完全なリーダー — 移動、ページの指定、自動スクロール、ページめくり、直近 20 冊の記憶。</span>
+      <span class="feat-drm" data-i18n="f24_note">自分の本は開きます。DRM つきで買った本は、売った書店に結びついたままです — 見つけたときは、アプリが理由を説明します。</span>
     </p>
   </div>
 
   <div class="feat w12">
-    <div class="num"><span data-i18n="f25_num">25 — DOCUMENT VIEWERS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f25_h">Word, Excel, PowerPoint and more — see without opening anything.</h3>
-    <p data-i18n-html="f25_p">Preview <em>Word (.doc/.docx)</em>, <em>Excel</em>, <em>PowerPoint</em>, <em>RTF</em> and <em>OpenDocument</em> (text, sheet and presentation) right in the pane. Audio and video play in the preview, with a <em>floating window</em> and volume/speed controls. A marker flags files that have a preview; password-protected files are flagged without asking for the password.</p>
-    <div class="feat-mark" data-i18n="f25_mark">Word · Excel · PowerPoint · RTF · OpenDocument · Audio · Video</div>
+    <div class="num"><span data-i18n="f25_num">25 — 書類のビューアー</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f25_h">Word、Excel、PowerPoint など — 何も開かずに見る。</h3>
+    <p data-i18n-html="f25_p"><em>Word（.doc/.docx）</em>、<em>Excel</em>、<em>PowerPoint</em>、<em>RTF</em>、<em>OpenDocument</em>（文書、表計算、プレゼン）をその枠でプレビュー。音声と動画はプレビューの中で再生でき、<em>フローティングウィンドウ</em>と音量 / 速度の操作がつきます。プレビューできるファイルには印がつき、パスワードで守られたファイルは、パスワードを尋ねずに印で知らせます。</p>
+    <div class="feat-mark" data-i18n="f25_mark">Word · Excel · PowerPoint · RTF · OpenDocument · 音声 · 動画</div>
   </div>
 
   <div class="feat w12">
-    <div class="num"><span data-i18n="f26_num">26 — RECORD AUDIO</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f26_h">Record the microphone straight into the folder.</h3>
-    <p data-i18n-html="f26_p">One click records the <em>microphone</em> into the current folder. Pick the microphone, watch the live <em>level meter</em>, adjust the recording volume and save as <em>WAV</em> or <em>M4A/AAC</em>.</p>
-    <div class="feat-mark" data-i18n="f26_mark">Microphone · Level meter · WAV · M4A</div>
+    <div class="num"><span data-i18n="f26_num">26 — 音声を録る</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f26_h">マイクを、そのままフォルダーへ。</h3>
+    <p data-i18n-html="f26_p">ワンクリックで<em>マイク</em>をいまのフォルダーに録音します。マイクを選び、<em>レベルメーター</em>を見ながら録音の音量を整え、<em>WAV</em> か <em>M4A/AAC</em> で保存します。</p>
+    <div class="feat-mark" data-i18n="f26_mark">マイク · レベルメーター · WAV · M4A</div>
   </div>
 
   <div class="feat w12">
-    <div class="num"><span data-i18n="f27_num">27 — RECORD VIDEO</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-    <h3 data-i18n="f27_h">Record the camera straight into the folder.</h3>
-    <p data-i18n-html="f27_p">Live <em>camera</em> preview, with a choice of camera and microphone, resolution and format — <em>MP4</em>, <em>WMV</em> or <em>AVI</em>. Saves into the current folder with one click.</p>
-    <div class="feat-mark" data-i18n="f27_mark">Camera · Microphone · MP4 · WMV · AVI</div>
+    <div class="num"><span data-i18n="f27_num">27 — 映像を録る</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f27_h">カメラを、そのままフォルダーへ。</h3>
+    <p data-i18n-html="f27_p"><em>カメラ</em>のライブプレビューつき。カメラとマイク、解像度、形式を選べます — <em>MP4</em>、<em>WMV</em>、<em>AVI</em>。ワンクリックでいまのフォルダーに保存します。</p>
+    <div class="feat-mark" data-i18n="f27_mark">カメラ · マイク · MP4 · WMV · AVI</div>
     <p class="feat-note">
-      <span data-i18n="f27_premium">Free with a discreet footer watermark. PREMIUM: no watermark.</span>
+      <span data-i18n="f27_premium">無料でも使えます。下に控えめな透かしが入ります。PREMIUM：透かしなし。</span>
     </p>
   </div>
 
   <div class="feat w12">
-    <div class="num"><span data-i18n="f28_num">28 — SCAN</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-    <h3 data-i18n="f28_h">From the scanner into the folder — image or PDF.</h3>
-    <p data-i18n-html="f28_p">Scan from the <em>flatbed</em> or the <em>feeder (ADF)</em>, many sheets at once. Choose the resolution and colour — <em>colour</em>, grayscale or <em>black &amp; white</em>. Save as <em>JPEG/PNG</em> or merge everything into a <em>multi-page PDF</em>, and keep adding sheets to the same PDF.</p>
-    <div class="feat-mark" data-i18n="f28_mark">Flatbed · Feeder (ADF) · Colour · Multi-page PDF</div>
+    <div class="num"><span data-i18n="f28_num">28 — スキャン</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f28_h">スキャナーからフォルダーへ — 画像でも PDF でも。</h3>
+    <p data-i18n-html="f28_p"><em>フラットベッド</em>からも<em>フィーダー（ADF）</em>からも、何枚でも続けて。解像度と色を選べます — <em>カラー</em>、グレースケール、<em>白黒</em>。<em>JPEG/PNG</em> で保存するか、すべてを<em>複数ページの PDF</em> にまとめ、同じ PDF に続けて足していけます。</p>
+    <div class="feat-mark" data-i18n="f28_mark">フラットベッド · フィーダー（ADF） · カラー · 複数ページ PDF</div>
     <p class="feat-note">
-      <span data-i18n="f28_premium">Free: 1 flatbed page, with a watermark. PREMIUM: multiple pages, feeder (ADF) and no watermark.</span>
+      <span data-i18n="f28_premium">無料：フラットベッド 1 ページ、透かしつき。PREMIUM：複数ページ、フィーダー（ADF）、透かしなし。</span>
     </p>
   </div>
 
   <div class="feat w12">
-    <div class="num"><span data-i18n="f29_num">29 — ARCHIVES AS FOLDERS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a></div>
-    <h3 data-i18n="f29_h">Open ZIP, RAR, 7z and TAR like folders.</h3>
-    <p data-i18n-html="f29_p">Double-click (or <em>Browse inside</em>) to enter the archive — browse the contents, <em>preview</em> and <em>copy files out</em> without extracting everything. Read-only; <em>Open with…</em> still opens them in WinRAR/WinZip/7-Zip.</p>
-    <div class="feat-mark" data-i18n="f29_mark">ZIP · RAR · 7z · TAR · Copy files out</div>
+    <div class="num"><span data-i18n="f29_num">29 — 書庫をフォルダーとして</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f29_h">ZIP、RAR、7z、TAR をフォルダーのように開く。</h3>
+    <p data-i18n-html="f29_p">ダブルクリック（または<em>中を見る</em>）で書庫に入り、中身を眺め、<em>プレビュー</em>し、全部を展開せずに<em>ファイルを取り出せます</em>。読み取り専用です。<em>プログラムから開く…</em>を使えば、これまでどおり WinRAR / WinZip / 7-Zip で開きます。</p>
+    <div class="feat-mark" data-i18n="f29_mark">ZIP · RAR · 7z · TAR · ファイルの取り出し</div>
   </div>
 
   <div class="feat w12" id="feat30">
-    <div class="num"><span data-i18n="f30_num">30 — RECORD SCREEN</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-    <h3 data-i18n="f30_h">Record the screen straight into the folder — with an optional camera.</h3>
-    <p data-i18n-html="f30_p">Pick a <em>region of any monitor</em> (or the whole screen) and record to <em>MP4</em> with the <em>microphone</em>. Add the <em>camera</em>: switch screen⇄camera with <em>transitions</em> (fade, wipe, slide, mosaic), show it as <em>PiP</em> in a corner, or side by side in <em>split screen</em>.</p>
-    <div class="feat-mark" data-i18n="f30_mark">Region · Microphone · System sound · Camera · PiP · Split screen · Transitions · MP4</div>
+    <div class="num"><span data-i18n="f30_num">30 — 画面を録る</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f30_h">画面を、そのままフォルダーへ — カメラも添えられます。</h3>
+    <p data-i18n-html="f30_p"><em>どのモニターの領域でも</em>（または画面全体を）選び、<em>マイク</em>とともに <em>MP4</em> で録画します。<em>カメラ</em>を足せば、<em>切り替え効果</em>（フェード、ワイプ、スライド、モザイク）つきで画面⇄カメラを入れ替え、隅に <em>PiP</em> で出し、あるいは<em>画面分割</em>で並べられます。</p>
+    <div class="feat-mark" data-i18n="f30_mark">領域 · マイク · システム音 · カメラ · PiP · 画面分割 · 切り替え効果 · MP4</div>
     <p class="feat-note">
-      <span data-i18n="f30_premium">Free: watermark + 15 s and no sound. PREMIUM: no watermark, no time limit and with sound (microphone + system).</span>
+      <span data-i18n="f30_premium">無料：透かし + 15 秒、音なし。PREMIUM：透かしなし、時間の制限なし、音あり（マイク + システム）。</span>
     </p>
   </div>
 
   <div class="feat w12" id="feat31">
-    <div class="num"><span data-i18n="f31_num">31 — BRANDING CARDS</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-    <h3 data-i18n="f31_h">Intro and end cards for your videos — right in the recording.</h3>
-    <p data-i18n-html="f31_p">Give your recordings (screen and camera) an <em>intro card</em>, a permanent <em>text banner</em> and a credits-style <em>end card</em> (up to 10 lines). <em>5 independent models</em>, each with 3 presentations, logo, background colour and an <em>episode badge</em> — built for a consistent video series.</p>
-    <div class="feat-mark" data-i18n="f31_mark">Intro · Banner · End (credits) · 5 models · Logo · Episode badge</div>
+    <div class="num"><span data-i18n="f31_num">31 — ブランドカード</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f31_h">動画のオープニングとエンディング — 録画の中で。</h3>
+    <p data-i18n-html="f31_p">録画（画面もカメラも）に<em>オープニングカード</em>、消えない<em>テキストの帯</em>、クレジット風の<em>エンドカード</em>（最大 10 行）を添えられます。<em>独立した 5 つのモデル</em>があり、それぞれ 3 通りの見せ方、ロゴ、背景色、<em>エピソード番号</em>を持ちます — 揃った見た目のシリーズのために。</p>
+    <div class="feat-mark" data-i18n="f31_mark">オープニング · 帯 · エンド（クレジット） · 5 モデル · ロゴ · エピソード番号</div>
     <p class="feat-note">
-      <span data-i18n="f31_premium">PREMIUM. Discreet “Made with ExplorerFocus” signature on the end card.</span>
+      <span data-i18n="f31_premium">PREMIUM。エンドカードに「Made with ExplorerFocus」の控えめな署名が入ります。</span>
     </p>
   </div>
 
   <div class="feat w12" id="feat32">
-    <div class="num"><span data-i18n="f32_num">32 — VOICE OVER</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-    <h3 data-i18n="f32_h">Narrate your videos after recording — even on your own.</h3>
-    <p data-i18n-html="f32_p">Record the screen <em>silently</em>, then in a <em>dedicated box</em> play the video while you <em>narrate over it</em>. The narration lands in a separate file; add <em>background music</em>, balance the volumes (so the music won't drown the voice) and <em>generate the final video</em> with all three sources.</p>
-    <div class="feat-mark" data-i18n="f32_mark">Record silent · Narrate over the video · Music · Volumes · Video + narration + music → final</div>
+    <div class="num"><span data-i18n="f32_num">32 — ボイスオーバー</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f32_h">録ったあとで、ひとりでもナレーションを。</h3>
+    <p data-i18n-html="f32_p">画面を<em>無音で</em>録画し、<em>専用の画面</em>で動画を再生しながら<em>その上に語ります</em>。ナレーションは別のファイルに残るので、<em>BGM</em> を足し、音量の釣り合いを取り（音楽が声を消さないように）、3 つの音源から<em>最終的な動画を作れます</em>。</p>
+    <div class="feat-mark" data-i18n="f32_mark">無音で録画 · 動画に重ねて語る · 音楽 · 音量 · 動画 + ナレーション + 音楽 → 完成</div>
     <p class="feat-note">
-      <span data-i18n="f32_premium">PREMIUM. The video and narration stay as separate files; only “Generate final” creates the mixed video.</span>
+      <span data-i18n="f32_premium">PREMIUM。動画とナレーションは別々のファイルのままです。混ぜた動画を作るのは「最終版を生成」だけです。</span>
     </p>
   </div>
 
@@ -1678,51 +1678,51 @@
 <section class="shortcuts" id="shortcuts">
   <div class="shortcuts-inner">
     <div class="shortcuts-side">
-      <div class="section-num" data-i18n="sc_num">§ 02 · Shortcuts</div>
-      <h2 data-i18n-html="sc_title">Hands on<br>the <em>home row</em>.</h2>
-      <p data-i18n="sc_blurb">Every important operation has a shortcut. Mouse-free whenever possible — comfort for long sessions.</p>
+      <div class="section-num" data-i18n="sc_num">§ 02 · ショートカット</div>
+      <h2 data-i18n-html="sc_title">手は<em>ホームポジション</em><br>のままで。</h2>
+      <p data-i18n="sc_blurb">大事な操作にはすべてショートカットがあります。できるかぎりマウスなしで — 長い作業のための心配りです。</p>
     </div>
 
     <div class="kbd-list">
       <div class="kbd-row">
         <div class="keys"><span class="kbd">F2</span></div>
-        <div class="desc" data-i18n-html="sc_f2">Rename the focused item <em>— file, folder, or tab</em></div>
+        <div class="desc" data-i18n-html="sc_f2">選んでいる項目の名前を変更 <em>— ファイル、フォルダー、タブ</em></div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Enter</span></div>
-        <div class="desc" data-i18n="sc_enter">Open the file with the associated app</div>
+        <div class="desc" data-i18n="sc_enter">関連づけられたアプリでファイルを開く</div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Delete</span></div>
-        <div class="desc" data-i18n-html="sc_del">Move to Recycle Bin <em>— via FileOperationsManager</em></div>
+        <div class="desc" data-i18n-html="sc_del">ごみ箱へ移動 <em>— FileOperationsManager 経由</em></div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">F5</span></div>
-        <div class="desc" data-i18n="sc_f5">Refresh current folder listing</div>
+        <div class="desc" data-i18n="sc_f5">いまのフォルダーの一覧を更新</div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">F</span><span class="kbd">/</span><span class="kbd">Ctrl</span><span class="kbd">L</span></div>
-        <div class="desc" data-i18n="sc_find">Focus the local search box</div>
+        <div class="desc" data-i18n="sc_find">ローカル検索の入力欄へ</div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">T</span></div>
-        <div class="desc" data-i18n="sc_newtab">New profile (new tab)</div>
+        <div class="desc" data-i18n="sc_newtab">新しいプロファイル（新しいタブ）</div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">W</span></div>
-        <div class="desc" data-i18n="sc_closetab">Close current tab</div>
+        <div class="desc" data-i18n="sc_closetab">いまのタブを閉じる</div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">Tab</span></div>
-        <div class="desc" data-i18n-html="sc_nexttab">Next tab <em>— Shift reverses</em></div>
+        <div class="desc" data-i18n-html="sc_nexttab">次のタブ <em>— Shift で逆順</em></div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Ctrl</span><span class="kbd">1</span> ... <span class="kbd">9</span></div>
-        <div class="desc" data-i18n="sc_jumptab">Jump to the Nth tab</div>
+        <div class="desc" data-i18n="sc_jumptab">N 番目のタブへ移動</div>
       </div>
       <div class="kbd-row">
         <div class="keys"><span class="kbd">Shift</span>+drag</div>
-        <div class="desc" data-i18n-html="sc_shiftdrag">Force <em>Move</em> without asking</div>
+        <div class="desc" data-i18n-html="sc_shiftdrag">尋ねずに<em>移動</em>を強制</div>
       </div>
     </div>
   </div>
@@ -1730,86 +1730,86 @@
 
 <!-- STACK -->
 <section class="stack" id="stack">
-  <div class="section-num" data-i18n="st_num">§ 03 · Stack</div>
-  <h2 data-i18n-html="st_title">Built with <em>serious parts</em>.</h2>
-  <p data-i18n="st_blurb">Each dependency was chosen for maturity, size, or the absence of reasonable alternatives. No framework-of-the-day.</p>
-  <p class="stack-licences" data-i18n-html="st_licences">The <strong>complete list travels inside the program</strong>, with every author and the full licence texts — under <em>About → Third-party licences</em>.</p>
+  <div class="section-num" data-i18n="st_num">§ 03 · スタック</div>
+  <h2 data-i18n-html="st_title"><em>まじめな部品</em>で組まれています。</h2>
+  <p data-i18n="st_blurb">どの依存も、成熟しているから、小さいから、あるいは他にまともな選択肢がないから選ばれました。流行りものはありません。</p>
+  <p class="stack-licences" data-i18n-html="st_licences"><strong>完全な一覧はプログラムの中を旅します</strong>。すべての作者とライセンス全文つきで — <em>バージョン情報 → サードパーティのライセンス</em>にあります。</p>
 
 
   <div class="stack-grid">
     <div class="stack-cell">
       <div class="ic">.NET</div>
       <h4>net10.0-windows</h4>
-      <p data-i18n="st_dotnet">Classic WPF, no WinUI or MAUI. Compatible with Windows 10 and 11.</p>
+      <p data-i18n="st_dotnet">WinUI でも MAUI でもない、昔ながらの WPF。Windows 10 と 11 で動きます。</p>
     </div>
     <div class="stack-cell">
       <div class="ic">MVVM</div>
       <h4>CommunityToolkit.Mvvm</h4>
-      <p data-i18n="st_mvvm">ObservableObject, ObservableProperty, RelayCommand — generated by source generators.</p>
+      <p data-i18n="st_mvvm">ObservableObject、ObservableProperty、RelayCommand — ソースジェネレーターが生成します。</p>
     </div>
     <div class="stack-cell">
-      <div class="ic" data-i18n="st_preview_ic">PREVIEW</div>
+      <div class="ic" data-i18n="st_preview_ic">プレビュー</div>
       <h4>AvalonEdit · Markdig · WebView2</h4>
-      <p data-i18n="st_preview">Syntax highlight, markdown renderer, and embedded Edge engine for PDF.</p>
+      <p data-i18n="st_preview">構文の色分け、Markdown のレンダラー、PDF のための組み込み Edge エンジン。</p>
     </div>
     <div class="stack-cell">
       <div class="ic">UTIL</div>
       <h4>Microsoft.VisualBasic.FileIO</h4>
-      <p data-i18n-html="st_util">For sending to the <em>Recycle Bin</em> — the only honest way, and it works.</p>
+      <p data-i18n-html="st_util"><em>ごみ箱</em>へ送るために — 唯一の正直なやり方で、ちゃんと動きます。</p>
     </div>
     <div class="stack-cell">
-      <div class="ic" data-i18n="st_remote_ic">REMOTE</div>
+      <div class="ic" data-i18n="st_remote_ic">リモート</div>
       <h4>SSH.NET · FluentFTP</h4>
-      <p data-i18n="st_remote">SFTP through SSH.NET; FTP and FTPS through FluentFTP. Mature, and boring in the good way.</p>
+      <p data-i18n="st_remote">SFTP は SSH.NET、FTP と FTPS は FluentFTP。成熟していて、いい意味で退屈です。</p>
     </div>
     <div class="stack-cell">
-      <div class="ic" data-i18n="st_nosdk_ic">NO SDK</div>
+      <div class="ic" data-i18n="st_nosdk_ic">SDK なし</div>
       <h4>HttpClient</h4>
-      <p data-i18n="st_nosdk">WebDAV, Dropbox and OneDrive are written by hand against their HTTP APIs. No vendor SDK to age badly.</p>
+      <p data-i18n="st_nosdk">WebDAV、Dropbox、OneDrive は、それぞれの HTTP API に対して手で書いています。古びていくベンダー SDK はありません。</p>
     </div>
     <div class="stack-cell">
-      <div class="ic" data-i18n="st_capture_ic">CAPTURE</div>
+      <div class="ic" data-i18n="st_capture_ic">キャプチャ</div>
       <h4>NAudio · NTwain</h4>
-      <p data-i18n="st_capture">Microphone and system sound through NAudio and WASAPI; the scanner through NTwain, the TWAIN standard.</p>
+      <p data-i18n="st_capture">マイクとシステム音は NAudio と WASAPI、スキャナーは TWAIN 標準の NTwain。</p>
     </div>
     <div class="stack-cell">
-      <div class="ic" data-i18n="st_archives_ic">ARCHIVES</div>
+      <div class="ic" data-i18n="st_archives_ic">書庫</div>
       <h4>SharpCompress</h4>
-      <p data-i18n="st_archives">ZIP, RAR, 7z and TAR read in place, so an archive opens like a folder.</p>
+      <p data-i18n="st_archives">ZIP、RAR、7z、TAR はその場で読むので、書庫がフォルダーのように開きます。</p>
     </div>
   </div>
 </section>
 
 <!-- PREMIUM -->
 <section class="premium" id="premium">
-  <div class="section-num" data-i18n="pr_num">§ 04 · Free and Premium</div>
-  <h2 data-i18n-html="pr_title">Everything local is <em>free</em>.</h2>
-  <p class="prem-blurb" data-i18n="pr_blurb">It always has been and always will be: no subscription, no account, no ads. Premium is a one-time donation — a small reward for the nights and days spent building very specific, technically demanding features. I'm not in this for the money: I'm in it for the ideas that come along. Most people will never miss Premium — and that's how it should be.</p>
+  <div class="section-num" data-i18n="pr_num">§ 04 · 無料と PREMIUM</div>
+  <h2 data-i18n-html="pr_title">ローカルの機能は、すべて<em>無料</em>です。</h2>
+  <p class="prem-blurb" data-i18n="pr_blurb">これまでもそうでしたし、これからもそうです：定期課金なし、アカウントなし、広告なし。PREMIUM は一度きりの寄付です — とても限られた、技術的に難しい機能に費やした昼と夜への、ささやかなお礼。お金のためにやっているのではありません：途中で生まれてくる着想のためです。ほとんどの人は PREMIUM がなくて困ることはありません — それでいいのです。</p>
 
   <div class="prem-grid">
     <div class="prem-card" id="free">
-      <h4 data-i18n="pr_free_h">Free</h4>
-      <span class="prem-tag" data-i18n="pr_free_tag">forever · no account</span>
-      <ul data-i18n-html="pr_free_list"><li>Profiles, configurable trees, multi-pattern search</li><li>Preview: code, PDF, Word/Excel, Markdown, images, books</li><li>File operations with real progress, speed, ETA, history and conflicts</li><li>Terminals, per-extension app associations, archives as folders</li><li>Complete dark theme, 16 languages, auto-updates</li><li>Audio recording (microphone)</li><li><strong>1 remote connection</strong> (SFTP/FTP/FTPS) — browse and preview</li></ul>
+      <h4 data-i18n="pr_free_h">無料</h4>
+      <span class="prem-tag" data-i18n="pr_free_tag">ずっと · アカウント不要</span>
+      <ul data-i18n-html="pr_free_list"><li>プロファイル、自由に組めるツリー、複数パターンの検索</li><li>プレビュー：コード、PDF、Word/Excel、Markdown、画像、書籍</li><li>本当の進捗、速度、残り時間、履歴、競合の処理つきのファイル操作</li><li>ターミナル、拡張子ごとのアプリ、フォルダーとして開く書庫</li><li>隅々までダークテーマ、16 の言語、自動更新</li><li>音声の録音（マイク）</li><li><strong>リモート接続 1 件</strong>（SFTP/FTP/FTPS） — 閲覧とプレビュー</li></ul>
     </div>
 
     <div class="prem-card is-prem">
-      <h4 data-i18n="pr_prem_h">Premium</h4>
-      <span class="prem-tag" data-i18n="pr_prem_tag">one-time €19.99 donation · per machine</span>
-      <ul data-i18n-html="pr_prem_list"><li><strong>Full remote access</strong>: multiple connections, all operations, WebDAV, Dropbox, OneDrive</li><li>Screen recording <strong>with no watermark, no time limit and with sound</strong></li><li>Video recording without watermark</li><li>Audio mixing microphone + system sound</li><li>Multi-page scanning with document feeder (ADF)</li><li>Full book reader — EPUB, Kindle formats, FB2 and comics</li><li>Intro/end cards and text banner on recordings</li></ul>
+      <h4 data-i18n="pr_prem_h">PREMIUM</h4>
+      <span class="prem-tag" data-i18n="pr_prem_tag">一度きりの €19.99 の寄付 · 1 台につき</span>
+      <ul data-i18n-html="pr_prem_list"><li><strong>リモートアクセスのすべて</strong>：複数接続、すべての操作、WebDAV、Dropbox、OneDrive</li><li>画面の録画が<strong>透かしなし、時間の制限なし、音あり</strong></li><li>透かしなしの映像の録画</li><li>マイク + システム音のミキシング</li><li>ドキュメントフィーダー（ADF）での複数ページのスキャン</li><li>完全な書籍リーダー — EPUB、Kindle 系、FB2、コミック</li><li>録画のオープニング / エンドカードとテキストの帯</li></ul>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo
            das duas colunas, e não se percebia a que lado pertencia. -->
       <div class="prem-how">
-        <h4 data-i18n="pr_how_h">How to get it</h4>
-        <ol data-i18n-html="pr_how_list"><li>In the app, click the <strong>PREMIUM</strong> button (top right).</li><li>Enter the email address — the app copies the <strong>Machine ID</strong> to the clipboard.</li><li>PayPal opens: minimum €19.99 donation.</li><li>As soon as PayPal confirms the donation, I send the <strong>activation key by email</strong>.</li><li>Paste the key into the app. The licence is tied to that machine.</li></ol>
-        <p class="prem-note" data-i18n-html="pr_note"><strong>Note:</strong> the key is sent by hand, by me — so it may not be instant. PayPal shows up under <strong>LogViewer</strong>, the other project from the same house (PayPal only allows one destination per account); the page confirms I'm the author of both.</p>
+        <h4 data-i18n="pr_how_h">入手の方法</h4>
+        <ol data-i18n-html="pr_how_list"><li>アプリの右上にある <strong>PREMIUM</strong> ボタンを押します。</li><li>メールアドレスを入れると、アプリが <strong>Machine ID</strong> をクリップボードにコピーします。</li><li>PayPal が開きます：最低 €19.99 の寄付。</li><li>PayPal が寄付を確認しだい、<strong>ライセンスキーをメールで</strong>お送りします。</li><li>キーをアプリに貼り付けます。ライセンスはその 1 台に結びつきます。</li></ol>
+        <p class="prem-note" data-i18n-html="pr_note"><strong>注：</strong>キーは私が手で送るので、すぐには届かないことがあります。PayPal には <strong>LogViewer</strong> の名前が出ます。同じ作者のもうひとつのプロジェクトです（PayPal はアカウントごとに宛先をひとつしか許しません）。そのページで、どちらも私が作者であることを確かめられます。</p>
       </div>
     </div>
   </div>
 
-  <p class="prem-idea" data-i18n-html="pr_idea"><strong>Got a good idea?</strong> If your suggestion makes ExplorerFocus better, I'll give you full Premium access. Write to <a href="mailto:NunexmBrothers@gmail.com">NunexmBrothers@gmail.com</a>.</p>
+  <p class="prem-idea" data-i18n-html="pr_idea"><strong>いい考えがありますか？</strong> その提案が ExplorerFocus をよくするものなら、PREMIUM のすべてを差し上げます。<a href="mailto:NunexmBrothers@gmail.com">NunexmBrothers@gmail.com</a> までどうぞ。</p>
 </section>
 
 <!-- FOOTER -->
@@ -1820,30 +1820,30 @@
         <svg class="brand-mark"><use href="#logo"/></svg>
         <span class="brand-name">Explorer<em>Focus</em></span>
       </div>
-      <p class="footer-tagline" data-i18n="ft_tagline">The minimal explorer for people who always work in the same places — and want the tool to know it.</p>
+      <p class="footer-tagline" data-i18n="ft_tagline">いつも同じ場所で働く人のための、最小限のエクスプローラー — その道具に、それを分かっていてほしい人のために。</p>
     </div>
 
     <div class="footer-col">
-      <h5 data-i18n="ft_get">Get it</h5>
-      <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.exe"><span data-i18n="ft_ch_standalone">Standalone (.exe)</span></a>
-      <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip" title="Para organizações que bloqueiam o download de .exe"><span data-i18n="ft_ch_portable">Standalone (.zip)</span></a>
-      <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases" target="_blank" rel="noopener" data-i18n="ft_releases">Releases</a>
+      <h5 data-i18n="ft_get">入手する</h5>
+      <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.exe"><span data-i18n="ft_ch_standalone">単体版（.exe）</span></a>
+      <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip" title="Para organizações que bloqueiam o download de .exe"><span data-i18n="ft_ch_portable">単体版（.zip）</span></a>
+      <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases" target="_blank" rel="noopener" data-i18n="ft_releases">リリース</a>
     </div>
 
     <div class="footer-col">
-      <h5 data-i18n="ft_project">Project</h5>
-      <a href="#features" data-i18n="nav_features">Features</a>
-      <a href="#shortcuts" data-i18n="nav_shortcuts">Shortcuts</a>
-      <a href="#stack" data-i18n="nav_stack">Stack</a>
-      <a href="#premium" data-i18n="nav_premium">Premium</a>
-      <a href="dropbox-flow.html" data-i18n="nav_guide">How it works</a>
-      <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+      <h5 data-i18n="ft_project">プロジェクト</h5>
+      <a href="#features" data-i18n="nav_features">機能</a>
+      <a href="#shortcuts" data-i18n="nav_shortcuts">ショートカット</a>
+      <a href="#stack" data-i18n="nav_stack">スタック</a>
+      <a href="#premium" data-i18n="nav_premium">PREMIUM</a>
+      <a href="../dropbox-flow.html" data-i18n="nav_guide">使い方</a>
+      <a href="../privacy.html" data-i18n="nav_privacy">プライバシー</a>
     </div>
   </div>
 
   <div class="footer-baseline">
     <span>© 2026 <span class="brand-mb">mBrothers</span> · v1.2.26 · WPF · net10.0-windows · single-file</span>
-    <span data-i18n="ft_baseline">designed for the daily grind</span>
+    <span data-i18n="ft_baseline">日々の仕事のために設計</span>
     <span id="viewCounter" hidden title="Visitas à página"></span>
   </div>
 
@@ -1853,11 +1853,11 @@
        procurar na página com Ctrl+F.
        ⚠ NÃO confundir com as 6 línguas do SITE (o seletor lá em cima). -->
   <div class="footer-langs">
-    <span data-i18n="ft_langs_h">App interface</span>
+    <span data-i18n="ft_langs_h">アプリの表示言語</span>
     <span class="footer-langs-list">PT · BR · EN · US · ES · FR · IT · DE · PL · RU · AR · HI · CN · TW · JA · KO</span>
   </div>
 
-  <div class="mb-credit" data-i18n-html="mb_credit">An <a href="https://nunex-mbrothers.github.io/mBrothers/" target="_blank" rel="noopener">mBrothers</a> product<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
+  <div class="mb-credit" data-i18n-html="mb_credit"><a href="https://nunex-mbrothers.github.io/mBrothers/" target="_blank" rel="noopener">mBrothers</a> の製品<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
 </footer>
 
 <div class="ef-modal" id="verifyModal" role="dialog" aria-modal="true" aria-labelledby="verifyModalTitle">
@@ -1867,49 +1867,49 @@
     <div class="ef-card-hd">
       <span class="ef-card-hd-ic" aria-hidden="true">🛡️</span>
       <div>
-        <p class="ef-card-hd-t" id="verifyModalTitle" data-i18n="card_title">A warning from Windows? Check which version you have.</p>
-        <p class="ef-card-hd-p" data-i18n-html="card_intro">ExplorerFocus is digitally signed as of version <strong>1.2.23</strong> (18 August 2026). The signature is recent, so Windows may still ask you to confirm when opening: it takes a while to recognise a new publisher, and it isn't a problem with the file. A copy from <strong>before</strong> 1.2.23, on the other hand, isn't signed and may stop opening — in that case don't wait for the automatic update, which lives inside the app and can't run either. Download it again from this page.</p>
+        <p class="ef-card-hd-t" id="verifyModalTitle" data-i18n="card_title">Windows の警告が出ましたか？お使いのバージョンをご確認ください。</p>
+        <p class="ef-card-hd-p" data-i18n-html="card_intro">ExplorerFocus はバージョン <strong>1.2.23</strong>（2026年8月18日）から電子署名されています。署名は新しいため、開くときに Windows が確認を求めることがあります。新しい発行元が認識されるまでには時間がかかるもので、ファイルの問題ではありません。一方、<strong>1.2.23 より前</strong>のコピーは署名されておらず、開かなくなることがあります。その場合は自動更新を待たないでください — 更新機能はアプリの中にあり、アプリが起動しなければ動きません。このページから再度ダウンロードしてください。</p>
       </div>
     </div>
 
     <div class="ef-sec">
-      <p class="ef-sec-h" data-i18n="card_open_h">Open the program</p>
-      <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_open_1">On the <em>"Windows protected your PC"</em> notice, click <strong>More info</strong>.</span></div>
-      <div class="ef-step"><span class="ef-num">2</span><span data-i18n-html="card_open_2">Click <strong>Run anyway</strong>.</span></div>
+      <p class="ef-sec-h" data-i18n="card_open_h">プログラムを開く</p>
+      <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_open_1"><em>「Windows によって PC が保護されました」</em>の画面で、<strong>詳細情報</strong>をクリックします。</span></div>
+      <div class="ef-step"><span class="ef-num">2</span><span data-i18n-html="card_open_2"><strong>実行</strong>をクリックします。</span></div>
     </div>
 
     <div class="ef-sec ef-sec-top">
-      <p class="ef-sec-h" data-i18n="card_pin_h">Pinned it to the taskbar and it won't open?</p>
-      <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_pin_1">Right-click <code>ExplorerFocus.exe</code> → <strong>Properties</strong>.</span></div>
-      <div class="ef-step"><span class="ef-num">2</span><span data-i18n-html="card_pin_2">Tick <strong>Unblock</strong> (at the bottom) → <strong>OK</strong>, then pin it again.</span></div>
+      <p class="ef-sec-h" data-i18n="card_pin_h">タスクバーに固定したのに開きませんか？</p>
+      <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_pin_1"><code>ExplorerFocus.exe</code> を右クリック → <strong>プロパティ</strong>。</span></div>
+      <div class="ef-step"><span class="ef-num">2</span><span data-i18n-html="card_pin_2">下のほうにある<strong>許可する</strong>にチェック → <strong>OK</strong>。そのうえで、もう一度固定します。</span></div>
     </div>
 
     <div class="ef-sec ef-sec-top">
-      <p class="ef-sec-h"><span data-i18n="card_verify_h">Verify the file</span> <span class="ef-opt" data-i18n="card_verify_opt">— optional</span></p>
-      <p class="ef-sec-sub" data-i18n-html="card_verify_intro">Only if you want to be absolutely sure you downloaded the official file, unaltered. Pick <strong>one</strong> of the two methods.</p>
+      <p class="ef-sec-h"><span data-i18n="card_verify_h">ファイルを検証する</span> <span class="ef-opt" data-i18n="card_verify_opt">— 任意</span></p>
+      <p class="ef-sec-sub" data-i18n-html="card_verify_intro">公式ファイルを改変なしでダウンロードしたと、どうしても確かめたい場合だけ。2 つの方法のうち<strong>どちらか</strong>を選んでください。</p>
 
-      <div class="ef-find" data-i18n-html="card_find">First, find the file: open the Windows <strong>File Explorer</strong> (the yellow folder on the taskbar, or <span class="efkbd">⊞ Win</span> + <span class="efkbd">E</span>) and click <strong>Downloads</strong> on the left — that's where <code>ExplorerFocus.exe</code> lands when you download it. Do this in File Explorer, <strong>not in the browser</strong>.</div>
+      <div class="ef-find" data-i18n-html="card_find">まずファイルの場所を開きます。Windows の<strong>エクスプローラー</strong>（タスクバーの黄色いフォルダー、または <span class="efkbd">⊞ Win</span> + <span class="efkbd">E</span>）を開き、左の<strong>ダウンロード</strong>をクリック — <code>ExplorerFocus.exe</code> が届くのはそこです。これは<strong>ブラウザーではなく</strong>、エクスプローラーで行ってください。</div>
 
       <div class="ef-method">
-        <p class="ef-method-h" data-i18n="card_mA_h">Method A — PowerShell</p>
-        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mA_1">In the File Explorer window at <strong>Downloads</strong>, hold <span class="efkbd">Shift</span> and right-click an empty area → <strong>Open PowerShell window here</strong>.</span></div>
-        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Paste this command and press Enter:</span></div>
+        <p class="ef-method-h" data-i18n="card_mA_h">方法 A — PowerShell</p>
+        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mA_1"><strong>ダウンロード</strong>を開いたエクスプローラーの何もない場所で、<span class="efkbd">Shift</span> を押しながら右クリック → <strong>PowerShell ウィンドウをここに開く</strong>。</span> and right-click an empty area → <strong>Open PowerShell window here</strong>.</span></div>
+        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">次のコマンドを貼り付けて Enter を押します。</span></div>
         <div class="ef-cmd"><code>Get-FileHash .\ExplorerFocus.exe</code><button class="ef-copy" type="button" data-copy="Get-FileHash .\ExplorerFocus.exe" aria-label="Copiar comando">⧉</button></div>
-        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mA_3">Compare the SHA256 value shown with the one below.</span></div>
+        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mA_3">表示された SHA256 の値を、下の値と見比べます。</span></div>
       </div>
 
       <div class="ef-method">
-        <p class="ef-method-h" data-i18n="card_mB_h">Method B — Command line (cmd)</p>
-        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mB_1">In the File Explorer window at <strong>Downloads</strong>, click the <strong>address bar</strong> (at the top, where the folder path appears), type <code>cmd</code> and press <strong>Enter</strong>.</span></div>
-        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Paste this command and press Enter:</span></div>
+        <p class="ef-method-h" data-i18n="card_mB_h">方法 B — コマンドライン（cmd）</p>
+        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mB_1"><strong>ダウンロード</strong>を開いたエクスプローラーで、<strong>アドレスバー</strong>（上のほう、フォルダーのパスが出るところ）をクリックし、<code>cmd</code> と入力して <strong>Enter</strong> を押します。</span></div>
+        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">次のコマンドを貼り付けて Enter を押します。</span></div>
         <div class="ef-cmd"><code>certutil -hashfile ExplorerFocus.exe SHA256</code><button class="ef-copy" type="button" data-copy="certutil -hashfile ExplorerFocus.exe SHA256" aria-label="Copiar comando">⧉</button></div>
-        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mB_3">Compare the hash line with the one below.</span></div>
+        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mB_3">表示されたハッシュの行を、下の値と見比べます。</span></div>
       </div>
 
       <div class="ef-hashbox">
-        <p class="ef-hashbox-note"><span data-i18n-html="card_hash_note">It should match this value <span class="efmuted">(upper/lowercase doesn't matter)</span>:</span> <span class="ef-hashbox-ver js-ver"></span></p>
+        <p class="ef-hashbox-note"><span data-i18n-html="card_hash_note">この値と一致するはずです <span class="efmuted">（大文字と小文字は関係ありません）</span>：</span>:</span> <span class="ef-hashbox-ver js-ver"></span></p>
         <p class="ef-hashbox-val js-sha">—</p>
-        <p class="ef-hashbox-ok"><span aria-hidden="true">✓</span> <span data-i18n="card_hash_ok">Match? It's the official file, unaltered.</span></p>
+        <p class="ef-hashbox-ok"><span aria-hidden="true">✓</span> <span data-i18n="card_hash_ok">一致しましたか？ それは改変のない公式ファイルです。</span></p>
       </div>
     </div>
   </div>
@@ -1918,40 +1918,40 @@
 <div class="ef-modal" id="shaModal" role="dialog" aria-modal="true" aria-labelledby="shaModalTitle">
   <div class="ef-card">
     <button class="ef-card-x" type="button" aria-label="Fechar">✕</button>
-    <p class="ef-sha-title" id="shaModalTitle" data-i18n="sha_title">What is SHA-256?</p>
-    <p class="ef-prose" data-i18n-html="sha_p1">Think of it as the file's <strong>fingerprint</strong>. An algorithm reads every byte of <code>ExplorerFocus.exe</code> and boils them down to a <strong>64-character</strong> code (letters A–F and digits). That code is the SHA-256.</p>
-    <p class="ef-prose" data-i18n-html="sha_p2">It has two properties that make it useful:</p>
+    <p class="ef-sha-title" id="shaModalTitle" data-i18n="sha_title">SHA-256 とは？</p>
+    <p class="ef-prose" data-i18n-html="sha_p1">ファイルの<strong>指紋</strong>だと考えてください。アルゴリズムが <code>ExplorerFocus.exe</code> の全バイトを読み、<strong>64 文字</strong>のコード（A–F の英字と数字）に煮つめます。それが SHA-256 です。</p>
+    <p class="ef-prose" data-i18n-html="sha_p2">役に立つ理由は 2 つあります。</p>
     <ul class="ef-list">
-      <li data-i18n-html="sha_li1">The <strong>same file</strong> always produces the <strong>same</strong> code.</li>
-      <li data-i18n-html="sha_li2">If <strong>a single bit</strong> changes — a corrupted download, or someone tampering with the file — the code comes out <strong>completely different</strong>.</li>
+      <li data-i18n-html="sha_li1"><strong>同じファイル</strong>なら、いつでも<strong>同じ</strong>コードになります。</li>
+      <li data-i18n-html="sha_li2"><strong>1 ビット</strong>でも変われば — ダウンロードの破損でも、誰かの改ざんでも — コードは<strong>まったく別のもの</strong>になります。</li>
     </ul>
-    <p class="ef-prose" data-i18n-html="sha_p3">So verifying is simple: if the code you <strong>compute</strong> on your file <strong>matches</strong> the one <strong>published here</strong>, you can be sure it's exactly the official file, byte for byte — no corruption, no changes. The code can't be reversed: it's only for comparison and never reveals the contents.</p>
+    <p class="ef-prose" data-i18n-html="sha_p3">ですから確認は簡単です。手元のファイルから<strong>計算した</strong>コードが、<strong>ここに載っている</strong>ものと<strong>一致すれば</strong>、それは公式ファイルそのもの、1 バイトの狂いもないと分かります — 破損なし、改変なし。コードから元に戻すことはできません。比べるためだけのもので、中身は決して分かりません。</p>
 
     <div class="ef-sec ef-sec-top">
-      <p class="ef-sec-h" data-i18n="sha_how_h">How to confirm</p>
+      <p class="ef-sec-h" data-i18n="sha_how_h">確かめる方法</p>
 
-      <div class="ef-find" data-i18n-html="card_find">First, find the file: open the Windows <strong>File Explorer</strong> (the yellow folder on the taskbar, or <span class="efkbd">⊞ Win</span> + <span class="efkbd">E</span>) and click <strong>Downloads</strong> on the left — that's where <code>ExplorerFocus.exe</code> lands when you download it. Do this in File Explorer, <strong>not in the browser</strong>.</div>
+      <div class="ef-find" data-i18n-html="card_find">まずファイルの場所を開きます。Windows の<strong>エクスプローラー</strong>（タスクバーの黄色いフォルダー、または <span class="efkbd">⊞ Win</span> + <span class="efkbd">E</span>）を開き、左の<strong>ダウンロード</strong>をクリック — <code>ExplorerFocus.exe</code> が届くのはそこです。これは<strong>ブラウザーではなく</strong>、エクスプローラーで行ってください。</div>
 
       <div class="ef-method">
-        <p class="ef-method-h" data-i18n="card_mA_h">Method A — PowerShell</p>
-        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mA_1">In the File Explorer window at <strong>Downloads</strong>, hold <span class="efkbd">Shift</span> and right-click an empty area → <strong>Open PowerShell window here</strong>.</span></div>
-        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Paste this command and press Enter:</span></div>
+        <p class="ef-method-h" data-i18n="card_mA_h">方法 A — PowerShell</p>
+        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mA_1"><strong>ダウンロード</strong>を開いたエクスプローラーの何もない場所で、<span class="efkbd">Shift</span> を押しながら右クリック → <strong>PowerShell ウィンドウをここに開く</strong>。</span> and right-click an empty area → <strong>Open PowerShell window here</strong>.</span></div>
+        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">次のコマンドを貼り付けて Enter を押します。</span></div>
         <div class="ef-cmd"><code>Get-FileHash .\ExplorerFocus.exe</code><button class="ef-copy" type="button" data-copy="Get-FileHash .\ExplorerFocus.exe" aria-label="Copiar comando">⧉</button></div>
-        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mA_3">Compare the SHA256 value shown with the one below.</span></div>
+        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mA_3">表示された SHA256 の値を、下の値と見比べます。</span></div>
       </div>
 
       <div class="ef-method">
-        <p class="ef-method-h" data-i18n="card_mB_h">Method B — Command line (cmd)</p>
-        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mB_1">In the File Explorer window at <strong>Downloads</strong>, click the <strong>address bar</strong> (at the top, where the folder path appears), type <code>cmd</code> and press <strong>Enter</strong>.</span></div>
-        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">Paste this command and press Enter:</span></div>
+        <p class="ef-method-h" data-i18n="card_mB_h">方法 B — コマンドライン（cmd）</p>
+        <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mB_1"><strong>ダウンロード</strong>を開いたエクスプローラーで、<strong>アドレスバー</strong>（上のほう、フォルダーのパスが出るところ）をクリックし、<code>cmd</code> と入力して <strong>Enter</strong> を押します。</span></div>
+        <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">次のコマンドを貼り付けて Enter を押します。</span></div>
         <div class="ef-cmd"><code>certutil -hashfile ExplorerFocus.exe SHA256</code><button class="ef-copy" type="button" data-copy="certutil -hashfile ExplorerFocus.exe SHA256" aria-label="Copiar comando">⧉</button></div>
-        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mB_3">Compare the hash line with the one below.</span></div>
+        <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mB_3">表示されたハッシュの行を、下の値と見比べます。</span></div>
       </div>
 
       <div class="ef-hashbox">
-        <p class="ef-hashbox-note"><span data-i18n-html="card_hash_note">It should match this value <span class="efmuted">(upper/lowercase doesn't matter)</span>:</span> <span class="ef-hashbox-ver js-ver"></span></p>
+        <p class="ef-hashbox-note"><span data-i18n-html="card_hash_note">この値と一致するはずです <span class="efmuted">（大文字と小文字は関係ありません）</span>：</span>:</span> <span class="ef-hashbox-ver js-ver"></span></p>
         <p class="ef-hashbox-val js-sha">—</p>
-        <p class="ef-hashbox-ok"><span aria-hidden="true">✓</span> <span data-i18n="card_hash_ok">Match? It's the official file, unaltered.</span></p>
+        <p class="ef-hashbox-ok"><span aria-hidden="true">✓</span> <span data-i18n="card_hash_ok">一致しましたか？ それは改変のない公式ファイルです。</span></p>
       </div>
     </div>
   </div>

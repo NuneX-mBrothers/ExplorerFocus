@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title data-i18n="page_title">ExplorerFocus — un file explorer senza distrazioni</title>
-<meta name="description" data-i18n-attr="content" data-i18n="page_desc" content="Un&#x27;alternativa concentrata a Esplora file di Windows. Profili, alberi configurabili, operazioni complete, anteprima — tutto intorno a ciò che conta.">
+<title data-i18n="page_title">ExplorerFocus — un file explorer con casseforti cifrate</title>
+<meta name="description" data-i18n-attr="content" data-i18n="page_desc" content="Casseforti cifrate che si montano come lettera di unità, in un&#x27;alternativa concentrata a Esplora file di Windows. Profili, alberi configurabili, anteprima ricca, operazioni sui file oneste.">
 
 <!-- ===== SEO ===== -->
 <meta name="author" content="mBrothers">
@@ -37,8 +37,8 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ExplorerFocus">
-<meta property="og:title" content="ExplorerFocus — un file explorer senza distrazioni">
-<meta property="og:description" content="Un&#x27;alternativa concentrata a Esplora file di Windows. Profili, alberi configurabili, operazioni complete, anteprima — tutto intorno a ciò che conta.">
+<meta property="og:title" content="ExplorerFocus — un file explorer con casseforti cifrate">
+<meta property="og:description" content="Casseforti cifrate che si montano come lettera di unità, in un&#x27;alternativa concentrata a Esplora file di Windows. Profili, alberi configurabili, anteprima ricca, operazioni sui file oneste.">
 <meta property="og:url" content="https://nunex-mbrothers.github.io/ExplorerFocus/it/">
 <meta property="og:locale" content="it_IT">
 <meta property="og:locale:alternate" content="pt_PT">
@@ -62,8 +62,8 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ExplorerFocus — un file explorer senza distrazioni">
-<meta name="twitter:description" content="Un&#x27;alternativa concentrata a Esplora file di Windows. Profili, alberi configurabili, operazioni complete, anteprima — tutto intorno a ciò che conta.">
+<meta name="twitter:title" content="ExplorerFocus — un file explorer con casseforti cifrate">
+<meta name="twitter:description" content="Casseforti cifrate che si montano come lettera di unità, in un&#x27;alternativa concentrata a Esplora file di Windows. Profili, alberi configurabili, anteprima ricca, operazioni sui file oneste.">
 <meta name="twitter:image" content="https://nunex-mbrothers.github.io/ExplorerFocus/og-cover.png">
 
 <!-- Dados estruturados (Schema.org) -->
@@ -74,8 +74,10 @@
   "name": "ExplorerFocus",
   "operatingSystem": "Windows 10, Windows 11",
   "applicationCategory": "UtilitiesApplication",
-  "description": "A focused alternative to Windows Explorer: profiles, configurable trees, honest file operations, rich preview, a built-in book reader (EPUB, MOBI/AZW, comics) and remote access (SFTP/FTP/FTPS/WebDAV).",
+  "description": "A focused alternative to Windows Explorer: encrypted vaults in the Cryptomator format that mount as a Windows drive letter, profiles, configurable trees, honest file operations, rich preview, a built-in book reader (EPUB, MOBI/AZW, comics) and remote access (SFTP/FTP/FTPS/WebDAV).",
   "featureList": [
+    "Encrypted vaults: AES-256 file and filename encryption in the Cryptomator format — vaults created here open in Cryptomator on Android, iOS, macOS and Linux, and existing Cryptomator vaults open here",
+    "Vaults mount as a Windows drive letter, so any application on the machine opens the files inside them",
     "Profiles: each tab with its own folder tree, filters and remembered state",
     "Rich preview: code with syntax highlighting, PDF, Word, Excel, PowerPoint, Markdown, images",
     "Book reader: EPUB, MOBI, AZW, AZW3, PRC, FB2, CBZ and CBR",
@@ -233,12 +235,18 @@
   }
 
   /* HERO */
+  /* ⚠ O respiro de cima era 110px e a barra e STICKY, portanto ocupa o seu
+     proprio espaco -- os 110 eram todos decorativos e davam uma faixa preta
+     enorme entre o cabecalho e a primeira frase. 56 chega.
+     E as colunas passaram de 1.05/0.95 para 0.95/1.05, com o vao de 80 para
+     56: a captura cresce ~13% sem alargar a pagina, que tem de continuar nos
+     1280px porque e a grelha das outras 10 seccoes. */
   .hero {
     max-width: 1280px; margin: 0 auto;
-    padding: 110px 32px 48px;
+    padding: 56px 32px 48px;
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: 80px;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 56px;
     align-items: center;
     position: relative;
   }
@@ -403,165 +411,229 @@
   /* App preview */
   .hero-preview {
     position: relative;
-  }
-  /* 🚨 A MAQUETE TEM CAIXA PROPRIA, e nao e cosmetica: o .ops-widget e
-     "position:absolute; bottom:-40px" e agarra-se ao primeiro antepassado
-     posicionado. Enquanto isso era o .hero-preview, bastou por a caixa das
-     provas dentro da coluna para a coluna crescer -- e o widget desceu com
-     ela e foi cair EM CIMA da caixa. Agora agarra-se ao fundo da IMAGEM.
-     ⚠ A 'perspective' veio com ela: so vale para filhos DIRECTOS, e a
-       maquete deixou de ser filha directa do .hero-preview. */
-  .hero-mock {
-    position: relative;
     perspective: 1400px;
   }
-  .app-frame {
-    background: var(--bg-1);
-    border: 1px solid var(--border-1);
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow:
-      0 40px 80px -20px rgba(0, 0, 0, 0.6),
-      0 20px 40px -10px rgba(224, 164, 88, 0.08),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.02);
-    transform: rotateY(-8deg) rotateX(3deg);
-    transform-origin: center center;
-    transition: transform .6s ease;
+  /* ============================================================
+     O CARROSSEL DE POSSIBILIDADES (hero)
+     Substituiu o mockup em CSS. Sao capturas REAIS, 4-5, e a lista e
+     uma so -- acrescentar um ecra e uma linha no SLIDES do JS, uma
+     imagem e duas chaves por lingua. E para crescer com o produto.
+     ⚠ O que as capturas NAO traduzem, a legenda traduz: a app aparece
+       numa lingua so, a frase por baixo aparece nas 7.
+  ============================================================ */
+  /* ============================================================
+     O ECRA DE LANCAMENTO (primeiro do carrossel)
+     Nao e uma captura -- e um cartao desenhado, e entra como qualquer outra
+     .shot: o JS conta as figuras que encontrar.
+     ⚠ E O PRIMEIRO DE PROPOSITO. O carrossel salta sozinho e muita gente rola
+       a pagina antes de dar a volta -- um anuncio no quarto ecra de sete
+       perdia metade das pessoas.
+     ⚠ TRES FILAS, e nao um bloco ao meio: a 2a versao tinha tudo centrado com
+       vazios enormes em cima e em baixo. Agora o que ELE E fica em cima, a
+       novidade ao meio, e as duas provas em baixo.
+     ⛔ E DIZ PRIMEIRO O QUE ELE E. A versao anterior so falava do cofre e lia-se
+       como «o ExplorerFocus e um cofre» -- nao e: e um explorador de ficheiros
+       que AGORA inclui cofres. Ordem dele, 2026-08-19.
+     📌 O cadeado e o MESMO da seccao do cofre, com os ids dos gradientes
+       renomeados de vl* para v2l* -- ids duplicados poem os dois SVG em
+       conflito.
+     ⛔ SAI quando a 2 deixar de ser novidade: apagar a <figure class="shot
+       shot-v2"> e devolver o is-on a figura seguinte.
+  ============================================================ */
+  .shot-v2 {
+    display: grid; grid-template-rows: auto 1fr auto;
+    padding: 4.5cqw 6cqw; gap: 3cqw;
+    background:
+      radial-gradient(80% 110% at 16% 52%, rgba(224,164,88,.15), transparent 62%),
+      linear-gradient(160deg, #17181b 0%, var(--bg-1) 55%);
   }
-  .hero-preview:hover .app-frame {
-    transform: rotateY(-2deg) rotateX(1deg) scale(1.01);
+  .v2-top { display: flex; align-items: center; justify-content: space-between; gap: 2cqw; }
+  .v2-kind {
+    font-family: var(--font-mono); font-size: clamp(8px, 1.1cqw, 11.5px);
+    letter-spacing: .22em; text-transform: uppercase; color: var(--fg-3);
   }
-  .app-titlebar {
-    display: flex; align-items: center; gap: 8px;
-    background: var(--bg-1);
-    padding: 10px 14px;
-    border-bottom: 1px solid var(--border-1);
+  .v2-tag {
+    font-family: var(--font-mono); font-size: clamp(8px, 1.1cqw, 11.5px);
+    letter-spacing: .2em; text-transform: uppercase; color: #14151a;
+    background: var(--accent); padding: .42em .8em; border-radius: 3px;
+    font-weight: 700; white-space: nowrap;
   }
-  .app-titlebar-dot { width: 9px; height: 9px; border-radius: 50%; background: #3a3a3a; }
-  .app-titlebar-name {
-    margin-left: 10px;
-    font-family: var(--font-mono); font-size: 10px;
-    color: var(--fg-2); letter-spacing: 0.08em;
+  /* justify-content: center -- o conjunto estava encostado a esquerda e o
+     lado direito ficava a boiar. Centrado, o cadeado deixa de puxar. */
+  .v2-mid {
+    display: flex; align-items: center; justify-content: center;
+    gap: 5cqw; min-height: 0;
   }
-  .app-tabs {
-    display: flex; gap: 2px;
-    padding: 8px 14px 0;
-    background: var(--bg-1);
-    border-bottom: 1px solid var(--border-1);
+  .v2-lock { width: 25cqw; max-width: 176px; flex: none; height: auto; }
+  .v2-txt { min-width: 0; }
+  .v2-h {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: clamp(23px, 5.6cqw, 56px); line-height: 1;
+    color: var(--fg-0); margin: 0; letter-spacing: -.02em;
   }
-  .app-tab {
-    padding: 7px 14px 8px;
-    font-family: var(--font-mono); font-size: 10px;
-    color: var(--fg-2);
-    border: 1px solid transparent;
-    border-bottom: none;
-    border-radius: 3px 3px 0 0;
-    display: flex; align-items: center; gap: 6px;
+  /* O "2" e um selo, nao um algarismo: quadrado ambar de cantos
+     arredondados com o numero a negro. Ordem dele, 2026-08-19. */
+  /* O "2" DA VERSAO -- e PARTE DO NOME, nao um enfeite ao lado.
+     Passou por tres formas antes desta e ele recusou as tres: algarismo
+     igual ao resto, selo quadrado, e um "2" solto a direita. A queixa do
+     ultimo foi a boa: "o dois esta ali desgarrado, tem de fazer parte do
+     ExplorerFocus 2" -- ou seja, tem de LER-SE como um nome so.
+     ⚠ Inclinado para a DIREITA. Ele nao gosta de inclinacoes a esquerda,
+       e disse-o por palavras dele.
+     📌 transform-origin junto a linha de base: rodar pelo centro levantava
+       o algarismo e desalinhava-o do nome. */
+  .v2-num {
+    display: inline-block; color: var(--accent);
+    font-size: 1.62em; line-height: 0; font-weight: 500;
+    margin-left: .1em; letter-spacing: 0;
+    transform: rotate(8deg); transform-origin: 46% 74%;
   }
-  .app-tab.active {
-    background: var(--accent-soft);
-    border-color: var(--accent);
-    color: var(--accent);
-    font-weight: 500;
+  .v2-sub {
+    font-size: clamp(13px, 2.7cqw, 27px); line-height: 1.3;
+    color: var(--fg-2); margin: .78em 0 0;
   }
-  .app-tab .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
-  .app-tab.muted .dot { background: transparent; border: 1px solid var(--fg-3); }
-  .app-body {
-    display: grid; grid-template-columns: 130px 1fr 130px;
-    height: 320px;
+  /* A fila de baixo: as duas provas a esquerda, o botao encostado a direita. */
+  .v2-foot {
+    display: flex; align-items: flex-end; gap: 3cqw;
+    padding-top: 1.6cqw; border-top: 1px solid var(--border-1);
   }
-  .app-tree {
-    background: var(--bg-1); padding: 12px 8px;
-    border-right: 1px solid var(--border-1);
-    font-family: var(--font-mono); font-size: 10px;
-    color: var(--fg-1);
+  .v2-go {
+    flex: none; align-self: center;
+    font-family: var(--font-mono); font-size: clamp(9px, 1.3cqw, 13px);
+    letter-spacing: .12em; text-transform: uppercase; text-decoration: none;
+    color: var(--accent); border: 1px solid var(--accent-dim);
+    border-radius: 4px; padding: .62em 1em; white-space: nowrap;
+    transition: background .18s, color .18s, border-color .18s;
   }
-  .app-tree .label {
-    color: var(--fg-2); text-transform: uppercase; letter-spacing: 0.12em;
-    font-size: 9px; margin-bottom: 8px;
+  .v2-go:hover { background: var(--accent); border-color: var(--accent); color: #14151a; }
+  .v2-sub strong { color: var(--accent); font-weight: 600; }
+  .v2-list {
+    list-style: none; margin: 0; padding: 0; flex: 1; min-width: 0;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1cqw 4cqw;
   }
-  .app-tree .node { padding: 2px 6px; margin: 1px 0; border-radius: 2px; }
-  .app-tree .node.sel { background: var(--accent-soft); color: var(--accent); }
-  .app-list {
-    background: var(--bg-0); padding: 10px 0 0;
-    font-family: var(--font-mono); font-size: 10px;
+  .v2-list li {
+    position: relative; padding-left: 1.4em;
+    font-size: clamp(9px, 1.4cqw, 14px); line-height: 1.4; color: var(--fg-2);
   }
-  .app-list .head {
-    display: grid; grid-template-columns: 1.6fr 0.5fr 0.7fr;
-    gap: 8px; padding: 4px 14px;
-    font-size: 9px; color: var(--fg-2); text-transform: uppercase; letter-spacing: 0.1em;
-    border-bottom: 1px solid var(--border-1);
+  .v2-list li::before {
+    content: ''; position: absolute; left: 0; top: .45em;
+    width: 5px; height: 5px; transform: rotate(45deg);
+    background: var(--accent); opacity: .9;
   }
-  .app-list .row {
-    display: grid; grid-template-columns: 1.6fr 0.5fr 0.7fr;
-    gap: 8px; padding: 5px 14px;
-    color: var(--fg-1);
-    border-left: 2px solid transparent;
+  @media (max-width: 700px) {
+    .v2-list { grid-template-columns: 1fr; }
+    .v2-lock { width: 22cqw; }
   }
-  .app-list .row.sel {
-    background: var(--row-sel);
-    border-left-color: var(--accent);
-    color: var(--accent);
-  }
-  .app-list .row:hover:not(.sel) { background: var(--row-hover); }
-  .app-list .row .ext {
-    display: inline-block;
-    background: rgba(224, 164, 88, 0.12);
-    color: var(--accent);
-    padding: 1px 5px; border-radius: 2px;
-    font-size: 9px;
-  }
-  .app-preview {
-    background: var(--bg-0);
-    border-left: 1px solid var(--border-1);
-    padding: 12px 10px;
-    font-family: var(--font-mono); font-size: 8px;
-    color: var(--fg-1);
-    overflow: hidden;
-  }
-  .app-preview .head {
-    color: var(--accent); font-size: 8px; text-transform: uppercase;
-    letter-spacing: 0.12em; margin-bottom: 8px;
-    font-weight: 600;
-  }
-  .app-preview .ln { display: flex; gap: 6px; }
-  .app-preview .lno { color: var(--fg-3); width: 12px; text-align: right; }
-  .app-preview .kw { color: #c58fd9; }
-  .app-preview .str { color: #88b884; }
-  .app-preview .cmt { color: var(--fg-3); font-style: italic; }
-  .app-preview .fn { color: var(--accent); }
 
-  .ops-widget {
-    position: absolute;
-    bottom: -40px; right: -30px;
-    width: 240px;
-    background: var(--bg-1);
-    border: 1px solid var(--border-1);
-    border-radius: 5px;
-    padding: 12px;
-    box-shadow: 0 24px 60px -10px rgba(0, 0, 0, 0.7);
-    font-family: var(--font-mono); font-size: 9px;
-    transform: rotate(2deg);
+  .shots { position: relative; }
+  .shots-stage {
+    position: relative; aspect-ratio: 16 / 10; width: 100%; container-type: inline-size;
+    background: var(--bg-1); border: 1px solid var(--border-2); border-radius: 10px;
+    overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,.45);
   }
-  .ops-widget .head {
-    display: flex; justify-content: space-between; align-items: center;
-    margin-bottom: 6px;
+  /* Empurra para o lado, e do lado certo: a mesma variavel serve os dois
+     sentidos, por isso ir para tras nao parece ir para a frente. */
+  .shots { --entra: 7%; --sai: -7%; }
+  .shots.is-back { --entra: -7%; --sai: 7%; }
+  .shot {
+    position: absolute; inset: 0; margin: 0;
+    opacity: 0; transform: translateX(var(--entra));
+    transition: opacity .45s ease, transform .5s cubic-bezier(.22,.61,.36,1);
+    pointer-events: none;
   }
-  .ops-widget .head .ic { color: var(--accent); font-size: 11px; }
-  .ops-widget .head .pill {
-    background: var(--accent); color: var(--bg-0);
-    padding: 1px 5px; border-radius: 2px;
-    font-weight: 600; font-size: 8px;
+  .shot.is-on  { opacity: 1; transform: translateX(0); pointer-events: auto; }
+  .shot.is-out { opacity: 0; transform: translateX(var(--sai)); }
+  .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block; }
+  /* Enquanto a imagem nao existir, o <img> falha e revela o marcador. Assim,
+     no dia em que os ficheiros forem para shots/, aparecem sem tocar no codigo. */
+  .shot.no-img img { display: none; }
+  .shot-ph {
+    display: none; position: absolute; inset: 0;
+    align-items: center; justify-content: center; flex-direction: column; gap: 8px;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em;
+    color: var(--fg-3); text-transform: uppercase;
+    background: repeating-linear-gradient(-45deg, var(--bg-1) 0 12px, var(--bg-2) 12px 24px);
   }
-  .ops-widget .bar {
-    height: 3px; background: var(--bg-0); border-radius: 2px;
-    margin: 4px 0;
-    overflow: hidden;
+  .shot.no-img .shot-ph { display: flex; }
+  .shot-ph b { color: var(--accent-dim); font-size: 22px; font-weight: 500; letter-spacing: .04em; }
+
+  /* ============================================================
+     O CARTAO FINAL do carrossel — a assinatura, ao fim da volta.
+     Ideia dele. Nao e piroso porque o rodape do site ja diz
+     «developing practical solutions for small planetary systems»:
+     o planeta e voz da casa, nao e acucar posto agora.
+     ⚠ O contorno de Portugal e ESTILIZADO, tracado a partir de ~25
+       pontos reais de fronteira e de costa. Serve de silhueta, nao de
+       mapa: nao se lhe pede rigor cartografico, pede-se que se
+       reconheca de relance e que o ponto de Lisboa caia no sitio.
+  ============================================================ */
+  /* Duas colunas -- frase a esquerda, mapa a direita -- que foi a distribuicao
+     que ele preferiu. O que a partia da primeira vez nao era a distribuicao: era
+     o corpo da letra medido em vw. Agora e em cqw, pela largura do CARTAO. */
+  /* Uma folha inclinada, com a mesma receita do cadeado la em baixo: perspetiva
+     curta e os tres eixos ligeiros. O rotateY encurta o mapa na horizontal, por
+     isso a altura sobe -- e assim que ganha a amplitude sem roubar espaco a frase. */
+  /* -4% e nao 1%: empurra o desenho para fora o suficiente para a frase crescer
+     sem lhe bater, e so 2 px do pais ficam de fora. A -9% cabia letra maior mas
+     perdiam-se 18% do pais, incluindo a raia -- nao compensa. */
+  /* A imagem DELE ja vem desenhada para o cartao: fundo escuro quase igual ao
+     do site, o quadro a direita e o lado esquerdo vazio para o texto. Por isso
+     nao e marca de agua nem desenho ao lado -- e o FUNDO, a sangrar. */
+  /* O pisca de Lisboa: um ponto a respirar e um anel a irradiar. O anel sai do
+     ::after para nao ser preciso um segundo elemento no HTML. */
+  @keyframes lis-brilho { 0%, 100% { opacity: .5; } 45% { opacity: 1; } }
+  @keyframes lis-anel { 0% { transform: scale(.5); opacity: .9; } 100% { transform: scale(4.2); opacity: 0; } }
+  /* o desenho de recurso continua ao lado, que e como ele funciona bem */
+  /* Cada peca leva a SUA opacidade, e nao o SVG inteiro: assim o ponto de
+     Lisboa fica a cheio enquanto o resto e marca de agua por tras do texto. */
+  /* um OU outro: enquanto a imagem nao existir mostra-se o desenho */
+  /* o halo pulsa devagar: e o unico movimento do cartao, e chega */
+
+  /* 78% e nao 64%: a METADE ESQUERDA do mapa e oceano vazio, portanto a frase
+     pode avancar por baixo dela sem tocar no desenho. Foi isso que deixou a
+     letra subir de 28 px para ~38 mantendo as tres linhas nas 7 linguas --
+     e quem manda no limite e o alemao, que tem a linha mais comprida. */
+  /* 62%: o neon so comeca aos 60% do cartao, e entre a moldura e ele ha painel
+     escuro onde o texto assenta bem. Foi medir pelo NEON, e nao pela moldura,
+     que deu lugar a frase caber em tres linhas nas sete linguas. */
+  /* cqw = 1% da largura do CARTAO. Com vw media-se a JANELA, e um cartao
+     estreito numa janela larga levava corpo de 49 px e transbordava. */
+  /* 4,3cqw e o maximo que mantem TRES linhas nas sete: quem manda e o alemao,
+     que tem a linha mais comprida, e o limite e o neon a 60% do cartao. */
+  /* ⚠ 6,2cqw e 50% de largura sao os valores do ensaio que ELE APROVOU. Nao
+     mexer sem lhe perguntar: eu ja os baixei uma vez por minha conta, para
+     forcar tres linhas em todas as linguas, e estava errado -- em alemao,
+     portugues e espanhol a frase passa a quatro linhas, e essa e uma troca que
+     e dele e nao minha. */
+  /* o recuo da 2.a linha, como ele o desenhou a mao */
+  /* Em japones e chines nao ha Cormorant: cai para a serifada do sistema, que
+     corre maior, por isso leva menos corpo. */
+  @supports (font-size: 1cqw) {
   }
-  .ops-widget .bar .fill { height: 100%; background: var(--accent); width: 65%; }
-  .ops-widget .bar.sm .fill { background: var(--accent-dim); width: 78%; }
-  .ops-widget .meta { display: flex; justify-content: space-between; color: var(--fg-2); margin-top: 4px; }
-  .ops-widget .meta .speed { color: var(--accent); }
+  .shots-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 34px; height: 34px; border-radius: 50%;
+    background: rgba(14,15,17,.72); border: 1px solid var(--border-2); color: var(--fg-1);
+    font-size: 17px; line-height: 1; cursor: pointer; opacity: .35;
+    transition: opacity .2s, border-color .2s, color .2s; z-index: 2;
+  }
+  /* Esbatidas e nao invisiveis: em ecra tatil nao ha rato para as revelar,
+     e sem elas ficava um bloco que se mexe sozinho e nao se manda parar. */
+  .shots:hover .shots-arrow, .shots-arrow:focus-visible { opacity: 1; }
+  .shots-arrow:hover { color: var(--accent); border-color: var(--accent-soft); }
+  .shots-arrow.prev { left: 10px; }
+  .shots-arrow.next { right: 10px; }
+
+
+  .shots-label {
+    font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--fg-3); margin-bottom: 10px;
+  }
+
+  /* Quem pediu menos movimento nao leva nenhum: nem salto sozinho, nem transicao. */
+  @media (prefers-reduced-motion: reduce) {
+    .shot, .shot.is-on, .shot.is-out { transition: none; transform: none; }
+  }
 
   /* CATALOG */
   .section-header {
@@ -622,6 +694,29 @@
   }
   .feat p {
     color: var(--fg-1); font-size: 14px; line-height: 1.6; margin: 0;
+  }
+  /* A grelha das 16 bandeiras (cartao 18). auto-fill em vez de um numero fixo
+     de colunas: o cartao e w6 no desktop e passa a largura toda no telemovel,
+     e assim reflui sozinho em vez de precisar de tres media queries. */
+  .fl-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+  /* 8 / 4 / 2 -- e nao auto-fill. As tres contagens DIVIDEM 16 certo, portanto
+     nao ha orfa em largura nenhuma; o auto-fill dava 5 ou 9 colunas conforme a
+     janela e sobrava sempre uma sozinha na ultima linha. */
+  .lang-grid {
+    margin-top: 18px;
+    display: grid; grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 10px 14px;
+  }
+  @media (max-width: 1100px) { .lang-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  @media (max-width: 560px)  { .lang-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .lang-chip {
+    display: flex; align-items: center; gap: 7px;
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.04em;
+    color: var(--fg-2); white-space: nowrap; min-width: 0;
+  }
+  .lang-fl {
+    width: 18px; height: 12.6px; flex: 0 0 auto; display: block; border-radius: 1.5px;
+    box-shadow: 0 0 0 1px rgba(255,255,255,.12);
   }
   .feat-mark {
     margin-top: 20px;
@@ -816,7 +911,7 @@
      ⛔ FEITA PARA CRESCER: "isto quando comeca vai em domino". Acrescentar um
         directorio e uma linha de HTML -- o nome nao entra na traducao. */
   .awards {
-    margin-top: 58px;   /* 40px do .ops-widget a pendurar + folga */ padding: 12px 14px 11px;
+    margin-top: 18px;   /* aqui nao ha .ops-widget a pendurar */ padding: 12px 14px 11px;
     border: 1px solid var(--border-1); border-radius: 8px;
     background: var(--bg-1);
   }
@@ -839,6 +934,71 @@
   .aw-list a:hover { color: var(--accent); border-color: var(--accent-soft); }
   .aw-list em { font-style: normal; font-size: 11.5px; color: var(--fg-3); margin-left: auto; }
 
+
+  /* ── COFRE (versao 2) ─────────────────────────────────────────────────────
+     Grelha de 3 e não de 4 como a do stack: aqui cada célula explica UMA
+     ideia a quem nunca ouviu falar disto, e precisa de mais largura. Reutiliza
+     a .stack-cell, para as duas secções não divergirem no aspeto. */
+  .vault { max-width: 1280px; margin: 0 auto; padding: 100px 32px; }
+  /* O cabeçalho passa a duas colunas: texto à esquerda, cadeado à direita.
+     Estreitar o parágrafo é ganho, não perda — linhas de 1200 px cansam. */
+  .vault-head {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 56px; margin-bottom: 40px;
+  }
+  .vault-head > div { flex: 1; min-width: 0; }
+  .vault-head .vault-lead { margin-bottom: 0; }
+  /* Desenhado em SVG e não em fotografia: o site inteiro é plano, escuro e
+     tipográfico, sem uma única foto. Um cadeado dourado fotorrealista leria-se
+     como autocolante vindo de outro sítio.
+
+     A perspetiva é do BROWSER, não do desenho: o SVG traz as faces laterais
+     (a espessura) e a luz; o transform 3D dá a fuga verdadeira. Desenhar a
+     perspetiva à mão no SVG daria linhas paralelas — pareceria isométrico,
+     não fotográfico.
+       rotateX  9°  → inclina para trás (o topo afasta-se)
+       rotateZ  4°  → tomba para a direita
+       rotateY 16°  → roda, e é o que descobre a face esquerda
+     A luz vem de cima-à-esquerda, e é por isso que as faces desenhadas são a
+     ESQUERDA (clara) e a de BAIXO (escura). Mexer nos ângulos sem mexer nas
+     faces parte a coerência da luz. */
+  .vault-lock {
+    width: 210px; height: auto; flex: 0 0 auto;
+    transform: perspective(820px) rotateX(9deg) rotateZ(4deg) rotateY(16deg);
+    transform-origin: 50% 60%;
+  }
+  .vault-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: var(--border-1); border: 1px solid var(--border-1);
+  }
+  .vault-threat {
+    margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1px; background: var(--border-1); border: 1px solid var(--border-1);
+  }
+  .vault-col { background: var(--bg-0); padding: 24px 22px; }
+  .vault-col h4 {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em;
+    text-transform: uppercase; margin: 0 0 14px; font-weight: 700;
+  }
+  .vault-col.yes h4 { color: var(--accent); }
+  /* O lado do "não protege" fica em cinzento, não em vermelho: é informação
+     honesta, não um alarme. Vermelho leria-se como defeito do produto. */
+  .vault-col.no h4 { color: var(--fg-2); }
+  .vault-col ul { list-style: none; margin: 0; padding: 0; }
+  .vault-col li {
+    color: var(--fg-2); font-size: 12.5px; line-height: 1.55;
+    padding: 0 0 9px 18px; position: relative;
+  }
+  .vault-col.yes li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); }
+  .vault-col.no li::before { content: "✕"; position: absolute; left: 0; color: var(--fg-3); }
+  .vault-lead { color: var(--fg-2); font-size: 13px; line-height: 1.6; margin: 0 0 26px; }
+  .vault-lead strong { color: var(--fg-1); font-weight: 500; }
+  .vault-note {
+    margin-top: 26px; padding: 18px 20px;
+    background: var(--bg-2); border: 1px solid var(--border-1); border-radius: 8px;
+    color: var(--fg-2); font-size: 12.5px; line-height: 1.6;
+  }
+  .vault-note strong { color: var(--fg-1); font-weight: 500; }
 
   /* FOOTER */
   footer {
@@ -872,16 +1032,6 @@
     color: var(--fg-3); letter-spacing: 0.1em; text-transform: uppercase;
     display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
   }
-  /* A tira dos 16 idiomas da app. Mesmo registo da baseline técnica logo
-     acima — é informação de referência, não argumento de venda. */
-  .footer-langs {
-    max-width: 1280px; margin: 14px auto 0;
-    font-family: var(--font-mono); font-size: 10px;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    display: flex; gap: 14px; flex-wrap: wrap; align-items: baseline;
-  }
-  .footer-langs > span:first-child { color: var(--accent); white-space: nowrap; }
-  .footer-langs-list { color: var(--fg-3); }
   .mb-credit {
     text-align: center;
     width: 100%;
@@ -920,13 +1070,14 @@
   /* RESPONSIVE */
   @media (max-width: 900px) {
     .hero { grid-template-columns: 1fr; padding: 60px 24px 36px; gap: 60px; }
-    .hero-preview { transform: scale(0.85); transform-origin: top left; }
-    .ops-widget { right: -8px; }
     .section-header { grid-template-columns: 1fr; gap: 24px; padding: 32px 24px 24px; }
     .features { padding: 40px 24px 80px; }
     .feat.w4, .feat.w6, .feat.w8, .feat.w3 { grid-column: span 12; }
     .shortcuts-inner { grid-template-columns: 1fr; gap: 40px; }
-    .stack-grid { grid-template-columns: 1fr 1fr; }
+    .stack-grid, .vault-grid { grid-template-columns: 1fr 1fr; }
+    .vault-threat { grid-template-columns: 1fr; }
+    .vault-head { flex-direction: column; align-items: flex-start; gap: 32px; }
+    .vault-lock { width: 150px; align-self: center; }
     .footer-inner { grid-template-columns: 1fr; gap: 40px; }
     .topbar-inner { padding: 12px 150px 12px 20px; }
     .nav { gap: 14px; }
@@ -1129,6 +1280,11 @@
         Uma regra [dir=rtl] que perde nao da erro nenhum -- so nao faz nada. */
   [dir="rtl"] .app-frame,
   [dir="rtl"] .preview-demo { direction: ltr; }
+  /* O «2» e o FIM DO NOME (aprovado assim). Em RTL o <span> do numero e
+     inline-block, o bidi trata-o como neutro e punha-o ANTES de "ExplorerFocus".
+     O nome e latino e le-se da esquerda para a direita em qualquer lingua;
+     alinhado a direita para bater com as linhas arabes do mesmo cartao. */
+  [dir="rtl"] .v2-h { direction: ltr; text-align: right; }
 
   [dir="rtl"] .lang-picker { right: auto; left: 22px; }
   [dir="rtl"] .lang-list { right: auto; left: 0; }
@@ -1153,6 +1309,13 @@
 <script>window.EF_FREE="Gratis";window.EF_ROOT="../";</script>
 </head>
 <body>
+
+<!-- As 16 bandeiras da barra de idiomas da APP, em <symbol> para se usarem com
+     <use>. Desenhadas a partir de ExplorerFocus\Core\FlagImages.cs: mesmas
+     cores e as mesmas simplificacoes que estao la decididas (Coreia sem os
+     trigramas, Taiwan com o sol reduzido a disco).
+     ⚠ NAO se usa emoji de bandeira: o Windows nao tem glifos para elas e sairia
+       um par de letras numa caixa -- exatamente no unico sistema que nos importa. -->
 <svg class="fl-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs>
 <symbol id="fl-pt" viewBox="0 0 20 14"><rect width="20" height="14" fill="#FF0000"/><rect width="8" height="14" fill="#006600"/><circle cx="8" cy="7" r="2.9" fill="#FFCC00"/><circle cx="8" cy="7" r="1.9" fill="#FFFFFF"/><rect x="7.1" y="5.9" width="1.8" height="2.2" fill="#003399"/></symbol>
 <symbol id="fl-br" viewBox="0 0 20 14"><rect width="20" height="14" fill="#009C3B"/><polygon points="10,1.4 18.6,7 10,12.6 1.4,7" fill="#FFDF00"/><circle cx="10" cy="7" r="2.9" fill="#002776"/><path d="M7.2 6.1a3.4 3.4 0 0 1 5.7 1.1l-.9.3a2.5 2.5 0 0 0-4.2-.8z" fill="#FFFFFF"/></symbol>
@@ -1232,6 +1395,7 @@
     </div>
     <nav class="nav">
       <a href="#features" data-i18n="nav_features">Funzioni</a>
+      <a href="#vault" data-i18n="nav_vault">Cassaforte</a>
       <a href="#shortcuts" data-i18n="nav_shortcuts">Scorciatoie</a>
       <a href="#stack" data-i18n="nav_stack">Tecnologie</a>
       <a href="#premium" data-i18n="nav_premium">Premium</a>
@@ -1283,102 +1447,140 @@
   </div>
 
   <div class="hero-preview">
-    <div class="hero-mock">
-    <div class="app-frame">
-      <div class="app-titlebar">
-        <span class="app-titlebar-dot"></span>
-        <span class="app-titlebar-dot"></span>
-        <span class="app-titlebar-dot"></span>
-        <span class="app-titlebar-name">ExplorerFocus — default · projects/ExplorerFocus</span>
+    <div class="shots" id="shots">
+      <div class="shots-label" data-i18n="sh_label">Uno sguardo veloce</div>
+      <div class="shots-stage">
+        <!-- ⛔ O ECRA DE LANCAMENTO. Ver o CSS de .shot-v2. -->
+        <figure class="shot shot-v2 is-on">
+          <div class="v2-top">
+            <span class="v2-kind" data-i18n="sh_v2_kind">Un file explorer</span>
+            <span class="v2-tag" data-i18n="sh_v2_tag">Disponibile ora</span>
+          </div>
+          <div class="v2-mid">
+            <svg class="v2-lock" viewBox="0 0 200 250" role="img" aria-labelledby="v2LockTitle">
+                            <title id="v2LockTitle">A padlock</title>
+                            <defs>
+                              <linearGradient id="v2lBody" x1="0" y1="0" x2=".9" y2="1">
+                                <stop offset="0" stop-color="#FBE7BC"/>
+                                <stop offset=".18" stop-color="#EDBC76"/>
+                                <stop offset=".42" stop-color="#C89150"/>
+                                <stop offset=".63" stop-color="#8A6230"/>
+                                <stop offset=".84" stop-color="#D6A05B"/>
+                                <stop offset="1" stop-color="#7A5629"/>
+                              </linearGradient>
+                              <linearGradient id="v2lSide" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0" stop-color="#6B4A22"/>
+                                <stop offset="1" stop-color="#B98A47"/>
+                              </linearGradient>
+                              <linearGradient id="v2lShackle" x1=".1" y1="0" x2=".9" y2="1">
+                                <stop offset="0" stop-color="#FBE7BC"/>
+                                <stop offset=".35" stop-color="#D9A55E"/>
+                                <stop offset=".7" stop-color="#8A6230"/>
+                                <stop offset="1" stop-color="#C79350"/>
+                              </linearGradient>
+                              <linearGradient id="v2lSpec" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#FFF6E2" stop-opacity=".55"/>
+                                <stop offset=".45" stop-color="#FFF6E2" stop-opacity=".10"/>
+                                <stop offset="1" stop-color="#FFF6E2" stop-opacity="0"/>
+                              </linearGradient>
+                              <radialGradient id="v2lGlow" cx=".5" cy=".46" r=".6">
+                                <stop offset="0" stop-color="#E0A458" stop-opacity=".20"/>
+                                <stop offset="1" stop-color="#E0A458" stop-opacity="0"/>
+                              </radialGradient>
+                              <radialGradient id="v2lShadow" cx=".5" cy=".5" r=".5">
+                                <stop offset="0" stop-color="#000" stop-opacity=".55"/>
+                                <stop offset="1" stop-color="#000" stop-opacity="0"/>
+                              </radialGradient>
+                            </defs>
+                      
+                            <ellipse cx="100" cy="152" rx="96" ry="104" fill="url(#v2lGlow)"/>
+                            <!-- sombra projetada, desviada para a direita porque a luz vem da esquerda -->
+                            <ellipse cx="112" cy="240" rx="72" ry="15" fill="url(#v2lShadow)"/>
+                      
+                            <!-- arco: o lado de trás primeiro, mais escuro e desviado, para o laço
+                                 ter espessura em vez de ser um risco -->
+                            <path d="M69 122V90a31 31 0 0 1 62 0v32" fill="none" stroke="#6B4A22" stroke-width="18" stroke-linecap="round"/>
+                            <path d="M64 124V90a36 36 0 0 1 72 0v34" fill="none" stroke="url(#v2lShackle)" stroke-width="17" stroke-linecap="round"/>
+                            <!-- especular do arco: fino, curto, e só onde a luz bate -->
+                            <path d="M70 108V92a30 30 0 0 1 26-29" fill="none" stroke="#FFF6E2" stroke-width="3" stroke-linecap="round" opacity=".62"/>
+                      
+                            <!-- face ESQUERDA (a espessura que a rotação descobre) -->
+                            <path d="M34 140 L23 133 V216 L34 224 Z" fill="url(#v2lSide)"/>
+                            <!-- rebordo de baixo, na sombra -->
+                            <path d="M34 224 L23 216 q4 14 18 15 Z" fill="#4A3316"/>
+                      
+                            <!-- corpo -->
+                            <rect x="32" y="118" width="136" height="114" rx="22" fill="url(#v2lBody)"/>
+                            <!-- especular grande, na diagonal da luz -->
+                            <path d="M54 118h34L46 226a22 22 0 0 1-14-20v-66a22 22 0 0 1 22-22Z" fill="url(#v2lSpec)"/>
+                            <!-- fio de luz no bordo superior-esquerdo, e sombra no oposto -->
+                            <path d="M54 118.9h60" stroke="#FFF6E2" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
+                            <path d="M33 145v50" stroke="#FFF6E2" stroke-opacity=".30" stroke-width="1.4" stroke-linecap="round"/>
+                            <path d="M167 150v46" stroke="#3A2810" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
+                            <!-- friso gravado -->
+                            <rect x="46" y="132" width="108" height="86" rx="13" fill="none" stroke="#5C401E" stroke-opacity=".6"/>
+                            <rect x="47.2" y="133.2" width="108" height="86" rx="13" fill="none" stroke="#FBE7BC" stroke-opacity=".16"/>
+                      
+                            <!-- buraco da fechadura: escuro, com luz no bordo de baixo -->
+                            <circle cx="100" cy="164" r="14" fill="#241706"/>
+                            <path d="M94.5 172h11l3.5 30h-18Z" fill="#241706"/>
+                            <path d="M88 170a14 14 0 0 0 24 0" fill="none" stroke="#FBE7BC" stroke-opacity=".34" stroke-width="1.6"/>
+                            <circle cx="100" cy="164" r="14" fill="none" stroke="#3A2810" stroke-opacity=".7"/>
+                          </svg>
+            <div class="v2-txt">
+              <p class="v2-h" data-i18n-html="sh_v2_h">ExplorerFocus<span class="v2-num">2</span></p>
+              <p class="v2-sub" data-i18n-html="sh_v2_sub">Ora con le <strong>casseforti per i dati</strong></p>
+            </div>
+          </div>
+          <div class="v2-foot">
+            <ul class="v2-list">
+              <li data-i18n="sh_v2_a">Cifrate, e si aprono come un'unità normale</li>
+              <li data-i18n="sh_v2_b">Leggi e guarda dentro, senza decifrare tutto</li>
+            </ul>
+            <a class="v2-go" href="#vault" data-i18n="sh_v2_go">Scopri di più →</a>
+          </div>
+        </figure>
+        <!-- O 'alt' NAO e decorativo: e o unico texto que um motor de busca e um leitor de ecra
+             tem para saber o que esta na imagem. Estiveram vazios ate 2026-08-22, o que dizia
+             "ignora isto" a ambos, e anulava a presenca no Google Imagens.
+             ⛔ Fica em INGLES de proposito: nao ha mecanismo de traducao de ATRIBUTOS nesta pagina.
+                O 'data-i18n-attr' do <meta description> parece geral e NAO E -- e um caso
+                especial escrito a mao no applyI18n. Por-lo aqui nao daria erro, simplesmente
+                nao faria nada. E o ingles e o que fica no HTML servido, que e o que se indexa.
+             📌 A NUMERACAO E A ORDEM DE CRIACAO, NAO A DE EXIBICAO. O 06 aparece em terceiro. -->
+        <figure class="shot">
+          <img src="../shots/01-perfis.webp" alt="ExplorerFocus with 21 profile tabs across the top and a folder of 28 photos in icon view." onerror="this.closest('.shot').classList.add('no-img')">
+          <div class="shot-ph"><b>01</b><span>shots/01-perfis.webp</span></div>
+        </figure>
+        <figure class="shot">
+          <img src="../shots/02-cofre.webp" alt="An encrypted vault mounted as MyVault (Y:) in the folder tree, with an e-book open showing its cover and table of contents." onerror="this.closest('.shot').classList.add('no-img')">
+          <div class="shot-ph"><b>02</b><span>shots/02-cofre.webp</span></div>
+        </figure>
+        <!-- ⏳ ESPACO RESERVADO (2026-08-22) -- a imagem ainda nao existe e o leitor ainda esta a
+             ser feito. Ate o ficheiro chegar, o 'onerror' poe .no-img e mostra o cartao cinzento;
+             a pagina nao parte e o carrossel conta 7 figuras.
+             Terceiro lugar de proposito: com 7 ecras a 3750 ms uma volta demora 26 s, e a melhor
+             imagem da app nao pode ficar onde quase ninguem chega. A sequencia tambem se le --
+             "os teus livros, fechados no cofre" -> "e e assim que se leem". -->
+        <figure class="shot">
+          <img src="../shots/06-papel.webp" alt="An EPUB open in paper mode: full screen, two facing pages and the spine down the middle." onerror="this.closest('.shot').classList.add('no-img')">
+          <div class="shot-ph"><b>06</b><span>shots/06-papel.webp</span></div>
+        </figure>
+        <figure class="shot">
+          <img src="../shots/03-codigo.webp" alt="A C source file, memory.c, previewed with syntax highlighting beside the folder tree." onerror="this.closest('.shot').classList.add('no-img')">
+          <div class="shot-ph"><b>03</b><span>shots/03-codigo.webp</span></div>
+        </figure>
+        <figure class="shot">
+          <img src="../shots/04-json.webp" alt="A JSON file, engine.json, previewed with syntax highlighting and collapsible sections." onerror="this.closest('.shot').classList.add('no-img')">
+          <div class="shot-ph"><b>04</b><span>shots/04-json.webp</span></div>
+        </figure>
+        <figure class="shot">
+          <img src="../shots/05-markdown.webp" alt="A Markdown file rendered in the preview pane, with headings, lists and code blocks." onerror="this.closest('.shot').classList.add('no-img')">
+          <div class="shot-ph"><b>05</b><span>shots/05-markdown.webp</span></div>
+        </figure>
       </div>
-
-      <div class="app-tabs">
-        <div class="app-tab active"><span class="dot"></span>default</div>
-        <div class="app-tab muted"><span class="dot"></span>scripts</div>
-        <div class="app-tab muted"><span class="dot"></span>research</div>
-      </div>
-
-      <div class="app-body">
-        <div class="app-tree">
-          <div class="label" data-i18n="app_tree_label">Albero</div>
-          <div class="node">▾ ExplorerFocus</div>
-          <div class="node">&nbsp;&nbsp;Core/</div>
-          <div class="node">&nbsp;&nbsp;Models/</div>
-          <div class="node sel">&nbsp;&nbsp;ViewModels/</div>
-          <div class="node">&nbsp;&nbsp;Views/</div>
-          <div class="node">&nbsp;&nbsp;Themes/</div>
-          <div class="node">▸ ExtensionFocus.cs</div>
-        </div>
-
-        <div class="app-list">
-          <div class="head">
-            <span data-i18n="app_col_name">NOME</span>
-            <span data-i18n="app_col_ext">EST</span>
-            <span data-i18n="app_col_size">DIMENSIONE</span>
-          </div>
-          <div class="row">
-            <span>📁 FileOperations</span>
-            <span></span>
-            <span>248 KB</span>
-          </div>
-          <div class="row sel">
-            <span>🟦 MainViewModel.cs</span>
-            <span class="ext">cs</span>
-            <span>42 KB</span>
-          </div>
-          <div class="row">
-            <span>🟦 ShellViewModel.cs</span>
-            <span class="ext">cs</span>
-            <span>18 KB</span>
-          </div>
-          <div class="row">
-            <span>🟦 FileItemViewModel.cs</span>
-            <span class="ext">cs</span>
-            <span>7.2 KB</span>
-          </div>
-          <div class="row">
-            <span>🟦 PreviewViewModel.cs</span>
-            <span class="ext">cs</span>
-            <span>9.5 KB</span>
-          </div>
-          <div class="row">
-            <span>🟦 AppsManagerViewModel.cs</span>
-            <span class="ext">cs</span>
-            <span>4.8 KB</span>
-          </div>
-        </div>
-
-        <div class="app-preview">
-          <div class="head" data-i18n="app_preview_label">ANTEPRIMA</div>
-          <div class="ln"><span class="lno">1</span><span><span class="kw">using</span> System.IO;</span></div>
-          <div class="ln"><span class="lno">2</span></div>
-          <div class="ln"><span class="lno">3</span><span class="cmt">// Main view-model</span></div>
-          <div class="ln"><span class="lno">4</span><span><span class="kw">public partial class</span> <span class="fn">MainViewModel</span></span></div>
-          <div class="ln"><span class="lno">5</span><span>{</span></div>
-          <div class="ln"><span class="lno">6</span><span>&nbsp;&nbsp;<span class="kw">private readonly</span></span></div>
-          <div class="ln"><span class="lno">7</span><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">ProfileManager</span></span></div>
-          <div class="ln"><span class="lno">8</span><span>&nbsp;&nbsp;&nbsp;&nbsp;_profile;</span></div>
-          <div class="ln"><span class="lno">9</span></div>
-          <div class="ln"><span class="lno">10</span><span>&nbsp;&nbsp;<span class="kw">public</span> <span class="fn">PreviewVM</span></span></div>
-          <div class="ln"><span class="lno">11</span><span>&nbsp;&nbsp;{ <span class="kw">get</span>; }</span></div>
-          <div class="ln"><span class="lno">12</span><span>}</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="ops-widget">
-      <div class="head">
-        <span><span class="ic">📋</span> <span data-i18n="ops_action">Copia · 47 file</span></span>
-        <span class="pill" data-i18n="ops_status">IN CORSO</span>
-      </div>
-      <div style="color: var(--fg-2); margin-top: 6px;">project_dump_2025.zip</div>
-      <div class="bar"><div class="fill"></div></div>
-      <div class="bar sm"><div class="fill"></div></div>
-      <div class="meta">
-        <span>134 / 248 MB</span>
-        <span class="speed" data-i18n="ops_speed">89 MB/s · 1,3 s</span>
-      </div>
-    </div>
+      <button class="shots-arrow prev" type="button" aria-label="&#8592;">&#8249;</button>
+      <button class="shots-arrow next" type="button" aria-label="&#8594;">&#8250;</button>
     </div>
       <!-- ⛔ ACRESCENTAR UM DIRECTORIO = uma linha na lista + duas chaves curtas
            por lingua (a nota e a pontuacao). O NOME nao vai na traducao: e nome
@@ -1409,12 +1611,17 @@
 <div class="whatsnew">
   <span class="whatsnew-label" data-i18n="wn_label">✦ Novità</span>
   <nav class="whatsnew-pills">
+    <!-- A tira é curada por release. O cofre é A novidade da versão 2, por isso
+         abre; saiu o mais antigo (gravação de ecrã). Ficou em SEIS: os 16 idiomas e o
+         disco entraram por decisão dele, e o tecto da tira subiu de quatro para
+         seis. Aqui a gravação de ecrã continua de fora — quem sai é sempre o
+         mais antigo. -->
+    <a href="#vault" data-i18n="wn_vault">🔒 Le casseforti</a>
     <a href="#feat18" data-i18n="wn_langs">🌐 16 lingue</a>
     <a href="#feat19" data-i18n="wn_disk">💽 Il disco, nel dettaglio</a>
     <a href="#feat24" data-i18n="wn_books">📚 Libri e fumetti</a>
     <a href="#feat32" data-i18n="wn_voice">🎙 Voce fuori campo</a>
     <a href="#feat31" data-i18n="wn_cards">🎬 Schede di marchio</a>
-    <a href="#feat30" data-i18n="wn_screen">🖥 Registrazione dello schermo</a>
   </nav>
   <span class="whatsnew-ver">v1.2.26</span>
 </div>
@@ -1580,11 +1787,40 @@
        O «troca sem reiniciar» não é figura de estilo: o LocalizationService
        levanta PropertyChanged em todas as strings, e cada {loc:T …} reavalia
        na hora (está escrito no cabeçalho do próprio ficheiro). -->
-  <div class="feat w6" id="feat18">
+  <div class="feat w12" id="feat18">
     <div class="num"><span data-i18n="f18_num">18 — 16 LINGUE</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
     <h3 data-i18n-html="f18_h">L'app intera, in <em>sedici</em> lingue.</h3>
     <p data-i18n-html="f18_p">Non solo i menu — ogni finestra, ogni messaggio, ogni suggerimento. Ne scegli una e l'interfaccia cambia <em>sul posto</em>: niente da riavviare, niente da reinstallare.</p>
-    <div class="feat-mark" data-i18n="f18_mark">PT · BR · EN · US · ES · FR · IT · DE · PL · RU · AR · HI · CN · TW · JA · KO</div>
+    <!-- As 16 da barra da app, pela ordem dela. Os nomes estao no PROPRIO
+         idioma (endonimos): sao iguais nas 7 linguas do site, portanto NAO
+         levam data-i18n e nao geram uma unica traducao. Foi por isso que
+         substituiram a tira de codigos -- e ainda indexam melhor, porque
+         «日本語» e «Русский» sao o que alguem escreve a procurar o seu.
+         ⚠ REGRA INVERTIDA a 12/09, por reparo do João: o portugues e o ingles
+           PASSAM a levar (BR)/(GB)/(US). A regra antiga («a bandeira ja o diz»)
+           nascera de um problema de LARGURA, e resolvia-o a custa da leitura:
+           duas linhas a dizerem «Português» nao se distinguem por quem nao
+           conhece as bandeiras. Sao as etiquetas da BARRA DA APP, a letra.
+           O chines mantem (简体)/(繁體) porque ai muda a ESCRITA, e isso a
+           bandeira nao diz a quem nao a le. -->
+    <div class="lang-grid">
+      <span class="lang-chip"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-pt"/></svg>Português</span>
+      <span class="lang-chip"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-br"/></svg>Português (BR)</span>
+      <span class="lang-chip"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-gb"/></svg>English (GB)</span>
+      <span class="lang-chip"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-us"/></svg>English (US)</span>
+      <span class="lang-chip"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-es"/></svg>Español</span>
+      <span class="lang-chip"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-fr"/></svg>Français</span>
+      <span class="lang-chip"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-it"/></svg>Italiano</span>
+      <span class="lang-chip"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-de"/></svg>Deutsch</span>
+      <span class="lang-chip"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-pl"/></svg>Polski</span>
+      <span class="lang-chip"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-ru"/></svg>Русский</span>
+      <span class="lang-chip"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-sa"/></svg>العربية</span>
+      <span class="lang-chip"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-in"/></svg>हिन्दी</span>
+      <span class="lang-chip"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-cn"/></svg>中文 (简体)</span>
+      <span class="lang-chip"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-tw"/></svg>中文 (繁體)</span>
+      <span class="lang-chip"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-jp"/></svg>日本語</span>
+      <span class="lang-chip"><svg class="lang-fl" viewBox="0 0 20 14" aria-hidden="true"><use href="#fl-kr"/></svg>한국어</span>
+    </div>
   </div>
 
   <!-- A caixa "Caracteristicas do suporte": clicar num disco na arvore (ou em
@@ -1726,11 +1962,218 @@
 
 </section>
 
+<!-- ══════════════════════════════════════════════════════════════════════
+     COFRE — secção nova, para a versão 2.
+
+     ⚠ PARA A ENGENHARIA VALIDAR: cada afirmação traz a origem ao lado, em
+       comentário «spec §». O contrato é Docs/cofre-spec.md.
+
+     ⚠ LICENCIAMENTO: escrito segundo a decisão do autor de 2026-08-14 —
+       CRIAR e ABRIR dentro do EF são AMBOS premium. Isto contraria a
+       decisão 10 e o §6.4 da spec («se o cofre exigisse licença para abrir,
+       a super-portabilidade morria no requisito que a própria funcionalidade
+       tem»). Consequência assumida no texto: a página NÃO promete que o EF
+       abre o cofre em qualquer máquina — promete que os ficheiros não ficam
+       reféns, porque qualquer app compatível os abre. A spec fica por
+       atualizar.
+     ══════════════════════════════════════════════════════════════════════ -->
+<section class="vault" id="vault">
+  <div class="vault-head">
+    <div>
+      <div class="section-num"><span data-i18n="vt_num">§ 02 · La cassaforte</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <h2 data-i18n-html="vt_title">Cifrata, e comunque solo <em>cartelle</em>.</h2>
+
+      <!-- spec §0 «O que é» -->
+      <p class="vault-lead" data-i18n-html="vt_blurb">Una cassaforte è un insieme di file cifrati sul disco — nomi dei file, nomi delle cartelle e contenuti, tutto. Aprila con la tua password e l'albero, l'anteprima, la ricerca e le operazioni sui file funzionano esattamente come sempre, su contenuti decifrati al volo. Chiudila, e sul disco restano <strong>nomi illeggibili e byte senza significato</strong>.</p>
+    </div>
+
+    <svg class="vault-lock" viewBox="0 0 200 250" role="img" aria-labelledby="vaultLockTitle">
+      <title id="vaultLockTitle">A padlock</title>
+      <defs>
+        <linearGradient id="vlBody" x1="0" y1="0" x2=".9" y2="1">
+          <stop offset="0" stop-color="#FBE7BC"/>
+          <stop offset=".18" stop-color="#EDBC76"/>
+          <stop offset=".42" stop-color="#C89150"/>
+          <stop offset=".63" stop-color="#8A6230"/>
+          <stop offset=".84" stop-color="#D6A05B"/>
+          <stop offset="1" stop-color="#7A5629"/>
+        </linearGradient>
+        <linearGradient id="vlSide" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#6B4A22"/>
+          <stop offset="1" stop-color="#B98A47"/>
+        </linearGradient>
+        <linearGradient id="vlShackle" x1=".1" y1="0" x2=".9" y2="1">
+          <stop offset="0" stop-color="#FBE7BC"/>
+          <stop offset=".35" stop-color="#D9A55E"/>
+          <stop offset=".7" stop-color="#8A6230"/>
+          <stop offset="1" stop-color="#C79350"/>
+        </linearGradient>
+        <linearGradient id="vlSpec" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#FFF6E2" stop-opacity=".55"/>
+          <stop offset=".45" stop-color="#FFF6E2" stop-opacity=".10"/>
+          <stop offset="1" stop-color="#FFF6E2" stop-opacity="0"/>
+        </linearGradient>
+        <radialGradient id="vlGlow" cx=".5" cy=".46" r=".6">
+          <stop offset="0" stop-color="#E0A458" stop-opacity=".20"/>
+          <stop offset="1" stop-color="#E0A458" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="vlShadow" cx=".5" cy=".5" r=".5">
+          <stop offset="0" stop-color="#000" stop-opacity=".55"/>
+          <stop offset="1" stop-color="#000" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+
+      <ellipse cx="100" cy="152" rx="96" ry="104" fill="url(#vlGlow)"/>
+      <!-- sombra projetada, desviada para a direita porque a luz vem da esquerda -->
+      <ellipse cx="112" cy="240" rx="72" ry="15" fill="url(#vlShadow)"/>
+
+      <!-- arco: o lado de trás primeiro, mais escuro e desviado, para o laço
+           ter espessura em vez de ser um risco -->
+      <path d="M69 122V90a31 31 0 0 1 62 0v32" fill="none" stroke="#6B4A22" stroke-width="18" stroke-linecap="round"/>
+      <path d="M64 124V90a36 36 0 0 1 72 0v34" fill="none" stroke="url(#vlShackle)" stroke-width="17" stroke-linecap="round"/>
+      <!-- especular do arco: fino, curto, e só onde a luz bate -->
+      <path d="M70 108V92a30 30 0 0 1 26-29" fill="none" stroke="#FFF6E2" stroke-width="3" stroke-linecap="round" opacity=".62"/>
+
+      <!-- face ESQUERDA (a espessura que a rotação descobre) -->
+      <path d="M34 140 L23 133 V216 L34 224 Z" fill="url(#vlSide)"/>
+      <!-- rebordo de baixo, na sombra -->
+      <path d="M34 224 L23 216 q4 14 18 15 Z" fill="#4A3316"/>
+
+      <!-- corpo -->
+      <rect x="32" y="118" width="136" height="114" rx="22" fill="url(#vlBody)"/>
+      <!-- especular grande, na diagonal da luz -->
+      <path d="M54 118h34L46 226a22 22 0 0 1-14-20v-66a22 22 0 0 1 22-22Z" fill="url(#vlSpec)"/>
+      <!-- fio de luz no bordo superior-esquerdo, e sombra no oposto -->
+      <path d="M54 118.9h60" stroke="#FFF6E2" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M33 145v50" stroke="#FFF6E2" stroke-opacity=".30" stroke-width="1.4" stroke-linecap="round"/>
+      <path d="M167 150v46" stroke="#3A2810" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
+      <!-- friso gravado -->
+      <rect x="46" y="132" width="108" height="86" rx="13" fill="none" stroke="#5C401E" stroke-opacity=".6"/>
+      <rect x="47.2" y="133.2" width="108" height="86" rx="13" fill="none" stroke="#FBE7BC" stroke-opacity=".16"/>
+
+      <!-- buraco da fechadura: escuro, com luz no bordo de baixo -->
+      <circle cx="100" cy="164" r="14" fill="#241706"/>
+      <path d="M94.5 172h11l3.5 30h-18Z" fill="#241706"/>
+      <path d="M88 170a14 14 0 0 0 24 0" fill="none" stroke="#FBE7BC" stroke-opacity=".34" stroke-width="1.6"/>
+      <circle cx="100" cy="164" r="14" fill="none" stroke="#3A2810" stroke-opacity=".7"/>
+    </svg>
+  </div>
+
+  <div class="vault-grid">
+    <!-- spec §12.1b «o cofre é um objeto idêntico aos outros, que pode existir
+         em qualquer perfil e em qualquer quantidade» (decisão do autor,
+         2026-08-07, saída B).
+         ⚠ PARA A ENGENHARIA: o §5.1 («N sub-cofres, um por disco, federados
+         pelo perfil») está DESATUALIZADO — foi revogado por esta decisão. Este
+         cartão segue a §12.1b e o comportamento real descrito pelo autor. -->
+    <div class="stack-cell">
+      <div class="ic" data-i18n="vt_fed_ic">UNA, O MILLE</div>
+      <h4 data-i18n="vt_fed_h">Le casseforti sono oggetti</h4>
+      <p data-i18n="vt_fed">Una cassaforte è un ramo come un altro — mettine una su un disco, o cento, accanto alle cartelle normali. Ognuna ha la sua password. Un solo gesto apre tutte quelle che la condividono, che sia una o mille, e un solo gesto le chiude tutte.</p>
+    </div>
+
+    <!-- ⛔ SO NESTA COPIA. NAO replicar para producao antes do portao da §12.
+         Ordem dele, 2026-08-19: «isto SO entra no site do cofre, ainda nao
+         publicavel». O habito destes dias e replicar cada alteracao nas duas
+         copias -- esta e a excepcao, e e por isso que esta escrito aqui.
+
+         spec 3.1: a chave de recuperacao E a chave-mestra escrita por extenso.
+         48 palavras CALCULADAS (512 bits + 16 de verificacao, a 11 bits por
+         palavra), lista BIP-39 inglesa (MIT).
+         NAO se anuncia como «compativel com BIP-39» -- usa-se o alfabeto e a
+         regra de verificacao, nao o formato: 512 bits esta fora dos tamanhos que
+         a especificacao deles preve, e nenhuma carteira le estas palavras.
+         A frase «nos tambem nao conseguimos» e ordem expressa dele: nao ha como
+         recorrer ao fabricante, e isso tem de estar dito.
+         A revogacao NAO existe e nao esta planeada (decisao dele, 2026-08-19) --
+         por isso o texto nao promete que mudar a password anule as palavras. -->
+    <div class="stack-cell">
+      <div class="ic" data-i18n="vt_seed_ic">48 PAROLE</div>
+      <h4 data-i18n="vt_seed_h">L'unico altro modo per entrare</h4>
+      <p data-i18n="vt_seed">Ogni cassaforte genera le sue 48 parole quando viene creata — la sua chiave, scritta per esteso. La password o quelle parole: nient'altro apre una cassaforte. Nemmeno noi possiamo aprirla — perse entrambe, la cassaforte è persa. Conserva le parole dove la cassaforte non c'è.</p>
+    </div>
+
+    <!-- spec §8.5 e §8.5.0 · provado em produção: ffmpeg, Word, WinRAR e o
+         gravador do EF escreveram numa unidade montada, verificado ao byte -->
+    <div class="stack-cell">
+      <div class="ic" data-i18n="vt_letter_ic">UNA LETTERA</div>
+      <h4 data-i18n="vt_letter_h">Aperta a ogni app</h4>
+      <p data-i18n="vt_letter">Assegna a una cassaforte una lettera di unità e diventa un'unità normale per tutto ciò che gira sulla macchina — ffmpeg, Word, WinRAR e il registratore dello stesso explorer ci scrivono direttamente. Montarla scambia segretezza con compatibilità, ed è per questo che non è mai attiva di default.</p>
+    </div>
+
+    <!-- spec §2 decisão 3 «cifra por BLOCOS, não por ficheiro inteiro — sem
+         isto, um vídeo de 4 GB tem de ir todo para memória e não se pode
+         saltar para o minuto 40» · §8.1 (média servida por 127.0.0.1) -->
+    <div class="stack-cell">
+      <div class="ic" data-i18n="vt_blocks_ic">NESSUNA ATTESA</div>
+      <h4 data-i18n="vt_blocks_h">Leggere e riprodurre dentro</h4>
+      <p data-i18n="vt_blocks">I file sono cifrati a blocchi, non per intero. Un video da 4 GB non deve mai essere decifrato prima in memoria — l'anteprima si apre, e puoi saltare direttamente al minuto quaranta. Documenti, libri e immagini si vedono in anteprima allo stesso modo, dentro la cassaforte.</p>
+    </div>
+
+    <!-- Dois cartões e não um: a dimensão do COFRE e a dimensão do FICHEIRO
+         são coisas diferentes, e juntas confundiam quem não é da área. -->
+    <div class="stack-cell">
+      <div class="ic" data-i18n="vt_vsize_ic">DIMENSIONE DELLA CASSAFORTE</div>
+      <h4 data-i18n="vt_vsize_h">Grande quanto il suo disco</h4>
+      <p data-i18n="vt_vsize">Non c'è un limite nostro. Una cassaforte contiene un solo file, o diversi TB distribuiti su migliaia di file. Finisce dove finisce il disco.</p>
+    </div>
+
+    <!-- spec §9.1 · o cifrado é ~0,09% maior (68 B de cabeçalho + 28 B por
+         bloco de 32 KiB), por isso a verificação corre contra o tamanho
+         CIFRADO e recusa ANTES de começar, dizendo o número real -->
+    <div class="stack-cell">
+      <div class="ic" data-i18n="vt_fsize_ic">DIMENSIONE DEL FILE</div>
+      <h4 data-i18n="vt_fsize_h">Quello che il disco consente</h4>
+      <p data-i18n="vt_fsize">16 TB su NTFS, 16 EB su exFAT — e 4 GB su FAT32, perché quello è il limite di FAT32 e non il nostro. La cifratura aggiunge circa lo 0,09%, quindi un file che ci sta appena smette di starci: il controllo si fa sulla dimensione cifrata e rifiuta prima di iniziare, con il numero reale.</p>
+    </div>
+
+    <!-- spec §2 decisão 4 · formato do Cryptomator (v8), reimplementado a
+         partir da especificação pública.
+         Os DOIS sentidos estão provados no cofre-plano.md:
+           B1 ✅ abrimos um cofre feito pelo Cryptomator
+           B2 ✅ lido de ponta a ponta — 25 ficheiros, 3 níveis, 52 MB
+           B3 ✅ o encurtamento de nomes dá exatamente o mesmo nome curto
+           B5 ✅ o Cryptomator abriu um cofre nosso, «sem uma queixa»
+         ⚠ Abrir um cofre pré-existente DENTRO do EF exige PREMIUM (autor,
+           2026-08-14) — está dito, porque esta é a frase com mais hipóteses
+           de ser lida sozinha num resultado de pesquisa. -->
+    <div class="stack-cell">
+      <div class="ic" data-i18n="vt_open_ic">NON È NOSTRO DA TRATTENERE</div>
+      <h4 data-i18n="vt_open_h">Formato Cryptomator</h4>
+      <p data-i18n="vt_open">Il formato è quello di Cryptomator, ricostruito dalla sua specifica pubblica, e funziona nei due sensi — verificato. Le casseforti create qui si aprono in Cryptomator su Android, iOS, Mac e Linux, senza nulla da convertire. Anche quelle che hai già si aprono qui. Se ExplorerFocus sparisse domani, i file no.</p>
+    </div>
+  </div>
+
+  <!-- spec §1 «Modelo de ameaça» — a spec obriga a que isto apareça na
+       interface, em linguagem simples. Vai também para a página. -->
+  <div class="vault-threat">
+    <div class="vault-col yes">
+      <h4 data-i18n="vt_yes_h">Protegge da</h4>
+      <ul data-i18n-html="vt_yes"><li>Chiunque copi la cartella o il disco — sincronizzazione cloud, una chiavetta USB persa, un backup nelle mani di altri</li><li>Chiunque rubi il computer mentre è spento</li><li>Chiunque abbia accesso in lettura al disco, senza la password</li></ul>
+    </div>
+    <div class="vault-col no">
+      <h4 data-i18n="vt_no_h">Non protegge da</h4>
+      <ul data-i18n-html="vt_no"><li>Malware che gira con il tuo account <strong>con la cassaforte aperta</strong> — legge i file decifrati, come qualsiasi altro programma</li><li>Keylogger, o chiunque si sieda al tuo computer sbloccato con la cassaforte aperta</li><li>Copie di un file che esistevano già in chiaro prima che entrasse</li><li>Chi <strong>scrive</strong> sul disco con la cassaforte chiusa: non può alterare il contenuto — l'autenticazione se ne accorge — ma può cancellare file</li></ul>
+    </div>
+  </div>
+
+  <!-- spec §1, primeira linha: «prometer segurança a mais é a pior coisa que
+       uma funcionalidade destas pode fazer» -->
+  <p class="vault-note" data-i18n-html="vt_honest"><strong>Perché esiste quella seconda colonna:</strong> promettere più sicurezza di quella che si ha è la cosa peggiore che una funzione del genere possa fare. Ogni prodotto di questa categoria potrebbe pubblicare quell'elenco. Quasi nessuno lo fa.</p>
+
+  <!-- spec §9.1, nota final: o layout achatado (d/XX/YYY…) resolve quase
+       sozinho o limite de 260 caracteres do Windows -->
+  <p class="vault-note" data-i18n-html="vt_paths"><strong>Un effetto collaterale che vale la pena conoscere:</strong> ogni cartella cifrata sta alla stessa profondità ridotta sul disco, quindi una cartella a venti livelli resta un percorso in quattro parti. Percorsi che Esplora file di Windows si rifiuta di aprire funzionano dentro una cassaforte.</p>
+
+
+  <p class="vault-note" data-i18n-html="vt_premium"><a class="prem-word" href="#premium">PREMIUM</a> — creare casseforti. Aprirle è gratis, comprese quelle create altrove.</p>
+</section>
+
 <!-- SHORTCUTS -->
 <section class="shortcuts" id="shortcuts">
   <div class="shortcuts-inner">
     <div class="shortcuts-side">
-      <div class="section-num" data-i18n="sc_num">§ 02 · Scorciatoie</div>
+      <div class="section-num" data-i18n="sc_num">§ 03 · Scorciatoie</div>
       <h2 data-i18n-html="sc_title">Le mani<br>sulla <em>riga di casa</em>.</h2>
       <p data-i18n="sc_blurb">Ogni operazione importante ha una scorciatoia. Senza mouse quando possibile — comodità per le sessioni lunghe.</p>
     </div>
@@ -1782,7 +2225,7 @@
 
 <!-- STACK -->
 <section class="stack" id="stack">
-  <div class="section-num" data-i18n="st_num">§ 03 · Tecnologie</div>
+  <div class="section-num" data-i18n="st_num">§ 04 · Tecnologie</div>
   <h2 data-i18n-html="st_title">Costruito con <em>pezzi seri</em>.</h2>
   <p data-i18n="st_blurb">Ogni dipendenza è stata scelta per maturità, per dimensione, o per l'assenza di alternative ragionevoli. Nessun framework del momento.</p>
   <p class="stack-licences" data-i18n-html="st_licences">L'<strong>elenco completo viaggia dentro il programma</strong>, con ogni autore e i testi integrali delle licenze — in <em>Informazioni → Licenze di terze parti</em>.</p>
@@ -1798,6 +2241,37 @@
       <div class="ic">MVVM</div>
       <h4>CommunityToolkit.Mvvm</h4>
       <p data-i18n="st_mvvm">ObservableObject, ObservableProperty, RelayCommand — generati da source generator.</p>
+    </div>
+    <!-- Componentes do COFRE. Origem: Docs/licencas-de-terceiros.md.
+         ⚠ Sao TRES celulas e nao uma. Numa so, o texto dava-lhe o triplo da
+           altura das vizinhas e partia o ritmo da grelha -- e uma celula da
+           Stack e para se ler de relance, nao e um paragrafo.
+         Sao 4 componentes por decisao dele («no maximo 4 no site»). Dos 6 do
+           cofre ficam de fora os dois que sao canalizacao pura e vivem so na
+           app: #16 LTRData.Extensions e #17 Bcl.AsyncInterfaces, ambos MIT e
+           ambos dependencias transitivas do DokanNet.
+         Criterio dos que ENTRAM: cada um muda alguma coisa para quem le.
+           #2  BouncyCastle 2.6.2 · MIT ......... quem faz a cifra
+           #18 Dokany (dokan2.dll) · LGPL v3 .... a unica copyleft, e NAO e distribuida
+           #15 DokanNet 2.3.0.3 · MIT ........... a ponte, e esta VIAJA no exe
+           #13 lista BIP-39 (inglesa) · MIT ..... a chave de recuperacao (spec §3.1)
+         O Cryptomator nao e um componente nosso -- e o FORMATO, reimplementado
+           da especificacao publica (spec §2, decisao 4). Tem celula propria
+           porque e a peca que decide se os ficheiros ficam ou nao reféns. -->
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_crypto_ic">CIFRATURA</div>
+      <h4>Bouncy Castle</h4>
+      <p data-i18n="st_crypto">scrypt, AES-SIV e AES Key Wrap, da Bouncy Castle (MIT) — pubblici, e ampiamente usati da oltre vent'anni.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_letter_ic">LETTERA</div>
+      <h4>Dokany · DokanNet</h4>
+      <p data-i18n="st_letter">Dokany (LGPL v3) non è distribuito: lo installi tu, e l'explorer lo usa solo se lo trova. Il ponte .NET, DokanNet (MIT), viaggia invece dentro l'eseguibile.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_format_ic">FORMATO</div>
+      <h4>Cryptomator v8 · BIP-39</h4>
+      <p data-i18n="st_format">Il formato della cassaforte è quello di Cryptomator, ricostruito dalla sua specifica pubblica. La chiave di recupero usa l'elenco di parole BIP-39 (MIT).</p>
     </div>
     <div class="stack-cell">
       <div class="ic" data-i18n="st_preview_ic">ANTEPRIMA</div>
@@ -1834,7 +2308,7 @@
 
 <!-- PREMIUM -->
 <section class="premium" id="premium">
-  <div class="section-num" data-i18n="pr_num">§ 04 · Gratis e Premium</div>
+  <div class="section-num" data-i18n="pr_num">§ 05 · Gratis e Premium</div>
   <h2 data-i18n-html="pr_title">Tutto ciò che è locale è <em>gratis</em>.</h2>
   <p class="prem-blurb" data-i18n="pr_blurb">Lo è sempre stato e sempre lo sarà: nessun abbonamento, nessun account, nessuna pubblicità. Premium è una donazione una volta sola — una piccola ricompensa per le notti e i giorni passati a costruire funzioni molto specifiche e tecnicamente impegnative. Non lo faccio per i soldi: lo faccio per le idee che arrivano. Alla maggior parte delle persone Premium non mancherà mai — ed è giusto così.</p>
 
@@ -1848,7 +2322,7 @@
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag">donazione una volta sola di 19,99 € · per macchina</span>
-      <ul data-i18n-html="pr_prem_list"><li><strong>Accesso remoto completo</strong>: più connessioni, tutte le operazioni, WebDAV, Dropbox, OneDrive</li><li>Registrazione dello schermo <strong>senza filigrana, senza limite di tempo e con audio</strong></li><li>Registrazione video senza filigrana</li><li>Mix audio microfono + audio di sistema</li><li>Scansione a più pagine con alimentatore (ADF)</li><li>Lettore di libri completo — EPUB, formati Kindle, FB2 e fumetti</li><li>Schede di apertura/chiusura e fascia di testo nelle registrazioni</li></ul>
+      <ul data-i18n-html="pr_prem_list"><li><strong>Creare</strong> casseforti cifrate</li><li><strong>Accesso remoto completo</strong>: più connessioni, tutte le operazioni, WebDAV, Dropbox, OneDrive</li><li>Registrazione dello schermo <strong>senza filigrana, senza limite di tempo e con audio</strong></li><li>Registrazione video senza filigrana</li><li>Mix audio microfono + audio di sistema</li><li>Scansione a più pagine con alimentatore (ADF)</li><li>Lettore di libri completo — EPUB, formati Kindle, FB2 e fumetti</li><li>Schede di apertura/chiusura e fascia di testo nelle registrazioni</li></ul>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo
@@ -1885,6 +2359,7 @@
     <div class="footer-col">
       <h5 data-i18n="ft_project">Progetto</h5>
       <a href="#features" data-i18n="nav_features">Funzioni</a>
+      <a href="#vault" data-i18n="nav_vault">Cassaforte</a>
       <a href="#shortcuts" data-i18n="nav_shortcuts">Scorciatoie</a>
       <a href="#stack" data-i18n="nav_stack">Tecnologie</a>
       <a href="#premium" data-i18n="nav_premium">Premium</a>
@@ -1897,16 +2372,6 @@
     <span>© 2026 <span class="brand-mb">mBrothers</span> · v1.2.26 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">pensato per il lavoro di ogni giorno</span>
     <span id="viewCounter" hidden title="Visitas à página"></span>
-  </div>
-
-  <!-- Os 16 idiomas da APP, pela ordem da barra de bandeiras dela. Vive no
-       rodapé porque é informação de referência: só interessa a quem procura o
-       seu. Em texto, e não só no JSON-LD, para ser indexável e para se poder
-       procurar na página com Ctrl+F.
-       ⚠ NÃO confundir com as 6 línguas do SITE (o seletor lá em cima). -->
-  <div class="footer-langs">
-    <span data-i18n="ft_langs_h">Interfaccia dell'app</span>
-    <span class="footer-langs-list">PT · BR · EN · US · ES · FR · IT · DE · PL · RU · AR · HI · CN · TW · JA · KO</span>
   </div>
 
   <div class="mb-credit" data-i18n-html="mb_credit">Un prodotto <a href="https://nunex-mbrothers.github.io/mBrothers/" target="_blank" rel="noopener">mBrothers</a><span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
@@ -2055,6 +2520,79 @@
     if (e.key !== 'Escape') return;
     document.querySelectorAll('details.lang-picker[open]').forEach(d => { d.open = false; });
   });
+
+  /* ============================================================
+     O carrossel do hero. Salta sozinho, mas pára assim que a pessoa
+     lhe toca -- quem escolheu um ecrã não quer que lho tirem.
+     Teclado (setas), rato (setas e chips) e dedo (arrastar).
+     ⚠ Acrescentar um ecrã: uma linha no SLIDES, a imagem em shots/, e
+       as duas chaves shN_t / shN_cap nas 7 línguas.
+  ============================================================ */
+  (function () {
+    var caixa = document.getElementById('shots');
+    if (!caixa) return;
+    var DWELL = 3750;          // 2500 ate 2026-08-19; +50% por ordem dele, para o ecra de lancamento
+                           // se conseguir ler. A 2,5 s com meia de transicao sobrava 1,5 s parado.
+    var SAIDA = 520;           // tem de ser >= a transicao do CSS
+    var figs = caixa.querySelectorAll('.shot');
+    var quieto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var i = 0, t = null, saida = null, parado = quieto, pousado = false;
+
+    function agendar() {
+      clearTimeout(t);
+      if (!parado && !pousado) t = setTimeout(function () { ir(i + 1); }, DWELL);
+    }
+    function ir(n, manual) {
+      var novo = (n + figs.length) % figs.length;
+      if (novo === i) return;
+      /* para tras empurra para o outro lado -- senao voltar parecia avancar */
+      var atras = (n < i && !(i === figs.length - 1 && novo === 0)) || (i === 0 && novo === figs.length - 1);
+      caixa.classList.toggle('is-back', atras);
+
+      var velho = figs[i];
+      velho.classList.remove('is-on');
+      velho.classList.add('is-out');
+      /* limpar TODOS e nao so o ultimo: navegando depressa, a classe ficava
+         presa num ecra antigo porque cada saida tinha o seu temporizador */
+      clearTimeout(saida);
+      saida = setTimeout(function () {
+        for (var q = 0; q < figs.length; q++) if (q !== i) figs[q].classList.remove('is-out');
+      }, SAIDA);
+
+      i = novo;
+      figs[i].classList.add('is-on');
+      if (manual) parado = true;      // quem escolheu um ecra nao quer que lho tirem
+      agendar();
+    }
+
+    caixa.querySelector('.shots-arrow.prev').addEventListener('click', function () { ir(i - 1, true); });
+    caixa.querySelector('.shots-arrow.next').addEventListener('click', function () { ir(i + 1, true); });
+    caixa.addEventListener('keydown', function (ev) {
+      if (ev.key === 'ArrowLeft')  { ir(i - 1, true); ev.preventDefault(); }
+      if (ev.key === 'ArrowRight') { ir(i + 1, true); ev.preventDefault(); }
+    });
+    /* passar o rato por cima segura o ecra: e a maneira de olhar para um sem
+       ter de o mandar parar de vez */
+    document.addEventListener('visibilitychange', function () {
+      /* sem isto o browser estrangula os temporizadores num separador escondido
+         e dispara-os em rajada ao voltar: quem regressa apanhava o carrossel aos saltos */
+      if (document.hidden) clearTimeout(t); else agendar();
+    });
+    caixa.addEventListener('mouseenter', function () { pousado = true; clearTimeout(t); });
+    caixa.addEventListener('mouseleave', function () { pousado = false; agendar(); });
+    /* o dedo: so conta como arrasto se for mais horizontal do que vertical,
+       senao roubava o scroll da pagina */
+    var x0 = null, y0 = null;
+    caixa.addEventListener('touchstart', function (ev) { x0 = ev.touches[0].clientX; y0 = ev.touches[0].clientY; }, { passive: true });
+    caixa.addEventListener('touchend', function (ev) {
+      if (x0 === null) return;
+      var dx = ev.changedTouches[0].clientX - x0, dy = ev.changedTouches[0].clientY - y0;
+      if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) ir(i + (dx < 0 ? 1 : -1), true);
+      x0 = y0 = null;
+    }, { passive: true });
+
+    agendar();
+  })();
 
   /* ============================================================
      Versão mais recente (até à revision) — lida do version.json

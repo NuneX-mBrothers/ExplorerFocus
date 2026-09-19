@@ -2521,6 +2521,19 @@
     document.querySelectorAll('details.lang-picker[open]').forEach(d => { d.open = false; });
   });
 
+  /* Aberta com duplo clique (file:///), uma ligacao para uma PASTA ("pt/",
+     "../") mostra a listagem da pasta: so um servidor web -- o GitHub Pages,
+     ou um local -- abre sozinho o index.html de dentro dela. Aqui, e SO aqui,
+     essas ligacoes passam a apontar para o proprio ficheiro. No site
+     publicado o protocolo e https e isto nao corre. (Medido a 2026-09-19:
+     o Chrome mostrava "Index of ...\pt\".) */
+  if (location.protocol === 'file:') {
+    document.querySelectorAll('a[href]').forEach(a => {
+      const h = a.getAttribute('href');
+      if (/^[^#:?]*\/$/.test(h)) a.setAttribute('href', h + 'index.html');
+    });
+  }
+
   /* ============================================================
      O carrossel do hero. Salta sozinho, mas pára assim que a pessoa
      lhe toca -- quem escolheu um ecrã não quer que lho tirem.

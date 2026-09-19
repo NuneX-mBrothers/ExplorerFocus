@@ -5,11 +5,11 @@
 # ExplorerFocus
 
 **A distraction-free file explorer for Windows 10 & 11.**
-Profiles, rich preview, honest file operations, remote/cloud access — and capture tools built in.
+Profiles, rich preview, honest file operations, encrypted vaults, remote/cloud access — and capture tools built in.
 
 [**⬇ Download (.exe)**](https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.exe) · [**Download (.zip)**](https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip) · [**Website**](https://nunex-mbrothers.github.io/ExplorerFocus/) · [**Releases**](https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest)
 
-Single `.exe` · no installer · no runtime to install · 12 languages
+Single `.exe` · no installer · no runtime to install · digitally signed · 16 languages
 
 <img src="screenshots/main.png" width="820" alt="ExplorerFocus main window">
 
@@ -30,6 +30,7 @@ want to reach them fast — and to see what's inside a file without opening it.
 - **Multi-pattern search** — `*.cs *.json` in one box, wildcards anywhere, plus opt-in search across profiles.
 - **Rich preview** — code with syntax highlighting and folding, Markdown, PDF, Word/Excel/PowerPoint, images, EPUB, audio and video (streamed, so a 2 GB file opens instantly).
 - **Honest file operations** — copy/move/delete with real per-file progress, throughput, ETA, pause/resume, up to 6 in parallel, persistent history and 6-way conflict resolution.
+- **Encrypted vaults** — file names and contents encrypted in the Cryptomator format. Give a vault a drive letter and every app on the machine can use it; vaults made here also open in Cryptomator on Android, iOS, Mac and Linux. Opening a vault is free; creating one is Premium.
 - **Remote & cloud** — SFTP, FTP/FTPS, WebDAV, Dropbox, OneDrive. Browse, preview and operate as if local; edit a remote file and it syncs on save.
 - **Capture built in** — screen (with webcam PiP and system audio), video, audio and scanning, without leaving the explorer.
 - **Complete dark theme**, rich hover tooltips, archives browsable as folders, integrated terminals (CMD, PowerShell, Git Bash), per-extension app associations, auto-updates.
@@ -37,24 +38,28 @@ want to reach them fast — and to see what's inside a file without opening it.
 ## Free vs Premium
 
 **The free version is the complete product for virtually everyone** — all the file management,
-profiles, preview, operations, terminals, dark theme and the 12 languages. Nothing expires,
-nothing nags.
+profiles, preview, operations, terminals, dark theme, the 16 languages — and opening encrypted
+vaults, including ones made elsewhere. Nothing expires, nothing nags.
 
-Premium unlocks a handful of specific, fairly technical extras: multiple simultaneous remote
-connections, screen capture without watermark or time cap, multi-page scanning with a document
-feeder, and the full EPUB reader. It's a **one-time donation**, not a subscription, activated per
-machine. Details on the [website](https://nunex-mbrothers.github.io/ExplorerFocus/#premium).
+Premium unlocks a defined set of extras: creating encrypted vaults, full remote access (multiple
+connections, all operations, WebDAV, Dropbox, OneDrive), screen and camera recording without
+watermark or time cap and with system sound, audio mixing, multi-page scanning with a document
+feeder, the complete book reader (EPUB, Kindle formats, FB2 and comics), and intro/end cards on
+recordings. It's a **one-time donation**, not a subscription, activated per machine. Details on the
+[website](https://nunex-mbrothers.github.io/ExplorerFocus/#premium).
 
 ## First run
 
-The executable isn't code-signed yet, so Windows SmartScreen may warn on first launch.
-Click **More info → Run anyway**. Every release publishes its **SHA-256** in
+ExplorerFocus is digitally signed as of version 1.2.23. The signature is recent, so Windows may
+still ask you to confirm on first launch — it takes a while to recognise a new publisher. If it
+does, click **More info → Run anyway**. Every release publishes its **SHA-256** in
 [`version.json`](version.json) and on the website, so you can verify the file you downloaded.
 
 ## Built with
 
 WPF on .NET 10, published as a single-file self-contained `win-x64` executable.
-AvalonEdit (code preview) · WebView2 (PDF/Office/Markdown) · SSH.NET · FluentFTP · Media Foundation (capture).
+AvalonEdit (code preview) · WebView2 (PDF/Office/Markdown) · SSH.NET · FluentFTP · Media Foundation (capture) ·
+Bouncy Castle (vault encryption) · DokanNet (vault drive letters — the Dokany driver itself is not shipped).
 
 ## About
 

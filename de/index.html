@@ -747,6 +747,12 @@
   }
   .badge-pro { margin-left: 8px; }
   .badge-pro:hover, .prem-word:hover { filter: brightness(1.15); }
+  /* Um cartão tem UM parágrafo, e por isso os <p> lá dentro não levam margem
+     nenhuma. O 24 passou a ter dois — os livros e o modo papel — e sem isto o
+     segundo cola-se ao primeiro e lê-se como continuação da mesma frase.
+     ⚠ Classe própria em vez de `.feat p + p`: há 12 pares de parágrafos
+     seguidos na página e nenhum deles quer esta margem. */
+  .feat p.feat-p2 { margin-top: 14px; }
   .feat-note { margin-top: 16px; font-size: 12.5px; line-height: 1.55; color: var(--fg-2); }
   /* Nota de rodapé do cartão — deliberadamente discreta: quem chega aqui já desceu
      o cartão todo. Não trava ninguém à entrada. */
@@ -1630,11 +1636,15 @@
          abre; saiu o mais antigo (gravação de ecrã). Ficou em SEIS: os 16 idiomas e o
          disco entraram por decisão dele, e o tecto da tira subiu de quatro para
          seis. Aqui a gravação de ecrã continua de fora — quem sai é sempre o
-         mais antigo. -->
+         mais antigo.
+         ⛔ 22/09: o MODO PAPEL, a outra novidade da 2, não fez sair ninguém — a
+         pill dos livros passou a falar dele. É o MESMO cartão (#feat24): duas
+         pills a apontar para o mesmo sítio era o defeito, não a solução. Continua
+         em seis. -->
     <a href="#vault" data-i18n="wn_vault">🔒 Die Tresore</a>
     <a href="#feat18" data-i18n="wn_langs">🌐 16 Sprachen</a>
     <a href="#feat19" data-i18n="wn_disk">💽 Die Platte im Detail</a>
-    <a href="#feat24" data-i18n="wn_books">📚 Bücher &amp; Comics</a>
+    <a href="#feat24" data-i18n="wn_books">📖 Bücher auf Papier</a>
     <a href="#feat32" data-i18n="wn_voice">🎙 Voice-over</a>
     <a href="#feat31" data-i18n="wn_cards">🎬 Marken-Karten</a>
   </nav>
@@ -1896,10 +1906,18 @@
     <div class="num"><span data-i18n="f24_num">24 — BÜCHER &amp; COMICS</span><a class="badge-free" href="#free" data-i18n="badge_free">Kostenlos</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f24_h">Acht Buchformate — Vorschau und Lesen, ohne den Explorer zu verlassen.</h3>
     <p data-i18n-html="f24_p">Sofortige Vorschau jeder <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> oder <em>.fb2</em>: Cover, Inhaltsverzeichnis und der Textanfang. Öffne das ganze Buch in einem eigenen Reader — mit Kapitelnavigation, Seitensprung, <em>Auto-Scrollen</em> und gemerkter Leseposition. Auch Comics: <em>.cbz</em> und <em>.cbr</em> öffnen Seite für Seite, ohne vorher Hunderte Megabyte zu entpacken.</p>
+    <!-- ⛔ O MODO PAPEL vive AQUI, e nao num cartao proprio. Palavras do Joao,
+         que e quem le nele todos os dias: «é apenas por tentar transferir para o
+         utilizador a sensação de estar a ler um livro real... esta é apenas mais
+         uma». Um cartao proprio prometia mais do que ele proprio promete.
+         ⚠ As tres palavras dos modos -- simples/papel/papel de noite -- sao as da
+         APP (LocalizationService.cs: EpubLookSimples/Papel/Noite), nao se
+         inventam aqui. E o PREMIUM diz-se UMA vez, na linha de baixo. -->
+    <p class="feat-p2" data-i18n-html="f24_paper"><strong>Papiermodus.</strong> Dasselbe Buch, ein anderes Bild: zwei aufgeschlagene Seiten, der Bund in der Mitte, Papier mit Korn und Lampenlicht, und das Blatt biegt sich unter der Hand, während man umblättert. Eine Schaltfläche wechselt zwischen <em>einfach · Papier · Nachtpapier</em>, und einfach bleibt die Voreinstellung. Es wird kein echtes Buch — keine Textur, kein Geräusch der Seite, kein Geruch, kein Gewicht beim Aufnehmen und Weglegen — aber ein Bildschirm kann nahe herankommen. Was das bringt, ist Bequemlichkeit, und die ist persönlich: jeder liest auf seine Art besser. <strong>Das ist einfach eine mehr.</strong></p>
     <div class="feat-mark" data-i18n="f24_mark">EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR</div>
     <p class="feat-note">
       <span data-i18n="f24_free">Kostenlos: Vorschau — Cover, Inhalt und ein erster Blick hinein.</span><br>
-      <span data-i18n="f24_premium">PREMIUM: voller Reader — Navigation, Seitensprung, Auto-Scrollen, Umblättern und Merken der letzten 20 Bücher.</span>
+      <span data-i18n="f24_premium">PREMIUM: voller Reader — Navigation, Seitensprung, Auto-Scrollen, Papiermodus, Umblättern und Merken der letzten 20 Bücher.</span>
       <span class="feat-drm" data-i18n="f24_note">Bücher, die dir gehören, öffnen sich. Mit DRM gekaufte Bücher bleiben an den Shop gebunden, der sie verkauft hat — die App erklärt es, wenn sie eines findet.</span>
     </p>
   </div>

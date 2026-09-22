@@ -747,6 +747,12 @@
   }
   .badge-pro { margin-left: 8px; }
   .badge-pro:hover, .prem-word:hover { filter: brightness(1.15); }
+  /* Um cartão tem UM parágrafo, e por isso os <p> lá dentro não levam margem
+     nenhuma. O 24 passou a ter dois — os livros e o modo papel — e sem isto o
+     segundo cola-se ao primeiro e lê-se como continuação da mesma frase.
+     ⚠ Classe própria em vez de `.feat p + p`: há 12 pares de parágrafos
+     seguidos na página e nenhum deles quer esta margem. */
+  .feat p.feat-p2 { margin-top: 14px; }
   .feat-note { margin-top: 16px; font-size: 12.5px; line-height: 1.55; color: var(--fg-2); }
   /* Nota de rodapé do cartão — deliberadamente discreta: quem chega aqui já desceu
      o cartão todo. Não trava ninguém à entrada. */
@@ -1630,11 +1636,15 @@
          abre; saiu o mais antigo (gravação de ecrã). Ficou em SEIS: os 16 idiomas e o
          disco entraram por decisão dele, e o tecto da tira subiu de quatro para
          seis. Aqui a gravação de ecrã continua de fora — quem sai é sempre o
-         mais antigo. -->
+         mais antigo.
+         ⛔ 22/09: o MODO PAPEL, a outra novidade da 2, não fez sair ninguém — a
+         pill dos livros passou a falar dele. É o MESMO cartão (#feat24): duas
+         pills a apontar para o mesmo sítio era o defeito, não a solução. Continua
+         em seis. -->
     <a href="#vault" data-i18n="wn_vault">🔒 The vaults</a>
     <a href="#feat18" data-i18n="wn_langs">🌐 16 languages</a>
     <a href="#feat19" data-i18n="wn_disk">💽 The disk, in detail</a>
-    <a href="#feat24" data-i18n="wn_books">📚 Books &amp; comics</a>
+    <a href="#feat24" data-i18n="wn_books">📖 Books on paper</a>
     <a href="#feat32" data-i18n="wn_voice">🎙 Voice over</a>
     <a href="#feat31" data-i18n="wn_cards">🎬 Branding cards</a>
   </nav>
@@ -1896,10 +1906,18 @@
     <div class="num"><span data-i18n="f24_num">24 — BOOKS &amp; COMICS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f24_h">Eight book formats — preview and read, without leaving the explorer.</h3>
     <p data-i18n-html="f24_p">Instant preview of any <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> or <em>.fb2</em>: cover, table of contents and the opening text. Open the full book in its own reader, with chapter navigation, page jump, <em>auto-scroll</em> and your reading position remembered. Comics too: <em>.cbz</em> and <em>.cbr</em> open page by page, without unpacking hundreds of megabytes first.</p>
+    <!-- ⛔ O MODO PAPEL vive AQUI, e nao num cartao proprio. Palavras do Joao,
+         que e quem le nele todos os dias: «é apenas por tentar transferir para o
+         utilizador a sensação de estar a ler um livro real... esta é apenas mais
+         uma». Um cartao proprio prometia mais do que ele proprio promete.
+         ⚠ As tres palavras dos modos -- simples/papel/papel de noite -- sao as da
+         APP (LocalizationService.cs: EpubLookSimples/Papel/Noite), nao se
+         inventam aqui. E o PREMIUM diz-se UMA vez, na linha de baixo. -->
+    <p class="feat-p2" data-i18n-html="f24_paper"><strong>Paper mode.</strong> The same book, another look: two facing pages, the spine down the middle, paper with grain and lamp light, and the sheet folding under your hand as it turns. One button cycles <em>plain · paper · night paper</em>, and plain stays the default. It does not become a real book — no texture, no sound of the page, no smell, none of the weight of picking it up and putting it down — but a screen can come close. What that buys is comfort, and comfort is personal: everyone reads better in their own way. <strong>This is simply one more.</strong></p>
     <div class="feat-mark" data-i18n="f24_mark">EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR</div>
     <p class="feat-note">
       <span data-i18n="f24_free">Free: preview — cover, contents and a first look inside.</span><br>
-      <span data-i18n="f24_premium">PREMIUM: full reader — navigation, page jump, auto-scroll, page-turn and memory of your last 20 books.</span>
+      <span data-i18n="f24_premium">PREMIUM: full reader — navigation, page jump, auto-scroll, paper mode, page-turn and memory of your last 20 books.</span>
       <span class="feat-drm" data-i18n="f24_note">Books you own open. Books bought with DRM stay locked to the store that sold them — the app explains why when it finds one.</span>
     </p>
   </div>

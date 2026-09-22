@@ -747,6 +747,12 @@
   }
   .badge-pro { margin-left: 8px; }
   .badge-pro:hover, .prem-word:hover { filter: brightness(1.15); }
+  /* Um cartão tem UM parágrafo, e por isso os <p> lá dentro não levam margem
+     nenhuma. O 24 passou a ter dois — os livros e o modo papel — e sem isto o
+     segundo cola-se ao primeiro e lê-se como continuação da mesma frase.
+     ⚠ Classe própria em vez de `.feat p + p`: há 12 pares de parágrafos
+     seguidos na página e nenhum deles quer esta margem. */
+  .feat p.feat-p2 { margin-top: 14px; }
   .feat-note { margin-top: 16px; font-size: 12.5px; line-height: 1.55; color: var(--fg-2); }
   /* Nota de rodapé do cartão — deliberadamente discreta: quem chega aqui já desceu
      o cartão todo. Não trava ninguém à entrada. */
@@ -1630,11 +1636,15 @@
          abre; saiu o mais antigo (gravação de ecrã). Ficou em SEIS: os 16 idiomas e o
          disco entraram por decisão dele, e o tecto da tira subiu de quatro para
          seis. Aqui a gravação de ecrã continua de fora — quem sai é sempre o
-         mais antigo. -->
+         mais antigo.
+         ⛔ 22/09: o MODO PAPEL, a outra novidade da 2, não fez sair ninguém — a
+         pill dos livros passou a falar dele. É o MESMO cartão (#feat24): duas
+         pills a apontar para o mesmo sítio era o defeito, não a solução. Continua
+         em seis. -->
     <a href="#vault" data-i18n="wn_vault">🔒 Хранилища</a>
     <a href="#feat18" data-i18n="wn_langs">🌐 16 языков</a>
     <a href="#feat19" data-i18n="wn_disk">💽 Диск, в подробностях</a>
-    <a href="#feat24" data-i18n="wn_books">📚 Книги и комиксы</a>
+    <a href="#feat24" data-i18n="wn_books">📖 Книги на бумаге</a>
     <a href="#feat32" data-i18n="wn_voice">🎙 Озвучка</a>
     <a href="#feat31" data-i18n="wn_cards">🎬 Карточки бренда</a>
   </nav>
@@ -1896,10 +1906,18 @@
     <div class="num"><span data-i18n="f24_num">24 — КНИГИ И КОМИКСЫ</span><a class="badge-free" href="#free" data-i18n="badge_free">Бесплатно</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f24_h">Восемь книжных форматов — предпросмотр и чтение, не выходя из менеджера.</h3>
     <p data-i18n-html="f24_p">Мгновенный предпросмотр любого <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> или <em>.fb2</em>: обложка, содержание и начало текста. Откройте книгу целиком в отдельной читалке — с переходом по главам, прыжком на страницу, <em>автопрокруткой</em> и запомненным местом чтения. Комиксы тоже: <em>.cbz</em> и <em>.cbr</em> открываются страница за страницей, без распаковки сотен мегабайт.</p>
+    <!-- ⛔ O MODO PAPEL vive AQUI, e nao num cartao proprio. Palavras do Joao,
+         que e quem le nele todos os dias: «é apenas por tentar transferir para o
+         utilizador a sensação de estar a ler um livro real... esta é apenas mais
+         uma». Um cartao proprio prometia mais do que ele proprio promete.
+         ⚠ As tres palavras dos modos -- simples/papel/papel de noite -- sao as da
+         APP (LocalizationService.cs: EpubLookSimples/Papel/Noite), nao se
+         inventam aqui. E o PREMIUM diz-se UMA vez, na linha de baixo. -->
+    <p class="feat-p2" data-i18n-html="f24_paper"><strong>Бумажный режим.</strong> Та же книга, другой вид: две открытые страницы, корешок посередине, бумага с зерном и свет лампы, а лист сгибается под рукой при перелистывании. Одна кнопка переключает <em>простой · бумага · ночная бумага</em>, и простой остаётся режимом по умолчанию. Настоящей книгой это не становится — нет фактуры, нет звука страницы, нет запаха, нет веса, когда берёшь её и кладёшь, — но экран может подойти близко. Взамен получаешь удобство, а удобство у каждого своё: кто-то читает лучше так, кто-то иначе. <strong>Это просто ещё один способ.</strong></p>
     <div class="feat-mark" data-i18n="f24_mark">EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR</div>
     <p class="feat-note">
       <span data-i18n="f24_free">Бесплатно: предпросмотр — обложка, содержание и первый взгляд внутрь.</span><br>
-      <span data-i18n="f24_premium">PREMIUM: полная читалка — навигация, прыжок на страницу, автопрокрутка, переворот страницы и память о последних 20 книгах.</span>
+      <span data-i18n="f24_premium">PREMIUM: полная читалка — навигация, прыжок на страницу, автопрокрутка, бумажный режим, переворот страницы и память о последних 20 книгах.</span>
       <span class="feat-drm" data-i18n="f24_note">Книги, которые принадлежат вам, открываются. Купленные с DRM остаются привязанными к магазину, который их продал — приложение объясняет почему, когда такую встречает.</span>
     </p>
   </div>

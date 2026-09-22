@@ -747,6 +747,12 @@
   }
   .badge-pro { margin-left: 8px; }
   .badge-pro:hover, .prem-word:hover { filter: brightness(1.15); }
+  /* Um cartão tem UM parágrafo, e por isso os <p> lá dentro não levam margem
+     nenhuma. O 24 passou a ter dois — os livros e o modo papel — e sem isto o
+     segundo cola-se ao primeiro e lê-se como continuação da mesma frase.
+     ⚠ Classe própria em vez de `.feat p + p`: há 12 pares de parágrafos
+     seguidos na página e nenhum deles quer esta margem. */
+  .feat p.feat-p2 { margin-top: 14px; }
   .feat-note { margin-top: 16px; font-size: 12.5px; line-height: 1.55; color: var(--fg-2); }
   /* Nota de rodapé do cartão — deliberadamente discreta: quem chega aqui já desceu
      o cartão todo. Não trava ninguém à entrada. */
@@ -1630,11 +1636,15 @@
          abre; saiu o mais antigo (gravação de ecrã). Ficou em SEIS: os 16 idiomas e o
          disco entraram por decisão dele, e o tecto da tira subiu de quatro para
          seis. Aqui a gravação de ecrã continua de fora — quem sai é sempre o
-         mais antigo. -->
+         mais antigo.
+         ⛔ 22/09: o MODO PAPEL, a outra novidade da 2, não fez sair ninguém — a
+         pill dos livros passou a falar dele. É o MESMO cartão (#feat24): duas
+         pills a apontar para o mesmo sítio era o defeito, não a solução. Continua
+         em seis. -->
     <a href="#vault" data-i18n="wn_vault">🔒 तिजोरियाँ</a>
     <a href="#feat18" data-i18n="wn_langs">🌐 16 भाषाएँ</a>
     <a href="#feat19" data-i18n="wn_disk">💽 डिस्क, ब्यौरे में</a>
-    <a href="#feat24" data-i18n="wn_books">📚 किताबें और कॉमिक्स</a>
+    <a href="#feat24" data-i18n="wn_books">📖 कागज़ पर किताबें</a>
     <a href="#feat32" data-i18n="wn_voice">🎙 आवाज़ चढ़ाना</a>
     <a href="#feat31" data-i18n="wn_cards">🎬 ब्रांडिंग कार्ड</a>
   </nav>
@@ -1896,10 +1906,18 @@
     <div class="num"><span data-i18n="f24_num">24 — किताबें और कॉमिक्स</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f24_h">किताबों के आठ प्रारूप — एक्सप्लोरर छोड़े बिना पूर्वावलोकन और पढ़ाई।</h3>
     <p data-i18n-html="f24_p">किसी भी <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em> या <em>.fb2</em> का तुरंत पूर्वावलोकन: आवरण, अनुक्रम और शुरुआती पाठ। पूरी किताब अपने ही पाठक में खोलिए — अध्यायों में आना-जाना, पन्ने पर छलाँग, <em>स्वचालित स्क्रॉल</em>, और आप कहाँ तक पढ़े थे वह याद। कॉमिक्स भी: <em>.cbz</em> और <em>.cbr</em> पन्ना-दर-पन्ना खुलते हैं, सैकड़ों मेगाबाइट पहले खोले बिना।</p>
+    <!-- ⛔ O MODO PAPEL vive AQUI, e nao num cartao proprio. Palavras do Joao,
+         que e quem le nele todos os dias: «é apenas por tentar transferir para o
+         utilizador a sensação de estar a ler um livro real... esta é apenas mais
+         uma». Um cartao proprio prometia mais do que ele proprio promete.
+         ⚠ As tres palavras dos modos -- simples/papel/papel de noite -- sao as da
+         APP (LocalizationService.cs: EpubLookSimples/Papel/Noite), nao se
+         inventam aqui. E o PREMIUM diz-se UMA vez, na linha de baixo. -->
+    <p class="feat-p2" data-i18n-html="f24_paper"><strong>कागज़ मोड।</strong> वही किताब, दूसरा रूप: दो खुले पन्ने, बीच में जिल्द, दाने और दीपक की रोशनी वाला कागज़, और पन्ना पलटते समय हाथ के नीचे मुड़ता हुआ। एक बटन <em>सादा · कागज़ · रात का कागज़</em> के बीच बदलता है, और सादा ही ड़िफ़ॉल्ट रहता है। यह सचमुच की किताब नहीं बन जाती — न बनावट, न पन्ने की आवाज़, न गंध, न उसे उठाने और रखने का भार — पर एक स्क्रीन इसके पास तक पहुँच सकती है। इससे जो मिलता है वह आराम है, और आराम निजी बात है: हर कोई अपने तरीके से बेहतर पढ़ता है। <strong>यह बस एक और तरीका है।</strong></p>
     <div class="feat-mark" data-i18n="f24_mark">EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR</div>
     <p class="feat-note">
       <span data-i18n="f24_free">मुफ़्त: पूर्वावलोकन — आवरण, अनुक्रम और भीतर की पहली झलक।</span><br>
-      <span data-i18n="f24_premium">PREMIUM: पूरा पाठक — आना-जाना, पन्ने पर छलाँग, स्वचालित स्क्रॉल, पन्ना पलटना, और आपकी पिछली 20 किताबों की याद।</span>
+      <span data-i18n="f24_premium">PREMIUM: पूरा पाठक — आना-जाना, पन्ने पर छलाँग, स्वचालित स्क्रॉल, कागज़ मोड, पन्ना पलटना, और आपकी पिछली 20 किताबों की याद।</span>
       <span class="feat-drm" data-i18n="f24_note">जो किताबें आपकी हैं, वे खुलती हैं। DRM के साथ ख़रीदी किताबें उसी दुकान से बँधी रहती हैं जिसने उन्हें बेचा — ऐसी किताब मिलने पर ऐप कारण बता देता है।</span>
     </p>
   </div>

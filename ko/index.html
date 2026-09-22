@@ -747,6 +747,12 @@
   }
   .badge-pro { margin-left: 8px; }
   .badge-pro:hover, .prem-word:hover { filter: brightness(1.15); }
+  /* Um cartão tem UM parágrafo, e por isso os <p> lá dentro não levam margem
+     nenhuma. O 24 passou a ter dois — os livros e o modo papel — e sem isto o
+     segundo cola-se ao primeiro e lê-se como continuação da mesma frase.
+     ⚠ Classe própria em vez de `.feat p + p`: há 12 pares de parágrafos
+     seguidos na página e nenhum deles quer esta margem. */
+  .feat p.feat-p2 { margin-top: 14px; }
   .feat-note { margin-top: 16px; font-size: 12.5px; line-height: 1.55; color: var(--fg-2); }
   /* Nota de rodapé do cartão — deliberadamente discreta: quem chega aqui já desceu
      o cartão todo. Não trava ninguém à entrada. */
@@ -1630,11 +1636,15 @@
          abre; saiu o mais antigo (gravação de ecrã). Ficou em SEIS: os 16 idiomas e o
          disco entraram por decisão dele, e o tecto da tira subiu de quatro para
          seis. Aqui a gravação de ecrã continua de fora — quem sai é sempre o
-         mais antigo. -->
+         mais antigo.
+         ⛔ 22/09: o MODO PAPEL, a outra novidade da 2, não fez sair ninguém — a
+         pill dos livros passou a falar dele. É o MESMO cartão (#feat24): duas
+         pills a apontar para o mesmo sítio era o defeito, não a solução. Continua
+         em seis. -->
     <a href="#vault" data-i18n="wn_vault">🔒 금고</a>
     <a href="#feat18" data-i18n="wn_langs">🌐 16개 언어</a>
     <a href="#feat19" data-i18n="wn_disk">💽 디스크, 자세히</a>
-    <a href="#feat24" data-i18n="wn_books">📚 책과 만화</a>
+    <a href="#feat24" data-i18n="wn_books">📖 종이로 읽는 책</a>
     <a href="#feat32" data-i18n="wn_voice">🎙 내레이션</a>
     <a href="#feat31" data-i18n="wn_cards">🎬 브랜딩 카드</a>
   </nav>
@@ -1896,10 +1906,18 @@
     <div class="num"><span data-i18n="f24_num">24 — 책과 만화</span><a class="badge-free" href="#free" data-i18n="badge_free">무료</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f24_h">책 여덟 형식 — 탐색기를 떠나지 않고 미리보고 읽습니다.</h3>
     <p data-i18n-html="f24_p">어떤 <em>.epub</em>, <em>.mobi</em>, <em>.azw</em>, <em>.azw3</em>, <em>.prc</em>, <em>.fb2</em>든 즉시 미리보기: 표지, 목차, 첫 부분의 글. 전용 리더로 책 전체를 열면 장 이동, 쪽 건너뛰기, <em>자동 스크롤</em>, 그리고 읽던 위치까지 기억합니다. 만화도 마찬가지입니다: <em>.cbz</em>와 <em>.cbr</em>는 수백 메가바이트를 먼저 풀지 않고 한 쪽씩 열립니다.</p>
+    <!-- ⛔ O MODO PAPEL vive AQUI, e nao num cartao proprio. Palavras do Joao,
+         que e quem le nele todos os dias: «é apenas por tentar transferir para o
+         utilizador a sensação de estar a ler um livro real... esta é apenas mais
+         uma». Um cartao proprio prometia mais do que ele proprio promete.
+         ⚠ As tres palavras dos modos -- simples/papel/papel de noite -- sao as da
+         APP (LocalizationService.cs: EpubLookSimples/Papel/Noite), nao se
+         inventam aqui. E o PREMIUM diz-se UMA vez, na linha de baixo. -->
+    <p class="feat-p2" data-i18n-html="f24_paper"><strong>종이 모드.</strong> 같은 책을 다른 모습으로. 펼친 두 페이지, 가운데 책등, 결이 있는 종이와 등불 빛, 그리고 넘길 때 손 아래에서 휘는 낱장. 버튼 하나로 <em>기본 · 종이 · 밤의 종이</em>를 오가며, 기본이 그대로 기본값입니다. 진짜 책이 되지는 않습니다 — 질감도, 페이지 넘기는 소리도, 냄새도, 들었다 내려놓는 무게도 없습니다 — 그래도 화면이 가까이 다가갈 수는 있습니다. 그렇게 얻는 것은 편안함이고, 편안함은 사람마다 다릅니다. <strong>이것은 그저 한 가지가 더 늘어난 것입니다.</strong></p>
     <div class="feat-mark" data-i18n="f24_mark">EPUB · MOBI · AZW · AZW3 · PRC · FB2 · CBZ · CBR</div>
     <p class="feat-note">
       <span data-i18n="f24_free">무료: 미리보기 — 표지, 목차, 그리고 안을 처음 들여다보기.</span><br>
-      <span data-i18n="f24_premium">PREMIUM: 완전한 리더 — 장 이동, 쪽 건너뛰기, 자동 스크롤, 쪽 넘김, 그리고 최근 20권의 기억.</span>
+      <span data-i18n="f24_premium">PREMIUM: 완전한 리더 — 장 이동, 쪽 건너뛰기, 자동 스크롤, 종이 모드, 쪽 넘김, 그리고 최근 20권의 기억.</span>
       <span class="feat-drm" data-i18n="f24_note">내 책은 열립니다. DRM이 걸린 책은 그것을 판 상점에 묶여 있습니다 — 앱이 그런 책을 만나면 이유를 설명해 줍니다.</span>
     </p>
   </div>

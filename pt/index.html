@@ -2006,10 +2006,19 @@
        `features-futuras.md` é que, se tudo o que é novo for Premium, o texto do
        «a grátis é o produto completo para praticamente todos» começa a mentir
        sozinho sem ninguém o reescrever.
-       ⚠ A página anuncia SEIS formatos. O João mediu que os seis funcionam NA
-       MÁQUINA DELE -- se numa outra faltar algum, a app tem de o dizer e não
-       falhar calada (o `CanTranscode` do MediaTranscoder devolve false sem
-       excepção nenhuma).
+       🥇 O CONTENTOR NÃO É O CODEC, e é isto que decide a frase da nota. A
+       lista da marca são CAIXAS (.mp4, .mkv, …) e o João mediu que o Windows as
+       abre de origem. Mas dentro da caixa ainda há o codec: um .mp4 com HEVC ou
+       um .mkv com AV1 abre a caixa e pode na mesma não decifrar o conteúdo -- as
+       extensões da Loja acrescentam CODECS, não contentores.
+       ⛔ Por isso a página NÃO diz «suporta MKV» e ponto: diz a REGRA -- «se o
+       Windows conseguir ler o vídeo, o som sai dele» -- que acompanha a máquina
+       de quem usa. Não se promete o que não é nosso.
+       📌 E o botão ACENDE-SE SÓ quando detecta um formato que consegue tratar,
+       o que é a garantia de que nunca há um botão morto. Fica subentendido em
+       vez de explicado -- ordem dele sobre este tipo de frase.
+       📌 Na prática: H.264 com AAC (telemóveis, câmaras, gravadores de ecrã)
+       funciona sem instalar nada, provado ponta-a-ponta.
        ⛔ AS FRASES SÃO COPIADAS DA APP, não são escritas aqui: «Escrever o som
        num ficheiro», «Cópia do vídeo sem som» e «O vídeo original fica como
        está.» são o SomExtrairMenu, o SomCopiaSemSomMenu e o
@@ -2022,7 +2031,10 @@
     <div class="num"><span data-i18n="f33_num">33 — O SOM DE UM VÍDEO</span><a class="badge-free" href="#free" data-i18n="badge_free">Grátis</a></div>
     <h3 data-i18n="f33_h">O som de um vídeo, sem abrir um editor.</h3>
     <p data-i18n-html="f33_p">Qualquer vídeo que a pré-visualização abra ganha um botão no topo. <em>Escrever o som num ficheiro</em> — <em>MP3</em>, <em>AAC</em>, <em>WMA</em>, <em>WAV</em>, <em>FLAC</em> ou <em>ALAC</em>, os sem perda incluídos — ou fazer uma <em>cópia do vídeo sem som</em>. Fica mesmo ao lado do original, com o mesmo nome. <strong>O vídeo original fica como está.</strong> Sem caixa de conversão, sem segundo programa, e nada sai da tua máquina.</p>
-    <div class="feat-mark" data-i18n="f33_mark">MP3 · AAC · WMA · WAV · FLAC · ALAC</div>
+    <div class="feat-mark" data-i18n="f33_mark">MP4 · MOV · MKV · WebM · AVI · WMV · MPEG · M2TS/TS · 3GP → MP3 · AAC · WMA · WAV · FLAC · ALAC</div>
+    <p class="feat-note">
+      <span data-i18n="f33_note">Se o Windows conseguir ler o vídeo, o som sai dele. O botão só se acende quando consegue mesmo.</span>
+    </p>
   </div>
 
 </section>

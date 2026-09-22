@@ -2006,10 +2006,19 @@
        `features-futuras.md` é que, se tudo o que é novo for Premium, o texto do
        «a grátis é o produto completo para praticamente todos» começa a mentir
        sozinho sem ninguém o reescrever.
-       ⚠ A página anuncia SEIS formatos. O João mediu que os seis funcionam NA
-       MÁQUINA DELE -- se numa outra faltar algum, a app tem de o dizer e não
-       falhar calada (o `CanTranscode` do MediaTranscoder devolve false sem
-       excepção nenhuma).
+       🥇 O CONTENTOR NÃO É O CODEC, e é isto que decide a frase da nota. A
+       lista da marca são CAIXAS (.mp4, .mkv, …) e o João mediu que o Windows as
+       abre de origem. Mas dentro da caixa ainda há o codec: um .mp4 com HEVC ou
+       um .mkv com AV1 abre a caixa e pode na mesma não decifrar o conteúdo -- as
+       extensões da Loja acrescentam CODECS, não contentores.
+       ⛔ Por isso a página NÃO diz «suporta MKV» e ponto: diz a REGRA -- «se o
+       Windows conseguir ler o vídeo, o som sai dele» -- que acompanha a máquina
+       de quem usa. Não se promete o que não é nosso.
+       📌 E o botão ACENDE-SE SÓ quando detecta um formato que consegue tratar,
+       o que é a garantia de que nunca há um botão morto. Fica subentendido em
+       vez de explicado -- ordem dele sobre este tipo de frase.
+       📌 Na prática: H.264 com AAC (telemóveis, câmaras, gravadores de ecrã)
+       funciona sem instalar nada, provado ponta-a-ponta.
        ⛔ AS FRASES SÃO COPIADAS DA APP, não são escritas aqui: «Escrever o som
        num ficheiro», «Cópia do vídeo sem som» e «O vídeo original fica como
        está.» são o SomExtrairMenu, o SomCopiaSemSomMenu e o
@@ -2022,7 +2031,10 @@
     <div class="num"><span data-i18n="f33_num">33 — 영상의 소리</span><a class="badge-free" href="#free" data-i18n="badge_free">무료</a></div>
     <h3 data-i18n="f33_h">영상의 소리를, 편집기를 열지 않고.</h3>
     <p data-i18n-html="f33_p">미리보기로 열 수 있는 동영상이라면 위쪽에 버튼이 나타납니다. <em>오디오를 파일로 저장</em> — <em>MP3</em>, <em>AAC</em>, <em>WMA</em>, <em>WAV</em>, <em>FLAC</em>, <em>ALAC</em>, 무손실도 포함입니다 — 또는 <em>소리 없는 동영상 사본</em>을 만들 수 있습니다. 원본 바로 옆에, 같은 이름으로 놀입니다. <strong>원본 동영상은 그대로 유지됩니다.</strong> 변환 창도, 두 번째 프로그램도 없고, 아무것도 컴퓨터 밖으로 나가지 않습니다.</p>
-    <div class="feat-mark" data-i18n="f33_mark">MP3 · AAC · WMA · WAV · FLAC · ALAC</div>
+    <div class="feat-mark" data-i18n="f33_mark">MP4 · MOV · MKV · WebM · AVI · WMV · MPEG · M2TS/TS · 3GP → MP3 · AAC · WMA · WAV · FLAC · ALAC</div>
+    <p class="feat-note">
+      <span data-i18n="f33_note">Windows가 그 동영상을 재생할 수 있다면, 소리도 꺼낼 수 있습니다. 버튼은 실제로 할 수 있을 때만 켜집니다.</span>
+    </p>
   </div>
 
 </section>

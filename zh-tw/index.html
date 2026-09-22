@@ -1640,13 +1640,18 @@
          ⛔ 22/09: o MODO PAPEL, a outra novidade da 2, não fez sair ninguém — a
          pill dos livros passou a falar dele. É o MESMO cartão (#feat24): duas
          pills a apontar para o mesmo sítio era o defeito, não a solução. Continua
-         em seis. -->
+         em seis.
+         ⛔ 22/09, mais tarde: entrou O SOM DE UM VÍDEO (#feat33) e saíram os
+         CARTÕES DE MARCA, por ser a mais antiga — e isso foi MEDIDO no
+         Core/Changelog.cs da app, não deduzido: Cl126Cards = 1.2.6, contra
+         Cl127VoiceOver = 1.2.7 e tudo o resto em 1.2.21 ou depois. ⚠ Eu ia a
+         tirar o voice over de olhos fechados. -->
     <a href="#vault" data-i18n="wn_vault">🔒 保險庫</a>
     <a href="#feat18" data-i18n="wn_langs">🌐 16 種語言</a>
     <a href="#feat19" data-i18n="wn_disk">💽 硬碟的細節</a>
     <a href="#feat24" data-i18n="wn_books">📖 紙上讀書</a>
     <a href="#feat32" data-i18n="wn_voice">🎙 旁白</a>
-    <a href="#feat31" data-i18n="wn_cards">🎬 品牌卡片</a>
+    <a href="#feat33" data-i18n="wn_audio">🎧 影片裡的聲音</a>
   </nav>
   <span class="whatsnew-ver">v1.2.26</span>
 </div>
@@ -1991,6 +1996,33 @@
     <p class="feat-note">
       <span data-i18n="f32_premium">PREMIUM。影片和旁白各自是獨立的檔案；只有「產生最終」會做出混好的影片。</span>
     </p>
+  </div>
+
+  <!-- ⛔ O 33 entra no FIM e é o sítio CERTO, ao contrário do que costuma ser:
+       os cartões 26 a 32 já são a família da captura e da média (gravar áudio,
+       vídeo, ecrã, cartões de marca, voice over). Um cartão de média encaixa ali.
+       ⚠ GRÁTIS por decisão minha, e é UMA palavra a mudar: extrair o som do teu
+       próprio vídeo é conversão, não criação, e o aviso que ficou escrito no
+       `features-futuras.md` é que, se tudo o que é novo for Premium, o texto do
+       «a grátis é o produto completo para praticamente todos» começa a mentir
+       sozinho sem ninguém o reescrever.
+       ⚠ A página anuncia SEIS formatos. O João mediu que os seis funcionam NA
+       MÁQUINA DELE -- se numa outra faltar algum, a app tem de o dizer e não
+       falhar calada (o `CanTranscode` do MediaTranscoder devolve false sem
+       excepção nenhuma).
+       ⛔ AS FRASES SÃO COPIADAS DA APP, não são escritas aqui: «Escrever o som
+       num ficheiro», «Cópia do vídeo sem som» e «O vídeo original fica como
+       está.» são o SomExtrairMenu, o SomCopiaSemSomMenu e o
+       SomOriginalFicaIntacto do LocalizationService.cs, nas 16 línguas. E o
+       formato chama-se AAC, que é como o menu lhe chama -- não M4A.
+       🥇 A promessa do original intacto está na página porque está na app, e a
+       app tem lá escrito porquê: «isto estraga o meu vídeo?» é a primeira
+       pergunta de quem vê um botão destes. -->
+  <div class="feat w12" id="feat33">
+    <div class="num"><span data-i18n="f33_num">33 — 影片裡的聲音</span><a class="badge-free" href="#free" data-i18n="badge_free">免費</a></div>
+    <h3 data-i18n="f33_h">取出影片裡的聲音，不用打開任何編輯器。</h3>
+    <p data-i18n-html="f33_p">只要是預覽能打開的影片，上方就會出現一個按鈕。<em>將音訊儲存為檔案</em>——<em>MP3</em>、<em>AAC</em>、<em>WMA</em>、<em>WAV</em>、<em>FLAC</em> 或 <em>ALAC</em>，包括無損的——或者做一份<em>無聲的影片副本</em>。檔案就落在原片旁邊，名稱相同。<strong>原始影片維持不變。</strong>沒有轉換對話框，沒有第二個程式，也沒有任何東西離開你的電腦。</p>
+    <div class="feat-mark" data-i18n="f33_mark">MP3 · AAC · WMA · WAV · FLAC · ALAC</div>
   </div>
 
 </section>

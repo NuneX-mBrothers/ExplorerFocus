@@ -1640,13 +1640,18 @@
          ⛔ 22/09: o MODO PAPEL, a outra novidade da 2, não fez sair ninguém — a
          pill dos livros passou a falar dele. É o MESMO cartão (#feat24): duas
          pills a apontar para o mesmo sítio era o defeito, não a solução. Continua
-         em seis. -->
+         em seis.
+         ⛔ 22/09, mais tarde: entrou O SOM DE UM VÍDEO (#feat33) e saíram os
+         CARTÕES DE MARCA, por ser a mais antiga — e isso foi MEDIDO no
+         Core/Changelog.cs da app, não deduzido: Cl126Cards = 1.2.6, contra
+         Cl127VoiceOver = 1.2.7 e tudo o resto em 1.2.21 ou depois. ⚠ Eu ia a
+         tirar o voice over de olhos fechados. -->
     <a href="#vault" data-i18n="wn_vault">🔒 금고</a>
     <a href="#feat18" data-i18n="wn_langs">🌐 16개 언어</a>
     <a href="#feat19" data-i18n="wn_disk">💽 디스크, 자세히</a>
     <a href="#feat24" data-i18n="wn_books">📖 종이로 읽는 책</a>
     <a href="#feat32" data-i18n="wn_voice">🎙 내레이션</a>
-    <a href="#feat31" data-i18n="wn_cards">🎬 브랜딩 카드</a>
+    <a href="#feat33" data-i18n="wn_audio">🎧 영상의 소리</a>
   </nav>
   <span class="whatsnew-ver">v1.2.26</span>
 </div>
@@ -1991,6 +1996,33 @@
     <p class="feat-note">
       <span data-i18n="f32_premium">PREMIUM. 영상과 내레이션은 별도 파일로 남고, “최종 생성”만이 섞인 영상을 만듭니다.</span>
     </p>
+  </div>
+
+  <!-- ⛔ O 33 entra no FIM e é o sítio CERTO, ao contrário do que costuma ser:
+       os cartões 26 a 32 já são a família da captura e da média (gravar áudio,
+       vídeo, ecrã, cartões de marca, voice over). Um cartão de média encaixa ali.
+       ⚠ GRÁTIS por decisão minha, e é UMA palavra a mudar: extrair o som do teu
+       próprio vídeo é conversão, não criação, e o aviso que ficou escrito no
+       `features-futuras.md` é que, se tudo o que é novo for Premium, o texto do
+       «a grátis é o produto completo para praticamente todos» começa a mentir
+       sozinho sem ninguém o reescrever.
+       ⚠ A página anuncia SEIS formatos. O João mediu que os seis funcionam NA
+       MÁQUINA DELE -- se numa outra faltar algum, a app tem de o dizer e não
+       falhar calada (o `CanTranscode` do MediaTranscoder devolve false sem
+       excepção nenhuma).
+       ⛔ AS FRASES SÃO COPIADAS DA APP, não são escritas aqui: «Escrever o som
+       num ficheiro», «Cópia do vídeo sem som» e «O vídeo original fica como
+       está.» são o SomExtrairMenu, o SomCopiaSemSomMenu e o
+       SomOriginalFicaIntacto do LocalizationService.cs, nas 16 línguas. E o
+       formato chama-se AAC, que é como o menu lhe chama -- não M4A.
+       🥇 A promessa do original intacto está na página porque está na app, e a
+       app tem lá escrito porquê: «isto estraga o meu vídeo?» é a primeira
+       pergunta de quem vê um botão destes. -->
+  <div class="feat w12" id="feat33">
+    <div class="num"><span data-i18n="f33_num">33 — 영상의 소리</span><a class="badge-free" href="#free" data-i18n="badge_free">무료</a></div>
+    <h3 data-i18n="f33_h">영상의 소리를, 편집기를 열지 않고.</h3>
+    <p data-i18n-html="f33_p">미리보기로 열 수 있는 동영상이라면 위쪽에 버튼이 나타납니다. <em>오디오를 파일로 저장</em> — <em>MP3</em>, <em>AAC</em>, <em>WMA</em>, <em>WAV</em>, <em>FLAC</em>, <em>ALAC</em>, 무손실도 포함입니다 — 또는 <em>소리 없는 동영상 사본</em>을 만들 수 있습니다. 원본 바로 옆에, 같은 이름으로 놀입니다. <strong>원본 동영상은 그대로 유지됩니다.</strong> 변환 창도, 두 번째 프로그램도 없고, 아무것도 컴퓨터 밖으로 나가지 않습니다.</p>
+    <div class="feat-mark" data-i18n="f33_mark">MP3 · AAC · WMA · WAV · FLAC · ALAC</div>
   </div>
 
 </section>

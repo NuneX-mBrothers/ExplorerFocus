@@ -61,7 +61,7 @@
     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="6" fill="#16181B"/><path d="M16 4l12 12-12 12L4 16z" fill="#E0A458"/></svg>
     <h1>Privacy Policy</h1>
   </div>
-  <div class="updated">ExplorerFocus · Last updated: 1 July 2026</div>
+  <div class="updated">ExplorerFocus · Last updated: 22 September 2026</div>
 
   <p class="lead">ExplorerFocus is a desktop file explorer for Windows. It runs entirely on
   your own computer. <strong>There is no ExplorerFocus server, and we do not collect, store,
@@ -83,6 +83,9 @@
   folders/trees, and your saved connections <strong>locally</strong>, in your Windows user profile.
   This information never leaves your device except when <em>you</em> ask the app to connect to a
   service you chose.</p>
+  <p>One page, <em>My machine</em>, can show the public address your connection is seen with. It is
+  looked up only when you press that button, from <code>api.ipify.org</code> or
+  <code>checkip.amazonaws.com</code>.</p>
 
   <h2>Cloud connections (Dropbox, OneDrive, Google Drive)</h2>
   <p>Connecting a cloud account is optional. When you do:</p>
@@ -118,7 +121,17 @@
   <h2>Local files</h2>
   <p>The app reads and writes the files and folders you choose to work with, on your own device,
   just like Windows Explorer. Nothing is uploaded anywhere unless you explicitly perform an upload
-  to a destination you connected.</p>
+  to a destination you connected. Previews are rendered without going to the network: a document
+  that points at remote content does not fetch it.</p>
+
+  <h2>Encrypted vaults</h2>
+  <p>A vault is a set of encrypted files in a folder you choose, on your own disk. The password and
+  the recovery words stay on your machine — they are never sent anywhere, and <strong>we cannot open
+  a vault for you</strong>.</p>
+  <p>Giving a vault a drive letter needs the
+  <a href="https://github.com/dokan-dev/dokany" target="_blank" rel="noopener">Dokany</a> driver. If
+  you let the app install it, the installer is downloaded from that project's own releases on GitHub,
+  and installing it is a separate confirmation.</p>
 
   <h2>Software updates &amp; anonymous statistics</h2>
   <p>The app can check for new versions by fetching a small <code>version.json</code> file hosted on

@@ -2006,10 +2006,19 @@
        `features-futuras.md` é que, se tudo o que é novo for Premium, o texto do
        «a grátis é o produto completo para praticamente todos» começa a mentir
        sozinho sem ninguém o reescrever.
-       ⚠ A página anuncia SEIS formatos. O João mediu que os seis funcionam NA
-       MÁQUINA DELE -- se numa outra faltar algum, a app tem de o dizer e não
-       falhar calada (o `CanTranscode` do MediaTranscoder devolve false sem
-       excepção nenhuma).
+       🥇 O CONTENTOR NÃO É O CODEC, e é isto que decide a frase da nota. A
+       lista da marca são CAIXAS (.mp4, .mkv, …) e o João mediu que o Windows as
+       abre de origem. Mas dentro da caixa ainda há o codec: um .mp4 com HEVC ou
+       um .mkv com AV1 abre a caixa e pode na mesma não decifrar o conteúdo -- as
+       extensões da Loja acrescentam CODECS, não contentores.
+       ⛔ Por isso a página NÃO diz «suporta MKV» e ponto: diz a REGRA -- «se o
+       Windows conseguir ler o vídeo, o som sai dele» -- que acompanha a máquina
+       de quem usa. Não se promete o que não é nosso.
+       📌 E o botão ACENDE-SE SÓ quando detecta um formato que consegue tratar,
+       o que é a garantia de que nunca há um botão morto. Fica subentendido em
+       vez de explicado -- ordem dele sobre este tipo de frase.
+       📌 Na prática: H.264 com AAC (telemóveis, câmaras, gravadores de ecrã)
+       funciona sem instalar nada, provado ponta-a-ponta.
        ⛔ AS FRASES SÃO COPIADAS DA APP, não são escritas aqui: «Escrever o som
        num ficheiro», «Cópia do vídeo sem som» e «O vídeo original fica como
        está.» são o SomExtrairMenu, o SomCopiaSemSomMenu e o
@@ -2022,7 +2031,10 @@
     <div class="num"><span data-i18n="f33_num">33 — L’AUDIO DI UN VIDEO</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
     <h3 data-i18n="f33_h">L’audio di un video, senza aprire un editor.</h3>
     <p data-i18n-html="f33_p">Qualsiasi video che l’anteprima sappia aprire riceve un pulsante in alto. <em>Salva l’audio in un file</em> — <em>MP3</em>, <em>AAC</em>, <em>WMA</em>, <em>WAV</em>, <em>FLAC</em> o <em>ALAC</em>, compresi quelli senza perdita — oppure fai una <em>copia del video senza audio</em>. Finisce lì accanto all’originale, con lo stesso nome. <strong>Il video originale resta com’è.</strong> Nessuna finestra di conversione, nessun secondo programma, e niente esce dalla tua macchina.</p>
-    <div class="feat-mark" data-i18n="f33_mark">MP3 · AAC · WMA · WAV · FLAC · ALAC</div>
+    <div class="feat-mark" data-i18n="f33_mark">MP4 · MOV · MKV · WebM · AVI · WMV · MPEG · M2TS/TS · 3GP → MP3 · AAC · WMA · WAV · FLAC · ALAC</div>
+    <p class="feat-note">
+      <span data-i18n="f33_note">Se Windows riesce a riprodurre il video, l’audio ne esce. Il pulsante si accende solo quando ce la fa davvero.</span>
+    </p>
   </div>
 
 </section>

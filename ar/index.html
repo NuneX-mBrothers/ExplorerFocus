@@ -1363,14 +1363,29 @@
       </details>
 
 <!-- LOGO MARK -->
+<!-- ⛔ A MARCA DA VERSÃO 2, e tem de ser a MESMA que a app mostra no canto
+     superior esquerdo desde a 2.0.0.22. O losango de fora e o ƒ não mudaram;
+     o que mudou foi a parede de dentro — era um losango fechado a 40 % de
+     opacidade, passou a sólida e ABERTA no vértice de baixo — e a FECHADURA
+     que aparece nessa abertura. Os números vêm de
+     `_Marketing/Logos/v2/ef2-logo.html`, que é a fonte, e são os mesmos do
+     `ExplorerFocus/Themes/Marca.xaml` da app.
+     ⚠ A fechadura usa a regra de preenchimento `nonzero` (o círculo e o
+     trapézio são uma só figura); em SVG é a predefinição, por isso não leva
+     `fill-rule`. Em XAML leva, e lá o esquecimento rebenta só a correr.
+     📌 Abaixo de ~28 px a fechadura deixa de se ler — é de propósito, é o
+     mesmo desenho a encolher. O ícone do separador (o `data:` lá em cima)
+     continua a ser o losango cheio, que é a redução assumida. -->
 <svg width="0" height="0" style="position:absolute;">
   <defs>
     <symbol id="logo" viewBox="0 0 64 64">
       <path d="M32 4 L60 32 L32 60 L4 32 Z"
             fill="none" stroke="#E0A458" stroke-width="1.5" stroke-linejoin="miter"/>
-      <path d="M32 12 L52 32 L32 52 L12 32 Z"
-            fill="none" stroke="#E0A458" stroke-width="0.6"
-            stroke-opacity="0.4" stroke-linejoin="miter"/>
+      <path d="M29.2 49.2 L12 32 L32 12 L52 32 L34.8 49.2"
+            fill="none" stroke="#E0A458" stroke-width="1" stroke-linejoin="miter"/>
+      <path d="M34.1 51 A2.1 2.1 0 1 1 29.9 51 A2.1 2.1 0 1 1 34.1 51 Z
+               M31.2 52.4 L32.8 52.4 L33.5 56.6 L30.5 56.6 Z"
+            fill="#E0A458"/>
       <path d="M30.5 22 L30.5 21.5
                C30.5 19.5, 31.5 18.2, 33.4 18.2
                C34.4 18.2, 35.2 18.5, 35.8 19

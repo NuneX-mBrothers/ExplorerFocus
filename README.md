@@ -11,7 +11,7 @@ Profiles, rich preview, honest file operations, encrypted vaults, remote/cloud a
 
 Single `.exe` · no installer · no runtime to install · digitally signed · 16 languages
 
-<img src="screenshots/main.png" width="820" alt="ExplorerFocus main window">
+<img src="shots/01-perfis.webp" width="820" alt="ExplorerFocus with 22 profile tabs across the top and a folder of photos in icon view">
 
 </div>
 
@@ -32,19 +32,21 @@ want to reach them fast — and to see what's inside a file without opening it.
 - **Honest file operations** — copy/move/delete with real per-file progress, throughput, ETA, pause/resume, up to 6 in parallel, persistent history and 6-way conflict resolution.
 - **Encrypted vaults** — file names and contents encrypted in the Cryptomator format. Give a vault a drive letter and every app on the machine can use it; vaults made here also open in Cryptomator on Android, iOS, Mac and Linux. Opening a vault is free; creating one is Premium.
 - **Remote & cloud** — SFTP, FTP/FTPS, WebDAV, Dropbox, OneDrive. Browse, preview and operate as if local; edit a remote file and it syncs on save.
+- **Books & comics** — preview any EPUB, Kindle, FB2 or comic, and read it in full: plain, or as a two-page paper book with a night version.
 - **Capture built in** — screen (with webcam PiP and system audio), video, audio and scanning, without leaving the explorer.
+- **The sound of a video** — save the audio of any video Windows can play as MP3, AAC, WMA, WAV, FLAC or ALAC, or make a copy of the video without sound. The original is left untouched.
 - **Complete dark theme**, rich hover tooltips, archives browsable as folders, integrated terminals (CMD, PowerShell, Git Bash), per-extension app associations, auto-updates.
 
 ## Free vs Premium
 
 **The free version is the complete product for virtually everyone** — all the file management,
-profiles, preview, operations, terminals, dark theme, the 16 languages — and opening encrypted
-vaults, including ones made elsewhere. Nothing expires, nothing nags.
+profiles, preview, operations, terminals, dark theme, the 16 languages. Nothing expires, nothing
+nags.
 
 Premium unlocks a defined set of extras: creating encrypted vaults, full remote access (multiple
 connections, all operations, WebDAV, Dropbox, OneDrive), screen and camera recording without
 watermark or time cap and with system sound, audio mixing, multi-page scanning with a document
-feeder, the complete book reader (EPUB, Kindle formats, FB2 and comics), and intro/end cards on
+feeder, the complete book reader (EPUB, Kindle formats, FB2 and comics, including the paper mode), and intro/end cards on
 recordings. It's a **one-time donation**, not a subscription, activated per machine. Details on the
 [website](https://nunex-mbrothers.github.io/ExplorerFocus/#premium).
 

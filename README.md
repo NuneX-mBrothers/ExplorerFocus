@@ -13,6 +13,8 @@ Single `.exe` · no installer · no runtime to install · digitally signed · 16
 
 <img src="shots/01-perfis.webp" width="820" alt="ExplorerFocus with 22 profile tabs across the top and a folder of photos in icon view">
 
+<a href="https://alternativeto.net/software/explorerfocus/about/?utm_source=badge&amp;utm_medium=referral"><img src="https://alternativeto.net/static/badges/badge-compact-color.svg" width="244" height="79" alt="ExplorerFocus | AlternativeTo"></a>
+
 </div>
 
 ---

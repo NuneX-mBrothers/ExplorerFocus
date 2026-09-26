@@ -1,7 +1,7 @@
 window.I18N = window.I18N || {};
 window.I18N.es = {
   "page_title": "ExplorerFocus — explorador con bóvedas cifradas",
-  "page_desc": "Bóvedas cifradas con letra de unidad, en un explorador centrado. Perfiles, árboles configurables, vista previa rica y operaciones de archivo honestas.",
+  "page_desc": "Archivos y carpetas organizados según el trabajo de cada día: un explorador centrado, con perfiles, vista previa rica y bóvedas cifradas con letra de unidad.",
   "nav_features": "Funciones",
   "nav_shortcuts": "Atajos",
   "nav_stack": "Stack",

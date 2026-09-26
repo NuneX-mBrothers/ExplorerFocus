@@ -1,7 +1,7 @@
 window.I18N = window.I18N || {};
 window.I18N.en = {
   "page_title": "ExplorerFocus — file explorer with encrypted vaults",
-  "page_desc": "Encrypted vaults that mount as a drive letter, in a focused Windows Explorer alternative. Profiles, configurable trees, rich preview, honest file operations.",
+  "page_desc": "Organise your files by what you work on: a focused Windows Explorer alternative with profiles, rich preview and encrypted vaults that mount as a drive letter.",
   "nav_features": "Features",
   "nav_shortcuts": "Shortcuts",
   "nav_stack": "Stack",

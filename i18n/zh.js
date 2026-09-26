@@ -1,7 +1,7 @@
 window.I18N = window.I18N || {};
 window.I18N.zh = {
   "page_title": "ExplorerFocus — 带加密保险库的文件管理器",
-  "page_desc": "可挂载为盘符的加密保险库，一个专注的 Windows 资源管理器替代品。配置文件、自定义树、丰富预览，以及说实话的文件操作。",
+  "page_desc": "按日常工作整理文件和文件夹：一个专注的 Windows 资源管理器替代品，带配置文件、丰富预览，以及可挂载为盘符的加密保险库。",
   "nav_features": "功能",
   "nav_shortcuts": "快捷键",
   "nav_stack": "技术栈",

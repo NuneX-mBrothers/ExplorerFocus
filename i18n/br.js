@@ -5,7 +5,7 @@ window.I18N = window.I18N || {};
 // em BCP-47 e o BRETAO.
 window.I18N.br = {
   "page_title": "ExplorerFocus — explorador de arquivos com cofres cifrados",
-  "page_desc": "Cofres cifrados que ganham letra de unidade, num explorador focado. Perfis, árvores configuráveis, pré-visualização rica e operações que dizem a verdade.",
+  "page_desc": "Arquivos e pastas organizados pelo trabalho de cada dia: um explorador focado, com perfis, pré-visualização rica e cofres cifrados que ganham letra de unidade.",
   "nav_features": "Recursos",
   "nav_shortcuts": "Atalhos",
   "nav_stack": "Tecnologias",

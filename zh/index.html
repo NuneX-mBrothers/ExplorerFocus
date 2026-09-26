@@ -318,6 +318,14 @@
     background: var(--bg-2); color: var(--fg-0); border-color: var(--border-2);
   }
   .hero-cta .btn-ghost:hover { border-color: var(--accent-dim); color: var(--accent); }
+  /* Contador de descargas ao lado dos botoes: a letra e a cor da linha «Latest version».
+     Os spans vazios (o rotulo que numa lingua vai antes e noutra depois) nao ocupam espaco. */
+  .hero-dl-count { display: inline-flex; align-items: center; align-self: center; gap: 6px;
+    margin-left: 4px; font-family: var(--font-mono); font-size: 12px;
+    color: var(--fg-2); letter-spacing: 0.04em; }
+  .hero-dl-count[hidden] { display: none; }
+  .hero-dl-count span:empty { display: none; }
+  .hero-dl-count strong { color: var(--accent); font-weight: 600; }
 
   /* Versão mais recente (lida do version.json, até à revision) */
   .hero-latest {
@@ -1432,8 +1440,8 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <div class="hero-eyebrow" data-i18n="hero_eyebrow">文件浏览器 · WPF · .NET 10</div>
-    <h1 data-i18n-html="hero_title">专注于<br><em>真正</em>重要的事,<br><span class="strike">忽略</span>其它一切的浏览器。</h1>
+    <div class="hero-eyebrow" data-i18n="hero_eyebrow">文件管理器 · WPF · .NET 10</div>
+    <h1 data-i18n-html="hero_title">专注于<br><em>真正</em>重要的事,<br><span class="strike">忽略</span>其它一切的文件管理器。</h1>
     <p class="hero-lede" data-i18n="hero_lede">ExplorerFocus 是 Windows 资源管理器的替代品，为那些总在相同文件夹中工作的人而设计。可配置的配置文件、整洁的目录树、几乎什么都能打开的预览 — 代码、文档、图书 — 以及能告诉你真实情况的文件操作。没有 Shell 的喧嚣。</p>
     <div class="hero-meta">
       <span data-i18n="hero_meta_os">Windows 10 / 11</span>
@@ -1446,9 +1454,12 @@
         <span aria-hidden="true">⬇</span> <span data-i18n="hero_dl_exe">下载 · .exe</span>
       </a>
       <a class="btn btn-ghost" href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip"
-         title="Para organizações que bloqueiam o download de .exe">
+         title="适用于禁止下载 .exe 文件的机构" data-i18n-attr="title:hero_dl_zip_title">
         <span aria-hidden="true">⬇</span> <span data-i18n="hero_dl_zip">.zip</span>
       </a>
+      <!-- Descargas no GitHub (todas as releases, .exe + .zip), lidas pela API ao carregar.
+           Fica ESCONDIDO ate haver numero: melhor calado do que errado. -->
+      <span class="hero-dl-count" id="heroDlCount" hidden><span aria-hidden="true">↓</span><span data-i18n="hero_dl_pre">下载</span><strong id="heroDlTotal"></strong><span data-i18n="hero_dl_post">次</span></span>
     </div>
 
     <div class="hero-latest" id="heroLatest" hidden>
@@ -2426,13 +2437,13 @@
         <svg class="brand-mark"><use href="#logo"/></svg>
         <span class="brand-name">Explorer<em>Focus</em></span>
       </div>
-      <p class="footer-tagline" data-i18n="ft_tagline">为那些总在相同地方工作、并希望工具也知道这一点的人,设计的极简浏览器。</p>
+      <p class="footer-tagline" data-i18n="ft_tagline">为那些总在相同地方工作、并希望工具也知道这一点的人,设计的极简文件管理器。</p>
     </div>
 
     <div class="footer-col">
       <h5 data-i18n="ft_get">下载</h5>
       <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.exe"><span data-i18n="ft_ch_standalone">独立版 (.exe)</span></a>
-      <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip" title="Para organizações que bloqueiam o download de .exe"><span data-i18n="ft_ch_portable">独立版 (.zip)</span></a>
+      <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip" title="适用于禁止下载 .exe 文件的机构" data-i18n-attr="title:hero_dl_zip_title"><span data-i18n="ft_ch_portable">独立版 (.zip)</span></a>
       <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases" target="_blank" rel="noopener" data-i18n="ft_releases">发行版</a>
     </div>
 
@@ -2735,6 +2746,50 @@
       else verifyFallback();
     })
     .catch(function () { verifyFallback(); });
+
+  /* ============================================================
+     Descargas no GitHub — a soma de TODAS as releases (.exe + .zip).
+     ⛔ Pagina a pagina: o EF ja passa das 100 releases, e um pedido so com
+        per_page=100 contava de menos SEM aviso (o site do LogViewer ainda
+        cabe numa pagina). Se qualquer pagina falhar (limite da API, rede),
+        nao se mostra nada: um numero a menos passava por verdadeiro.
+     Guardado 5 minutos na sessao, como no LogViewer: sem cookies.
+  ============================================================ */
+  (function () {
+    var box = document.getElementById('heroDlCount');
+    var el = document.getElementById('heroDlTotal');
+    if (!box || !el) return;
+    var CK = 'ef.dl', agora = Date.now();
+    var lang = document.documentElement.lang || 'en';
+    function mostra(total) {
+      try { el.textContent = Number(total).toLocaleString(lang); }
+      catch (e) { el.textContent = String(total); }
+      box.hidden = false;
+    }
+    try {
+      var c = JSON.parse(sessionStorage.getItem(CK) || 'null');
+      if (c && typeof c.t === 'number' && agora - c.ts < 300000) { mostra(c.t); return; }
+    } catch (e) {}
+    function pagina(n, soma) {
+      return fetch('https://api.github.com/repos/NuneX-mBrothers/ExplorerFocus/releases?per_page=100&page=' + n)
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+        .then(function (rel) {
+          rel.forEach(function (rl) {
+            (rl.assets || []).forEach(function (a) { soma += a.download_count || 0; });
+          });
+          return (rel.length === 100 && n < 10) ? pagina(n + 1, soma) : soma;
+        });
+    }
+    var corre = function () {
+      pagina(1, 0).then(function (total) {
+        if (total > 0) {
+          mostra(total);
+          try { sessionStorage.setItem(CK, JSON.stringify({ t: total, ts: agora })); } catch (e) {}
+        }
+      }).catch(function () {});
+    };
+    if (window.requestIdleCallback) requestIdleCallback(corre); else setTimeout(corre, 1200);
+  })();
 
   /* ============================================================
      Card "primeira vez a abrir" — abrir/fechar + copiar comandos/SHA

@@ -318,6 +318,14 @@
     background: var(--bg-2); color: var(--fg-0); border-color: var(--border-2);
   }
   .hero-cta .btn-ghost:hover { border-color: var(--accent-dim); color: var(--accent); }
+  /* Contador de descargas ao lado dos botoes: a letra e a cor da linha «Latest version».
+     Os spans vazios (o rotulo que numa lingua vai antes e noutra depois) nao ocupam espaco. */
+  .hero-dl-count { display: inline-flex; align-items: center; align-self: center; gap: 6px;
+    margin-left: 4px; font-family: var(--font-mono); font-size: 12px;
+    color: var(--fg-2); letter-spacing: 0.04em; }
+  .hero-dl-count[hidden] { display: none; }
+  .hero-dl-count span:empty { display: none; }
+  .hero-dl-count strong { color: var(--accent); font-weight: 600; }
 
   /* Versão mais recente (lida do version.json, até à revision) */
   .hero-latest {
@@ -1446,9 +1454,12 @@
         <span aria-hidden="true">⬇</span> <span data-i18n="hero_dl_exe">받기 · .exe</span>
       </a>
       <a class="btn btn-ghost" href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip"
-         title="Para organizações que bloqueiam o download de .exe">
+         title=".exe 다운로드를 차단하는 조직용" data-i18n-attr="title:hero_dl_zip_title">
         <span aria-hidden="true">⬇</span> <span data-i18n="hero_dl_zip">.zip</span>
       </a>
+      <!-- Descargas no GitHub (todas as releases, .exe + .zip), lidas pela API ao carregar.
+           Fica ESCONDIDO ate haver numero: melhor calado do que errado. -->
+      <span class="hero-dl-count" id="heroDlCount" hidden><span aria-hidden="true">↓</span><span data-i18n="hero_dl_pre">다운로드</span><strong id="heroDlTotal"></strong><span data-i18n="hero_dl_post">회</span></span>
     </div>
 
     <div class="hero-latest" id="heroLatest" hidden>
@@ -2432,7 +2443,7 @@
     <div class="footer-col">
       <h5 data-i18n="ft_get">받기</h5>
       <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.exe"><span data-i18n="ft_ch_standalone">Standalone (.exe)</span></a>
-      <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip" title="Para organizações que bloqueiam o download de .exe"><span data-i18n="ft_ch_portable">Standalone (.zip)</span></a>
+      <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip" title=".exe 다운로드를 차단하는 조직용" data-i18n-attr="title:hero_dl_zip_title"><span data-i18n="ft_ch_portable">Standalone (.zip)</span></a>
       <a href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases" target="_blank" rel="noopener" data-i18n="ft_releases">릴리스</a>
     </div>
 
@@ -2735,6 +2746,50 @@
       else verifyFallback();
     })
     .catch(function () { verifyFallback(); });
+
+  /* ============================================================
+     Descargas no GitHub — a soma de TODAS as releases (.exe + .zip).
+     ⛔ Pagina a pagina: o EF ja passa das 100 releases, e um pedido so com
+        per_page=100 contava de menos SEM aviso (o site do LogViewer ainda
+        cabe numa pagina). Se qualquer pagina falhar (limite da API, rede),
+        nao se mostra nada: um numero a menos passava por verdadeiro.
+     Guardado 5 minutos na sessao, como no LogViewer: sem cookies.
+  ============================================================ */
+  (function () {
+    var box = document.getElementById('heroDlCount');
+    var el = document.getElementById('heroDlTotal');
+    if (!box || !el) return;
+    var CK = 'ef.dl', agora = Date.now();
+    var lang = document.documentElement.lang || 'en';
+    function mostra(total) {
+      try { el.textContent = Number(total).toLocaleString(lang); }
+      catch (e) { el.textContent = String(total); }
+      box.hidden = false;
+    }
+    try {
+      var c = JSON.parse(sessionStorage.getItem(CK) || 'null');
+      if (c && typeof c.t === 'number' && agora - c.ts < 300000) { mostra(c.t); return; }
+    } catch (e) {}
+    function pagina(n, soma) {
+      return fetch('https://api.github.com/repos/NuneX-mBrothers/ExplorerFocus/releases?per_page=100&page=' + n)
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+        .then(function (rel) {
+          rel.forEach(function (rl) {
+            (rl.assets || []).forEach(function (a) { soma += a.download_count || 0; });
+          });
+          return (rel.length === 100 && n < 10) ? pagina(n + 1, soma) : soma;
+        });
+    }
+    var corre = function () {
+      pagina(1, 0).then(function (total) {
+        if (total > 0) {
+          mostra(total);
+          try { sessionStorage.setItem(CK, JSON.stringify({ t: total, ts: agora })); } catch (e) {}
+        }
+      }).catch(function () {});
+    };
+    if (window.requestIdleCallback) requestIdleCallback(corre); else setTimeout(corre, 1200);
+  })();
 
   /* ============================================================
      Card "primeira vez a abrir" — abrir/fechar + copiar comandos/SHA

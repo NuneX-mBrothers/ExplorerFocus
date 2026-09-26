@@ -1,7 +1,7 @@
 window.I18N = window.I18N || {};
 window.I18N.pt = {
   "page_title": "ExplorerFocus — explorador de ficheiros com cofres cifrados",
-  "page_desc": "Cofres cifrados que ganham letra de unidade, num explorador focado. Perfis, árvores configuráveis, pré-visualização rica e operações que dizem a verdade.",
+  "page_desc": "Ficheiros e pastas arrumados pelo trabalho de cada dia: um explorador focado, com perfis, pré-visualização rica e cofres cifrados que ganham letra de unidade.",
   "nav_features": "Features",
   "nav_shortcuts": "Atalhos",
   "nav_stack": "Stack",

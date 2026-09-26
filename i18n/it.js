@@ -1,7 +1,7 @@
 window.I18N = window.I18N || {};
 window.I18N.it = {
   "page_title": "ExplorerFocus — un file explorer con casseforti cifrate",
-  "page_desc": "Casseforti cifrate che si montano come lettera di unità, in un'alternativa concentrata a Esplora file di Windows. Profili, alberi configurabili, anteprima ricca, operazioni sui file oneste.",
+  "page_desc": "File e cartelle organizzati secondo il lavoro di ogni giorno: un'alternativa concentrata a Esplora file, con profili, anteprima ricca e casseforti cifrate montate come unità.",
   "nav_features": "Funzioni",
   "nav_shortcuts": "Scorciatoie",
   "nav_stack": "Tecnologie",

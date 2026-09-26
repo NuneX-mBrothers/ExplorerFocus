@@ -1,7 +1,7 @@
 window.I18N = window.I18N || {};
 window.I18N.pl = {
   "page_title": "ExplorerFocus — menedżer plików z zaszyfrowanymi sejfami",
-  "page_desc": "Zaszyfrowane sejfy montowane jako litera dysku, w skupionej alternatywie dla Eksploratora plików Windows. Profile, konfigurowalne drzewa, bogaty podgląd, uczciwe operacje na plikach.",
+  "page_desc": "Pliki i foldery uporządkowane według codziennej pracy: skupiona alternatywa dla Eksploratora plików z profilami, bogatym podglądem i zaszyfrowanymi sejfami jako dysk.",
   "nav_features": "Funkcje",
   "nav_shortcuts": "Skróty",
   "nav_stack": "Technologie",

@@ -1,7 +1,7 @@
 window.I18N = window.I18N || {};
 window.I18N.fr = {
   "page_title": "ExplorerFocus — explorateur avec coffres chiffrés",
-  "page_desc": "Coffres chiffrés montés comme un lecteur, dans un explorateur épuré. Profils, arborescences configurables, aperçu riche, opérations de fichiers honnêtes.",
+  "page_desc": "Fichiers et dossiers organisés selon le travail de chaque jour : un explorateur épuré, avec profils, aperçu riche et coffres chiffrés montés comme un lecteur.",
   "nav_features": "Fonctions",
   "nav_shortcuts": "Raccourcis",
   "nav_stack": "Stack",

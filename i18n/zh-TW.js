@@ -5,7 +5,7 @@ window.I18N = window.I18N || {};
 // window.I18N["zh-TW"].
 window.I18N["zh-TW"] = {
   "page_title": "ExplorerFocus — 附加密保險庫的檔案總管",
-  "page_desc": "可掛載為磁碟機代號的加密保險庫，一個專注的 Windows 檔案總管替代品。設定檔、可自訂的樹狀清單、豐富的預覽，以及說實話的檔案操作。",
+  "page_desc": "依日常工作整理檔案與資料夾：一個專注的 Windows 檔案總管替代品，具備設定檔、豐富的預覽，以及可掛載為磁碟機代號的加密保險庫。",
   "nav_features": "功能",
   "nav_shortcuts": "快速鍵",
   "nav_stack": "技術",

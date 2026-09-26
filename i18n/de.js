@@ -1,7 +1,7 @@
 window.I18N = window.I18N || {};
 window.I18N.de = {
   "page_title": "ExplorerFocus — Dateiexplorer mit verschlüsselten Tresoren",
-  "page_desc": "Verschlüsselte Tresore mit Laufwerksbuchstaben, in einer fokussierten Alternative. Profile, konfigurierbare Bäume, Vorschau, ehrliche Dateioperationen.",
+  "page_desc": "Dateien und Ordner nach der täglichen Arbeit geordnet: eine fokussierte Explorer-Alternative mit Profilen, Vorschau und verschlüsselten Tresoren als Laufwerk.",
   "nav_features": "Funktionen",
   "nav_shortcuts": "Tastenkürzel",
   "nav_stack": "Stack",

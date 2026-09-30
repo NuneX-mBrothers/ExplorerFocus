@@ -85,6 +85,7 @@
     "Remote and cloud access: SFTP, FTP, FTPS, WebDAV, Dropbox and OneDrive",
     "Built-in capture: screen recording, camera, audio and scanner",
     "16 interface languages: Portuguese (Portugal and Brazil), English (UK and US), Spanish, French, Italian, German, Polish, Russian, Arabic, Hindi, Chinese (Simplified and Traditional), Japanese and Korean",
+    "PDF tools: merge and split PDF, rotate and reorder pages, PDF to JPG/PNG, password-protect or unlock PDF, convert Word and JPG to PDF",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://nunex-mbrothers.github.io/ExplorerFocus/es/",
@@ -1659,13 +1660,17 @@
          CARTÕES DE MARCA, por ser a mais antiga — e isso foi MEDIDO no
          Core/Changelog.cs da app, não deduzido: Cl126Cards = 1.2.6, contra
          Cl127VoiceOver = 1.2.7 e tudo o resto em 1.2.21 ou depois. ⚠ Eu ia a
-         tirar o voice over de olhos fechados. -->
+         tirar o voice over de olhos fechados.
+         ⛔ 30/09: entrou o PDF TOOLS (#feat34) e saiu, agora sim, o VOICE OVER —
+         o mais antigo das seis (Cl127VoiceOver = 1.2.7, medido no Changelog.cs).
+         A janela à parte da pré-visualização (2.0.2) NÃO entra: é só mais um
+         modo da pré-visualização (decisão do João). -->
     <a href="#vault" data-i18n="wn_vault">🔒 Las bóvedas</a>
     <a href="#feat18" data-i18n="wn_langs">🌐 16 idiomas</a>
     <a href="#feat19" data-i18n="wn_disk">💽 El disco al detalle</a>
     <a href="#feat24" data-i18n="wn_books">📖 Libros en papel</a>
-    <a href="#feat32" data-i18n="wn_voice">🎙 Voz en off</a>
     <a href="#feat33" data-i18n="wn_audio">🎧 El sonido de un vídeo</a>
+    <a href="#feat34" data-i18n="wn_pdf">📄 Herramientas PDF</a>
   </nav>
   <span class="whatsnew-ver">v2.0.2</span>
 </div>
@@ -2051,6 +2056,26 @@
     </p>
   </div>
 
+  <!-- ⛔ PDF TOOLS (30/09). Grátis SÓ juntar e dividir; o resto é PREMIUM —
+       decisão do João («só duas coisas são free»). O nome do botão é o da app
+       (LocalizationService.Pdf.cs: PdfToolsBotao); em português fica «PDF
+       Tools», como na app. Cada afirmação vem das notas da engenharia (memória
+       ferramentas-pdf): o original nunca se toca; os marcadores e os dados do
+       documento seguem; protegido ou estragado é dito e nada fica a meio; no
+       cofre, pela letra. O Word é «simples» porque a conversão é fiel nos
+       documentos simples (caderno, ideia 5b). -->
+  <div class="feat w12" id="feat34">
+    <div class="num"><span data-i18n="f34_num">34 — HERRAMIENTAS PDF</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f34_h">Unir, dividir y ordenar PDF — ahí mismo, donde están.</h3>
+    <p data-i18n-html="f34_p">Selecciona un PDF y arriba se enciende el botón <em>Herramientas PDF</em>. <em>Une</em> varios en uno, <em>divide</em> por rangos de páginas (<em>1-3, 5, 8-</em>) u <em>organiza las páginas</em> en miniaturas: girar, borrar, cambiar el orden o sacar algunas a un PDF nuevo. Convierte páginas en <em>imágenes JPG o PNG</em>, pon o quita una <em>contraseña</em> y <em>convierte</em> a PDF imágenes JPG/PNG y documentos de Word sencillos. <strong>El original nunca se toca</strong>: cada resultado es un PDF nuevo, justo al lado, con sus marcadores y los datos del documento. No se sube nada a ninguna parte.</p>
+    <div class="feat-mark" data-i18n="f34_mark">Unir PDF · Dividir PDF · Rotar y reordenar páginas · PDF a JPG/PNG · Proteger o desbloquear PDF · Word y JPG a PDF</div>
+    <p class="feat-note">
+      <span data-i18n="f34_free">Gratis: unir y dividir.</span><br>
+      <span data-i18n="f34_premium">PREMIUM: organizar páginas, PDF a imágenes, poner o quitar la contraseña, convertir a PDF.</span>
+      <span class="feat-drm" data-i18n="f34_note">Si un PDF está protegido o dañado, se avisa, y no queda nada a medias. Funciona también dentro de una bóveda cifrada, a través de su letra de unidad.</span>
+    </p>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -2407,13 +2432,13 @@
     <div class="prem-card" id="free">
       <h4 data-i18n="pr_free_h">Gratis</h4>
       <span class="prem-tag" data-i18n="pr_free_tag">para siempre · sin cuenta</span>
-      <ul data-i18n-html="pr_free_list"><li>Perfiles, árboles configurables, búsqueda multipatrón</li><li>Vista previa: código, PDF, Word/Excel, Markdown, imágenes, libros</li><li>Operaciones con progreso real, velocidad, ETA, historial y conflictos</li><li>Terminales, asociaciones por extensión, archivos comprimidos como carpetas</li><li>Tema oscuro completo, 16 idiomas, actualizaciones automáticas</li><li>Grabación de audio (micrófono)</li><li><strong>1 conexión remota</strong> (SFTP/FTP/FTPS) — navegar y previsualizar</li></ul>
+      <ul data-i18n-html="pr_free_list"><li>Perfiles, árboles configurables, búsqueda multipatrón</li><li>Vista previa: código, PDF, Word/Excel, Markdown, imágenes, libros</li><li>Operaciones con progreso real, velocidad, ETA, historial y conflictos</li><li>Terminales, asociaciones por extensión, archivos comprimidos como carpetas</li><li>Tema oscuro completo, 16 idiomas, actualizaciones automáticas</li><li>Grabación de audio (micrófono)</li><li><strong>1 conexión remota</strong> (SFTP/FTP/FTPS) — navegar y previsualizar</li><li>PDF: unir y dividir</li></ul>
     </div>
 
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag">donación única de 19,99 € · por máquina</span>
-      <ul data-i18n-html="pr_prem_list"><li><strong>Crear</strong> bóvedas cifradas</li><li><strong>Acceso remoto completo</strong>: varias conexiones, todas las operaciones, WebDAV, Dropbox, OneDrive</li><li>Grabación de pantalla <strong>sin marca de agua, sin límite de tiempo y con sonido</strong></li><li>Grabación de vídeo sin marca de agua</li><li>Audio con mezcla de micrófono + sonido del sistema</li><li>Escaneo multipágina con alimentador (ADF)</li><li>Lector de libros completo — EPUB, formatos Kindle, FB2 y cómics</li><li>Tarjetas de inicio/fin y banda de texto en las grabaciones</li></ul>
+      <ul data-i18n-html="pr_prem_list"><li><strong>Crear</strong> bóvedas cifradas</li><li><strong>Acceso remoto completo</strong>: varias conexiones, todas las operaciones, WebDAV, Dropbox, OneDrive</li><li>Grabación de pantalla <strong>sin marca de agua, sin límite de tiempo y con sonido</strong></li><li>Grabación de vídeo sin marca de agua</li><li>Audio con mezcla de micrófono + sonido del sistema</li><li>Escaneo multipágina con alimentador (ADF)</li><li>Lector de libros completo — EPUB, formatos Kindle, FB2 y cómics</li><li>Tarjetas de inicio/fin y banda de texto en las grabaciones</li><li>Herramientas PDF: organizar páginas, PDF a imágenes, contraseña, convertir a PDF</li></ul>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo

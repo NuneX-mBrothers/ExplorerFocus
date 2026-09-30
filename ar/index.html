@@ -85,6 +85,7 @@
     "Remote and cloud access: SFTP, FTP, FTPS, WebDAV, Dropbox and OneDrive",
     "Built-in capture: screen recording, camera, audio and scanner",
     "16 interface languages: Portuguese (Portugal and Brazil), English (UK and US), Spanish, French, Italian, German, Polish, Russian, Arabic, Hindi, Chinese (Simplified and Traditional), Japanese and Korean",
+    "PDF tools: merge and split PDF, rotate and reorder pages, PDF to JPG/PNG, password-protect or unlock PDF, convert Word and JPG to PDF",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://nunex-mbrothers.github.io/ExplorerFocus/ar/",
@@ -1659,13 +1660,17 @@
          CARTÕES DE MARCA, por ser a mais antiga — e isso foi MEDIDO no
          Core/Changelog.cs da app, não deduzido: Cl126Cards = 1.2.6, contra
          Cl127VoiceOver = 1.2.7 e tudo o resto em 1.2.21 ou depois. ⚠ Eu ia a
-         tirar o voice over de olhos fechados. -->
+         tirar o voice over de olhos fechados.
+         ⛔ 30/09: entrou o PDF TOOLS (#feat34) e saiu, agora sim, o VOICE OVER —
+         o mais antigo das seis (Cl127VoiceOver = 1.2.7, medido no Changelog.cs).
+         A janela à parte da pré-visualização (2.0.2) NÃO entra: é só mais um
+         modo da pré-visualização (decisão do João). -->
     <a href="#vault" data-i18n="wn_vault">🔒 الخزائن</a>
     <a href="#feat18" data-i18n="wn_langs">🌐 16 لغة</a>
     <a href="#feat19" data-i18n="wn_disk">💽 القرص، بالتفصيل</a>
     <a href="#feat24" data-i18n="wn_books">📖 كتب على ورق</a>
-    <a href="#feat32" data-i18n="wn_voice">🎙 التعليق الصوتي</a>
     <a href="#feat33" data-i18n="wn_audio">🎧 صوت الفيديو</a>
+    <a href="#feat34" data-i18n="wn_pdf">📄 أدوات PDF</a>
   </nav>
   <span class="whatsnew-ver">v2.0.2</span>
 </div>
@@ -2051,6 +2056,26 @@
     </p>
   </div>
 
+  <!-- ⛔ PDF TOOLS (30/09). Grátis SÓ juntar e dividir; o resto é PREMIUM —
+       decisão do João («só duas coisas são free»). O nome do botão é o da app
+       (LocalizationService.Pdf.cs: PdfToolsBotao); em português fica «PDF
+       Tools», como na app. Cada afirmação vem das notas da engenharia (memória
+       ferramentas-pdf): o original nunca se toca; os marcadores e os dados do
+       documento seguem; protegido ou estragado é dito e nada fica a meio; no
+       cofre, pela letra. O Word é «simples» porque a conversão é fiel nos
+       documentos simples (caderno, ideia 5b). -->
+  <div class="feat w12" id="feat34">
+    <div class="num"><span data-i18n="f34_num">34 — أدوات PDF</span><a class="badge-free" href="#free" data-i18n="badge_free">مجاني</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f34_h">دمج ملفات PDF وتقسيمها وترتيبها — في مكانها تمامًا.</h3>
+    <p data-i18n-html="f34_p">حدّد ملف PDF فيضيء في الأعلى زر <em>أدوات PDF</em>. <em>ادمج</em> عدة ملفات في ملف واحد، أو <em>قسّم</em> حسب نطاقات الصفحات (<em dir="ltr">1-3, 5, 8-</em>)، أو <em>نظّم الصفحات</em> عبر الصور المصغّرة: تدوير، حذف، تغيير الترتيب، أو إخراج بعضها إلى ملف PDF جديد. حوّل الصفحات إلى <em>صور JPG أو PNG</em>، وأضف <em>كلمة مرور</em> أو أزلها، و<em>حوّل</em> صور JPG/PNG ومستندات Word البسيطة إلى PDF. <strong>لا يُمسّ الملف الأصلي أبدًا</strong>: كل نتيجة هي ملف PDF جديد بجانبه مباشرة، مع إشاراته المرجعية وبيانات المستند. لا يُرفع أي شيء إلى أي مكان.</p>
+    <div class="feat-mark" data-i18n="f34_mark">دمج PDF · تقسيم PDF · تدوير الصفحات وترتيبها · تحويل PDF إلى JPG/PNG · حماية PDF بكلمة مرور أو فكّها · تحويل Word وJPG إلى PDF</div>
+    <p class="feat-note">
+      <span data-i18n="f34_free">مجاني: الدمج والتقسيم.</span><br>
+      <span data-i18n="f34_premium">PREMIUM: تنظيم الصفحات، وتحويل PDF إلى صور، وإضافة كلمة المرور أو إزالتها، والتحويل إلى PDF.</span>
+      <span class="feat-drm" data-i18n="f34_note">يُبلَّغ عن ملف PDF المحمي أو التالف، ولا يبقى شيء منجزًا نصفه. يعمل أيضًا داخل خزنة مشفّرة، عبر حرف محرك الأقراص الخاص بها.</span>
+    </p>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -2407,13 +2432,13 @@
     <div class="prem-card" id="free">
       <h4 data-i18n="pr_free_h">مجاني</h4>
       <span class="prem-tag" data-i18n="pr_free_tag">إلى الأبد · بلا حساب</span>
-      <ul data-i18n-html="pr_free_list"><li>ملفات التعريف، والأشجار التي تُضبط، والبحث بأنماط متعدّدة</li><li>المعاينة: شفرة، PDF، Word/Excel، Markdown، صور، كتب</li><li>عمليات ملفات بتقدّم حقيقي وسرعة ووقت متبقٍّ وسجل ومعالجة تعارضات</li><li>طرفيات، وتطبيقات حسب الامتداد، وأرشيفات كمجلدات</li><li>سِمة داكنة كاملة، و16 لغة، وتحديثات تلقائية</li><li>تسجيل صوتي (ميكروفون)</li><li><strong>اتصال بعيد واحد</strong> (SFTP/FTP/FTPS) — تنقّل ومعاينة</li></ul>
+      <ul data-i18n-html="pr_free_list"><li>ملفات التعريف، والأشجار التي تُضبط، والبحث بأنماط متعدّدة</li><li>المعاينة: شفرة، PDF، Word/Excel، Markdown، صور، كتب</li><li>عمليات ملفات بتقدّم حقيقي وسرعة ووقت متبقٍّ وسجل ومعالجة تعارضات</li><li>طرفيات، وتطبيقات حسب الامتداد، وأرشيفات كمجلدات</li><li>سِمة داكنة كاملة، و16 لغة، وتحديثات تلقائية</li><li>تسجيل صوتي (ميكروفون)</li><li><strong>اتصال بعيد واحد</strong> (SFTP/FTP/FTPS) — تنقّل ومعاينة</li><li>PDF: الدمج والتقسيم</li></ul>
     </div>
 
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag">تبرّع لمرة واحدة 19.99 € · لكل جهاز</span>
-      <ul data-i18n-html="pr_prem_list"><li><strong>إنشاء</strong> خزائن مشفّرة</li><li><strong>وصول بعيد كامل</strong>: اتصالات متعدّدة، وكل العمليات، وWebDAV وDropbox وOneDrive</li><li>تسجيل الشاشة <strong>بلا علامة مائية، وبلا حدّ زمني، ومع الصوت</strong></li><li>تسجيل فيديو بلا علامة مائية</li><li>مزج صوت الميكروفون + صوت النظام</li><li>مسح متعدّد الصفحات بوحدة التغذية (ADF)</li><li>قارئ كتب كامل — EPUB، وصيغ Kindle، وFB2، والقصص المصوّرة</li><li>بطاقات البداية/النهاية وشريط النص في التسجيلات</li></ul>
+      <ul data-i18n-html="pr_prem_list"><li><strong>إنشاء</strong> خزائن مشفّرة</li><li><strong>وصول بعيد كامل</strong>: اتصالات متعدّدة، وكل العمليات، وWebDAV وDropbox وOneDrive</li><li>تسجيل الشاشة <strong>بلا علامة مائية، وبلا حدّ زمني، ومع الصوت</strong></li><li>تسجيل فيديو بلا علامة مائية</li><li>مزج صوت الميكروفون + صوت النظام</li><li>مسح متعدّد الصفحات بوحدة التغذية (ADF)</li><li>قارئ كتب كامل — EPUB، وصيغ Kindle، وFB2، والقصص المصوّرة</li><li>بطاقات البداية/النهاية وشريط النص في التسجيلات</li><li>أدوات PDF: تنظيم الصفحات، PDF إلى صور، كلمة المرور، التحويل إلى PDF</li></ul>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo

@@ -85,6 +85,7 @@
     "Remote and cloud access: SFTP, FTP, FTPS, WebDAV, Dropbox and OneDrive",
     "Built-in capture: screen recording, camera, audio and scanner",
     "16 interface languages: Portuguese (Portugal and Brazil), English (UK and US), Spanish, French, Italian, German, Polish, Russian, Arabic, Hindi, Chinese (Simplified and Traditional), Japanese and Korean",
+    "PDF tools: merge and split PDF, rotate and reorder pages, PDF to JPG/PNG, password-protect or unlock PDF, convert Word and JPG to PDF",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://nunex-mbrothers.github.io/ExplorerFocus/hi/",
@@ -1659,13 +1660,17 @@
          CARTÕES DE MARCA, por ser a mais antiga — e isso foi MEDIDO no
          Core/Changelog.cs da app, não deduzido: Cl126Cards = 1.2.6, contra
          Cl127VoiceOver = 1.2.7 e tudo o resto em 1.2.21 ou depois. ⚠ Eu ia a
-         tirar o voice over de olhos fechados. -->
+         tirar o voice over de olhos fechados.
+         ⛔ 30/09: entrou o PDF TOOLS (#feat34) e saiu, agora sim, o VOICE OVER —
+         o mais antigo das seis (Cl127VoiceOver = 1.2.7, medido no Changelog.cs).
+         A janela à parte da pré-visualização (2.0.2) NÃO entra: é só mais um
+         modo da pré-visualização (decisão do João). -->
     <a href="#vault" data-i18n="wn_vault">🔒 तिजोरियाँ</a>
     <a href="#feat18" data-i18n="wn_langs">🌐 16 भाषाएँ</a>
     <a href="#feat19" data-i18n="wn_disk">💽 डिस्क, ब्यौरे में</a>
     <a href="#feat24" data-i18n="wn_books">📖 कागज़ पर किताबें</a>
-    <a href="#feat32" data-i18n="wn_voice">🎙 आवाज़ चढ़ाना</a>
     <a href="#feat33" data-i18n="wn_audio">🎧 वीडियो की आवाज़</a>
+    <a href="#feat34" data-i18n="wn_pdf">📄 PDF टूल्स</a>
   </nav>
   <span class="whatsnew-ver">v2.0.2</span>
 </div>
@@ -2051,6 +2056,26 @@
     </p>
   </div>
 
+  <!-- ⛔ PDF TOOLS (30/09). Grátis SÓ juntar e dividir; o resto é PREMIUM —
+       decisão do João («só duas coisas são free»). O nome do botão é o da app
+       (LocalizationService.Pdf.cs: PdfToolsBotao); em português fica «PDF
+       Tools», como na app. Cada afirmação vem das notas da engenharia (memória
+       ferramentas-pdf): o original nunca se toca; os marcadores e os dados do
+       documento seguem; protegido ou estragado é dito e nada fica a meio; no
+       cofre, pela letra. O Word é «simples» porque a conversão é fiel nos
+       documentos simples (caderno, ideia 5b). -->
+  <div class="feat w12" id="feat34">
+    <div class="num"><span data-i18n="f34_num">34 — PDF टूल्स</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f34_h">PDF जोड़ें, बाँटें और व्यवस्थित करें — ठीक वहीं, जहाँ वे हैं।</h3>
+    <p data-i18n-html="f34_p">कोई PDF चुनें और ऊपर <em>PDF टूल्स</em> बटन जल उठता है। कई फ़ाइलों को एक में <em>जोड़ें</em> (PDF मर्ज), पृष्ठ-सीमाओं के हिसाब से <em>विभाजित करें</em> (<em>1-3, 5, 8-</em>), या थंबनेल पर <em>पृष्ठ व्यवस्थित करें</em>: घुमाएँ, हटाएँ, क्रम बदलें, या कुछ पृष्ठों को नए PDF में निकालें। पृष्ठों को <em>JPG या PNG छवियों</em> में बदलें, <em>पासवर्ड</em> लगाएँ या हटाएँ, और JPG/PNG छवियों तथा सरल Word दस्तावेज़ों को PDF में <em>बदलें</em>। <strong>मूल फ़ाइल को कभी छुआ नहीं जाता</strong>: हर परिणाम ठीक बगल में एक नया PDF होता है, उसके बुकमार्क और दस्तावेज़ की जानकारी के साथ। कुछ भी कहीं अपलोड नहीं होता।</p>
+    <div class="feat-mark" data-i18n="f34_mark">PDF मर्ज करें · PDF स्प्लिट करें · पृष्ठ घुमाएँ और क्रम बदलें · PDF से JPG/PNG · PDF पर पासवर्ड लगाएँ या हटाएँ · Word और JPG से PDF</div>
+    <p class="feat-note">
+      <span data-i18n="f34_free">मुफ़्त: जोड़ना और विभाजित करना।</span><br>
+      <span data-i18n="f34_premium">PREMIUM: पृष्ठ व्यवस्थित करना, PDF से छवियाँ, पासवर्ड लगाना या हटाना, PDF में बदलना।</span>
+      <span class="feat-drm" data-i18n="f34_note">सुरक्षित या क्षतिग्रस्त PDF की सूचना दी जाती है, और कुछ भी अधूरा नहीं छूटता। यह एन्क्रिप्टेड तिजोरी के अंदर भी काम करता है, उसके ड्राइव अक्षर के ज़रिए।</span>
+    </p>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -2407,13 +2432,13 @@
     <div class="prem-card" id="free">
       <h4 data-i18n="pr_free_h">मुफ़्त</h4>
       <span class="prem-tag" data-i18n="pr_free_tag">हमेशा के लिए · बिना खाते</span>
-      <ul data-i18n-html="pr_free_list"><li>प्रोफ़ाइल, अपनी पसंद के ट्री, कई पैटर्न की खोज</li><li>पूर्वावलोकन: कोड, PDF, Word/Excel, Markdown, तस्वीरें, किताबें</li><li>असली प्रगति, गति, बचा समय, इतिहास और टकराव के साथ फ़ाइल क्रियाएँ</li><li>टर्मिनल, एक्सटेंशन के हिसाब से ऐप, फ़ोल्डर की तरह संग्रह</li><li>पूरा गहरा थीम, 16 भाषाएँ, स्वचालित अपडेट</li><li>ऑडियो रिकॉर्डिंग (माइक्रोफ़ोन)</li><li><strong>1 दूरस्थ कनेक्शन</strong> (SFTP/FTP/FTPS) — घूमना और पूर्वावलोकन</li></ul>
+      <ul data-i18n-html="pr_free_list"><li>प्रोफ़ाइल, अपनी पसंद के ट्री, कई पैटर्न की खोज</li><li>पूर्वावलोकन: कोड, PDF, Word/Excel, Markdown, तस्वीरें, किताबें</li><li>असली प्रगति, गति, बचा समय, इतिहास और टकराव के साथ फ़ाइल क्रियाएँ</li><li>टर्मिनल, एक्सटेंशन के हिसाब से ऐप, फ़ोल्डर की तरह संग्रह</li><li>पूरा गहरा थीम, 16 भाषाएँ, स्वचालित अपडेट</li><li>ऑडियो रिकॉर्डिंग (माइक्रोफ़ोन)</li><li><strong>1 दूरस्थ कनेक्शन</strong> (SFTP/FTP/FTPS) — घूमना और पूर्वावलोकन</li><li>PDF: जोड़ना और विभाजित करना</li></ul>
     </div>
 
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag">एक बार का € 19.99 दान · प्रति मशीन</span>
-      <ul data-i18n-html="pr_prem_list"><li>एन्क्रिप्टेड तिजोरियाँ <strong>बनाना</strong></li><li><strong>पूरी दूरस्थ पहुँच</strong>: कई कनेक्शन, सारी क्रियाएँ, WebDAV, Dropbox, OneDrive</li><li>स्क्रीन रिकॉर्डिंग <strong>बिना वॉटरमार्क, बिना समय-सीमा और आवाज़ के साथ</strong></li><li>बिना वॉटरमार्क वीडियो रिकॉर्डिंग</li><li>माइक्रोफ़ोन + सिस्टम की आवाज़ का मिश्रण</li><li>फ़ीडर (ADF) से बहु-पृष्ठ स्कैन</li><li>पूरा किताब पाठक — EPUB, Kindle प्रारूप, FB2 और कॉमिक्स</li><li>रिकॉर्डिंग में शुरुआती/अंतिम कार्ड और पाठ पट्टी</li></ul>
+      <ul data-i18n-html="pr_prem_list"><li>एन्क्रिप्टेड तिजोरियाँ <strong>बनाना</strong></li><li><strong>पूरी दूरस्थ पहुँच</strong>: कई कनेक्शन, सारी क्रियाएँ, WebDAV, Dropbox, OneDrive</li><li>स्क्रीन रिकॉर्डिंग <strong>बिना वॉटरमार्क, बिना समय-सीमा और आवाज़ के साथ</strong></li><li>बिना वॉटरमार्क वीडियो रिकॉर्डिंग</li><li>माइक्रोफ़ोन + सिस्टम की आवाज़ का मिश्रण</li><li>फ़ीडर (ADF) से बहु-पृष्ठ स्कैन</li><li>पूरा किताब पाठक — EPUB, Kindle प्रारूप, FB2 और कॉमिक्स</li><li>रिकॉर्डिंग में शुरुआती/अंतिम कार्ड और पाठ पट्टी</li><li>PDF टूल्स: पृष्ठ व्यवस्थित करना, PDF से छवियाँ, पासवर्ड, PDF में बदलना</li></ul>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo

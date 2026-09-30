@@ -85,6 +85,7 @@
     "Remote and cloud access: SFTP, FTP, FTPS, WebDAV, Dropbox and OneDrive",
     "Built-in capture: screen recording, camera, audio and scanner",
     "16 interface languages: Portuguese (Portugal and Brazil), English (UK and US), Spanish, French, Italian, German, Polish, Russian, Arabic, Hindi, Chinese (Simplified and Traditional), Japanese and Korean",
+    "PDF tools: merge and split PDF, rotate and reorder pages, PDF to JPG/PNG, password-protect or unlock PDF, convert Word and JPG to PDF",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://nunex-mbrothers.github.io/ExplorerFocus/fr/",
@@ -1659,13 +1660,17 @@
          CARTÕES DE MARCA, por ser a mais antiga — e isso foi MEDIDO no
          Core/Changelog.cs da app, não deduzido: Cl126Cards = 1.2.6, contra
          Cl127VoiceOver = 1.2.7 e tudo o resto em 1.2.21 ou depois. ⚠ Eu ia a
-         tirar o voice over de olhos fechados. -->
+         tirar o voice over de olhos fechados.
+         ⛔ 30/09: entrou o PDF TOOLS (#feat34) e saiu, agora sim, o VOICE OVER —
+         o mais antigo das seis (Cl127VoiceOver = 1.2.7, medido no Changelog.cs).
+         A janela à parte da pré-visualização (2.0.2) NÃO entra: é só mais um
+         modo da pré-visualização (decisão do João). -->
     <a href="#vault" data-i18n="wn_vault">🔒 Les coffres</a>
     <a href="#feat18" data-i18n="wn_langs">🌐 16 langues</a>
     <a href="#feat19" data-i18n="wn_disk">💽 Le disque en détail</a>
     <a href="#feat24" data-i18n="wn_books">📖 Livres sur papier</a>
-    <a href="#feat32" data-i18n="wn_voice">🎙 Voix off</a>
     <a href="#feat33" data-i18n="wn_audio">🎧 Le son d’une vidéo</a>
+    <a href="#feat34" data-i18n="wn_pdf">📄 Outils PDF</a>
   </nav>
   <span class="whatsnew-ver">v2.0.2</span>
 </div>
@@ -2051,6 +2056,26 @@
     </p>
   </div>
 
+  <!-- ⛔ PDF TOOLS (30/09). Grátis SÓ juntar e dividir; o resto é PREMIUM —
+       decisão do João («só duas coisas são free»). O nome do botão é o da app
+       (LocalizationService.Pdf.cs: PdfToolsBotao); em português fica «PDF
+       Tools», como na app. Cada afirmação vem das notas da engenharia (memória
+       ferramentas-pdf): o original nunca se toca; os marcadores e os dados do
+       documento seguem; protegido ou estragado é dito e nada fica a meio; no
+       cofre, pela letra. O Word é «simples» porque a conversão é fiel nos
+       documentos simples (caderno, ideia 5b). -->
+  <div class="feat w12" id="feat34">
+    <div class="num"><span data-i18n="f34_num">34 — OUTILS PDF</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratuit</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f34_h">Fusionner, diviser et ranger vos PDF — là où ils sont.</h3>
+    <p data-i18n-html="f34_p">Sélectionnez un PDF et le bouton <em>Outils PDF</em> s’allume en haut. <em>Fusionnez</em> plusieurs fichiers en un seul, <em>divisez</em> par plages de pages (<em>1-3, 5, 8-</em>) ou <em>organisez les pages</em> en vignettes : faire pivoter, supprimer, réordonner ou en extraire quelques-unes dans un nouveau PDF. Transformez des pages en <em>images JPG ou PNG</em>, ajoutez ou retirez un <em>mot de passe</em>, et <em>convertissez</em> en PDF des images JPG/PNG et des documents Word simples. <strong>L’original n’est jamais modifié</strong> : chaque résultat est un nouveau PDF, juste à côté, avec ses signets et les informations du document. Rien n’est envoyé nulle part.</p>
+    <div class="feat-mark" data-i18n="f34_mark">Fusionner PDF · Diviser PDF · Pivoter et réordonner les pages · PDF en JPG/PNG · Protéger ou déverrouiller un PDF · Word et JPG en PDF</div>
+    <p class="feat-note">
+      <span data-i18n="f34_free">Gratuit : fusionner et diviser.</span><br>
+      <span data-i18n="f34_premium">PREMIUM : organiser les pages, PDF en images, ajouter ou retirer le mot de passe, convertir en PDF.</span>
+      <span class="feat-drm" data-i18n="f34_note">Un PDF protégé ou endommagé est signalé, et rien n’est laissé à moitié fait. Fonctionne aussi dans un coffre chiffré, par sa lettre de lecteur.</span>
+    </p>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -2407,13 +2432,13 @@
     <div class="prem-card" id="free">
       <h4 data-i18n="pr_free_h">Gratuit</h4>
       <span class="prem-tag" data-i18n="pr_free_tag">pour toujours · sans compte</span>
-      <ul data-i18n-html="pr_free_list"><li>Profils, arbres configurables, recherche multi-motifs</li><li>Aperçu : code, PDF, Word/Excel, Markdown, images, livres</li><li>Opérations avec progression réelle, vitesse, ETA, historique et conflits</li><li>Terminaux, associations par extension, archives comme dossiers</li><li>Thème sombre complet, 16 langues, mises à jour automatiques</li><li>Enregistrement audio (microphone)</li><li><strong>1 connexion distante</strong> (SFTP/FTP/FTPS) — naviguer et prévisualiser</li></ul>
+      <ul data-i18n-html="pr_free_list"><li>Profils, arbres configurables, recherche multi-motifs</li><li>Aperçu : code, PDF, Word/Excel, Markdown, images, livres</li><li>Opérations avec progression réelle, vitesse, ETA, historique et conflits</li><li>Terminaux, associations par extension, archives comme dossiers</li><li>Thème sombre complet, 16 langues, mises à jour automatiques</li><li>Enregistrement audio (microphone)</li><li><strong>1 connexion distante</strong> (SFTP/FTP/FTPS) — naviguer et prévisualiser</li><li>PDF : fusionner et diviser</li></ul>
     </div>
 
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag">don unique de 19,99 € · par machine</span>
-      <ul data-i18n-html="pr_prem_list"><li><strong>Créer</strong> des coffres chiffrés</li><li><strong>Accès distant complet</strong> : plusieurs connexions, toutes les opérations, WebDAV, Dropbox, OneDrive</li><li>Enregistrement d'écran <strong>sans filigrane, sans limite de temps et avec le son</strong></li><li>Enregistrement vidéo sans filigrane</li><li>Audio avec mixage microphone + son système</li><li>Numérisation multipage avec chargeur (ADF)</li><li>Lecteur de livres complet — EPUB, formats Kindle, FB2 et BD</li><li>Cartons de début/fin et bandeau de texte sur les enregistrements</li></ul>
+      <ul data-i18n-html="pr_prem_list"><li><strong>Créer</strong> des coffres chiffrés</li><li><strong>Accès distant complet</strong> : plusieurs connexions, toutes les opérations, WebDAV, Dropbox, OneDrive</li><li>Enregistrement d'écran <strong>sans filigrane, sans limite de temps et avec le son</strong></li><li>Enregistrement vidéo sans filigrane</li><li>Audio avec mixage microphone + son système</li><li>Numérisation multipage avec chargeur (ADF)</li><li>Lecteur de livres complet — EPUB, formats Kindle, FB2 et BD</li><li>Cartons de début/fin et bandeau de texte sur les enregistrements</li><li>Outils PDF : organiser les pages, PDF en images, mot de passe, convertir en PDF</li></ul>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo

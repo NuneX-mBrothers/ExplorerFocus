@@ -85,6 +85,7 @@
     "Remote and cloud access: SFTP, FTP, FTPS, WebDAV, Dropbox and OneDrive",
     "Built-in capture: screen recording, camera, audio and scanner",
     "16 interface languages: Portuguese (Portugal and Brazil), English (UK and US), Spanish, French, Italian, German, Polish, Russian, Arabic, Hindi, Chinese (Simplified and Traditional), Japanese and Korean",
+    "PDF tools: merge and split PDF, rotate and reorder pages, PDF to JPG/PNG, password-protect or unlock PDF, convert Word and JPG to PDF",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://nunex-mbrothers.github.io/ExplorerFocus/ru/",
@@ -1659,13 +1660,17 @@
          CARTÕES DE MARCA, por ser a mais antiga — e isso foi MEDIDO no
          Core/Changelog.cs da app, não deduzido: Cl126Cards = 1.2.6, contra
          Cl127VoiceOver = 1.2.7 e tudo o resto em 1.2.21 ou depois. ⚠ Eu ia a
-         tirar o voice over de olhos fechados. -->
+         tirar o voice over de olhos fechados.
+         ⛔ 30/09: entrou o PDF TOOLS (#feat34) e saiu, agora sim, o VOICE OVER —
+         o mais antigo das seis (Cl127VoiceOver = 1.2.7, medido no Changelog.cs).
+         A janela à parte da pré-visualização (2.0.2) NÃO entra: é só mais um
+         modo da pré-visualização (decisão do João). -->
     <a href="#vault" data-i18n="wn_vault">🔒 Хранилища</a>
     <a href="#feat18" data-i18n="wn_langs">🌐 16 языков</a>
     <a href="#feat19" data-i18n="wn_disk">💽 Диск, в подробностях</a>
     <a href="#feat24" data-i18n="wn_books">📖 Книги на бумаге</a>
-    <a href="#feat32" data-i18n="wn_voice">🎙 Озвучка</a>
     <a href="#feat33" data-i18n="wn_audio">🎧 Звук из видео</a>
+    <a href="#feat34" data-i18n="wn_pdf">📄 Инструменты PDF</a>
   </nav>
   <span class="whatsnew-ver">v2.0.2</span>
 </div>
@@ -2051,6 +2056,26 @@
     </p>
   </div>
 
+  <!-- ⛔ PDF TOOLS (30/09). Grátis SÓ juntar e dividir; o resto é PREMIUM —
+       decisão do João («só duas coisas são free»). O nome do botão é o da app
+       (LocalizationService.Pdf.cs: PdfToolsBotao); em português fica «PDF
+       Tools», como na app. Cada afirmação vem das notas da engenharia (memória
+       ferramentas-pdf): o original nunca se toca; os marcadores e os dados do
+       documento seguem; protegido ou estragado é dito e nada fica a meio; no
+       cofre, pela letra. O Word é «simples» porque a conversão é fiel nos
+       documentos simples (caderno, ideia 5b). -->
+  <div class="feat w12" id="feat34">
+    <div class="num"><span data-i18n="f34_num">34 — ИНСТРУМЕНТЫ PDF</span><a class="badge-free" href="#free" data-i18n="badge_free">Бесплатно</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f34_h">Объединяйте, разделяйте и упорядочивайте PDF — прямо там, где они лежат.</h3>
+    <p data-i18n-html="f34_p">Выделите PDF — и вверху загорится кнопка <em>Инструменты PDF</em>. <em>Объедините</em> несколько файлов в один, <em>разделите</em> по диапазонам страниц (<em>1-3, 5, 8-</em>) или <em>упорядочьте страницы</em> на миниатюрах: поворот, удаление, смена порядка или перенос нескольких страниц в новый PDF. Превратите страницы в <em>изображения JPG или PNG</em>, установите или снимите <em>пароль</em> и <em>преобразуйте</em> в PDF изображения JPG/PNG и простые документы Word. <strong>Оригинал никогда не меняется</strong>: каждый результат — новый PDF рядом с ним, с закладками и сведениями о документе. Ничего никуда не загружается.</p>
+    <div class="feat-mark" data-i18n="f34_mark">Объединить PDF · Разделить PDF · Повернуть и упорядочить страницы · PDF в JPG/PNG · Защитить PDF паролем или снять пароль · Word и JPG в PDF</div>
+    <p class="feat-note">
+      <span data-i18n="f34_free">Бесплатно: объединение и разделение.</span><br>
+      <span data-i18n="f34_premium">PREMIUM: упорядочивание страниц, PDF в изображения, установка или снятие пароля, преобразование в PDF.</span>
+      <span class="feat-drm" data-i18n="f34_note">О защищённом или повреждённом PDF сообщается, и ничего не остаётся сделанным наполовину. Работает и внутри зашифрованного хранилища — через его букву диска.</span>
+    </p>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -2407,13 +2432,13 @@
     <div class="prem-card" id="free">
       <h4 data-i18n="pr_free_h">Бесплатно</h4>
       <span class="prem-tag" data-i18n="pr_free_tag">навсегда · без аккаунта</span>
-      <ul data-i18n-html="pr_free_list"><li>Профили, настраиваемые деревья, поиск по нескольким шаблонам</li><li>Предпросмотр: код, PDF, Word/Excel, Markdown, изображения, книги</li><li>Операции с файлами с настоящим прогрессом, скоростью, временем, историей и конфликтами</li><li>Терминалы, приложения по расширению, архивы как папки</li><li>Полная тёмная тема, 16 языков, автообновления</li><li>Запись звука (микрофон)</li><li><strong>1 удалённое подключение</strong> (SFTP/FTP/FTPS) — просмотр и предпросмотр</li></ul>
+      <ul data-i18n-html="pr_free_list"><li>Профили, настраиваемые деревья, поиск по нескольким шаблонам</li><li>Предпросмотр: код, PDF, Word/Excel, Markdown, изображения, книги</li><li>Операции с файлами с настоящим прогрессом, скоростью, временем, историей и конфликтами</li><li>Терминалы, приложения по расширению, архивы как папки</li><li>Полная тёмная тема, 16 языков, автообновления</li><li>Запись звука (микрофон)</li><li><strong>1 удалённое подключение</strong> (SFTP/FTP/FTPS) — просмотр и предпросмотр</li><li>PDF: объединение и разделение</li></ul>
     </div>
 
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag">разовое пожертвование 19,99 € · на машину</span>
-      <ul data-i18n-html="pr_prem_list"><li><strong>Создание</strong> зашифрованных хранилищ</li><li><strong>Полный удалённый доступ</strong>: несколько подключений, все операции, WebDAV, Dropbox, OneDrive</li><li>Запись экрана <strong>без водяного знака, без ограничения времени и со звуком</strong></li><li>Запись видео без водяного знака</li><li>Микширование звука микрофон + система</li><li>Многостраничное сканирование с автоподатчиком (ADF)</li><li>Полная читалка книг — EPUB, форматы Kindle, FB2 и комиксы</li><li>Вступительные/финальные карточки и текстовая плашка в записях</li></ul>
+      <ul data-i18n-html="pr_prem_list"><li><strong>Создание</strong> зашифрованных хранилищ</li><li><strong>Полный удалённый доступ</strong>: несколько подключений, все операции, WebDAV, Dropbox, OneDrive</li><li>Запись экрана <strong>без водяного знака, без ограничения времени и со звуком</strong></li><li>Запись видео без водяного знака</li><li>Микширование звука микрофон + система</li><li>Многостраничное сканирование с автоподатчиком (ADF)</li><li>Полная читалка книг — EPUB, форматы Kindle, FB2 и комиксы</li><li>Вступительные/финальные карточки и текстовая плашка в записях</li><li>Инструменты PDF: упорядочивание страниц, PDF в изображения, пароль, преобразование в PDF</li></ul>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo

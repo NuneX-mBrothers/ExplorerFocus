@@ -85,6 +85,7 @@
     "Remote and cloud access: SFTP, FTP, FTPS, WebDAV, Dropbox and OneDrive",
     "Built-in capture: screen recording, camera, audio and scanner",
     "16 interface languages: Portuguese (Portugal and Brazil), English (UK and US), Spanish, French, Italian, German, Polish, Russian, Arabic, Hindi, Chinese (Simplified and Traditional), Japanese and Korean",
+    "PDF tools: merge and split PDF, rotate and reorder pages, PDF to JPG/PNG, password-protect or unlock PDF, convert Word and JPG to PDF",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://nunex-mbrothers.github.io/ExplorerFocus/zh/",
@@ -1659,13 +1660,17 @@
          CARTÕES DE MARCA, por ser a mais antiga — e isso foi MEDIDO no
          Core/Changelog.cs da app, não deduzido: Cl126Cards = 1.2.6, contra
          Cl127VoiceOver = 1.2.7 e tudo o resto em 1.2.21 ou depois. ⚠ Eu ia a
-         tirar o voice over de olhos fechados. -->
+         tirar o voice over de olhos fechados.
+         ⛔ 30/09: entrou o PDF TOOLS (#feat34) e saiu, agora sim, o VOICE OVER —
+         o mais antigo das seis (Cl127VoiceOver = 1.2.7, medido no Changelog.cs).
+         A janela à parte da pré-visualização (2.0.2) NÃO entra: é só mais um
+         modo da pré-visualização (decisão do João). -->
     <a href="#vault" data-i18n="wn_vault">🔒 保险库</a>
     <a href="#feat18" data-i18n="wn_langs">🌐 16 种语言</a>
     <a href="#feat19" data-i18n="wn_disk">💽 磁盘详情</a>
     <a href="#feat24" data-i18n="wn_books">📖 纸上读书</a>
-    <a href="#feat32" data-i18n="wn_voice">🎙 配音</a>
     <a href="#feat33" data-i18n="wn_audio">🎧 视频里的声音</a>
+    <a href="#feat34" data-i18n="wn_pdf">📄 PDF 工具</a>
   </nav>
   <span class="whatsnew-ver">v2.0.2</span>
 </div>
@@ -2051,6 +2056,26 @@
     </p>
   </div>
 
+  <!-- ⛔ PDF TOOLS (30/09). Grátis SÓ juntar e dividir; o resto é PREMIUM —
+       decisão do João («só duas coisas são free»). O nome do botão é o da app
+       (LocalizationService.Pdf.cs: PdfToolsBotao); em português fica «PDF
+       Tools», como na app. Cada afirmação vem das notas da engenharia (memória
+       ferramentas-pdf): o original nunca se toca; os marcadores e os dados do
+       documento seguem; protegido ou estragado é dito e nada fica a meio; no
+       cofre, pela letra. O Word é «simples» porque a conversão é fiel nos
+       documentos simples (caderno, ideia 5b). -->
+  <div class="feat w12" id="feat34">
+    <div class="num"><span data-i18n="f34_num">34 — PDF 工具</span><a class="badge-free" href="#free" data-i18n="badge_free">免费</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f34_h">合并、拆分、整理 PDF — 就在它们所在的地方。</h3>
+    <p data-i18n-html="f34_p">选中一个 PDF，顶部的 <em>PDF 工具</em> 按钮就会亮起。把多个文件<em>合并</em>成一个，按页码范围<em>拆分</em>（<em>1-3, 5, 8-</em>），或在缩略图上<em>整理页面</em>：旋转、删除、调整顺序，或把几页取出为新的 PDF。把页面转成 <em>JPG 或 PNG 图片</em>，添加或移除<em>密码</em>，并把 JPG/PNG 图片和简单的 Word 文档<em>转换</em>为 PDF。<strong>原文件永远不会被改动</strong>：每个结果都是紧挨着它的新 PDF，并保留书签和文档信息。不会上传任何内容。</p>
+    <div class="feat-mark" data-i18n="f34_mark">PDF 合并 · PDF 拆分 · 旋转和排序页面 · PDF 转 JPG/PNG · PDF 加密或解除密码 · Word、JPG 转 PDF</div>
+    <p class="feat-note">
+      <span data-i18n="f34_free">免费：合并与拆分。</span><br>
+      <span data-i18n="f34_premium">PREMIUM：整理页面、PDF 转图片、添加或移除密码、转换为 PDF。</span>
+      <span class="feat-drm" data-i18n="f34_note">受保护或已损坏的 PDF 会明确提示，不会留下做了一半的文件。在加密保险库里也能用，通过它的盘符。</span>
+    </p>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -2407,13 +2432,13 @@
     <div class="prem-card" id="free">
       <h4 data-i18n="pr_free_h">免费</h4>
       <span class="prem-tag" data-i18n="pr_free_tag">永久 · 无需账号</span>
-      <ul data-i18n-html="pr_free_list"><li>配置档、可自定义目录树、多模式搜索</li><li>预览：代码、PDF、Word/Excel、Markdown、图片、图书</li><li>文件操作：真实进度、速度、剩余时间、历史记录与冲突处理</li><li>终端、按扩展名关联应用、把压缩包当文件夹浏览</li><li>完整深色主题、16 种语言、自动更新</li><li>录音（麦克风）</li><li><strong>1 个远程连接</strong>（SFTP/FTP/FTPS）— 浏览与预览</li></ul>
+      <ul data-i18n-html="pr_free_list"><li>配置档、可自定义目录树、多模式搜索</li><li>预览：代码、PDF、Word/Excel、Markdown、图片、图书</li><li>文件操作：真实进度、速度、剩余时间、历史记录与冲突处理</li><li>终端、按扩展名关联应用、把压缩包当文件夹浏览</li><li>完整深色主题、16 种语言、自动更新</li><li>录音（麦克风）</li><li><strong>1 个远程连接</strong>（SFTP/FTP/FTPS）— 浏览与预览</li><li>PDF：合并与拆分</li></ul>
     </div>
 
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">PREMIUM</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag">一次性捐赠 19,99 € · 按设备授权</span>
-      <ul data-i18n-html="pr_prem_list"><li><strong>创建</strong>加密保险库</li><li><strong>完整远程访问</strong>：多个连接、全部操作、WebDAV、Dropbox、OneDrive</li><li>屏幕录制<strong>无水印、无时长限制、带声音</strong></li><li>摄像头录制无水印</li><li>音频混合麦克风 + 系统声音</li><li>多页扫描，支持自动进纸器（ADF）</li><li>完整图书阅读器 — EPUB、Kindle 格式、FB2 和漫画</li><li>录制的片头/片尾卡片与文字横幅</li></ul>
+      <ul data-i18n-html="pr_prem_list"><li><strong>创建</strong>加密保险库</li><li><strong>完整远程访问</strong>：多个连接、全部操作、WebDAV、Dropbox、OneDrive</li><li>屏幕录制<strong>无水印、无时长限制、带声音</strong></li><li>摄像头录制无水印</li><li>音频混合麦克风 + 系统声音</li><li>多页扫描，支持自动进纸器（ADF）</li><li>完整图书阅读器 — EPUB、Kindle 格式、FB2 和漫画</li><li>录制的片头/片尾卡片与文字横幅</li><li>PDF 工具：整理页面、PDF 转图片、密码、转换为 PDF</li></ul>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo

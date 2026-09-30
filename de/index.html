@@ -85,6 +85,7 @@
     "Remote and cloud access: SFTP, FTP, FTPS, WebDAV, Dropbox and OneDrive",
     "Built-in capture: screen recording, camera, audio and scanner",
     "16 interface languages: Portuguese (Portugal and Brazil), English (UK and US), Spanish, French, Italian, German, Polish, Russian, Arabic, Hindi, Chinese (Simplified and Traditional), Japanese and Korean",
+    "PDF tools: merge and split PDF, rotate and reorder pages, PDF to JPG/PNG, password-protect or unlock PDF, convert Word and JPG to PDF",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://nunex-mbrothers.github.io/ExplorerFocus/de/",
@@ -1659,13 +1660,17 @@
          CARTÕES DE MARCA, por ser a mais antiga — e isso foi MEDIDO no
          Core/Changelog.cs da app, não deduzido: Cl126Cards = 1.2.6, contra
          Cl127VoiceOver = 1.2.7 e tudo o resto em 1.2.21 ou depois. ⚠ Eu ia a
-         tirar o voice over de olhos fechados. -->
+         tirar o voice over de olhos fechados.
+         ⛔ 30/09: entrou o PDF TOOLS (#feat34) e saiu, agora sim, o VOICE OVER —
+         o mais antigo das seis (Cl127VoiceOver = 1.2.7, medido no Changelog.cs).
+         A janela à parte da pré-visualização (2.0.2) NÃO entra: é só mais um
+         modo da pré-visualização (decisão do João). -->
     <a href="#vault" data-i18n="wn_vault">🔒 Die Tresore</a>
     <a href="#feat18" data-i18n="wn_langs">🌐 16 Sprachen</a>
     <a href="#feat19" data-i18n="wn_disk">💽 Die Platte im Detail</a>
     <a href="#feat24" data-i18n="wn_books">📖 Bücher auf Papier</a>
-    <a href="#feat32" data-i18n="wn_voice">🎙 Voice-over</a>
     <a href="#feat33" data-i18n="wn_audio">🎧 Ton aus Video</a>
+    <a href="#feat34" data-i18n="wn_pdf">📄 PDF-Werkzeuge</a>
   </nav>
   <span class="whatsnew-ver">v2.0.2</span>
 </div>
@@ -2051,6 +2056,26 @@
     </p>
   </div>
 
+  <!-- ⛔ PDF TOOLS (30/09). Grátis SÓ juntar e dividir; o resto é PREMIUM —
+       decisão do João («só duas coisas são free»). O nome do botão é o da app
+       (LocalizationService.Pdf.cs: PdfToolsBotao); em português fica «PDF
+       Tools», como na app. Cada afirmação vem das notas da engenharia (memória
+       ferramentas-pdf): o original nunca se toca; os marcadores e os dados do
+       documento seguem; protegido ou estragado é dito e nada fica a meio; no
+       cofre, pela letra. O Word é «simples» porque a conversão é fiel nos
+       documentos simples (caderno, ideia 5b). -->
+  <div class="feat w12" id="feat34">
+    <div class="num"><span data-i18n="f34_num">34 — PDF-WERKZEUGE</span><a class="badge-free" href="#free" data-i18n="badge_free">Kostenlos</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f34_h">PDFs zusammenfügen, teilen und ordnen — direkt dort, wo sie liegen.</h3>
+    <p data-i18n-html="f34_p">Wählen Sie ein PDF aus, und oben leuchtet die Schaltfläche <em>PDF-Werkzeuge</em> auf: PDF-Tools ohne zweites Programm. Mehrere Dateien <em>zusammenfügen</em>, nach Seitenbereichen <em>teilen</em> (<em>1-3, 5, 8-</em>) oder die <em>Seiten ordnen</em>, als Miniaturen: drehen, löschen, umsortieren oder einzelne in ein neues PDF übernehmen. Seiten als <em>JPG- oder PNG-Bilder</em> speichern, ein <em>Passwort</em> setzen oder entfernen und JPG-/PNG-Bilder sowie einfache Word-Dokumente in PDF <em>umwandeln</em>. <strong>Das Original bleibt unangetastet</strong>: Jedes Ergebnis ist ein neues PDF direkt daneben, mit Lesezeichen und Dokumentangaben. Nichts wird irgendwohin hochgeladen.</p>
+    <div class="feat-mark" data-i18n="f34_mark">PDF zusammenfügen · PDF teilen · Seiten drehen und sortieren · PDF in JPG/PNG · PDF mit Passwort schützen oder entsperren · Word und JPG in PDF</div>
+    <p class="feat-note">
+      <span data-i18n="f34_free">Kostenlos: PDFs zusammenfügen und teilen.</span><br>
+      <span data-i18n="f34_premium">PREMIUM: Seiten ordnen, PDF in Bilder, Passwort setzen oder entfernen, in PDF umwandeln.</span>
+      <span class="feat-drm" data-i18n="f34_note">Ein geschütztes oder beschädigtes PDF wird gemeldet, und nichts bleibt halb fertig liegen. Funktioniert auch in einem verschlüsselten Tresor, über seinen Laufwerksbuchstaben.</span>
+    </p>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -2407,13 +2432,13 @@
     <div class="prem-card" id="free">
       <h4 data-i18n="pr_free_h">Kostenlos</h4>
       <span class="prem-tag" data-i18n="pr_free_tag">für immer · ohne Konto</span>
-      <ul data-i18n-html="pr_free_list"><li>Profile, konfigurierbare Bäume, Multi-Muster-Suche</li><li>Vorschau: Code, PDF, Word/Excel, Markdown, Bilder, Bücher</li><li>Dateioperationen mit echtem Fortschritt, Tempo, ETA, Verlauf und Konflikten</li><li>Terminals, Zuordnungen pro Dateiendung, Archive als Ordner</li><li>Vollständiges dunkles Design, 16 Sprachen, automatische Updates</li><li>Audioaufnahme (Mikrofon)</li><li><strong>1 Remote-Verbindung</strong> (SFTP/FTP/FTPS) — durchsuchen und Vorschau</li></ul>
+      <ul data-i18n-html="pr_free_list"><li>Profile, konfigurierbare Bäume, Multi-Muster-Suche</li><li>Vorschau: Code, PDF, Word/Excel, Markdown, Bilder, Bücher</li><li>Dateioperationen mit echtem Fortschritt, Tempo, ETA, Verlauf und Konflikten</li><li>Terminals, Zuordnungen pro Dateiendung, Archive als Ordner</li><li>Vollständiges dunkles Design, 16 Sprachen, automatische Updates</li><li>Audioaufnahme (Mikrofon)</li><li><strong>1 Remote-Verbindung</strong> (SFTP/FTP/FTPS) — durchsuchen und Vorschau</li><li>PDF: zusammenfügen und teilen</li></ul>
     </div>
 
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag">einmalige Spende von 19,99 € · pro Gerät</span>
-      <ul data-i18n-html="pr_prem_list"><li>Verschlüsselte Tresore <strong>anlegen</strong></li><li><strong>Voller Remote-Zugriff</strong>: mehrere Verbindungen, alle Operationen, WebDAV, Dropbox, OneDrive</li><li>Bildschirmaufnahme <strong>ohne Wasserzeichen, ohne Zeitlimit und mit Ton</strong></li><li>Videoaufnahme ohne Wasserzeichen</li><li>Audio mit Mischung aus Mikrofon + Systemton</li><li>Mehrseitiges Scannen mit Einzug (ADF)</li><li>Vollständiger Buch-Reader — EPUB, Kindle-Formate, FB2 und Comics</li><li>Intro-/Endkarten und Textbanner in Aufnahmen</li></ul>
+      <ul data-i18n-html="pr_prem_list"><li>Verschlüsselte Tresore <strong>anlegen</strong></li><li><strong>Voller Remote-Zugriff</strong>: mehrere Verbindungen, alle Operationen, WebDAV, Dropbox, OneDrive</li><li>Bildschirmaufnahme <strong>ohne Wasserzeichen, ohne Zeitlimit und mit Ton</strong></li><li>Videoaufnahme ohne Wasserzeichen</li><li>Audio mit Mischung aus Mikrofon + Systemton</li><li>Mehrseitiges Scannen mit Einzug (ADF)</li><li>Vollständiger Buch-Reader — EPUB, Kindle-Formate, FB2 und Comics</li><li>Intro-/Endkarten und Textbanner in Aufnahmen</li><li>PDF-Werkzeuge: Seiten ordnen, PDF in Bilder, Passwort, in PDF umwandeln</li></ul>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo

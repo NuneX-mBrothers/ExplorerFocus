@@ -37,6 +37,7 @@ want to reach them fast — and to see what's inside a file without opening it.
 - **Books & comics** — preview any EPUB, Kindle, FB2 or comic, and read it in full: plain, or as a two-page paper book with a night version.
 - **Capture built in** — screen (with webcam PiP and system audio), video, audio and scanning, without leaving the explorer.
 - **The sound of a video** — save the audio of any video Windows can play as MP3, AAC, WMA, WAV, FLAC or ALAC, or make a copy of the video without sound. The original is left untouched.
+- **PDF tools** — merge and split any PDF for free; with Premium, organize pages on thumbnails, turn pages into images, add or remove a password, and convert images and simple Word documents to PDF. The original is never touched.
 - **Complete dark theme**, rich hover tooltips, archives browsable as folders, integrated terminals (CMD, PowerShell, Git Bash), per-extension app associations, auto-updates.
 
 ## Free vs Premium
@@ -48,7 +49,7 @@ nags.
 Premium unlocks a defined set of extras: creating encrypted vaults, full remote access (multiple
 connections, all operations, WebDAV, Dropbox, OneDrive), screen and camera recording without
 watermark or time cap and with system sound, audio mixing, multi-page scanning with a document
-feeder, the complete book reader (EPUB, Kindle formats, FB2 and comics, including the paper mode), and intro/end cards on
+feeder, the complete book reader (EPUB, Kindle formats, FB2 and comics, including the paper mode), the PDF tools beyond merge and split, and intro/end cards on
 recordings. It's a **one-time donation**, not a subscription, activated per machine. Details on the
 [website](https://nunex-mbrothers.github.io/ExplorerFocus/#premium).
 
@@ -63,7 +64,7 @@ does, click **More info → Run anyway**. Every release publishes its **SHA-256*
 
 WPF on .NET 10, published as a single-file self-contained `win-x64` executable.
 AvalonEdit (code preview) · WebView2 (PDF/Office/Markdown) · SSH.NET · FluentFTP · Media Foundation (capture) ·
-Bouncy Castle (vault encryption) · DokanNet (vault drive letters — the Dokany driver itself is not shipped).
+Bouncy Castle (vault encryption) · PDFsharp (PDF tools) · DokanNet (vault drive letters — the Dokany driver itself is not shipped).
 
 ## About
 

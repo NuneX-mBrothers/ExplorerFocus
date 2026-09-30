@@ -85,6 +85,7 @@
     "Remote and cloud access: SFTP, FTP, FTPS, WebDAV, Dropbox and OneDrive",
     "Built-in capture: screen recording, camera, audio and scanner",
     "16 interface languages: Portuguese (Portugal and Brazil), English (UK and US), Spanish, French, Italian, German, Polish, Russian, Arabic, Hindi, Chinese (Simplified and Traditional), Japanese and Korean",
+    "PDF tools: merge and split PDF, rotate and reorder pages, PDF to JPG/PNG, password-protect or unlock PDF, convert Word and JPG to PDF",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://nunex-mbrothers.github.io/ExplorerFocus/ja/",
@@ -1659,13 +1660,17 @@
          CARTÕES DE MARCA, por ser a mais antiga — e isso foi MEDIDO no
          Core/Changelog.cs da app, não deduzido: Cl126Cards = 1.2.6, contra
          Cl127VoiceOver = 1.2.7 e tudo o resto em 1.2.21 ou depois. ⚠ Eu ia a
-         tirar o voice over de olhos fechados. -->
+         tirar o voice over de olhos fechados.
+         ⛔ 30/09: entrou o PDF TOOLS (#feat34) e saiu, agora sim, o VOICE OVER —
+         o mais antigo das seis (Cl127VoiceOver = 1.2.7, medido no Changelog.cs).
+         A janela à parte da pré-visualização (2.0.2) NÃO entra: é só mais um
+         modo da pré-visualização (decisão do João). -->
     <a href="#vault" data-i18n="wn_vault">🔒 金庫</a>
     <a href="#feat18" data-i18n="wn_langs">🌐 16 の言語</a>
     <a href="#feat19" data-i18n="wn_disk">💽 ディスクの詳細</a>
     <a href="#feat24" data-i18n="wn_books">📖 紙で読む本</a>
-    <a href="#feat32" data-i18n="wn_voice">🎙 ボイスオーバー</a>
     <a href="#feat33" data-i18n="wn_audio">🎧 動画の音</a>
+    <a href="#feat34" data-i18n="wn_pdf">📄 PDF ツール</a>
   </nav>
   <span class="whatsnew-ver">v2.0.2</span>
 </div>
@@ -2051,6 +2056,26 @@
     </p>
   </div>
 
+  <!-- ⛔ PDF TOOLS (30/09). Grátis SÓ juntar e dividir; o resto é PREMIUM —
+       decisão do João («só duas coisas são free»). O nome do botão é o da app
+       (LocalizationService.Pdf.cs: PdfToolsBotao); em português fica «PDF
+       Tools», como na app. Cada afirmação vem das notas da engenharia (memória
+       ferramentas-pdf): o original nunca se toca; os marcadores e os dados do
+       documento seguem; protegido ou estragado é dito e nada fica a meio; no
+       cofre, pela letra. O Word é «simples» porque a conversão é fiel nos
+       documentos simples (caderno, ideia 5b). -->
+  <div class="feat w12" id="feat34">
+    <div class="num"><span data-i18n="f34_num">34 — PDF ツール</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f34_h">PDF の結合・分割・整理を、そのファイルがある場所で。</h3>
+    <p data-i18n-html="f34_p">PDF を選ぶと、上部の <em>PDF ツール</em> ボタンが点灯します。複数のファイルを 1 つに<em>結合</em>、ページ範囲で<em>分割</em>（<em>1-3, 5, 8-</em>）、またはサムネイルで<em>ページを整理</em>：回転、削除、並べ替えのほか、一部のページを新しい PDF に取り出すこともできます。ページを <em>JPG や PNG の画像</em>に変換し、<em>パスワード</em>を設定・解除し、JPG/PNG の画像やシンプルな Word 文書を PDF に<em>変換</em>できます。<strong>元のファイルには一切手を加えません</strong>：結果はすべて、すぐ隣に作られる新しい PDF で、しおりと文書情報も引き継がれます。どこにもアップロードされません。</p>
+    <div class="feat-mark" data-i18n="f34_mark">PDF 結合 · PDF 分割 · ページの回転・並べ替え · PDF を JPG/PNG に変換 · PDF のパスワード設定・解除 · Word・JPG を PDF に変換</div>
+    <p class="feat-note">
+      <span data-i18n="f34_free">無料：結合と分割。</span><br>
+      <span data-i18n="f34_premium">PREMIUM：ページの整理、PDF を画像に、パスワードの設定・解除、PDF への変換。</span>
+      <span class="feat-drm" data-i18n="f34_note">保護された PDF や壊れた PDF はそのことを知らせ、途中までの結果は残しません。暗号化された金庫の中でも、そのドライブレターを通して使えます。</span>
+    </p>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -2407,13 +2432,13 @@
     <div class="prem-card" id="free">
       <h4 data-i18n="pr_free_h">無料</h4>
       <span class="prem-tag" data-i18n="pr_free_tag">ずっと · アカウント不要</span>
-      <ul data-i18n-html="pr_free_list"><li>プロファイル、自由に組めるツリー、複数パターンの検索</li><li>プレビュー：コード、PDF、Word/Excel、Markdown、画像、書籍</li><li>本当の進捗、速度、残り時間、履歴、競合の処理つきのファイル操作</li><li>ターミナル、拡張子ごとのアプリ、フォルダーとして開く書庫</li><li>隅々までダークテーマ、16 の言語、自動更新</li><li>音声の録音（マイク）</li><li><strong>リモート接続 1 件</strong>（SFTP/FTP/FTPS） — 閲覧とプレビュー</li></ul>
+      <ul data-i18n-html="pr_free_list"><li>プロファイル、自由に組めるツリー、複数パターンの検索</li><li>プレビュー：コード、PDF、Word/Excel、Markdown、画像、書籍</li><li>本当の進捗、速度、残り時間、履歴、競合の処理つきのファイル操作</li><li>ターミナル、拡張子ごとのアプリ、フォルダーとして開く書庫</li><li>隅々までダークテーマ、16 の言語、自動更新</li><li>音声の録音（マイク）</li><li><strong>リモート接続 1 件</strong>（SFTP/FTP/FTPS） — 閲覧とプレビュー</li><li>PDF：結合と分割</li></ul>
     </div>
 
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">PREMIUM</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag">一度きりの €19.99 の寄付 · 1 台につき</span>
-      <ul data-i18n-html="pr_prem_list"><li>暗号化された金庫を<strong>作る</strong></li><li><strong>リモートアクセスのすべて</strong>：複数接続、すべての操作、WebDAV、Dropbox、OneDrive</li><li>画面の録画が<strong>透かしなし、時間の制限なし、音あり</strong></li><li>透かしなしの映像の録画</li><li>マイク + システム音のミキシング</li><li>ドキュメントフィーダー（ADF）での複数ページのスキャン</li><li>完全な書籍リーダー — EPUB、Kindle 系、FB2、コミック</li><li>録画のオープニング / エンドカードとテキストの帯</li></ul>
+      <ul data-i18n-html="pr_prem_list"><li>暗号化された金庫を<strong>作る</strong></li><li><strong>リモートアクセスのすべて</strong>：複数接続、すべての操作、WebDAV、Dropbox、OneDrive</li><li>画面の録画が<strong>透かしなし、時間の制限なし、音あり</strong></li><li>透かしなしの映像の録画</li><li>マイク + システム音のミキシング</li><li>ドキュメントフィーダー（ADF）での複数ページのスキャン</li><li>完全な書籍リーダー — EPUB、Kindle 系、FB2、コミック</li><li>録画のオープニング / エンドカードとテキストの帯</li><li>PDF ツール：ページの整理、PDF を画像に、パスワード、PDF への変換</li></ul>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo

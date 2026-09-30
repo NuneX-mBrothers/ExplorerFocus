@@ -85,6 +85,7 @@
     "Remote and cloud access: SFTP, FTP, FTPS, WebDAV, Dropbox and OneDrive",
     "Built-in capture: screen recording, camera, audio and scanner",
     "16 interface languages: Portuguese (Portugal and Brazil), English (UK and US), Spanish, French, Italian, German, Polish, Russian, Arabic, Hindi, Chinese (Simplified and Traditional), Japanese and Korean",
+    "PDF tools: merge and split PDF, rotate and reorder pages, PDF to JPG/PNG, password-protect or unlock PDF, convert Word and JPG to PDF",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://nunex-mbrothers.github.io/ExplorerFocus/",
@@ -1659,13 +1660,17 @@
          CARTÕES DE MARCA, por ser a mais antiga — e isso foi MEDIDO no
          Core/Changelog.cs da app, não deduzido: Cl126Cards = 1.2.6, contra
          Cl127VoiceOver = 1.2.7 e tudo o resto em 1.2.21 ou depois. ⚠ Eu ia a
-         tirar o voice over de olhos fechados. -->
+         tirar o voice over de olhos fechados.
+         ⛔ 30/09: entrou o PDF TOOLS (#feat34) e saiu, agora sim, o VOICE OVER —
+         o mais antigo das seis (Cl127VoiceOver = 1.2.7, medido no Changelog.cs).
+         A janela à parte da pré-visualização (2.0.2) NÃO entra: é só mais um
+         modo da pré-visualização (decisão do João). -->
     <a href="#vault" data-i18n="wn_vault">🔒 The vaults</a>
     <a href="#feat18" data-i18n="wn_langs">🌐 16 languages</a>
     <a href="#feat19" data-i18n="wn_disk">💽 The disk, in detail</a>
     <a href="#feat24" data-i18n="wn_books">📖 Books on paper</a>
-    <a href="#feat32" data-i18n="wn_voice">🎙 Voice over</a>
     <a href="#feat33" data-i18n="wn_audio">🎧 Audio from video</a>
+    <a href="#feat34" data-i18n="wn_pdf">📄 PDF Tools</a>
   </nav>
   <span class="whatsnew-ver">v2.0.2</span>
 </div>
@@ -2051,6 +2056,26 @@
     </p>
   </div>
 
+  <!-- ⛔ PDF TOOLS (30/09). Grátis SÓ juntar e dividir; o resto é PREMIUM —
+       decisão do João («só duas coisas são free»). O nome do botão é o da app
+       (LocalizationService.Pdf.cs: PdfToolsBotao); em português fica «PDF
+       Tools», como na app. Cada afirmação vem das notas da engenharia (memória
+       ferramentas-pdf): o original nunca se toca; os marcadores e os dados do
+       documento seguem; protegido ou estragado é dito e nada fica a meio; no
+       cofre, pela letra. O Word é «simples» porque a conversão é fiel nos
+       documentos simples (caderno, ideia 5b). -->
+  <div class="feat w12" id="feat34">
+    <div class="num"><span data-i18n="f34_num">34 — PDF TOOLS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f34_h">Merge, split and tidy up PDFs — right where they are.</h3>
+    <p data-i18n-html="f34_p">Select a PDF and a <em>PDF Tools</em> button lights up at the top. <em>Merge</em> several into one, <em>split</em> by page ranges (<em>1-3, 5, 8-</em>), or <em>organize the pages</em> on thumbnails: rotate, delete, reorder, or pull a few out into a new PDF. Turn pages into <em>JPG or PNG images</em>, add or remove a <em>password</em>, and <em>convert</em> JPG/PNG images and simple Word documents to PDF. <strong>The original is never touched</strong>: every result is a new PDF right beside it, with its bookmarks and document details carried over. Nothing is uploaded anywhere.</p>
+    <div class="feat-mark" data-i18n="f34_mark">Merge PDF · Split PDF · Rotate & reorder pages · PDF to JPG/PNG · Password-protect or unlock PDF · Word & JPG to PDF</div>
+    <p class="feat-note">
+      <span data-i18n="f34_free">Free: merge and split.</span><br>
+      <span data-i18n="f34_premium">PREMIUM: organize pages, PDF to images, add or remove a password, convert to PDF.</span>
+      <span class="feat-drm" data-i18n="f34_note">A password-protected or damaged PDF is reported, and nothing half-made is left behind. Works inside an encrypted vault too, through its drive letter.</span>
+    </p>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -2416,13 +2441,13 @@
     <div class="prem-card" id="free">
       <h4 data-i18n="pr_free_h">Free</h4>
       <span class="prem-tag" data-i18n="pr_free_tag">forever · no account</span>
-      <ul data-i18n-html="pr_free_list"><li>Profiles, configurable trees, multi-pattern search</li><li>Preview: code, PDF, Word/Excel, Markdown, images, books</li><li>File operations with real progress, speed, ETA, history and conflicts</li><li>Terminals, per-extension app associations, archives as folders</li><li>Complete dark theme, 16 languages, auto-updates</li><li>Audio recording (microphone)</li><li><strong>1 remote connection</strong> (SFTP/FTP/FTPS) — browse and preview</li></ul>
+      <ul data-i18n-html="pr_free_list"><li>Profiles, configurable trees, multi-pattern search</li><li>Preview: code, PDF, Word/Excel, Markdown, images, books</li><li>File operations with real progress, speed, ETA, history and conflicts</li><li>Terminals, per-extension app associations, archives as folders</li><li>Complete dark theme, 16 languages, auto-updates</li><li>Audio recording (microphone)</li><li><strong>1 remote connection</strong> (SFTP/FTP/FTPS) — browse and preview</li><li>PDF: merge and split</li></ul>
     </div>
 
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag">one-time €19.99 donation · per machine</span>
-      <ul data-i18n-html="pr_prem_list"><li><strong>Creating</strong> encrypted vaults</li><li><strong>Full remote access</strong>: multiple connections, all operations, WebDAV, Dropbox, OneDrive</li><li>Screen recording <strong>with no watermark, no time limit and with sound</strong></li><li>Video recording without watermark</li><li>Audio mixing microphone + system sound</li><li>Multi-page scanning with document feeder (ADF)</li><li>Full book reader — EPUB, Kindle formats, FB2 and comics</li><li>Intro/end cards and text banner on recordings</li></ul>
+      <ul data-i18n-html="pr_prem_list"><li><strong>Creating</strong> encrypted vaults</li><li><strong>Full remote access</strong>: multiple connections, all operations, WebDAV, Dropbox, OneDrive</li><li>Screen recording <strong>with no watermark, no time limit and with sound</strong></li><li>Video recording without watermark</li><li>Audio mixing microphone + system sound</li><li>Multi-page scanning with document feeder (ADF)</li><li>Full book reader — EPUB, Kindle formats, FB2 and comics</li><li>Intro/end cards and text banner on recordings</li><li>PDF tools: organize pages, PDF to images, password, convert to PDF</li></ul>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo

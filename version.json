@@ -1,6 +1,7 @@
 {
-    "version":  "2.0.2.9",
-    "released":  "2026-09-29",
+    "version":  "2.0.3.9",
+    "released":  "2026-09-30",
     "url":  "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.exe",
-    "sha256":  "2D9120EA3C6FA353337CD4AB8248C00E20DBD0793E2876A7E6748ADF1FB3E01B"
+    "sha256":  "B858267B01837BC62B467781A97521F24D2454EF303ABF397309B20DCB8C7E52",
+    "size_mb":  119
 }

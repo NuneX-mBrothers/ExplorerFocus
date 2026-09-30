@@ -295,6 +295,8 @@
     color: var(--fg-2); text-transform: uppercase; letter-spacing: 0.12em;
   }
   .hero-meta span { display: flex; align-items: center; gap: 8px; }
+  /* o display:flex de cima passava por cima do hidden (o do tamanho, que espera pelo version.json) */
+  .hero-meta span[hidden] { display: none; }
   .hero-meta span::before {
     content: ''; width: 6px; height: 6px; background: var(--accent);
     border-radius: 50%;
@@ -1447,7 +1449,11 @@
     <div class="hero-meta">
       <span data-i18n="hero_meta_os">Windows 10 / 11</span>
       <span data-i18n="hero_meta_pkg">स्वयं-पूर्ण · एक ही फ़ाइल</span>
-      <span data-i18n="hero_meta_size">~115 MB</span>
+      <!-- O tamanho do .exe vem do version.json (size_mb, que o .cmd de publicar escreve com o SHA-256,
+           depois de assinar) e escreve-se aqui ao abrir: MB inteiros, com a unidade de cada lingua. O
+           texto e o MODELO ({mb} = o numero). Fica escondido ate haver numero: melhor calado do que
+           errado. Pedido do Joao a 2026-09-30 -- o "~115 MB" escrito a mao estava sempre para tras. -->
+      <span id="heroSize" data-i18n="hero_meta_size" hidden>{mb} MB</span>
     </div>
 
     <div class="hero-cta">
@@ -2766,6 +2772,18 @@
     if (ver) document.querySelectorAll('.js-ver').forEach(function (el) { el.textContent = 'v' + ver; });
     var hv = document.getElementById('heroVerify'); if (hv && sha) hv.hidden = false;
   }
+  /* O tamanho do .exe em MB inteiros. Vem do version.json, onde o .cmd de publicar o escreve
+     junto com o SHA-256. O texto do span é o MODELO da língua («{mb} MB», «{mb} Mo», «{mb} МБ»…).
+     Sem size_mb (um version.json de antes disto) fica escondido: melhor calado do que errado. */
+  function fillSize(mb) {
+    var el = document.getElementById('heroSize');
+    mb = Math.round(Number(mb));
+    if (!el || !(mb > 0)) return;
+    var modelo = el.getAttribute('data-modelo') || el.textContent;
+    el.setAttribute('data-modelo', modelo);
+    el.textContent = modelo.replace('{mb}', String(mb));
+    el.hidden = false;
+  }
   /* ⛔ `version.json` vive na RAIZ do site, e esta página também corre de
      /pt/, /de/, /zh/… Um `fetch('version.json')` resolve contra a PASTA da
      página e ia buscar /pt/version.json — 404. O `window.EF_ROOT` é injectado
@@ -2784,6 +2802,7 @@
         if (rel && v.released) rel.textContent = '  ·  ' + v.released;
         if (box) box.hidden = false;
       }
+      if (v && v.size_mb) fillSize(v.size_mb);
       if (v && v.sha256) fillVerify(v.sha256, v.version);
       else verifyFallback();
     })

@@ -11,7 +11,7 @@ window.I18N.zh = {
   "hero_lede": "ExplorerFocus 是 Windows 资源管理器的替代品，为那些总在相同文件夹中工作的人而设计。可配置的配置文件、整洁的目录树、几乎什么都能打开的预览 — 代码、文档、图书 — 以及能告诉你真实情况的文件操作。没有 Shell 的喧嚣。",
   "hero_meta_os": "Windows 10 / 11",
   "hero_meta_pkg": "自包含 · 单文件",
-  "hero_meta_size": "约 115 MB",
+  "hero_meta_size": "{mb} MB",
   "hero_dl_exe": "下载 · .exe",
   "hero_dl_zip": ".zip",
   "hero_dl_zip_title": "适用于禁止下载 .exe 文件的机构",

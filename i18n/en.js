@@ -11,7 +11,7 @@ window.I18N.en = {
   "hero_lede": "ExplorerFocus is a Windows Explorer replacement for people who always work in the same folders. Configurable profiles, clean trees, a preview that opens almost anything — code, documents, books — and operations that actually tell you what's happening. Without the shell's noise.",
   "hero_meta_os": "Windows 10 / 11",
   "hero_meta_pkg": "Self-contained · single-file",
-  "hero_meta_size": "~115 MB",
+  "hero_meta_size": "{mb} MB",
   "hero_dl_exe": "Download · .exe",
   "hero_dl_zip": ".zip",
   "hero_dl_zip_title": "For organisations that block .exe downloads",

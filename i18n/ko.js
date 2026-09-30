@@ -11,7 +11,7 @@ window.I18N.ko = {
   "hero_lede": "ExplorerFocus는 늘 같은 폴더에서 일하는 사람을 위한 윈도우 탐색기 대체품입니다. 구성할 수 있는 프로필, 깔끔한 트리, 거의 모든 것을 여는 미리보기 — 코드, 문서, 책 — 그리고 무슨 일이 벌어지는지 정말로 알려 주는 파일 작업. 셸의 잡음 없이.",
   "hero_meta_os": "Windows 10 / 11",
   "hero_meta_pkg": "독립 실행 · 단일 파일",
-  "hero_meta_size": "~115 MB",
+  "hero_meta_size": "{mb} MB",
   "hero_dl_exe": "받기 · .exe",
   "hero_dl_zip": ".zip",
   "hero_dl_zip_title": ".exe 다운로드를 차단하는 조직용",

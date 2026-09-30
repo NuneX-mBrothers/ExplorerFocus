@@ -15,7 +15,7 @@ window.I18N.br = {
   "hero_lede": "O ExplorerFocus é um substituto do Windows Explorer para quem trabalha sempre nas mesmas pastas. Perfis configuráveis, árvores limpas, uma pré-visualização que abre quase tudo — código, documentos, livros — e operações que dizem mesmo o que está acontecendo. Sem o ruído do shell.",
   "hero_meta_os": "Windows 10 / 11",
   "hero_meta_pkg": "Autossuficiente · arquivo único",
-  "hero_meta_size": "~115 MB",
+  "hero_meta_size": "{mb} MB",
   "hero_dl_exe": "Baixar · .exe",
   "hero_dl_zip": ".zip",
   "hero_dl_zip_title": "Para organizações que bloqueiam o download de .exe",

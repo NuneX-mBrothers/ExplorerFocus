@@ -11,7 +11,7 @@ window.I18N.ja = {
   "hero_lede": "ExplorerFocus は、いつも同じフォルダーで作業する人のための Windows エクスプローラーの置き換えです。自由に設定できるプロファイル、すっきりしたツリー、ほとんど何でも開くプレビュー — コード、書類、電子書籍 — そして、いま何が起きているかを本当に伝えるファイル操作。シェルのノイズはありません。",
   "hero_meta_os": "Windows 10 / 11",
   "hero_meta_pkg": "自己完結型 · 単一ファイル",
-  "hero_meta_size": "約 115 MB",
+  "hero_meta_size": "{mb} MB",
   "hero_dl_exe": "ダウンロード · .exe",
   "hero_dl_zip": ".zip",
   "hero_dl_zip_title": ".exe のダウンロードを禁止している組織向け",

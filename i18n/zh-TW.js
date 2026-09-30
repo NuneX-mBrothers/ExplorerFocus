@@ -15,7 +15,7 @@ window.I18N["zh-TW"] = {
   "hero_lede": "ExplorerFocus 是為總在同幾個資料夾裡工作的人做的 Windows 檔案總管替代品。可設定的設定檔、乾淨的樹狀清單、幾乎什麼都打得開的預覽 — 程式碼、文件、書 — 以及真的會告訴你發生什麼事的檔案操作。沒有殼層的雜音。",
   "hero_meta_os": "Windows 10 / 11",
   "hero_meta_pkg": "獨立執行 · 單一檔案",
-  "hero_meta_size": "約 115 MB",
+  "hero_meta_size": "{mb} MB",
   "hero_dl_exe": "下載 · .exe",
   "hero_dl_zip": ".zip",
   "hero_dl_zip_title": "適用於禁止下載 .exe 檔案的機構",

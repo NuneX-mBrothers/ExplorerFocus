@@ -11,7 +11,7 @@ window.I18N.it = {
   "hero_lede": "ExplorerFocus è un sostituto di Esplora file di Windows per chi lavora sempre nelle stesse cartelle. Profili configurabili, alberi puliti, un'anteprima che apre quasi tutto — codice, documenti, libri — e operazioni che dicono davvero cosa sta succedendo. Senza il rumore della shell.",
   "hero_meta_os": "Windows 10 / 11",
   "hero_meta_pkg": "Autonomo · file singolo",
-  "hero_meta_size": "~115 MB",
+  "hero_meta_size": "{mb} MB",
   "hero_dl_exe": "Scarica · .exe",
   "hero_dl_zip": ".zip",
   "hero_dl_zip_title": "Per le organizzazioni che bloccano il download dei file .exe",

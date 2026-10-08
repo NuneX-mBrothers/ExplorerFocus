@@ -17,6 +17,8 @@ window.I18N.ja = {
   "hero_dl_zip_title": ".exe のダウンロードを禁止している組織向け",
   "hero_dl_pre": "ダウンロード",
   "hero_dl_post": "回",
+  "hero_os_note": "ExplorerFocus は Windows 10 / 11 のパソコン用のプログラムで、スマートフォンやタブレットでは動きません。ダウンロードするには、Windows のパソコンでこのページを開いてください。",
+  "hero_os_ask": "それでもダウンロードしますか？",
   "hero_latest": "最新バージョン",
   "dl_firsttime": "初めて開きますか？ Windows の警告が出ましたか？",
   "sha_link": "SHA-256 とは？",

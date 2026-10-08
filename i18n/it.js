@@ -17,6 +17,8 @@ window.I18N.it = {
   "hero_dl_zip_title": "Per le organizzazioni che bloccano il download dei file .exe",
   "hero_dl_pre": "",
   "hero_dl_post": "download",
+  "hero_os_note": "ExplorerFocus è un programma per computer con Windows 10 e 11 e non funziona su telefoni e tablet. Per scaricarlo, apri questa pagina sul tuo computer Windows.",
+  "hero_os_ask": "Scaricarlo comunque?",
   "hero_latest": "Ultima versione",
   "dl_firsttime": "Prima volta che lo apri? Avviso di Windows?",
   "sha_link": "Che cos'è lo SHA-256?",

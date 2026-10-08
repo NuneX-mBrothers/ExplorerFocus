@@ -329,6 +329,11 @@
   .hero-dl-count[hidden] { display: none; }
   .hero-dl-count span:empty { display: none; }
   .hero-dl-count strong { color: var(--accent); font-weight: 600; }
+  /* O aviso a quem abre a pagina fora do Windows: o EF e para Windows 10 e 11 (2026-10-08). */
+  .hero-os-note { margin-top: 16px; max-width: 540px; padding: 10px 14px; border-radius: 4px;
+    border-left: 3px solid var(--accent); background: var(--bg-2);
+    font-size: 14px; line-height: 1.5; color: var(--fg-0); }
+  .hero-os-note[hidden] { display: none; }
 
   /* Versão mais recente (lida do version.json, até à revision) */
   .hero-latest {
@@ -1468,6 +1473,12 @@
            Fica ESCONDIDO ate haver numero: melhor calado do que errado. -->
       <span class="hero-dl-count" id="heroDlCount" hidden><span aria-hidden="true">↓</span><span data-i18n="hero_dl_pre"></span><strong id="heroDlTotal"></strong><span data-i18n="hero_dl_post">Downloads</span></span>
     </div>
+
+    <!-- Fora do Windows (telemovel, tablet, Mac, Linux): o EF e um programa para Windows. Um utilizador
+         descarregou o .exe num tablet Android, e o Android entregou-o a outra app (pedido do Joao a 2026-10-08).
+         Escondido no Windows; o script de baixo mostra-o quando o navegador nao e Windows. -->
+    <p class="hero-os-note" id="heroOsNote" data-i18n="hero_os_note" hidden>ExplorerFocus ist ein Programm für PCs mit Windows 10 und 11 und läuft nicht auf Smartphones oder Tablets. Öffnen Sie diese Seite zum Herunterladen auf Ihrem Windows-PC.</p>
+    <span id="heroOsAsk" data-i18n="hero_os_ask" hidden>Trotzdem herunterladen?</span>
 
     <div class="hero-latest" id="heroLatest" hidden>
       <span data-i18n="hero_latest">Neueste Version</span>:
@@ -2784,6 +2795,26 @@
     el.textContent = modelo.replace('{mb}', String(mb));
     el.hidden = false;
   }
+  /* Fora do Windows (Android, iPhone, iPad, Mac, Linux) mostra-se o aviso de que o EF é um programa para
+     Windows 10 e 11: um utilizador descarregou o .exe num tablet Android, e o Android entregou-o a outra app
+     (2026-10-08). O iPad apresenta-se como Mac e cai aqui na mesma. E, no clique em descarregar, pergunta-se
+     («… Descarregar na mesma?»): há quem descarregue no telemóvel para passar depois ao computador, e esse
+     segue. Quem cancela não descarrega e não conta como descarga (o contador de descargas está mais abaixo,
+     no mesmo clique, e este corre antes dele). */
+  (function () {
+    var n = document.getElementById('heroOsNote');
+    if (!n || /Windows/i.test(navigator.userAgent || '')) return;
+    n.hidden = false;
+    var ask = document.getElementById('heroOsAsk');
+    var pergunta = n.textContent.trim() + '\n\n' + (ask ? ask.textContent.trim() : '');
+    document.querySelectorAll('a[href$="ExplorerFocus.exe"], a[href$="ExplorerFocus.zip"]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        if (window.confirm(pergunta)) return;
+        e.preventDefault();
+        e.stopImmediatePropagation();
+      });
+    });
+  })();
   /* ⛔ `version.json` vive na RAIZ do site, e esta página também corre de
      /pt/, /de/, /zh/… Um `fetch('version.json')` resolve contra a PASTA da
      página e ia buscar /pt/version.json — 404. O `window.EF_ROOT` é injectado

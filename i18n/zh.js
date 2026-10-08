@@ -17,6 +17,8 @@ window.I18N.zh = {
   "hero_dl_zip_title": "适用于禁止下载 .exe 文件的机构",
   "hero_dl_pre": "下载",
   "hero_dl_post": "次",
+  "hero_os_note": "ExplorerFocus 是适用于 Windows 10 和 11 电脑的程序，无法在手机或平板电脑上运行。请在你的 Windows 电脑上打开本页面下载。",
+  "hero_os_ask": "仍要下载吗？",
   "hero_latest": "最新版本",
   "dl_firsttime": "第一次打开？Windows 警告？",
   "sha_link": "SHA-256 是什么？",

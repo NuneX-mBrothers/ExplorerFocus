@@ -6,6 +6,7 @@ Google. Sao os mesmos ficheiros que o Google Fonts serve (fonts.gstatic.com, des
 com os mesmos subconjuntos e unicode-range: ver fonts.css.
 
 Todas estao sob a SIL Open Font License, Version 1.1 - https://openfontlicense.org
+O texto completo da licenca esta em OFL.txt, nesta pasta.
 O aviso de direitos de autor de cada uma (tambem gravado dentro de cada ficheiro .woff2):
 
   Cormorant Garamond

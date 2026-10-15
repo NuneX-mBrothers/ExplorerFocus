@@ -326,7 +326,10 @@
     color: var(--fg-2); letter-spacing: 0.04em; }
   .hero-dl-count[hidden] { display: none; }
   .hero-dl-count span:empty { display: none; }
-  .hero-dl-count strong { color: var(--accent); font-weight: 600; }
+  /* O numero vai na letra normal do site: na mono, o zero com a marca por dentro lia-se como um 8 (3.043 parecia
+     3.843, o Joao a 2026-10-15). O resto da linha fica na mono. */
+  .hero-dl-count strong { color: var(--accent); font-weight: 600; font-family: var(--font-body); font-size: 13px;
+    letter-spacing: 0; }
   /* O aviso a quem abre a pagina fora do Windows: o EF e para Windows 10 e 11 (2026-10-08). */
   .hero-os-note { margin-top: 16px; max-width: 540px; padding: 10px 14px; border-radius: 4px;
     border-left: 3px solid var(--accent); background: var(--bg-2);

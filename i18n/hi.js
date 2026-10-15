@@ -381,5 +381,5 @@ window.I18N.hi = {
   "st_places": "<em>… के पास</em> <a href=\"https://www.geonames.org\" target=\"_blank\" rel=\"noopener\">GeoNames</a> की जगहों के नाम और निर्देशांक इस्तेमाल करता है, <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a> लाइसेंस के तहत, और बिना इंटरनेट के काम करता है। बदलाव: केवल 1000 से अधिक आबादी वाली जगहें या किसी नगरपालिका या क्षेत्र के मुख्यालय, मोहल्लों और ऐतिहासिक जगहों के बिना, और केवल ऐप की भाषाओं के नाम।",
   "st_pdf_ic": "PDF",
   "st_pdf": "जोड़ना, विभाजित करना और पृष्ठ व्यवस्थित करना PDFsharp (MIT) से। लाइसेंस हर नए संस्करण पर जाँचे जाते हैं, सिर्फ़ हर नए पैकेज पर नहीं।",
-  "sh_v2_claro": "<strong>हल्के थीम</strong> में"
+  "sh_v2_claro": "और <strong>हल्के थीम</strong> के साथ"
 };

@@ -379,5 +379,5 @@ window.I18N.it = {
   "st_places": "<em>Vicino a…</em> usa i nomi e le coordinate delle località di <a href=\"https://www.geonames.org\" target=\"_blank\" rel=\"noopener\">GeoNames</a>, con la licenza <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>, e funziona senza internet. Modifiche: solo le località con più di 1000 abitanti o capoluoghi di comune o di regione, senza quartieri né luoghi storici, e solo i nomi nelle lingue dell'app.",
   "st_pdf_ic": "PDF",
   "st_pdf": "Unire, dividere e organizzare le pagine tramite PDFsharp (MIT). Le licenze si controllano a ogni nuova versione, non solo a ogni nuovo pacchetto.",
-  "sh_v2_claro": "In <strong>modalità chiara</strong>"
+  "sh_v2_claro": "E la <strong>modalità chiara</strong>"
 };

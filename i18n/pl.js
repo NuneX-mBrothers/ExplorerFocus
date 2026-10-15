@@ -379,5 +379,5 @@ window.I18N.pl = {
   "st_places": "Funkcja <em>W pobliżu…</em> korzysta z nazw i współrzędnych miejscowości z <a href=\"https://www.geonames.org\" target=\"_blank\" rel=\"noopener\">GeoNames</a>, na licencji <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>, i działa bez internetu. Zmienione: tylko miejscowości powyżej 1000 mieszkańców lub siedziby gminy albo regionu, bez dzielnic i miejsc historycznych, i tylko nazwy w językach aplikacji.",
   "st_pdf_ic": "PDF",
   "st_pdf": "Łączenie, dzielenie i porządkowanie stron przez PDFsharp (MIT). Licencje są sprawdzane przy każdej nowej wersji, a nie tylko przy każdym nowym pakiecie.",
-  "sh_v2_claro": "W <strong>trybie jasnym</strong>"
+  "sh_v2_claro": "I <strong>trybem jasnym</strong>"
 };

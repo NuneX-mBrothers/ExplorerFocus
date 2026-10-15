@@ -378,5 +378,6 @@ window.I18N.ko = {
   "st_places_ic": "지명",
   "st_places": "<em>… 근처</em>는 <a href=\"https://www.geonames.org\" target=\"_blank\" rel=\"noopener\">GeoNames</a>의 지명과 좌표를 <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a> 라이선스로 사용하며, 인터넷 없이 작동합니다. 변경 사항: 인구 1000명이 넘는 곳이나 기초 자치단체·지역의 중심지만 남기고, 동네와 역사적 지명은 빼고, 이름은 앱의 언어로 된 것만 남겼습니다.",
   "st_pdf_ic": "PDF",
-  "st_pdf": "합치기, 나누기, 페이지 정리는 PDFsharp(MIT)로. 라이선스는 새 패키지가 들어올 때만이 아니라 새 버전마다 확인합니다."
+  "st_pdf": "합치기, 나누기, 페이지 정리는 PDFsharp(MIT)로. 라이선스는 새 패키지가 들어올 때만이 아니라 새 버전마다 확인합니다.",
+  "sh_v2_claro": "<strong>밝은 모드</strong>도 지원"
 };

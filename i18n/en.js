@@ -378,5 +378,6 @@ window.I18N.en = {
   "st_places_ic": "PLACES",
   "st_places": "<em>Near…</em> uses the names and coordinates of places from <a href=\"https://www.geonames.org\" target=\"_blank\" rel=\"noopener\">GeoNames</a>, under the <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a> licence, and works without internet. Changed: only places with more than 1000 inhabitants or seats of a municipality or region, without districts or historical places, and only the names in the app's languages.",
   "st_pdf_ic": "PDF",
-  "st_pdf": "Merging, splitting and organizing pages through PDFsharp (MIT). Licences are checked at every new version, not just every new package."
+  "st_pdf": "Merging, splitting and organizing pages through PDFsharp (MIT). Licences are checked at every new version, not just every new package.",
+  "sh_v2_claro": "In <strong>light mode</strong>"
 };

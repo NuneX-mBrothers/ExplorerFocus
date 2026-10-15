@@ -378,5 +378,6 @@ window.I18N.zh = {
   "st_places_ic": "地名",
   "st_places": "<em>…附近</em>使用来自 <a href=\"https://www.geonames.org\" target=\"_blank\" rel=\"noopener\">GeoNames</a> 的地名和坐标，采用 <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a> 许可证，无需联网即可使用。所做修改：只保留人口超过 1000 的地点或市镇、地区的行政中心，不含街区和历史地点，并且只保留应用所支持语言的名称。",
   "st_pdf_ic": "PDF",
-  "st_pdf": "合并、拆分和整理页面通过 PDFsharp（MIT）。每次发布新版本都会核对许可证，而不只是在加入新包时。"
+  "st_pdf": "合并、拆分和整理页面通过 PDFsharp（MIT）。每次发布新版本都会核对许可证，而不只是在加入新包时。",
+  "sh_v2_claro": "还有<strong>浅色模式</strong>"
 };

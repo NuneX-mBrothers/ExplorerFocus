@@ -378,5 +378,6 @@ window.I18N.fr = {
   "st_places_ic": "LIEUX",
   "st_places": "<em>Près de…</em> utilise les noms et les coordonnées des localités de <a href=\"https://www.geonames.org\" target=\"_blank\" rel=\"noopener\">GeoNames</a>, sous la licence <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>, et fonctionne sans Internet. Modifications : uniquement les localités de plus de 1000 habitants ou chefs-lieux de commune ou de région, sans quartiers ni lieux historiques, et uniquement les noms dans les langues de l'app.",
   "st_pdf_ic": "PDF",
-  "st_pdf": "Fusionner, diviser et organiser les pages via PDFsharp (MIT). Les licences sont vérifiées à chaque nouvelle version, et pas seulement à chaque nouveau paquet."
+  "st_pdf": "Fusionner, diviser et organiser les pages via PDFsharp (MIT). Les licences sont vérifiées à chaque nouvelle version, et pas seulement à chaque nouveau paquet.",
+  "sh_v2_claro": "En <strong>mode clair</strong>"
 };

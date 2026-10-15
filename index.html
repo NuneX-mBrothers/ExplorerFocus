@@ -460,6 +460,7 @@
        conflito.
      ⛔ SAI quando a 2 deixar de ser novidade: apagar a <figure class="shot
        shot-v2"> e devolver o is-on a figura seguinte.
+       E a de claro (shot-v2-claro), que vem logo a seguir, sai com ela (15/10/2026).
   ============================================================ */
   .shot-v2 {
     display: grid; grid-template-rows: auto 1fr auto;
@@ -545,6 +546,20 @@
     .v2-list { grid-template-columns: 1fr; }
     .v2-lock { width: 22cqw; }
   }
+  /* O ECRA DE LANCAMENTO EM CLARO (15/10/2026, pedido do Joao: «light mode [...] com os fundos em branco, tudo
+     adaptado a branco. Ou a claro, a creme»). As cores sao as do esboco do tema claro: papel creme, tinta
+     castanha, e o ambar escurecido para se ler em fundo claro (o #E0A458 da marca fica so no selo, como o botao
+     PREMIUM da app, que e amarelo nos dois temas). As variaveis redefinem-se SO dentro deste cartao. */
+  .shot-v2-claro {
+    --fg-0: #2B251D; --fg-1: #4A4237; --fg-2: #6B6357; --fg-3: #978E80;
+    --border-1: #E2D9C9; --accent: #9A6510; --accent-dim: #C9A061;
+    background:
+      radial-gradient(80% 110% at 16% 52%, rgba(224,164,88,.22), transparent 62%),
+      linear-gradient(160deg, #FFFDF8 0%, #F6F3ED 55%, #F1EBE0 100%);
+  }
+  .shot-v2-claro .v2-tag { background: #E0A458; color: #2B1A05; }
+  .shot-v2-claro .v2-go:hover { background: var(--accent); border-color: var(--accent); color: #FFFDF8; }
+  .shot-v2-claro .v2-lock { filter: drop-shadow(0 6px 14px rgba(120, 82, 30, .18)); }
 
   .shots { position: relative; }
   .shots-stage {
@@ -1568,6 +1583,98 @@
                             <rect x="32" y="118" width="136" height="114" rx="22" fill="url(#v2lBody)"/>
                             <!-- especular grande, na diagonal da luz -->
                             <path d="M54 118h34L46 226a22 22 0 0 1-14-20v-66a22 22 0 0 1 22-22Z" fill="url(#v2lSpec)"/>
+                            <!-- fio de luz no bordo superior-esquerdo, e sombra no oposto -->
+                            <path d="M54 118.9h60" stroke="#FFF6E2" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
+                            <path d="M33 145v50" stroke="#FFF6E2" stroke-opacity=".30" stroke-width="1.4" stroke-linecap="round"/>
+                            <path d="M167 150v46" stroke="#3A2810" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
+                            <!-- friso gravado -->
+                            <rect x="46" y="132" width="108" height="86" rx="13" fill="none" stroke="#5C401E" stroke-opacity=".6"/>
+                            <rect x="47.2" y="133.2" width="108" height="86" rx="13" fill="none" stroke="#FBE7BC" stroke-opacity=".16"/>
+                      
+                            <!-- buraco da fechadura: escuro, com luz no bordo de baixo -->
+                            <circle cx="100" cy="164" r="14" fill="#241706"/>
+                            <path d="M94.5 172h11l3.5 30h-18Z" fill="#241706"/>
+                            <path d="M88 170a14 14 0 0 0 24 0" fill="none" stroke="#FBE7BC" stroke-opacity=".34" stroke-width="1.6"/>
+                            <circle cx="100" cy="164" r="14" fill="none" stroke="#3A2810" stroke-opacity=".7"/>
+                          </svg>
+            <div class="v2-txt">
+              <p class="v2-h" data-i18n-html="sh_v2_h">ExplorerFocus<span class="v2-num">2</span></p>
+              <p class="v2-sub" data-i18n-html="sh_v2_sub">Now with <strong>data vaults</strong></p>
+            </div>
+          </div>
+          <div class="v2-foot">
+            <ul class="v2-list">
+              <li data-i18n="sh_v2_a">Encrypted, and they open as an ordinary drive</li>
+              <li data-i18n="sh_v2_b">Read and view inside, without decrypting everything</li>
+            </ul>
+            <a class="v2-go" href="#vault" data-i18n="sh_v2_go">Learn more &#8594;</a>
+          </div>
+        </figure>
+        <!-- 15/10/2026: o MESMO ecra de lancamento, em CLARO, logo a seguir ao escuro -- pedido do Joao, para se ver
+             logo no segundo ecra que agora ha as duas versoes. Mesmos textos e mesmas chaves; so as cores mudam
+             (.shot-v2-claro, no CSS). ⛔ Sai junto com o escuro, quando a 2 deixar de ser novidade. -->
+        <figure class="shot shot-v2 shot-v2-claro">
+          <div class="v2-top">
+            <span class="v2-kind" data-i18n="sh_v2_kind">A file explorer</span>
+            <span class="v2-tag" data-i18n="sh_v2_tag">Out now</span>
+          </div>
+          <div class="v2-mid">
+            <svg class="v2-lock" viewBox="0 0 200 250" role="img" aria-labelledby="v2cLockTitle">
+                            <title id="v2cLockTitle">A padlock</title>
+                            <defs>
+                              <linearGradient id="v2cBody" x1="0" y1="0" x2=".9" y2="1">
+                                <stop offset="0" stop-color="#FBE7BC"/>
+                                <stop offset=".18" stop-color="#EDBC76"/>
+                                <stop offset=".42" stop-color="#C89150"/>
+                                <stop offset=".63" stop-color="#8A6230"/>
+                                <stop offset=".84" stop-color="#D6A05B"/>
+                                <stop offset="1" stop-color="#7A5629"/>
+                              </linearGradient>
+                              <linearGradient id="v2cSide" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0" stop-color="#6B4A22"/>
+                                <stop offset="1" stop-color="#B98A47"/>
+                              </linearGradient>
+                              <linearGradient id="v2cShackle" x1=".1" y1="0" x2=".9" y2="1">
+                                <stop offset="0" stop-color="#FBE7BC"/>
+                                <stop offset=".35" stop-color="#D9A55E"/>
+                                <stop offset=".7" stop-color="#8A6230"/>
+                                <stop offset="1" stop-color="#C79350"/>
+                              </linearGradient>
+                              <linearGradient id="v2cSpec" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#FFF6E2" stop-opacity=".55"/>
+                                <stop offset=".45" stop-color="#FFF6E2" stop-opacity=".10"/>
+                                <stop offset="1" stop-color="#FFF6E2" stop-opacity="0"/>
+                              </linearGradient>
+                              <radialGradient id="v2cGlow" cx=".5" cy=".46" r=".6">
+                                <stop offset="0" stop-color="#E0A458" stop-opacity=".20"/>
+                                <stop offset="1" stop-color="#E0A458" stop-opacity="0"/>
+                              </radialGradient>
+                              <radialGradient id="v2cShadow" cx=".5" cy=".5" r=".5">
+                                <stop offset="0" stop-color="#000" stop-opacity=".55"/>
+                                <stop offset="1" stop-color="#000" stop-opacity="0"/>
+                              </radialGradient>
+                            </defs>
+                      
+                            <ellipse cx="100" cy="152" rx="96" ry="104" fill="url(#v2cGlow)"/>
+                            <!-- sombra projetada, desviada para a direita porque a luz vem da esquerda -->
+                            <ellipse cx="112" cy="240" rx="72" ry="15" fill="url(#v2cShadow)"/>
+                      
+                            <!-- arco: o lado de trás primeiro, mais escuro e desviado, para o laço
+                                 ter espessura em vez de ser um risco -->
+                            <path d="M69 122V90a31 31 0 0 1 62 0v32" fill="none" stroke="#6B4A22" stroke-width="18" stroke-linecap="round"/>
+                            <path d="M64 124V90a36 36 0 0 1 72 0v34" fill="none" stroke="url(#v2cShackle)" stroke-width="17" stroke-linecap="round"/>
+                            <!-- especular do arco: fino, curto, e só onde a luz bate -->
+                            <path d="M70 108V92a30 30 0 0 1 26-29" fill="none" stroke="#FFF6E2" stroke-width="3" stroke-linecap="round" opacity=".62"/>
+                      
+                            <!-- face ESQUERDA (a espessura que a rotação descobre) -->
+                            <path d="M34 140 L23 133 V216 L34 224 Z" fill="url(#v2cSide)"/>
+                            <!-- rebordo de baixo, na sombra -->
+                            <path d="M34 224 L23 216 q4 14 18 15 Z" fill="#4A3316"/>
+                      
+                            <!-- corpo -->
+                            <rect x="32" y="118" width="136" height="114" rx="22" fill="url(#v2cBody)"/>
+                            <!-- especular grande, na diagonal da luz -->
+                            <path d="M54 118h34L46 226a22 22 0 0 1-14-20v-66a22 22 0 0 1 22-22Z" fill="url(#v2cSpec)"/>
                             <!-- fio de luz no bordo superior-esquerdo, e sombra no oposto -->
                             <path d="M54 118.9h60" stroke="#FFF6E2" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
                             <path d="M33 145v50" stroke="#FFF6E2" stroke-opacity=".30" stroke-width="1.4" stroke-linecap="round"/>

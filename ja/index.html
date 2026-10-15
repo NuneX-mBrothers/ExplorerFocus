@@ -1682,13 +1682,15 @@
          ⛔ 30/09: entrou o PDF TOOLS (#feat34) e saiu, agora sim, o VOICE OVER —
          o mais antigo das seis (Cl127VoiceOver = 1.2.7, medido no Changelog.cs).
          A janela à parte da pré-visualização (2.0.2) NÃO entra: é só mais um
-         modo da pré-visualização (decisão do João). -->
+         modo da pré-visualização (decisão do João).
+         ⛔ 15/10, a 2.1.1 (decisão do João, «concordo com as 6»): Cofres, Áudio, Vídeo, Imagem, PDF e Tema claro.
+         Saíram as 16 línguas, o disco, os livros em papel e o som de um vídeo (passou a ser parte do Vídeo). -->
     <a href="#vault" data-i18n="wn_vault">🔒 金庫</a>
-    <a href="#feat18" data-i18n="wn_langs">🌐 16 の言語</a>
-    <a href="#feat19" data-i18n="wn_disk">💽 ディスクの詳細</a>
-    <a href="#feat24" data-i18n="wn_books">📖 紙で読む本</a>
-    <a href="#feat33" data-i18n="wn_audio">🎧 動画の音</a>
-    <a href="#feat34" data-i18n="wn_pdf">📄 PDF ツール</a>
+    <a href="#feat35" data-i18n="wn_audio_211">🎧 オーディオ</a>
+    <a href="#feat33" data-i18n="wn_video">🎬 ビデオ</a>
+    <a href="#feat36" data-i18n="wn_image">🖼 画像</a>
+    <a href="#feat34" data-i18n="wn_pdf_211">📄 PDF</a>
+    <a href="#feat12" data-i18n="wn_light">☀ ライトモード</a>
   </nav>
   <span class="whatsnew-ver">v2.0.6</span>
 </div>
@@ -1735,8 +1737,8 @@
   <div class="feat w6">
     <div class="num"><span data-i18n="f04_num">04 — 全体検索</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
     <h3 data-i18n="f04_h">プロファイルをまたぐ検索。ただし、選んだものだけ。</h3>
-    <p data-i18n="f04_p">タブを右クリック →「全体検索に含める」。●/○ の印で、対象かどうかが分かります。結果は非モーダルのウィンドウに出ます。</p>
-    <div class="feat-mark" data-i18n="f04_mark">オプトイン · 非モーダルの結果</div>
+    <p data-i18n="f04_p2">タブを右クリック →「全体検索に含める」。●/○ の印で、対象かどうかが分かります。結果は ExplorerFocus の中でそのまま開きます — このウィンドウでも新しいウィンドウでも、選んだファイルの場所で。</p>
+    <div class="feat-mark" data-i18n="f04_mark2">オプトイン · このウィンドウか新しいウィンドウで開く</div>
   </div>
 
   <div class="feat hero-card w12">
@@ -1811,10 +1813,10 @@
     <p data-i18n-html="f11_p"><em>.cs</em>、<em>.xaml</em>、<em>.json</em>、<em>.md</em>、<em>.cmd</em>、<em>.ps1</em> — よくある構造から始まります。入力のあいだ、拡張子は消さずに名前だけが選ばれています。</p>
   </div>
 
-  <div class="feat w4">
-    <div class="num"><span data-i18n="f12_num">12 — 隅々までダーク</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
-    <h3 data-i18n="f12_h">最後までダークテーマ。</h3>
-    <p data-i18n="f12_p">タイトルバー、スクロールバー、データグリッド、ダイアログ、ツールチップ、Markdown のプレビュー — すべてが同じ視覚の言葉で。思わぬところから白が飛び出すことはありません。</p>
+  <div class="feat w4" id="feat12">
+    <div class="num"><span data-i18n="f12b_num">12 — ダークかライトか</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
+    <h3 data-i18n="f12b_h">ダークでもライトでも、すぐに。</h3>
+    <p data-i18n-html="f12b_p">PREMIUM の隣にあるボタンひとつで、<em>ダーク</em>、<em>ライト</em>、<em>Windows に合わせる</em>を再起動せずに切り替えられます。ライトでは、2 本のスライダーで背景の白さと文字の濃さを調整できます。設定はウィンドウごとに保たれます。</p>
   </div>
 
   <div class="feat w4">
@@ -1974,8 +1976,8 @@
   <div class="feat w12">
     <div class="num"><span data-i18n="f26_num">26 — 音声を録る</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
     <h3 data-i18n="f26_h">マイクを、そのままフォルダーへ。</h3>
-    <p data-i18n-html="f26_p">ワンクリックで<em>マイク</em>をいまのフォルダーに録音します。マイクを選び、<em>レベルメーター</em>を見ながら録音の音量を整え、<em>WAV</em> か <em>M4A/AAC</em> で保存します。</p>
-    <div class="feat-mark" data-i18n="f26_mark">マイク · レベルメーター · WAV · M4A</div>
+    <p data-i18n-html="f26_p2">ワンクリックで<em>マイク</em>をいまのフォルダーに録音します。マイクを選び、<em>レベルメーター</em>を見ながら録音の音量を整え、<em>MP3</em>、<em>AAC</em>、<em>WMA</em>、<em>WAV</em>、<em>FLAC</em>、<em>ALAC</em> のいずれかで保存します。</p>
+    <div class="feat-mark" data-i18n="f26_mark2">マイク · レベルメーター · MP3 · AAC · WAV · FLAC</div>
   </div>
 
   <div class="feat w12">
@@ -2035,61 +2037,59 @@
     </p>
   </div>
 
-  <!-- ⛔ O 33 entra no FIM e é o sítio CERTO, ao contrário do que costuma ser:
-       os cartões 26 a 32 já são a família da captura e da média (gravar áudio,
-       vídeo, ecrã, cartões de marca, voice over). Um cartão de média encaixa ali.
-       ⚠ GRÁTIS por decisão minha, e é UMA palavra a mudar: extrair o som do teu
-       próprio vídeo é conversão, não criação, e o aviso que ficou escrito no
-       `features-futuras.md` é que, se tudo o que é novo for Premium, o texto do
-       «a grátis é o produto completo para praticamente todos» começa a mentir
-       sozinho sem ninguém o reescrever.
-       🥇 O CONTENTOR NÃO É O CODEC, e é isto que decide a frase da nota. A
-       lista da marca são CAIXAS (.mp4, .mkv, …) e o João mediu que o Windows as
-       abre de origem. Mas dentro da caixa ainda há o codec: um .mp4 com HEVC ou
-       um .mkv com AV1 abre a caixa e pode na mesma não decifrar o conteúdo -- as
-       extensões da Loja acrescentam CODECS, não contentores.
-       ⛔ Por isso a página NÃO diz «suporta MKV» e ponto: diz a REGRA -- «se o
-       Windows conseguir ler o vídeo, o som sai dele» -- que acompanha a máquina
-       de quem usa. Não se promete o que não é nosso.
-       📌 E o botão ACENDE-SE SÓ quando detecta um formato que consegue tratar,
-       o que é a garantia de que nunca há um botão morto. Fica subentendido em
-       vez de explicado -- ordem dele sobre este tipo de frase.
-       📌 Na prática: H.264 com AAC (telemóveis, câmaras, gravadores de ecrã)
-       funciona sem instalar nada, provado ponta-a-ponta.
-       ⛔ AS FRASES SÃO COPIADAS DA APP, não são escritas aqui: «Escrever o som
-       num ficheiro», «Cópia do vídeo sem som» e «O vídeo original fica como
-       está.» são o SomExtrairMenu, o SomCopiaSemSomMenu e o
-       SomOriginalFicaIntacto do LocalizationService.cs, nas 16 línguas. E o
-       formato chama-se AAC, que é como o menu lhe chama -- não M4A.
-       🥇 A promessa do original intacto está na página porque está na app, e a
-       app tem lá escrito porquê: «isto estraga o meu vídeo?» é a primeira
-       pergunta de quem vê um botão destes. -->
-  <div class="feat w12" id="feat33">
-    <div class="num"><span data-i18n="f33_num">33 — 動画の音</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a></div>
-    <h3 data-i18n="f33_h">動画の音を、編集ソフトを開かずに。</h3>
-    <p data-i18n-html="f33_p">プレビューで開ける動画なら、どれでも上にボタンが出ます。<em>音声をファイルに保存</em>——<em>MP3</em>、<em>AAC</em>、<em>WMA</em>、<em>WAV</em>、<em>FLAC</em>、<em>ALAC</em>。可逆圧縮のものも含みます——あるいは<em>音声なしの動画のコピー</em>を作れます。元のすぐ隣に、同じ名前で置かれます。<strong>元の動画はそのまま残ります。</strong>変換ダイアログも、二つ目のプログラムもなく、何もパソコンの外へは出ません。</p>
-    <div class="feat-mark" data-i18n="f33_mark">MP4 · MOV · MKV · WebM · AVI · WMV · MPEG · M2TS/TS · 3GP → MP3 · AAC · WMA · WAV · FLAC · ALAC</div>
+  <!-- ⛔ 15/10, a 2.1.1: os quatro botões da barra por cima da lista, pela ORDEM DA BARRA (Áudio · Vídeo · Imagem ·
+       PDF). Textos aprovados em Marketing\ExplorerFocus\Docs\site-2.1.1-textos.md; cada afirmação vem das E- da
+       engenharia e da tabela do grátis/PREMIUM (gratis-ou-premium-ferramentas.md). Os nomes são os da app.
+       📌 O cartão do «som de um vídeo» (era o 33) entrou no Vídeo: a âncora #feat33 ficou com o Vídeo, para as
+       ligações de fora continuarem a dar a um vídeo. O PDF passou de 34 a 36, com a âncora #feat34 de sempre.
+       ⛔ O cofre no Vídeo é a frase MEDIDA da E-037, com a exceção do FLAC. O «sem perder qualidade» do rodar é só o
+       que está medido: o MP4 no vídeo, o JPG na imagem.
+       ⛔ A marca de IA: a imagem DECLARA; sem marca não prova que seja real. O tapar: confere-se sempre.
+       ⛔ O «Perto de…» usa o GeoNames (CC BY 4.0): a atribuição completa está na Stack, e é obrigatória (E-049). -->
+
+  <div class="feat w12" id="feat35">
+    <div class="num"><span data-i18n="fau_num">33 — オーディオ</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="fau_h">音声の切り出し・分割・結合を、編集ソフトを開かずに。</h3>
+    <p data-i18n-html="fau_p">オーディオファイルを選ぶと、上部の<em>オーディオ</em>ボタンが点灯します。聞きながら<em>一部分を切り出し</em>、印を付けた位置で、または等分に<em>パートに分割</em>し、複数を 1 つに<em>結合</em>し——形式が違っていてもかまいません——ワンクリックで<em>形式を変更</em>できます：MP3、AAC、WMA、WAV、FLAC、ALAC。<em>MP3 タグ</em>（タイトル、アーティスト、アルバム、ジャケット画像）はファイルそのものに書き込まれ、音には手を加えません。<em>音声を調整…</em>では、音量と<em>ノーマライズ</em>、音程を変えない速度の変更、フェードイン・フェードアウト、最初と最後の無音のカット、そして声の録音の間（ま）の短縮ができます。<strong>元のファイルはそのまま残ります。</strong></p>
+    <div class="feat-mark" data-i18n="fau_mark">切り出し · 分割 · 結合 · 形式の変更 · MP3 タグ · 音量 · 速度 · 無音 · 間</div>
     <p class="feat-note">
-      <span data-i18n="f33_note">Windows がその動画を再生できるなら、音も取り出せます。ボタンは本当にできるときだけ点きます。</span>
+      <span data-i18n="fau_free">無料：切り出し、分割、結合、形式の変更、MP3 タグ。</span><br>
+      <span data-i18n="fau_premium">PREMIUM：「音声を調整…」。誰でも開けます：PREMIUM を手に入れる前に、何ができるかを見て、聞いて確かめられます。</span>
     </p>
   </div>
 
-  <!-- ⛔ PDF TOOLS (30/09). Grátis SÓ juntar e dividir; o resto é PREMIUM —
-       decisão do João («só duas coisas são free»). O nome do botão é o da app
-       (LocalizationService.Pdf.cs: PdfToolsBotao); em português fica «PDF
-       Tools», como na app. Cada afirmação vem das notas da engenharia (memória
-       ferramentas-pdf): o original nunca se toca; os marcadores e os dados do
-       documento seguem; protegido ou estragado é dito e nada fica a meio; no
-       cofre, pela letra. O Word é «simples» porque a conversão é fiel nos
-       documentos simples (caderno, ideia 5b). -->
+  <div class="feat w12" id="feat33">
+    <div class="num"><span data-i18n="fvi_num">34 — ビデオ</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="fvi_h">動画の切り出し・回転・縮小・調整を、そのファイルがある場所で。</h3>
+    <p data-i18n-html="fvi_p">動画を選ぶと、<em>ビデオ</em>ボタンが点灯します。<em>一部分を切り出す</em>ことも、途中の一部分を取り除くこともできます。ステータスやストーリー用に 30 秒ずつに<em>分割</em>し、複数を 1 つに<em>結合</em>し、横向きに撮った動画を<em>回転</em>し（MP4 なら画質をまったく落とさずに）、再生を止めずに<em>フレームを保存</em>して JPG にできます。<em>動画の音声</em>は MP3、AAC、WMA、WAV、FLAC、ALAC に書き出せるほか、音声なしのコピーを残すこともできます。PREMIUM なら：WhatsApp に収まるように<em>変換または縮小</em>（変換する前に、どのくらいの大きさになるかを画面が教えてくれます）、一部分から軽い <em>GIF</em>、動画の<em>逆再生</em>、<em>音声の追加</em>（音楽やナレーション）、そして<em>動画を調整…</em>：色と白黒、声を変えずに 0.25× から 4× までの速度、黒からのフェードインと黒へのフェードアウト、音量、SNS 向けの 9:16 の切り抜き、反転、透かし — すべてを一度の処理で、保存する前に確かめられます。<strong>元のファイルはそのまま残ります。</strong></p>
+    <div class="feat-mark" data-i18n="fvi_mark">切り出し · 分割 · 結合 · 回転 · フレーム · 音声 → MP3/FLAC · 変換 · GIF · 色 · 速度 · 9:16 · 透かし</div>
+    <p class="feat-note">
+      <span data-i18n="fvi_free">無料：切り出し、分割、結合、回転、フレームの保存、動画の音声。</span><br>
+      <span data-i18n="fvi_premium">PREMIUM：変換または縮小、GIF、「動画を調整…」、逆再生、音声の追加。</span>
+      <span class="feat-drm" data-i18n="fvi_note">金庫の中でも使えます：結果はその中で暗号化された状態で生まれ、ディスクに平文は何も残りません（音声を FLAC で保存するときだけは例外で、アプリがその理由を説明します）。</span>
+    </p>
+  </div>
+
+  <div class="feat w12" id="feat36">
+    <div class="num"><span data-i18n="fim_num">35 — 画像</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="fim_h">写真に隠れているもの — そして、それを扱う道具。</h3>
+    <p data-i18n-html="fim_p">画像を選ぶと、<em>画像</em>ボタンが点灯します。<em>写真のX線</em>は、写真に隠れている情報を見せます — 撮影場所、カメラとそのシリアル番号、日付、そして切り取った部分がまだ写っていることもある隠れたサムネイル — そして、選んだものだけを残したコピーを保存します。画像が AI で作られた、または編集されたと<em>自ら申告</em>しているかどうかと、どのプログラムによるものかも示し、<em>…付近</em>はインターネットにつながずに地名を示します。さらに：<em>トリミング</em>して傾いた水平線をまっすぐに、<em>送信用に縮小</em>して好きなサイズに、<em>回転と反転</em>（JPG なら画質をまったく落とさずに）、<em>形式を変更</em>（iPhone の HEIC をワンクリックで JPG に、Windows の .ico アイコンにも）、<em>画像をコピー</em>して WhatsApp に貼り付け、そしてフォルダーで <em>Ctrl+V</em> を押せばスクリーンショットがファイルになります。PREMIUM なら：画像から<em>文字をコピー</em>、<em>個人情報を隠す</em>（メール、電話番号、IBAN、カード、顔）、画像の<em>結合</em>と<em>分割</em>、そして<em>背景を透明に</em>。<strong>元のファイルはそのまま残ります。</strong></p>
+    <div class="feat-mark" data-i18n="fim_mark">X線 · AI のマーク · …付近 · トリミング · 縮小 · 回転 · HEIC → JPG · ICO · コピー · Ctrl+V · 文字 · 隠す · 結合 · 分割 · 透明な背景</div>
+    <p class="feat-note">
+      <span data-i18n="fim_free">無料：写真のX線、トリミング、縮小、回転と反転、形式の変更（ICO も）、コピー、ファイルとして貼り付け。</span><br>
+      <span data-i18n="fim_premium">PREMIUM：文字のコピー、個人情報を隠す、結合、分割、背景の透明化。</span>
+      <span class="feat-drm" data-i18n="fim_note">AI のマークがないからといって、本物の画像とは限りません：多くの画像はマークを持っていません。「個人情報を隠す」は多くを見つけますが、送る前に必ずご自身で確かめてください。「地図で見る…」は先に確認します。そのとき座標が OpenStreetMap に送られるからです。地名は GeoNames（geonames.org）のもので、CC BY 4.0 です — 完全なクレジットは「スタック」にあります。</span>
+    </p>
+  </div>
+
   <div class="feat w12" id="feat34">
-    <div class="num"><span data-i18n="f34_num">34 — PDF ツール</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <div class="num"><span data-i18n="fpdf_num">36 — PDF</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f34_h">PDF の結合・分割・整理を、そのファイルがある場所で。</h3>
-    <p data-i18n-html="f34_p">PDF を選ぶと、上部の <em>PDF ツール</em> ボタンが点灯します。複数のファイルを 1 つに<em>結合</em>、ページ範囲で<em>分割</em>（<em>1-3, 5, 8-</em>）、またはサムネイルで<em>ページを整理</em>：回転、削除、並べ替えのほか、一部のページを新しい PDF に取り出すこともできます。ページを <em>JPG や PNG の画像</em>に変換し、<em>パスワード</em>を設定・解除し、JPG/PNG の画像やシンプルな Word 文書を PDF に<em>変換</em>できます。<strong>元のファイルには一切手を加えません</strong>：結果はすべて、すぐ隣に作られる新しい PDF で、しおりと文書情報も引き継がれます。どこにもアップロードされません。</p>
-    <div class="feat-mark" data-i18n="f34_mark">PDF 結合 · PDF 分割 · ページの回転・並べ替え · PDF を JPG/PNG に変換 · PDF のパスワード設定・解除 · Word・JPG を PDF に変換</div>
+    <p data-i18n-html="fpdf_p">PDF を選ぶと、上部の <em>PDF</em> ボタンが点灯します。複数のファイルを 1 つに<em>結合</em>、ページ範囲で<em>分割</em>（<em>1-3, 5, 8-</em>）、またはサムネイルで<em>ページを整理</em>：回転、削除、並べ替えのほか、一部のページを新しい PDF に取り出すこともできます。ページを <em>JPG や PNG の画像</em>に変換し、<em>パスワード</em>を設定・解除し、JPG/PNG の画像やシンプルな Word 文書を PDF に<em>変換</em>できます — あるいは<em>何枚かの写真を A4 の 1 ページに</em>一覧の順に並べ、右側で仕上がりの PDF をページごとに確かめられます。<strong>元のファイルには一切手を加えません</strong>：結果はすべて、すぐ隣に作られる新しい PDF で、しおりと文書情報も引き継がれます。どこにもアップロードされません。</p>
+    <div class="feat-mark" data-i18n="fpdf_mark">PDF 結合 · PDF 分割 · ページの回転・並べ替え · PDF を JPG/PNG に変換 · PDF のパスワード設定・解除 · Word・JPG を PDF に変換 · A4 の 1 ページに複数の写真</div>
     <p class="feat-note">
       <span data-i18n="f34_free">無料：結合と分割。</span><br>
-      <span data-i18n="f34_premium">PREMIUM：ページの整理、PDF を画像に、パスワードの設定・解除、PDF への変換。</span>
+      <span data-i18n="fpdf_premium">PREMIUM：ページの整理、PDF を画像に、パスワードの設定・解除、PDF への変換（1 ページに複数の写真も）。</span>
       <span class="feat-drm" data-i18n="f34_note">保護された PDF や壊れた PDF はそのことを知らせ、途中までの結果は残しません。暗号化された金庫の中でも、そのドライブレターを通して使えます。</span>
     </p>
   </div>
@@ -2429,13 +2429,31 @@
     </div>
     <div class="stack-cell">
       <div class="ic" data-i18n="st_capture_ic">キャプチャ</div>
-      <h4>NAudio · NTwain</h4>
-      <p data-i18n="st_capture">マイクとシステム音は NAudio と WASAPI、スキャナーは TWAIN 標準の NTwain。</p>
+      <h4>NAudio · Concentus · NTwain</h4>
+      <p data-i18n="st_capture2">マイクとシステム音は NAudio と WASAPI、WhatsApp のボイスメッセージ（Opus）は Concentus、スキャナーは TWAIN 標準の NTwain。</p>
     </div>
     <div class="stack-cell">
       <div class="ic" data-i18n="st_archives_ic">書庫</div>
       <h4>SharpCompress</h4>
       <p data-i18n="st_archives">ZIP、RAR、7z、TAR はその場で読むので、書庫がフォルダーのように開きます。</p>
+    </div>
+    <!-- 15/10, a 2.1.1: o PDFsharp faltava desde 29/09; o vídeo e a imagem não trouxeram bibliotecas (medido no código:
+         o OCR e o FaceDetector do Windows, o Media Foundation e o WIC); e o GeoNames é a atribuição OBRIGATÓRIA da
+         CC BY 4.0 (E-049): de onde vêm os dados, o que se mudou, e onde está a licença. -->
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_pdf_ic">PDF</div>
+      <h4>PDFsharp</h4>
+      <p data-i18n="st_pdf">結合、分割、ページの整理は PDFsharp（MIT）。ライセンスは、新しいパッケージのたびだけでなく、新しいバージョンのたびに確かめています。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_win_ic">WINDOWS</div>
+      <h4>Media Foundation · WIC · OCR</h4>
+      <p data-i18n="st_win">動画、画像、文字の読み取り、顔の検出には、Windows に最初から入っているものを使います。古びていく余計なライブラリはありません。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_places_ic">地名</div>
+      <h4>GeoNames</h4>
+      <p data-i18n-html="st_places"><em>…付近</em>は、<a href="https://www.geonames.org" target="_blank" rel="noopener">GeoNames</a> の地名と座標を <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a> ライセンスのもとで使い、インターネットなしで動きます。変更点：人口 1000 人を超える場所か、市町村や地域の中心地だけに絞り、地区や歴史上の場所は除き、名前はアプリの言語のものだけにしています。</p>
     </div>
   </div>
 </section>
@@ -2450,13 +2468,14 @@
     <div class="prem-card" id="free">
       <h4 data-i18n="pr_free_h">無料</h4>
       <span class="prem-tag" data-i18n="pr_free_tag">ずっと · アカウント不要</span>
-      <ul data-i18n-html="pr_free_list"><li>プロファイル、自由に組めるツリー、複数パターンの検索</li><li>プレビュー：コード、PDF、Word/Excel、Markdown、画像、書籍</li><li>本当の進捗、速度、残り時間、履歴、競合の処理つきのファイル操作</li><li>ターミナル、拡張子ごとのアプリ、フォルダーとして開く書庫</li><li>隅々までダークテーマ、16 の言語、自動更新</li><li>音声の録音（マイク）</li><li><strong>リモート接続 1 件</strong>（SFTP/FTP/FTPS） — 閲覧とプレビュー</li><li>PDF：結合と分割</li></ul>
+      <ul data-i18n-html="pr_free_list2"><li>プロファイル、自由に組めるツリー、複数パターンの検索</li><li>プレビュー：コード、PDF、Word/Excel、Markdown、画像、書籍</li><li>本当の進捗、速度、残り時間、履歴、競合の処理つきのファイル操作</li><li>ターミナル、拡張子ごとのアプリ、フォルダーとして開く書庫</li><li>ダークまたはライトのテーマ、16 の言語、自動更新</li><li>音声の録音（マイク）</li><li><strong>リモート接続 1 件</strong>（SFTP/FTP/FTPS） — 閲覧とプレビュー</li><li>オーディオ：切り出し、分割、結合、形式の変更、MP3 タグ</li><li>ビデオ：切り出し、分割、結合、回転、フレームの保存、動画の音声</li><li>画像：写真のX線、トリミング、縮小、回転、形式の変更と ICO、コピーと貼り付け</li><li>PDF：結合と分割</li></ul>
     </div>
 
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">PREMIUM</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag">一度きりの €19.99 の寄付 · 1 台につき</span>
-      <ul data-i18n-html="pr_prem_list"><li>暗号化された金庫を<strong>作る</strong></li><li><strong>リモートアクセスのすべて</strong>：複数接続、すべての操作、WebDAV、Dropbox、OneDrive</li><li>画面の録画が<strong>透かしなし、時間の制限なし、音あり</strong></li><li>透かしなしの映像の録画</li><li>マイク + システム音のミキシング</li><li>ドキュメントフィーダー（ADF）での複数ページのスキャン</li><li>完全な書籍リーダー — EPUB、Kindle 系、FB2、コミック</li><li>録画のオープニング / エンドカードとテキストの帯</li><li>PDF ツール：ページの整理、PDF を画像に、パスワード、PDF への変換</li></ul>
+      <ul data-i18n-html="pr_prem_list2"><li>暗号化された金庫を<strong>作る</strong></li><li><strong>リモートアクセスのすべて</strong>：複数接続、すべての操作、WebDAV、Dropbox、OneDrive</li><li>画面の録画が<strong>透かしなし、時間の制限なし、音あり</strong></li><li>透かしなしの映像の録画</li><li>マイク + システム音のミキシング</li><li>ドキュメントフィーダー（ADF）での複数ページのスキャン</li><li>完全な書籍リーダー — EPUB、Kindle 系、FB2、コミック</li><li>録画のオープニング / エンドカードとテキストの帯</li><li>「音声を調整」と「動画を調整」：それぞれのスタジオ</li><li>ビデオ：変換または縮小、GIF、逆再生、音声の追加</li><li>画像：文字のコピー、個人情報を隠す、結合、分割、背景の透明化</li><li>PDF ツール：ページの整理、PDF を画像に、パスワード、PDF への変換、1 ページに複数の写真</li></ul>
+      <p class="prem-note" data-i18n-html="pr_vitrine">オーディオ、ビデオ、画像、PDF では、PREMIUM の画面は誰でも開けます：PREMIUM を手に入れる前に、何ができるかを確かめられます。</p>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo

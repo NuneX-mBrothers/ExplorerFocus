@@ -1682,13 +1682,15 @@
          ⛔ 30/09: entrou o PDF TOOLS (#feat34) e saiu, agora sim, o VOICE OVER —
          o mais antigo das seis (Cl127VoiceOver = 1.2.7, medido no Changelog.cs).
          A janela à parte da pré-visualização (2.0.2) NÃO entra: é só mais um
-         modo da pré-visualização (decisão do João). -->
+         modo da pré-visualização (decisão do João).
+         ⛔ 15/10, a 2.1.1 (decisão do João, «concordo com as 6»): Cofres, Áudio, Vídeo, Imagem, PDF e Tema claro.
+         Saíram as 16 línguas, o disco, os livros em papel e o som de um vídeo (passou a ser parte do Vídeo). -->
     <a href="#vault" data-i18n="wn_vault">🔒 Os cofres</a>
-    <a href="#feat18" data-i18n="wn_langs">🌐 16 idiomas</a>
-    <a href="#feat19" data-i18n="wn_disk">💽 O disco, em detalhe</a>
-    <a href="#feat24" data-i18n="wn_books">📖 Livros em papel</a>
-    <a href="#feat33" data-i18n="wn_audio">🎧 O som de um vídeo</a>
-    <a href="#feat34" data-i18n="wn_pdf">📄 PDF Tools</a>
+    <a href="#feat35" data-i18n="wn_audio_211">🎧 Áudio</a>
+    <a href="#feat33" data-i18n="wn_video">🎬 Vídeo</a>
+    <a href="#feat36" data-i18n="wn_image">🖼 Imagem</a>
+    <a href="#feat34" data-i18n="wn_pdf_211">📄 PDF</a>
+    <a href="#feat12" data-i18n="wn_light">☀ Modo claro</a>
   </nav>
   <span class="whatsnew-ver">v2.0.6</span>
 </div>
@@ -1735,8 +1737,8 @@
   <div class="feat w6">
     <div class="num"><span data-i18n="f04_num">04 — BUSCA GLOBAL</span><a class="badge-free" href="#free" data-i18n="badge_free">Grátis</a></div>
     <h3 data-i18n="f04_h">Buscar em vários perfis, com adesão explícita.</h3>
-    <p data-i18n="f04_p">Botão direito numa guia → "Incluir na busca global". O indicador (●/○) mostra o que está dentro. Resultados numa janela não modal.</p>
-    <div class="feat-mark" data-i18n="f04_mark">Adesão · Resultados não modais</div>
+    <p data-i18n="f04_p2">Botão direito numa guia → "Incluir na busca global". O indicador (●/○) mostra o que está dentro. Os resultados abrem no próprio ExplorerFocus — nesta janela ou numa nova, já no arquivo escolhido.</p>
+    <div class="feat-mark" data-i18n="f04_mark2">Adesão · Abre nesta janela ou numa nova</div>
   </div>
 
   <div class="feat hero-card w12">
@@ -1811,10 +1813,10 @@
     <p data-i18n-html="f11_p"><em>.cs</em>, <em>.xaml</em>, <em>.json</em>, <em>.md</em>, <em>.cmd</em>, <em>.ps1</em> — já começam com a estrutura típica. O nome fica selecionado sem apagar a extensão enquanto você digita.</p>
   </div>
 
-  <div class="feat w4">
-    <div class="num"><span data-i18n="f12_num">12 — ESCURO DE VERDADE</span><a class="badge-free" href="#free" data-i18n="badge_free">Grátis</a></div>
-    <h3 data-i18n="f12_h">Tema escuro até o fim.</h3>
-    <p data-i18n="f12_p">Barra de título, barras de rolagem, tabelas, diálogos, dicas, pré-visualização de Markdown — tudo na mesma linguagem visual. Sem brancos soltos vindos de lugares improváveis.</p>
+  <div class="feat w4" id="feat12">
+    <div class="num"><span data-i18n="f12b_num">12 — ESCURO OU CLARO</span><a class="badge-free" href="#free" data-i18n="badge_free">Grátis</a></div>
+    <h3 data-i18n="f12b_h">Escuro ou claro, na hora.</h3>
+    <p data-i18n-html="f12b_p">Um botão só, ao lado do PREMIUM: <em>escuro</em>, <em>claro</em> ou <em>como o Windows</em>, sem reiniciar. No modo claro, duas réguas ajustam o branco do fundo e o escuro das letras. Cada janela guarda o seu.</p>
   </div>
 
   <div class="feat w4">
@@ -1974,8 +1976,8 @@
   <div class="feat w12">
     <div class="num"><span data-i18n="f26_num">26 — GRAVAR ÁUDIO</span><a class="badge-free" href="#free" data-i18n="badge_free">Grátis</a></div>
     <h3 data-i18n="f26_h">Grave o microfone direto na pasta.</h3>
-    <p data-i18n-html="f26_p">Um clique grava o <em>microfone</em> na pasta atual. Escolha o microfone, acompanhe o <em>medidor de nível</em> ao vivo, ajuste o volume de gravação e salve como <em>WAV</em> ou <em>M4A/AAC</em>.</p>
-    <div class="feat-mark" data-i18n="f26_mark">Microfone · Medidor de nível · WAV · M4A</div>
+    <p data-i18n-html="f26_p2">Um clique grava o <em>microfone</em> na pasta atual. Escolha o microfone, acompanhe o <em>medidor de nível</em> ao vivo, ajuste o volume de gravação e salve como <em>MP3</em>, <em>AAC</em>, <em>WMA</em>, <em>WAV</em>, <em>FLAC</em> ou <em>ALAC</em>.</p>
+    <div class="feat-mark" data-i18n="f26_mark2">Microfone · Medidor de nível · MP3 · AAC · WAV · FLAC</div>
   </div>
 
   <div class="feat w12">
@@ -2035,61 +2037,59 @@
     </p>
   </div>
 
-  <!-- ⛔ O 33 entra no FIM e é o sítio CERTO, ao contrário do que costuma ser:
-       os cartões 26 a 32 já são a família da captura e da média (gravar áudio,
-       vídeo, ecrã, cartões de marca, voice over). Um cartão de média encaixa ali.
-       ⚠ GRÁTIS por decisão minha, e é UMA palavra a mudar: extrair o som do teu
-       próprio vídeo é conversão, não criação, e o aviso que ficou escrito no
-       `features-futuras.md` é que, se tudo o que é novo for Premium, o texto do
-       «a grátis é o produto completo para praticamente todos» começa a mentir
-       sozinho sem ninguém o reescrever.
-       🥇 O CONTENTOR NÃO É O CODEC, e é isto que decide a frase da nota. A
-       lista da marca são CAIXAS (.mp4, .mkv, …) e o João mediu que o Windows as
-       abre de origem. Mas dentro da caixa ainda há o codec: um .mp4 com HEVC ou
-       um .mkv com AV1 abre a caixa e pode na mesma não decifrar o conteúdo -- as
-       extensões da Loja acrescentam CODECS, não contentores.
-       ⛔ Por isso a página NÃO diz «suporta MKV» e ponto: diz a REGRA -- «se o
-       Windows conseguir ler o vídeo, o som sai dele» -- que acompanha a máquina
-       de quem usa. Não se promete o que não é nosso.
-       📌 E o botão ACENDE-SE SÓ quando detecta um formato que consegue tratar,
-       o que é a garantia de que nunca há um botão morto. Fica subentendido em
-       vez de explicado -- ordem dele sobre este tipo de frase.
-       📌 Na prática: H.264 com AAC (telemóveis, câmaras, gravadores de ecrã)
-       funciona sem instalar nada, provado ponta-a-ponta.
-       ⛔ AS FRASES SÃO COPIADAS DA APP, não são escritas aqui: «Escrever o som
-       num ficheiro», «Cópia do vídeo sem som» e «O vídeo original fica como
-       está.» são o SomExtrairMenu, o SomCopiaSemSomMenu e o
-       SomOriginalFicaIntacto do LocalizationService.cs, nas 16 línguas. E o
-       formato chama-se AAC, que é como o menu lhe chama -- não M4A.
-       🥇 A promessa do original intacto está na página porque está na app, e a
-       app tem lá escrito porquê: «isto estraga o meu vídeo?» é a primeira
-       pergunta de quem vê um botão destes. -->
-  <div class="feat w12" id="feat33">
-    <div class="num"><span data-i18n="f33_num">33 — O SOM DE UM VÍDEO</span><a class="badge-free" href="#free" data-i18n="badge_free">Grátis</a></div>
-    <h3 data-i18n="f33_h">O som de um vídeo, sem abrir um editor.</h3>
-    <p data-i18n-html="f33_p">Qualquer vídeo que a pré-visualização abra ganha um botão no topo. <em>Salvar o áudio em um arquivo</em> — <em>MP3</em>, <em>AAC</em>, <em>WMA</em>, <em>WAV</em>, <em>FLAC</em> ou <em>ALAC</em>, os sem perda incluídos — ou fazer uma <em>cópia do vídeo sem som</em>. Fica bem ao lado do original, com o mesmo nome. <strong>O vídeo original fica como está.</strong> Sem caixa de conversão, sem um segundo programa, e nada sai da sua máquina.</p>
-    <div class="feat-mark" data-i18n="f33_mark">MP4 · MOV · MKV · WebM · AVI · WMV · MPEG · M2TS/TS · 3GP → MP3 · AAC · WMA · WAV · FLAC · ALAC</div>
+  <!-- ⛔ 15/10, a 2.1.1: os quatro botões da barra por cima da lista, pela ORDEM DA BARRA (Áudio · Vídeo · Imagem ·
+       PDF). Textos aprovados em Marketing\ExplorerFocus\Docs\site-2.1.1-textos.md; cada afirmação vem das E- da
+       engenharia e da tabela do grátis/PREMIUM (gratis-ou-premium-ferramentas.md). Os nomes são os da app.
+       📌 O cartão do «som de um vídeo» (era o 33) entrou no Vídeo: a âncora #feat33 ficou com o Vídeo, para as
+       ligações de fora continuarem a dar a um vídeo. O PDF passou de 34 a 36, com a âncora #feat34 de sempre.
+       ⛔ O cofre no Vídeo é a frase MEDIDA da E-037, com a exceção do FLAC. O «sem perder qualidade» do rodar é só o
+       que está medido: o MP4 no vídeo, o JPG na imagem.
+       ⛔ A marca de IA: a imagem DECLARA; sem marca não prova que seja real. O tapar: confere-se sempre.
+       ⛔ O «Perto de…» usa o GeoNames (CC BY 4.0): a atribuição completa está na Stack, e é obrigatória (E-049). -->
+
+  <div class="feat w12" id="feat35">
+    <div class="num"><span data-i18n="fau_num">33 — ÁUDIO</span><a class="badge-free" href="#free" data-i18n="badge_free">Grátis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="fau_h">Cortar, dividir e juntar áudio — sem abrir um editor.</h3>
+    <p data-i18n-html="fau_p">Com um áudio selecionado, o botão <em>Áudio</em> acende no topo. <em>Cortar um trecho</em> enquanto ouve, <em>dividir em partes</em> nos pontos que você marcar ou em partes iguais, <em>juntar</em> vários num só — mesmo de formatos diferentes — e <em>mudar o formato</em> com um clique: MP3, AAC, WMA, WAV, FLAC ou ALAC. As <em>etiquetas do MP3</em> (título, artista, álbum e capa) são gravadas no próprio arquivo, sem mexer no som. No <em>Ajustar o áudio…</em>: o volume e o <em>normalizar</em>, a velocidade sem mudar o tom, entradas e saídas suaves, tirar o silêncio do começo e do fim, e encurtar as pausas de uma gravação de voz. <strong>O original fica como está.</strong></p>
+    <div class="feat-mark" data-i18n="fau_mark">Cortar · Dividir · Juntar · Mudar o formato · Etiquetas do MP3 · Volume · Velocidade · Silêncio · Pausas</div>
     <p class="feat-note">
-      <span data-i18n="f33_note">Se o Windows conseguir reproduzir o vídeo, o som sai dele. O botão só acende quando realmente consegue.</span>
+      <span data-i18n="fau_free">Grátis: cortar, dividir, juntar, mudar o formato e as etiquetas do MP3.</span><br>
+      <span data-i18n="fau_premium">PREMIUM: o “Ajustar o áudio…”. Abre para todos: você vê e ouve o que ele faz antes de ter o PREMIUM.</span>
     </p>
   </div>
 
-  <!-- ⛔ PDF TOOLS (30/09). Grátis SÓ juntar e dividir; o resto é PREMIUM —
-       decisão do João («só duas coisas são free»). O nome do botão é o da app
-       (LocalizationService.Pdf.cs: PdfToolsBotao); em português fica «PDF
-       Tools», como na app. Cada afirmação vem das notas da engenharia (memória
-       ferramentas-pdf): o original nunca se toca; os marcadores e os dados do
-       documento seguem; protegido ou estragado é dito e nada fica a meio; no
-       cofre, pela letra. O Word é «simples» porque a conversão é fiel nos
-       documentos simples (caderno, ideia 5b). -->
+  <div class="feat w12" id="feat33">
+    <div class="num"><span data-i18n="fvi_num">34 — VÍDEO</span><a class="badge-free" href="#free" data-i18n="badge_free">Grátis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="fvi_h">Cortar, girar, reduzir e ajustar vídeos — ali mesmo, onde eles estão.</h3>
+    <p data-i18n-html="fvi_p">Com um vídeo selecionado, o botão <em>Vídeo</em> acende. <em>Cortar um trecho</em> ou tirar um do meio, <em>dividir</em> em partes de 30 segundos para os status e os stories, <em>juntar</em> vários num só, <em>girar</em> um vídeo filmado de lado — num MP4, sem perder nada de qualidade — e <em>salvar um quadro</em> como JPG, sem parar o vídeo. <em>O som do vídeo</em> sai para MP3, AAC, WMA, WAV, FLAC ou ALAC, ou fica uma cópia sem som. No PREMIUM: <em>converter ou reduzir</em> para caber no WhatsApp — a janela diz qual vai ser o tamanho antes de converter —, um <em>GIF</em> leve de um trecho, o vídeo <em>de trás para frente</em>, <em>adicionar um som</em> (música ou narração), e o <em>Ajustar o vídeo…</em>: as cores e o preto e branco, a velocidade de 0,25× a 4× sem a voz mudar, a entrada a partir do preto e a saída para o preto, o volume, o recorte 9:16 para as redes sociais, o espelho e a marca d'água — numa passagem só, e vistos antes de salvar. <strong>O original fica como está.</strong></p>
+    <div class="feat-mark" data-i18n="fvi_mark">Cortar · Dividir · Juntar · Girar · Quadro · Som → MP3/FLAC · Converter · GIF · Cores · Velocidade · 9:16 · Marca d'água</div>
+    <p class="feat-note">
+      <span data-i18n="fvi_free">Grátis: cortar, dividir, juntar, girar, salvar um quadro e o som do vídeo.</span><br>
+      <span data-i18n="fvi_premium">PREMIUM: converter ou reduzir, o GIF, o “Ajustar o vídeo…”, de trás para frente e adicionar um som.</span>
+      <span class="feat-drm" data-i18n="fvi_note">Também dentro de um cofre: o resultado nasce lá dentro, cifrado, e nada fica em texto claro no disco (salvar o som em FLAC é a exceção, e o app explica por quê).</span>
+    </p>
+  </div>
+
+  <div class="feat w12" id="feat36">
+    <div class="num"><span data-i18n="fim_num">35 — IMAGEM</span><a class="badge-free" href="#free" data-i18n="badge_free">Grátis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="fim_h">O que uma foto leva escondido — e as ferramentas para tratá-la.</h3>
+    <p data-i18n-html="fim_p">Com uma imagem selecionada, o botão <em>Imagem</em> acende. O <em>Raio-X da foto</em> mostra o que ela leva escondido — onde foi tirada, a câmera e o número de série dela, as datas, e a miniatura escondida, que às vezes ainda mostra o que foi cortado — e salva uma cópia só com o que você escolher. Diz também se a imagem <em>declara</em> ter sido feita ou editada com IA, e com qual programa, e o <em>Perto de…</em> diz a localidade sem ir à internet. Depois: <em>recortar</em> e endireitar um horizonte torto, <em>reduzir para enviar</em> com o tamanho que você quiser, <em>girar e espelhar</em> — num JPG, sem perder nada de qualidade —, <em>mudar o formato</em> (o HEIC do iPhone para JPG com um clique, e até ícones .ico do Windows), <em>copiar a imagem</em> para colar no WhatsApp, e <em>Ctrl+V</em> numa pasta transforma um print em arquivo. No PREMIUM: <em>copiar o texto</em> de uma imagem, <em>cobrir o que é privado</em> (e-mails, telefones, IBAN, cartões e rostos), <em>juntar</em> e <em>dividir</em> imagens, e o <em>fundo transparente</em>. <strong>O original fica como está.</strong></p>
+    <div class="feat-mark" data-i18n="fim_mark">Raio-X · Marca de IA · Perto de… · Recortar · Reduzir · Girar · HEIC → JPG · ICO · Copiar · Ctrl+V · Texto · Cobrir · Juntar · Dividir · Fundo transparente</div>
+    <p class="feat-note">
+      <span data-i18n="fim_free">Grátis: o raio-X, recortar, reduzir, girar e espelhar, mudar o formato (com ICO), copiar e colar como arquivo.</span><br>
+      <span data-i18n="fim_premium">PREMIUM: copiar o texto, cobrir o que é privado, juntar, dividir e o fundo transparente.</span>
+      <span class="feat-drm" data-i18n="fim_note">Não ter marca de IA não quer dizer que a imagem seja real: muitas não trazem. O “Cobrir o que é privado” encontra muita coisa, mas confira sempre antes de enviar. O “Ver no mapa…” pergunta antes, porque aí as coordenadas vão para o OpenStreetMap. Os nomes das localidades vêm do GeoNames (geonames.org), CC BY 4.0 — a atribuição completa está em “Tecnologias”.</span>
+    </p>
+  </div>
+
   <div class="feat w12" id="feat34">
-    <div class="num"><span data-i18n="f34_num">34 — PDF TOOLS</span><a class="badge-free" href="#free" data-i18n="badge_free">Grátis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <div class="num"><span data-i18n="fpdf_num">36 — PDF</span><a class="badge-free" href="#free" data-i18n="badge_free">Grátis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f34_h">Juntar, dividir e organizar PDFs — ali mesmo, onde eles estão.</h3>
-    <p data-i18n-html="f34_p">Com um PDF selecionado, o botão <em>PDF Tools</em> acende no topo, com as ferramentas de PDF. <em>Junte</em> vários em um só, <em>divida</em> por intervalos de páginas (<em>1-3, 5, 8-</em>) ou <em>organize as páginas</em> em miniaturas: girar, excluir, mudar a ordem ou tirar algumas para um PDF novo. Transforme páginas em <em>imagens JPG ou PNG</em>, coloque ou tire uma <em>senha</em> e <em>converta</em> para PDF imagens JPG/PNG e documentos Word simples. <strong>O original nunca é alterado</strong>: cada resultado é um PDF novo, bem ao lado, com os marcadores e os dados do documento. Nada é enviado para lugar nenhum.</p>
-    <div class="feat-mark" data-i18n="f34_mark">Juntar PDF · Dividir PDF · Girar e reordenar páginas · PDF para JPG/PNG · Colocar ou tirar senha do PDF · Word e JPG para PDF</div>
+    <p data-i18n-html="fpdf_p">Com um PDF selecionado, o botão <em>PDF</em> acende no topo, com as ferramentas de PDF. <em>Junte</em> vários em um só, <em>divida</em> por intervalos de páginas (<em>1-3, 5, 8-</em>) ou <em>organize as páginas</em> em miniaturas: girar, excluir, mudar a ordem ou tirar algumas para um PDF novo. Transforme páginas em <em>imagens JPG ou PNG</em>, coloque ou tire uma <em>senha</em> e <em>converta</em> para PDF imagens JPG/PNG e documentos Word simples — ou coloque <em>várias fotos numa folha A4</em>, na ordem da lista, vendo à direita o PDF como vai ficar, página por página. <strong>O original nunca é alterado</strong>: cada resultado é um PDF novo, bem ao lado, com os marcadores e os dados do documento. Nada é enviado para lugar nenhum.</p>
+    <div class="feat-mark" data-i18n="fpdf_mark">Juntar PDF · Dividir PDF · Girar e reordenar páginas · PDF para JPG/PNG · Colocar ou tirar senha do PDF · Word e JPG para PDF · Várias fotos por folha A4</div>
     <p class="feat-note">
       <span data-i18n="f34_free">Grátis: juntar e dividir.</span><br>
-      <span data-i18n="f34_premium">PREMIUM: organizar páginas, PDF para imagens, colocar ou tirar a senha, converter para PDF.</span>
+      <span data-i18n="fpdf_premium">PREMIUM: organizar páginas, PDF para imagens, colocar ou tirar a senha, converter para PDF (também várias fotos por folha).</span>
       <span class="feat-drm" data-i18n="f34_note">Um PDF protegido ou corrompido é sinalizado, e nada fica feito pela metade. Funciona também dentro de um cofre cifrado, pela letra de unidade.</span>
     </p>
   </div>
@@ -2429,13 +2429,31 @@
     </div>
     <div class="stack-cell">
       <div class="ic" data-i18n="st_capture_ic">CAPTURA</div>
-      <h4>NAudio · NTwain</h4>
-      <p data-i18n="st_capture">Microfone e som do sistema pelo NAudio e WASAPI; o scanner pelo NTwain, o padrão TWAIN.</p>
+      <h4>NAudio · Concentus · NTwain</h4>
+      <p data-i18n="st_capture2">Microfone e som do sistema pelo NAudio e WASAPI; as mensagens de voz do WhatsApp (Opus) pelo Concentus; o scanner pelo NTwain, o padrão TWAIN.</p>
     </div>
     <div class="stack-cell">
       <div class="ic" data-i18n="st_archives_ic">COMPACTADOS</div>
       <h4>SharpCompress</h4>
       <p data-i18n="st_archives">ZIP, RAR, 7z e TAR lidos no lugar, para um compactado abrir como uma pasta.</p>
+    </div>
+    <!-- 15/10, a 2.1.1: o PDFsharp faltava desde 29/09; o vídeo e a imagem não trouxeram bibliotecas (medido no código:
+         o OCR e o FaceDetector do Windows, o Media Foundation e o WIC); e o GeoNames é a atribuição OBRIGATÓRIA da
+         CC BY 4.0 (E-049): de onde vêm os dados, o que se mudou, e onde está a licença. -->
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_pdf_ic">PDF</div>
+      <h4>PDFsharp</h4>
+      <p data-i18n="st_pdf">Juntar, dividir e organizar páginas com o PDFsharp (MIT). As licenças são conferidas a cada versão nova, e não só a cada pacote novo.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_win_ic">WINDOWS</div>
+      <h4>Media Foundation · WIC · OCR</h4>
+      <p data-i18n="st_win">O vídeo, as imagens, a leitura de texto e a detecção de rostos usam o que o Windows já traz. Nenhuma biblioteca a mais para envelhecer mal.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_places_ic">LUGARES</div>
+      <h4>GeoNames</h4>
+      <p data-i18n-html="st_places">O <em>Perto de…</em> usa os nomes e as coordenadas das localidades do <a href="https://www.geonames.org" target="_blank" rel="noopener">GeoNames</a>, com a licença <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>, e funciona sem internet. Alterações: só as localidades com mais de 1000 habitantes ou sedes de município ou região, sem bairros nem lugares históricos, e só os nomes nos idiomas do app.</p>
     </div>
   </div>
 </section>
@@ -2450,13 +2468,14 @@
     <div class="prem-card" id="free">
       <h4 data-i18n="pr_free_h">Grátis</h4>
       <span class="prem-tag" data-i18n="pr_free_tag">para sempre · sem conta</span>
-      <ul data-i18n-html="pr_free_list"><li>Perfis, árvores configuráveis, busca com vários padrões</li><li>Pré-visualização: código, PDF, Word/Excel, Markdown, imagens, livros</li><li>Operações de arquivo com progresso real, velocidade, tempo restante, histórico e conflitos</li><li>Terminais, apps por extensão, compactados como pastas</li><li>Tema escuro completo, 16 idiomas, atualizações automáticas</li><li>Gravação de áudio (microfone)</li><li><strong>1 conexão remota</strong> (SFTP/FTP/FTPS) — navegar e pré-visualizar</li><li>PDF: juntar e dividir</li></ul>
+      <ul data-i18n-html="pr_free_list2"><li>Perfis, árvores configuráveis, busca com vários padrões</li><li>Pré-visualização: código, PDF, Word/Excel, Markdown, imagens, livros</li><li>Operações de arquivo com progresso real, velocidade, tempo restante, histórico e conflitos</li><li>Terminais, apps por extensão, compactados como pastas</li><li>Tema escuro ou claro, 16 idiomas, atualizações automáticas</li><li>Gravação de áudio (microfone)</li><li><strong>1 conexão remota</strong> (SFTP/FTP/FTPS) — navegar e pré-visualizar</li><li>Áudio: cortar, dividir, juntar, mudar o formato, etiquetas do MP3</li><li>Vídeo: cortar, dividir, juntar, girar, salvar um quadro, o som do vídeo</li><li>Imagem: o raio-X da foto, recortar, reduzir, girar, mudar o formato e ICO, copiar e colar</li><li>PDF: juntar e dividir</li></ul>
     </div>
 
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag">doação única de € 19,99 · por máquina</span>
-      <ul data-i18n-html="pr_prem_list"><li><strong>Criar</strong> cofres cifrados</li><li><strong>Acesso remoto completo</strong>: várias conexões, todas as operações, WebDAV, Dropbox, OneDrive</li><li>Gravação de tela <strong>sem marca d'água, sem limite de tempo e com som</strong></li><li>Gravação de vídeo sem marca d'água</li><li>Mixagem de áudio microfone + som do sistema</li><li>Digitalização de várias páginas com alimentador (ADF)</li><li>Leitor de livros completo — EPUB, formatos Kindle, FB2 e quadrinhos</li><li>Cartões de abertura/fecho e faixa de texto nas gravações</li><li>Ferramentas de PDF: organizar páginas, PDF para imagens, senha, converter para PDF</li></ul>
+      <ul data-i18n-html="pr_prem_list2"><li><strong>Criar</strong> cofres cifrados</li><li><strong>Acesso remoto completo</strong>: várias conexões, todas as operações, WebDAV, Dropbox, OneDrive</li><li>Gravação de tela <strong>sem marca d'água, sem limite de tempo e com som</strong></li><li>Gravação de vídeo sem marca d'água</li><li>Mixagem de áudio microfone + som do sistema</li><li>Digitalização de várias páginas com alimentador (ADF)</li><li>Leitor de livros completo — EPUB, formatos Kindle, FB2 e quadrinhos</li><li>Cartões de abertura/fecho e faixa de texto nas gravações</li><li>Ajustar o áudio e Ajustar o vídeo: o estúdio de cada um</li><li>Vídeo: converter ou reduzir, GIF, de trás para frente, adicionar um som</li><li>Imagem: copiar o texto, cobrir o que é privado, juntar, dividir, fundo transparente</li><li>Ferramentas de PDF: organizar páginas, PDF para imagens, senha, converter para PDF, várias fotos por página</li></ul>
+      <p class="prem-note" data-i18n-html="pr_vitrine">No Áudio, no Vídeo, na Imagem e no PDF, as janelas PREMIUM abrem para todos: você vê o que elas fazem antes de ter o PREMIUM.</p>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo

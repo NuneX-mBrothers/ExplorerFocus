@@ -1682,13 +1682,15 @@
          ⛔ 30/09: entrou o PDF TOOLS (#feat34) e saiu, agora sim, o VOICE OVER —
          o mais antigo das seis (Cl127VoiceOver = 1.2.7, medido no Changelog.cs).
          A janela à parte da pré-visualização (2.0.2) NÃO entra: é só mais um
-         modo da pré-visualização (decisão do João). -->
+         modo da pré-visualização (decisão do João).
+         ⛔ 15/10, a 2.1.1 (decisão do João, «concordo com as 6»): Cofres, Áudio, Vídeo, Imagem, PDF e Tema claro.
+         Saíram as 16 línguas, o disco, os livros em papel e o som de um vídeo (passou a ser parte do Vídeo). -->
     <a href="#vault" data-i18n="wn_vault">🔒 保险库</a>
-    <a href="#feat18" data-i18n="wn_langs">🌐 16 种语言</a>
-    <a href="#feat19" data-i18n="wn_disk">💽 磁盘详情</a>
-    <a href="#feat24" data-i18n="wn_books">📖 纸上读书</a>
-    <a href="#feat33" data-i18n="wn_audio">🎧 视频里的声音</a>
-    <a href="#feat34" data-i18n="wn_pdf">📄 PDF 工具</a>
+    <a href="#feat35" data-i18n="wn_audio_211">🎧 音频</a>
+    <a href="#feat33" data-i18n="wn_video">🎬 视频</a>
+    <a href="#feat36" data-i18n="wn_image">🖼 图片</a>
+    <a href="#feat34" data-i18n="wn_pdf_211">📄 PDF</a>
+    <a href="#feat12" data-i18n="wn_light">☀ 浅色模式</a>
   </nav>
   <span class="whatsnew-ver">v2.0.6</span>
 </div>
@@ -1735,8 +1737,8 @@
   <div class="feat w6">
     <div class="num"><span data-i18n="f04_num">04 — 全局搜索</span><a class="badge-free" href="#free" data-i18n="badge_free">免费</a></div>
     <h3 data-i18n="f04_h">跨配置文件搜索,需显式启用。</h3>
-    <p data-i18n="f04_p">右键点击标签 → "加入全局搜索"。点状指示符 (●/○) 立即显示参与情况。结果显示在非模态窗口中。</p>
-    <div class="feat-mark" data-i18n="f04_mark">选择启用 · 非模态结果</div>
+    <p data-i18n="f04_p2">右键点击标签 → "加入全局搜索"。点状指示符 (●/○) 立即显示参与情况。结果直接在 ExplorerFocus 中打开 — 在此窗口或新窗口中，并定位到所选文件。</p>
+    <div class="feat-mark" data-i18n="f04_mark2">选择启用 · 在此窗口或新窗口中打开</div>
   </div>
 
   <div class="feat hero-card w12">
@@ -1811,10 +1813,10 @@
     <p data-i18n-html="f11_p"><em>.cs</em>、<em>.xaml</em>、<em>.json</em>、<em>.md</em>、<em>.cmd</em>、<em>.ps1</em> — 以典型结构开始。输入时只高亮名称部分,不会擦除扩展名。</p>
   </div>
 
-  <div class="feat w4">
-    <div class="num"><span data-i18n="f12_num">12 — 全深色</span><a class="badge-free" href="#free" data-i18n="badge_free">免费</a></div>
-    <h3 data-i18n="f12_h">深色主题贯彻到底。</h3>
-    <p data-i18n="f12_p">标题栏、滚动条、DataGrid、对话框、提示框、Markdown 预览 — 全部统一视觉语言。没有从奇怪地方冒出来的白色。</p>
+  <div class="feat w4" id="feat12">
+    <div class="num"><span data-i18n="f12b_num">12 — 深色或浅色</span><a class="badge-free" href="#free" data-i18n="badge_free">免费</a></div>
+    <h3 data-i18n="f12b_h">深色或浅色，即刻切换。</h3>
+    <p data-i18n-html="f12b_p">一个按钮，就在 PREMIUM 旁边：<em>深色</em>、<em>浅色</em>或<em>跟随 Windows</em>，无需重启。浅色模式下，两个滑块分别调节背景的白度和文字的深浅。每个窗口各自保存自己的设置。</p>
   </div>
 
   <div class="feat w4">
@@ -1974,8 +1976,8 @@
   <div class="feat w12">
     <div class="num"><span data-i18n="f26_num">26 — 录制音频</span><a class="badge-free" href="#free" data-i18n="badge_free">免费</a></div>
     <h3 data-i18n="f26_h">将麦克风直接录制到文件夹。</h3>
-    <p data-i18n-html="f26_p">一键将<em>麦克风</em>录制到当前文件夹。选择麦克风，查看实时<em>电平表</em>，调整录制音量，保存为 <em>WAV</em> 或 <em>M4A/AAC</em>。</p>
-    <div class="feat-mark" data-i18n="f26_mark">麦克风 · 电平表 · WAV · M4A</div>
+    <p data-i18n-html="f26_p2">一键将<em>麦克风</em>录制到当前文件夹。选择麦克风，查看实时<em>电平表</em>，调整录制音量，保存为 <em>MP3</em>、<em>AAC</em>、<em>WMA</em>、<em>WAV</em>、<em>FLAC</em> 或 <em>ALAC</em>。</p>
+    <div class="feat-mark" data-i18n="f26_mark2">麦克风 · 电平表 · MP3 · AAC · WAV · FLAC</div>
   </div>
 
   <div class="feat w12">
@@ -2035,61 +2037,59 @@
     </p>
   </div>
 
-  <!-- ⛔ O 33 entra no FIM e é o sítio CERTO, ao contrário do que costuma ser:
-       os cartões 26 a 32 já são a família da captura e da média (gravar áudio,
-       vídeo, ecrã, cartões de marca, voice over). Um cartão de média encaixa ali.
-       ⚠ GRÁTIS por decisão minha, e é UMA palavra a mudar: extrair o som do teu
-       próprio vídeo é conversão, não criação, e o aviso que ficou escrito no
-       `features-futuras.md` é que, se tudo o que é novo for Premium, o texto do
-       «a grátis é o produto completo para praticamente todos» começa a mentir
-       sozinho sem ninguém o reescrever.
-       🥇 O CONTENTOR NÃO É O CODEC, e é isto que decide a frase da nota. A
-       lista da marca são CAIXAS (.mp4, .mkv, …) e o João mediu que o Windows as
-       abre de origem. Mas dentro da caixa ainda há o codec: um .mp4 com HEVC ou
-       um .mkv com AV1 abre a caixa e pode na mesma não decifrar o conteúdo -- as
-       extensões da Loja acrescentam CODECS, não contentores.
-       ⛔ Por isso a página NÃO diz «suporta MKV» e ponto: diz a REGRA -- «se o
-       Windows conseguir ler o vídeo, o som sai dele» -- que acompanha a máquina
-       de quem usa. Não se promete o que não é nosso.
-       📌 E o botão ACENDE-SE SÓ quando detecta um formato que consegue tratar,
-       o que é a garantia de que nunca há um botão morto. Fica subentendido em
-       vez de explicado -- ordem dele sobre este tipo de frase.
-       📌 Na prática: H.264 com AAC (telemóveis, câmaras, gravadores de ecrã)
-       funciona sem instalar nada, provado ponta-a-ponta.
-       ⛔ AS FRASES SÃO COPIADAS DA APP, não são escritas aqui: «Escrever o som
-       num ficheiro», «Cópia do vídeo sem som» e «O vídeo original fica como
-       está.» são o SomExtrairMenu, o SomCopiaSemSomMenu e o
-       SomOriginalFicaIntacto do LocalizationService.cs, nas 16 línguas. E o
-       formato chama-se AAC, que é como o menu lhe chama -- não M4A.
-       🥇 A promessa do original intacto está na página porque está na app, e a
-       app tem lá escrito porquê: «isto estraga o meu vídeo?» é a primeira
-       pergunta de quem vê um botão destes. -->
-  <div class="feat w12" id="feat33">
-    <div class="num"><span data-i18n="f33_num">33 — 视频里的声音</span><a class="badge-free" href="#free" data-i18n="badge_free">免费</a></div>
-    <h3 data-i18n="f33_h">取出视频里的声音，不用打开任何编辑器。</h3>
-    <p data-i18n-html="f33_p">只要是预览能打开的视频，顶部就会出现一个按钮。<em>将音频保存为文件</em>——<em>MP3</em>、<em>AAC</em>、<em>WMA</em>、<em>WAV</em>、<em>FLAC</em> 或 <em>ALAC</em>，包括无损的——或者做一份<em>无声的视频副本</em>。文件就落在原片旁边，名字相同。<strong>原视频保持不变。</strong>没有转换对话框，没有第二个程序，也没有任何东西离开你的电脑。</p>
-    <div class="feat-mark" data-i18n="f33_mark">MP4 · MOV · MKV · WebM · AVI · WMV · MPEG · M2TS/TS · 3GP → MP3 · AAC · WMA · WAV · FLAC · ALAC</div>
+  <!-- ⛔ 15/10, a 2.1.1: os quatro botões da barra por cima da lista, pela ORDEM DA BARRA (Áudio · Vídeo · Imagem ·
+       PDF). Textos aprovados em Marketing\ExplorerFocus\Docs\site-2.1.1-textos.md; cada afirmação vem das E- da
+       engenharia e da tabela do grátis/PREMIUM (gratis-ou-premium-ferramentas.md). Os nomes são os da app.
+       📌 O cartão do «som de um vídeo» (era o 33) entrou no Vídeo: a âncora #feat33 ficou com o Vídeo, para as
+       ligações de fora continuarem a dar a um vídeo. O PDF passou de 34 a 36, com a âncora #feat34 de sempre.
+       ⛔ O cofre no Vídeo é a frase MEDIDA da E-037, com a exceção do FLAC. O «sem perder qualidade» do rodar é só o
+       que está medido: o MP4 no vídeo, o JPG na imagem.
+       ⛔ A marca de IA: a imagem DECLARA; sem marca não prova que seja real. O tapar: confere-se sempre.
+       ⛔ O «Perto de…» usa o GeoNames (CC BY 4.0): a atribuição completa está na Stack, e é obrigatória (E-049). -->
+
+  <div class="feat w12" id="feat35">
+    <div class="num"><span data-i18n="fau_num">33 — 音频</span><a class="badge-free" href="#free" data-i18n="badge_free">免费</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="fau_h">剪切、拆分、合并音频 — 不用打开编辑器。</h3>
+    <p data-i18n-html="fau_p">选中一个音频文件，顶部的<em>音频</em>按钮就会亮起。边听边<em>剪切一段</em>，按你标记的位置或平均<em>拆分成几段</em>，把多个文件<em>合并</em>成一个——即使格式不同也行——并一键<em>更改格式</em>：MP3、AAC、WMA、WAV、FLAC 或 ALAC。<em>MP3 标签</em>（标题、艺术家、专辑和封面）直接写入文件本身，不动声音。在<em>调整音频…</em>中：音量和<em>标准化</em>、不变调的变速、淡入淡出、去掉开头和结尾的静音，以及缩短语音录音里的停顿。<strong>原文件保持不变。</strong></p>
+    <div class="feat-mark" data-i18n="fau_mark">剪切 · 拆分 · 合并 · 更改格式 · MP3 标签 · 音量 · 速度 · 静音 · 停顿</div>
     <p class="feat-note">
-      <span data-i18n="f33_note">只要 Windows 能播放这个视频，声音就取得出来。只有真的能做时，按钮才会亮起来。</span>
+      <span data-i18n="fau_free">免费：剪切、拆分、合并、更改格式和 MP3 标签。</span><br>
+      <span data-i18n="fau_premium">PREMIUM：“调整音频…”。它对所有人开放：在拥有 PREMIUM 之前，你就能看到、听到它的效果。</span>
     </p>
   </div>
 
-  <!-- ⛔ PDF TOOLS (30/09). Grátis SÓ juntar e dividir; o resto é PREMIUM —
-       decisão do João («só duas coisas são free»). O nome do botão é o da app
-       (LocalizationService.Pdf.cs: PdfToolsBotao); em português fica «PDF
-       Tools», como na app. Cada afirmação vem das notas da engenharia (memória
-       ferramentas-pdf): o original nunca se toca; os marcadores e os dados do
-       documento seguem; protegido ou estragado é dito e nada fica a meio; no
-       cofre, pela letra. O Word é «simples» porque a conversão é fiel nos
-       documentos simples (caderno, ideia 5b). -->
+  <div class="feat w12" id="feat33">
+    <div class="num"><span data-i18n="fvi_num">34 — 视频</span><a class="badge-free" href="#free" data-i18n="badge_free">免费</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="fvi_h">剪切、旋转、缩小、调整视频 — 就在它们所在的地方。</h3>
+    <p data-i18n-html="fvi_p">选中一个视频，<em>视频</em>按钮就会亮起。<em>剪切一段</em>，或从中间去掉一段；按 30 秒一段<em>拆分</em>，方便发状态和快拍；把多个视频<em>合并</em>成一个；<em>旋转</em>横着拍的视频（MP4 完全不损失画质）；还能不停止播放就<em>保存一帧</em>为 JPG。<em>视频的声音</em>可以导出为 MP3、AAC、WMA、WAV、FLAC 或 ALAC，也可以保留一份无声的副本。有了 PREMIUM：<em>转换或缩小</em>到能用 WhatsApp 发送——转换前窗口就会告诉你文件会有多大；把一段做成轻量的 <em>GIF</em>；让视频<em>倒放</em>；<em>添加声音</em>（音乐或旁白）；还有<em>调整视频…</em>：颜色和黑白、0.25× 到 4× 的变速且人声不变调、从黑场淡入和淡出到黑场、音量、适合社交媒体的 9:16 裁切、镜像和水印——一次处理完成，保存前就能看到效果。<strong>原文件保持不变。</strong></p>
+    <div class="feat-mark" data-i18n="fvi_mark">剪切 · 拆分 · 合并 · 旋转 · 帧 · 声音 → MP3/FLAC · 转换 · GIF · 颜色 · 速度 · 9:16 · 水印</div>
+    <p class="feat-note">
+      <span data-i18n="fvi_free">免费：剪切、拆分、合并、旋转、保存一帧，以及视频的声音。</span><br>
+      <span data-i18n="fvi_premium">PREMIUM：转换或缩小、GIF、“调整视频…”、倒放和添加声音。</span>
+      <span class="feat-drm" data-i18n="fvi_note">在保险库里也能用：结果直接在里面生成，已加密，磁盘上不会留下任何明文（把声音存为 FLAC 是例外，应用会解释原因）。</span>
+    </p>
+  </div>
+
+  <div class="feat w12" id="feat36">
+    <div class="num"><span data-i18n="fim_num">35 — 图片</span><a class="badge-free" href="#free" data-i18n="badge_free">免费</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="fim_h">照片里藏着什么 — 以及处理它的工具。</h3>
+    <p data-i18n-html="fim_p">选中一张图片，<em>图片</em>按钮就会亮起。<em>照片透视</em>会显示照片里藏着的信息——拍摄地点、相机及其序列号、各种日期，以及那张隐藏的缩略图（有时还能看出被裁掉的部分）——并保存一份只保留你所选内容的副本。它还会告诉你这张图片是否<em>声明</em>自己由 AI 制作或编辑、用的是什么程序；<em>…附近</em>则不联网就能说出地名。接着：<em>裁剪</em>并拉直歪斜的地平线，按你想要的大小<em>缩小后发送</em>，<em>旋转和翻转</em>（JPG 完全不损失画质），<em>更改格式</em>（一键把 iPhone 的 HEIC 转成 JPG，甚至能做 Windows 的 .ico 图标），<em>复制图片</em>以便粘贴到 WhatsApp，在文件夹里按 <em>Ctrl+V</em> 就能把截图变成文件。有了 PREMIUM：<em>复制图片中的文字</em>、<em>遮盖隐私内容</em>（电子邮件、电话号码、IBAN、银行卡和人脸）、<em>拼接</em>和<em>拆分</em>图片，以及<em>透明背景</em>。<strong>原文件保持不变。</strong></p>
+    <div class="feat-mark" data-i18n="fim_mark">透视 · AI 标记 · …附近 · 裁剪 · 缩小 · 旋转 · HEIC → JPG · ICO · 复制 · Ctrl+V · 文字 · 遮盖 · 拼接 · 拆分 · 透明背景</div>
+    <p class="feat-note">
+      <span data-i18n="fim_free">免费：照片透视、裁剪、缩小、旋转和翻转、更改格式（含 ICO）、复制，以及粘贴为文件。</span><br>
+      <span data-i18n="fim_premium">PREMIUM：复制文字、遮盖隐私内容、拼接、拆分和透明背景。</span>
+      <span class="feat-drm" data-i18n="fim_note">没有 AI 标记不代表图片是真实的：很多图片并不带标记。“遮盖隐私内容”能找出很多，但发送前一定要自己再检查一遍。“在地图上查看…”会先询问，因为这时坐标会发送到 OpenStreetMap。地名来自 GeoNames（geonames.org），CC BY 4.0 — 完整的署名见“技术栈”部分。</span>
+    </p>
+  </div>
+
   <div class="feat w12" id="feat34">
-    <div class="num"><span data-i18n="f34_num">34 — PDF 工具</span><a class="badge-free" href="#free" data-i18n="badge_free">免费</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <div class="num"><span data-i18n="fpdf_num">36 — PDF</span><a class="badge-free" href="#free" data-i18n="badge_free">免费</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f34_h">合并、拆分、整理 PDF — 就在它们所在的地方。</h3>
-    <p data-i18n-html="f34_p">选中一个 PDF，顶部的 <em>PDF 工具</em> 按钮就会亮起。把多个文件<em>合并</em>成一个，按页码范围<em>拆分</em>（<em>1-3, 5, 8-</em>），或在缩略图上<em>整理页面</em>：旋转、删除、调整顺序，或把几页取出为新的 PDF。把页面转成 <em>JPG 或 PNG 图片</em>，添加或移除<em>密码</em>，并把 JPG/PNG 图片和简单的 Word 文档<em>转换</em>为 PDF。<strong>原文件永远不会被改动</strong>：每个结果都是紧挨着它的新 PDF，并保留书签和文档信息。不会上传任何内容。</p>
-    <div class="feat-mark" data-i18n="f34_mark">PDF 合并 · PDF 拆分 · 旋转和排序页面 · PDF 转 JPG/PNG · PDF 加密或解除密码 · Word、JPG 转 PDF</div>
+    <p data-i18n-html="fpdf_p">选中一个 PDF，顶部的 <em>PDF</em> 按钮就会亮起。把多个文件<em>合并</em>成一个，按页码范围<em>拆分</em>（<em>1-3, 5, 8-</em>），或在缩略图上<em>整理页面</em>：旋转、删除、调整顺序，或把几页取出为新的 PDF。把页面转成 <em>JPG 或 PNG 图片</em>，添加或移除<em>密码</em>，并把 JPG/PNG 图片和简单的 Word 文档<em>转换</em>为 PDF — 或者把<em>几张照片排在一页 A4 上</em>，按列表顺序排列，并在右侧逐页看到 PDF 最终的样子。<strong>原文件永远不会被改动</strong>：每个结果都是紧挨着它的新 PDF，并保留书签和文档信息。不会上传任何内容。</p>
+    <div class="feat-mark" data-i18n="fpdf_mark">PDF 合并 · PDF 拆分 · 旋转和排序页面 · PDF 转 JPG/PNG · PDF 加密或解除密码 · Word、JPG 转 PDF · 一页 A4 多张照片</div>
     <p class="feat-note">
       <span data-i18n="f34_free">免费：合并与拆分。</span><br>
-      <span data-i18n="f34_premium">PREMIUM：整理页面、PDF 转图片、添加或移除密码、转换为 PDF。</span>
+      <span data-i18n="fpdf_premium">PREMIUM：整理页面、PDF 转图片、添加或移除密码、转换为 PDF（也包括一页多张照片）。</span>
       <span class="feat-drm" data-i18n="f34_note">受保护或已损坏的 PDF 会明确提示，不会留下做了一半的文件。在加密保险库里也能用，通过它的盘符。</span>
     </p>
   </div>
@@ -2429,13 +2429,31 @@
     </div>
     <div class="stack-cell">
       <div class="ic" data-i18n="st_capture_ic">采集</div>
-      <h4>NAudio · NTwain</h4>
-      <p data-i18n="st_capture">麦克风与系统声音通过 NAudio 和 WASAPI；扫描仪通过 NTwain，即 TWAIN 标准。</p>
+      <h4>NAudio · Concentus · NTwain</h4>
+      <p data-i18n="st_capture2">麦克风与系统声音通过 NAudio 和 WASAPI；WhatsApp 语音消息（Opus）通过 Concentus；扫描仪通过 NTwain，即 TWAIN 标准。</p>
     </div>
     <div class="stack-cell">
       <div class="ic" data-i18n="st_archives_ic">压缩包</div>
       <h4>SharpCompress</h4>
       <p data-i18n="st_archives">ZIP、RAR、7z 和 TAR 就地读取，压缩包像文件夹一样打开。</p>
+    </div>
+    <!-- 15/10, a 2.1.1: o PDFsharp faltava desde 29/09; o vídeo e a imagem não trouxeram bibliotecas (medido no código:
+         o OCR e o FaceDetector do Windows, o Media Foundation e o WIC); e o GeoNames é a atribuição OBRIGATÓRIA da
+         CC BY 4.0 (E-049): de onde vêm os dados, o que se mudou, e onde está a licença. -->
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_pdf_ic">PDF</div>
+      <h4>PDFsharp</h4>
+      <p data-i18n="st_pdf">合并、拆分和整理页面通过 PDFsharp（MIT）。每次发布新版本都会核对许可证，而不只是在加入新包时。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_win_ic">WINDOWS</div>
+      <h4>Media Foundation · WIC · OCR</h4>
+      <p data-i18n="st_win">视频、图片、文字识别和人脸查找，用的都是 Windows 自带的功能。没有会过时的额外库。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_places_ic">地名</div>
+      <h4>GeoNames</h4>
+      <p data-i18n-html="st_places"><em>…附近</em>使用来自 <a href="https://www.geonames.org" target="_blank" rel="noopener">GeoNames</a> 的地名和坐标，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a> 许可证，无需联网即可使用。所做修改：只保留人口超过 1000 的地点或市镇、地区的行政中心，不含街区和历史地点，并且只保留应用所支持语言的名称。</p>
     </div>
   </div>
 </section>
@@ -2450,13 +2468,14 @@
     <div class="prem-card" id="free">
       <h4 data-i18n="pr_free_h">免费</h4>
       <span class="prem-tag" data-i18n="pr_free_tag">永久 · 无需账号</span>
-      <ul data-i18n-html="pr_free_list"><li>配置档、可自定义目录树、多模式搜索</li><li>预览：代码、PDF、Word/Excel、Markdown、图片、图书</li><li>文件操作：真实进度、速度、剩余时间、历史记录与冲突处理</li><li>终端、按扩展名关联应用、把压缩包当文件夹浏览</li><li>完整深色主题、16 种语言、自动更新</li><li>录音（麦克风）</li><li><strong>1 个远程连接</strong>（SFTP/FTP/FTPS）— 浏览与预览</li><li>PDF：合并与拆分</li></ul>
+      <ul data-i18n-html="pr_free_list2"><li>配置档、可自定义目录树、多模式搜索</li><li>预览：代码、PDF、Word/Excel、Markdown、图片、图书</li><li>文件操作：真实进度、速度、剩余时间、历史记录与冲突处理</li><li>终端、按扩展名关联应用、把压缩包当文件夹浏览</li><li>深色或浅色主题、16 种语言、自动更新</li><li>录音（麦克风）</li><li><strong>1 个远程连接</strong>（SFTP/FTP/FTPS）— 浏览与预览</li><li>音频：剪切、拆分、合并、更改格式、MP3 标签</li><li>视频：剪切、拆分、合并、旋转、保存一帧、视频的声音</li><li>图片：照片透视、裁剪、缩小、旋转、更改格式和 ICO、复制和粘贴</li><li>PDF：合并与拆分</li></ul>
     </div>
 
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">PREMIUM</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag">一次性捐赠 19,99 € · 按设备授权</span>
-      <ul data-i18n-html="pr_prem_list"><li><strong>创建</strong>加密保险库</li><li><strong>完整远程访问</strong>：多个连接、全部操作、WebDAV、Dropbox、OneDrive</li><li>屏幕录制<strong>无水印、无时长限制、带声音</strong></li><li>摄像头录制无水印</li><li>音频混合麦克风 + 系统声音</li><li>多页扫描，支持自动进纸器（ADF）</li><li>完整图书阅读器 — EPUB、Kindle 格式、FB2 和漫画</li><li>录制的片头/片尾卡片与文字横幅</li><li>PDF 工具：整理页面、PDF 转图片、密码、转换为 PDF</li></ul>
+      <ul data-i18n-html="pr_prem_list2"><li><strong>创建</strong>加密保险库</li><li><strong>完整远程访问</strong>：多个连接、全部操作、WebDAV、Dropbox、OneDrive</li><li>屏幕录制<strong>无水印、无时长限制、带声音</strong></li><li>摄像头录制无水印</li><li>音频混合麦克风 + 系统声音</li><li>多页扫描，支持自动进纸器（ADF）</li><li>完整图书阅读器 — EPUB、Kindle 格式、FB2 和漫画</li><li>录制的片头/片尾卡片与文字横幅</li><li>“调整音频”和“调整视频”：各自完整的工作室</li><li>视频：转换或缩小、GIF、倒放、添加声音</li><li>图片：复制文字、遮盖隐私内容、拼接、拆分、透明背景</li><li>PDF 工具：整理页面、PDF 转图片、密码、转换为 PDF、一页多张照片</li></ul>
+      <p class="prem-note" data-i18n-html="pr_vitrine">在音频、视频、图片和 PDF 里，PREMIUM 窗口对所有人开放：在拥有 PREMIUM 之前，你就能看到它们能做什么。</p>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo

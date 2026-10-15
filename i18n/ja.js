@@ -378,5 +378,6 @@ window.I18N.ja = {
   "st_places_ic": "地名",
   "st_places": "<em>…付近</em>は、<a href=\"https://www.geonames.org\" target=\"_blank\" rel=\"noopener\">GeoNames</a> の地名と座標を <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a> ライセンスのもとで使い、インターネットなしで動きます。変更点：人口 1000 人を超える場所か、市町村や地域の中心地だけに絞り、地区や歴史上の場所は除き、名前はアプリの言語のものだけにしています。",
   "st_pdf_ic": "PDF",
-  "st_pdf": "結合、分割、ページの整理は PDFsharp（MIT）。ライセンスは、新しいパッケージのたびだけでなく、新しいバージョンのたびに確かめています。"
+  "st_pdf": "結合、分割、ページの整理は PDFsharp（MIT）。ライセンスは、新しいパッケージのたびだけでなく、新しいバージョンのたびに確かめています。",
+  "sh_v2_claro": "<strong>ライトモード</strong>にも対応"
 };

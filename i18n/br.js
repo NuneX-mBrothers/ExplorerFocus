@@ -382,5 +382,6 @@ window.I18N.br = {
   "st_places_ic": "LUGARES",
   "st_places": "O <em>Perto de…</em> usa os nomes e as coordenadas das localidades do <a href=\"https://www.geonames.org\" target=\"_blank\" rel=\"noopener\">GeoNames</a>, com a licença <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>, e funciona sem internet. Alterações: só as localidades com mais de 1000 habitantes ou sedes de município ou região, sem bairros nem lugares históricos, e só os nomes nos idiomas do app.",
   "st_pdf_ic": "PDF",
-  "st_pdf": "Juntar, dividir e organizar páginas com o PDFsharp (MIT). As licenças são conferidas a cada versão nova, e não só a cada pacote novo."
+  "st_pdf": "Juntar, dividir e organizar páginas com o PDFsharp (MIT). As licenças são conferidas a cada versão nova, e não só a cada pacote novo.",
+  "sh_v2_claro": "No <strong>modo claro</strong>"
 };

@@ -382,5 +382,6 @@ window.I18N["zh-TW"] = {
   "st_places_ic": "地名",
   "st_places": "<em>…附近</em>使用來自 <a href=\"https://www.geonames.org\" target=\"_blank\" rel=\"noopener\">GeoNames</a> 的地名和座標，採用 <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a> 授權，不必連網就能運作。修改之處：只保留人口超過 1000 的地點，或鄉鎮、地區的行政中心，不含街區和歷史地點，而且只保留程式所支援語言的名稱。",
   "st_pdf_ic": "PDF",
-  "st_pdf": "合併、分割和整理頁面走 PDFsharp（MIT）。每出一個新版本都會核對授權，而不只是每加一個新套件時。"
+  "st_pdf": "合併、分割和整理頁面走 PDFsharp（MIT）。每出一個新版本都會核對授權，而不只是每加一個新套件時。",
+  "sh_v2_claro": "還有<strong>淺色模式</strong>"
 };

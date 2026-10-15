@@ -1682,13 +1682,15 @@
          ⛔ 30/09: entrou o PDF TOOLS (#feat34) e saiu, agora sim, o VOICE OVER —
          o mais antigo das seis (Cl127VoiceOver = 1.2.7, medido no Changelog.cs).
          A janela à parte da pré-visualização (2.0.2) NÃO entra: é só mais um
-         modo da pré-visualização (decisão do João). -->
+         modo da pré-visualização (decisão do João).
+         ⛔ 15/10, a 2.1.1 (decisão do João, «concordo com as 6»): Cofres, Áudio, Vídeo, Imagem, PDF e Tema claro.
+         Saíram as 16 línguas, o disco, os livros em papel e o som de um vídeo (passou a ser parte do Vídeo). -->
     <a href="#vault" data-i18n="wn_vault">🔒 तिजोरियाँ</a>
-    <a href="#feat18" data-i18n="wn_langs">🌐 16 भाषाएँ</a>
-    <a href="#feat19" data-i18n="wn_disk">💽 डिस्क, ब्यौरे में</a>
-    <a href="#feat24" data-i18n="wn_books">📖 कागज़ पर किताबें</a>
-    <a href="#feat33" data-i18n="wn_audio">🎧 वीडियो की आवाज़</a>
-    <a href="#feat34" data-i18n="wn_pdf">📄 PDF टूल्स</a>
+    <a href="#feat35" data-i18n="wn_audio_211">🎧 ऑडियो</a>
+    <a href="#feat33" data-i18n="wn_video">🎬 वीडियो</a>
+    <a href="#feat36" data-i18n="wn_image">🖼 छवि</a>
+    <a href="#feat34" data-i18n="wn_pdf_211">📄 PDF</a>
+    <a href="#feat12" data-i18n="wn_light">☀ हल्का थीम</a>
   </nav>
   <span class="whatsnew-ver">v2.0.6</span>
 </div>
@@ -1735,8 +1737,8 @@
   <div class="feat w6">
     <div class="num"><span data-i18n="f04_num">04 — वैश्विक खोज</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a></div>
     <h3 data-i18n="f04_h">प्रोफ़ाइलों के आर-पार खोज, पर आपकी साफ़ सहमति से।</h3>
-    <p data-i18n="f04_p">टैब पर राइट-क्लिक → “वैश्विक खोज में शामिल करें”। बिंदु (●/○) बताता है कौन अंदर है। नतीजे एक ऐसी खिड़की में, जो काम नहीं रोकती।</p>
-    <div class="feat-mark" data-i18n="f04_mark">सहमति से · काम न रोकने वाले नतीजे</div>
+    <p data-i18n="f04_p2">टैब पर राइट-क्लिक → “वैश्विक खोज में शामिल करें”। बिंदु (●/○) बताता है कौन अंदर है। नतीजे सीधे ExplorerFocus में ही खुलते हैं — इसी खिड़की में या नई में, चुनी हुई फ़ाइल पर।</p>
+    <div class="feat-mark" data-i18n="f04_mark2">सहमति से · यहीं या नई खिड़की में खुलता है</div>
   </div>
 
   <div class="feat hero-card w12">
@@ -1811,10 +1813,10 @@
     <p data-i18n-html="f11_p"><em>.cs</em>, <em>.xaml</em>, <em>.json</em>, <em>.md</em>, <em>.cmd</em>, <em>.ps1</em> — सामान्य ढाँचे के साथ शुरू होती हैं। लिखते समय नाम चुना रहता है और एक्सटेंशन मिटता नहीं।</p>
   </div>
 
-  <div class="feat w4">
-    <div class="num"><span data-i18n="f12_num">12 — पूरी तरह गहरा</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a></div>
-    <h3 data-i18n="f12_h">गहरा थीम आख़िर तक।</h3>
-    <p data-i18n="f12_p">शीर्षक पट्टी, स्क्रॉलबार, तालिकाएँ, संवाद, संकेत, Markdown पूर्वावलोकन — सब एक ही दृश्य भाषा में। अनपेक्षित जगहों से निकलने वाला कोई सफ़ेद नहीं।</p>
+  <div class="feat w4" id="feat12">
+    <div class="num"><span data-i18n="f12b_num">12 — गहरा या हल्का</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a></div>
+    <h3 data-i18n="f12b_h">गहरा या हल्का, तुरंत।</h3>
+    <p data-i18n-html="f12b_p">एक ही बटन, PREMIUM के बगल में: <em>गहरा</em>, <em>हल्का</em> या <em>Windows जैसा</em>, बिना फिर से चालू किए। हल्के थीम में दो स्लाइडर पृष्ठभूमि की सफ़ेदी और अक्षरों का गहरापन ठीक करते हैं। हर खिड़की अपनी पसंद याद रखती है।</p>
   </div>
 
   <div class="feat w4">
@@ -1974,8 +1976,8 @@
   <div class="feat w12">
     <div class="num"><span data-i18n="f26_num">26 — ऑडियो रिकॉर्ड</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a></div>
     <h3 data-i18n="f26_h">माइक्रोफ़ोन को सीधे फ़ोल्डर में रिकॉर्ड कीजिए।</h3>
-    <p data-i18n-html="f26_p">एक क्लिक <em>माइक्रोफ़ोन</em> को मौजूदा फ़ोल्डर में रिकॉर्ड करता है। माइक्रोफ़ोन चुनिए, चलता <em>स्तर मीटर</em> देखिए, रिकॉर्डिंग की आवाज़ ठीक कीजिए और <em>WAV</em> या <em>M4A/AAC</em> में सहेजिए।</p>
-    <div class="feat-mark" data-i18n="f26_mark">माइक्रोफ़ोन · स्तर मीटर · WAV · M4A</div>
+    <p data-i18n-html="f26_p2">एक क्लिक <em>माइक्रोफ़ोन</em> को मौजूदा फ़ोल्डर में रिकॉर्ड करता है। माइक्रोफ़ोन चुनिए, चलता <em>स्तर मीटर</em> देखिए, रिकॉर्डिंग की आवाज़ ठीक कीजिए और <em>MP3</em>, <em>AAC</em>, <em>WMA</em>, <em>WAV</em>, <em>FLAC</em> या <em>ALAC</em> में सहेजिए।</p>
+    <div class="feat-mark" data-i18n="f26_mark2">माइक्रोफ़ोन · स्तर मीटर · MP3 · AAC · WAV · FLAC</div>
   </div>
 
   <div class="feat w12">
@@ -2035,61 +2037,59 @@
     </p>
   </div>
 
-  <!-- ⛔ O 33 entra no FIM e é o sítio CERTO, ao contrário do que costuma ser:
-       os cartões 26 a 32 já são a família da captura e da média (gravar áudio,
-       vídeo, ecrã, cartões de marca, voice over). Um cartão de média encaixa ali.
-       ⚠ GRÁTIS por decisão minha, e é UMA palavra a mudar: extrair o som do teu
-       próprio vídeo é conversão, não criação, e o aviso que ficou escrito no
-       `features-futuras.md` é que, se tudo o que é novo for Premium, o texto do
-       «a grátis é o produto completo para praticamente todos» começa a mentir
-       sozinho sem ninguém o reescrever.
-       🥇 O CONTENTOR NÃO É O CODEC, e é isto que decide a frase da nota. A
-       lista da marca são CAIXAS (.mp4, .mkv, …) e o João mediu que o Windows as
-       abre de origem. Mas dentro da caixa ainda há o codec: um .mp4 com HEVC ou
-       um .mkv com AV1 abre a caixa e pode na mesma não decifrar o conteúdo -- as
-       extensões da Loja acrescentam CODECS, não contentores.
-       ⛔ Por isso a página NÃO diz «suporta MKV» e ponto: diz a REGRA -- «se o
-       Windows conseguir ler o vídeo, o som sai dele» -- que acompanha a máquina
-       de quem usa. Não se promete o que não é nosso.
-       📌 E o botão ACENDE-SE SÓ quando detecta um formato que consegue tratar,
-       o que é a garantia de que nunca há um botão morto. Fica subentendido em
-       vez de explicado -- ordem dele sobre este tipo de frase.
-       📌 Na prática: H.264 com AAC (telemóveis, câmaras, gravadores de ecrã)
-       funciona sem instalar nada, provado ponta-a-ponta.
-       ⛔ AS FRASES SÃO COPIADAS DA APP, não são escritas aqui: «Escrever o som
-       num ficheiro», «Cópia do vídeo sem som» e «O vídeo original fica como
-       está.» são o SomExtrairMenu, o SomCopiaSemSomMenu e o
-       SomOriginalFicaIntacto do LocalizationService.cs, nas 16 línguas. E o
-       formato chama-se AAC, que é como o menu lhe chama -- não M4A.
-       🥇 A promessa do original intacto está na página porque está na app, e a
-       app tem lá escrito porquê: «isto estraga o meu vídeo?» é a primeira
-       pergunta de quem vê um botão destes. -->
-  <div class="feat w12" id="feat33">
-    <div class="num"><span data-i18n="f33_num">33 — वीडियो की आवाज़</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a></div>
-    <h3 data-i18n="f33_h">वीडियो की आवाज़, बिना कोई एडिटर खोले।</h3>
-    <p data-i18n-html="f33_p">प्रीव्यू जो भी वीडियो खोल सकता है, उसके ऊपर एक बटन आ जाता है। <em>ऑडियो को फ़ाइल में सहेजें</em> — <em>MP3</em>, <em>AAC</em>, <em>WMA</em>, <em>WAV</em>, <em>FLAC</em> या <em>ALAC</em>, बिना नुकसान वाले भी शामिल — या <em>बिना ध्वनि के वीडियो की कॉपी</em> बनाओ। वह मूल के ठीक बगल में, उसी नाम से आ जाती है। <strong>मूल वीडियो जैसा है वैसा ही रहता है।</strong> कोई कनवर्ज़न विंडो नहीं, कोई दूसरा प्रोग्राम नहीं, और कुछ भी तुम्हारी मशीन से बाहर नहीं जाता।</p>
-    <div class="feat-mark" data-i18n="f33_mark">MP4 · MOV · MKV · WebM · AVI · WMV · MPEG · M2TS/TS · 3GP → MP3 · AAC · WMA · WAV · FLAC · ALAC</div>
+  <!-- ⛔ 15/10, a 2.1.1: os quatro botões da barra por cima da lista, pela ORDEM DA BARRA (Áudio · Vídeo · Imagem ·
+       PDF). Textos aprovados em Marketing\ExplorerFocus\Docs\site-2.1.1-textos.md; cada afirmação vem das E- da
+       engenharia e da tabela do grátis/PREMIUM (gratis-ou-premium-ferramentas.md). Os nomes são os da app.
+       📌 O cartão do «som de um vídeo» (era o 33) entrou no Vídeo: a âncora #feat33 ficou com o Vídeo, para as
+       ligações de fora continuarem a dar a um vídeo. O PDF passou de 34 a 36, com a âncora #feat34 de sempre.
+       ⛔ O cofre no Vídeo é a frase MEDIDA da E-037, com a exceção do FLAC. O «sem perder qualidade» do rodar é só o
+       que está medido: o MP4 no vídeo, o JPG na imagem.
+       ⛔ A marca de IA: a imagem DECLARA; sem marca não prova que seja real. O tapar: confere-se sempre.
+       ⛔ O «Perto de…» usa o GeoNames (CC BY 4.0): a atribuição completa está na Stack, e é obrigatória (E-049). -->
+
+  <div class="feat w12" id="feat35">
+    <div class="num"><span data-i18n="fau_num">33 — ऑडियो</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="fau_h">ऑडियो काटें, बाँटें और जोड़ें — बिना कोई एडिटर खोले।</h3>
+    <p data-i18n-html="fau_p">कोई ऑडियो फ़ाइल चुनें और ऊपर <em>ऑडियो</em> बटन जल उठता है। सुनते हुए <em>एक हिस्सा काटें</em>, अपने लगाए बिंदुओं पर या बराबर हिस्सों में <em>भागों में बाँटें</em>, कई फ़ाइलों को एक में <em>जोड़ें</em> — अलग-अलग फ़ॉर्मैट की हों तब भी — और एक क्लिक में <em>फ़ॉर्मैट बदलें</em>: MP3, AAC, WMA, WAV, FLAC या ALAC। <em>MP3 टैग</em> (शीर्षक, कलाकार, एल्बम और कवर) फ़ाइल में ही लिखे जाते हैं, आवाज़ को छुए बिना। <em>ऑडियो समायोजित करें…</em> में: वॉल्यूम और <em>सामान्य करें</em>, सुर बदले बिना गति, फ़ेड इन और फ़ेड आउट, शुरुआत और अंत की ख़ामोशी हटाना, और आवाज़ की रिकॉर्डिंग के विराम छोटे करना। <strong>मूल जैसा है वैसा ही रहता है।</strong></p>
+    <div class="feat-mark" data-i18n="fau_mark">काटें · बाँटें · जोड़ें · फ़ॉर्मैट बदलें · MP3 टैग · वॉल्यूम · गति · ख़ामोशी · विराम</div>
     <p class="feat-note">
-      <span data-i18n="f33_note">अगर Windows वीडियो चला सकता है, तो आवाज़ भी निकल आती है। बटन तभी जलता है जब वह सचमुच कर सकता है।</span>
+      <span data-i18n="fau_free">मुफ़्त: काटना, बाँटना, जोड़ना, फ़ॉर्मैट बदलना और MP3 टैग।</span><br>
+      <span data-i18n="fau_premium">PREMIUM: “ऑडियो समायोजित करें…”। यह सबके लिए खुलता है: PREMIUM पाने से पहले ही आप देख और सुन सकते हैं कि यह क्या करता है।</span>
     </p>
   </div>
 
-  <!-- ⛔ PDF TOOLS (30/09). Grátis SÓ juntar e dividir; o resto é PREMIUM —
-       decisão do João («só duas coisas são free»). O nome do botão é o da app
-       (LocalizationService.Pdf.cs: PdfToolsBotao); em português fica «PDF
-       Tools», como na app. Cada afirmação vem das notas da engenharia (memória
-       ferramentas-pdf): o original nunca se toca; os marcadores e os dados do
-       documento seguem; protegido ou estragado é dito e nada fica a meio; no
-       cofre, pela letra. O Word é «simples» porque a conversão é fiel nos
-       documentos simples (caderno, ideia 5b). -->
+  <div class="feat w12" id="feat33">
+    <div class="num"><span data-i18n="fvi_num">34 — वीडियो</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="fvi_h">वीडियो काटें, घुमाएँ, छोटा करें और समायोजित करें — ठीक वहीं, जहाँ वे हैं।</h3>
+    <p data-i18n-html="fvi_p">कोई वीडियो चुनें और <em>वीडियो</em> बटन जल उठता है। <em>एक हिस्सा काटें</em> या बीच से कोई हिस्सा हटाएँ, स्टेटस और स्टोरी के लिए 30 सेकंड के भागों में <em>बाँटें</em>, कई वीडियो को एक में <em>जोड़ें</em>, तिरछे फ़िल्माए गए वीडियो को <em>घुमाएँ</em> — MP4 हो तो गुणवत्ता ज़रा भी खोए बिना — और वीडियो रोके बिना JPG के रूप में <em>एक फ़्रेम सहेजें</em>। <em>वीडियो की आवाज़</em> MP3, AAC, WMA, WAV, FLAC या ALAC में सहेजी जा सकती है, या बिना आवाज़ के वीडियो की कॉपी बनाई जा सकती है। PREMIUM में: WhatsApp में भेजने लायक <em>कन्वर्ट करें या छोटा करें</em> — कन्वर्ट करने से पहले खिड़की बताती है कि फ़ाइल कितनी बड़ी होगी — किसी हिस्से का हल्का <em>GIF</em> बनाएँ, वीडियो <em>उल्टा चलाएँ</em>, <em>आवाज़ जोड़ें</em> (संगीत या कमेंट्री), और <em>वीडियो समायोजित करें…</em>: रंग और श्वेत-श्याम, आवाज़ का सुर बदले बिना 0.25× से 4× तक गति, काले से फ़ेड इन और काले में फ़ेड आउट, वॉल्यूम, सोशल मीडिया के लिए 9:16 क्रॉप, दर्पण और वॉटरमार्क — सब एक ही बार में, और सहेजने से पहले देखकर। <strong>मूल जैसा है वैसा ही रहता है।</strong></p>
+    <div class="feat-mark" data-i18n="fvi_mark">काटें · बाँटें · जोड़ें · घुमाएँ · फ़्रेम · आवाज़ → MP3/FLAC · कन्वर्ट · GIF · रंग · गति · 9:16 · वॉटरमार्क</div>
+    <p class="feat-note">
+      <span data-i18n="fvi_free">मुफ़्त: काटना, बाँटना, जोड़ना, घुमाना, एक फ़्रेम सहेजना और वीडियो की आवाज़।</span><br>
+      <span data-i18n="fvi_premium">PREMIUM: कन्वर्ट करना या छोटा करना, GIF, “वीडियो समायोजित करें…”, उल्टा चलाना और आवाज़ जोड़ना।</span>
+      <span class="feat-drm" data-i18n="fvi_note">तिजोरी के अंदर भी: नतीजा वहीं अंदर बनता है, एन्क्रिप्टेड, और डिस्क पर कुछ भी सादे रूप में नहीं छूटता (आवाज़ को FLAC में सहेजना अपवाद है, और ऐप इसका कारण बताता है)।</span>
+    </p>
+  </div>
+
+  <div class="feat w12" id="feat36">
+    <div class="num"><span data-i18n="fim_num">35 — छवि</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="fim_h">एक फ़ोटो क्या छिपाए रहती है — और उससे निपटने के टूल।</h3>
+    <p data-i18n-html="fim_p">कोई छवि चुनें और <em>छवि</em> बटन जल उठता है। <em>फ़ोटो का एक्स-रे</em> दिखाता है कि उसमें क्या छिपा है — वह कहाँ ली गई, कैमरा और उसका सीरियल नंबर, तारीख़ें, और छिपा थंबनेल, जो कभी-कभी अब भी वह दिखाता है जो काटकर हटाया गया था — और सिर्फ़ आपकी चुनी जानकारी के साथ एक कॉपी सहेजता है। साथ ही यह बताता है कि क्या छवि ख़ुद को AI से बनी या संपादित <em>घोषित करती</em> है, और किस प्रोग्राम से, और <em>… के पास</em> इंटरनेट पर गए बिना सबसे नज़दीकी जगह का नाम बताता है। फिर: <em>क्रॉप करें</em> और टेढ़े क्षितिज को सीधा करें, मनचाहे आकार तक <em>भेजने के लिए छोटा करें</em>, <em>घुमाएँ और पलटें</em> — JPG हो तो गुणवत्ता ज़रा भी खोए बिना — <em>फ़ॉर्मैट बदलें</em> (iPhone का HEIC एक क्लिक में JPG में, और Windows के .ico आइकन तक), WhatsApp में चिपकाने के लिए <em>छवि कॉपी करें</em>, और किसी फ़ोल्डर में <em>Ctrl+V</em> स्क्रीनशॉट को फ़ाइल बना देता है। PREMIUM में: छवि से <em>टेक्स्ट कॉपी करें</em>, <em>निजी जानकारी छिपाएँ</em> (ईमेल, फ़ोन नंबर, IBAN, कार्ड और चेहरे), छवियाँ <em>जोड़ें</em> और <em>विभाजित करें</em>, और <em>पारदर्शी पृष्ठभूमि</em>। <strong>मूल जैसा है वैसा ही रहता है।</strong></p>
+    <div class="feat-mark" data-i18n="fim_mark">एक्स-रे · AI का निशान · … के पास · क्रॉप करें · छोटा करें · घुमाएँ · HEIC → JPG · ICO · कॉपी करें · Ctrl+V · टेक्स्ट · छिपाएँ · जोड़ें · विभाजित करें · पारदर्शी पृष्ठभूमि</div>
+    <p class="feat-note">
+      <span data-i18n="fim_free">मुफ़्त: एक्स-रे, क्रॉप करना, छोटा करना, घुमाना और पलटना, फ़ॉर्मैट बदलना (ICO समेत), कॉपी करना, और फ़ाइल के रूप में चिपकाना।</span><br>
+      <span data-i18n="fim_premium">PREMIUM: टेक्स्ट कॉपी करना, निजी जानकारी छिपाना, जोड़ना, विभाजित करना और पारदर्शी पृष्ठभूमि।</span>
+      <span class="feat-drm" data-i18n="fim_note">AI का निशान न होने का मतलब यह नहीं कि छवि असली है: बहुत-सी छवियों में यह निशान होता ही नहीं। “निजी जानकारी छिपाएँ” बहुत कुछ ढूँढ लेता है, पर भेजने से पहले हमेशा जाँच लें। “मानचित्र पर देखें…” पहले पूछता है, क्योंकि तब निर्देशांक OpenStreetMap को जाते हैं। जगहों के नाम GeoNames (geonames.org) से आते हैं, CC BY 4.0 — पूरा श्रेय “तकनीक” खंड में है।</span>
+    </p>
+  </div>
+
   <div class="feat w12" id="feat34">
-    <div class="num"><span data-i18n="f34_num">34 — PDF टूल्स</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <div class="num"><span data-i18n="fpdf_num">36 — PDF</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f34_h">PDF जोड़ें, बाँटें और व्यवस्थित करें — ठीक वहीं, जहाँ वे हैं।</h3>
-    <p data-i18n-html="f34_p">कोई PDF चुनें और ऊपर <em>PDF टूल्स</em> बटन जल उठता है। कई फ़ाइलों को एक में <em>जोड़ें</em> (PDF मर्ज), पृष्ठ-सीमाओं के हिसाब से <em>विभाजित करें</em> (<em>1-3, 5, 8-</em>), या थंबनेल पर <em>पृष्ठ व्यवस्थित करें</em>: घुमाएँ, हटाएँ, क्रम बदलें, या कुछ पृष्ठों को नए PDF में निकालें। पृष्ठों को <em>JPG या PNG छवियों</em> में बदलें, <em>पासवर्ड</em> लगाएँ या हटाएँ, और JPG/PNG छवियों तथा सरल Word दस्तावेज़ों को PDF में <em>बदलें</em>। <strong>मूल फ़ाइल को कभी छुआ नहीं जाता</strong>: हर परिणाम ठीक बगल में एक नया PDF होता है, उसके बुकमार्क और दस्तावेज़ की जानकारी के साथ। कुछ भी कहीं अपलोड नहीं होता।</p>
-    <div class="feat-mark" data-i18n="f34_mark">PDF मर्ज करें · PDF स्प्लिट करें · पृष्ठ घुमाएँ और क्रम बदलें · PDF से JPG/PNG · PDF पर पासवर्ड लगाएँ या हटाएँ · Word और JPG से PDF</div>
+    <p data-i18n-html="fpdf_p">कोई PDF चुनें और ऊपर <em>PDF</em> बटन जल उठता है। कई फ़ाइलों को एक में <em>जोड़ें</em> (PDF मर्ज), पृष्ठ-सीमाओं के हिसाब से <em>विभाजित करें</em> (<em>1-3, 5, 8-</em>), या थंबनेल पर <em>पृष्ठ व्यवस्थित करें</em>: घुमाएँ, हटाएँ, क्रम बदलें, या कुछ पृष्ठों को नए PDF में निकालें। पृष्ठों को <em>JPG या PNG छवियों</em> में बदलें, <em>पासवर्ड</em> लगाएँ या हटाएँ, और JPG/PNG छवियों तथा सरल Word दस्तावेज़ों को PDF में <em>बदलें</em> — या <em>एक A4 पृष्ठ पर कई फ़ोटो</em> रखें, सूची के क्रम में, दाईं ओर PDF को वैसा देखते हुए जैसा वह बनेगा, पृष्ठ-दर-पृष्ठ। <strong>मूल फ़ाइल को कभी छुआ नहीं जाता</strong>: हर परिणाम ठीक बगल में एक नया PDF होता है, उसके बुकमार्क और दस्तावेज़ की जानकारी के साथ। कुछ भी कहीं अपलोड नहीं होता।</p>
+    <div class="feat-mark" data-i18n="fpdf_mark">PDF मर्ज करें · PDF स्प्लिट करें · पृष्ठ घुमाएँ और क्रम बदलें · PDF से JPG/PNG · PDF पर पासवर्ड लगाएँ या हटाएँ · Word और JPG से PDF · एक A4 पृष्ठ पर कई फ़ोटो</div>
     <p class="feat-note">
       <span data-i18n="f34_free">मुफ़्त: जोड़ना और विभाजित करना।</span><br>
-      <span data-i18n="f34_premium">PREMIUM: पृष्ठ व्यवस्थित करना, PDF से छवियाँ, पासवर्ड लगाना या हटाना, PDF में बदलना।</span>
+      <span data-i18n="fpdf_premium">PREMIUM: पृष्ठ व्यवस्थित करना, PDF से छवियाँ, पासवर्ड लगाना या हटाना, PDF में बदलना (एक पृष्ठ पर कई फ़ोटो भी)।</span>
       <span class="feat-drm" data-i18n="f34_note">सुरक्षित या क्षतिग्रस्त PDF की सूचना दी जाती है, और कुछ भी अधूरा नहीं छूटता। यह एन्क्रिप्टेड तिजोरी के अंदर भी काम करता है, उसके ड्राइव अक्षर के ज़रिए।</span>
     </p>
   </div>
@@ -2429,13 +2429,31 @@
     </div>
     <div class="stack-cell">
       <div class="ic" data-i18n="st_capture_ic">कैप्चर</div>
-      <h4>NAudio · NTwain</h4>
-      <p data-i18n="st_capture">माइक्रोफ़ोन और सिस्टम की आवाज़ NAudio और WASAPI से; स्कैनर NTwain से, यानी TWAIN मानक से।</p>
+      <h4>NAudio · Concentus · NTwain</h4>
+      <p data-i18n="st_capture2">माइक्रोफ़ोन और सिस्टम की आवाज़ NAudio और WASAPI से; WhatsApp के वॉइस नोट (Opus) Concentus से; स्कैनर NTwain से, यानी TWAIN मानक से।</p>
     </div>
     <div class="stack-cell">
       <div class="ic" data-i18n="st_archives_ic">संग्रह</div>
       <h4>SharpCompress</h4>
       <p data-i18n="st_archives">ZIP, RAR, 7z और TAR वहीं पढ़े जाते हैं, ताकि संग्रह फ़ोल्डर की तरह खुले।</p>
+    </div>
+    <!-- 15/10, a 2.1.1: o PDFsharp faltava desde 29/09; o vídeo e a imagem não trouxeram bibliotecas (medido no código:
+         o OCR e o FaceDetector do Windows, o Media Foundation e o WIC); e o GeoNames é a atribuição OBRIGATÓRIA da
+         CC BY 4.0 (E-049): de onde vêm os dados, o que se mudou, e onde está a licença. -->
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_pdf_ic">PDF</div>
+      <h4>PDFsharp</h4>
+      <p data-i18n="st_pdf">जोड़ना, विभाजित करना और पृष्ठ व्यवस्थित करना PDFsharp (MIT) से। लाइसेंस हर नए संस्करण पर जाँचे जाते हैं, सिर्फ़ हर नए पैकेज पर नहीं।</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_win_ic">WINDOWS</div>
+      <h4>Media Foundation · WIC · OCR</h4>
+      <p data-i18n="st_win">वीडियो, छवियाँ, टेक्स्ट पढ़ना और चेहरे ढूँढना — ये सब वही इस्तेमाल करते हैं जो Windows में पहले से आता है। बुरी तरह पुरानी पड़ने वाली कोई अतिरिक्त लाइब्रेरी नहीं।</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="st_places_ic">जगहें</div>
+      <h4>GeoNames</h4>
+      <p data-i18n-html="st_places"><em>… के पास</em> <a href="https://www.geonames.org" target="_blank" rel="noopener">GeoNames</a> की जगहों के नाम और निर्देशांक इस्तेमाल करता है, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a> लाइसेंस के तहत, और बिना इंटरनेट के काम करता है। बदलाव: केवल 1000 से अधिक आबादी वाली जगहें या किसी नगरपालिका या क्षेत्र के मुख्यालय, मोहल्लों और ऐतिहासिक जगहों के बिना, और केवल ऐप की भाषाओं के नाम।</p>
     </div>
   </div>
 </section>
@@ -2450,13 +2468,14 @@
     <div class="prem-card" id="free">
       <h4 data-i18n="pr_free_h">मुफ़्त</h4>
       <span class="prem-tag" data-i18n="pr_free_tag">हमेशा के लिए · बिना खाते</span>
-      <ul data-i18n-html="pr_free_list"><li>प्रोफ़ाइल, अपनी पसंद के ट्री, कई पैटर्न की खोज</li><li>पूर्वावलोकन: कोड, PDF, Word/Excel, Markdown, तस्वीरें, किताबें</li><li>असली प्रगति, गति, बचा समय, इतिहास और टकराव के साथ फ़ाइल क्रियाएँ</li><li>टर्मिनल, एक्सटेंशन के हिसाब से ऐप, फ़ोल्डर की तरह संग्रह</li><li>पूरा गहरा थीम, 16 भाषाएँ, स्वचालित अपडेट</li><li>ऑडियो रिकॉर्डिंग (माइक्रोफ़ोन)</li><li><strong>1 दूरस्थ कनेक्शन</strong> (SFTP/FTP/FTPS) — घूमना और पूर्वावलोकन</li><li>PDF: जोड़ना और विभाजित करना</li></ul>
+      <ul data-i18n-html="pr_free_list2"><li>प्रोफ़ाइल, अपनी पसंद के ट्री, कई पैटर्न की खोज</li><li>पूर्वावलोकन: कोड, PDF, Word/Excel, Markdown, तस्वीरें, किताबें</li><li>असली प्रगति, गति, बचा समय, इतिहास और टकराव के साथ फ़ाइल क्रियाएँ</li><li>टर्मिनल, एक्सटेंशन के हिसाब से ऐप, फ़ोल्डर की तरह संग्रह</li><li>गहरा या हल्का थीम, 16 भाषाएँ, स्वचालित अपडेट</li><li>ऑडियो रिकॉर्डिंग (माइक्रोफ़ोन)</li><li><strong>1 दूरस्थ कनेक्शन</strong> (SFTP/FTP/FTPS) — घूमना और पूर्वावलोकन</li><li>ऑडियो: काटना, बाँटना, जोड़ना, फ़ॉर्मैट बदलना, MP3 टैग</li><li>वीडियो: काटना, बाँटना, जोड़ना, घुमाना, एक फ़्रेम सहेजना, वीडियो की आवाज़</li><li>छवि: फ़ोटो का एक्स-रे, क्रॉप करना, छोटा करना, घुमाना, फ़ॉर्मैट बदलना और ICO, कॉपी करना और चिपकाना</li><li>PDF: जोड़ना और विभाजित करना</li></ul>
     </div>
 
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag">एक बार का € 19.99 दान · प्रति मशीन</span>
-      <ul data-i18n-html="pr_prem_list"><li>एन्क्रिप्टेड तिजोरियाँ <strong>बनाना</strong></li><li><strong>पूरी दूरस्थ पहुँच</strong>: कई कनेक्शन, सारी क्रियाएँ, WebDAV, Dropbox, OneDrive</li><li>स्क्रीन रिकॉर्डिंग <strong>बिना वॉटरमार्क, बिना समय-सीमा और आवाज़ के साथ</strong></li><li>बिना वॉटरमार्क वीडियो रिकॉर्डिंग</li><li>माइक्रोफ़ोन + सिस्टम की आवाज़ का मिश्रण</li><li>फ़ीडर (ADF) से बहु-पृष्ठ स्कैन</li><li>पूरा किताब पाठक — EPUB, Kindle प्रारूप, FB2 और कॉमिक्स</li><li>रिकॉर्डिंग में शुरुआती/अंतिम कार्ड और पाठ पट्टी</li><li>PDF टूल्स: पृष्ठ व्यवस्थित करना, PDF से छवियाँ, पासवर्ड, PDF में बदलना</li></ul>
+      <ul data-i18n-html="pr_prem_list2"><li>एन्क्रिप्टेड तिजोरियाँ <strong>बनाना</strong></li><li><strong>पूरी दूरस्थ पहुँच</strong>: कई कनेक्शन, सारी क्रियाएँ, WebDAV, Dropbox, OneDrive</li><li>स्क्रीन रिकॉर्डिंग <strong>बिना वॉटरमार्क, बिना समय-सीमा और आवाज़ के साथ</strong></li><li>बिना वॉटरमार्क वीडियो रिकॉर्डिंग</li><li>माइक्रोफ़ोन + सिस्टम की आवाज़ का मिश्रण</li><li>फ़ीडर (ADF) से बहु-पृष्ठ स्कैन</li><li>पूरा किताब पाठक — EPUB, Kindle प्रारूप, FB2 और कॉमिक्स</li><li>रिकॉर्डिंग में शुरुआती/अंतिम कार्ड और पाठ पट्टी</li><li>“ऑडियो समायोजित करें” और “वीडियो समायोजित करें”: हर एक का अपना स्टूडियो</li><li>वीडियो: कन्वर्ट करना या छोटा करना, GIF, उल्टा चलाना, आवाज़ जोड़ना</li><li>छवि: टेक्स्ट कॉपी करना, निजी जानकारी छिपाना, जोड़ना, विभाजित करना, पारदर्शी पृष्ठभूमि</li><li>PDF टूल्स: पृष्ठ व्यवस्थित करना, PDF से छवियाँ, पासवर्ड, PDF में बदलना, एक पृष्ठ पर कई फ़ोटो</li></ul>
+      <p class="prem-note" data-i18n-html="pr_vitrine">“ऑडियो”, “वीडियो”, “छवि” और “PDF” में PREMIUM खिड़कियाँ सबके लिए खुलती हैं: PREMIUM पाने से पहले ही आप देख सकते हैं कि वे क्या करती हैं।</p>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo

@@ -3074,7 +3074,11 @@
     }
     try {
       var c = JSON.parse(sessionStorage.getItem(CK) || 'null');
-      if (c && typeof c.t === 'number' && agora - c.ts < 300000) { mostra(c.t); return; }
+      /* 20/10/2026: so vale se foi guardado ha MENOS de 5 minutos E NAO no futuro. Com o relogio da maquina
+         adiantado quando se guardou (ou atrasado depois), a idade dava negativa e o numero velho ficava
+         para sempre na aba: o Chrome da Minix mostrava 1724 descargas com 3279 no GitHub. */
+      var idade = c ? agora - c.ts : -1;
+      if (c && typeof c.t === 'number' && idade >= 0 && idade < 300000) { mostra(c.t); return; }
     } catch (e) {}
     function pagina(n, soma) {
       return fetch('https://api.github.com/repos/NuneX-mBrothers/ExplorerFocus/releases?per_page=100&page=' + n)

@@ -90,7 +90,7 @@
   ],
   "url": "https://nunex-mbrothers.github.io/ExplorerFocus/ja/",
   "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
-  "softwareVersion": "2.1.2",
+  "softwareVersion": "2.1.1",
   "image": "https://nunex-mbrothers.github.io/ExplorerFocus/og-cover.png",
   "screenshot": [
     "https://nunex-mbrothers.github.io/ExplorerFocus/shots/01-perfis.webp",
@@ -326,6 +326,8 @@
     margin-left: 4px; font-family: var(--font-mono); font-size: 12px;
     color: var(--fg-2); letter-spacing: 0.04em; }
   .hero-dl-count[hidden] { display: none; }
+  /* Qual descarregar: a letra da linha «Latest version», sem a mono (e uma frase, nao um rotulo). */
+  .hero-dl-which { margin-top: 12px; max-width: 540px; font-size: 13px; line-height: 1.5; color: var(--fg-2); }
   .hero-dl-count span:empty { display: none; }
   /* O numero vai na letra normal do site: na mono, o zero com a marca por dentro lia-se como um 8 (3.043 parecia
      3.843, o Joao a 2026-10-15). O resto da linha fica na mono. */
@@ -1458,7 +1460,7 @@
       <a href="#stack" data-i18n="nav_stack">スタック</a>
       <a href="#premium" data-i18n="nav_premium">PREMIUM</a>
       <a href="#download" data-i18n="nav_download">入手する</a>
-      <span class="nav-version">v2.1.2</span>
+      <span class="nav-version">v2.1.1</span>
     </nav>
   </div>
 </header>
@@ -1467,7 +1469,7 @@
 <section class="hero">
   <div class="hero-text">
     <div class="hero-eyebrow" data-i18n="hero_eyebrow">ファイルエクスプローラー · WPF · .NET 10</div>
-    <h1 data-i18n-html="hero_title"><span class="strike">どうでもいい</span>大事なことだけに<br><em>集中</em>する<br>エクスプローラー。</h1>
+    <h1 data-i18n-html="hero_title"><em>ノイズのない</em><br>Windows エクスプローラー。</h1>
     <p class="hero-lede" data-i18n="hero_lede">ExplorerFocus は、いつも同じフォルダーで作業する人のための Windows エクスプローラーの置き換えです。自由に設定できるプロファイル、すっきりしたツリー、ほとんど何でも開くプレビュー — コード、書類、電子書籍 — そして、いま何が起きているかを本当に伝えるファイル操作。シェルのノイズはありません。</p>
     <div class="hero-meta">
       <span data-i18n="hero_meta_os">Windows 10 / 11</span>
@@ -1491,6 +1493,8 @@
            Fica ESCONDIDO ate haver numero: melhor calado do que errado. -->
       <span class="hero-dl-count" id="heroDlCount" hidden><span aria-hidden="true">↓</span><span data-i18n="hero_dl_pre">ダウンロード</span><strong id="heroDlTotal"></strong><span data-i18n="hero_dl_post">回</span></span>
     </div>
+    <!-- 20/10/2026: qual descarregar (o Joao aprovou a 19/10; o .zip so o dizia o title do rodape). -->
+    <p class="hero-dl-which" data-i18n="hero_dl_which">どちらを選ぶ？ 通常は .exe。.zip は .exe のダウンロードを禁止している組織向けです。</p>
 
     <!-- Fora do Windows (telemovel, tablet, Mac, Linux): o EF e um programa para Windows. Um utilizador
          descarregou o .exe num tablet Android, e o Android entregou-o a outra app (pedido do Joao a 2026-10-08).
@@ -1507,7 +1511,7 @@
       <div class="hero-sha">
         <span class="hero-sha-lbl">SHA-256</span>
         <code id="heroSha" class="js-sha"></code>
-        <button class="hero-sha-copy" id="heroShaCopy" type="button" aria-label="Copiar SHA-256" title="Copiar">⧉</button>
+        <button class="hero-sha-copy" id="heroShaCopy" type="button" aria-label="SHA-256 をコピー" title="コピー" data-i18n-attr="aria-label:copy_sha;title:copy_short">⧉</button>
         <a href="#sha256" class="hero-sha-what" data-modal="shaModal" data-i18n="sha_link">SHA-256 とは？</a>
       </div>
       <a href="#verify" class="hero-verify-link" id="openVerify" data-modal="verifyModal">
@@ -1751,8 +1755,8 @@
           <div class="shot-ph"><b>05</b><span>shots/05-markdown.webp</span></div>
         </figure>
       </div>
-      <button class="shots-arrow prev" type="button" aria-label="&#8592;">&#8249;</button>
-      <button class="shots-arrow next" type="button" aria-label="&#8594;">&#8250;</button>
+      <button class="shots-arrow prev" type="button" aria-label="前のスクリーンショット" data-i18n-attr="aria-label:shots_prev">&#8249;</button>
+      <button class="shots-arrow next" type="button" aria-label="次のスクリーンショット" data-i18n-attr="aria-label:shots_next">&#8250;</button>
     </div>
       <!-- ⛔ ACRESCENTAR UM DIRECTORIO = uma linha na lista + duas chaves curtas
            por lingua (a nota e a pontuacao). O NOME nao vai na traducao: e nome
@@ -1810,7 +1814,7 @@
     <a href="#feat34" data-i18n="wn_pdf_211">📄 PDF</a>
     <a href="#feat12" data-i18n="wn_light">☀ ライトモード</a>
   </nav>
-  <span class="whatsnew-ver">v2.1.2</span>
+  <span class="whatsnew-ver">v2.1.1</span>
 </div>
 
 <!-- CATALOG -->
@@ -2657,7 +2661,7 @@
   </div>
 
   <div class="footer-baseline">
-    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.1.2 · WPF · net10.0-windows · single-file</span>
+    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.1.1 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">日々の仕事のために設計</span>
     <span id="viewCounter" hidden title="Visitas à página"></span>
   </div>
@@ -2667,7 +2671,7 @@
 
 <div class="ef-modal" id="verifyModal" role="dialog" aria-modal="true" aria-labelledby="verifyModalTitle">
   <div class="ef-card">
-    <button class="ef-card-x" id="verifyClose" type="button" aria-label="Fechar">✕</button>
+    <button class="ef-card-x" id="verifyClose" type="button" aria-label="閉じる" data-i18n-attr="aria-label:modal_close">✕</button>
 
     <div class="ef-card-hd">
       <span class="ef-card-hd-ic" aria-hidden="true">🛡️</span>
@@ -2699,7 +2703,7 @@
         <p class="ef-method-h" data-i18n="card_mA_h">方法 A — PowerShell</p>
         <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mA_1"><strong>ダウンロード</strong>を開いたエクスプローラーの何もない場所で、<span class="efkbd">Shift</span> を押しながら右クリック → <strong>PowerShell ウィンドウをここに開く</strong>。</span> and right-click an empty area → <strong>Open PowerShell window here</strong>.</span></div>
         <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">次のコマンドを貼り付けて Enter を押します。</span></div>
-        <div class="ef-cmd"><code>Get-FileHash .\ExplorerFocus.exe</code><button class="ef-copy" type="button" data-copy="Get-FileHash .\ExplorerFocus.exe" aria-label="Copiar comando">⧉</button></div>
+        <div class="ef-cmd"><code>Get-FileHash .\ExplorerFocus.exe</code><button class="ef-copy" type="button" data-copy="Get-FileHash .\ExplorerFocus.exe" aria-label="コマンドをコピー" data-i18n-attr="aria-label:copy_cmd">⧉</button></div>
         <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mA_3">表示された SHA256 の値を、下の値と見比べます。</span></div>
       </div>
 
@@ -2707,7 +2711,7 @@
         <p class="ef-method-h" data-i18n="card_mB_h">方法 B — コマンドライン（cmd）</p>
         <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mB_1"><strong>ダウンロード</strong>を開いたエクスプローラーで、<strong>アドレスバー</strong>（上のほう、フォルダーのパスが出るところ）をクリックし、<code>cmd</code> と入力して <strong>Enter</strong> を押します。</span></div>
         <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">次のコマンドを貼り付けて Enter を押します。</span></div>
-        <div class="ef-cmd"><code>certutil -hashfile ExplorerFocus.exe SHA256</code><button class="ef-copy" type="button" data-copy="certutil -hashfile ExplorerFocus.exe SHA256" aria-label="Copiar comando">⧉</button></div>
+        <div class="ef-cmd"><code>certutil -hashfile ExplorerFocus.exe SHA256</code><button class="ef-copy" type="button" data-copy="certutil -hashfile ExplorerFocus.exe SHA256" aria-label="コマンドをコピー" data-i18n-attr="aria-label:copy_cmd">⧉</button></div>
         <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mB_3">表示されたハッシュの行を、下の値と見比べます。</span></div>
       </div>
 
@@ -2722,7 +2726,7 @@
 
 <div class="ef-modal" id="shaModal" role="dialog" aria-modal="true" aria-labelledby="shaModalTitle">
   <div class="ef-card">
-    <button class="ef-card-x" type="button" aria-label="Fechar">✕</button>
+    <button class="ef-card-x" type="button" aria-label="閉じる" data-i18n-attr="aria-label:modal_close">✕</button>
     <p class="ef-sha-title" id="shaModalTitle" data-i18n="sha_title">SHA-256 とは？</p>
     <p class="ef-prose" data-i18n-html="sha_p1">ファイルの<strong>指紋</strong>だと考えてください。アルゴリズムが <code>ExplorerFocus.exe</code> の全バイトを読み、<strong>64 文字</strong>のコード（A–F の英字と数字）に煮つめます。それが SHA-256 です。</p>
     <p class="ef-prose" data-i18n-html="sha_p2">役に立つ理由は 2 つあります。</p>
@@ -2741,7 +2745,7 @@
         <p class="ef-method-h" data-i18n="card_mA_h">方法 A — PowerShell</p>
         <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mA_1"><strong>ダウンロード</strong>を開いたエクスプローラーの何もない場所で、<span class="efkbd">Shift</span> を押しながら右クリック → <strong>PowerShell ウィンドウをここに開く</strong>。</span> and right-click an empty area → <strong>Open PowerShell window here</strong>.</span></div>
         <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">次のコマンドを貼り付けて Enter を押します。</span></div>
-        <div class="ef-cmd"><code>Get-FileHash .\ExplorerFocus.exe</code><button class="ef-copy" type="button" data-copy="Get-FileHash .\ExplorerFocus.exe" aria-label="Copiar comando">⧉</button></div>
+        <div class="ef-cmd"><code>Get-FileHash .\ExplorerFocus.exe</code><button class="ef-copy" type="button" data-copy="Get-FileHash .\ExplorerFocus.exe" aria-label="コマンドをコピー" data-i18n-attr="aria-label:copy_cmd">⧉</button></div>
         <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mA_3">表示された SHA256 の値を、下の値と見比べます。</span></div>
       </div>
 
@@ -2749,7 +2753,7 @@
         <p class="ef-method-h" data-i18n="card_mB_h">方法 B — コマンドライン（cmd）</p>
         <div class="ef-step"><span class="ef-num">1</span><span data-i18n-html="card_mB_1"><strong>ダウンロード</strong>を開いたエクスプローラーで、<strong>アドレスバー</strong>（上のほう、フォルダーのパスが出るところ）をクリックし、<code>cmd</code> と入力して <strong>Enter</strong> を押します。</span></div>
         <div class="ef-step"><span class="ef-num">2</span><span data-i18n="card_cmd_paste">次のコマンドを貼り付けて Enter を押します。</span></div>
-        <div class="ef-cmd"><code>certutil -hashfile ExplorerFocus.exe SHA256</code><button class="ef-copy" type="button" data-copy="certutil -hashfile ExplorerFocus.exe SHA256" aria-label="Copiar comando">⧉</button></div>
+        <div class="ef-cmd"><code>certutil -hashfile ExplorerFocus.exe SHA256</code><button class="ef-copy" type="button" data-copy="certutil -hashfile ExplorerFocus.exe SHA256" aria-label="コマンドをコピー" data-i18n-attr="aria-label:copy_cmd">⧉</button></div>
         <div class="ef-step ef-step-mt"><span class="ef-num">3</span><span data-i18n="card_mB_3">表示されたハッシュの行を、下の値と見比べます。</span></div>
       </div>
 

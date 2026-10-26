@@ -433,5 +433,8 @@ window.I18N.de = {
   "st_pdf2": "Zusammenfügen, Teilen und Ordnen der Seiten über PDFsharp (MIT); Lesen des Textes, das Röntgenbild und die Übersetzung über PdfPig (Apache 2.0). Die Lizenzen werden bei jeder neuen Version geprüft, nicht nur bei jedem neuen Paket.",
   "vt_num2": "§ 03 · Der Tresor",
   "wn_livros": "📚 E-Books",
-  "wn_ouvir": "🗣 Hören und schreiben"
+  "wn_ouvir": "🗣 Hören und schreiben",
+  // 26/10/2026: o EF so corre em Windows de 64 bits
+  "hero_meta_os_2": "Windows 10 / 11 · 64 Bit",
+  "f17_p_2": "Self-contained, single-file, komprimiert und digital signiert. Kopiere auf einen USB-Stick und es läuft auf jedem 64-Bit-Windows 10/11. <em>net10.0-windows</em> + WPF — keine Abhängigkeiten außerhalb des Programmordners."
 };

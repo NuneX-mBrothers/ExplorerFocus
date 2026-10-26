@@ -433,5 +433,8 @@ window.I18N.fr = {
   "st_pdf2": "Fusionner, diviser et organiser les pages avec PDFsharp (MIT) ; lire le texte, la radiographie et la traduction avec PdfPig (Apache 2.0). Les licences sont vérifiées à chaque nouvelle version, pas seulement à chaque nouveau paquet.",
   "vt_num2": "§ 03 · Le coffre",
   "wn_livros": "📚 E-books",
-  "wn_ouvir": "🗣 Écouter et écrire"
+  "wn_ouvir": "🗣 Écouter et écrire",
+  // 26/10/2026: o EF so corre em Windows de 64 bits
+  "hero_meta_os_2": "Windows 10 / 11 · 64 bits",
+  "f17_p_2": "Autonome, fichier unique, compressé et signé numériquement. Copiez-le sur une clé USB et il tourne sur n'importe quel Windows 10/11 64 bits. <em>net10.0-windows</em> + WPF — aucune dépendance hors du dossier de l'exécutable."
 };

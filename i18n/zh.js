@@ -433,5 +433,8 @@ window.I18N.zh = {
   "st_pdf2": "合并、拆分和整理页面使用 PDFsharp（MIT）；读取文字、透视和翻译使用 PdfPig（Apache 2.0）。每个新版本都会检查许可证，而不仅仅是每个新包。",
   "vt_num2": "§ 03 · 保险库",
   "wn_livros": "📚 电子书",
-  "wn_ouvir": "🗣 听写"
+  "wn_ouvir": "🗣 听写",
+  // 26/10/2026: o EF so corre em Windows de 64 bits
+  "hero_meta_os_2": "Windows 10 / 11 · 64 位",
+  "f17_p_2": "自包含、单文件、压缩，并经过数字签名。复制到 U 盘,可在任意 64 位 Windows 10/11 上运行。<em>net10.0-windows</em> + WPF — 可执行文件之外没有任何依赖。"
 };

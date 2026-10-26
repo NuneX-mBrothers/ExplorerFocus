@@ -433,5 +433,8 @@ window.I18N.ja = {
   "st_pdf2": "ページの結合・分割・整理は PDFsharp（MIT）、テキストの読み取り・X 線・翻訳は PdfPig（Apache 2.0）で行います。ライセンスは新しいパッケージごとだけでなく、新しいバージョンごとに確認しています。",
   "vt_num2": "§ 03 · 金庫",
   "wn_livros": "📚 電子書籍",
-  "wn_ouvir": "🗣 聞いて書く"
+  "wn_ouvir": "🗣 聞いて書く",
+  // 26/10/2026: o EF so corre em Windows de 64 bits
+  "hero_meta_os_2": "Windows 10 / 11 · 64 ビット",
+  "f17_p_2": "自己完結型、単一ファイル、圧縮済み、電子署名済み。USB メモリーにコピーすれば、どの 64 ビット版 Windows 10/11 でも動きます。<em>net10.0-windows</em> + WPF — 実行ファイルのフォルダーの外に依存はありません。"
 };

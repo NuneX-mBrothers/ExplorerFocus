@@ -437,5 +437,8 @@ window.I18N.br = {
   "st_pdf2": "Juntar, dividir e organizar as páginas pelo PDFsharp (MIT); ler o texto, o Raio-X e a tradução pelo PdfPig (Apache 2.0). As licenças são conferidas a cada versão nova, não só a cada pacote novo.",
   "vt_num2": "§ 03 · O cofre",
   "wn_livros": "📚 E-books",
-  "wn_ouvir": "🗣 Ouvir e escrever"
+  "wn_ouvir": "🗣 Ouvir e escrever",
+  // 26/10/2026: o EF so corre em Windows de 64 bits
+  "hero_meta_os_2": "Windows 10 / 11 · 64 bits",
+  "f17_p_2": "Autossuficiente, arquivo único, compactado e assinado digitalmente. Copie para um pen drive e roda em qualquer Windows 10/11 de 64 bits. <em>net10.0-windows</em> + WPF — sem dependências fora da pasta do executável."
 };

@@ -433,5 +433,8 @@ window.I18N.pl = {
   "st_pdf2": "Łączenie, dzielenie i porządkowanie stron przez PDFsharp (MIT); czytanie tekstu, prześwietlenie i tłumaczenie przez PdfPig (Apache 2.0). Licencje sprawdza się przy każdej nowej wersji, nie tylko przy każdym nowym pakiecie.",
   "vt_num2": "§ 03 · Sejf",
   "wn_livros": "📚 E-booki",
-  "wn_ouvir": "🗣 Słuchaj i pisz"
+  "wn_ouvir": "🗣 Słuchaj i pisz",
+  // 26/10/2026: o EF so corre em Windows de 64 bits
+  "hero_meta_os_2": "Windows 10 / 11 · 64-bit",
+  "f17_p_2": "Samodzielny, jeden plik, spakowany i podpisany cyfrowo. Skopiuj na pendrive i działa na każdym 64-bitowym Windows 10/11. <em>net10.0-windows</em> + WPF — żadnych zależności poza folderem programu."
 };

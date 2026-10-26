@@ -433,5 +433,8 @@ window.I18N.ko = {
   "st_pdf2": "페이지 합치기, 나누기, 정리는 PDFsharp(MIT)로, 텍스트 읽기, 엑스레이, 번역은 PdfPig(Apache 2.0)로 합니다. 라이선스는 새 패키지마다뿐 아니라 새 버전이 나올 때마다 확인합니다.",
   "vt_num2": "§ 03 · 금고",
   "wn_livros": "📚 전자책",
-  "wn_ouvir": "🗣 듣고 쓰기"
+  "wn_ouvir": "🗣 듣고 쓰기",
+  // 26/10/2026: o EF so corre em Windows de 64 bits
+  "hero_meta_os_2": "Windows 10 / 11 · 64비트",
+  "f17_p_2": "독립 실행, 단일 파일, 압축되고 디지털 서명까지. USB에 복사하면 어떤 64비트 Windows 10/11에서도 돕니다. <em>net10.0-windows</em> + WPF — 실행 파일 폴더 밖의 의존성은 없습니다."
 };

@@ -439,6 +439,6 @@ window.I18N["zh-TW"] = {
   "wn_livros": "📚 電子書",
   "wn_ouvir": "🗣 聽寫",
   // 26/10/2026: o EF so corre em Windows de 64 bits
-  "hero_meta_os_2": "Windows 10 / 11 · 64 位元",
-  "f17_p_2": "獨立執行、單一檔案、壓縮過並有數位簽章。複製到隨身碟，在任何 64 位元 Windows 10/11 上都能跑。<em>net10.0-windows</em> + WPF — 執行檔所在資料夾之外沒有任何相依。"
+  "hero_meta_os_2": "Windows 11 / 10 (1809+) · 64 位元",
+  "f17_p_2": "獨立執行、單一檔案、壓縮過並有數位簽章。複製到隨身碟，在任何 64 位元 Windows 11 上都能跑。Windows 10 1809 以後的版本也能跑，但不提供支援。不必安裝 .NET。<em>net10.0-windows</em> + WPF — 執行檔所在資料夾之外沒有任何相依。"
 };

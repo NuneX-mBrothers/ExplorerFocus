@@ -435,6 +435,6 @@ window.I18N.de = {
   "wn_livros": "📚 E-Books",
   "wn_ouvir": "🗣 Hören und schreiben",
   // 26/10/2026: o EF so corre em Windows de 64 bits
-  "hero_meta_os_2": "Windows 10 / 11 · 64 Bit",
-  "f17_p_2": "Self-contained, single-file, komprimiert und digital signiert. Kopiere auf einen USB-Stick und es läuft auf jedem 64-Bit-Windows 10/11. <em>net10.0-windows</em> + WPF — keine Abhängigkeiten außerhalb des Programmordners."
+  "hero_meta_os_2": "Windows 11 / 10 (1809+) · 64 Bit",
+  "f17_p_2": "Self-contained, single-file, komprimiert und digital signiert. Kopiere auf einen USB-Stick und es läuft auf jedem 64-Bit-Windows 11. Unter Windows 10 ab Version 1809 läuft es auch, aber ohne Support. Eine .NET-Installation ist nicht nötig. <em>net10.0-windows</em> + WPF — keine Abhängigkeiten außerhalb des Programmordners."
 };

@@ -435,6 +435,6 @@ window.I18N.ko = {
   "wn_livros": "📚 전자책",
   "wn_ouvir": "🗣 듣고 쓰기",
   // 26/10/2026: o EF so corre em Windows de 64 bits
-  "hero_meta_os_2": "Windows 10 / 11 · 64비트",
-  "f17_p_2": "독립 실행, 단일 파일, 압축되고 디지털 서명까지. USB에 복사하면 어떤 64비트 Windows 10/11에서도 돕니다. <em>net10.0-windows</em> + WPF — 실행 파일 폴더 밖의 의존성은 없습니다."
+  "hero_meta_os_2": "Windows 11 / 10 (1809+) · 64비트",
+  "f17_p_2": "독립 실행, 단일 파일, 압축되고 디지털 서명까지. USB에 복사하면 어떤 64비트 Windows 11에서도 돕니다. 버전 1809 이상의 Windows 10에서도 돌지만, 지원은 하지 않습니다. .NET을 설치할 필요는 없습니다. <em>net10.0-windows</em> + WPF — 실행 파일 폴더 밖의 의존성은 없습니다."
 };

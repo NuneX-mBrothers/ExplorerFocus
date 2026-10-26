@@ -4,7 +4,7 @@
 
 # ExplorerFocus
 
-**The file organiser for 64-bit Windows 10 & 11 — your folders, arranged by what you work on.**
+**The file organiser for 64-bit Windows 11 and 10 — your folders, arranged by what you work on.**
 A focused file explorer with profiles, rich preview, honest file operations, encrypted vaults, remote/cloud access — and capture tools built in.
 
 [**⬇ Download (.exe)**](https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.exe) · [**Download (.zip)**](https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip) · [**Website**](https://nunex-mbrothers.github.io/ExplorerFocus/) · [**Releases**](https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest)
@@ -63,6 +63,7 @@ does, click **More info → Run anyway**. Every release publishes its **SHA-256*
 ## Built with
 
 WPF on .NET 10, published as a single-file self-contained `win-x64` executable.
+Made for 64-bit Windows 11. It also runs on Windows 10 version 1809 or later, without support. No .NET to install: it ships inside.
 AvalonEdit (code preview) · WebView2 (PDF/Office/Markdown) · SSH.NET · FluentFTP · Media Foundation (capture) ·
 Bouncy Castle (vault encryption) · PDFsharp (PDF tools) · DokanNet (vault drive letters — the Dokany driver itself is not shipped).
 

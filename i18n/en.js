@@ -433,5 +433,8 @@ window.I18N.en = {
   "st_pdf2": "Merging, splitting and organizing pages through PDFsharp (MIT); reading the text, the X-ray and the translation through PdfPig (Apache 2.0). Licences are checked at every new version, not just every new package.",
   "vt_num2": "§ 03 · The vault",
   "wn_livros": "📚 E-books",
-  "wn_ouvir": "🗣 Listen and write"
+  "wn_ouvir": "🗣 Listen and write",
+  // 26/10/2026: o EF so corre em Windows de 64 bits
+  "hero_meta_os_2": "Windows 10 / 11 · 64-bit",
+  "f17_p_2": "Self-contained, single-file, compressed and digitally signed. Copy to a flash drive and it runs on any 64-bit Windows 10/11. <em>net10.0-windows</em> + WPF — no dependencies outside the executable's folder."
 };

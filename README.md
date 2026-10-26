@@ -4,7 +4,7 @@
 
 # ExplorerFocus
 
-**The file organiser for Windows 10 & 11 — your folders, arranged by what you work on.**
+**The file organiser for 64-bit Windows 10 & 11 — your folders, arranged by what you work on.**
 A focused file explorer with profiles, rich preview, honest file operations, encrypted vaults, remote/cloud access — and capture tools built in.
 
 [**⬇ Download (.exe)**](https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.exe) · [**Download (.zip)**](https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip) · [**Website**](https://nunex-mbrothers.github.io/ExplorerFocus/) · [**Releases**](https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest)

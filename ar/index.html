@@ -251,7 +251,8 @@
     display: grid;
     grid-template-columns: 0.95fr 1.05fr;
     gap: 56px;
-    align-items: center;
+    /* pelo topo (01/11/2026): centradas, a coluna das imagens ficava com espaco por cima e por baixo */
+    align-items: start;
     position: relative;
   }
   .hero-eyebrow {
@@ -348,9 +349,9 @@
   .hero-latest strong { color: var(--accent); font-weight: 600; }
   .hero-latest #heroReleased { opacity: .8; }
   /* O historico das versoes (01/11/2026): a cor da versao, sublinhado a tracejado como as outras ligacoes do hero. */
-  .hero-latest .hero-history-sep { margin: 0 6px 0 8px; opacity: .8; }
-  .hero-latest .hero-history { color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent-dim); }
-  .hero-latest .hero-history:hover { border-bottom-style: solid; }
+  .hero-history-line { margin-top: 12px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; }
+  .hero-history { color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent-dim); }
+  .hero-history:hover { border-bottom-style: solid; }
   /* As especificacoes debaixo do carrossel (01/11/2026): o mesmo afastamento da caixa dos diretorios. */
   .hero-preview .hero-meta { margin-top: 18px; gap: 8px 16px; letter-spacing: 0.1em; }
 
@@ -1499,13 +1500,9 @@
     <p class="hero-os-note" id="heroOsNote" data-i18n="hero_os_note" hidden>ExplorerFocus برنامج لأجهزة الكمبيوتر التي تعمل بنظام Windows 10 و11، ولا يعمل على الهواتف أو الأجهزة اللوحية. لتنزيله، افتح هذه الصفحة على جهاز كمبيوتر يعمل بنظام Windows.</p>
     <span id="heroOsAsk" data-i18n="hero_os_ask" hidden>هل تريد تنزيله على أي حال؟</span>
 
-    <!-- 01/11/2026 (o Joao): o historico das versoes, as Releases do GitHub, numa pagina nova. Fica SEMPRE a
-         vista; so a versao e a data esperam pelo version.json (sem ele, escondiam-se as tres). -->
-    <div class="hero-latest" id="heroLatest">
-      <span id="heroLatestVer" hidden><span data-i18n="hero_latest">أحدث إصدار</span>:
+    <div class="hero-latest" id="heroLatest" hidden>
+      <span data-i18n="hero_latest">أحدث إصدار</span>:
       <strong id="heroVersion"></strong><span id="heroReleased"></span>
-      <span class="hero-history-sep" aria-hidden="true">·</span></span>
-      <a class="hero-history" href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases" target="_blank" rel="noopener"><span data-i18n="hero_history">سجل الإصدارات</span> <span aria-hidden="true">→</span></a>
     </div>
 
     <div class="hero-verify" id="heroVerify" hidden>
@@ -1792,6 +1789,9 @@
              errado. Pedido do Joao a 2026-09-30 -- o "~115 MB" escrito a mao estava sempre para tras. -->
         <span id="heroSize" data-i18n="hero_meta_size" hidden>‏{mb} ميغابايت</span>
       </div>
+      <!-- 01/11/2026 (o Joao): o historico das versoes, as Releases do GitHub, numa pagina nova, debaixo da linha
+           do Windows. Sempre a vista: nao depende do version.json. -->
+      <p class="hero-history-line"><a class="hero-history" href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases" target="_blank" rel="noopener"><span data-i18n="hero_history">سجل الإصدارات</span> <span aria-hidden="true">→</span></a></p>
   </div>
 </section>
 
@@ -3043,7 +3043,7 @@
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (v) {
       if (v && v.version) {
-        var box = document.getElementById('heroLatestVer');
+        var box = document.getElementById('heroLatest');
         var ver = document.getElementById('heroVersion');
         var rel = document.getElementById('heroReleased');
         if (ver) ver.textContent = 'v' + v.version;

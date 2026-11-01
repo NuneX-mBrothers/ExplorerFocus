@@ -1499,11 +1499,12 @@
     <p class="hero-os-note" id="heroOsNote" data-i18n="hero_os_note" hidden>ExplorerFocus 是适用于 Windows 10 和 11 电脑的程序，无法在手机或平板电脑上运行。请在你的 Windows 电脑上打开本页面下载。</p>
     <span id="heroOsAsk" data-i18n="hero_os_ask" hidden>仍要下载吗？</span>
 
-    <div class="hero-latest" id="heroLatest" hidden>
-      <span data-i18n="hero_latest">最新版本</span>:
+    <!-- 01/11/2026 (o Joao): o historico das versoes, as Releases do GitHub, numa pagina nova. Fica SEMPRE a
+         vista; so a versao e a data esperam pelo version.json (sem ele, escondiam-se as tres). -->
+    <div class="hero-latest" id="heroLatest">
+      <span id="heroLatestVer" hidden><span data-i18n="hero_latest">最新版本</span>:
       <strong id="heroVersion"></strong><span id="heroReleased"></span>
-      <!-- 01/11/2026 (o Joao): o historico das versoes, as Releases do GitHub, numa pagina nova. -->
-      <span class="hero-history-sep" aria-hidden="true">·</span>
+      <span class="hero-history-sep" aria-hidden="true">·</span></span>
       <a class="hero-history" href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases" target="_blank" rel="noopener"><span data-i18n="hero_history">版本历史</span> <span aria-hidden="true">→</span></a>
     </div>
 
@@ -1758,17 +1759,6 @@
       <button class="shots-arrow prev" type="button" aria-label="上一张截图" data-i18n-attr="aria-label:shots_prev">&#8249;</button>
       <button class="shots-arrow next" type="button" aria-label="下一张截图" data-i18n-attr="aria-label:shots_next">&#8250;</button>
     </div>
-      <!-- 01/11/2026 (o Joao): as especificacoes passaram para debaixo do carrossel, para a coluna do texto
-           nao ficar mais alta do que a das imagens. -->
-      <div class="hero-meta">
-        <span data-i18n="hero_meta_os_2">Windows 11 / 10 (1809+) · 64 位</span>
-        <span data-i18n="hero_meta_pkg">自包含 · 单文件</span>
-        <!-- O tamanho do .exe vem do version.json (size_mb, que o .cmd de publicar escreve com o SHA-256,
-             depois de assinar) e escreve-se aqui ao abrir: MB inteiros, com a unidade de cada lingua. O
-             texto e o MODELO ({mb} = o numero). Fica escondido ate haver numero: melhor calado do que
-             errado. Pedido do Joao a 2026-09-30 -- o "~115 MB" escrito a mao estava sempre para tras. -->
-        <span id="heroSize" data-i18n="hero_meta_size" hidden>{mb} MB</span>
-      </div>
       <!-- ⛔ ACRESCENTAR UM DIRECTORIO = uma linha na lista + duas chaves curtas
            por lingua (a nota e a pontuacao). O NOME nao vai na traducao: e nome
            proprio. Feito para crescer -- "isto quando comeca vai em domino".
@@ -1790,6 +1780,17 @@
             <em data-i18n="aw_mg">虚拟机 + VirusTotal</em>
           </li>
         </ul>
+      </div>
+      <!-- 01/11/2026 (o Joao): as especificacoes passaram para a coluna das imagens, debaixo da caixa dos diretorios,
+           para a coluna do texto nao ficar mais alta do que a das imagens. -->
+      <div class="hero-meta">
+        <span data-i18n="hero_meta_os_2">Windows 11 / 10 (1809+) · 64 位</span>
+        <span data-i18n="hero_meta_pkg">自包含 · 单文件</span>
+        <!-- O tamanho do .exe vem do version.json (size_mb, que o .cmd de publicar escreve com o SHA-256,
+             depois de assinar) e escreve-se aqui ao abrir: MB inteiros, com a unidade de cada lingua. O
+             texto e o MODELO ({mb} = o numero). Fica escondido ate haver numero: melhor calado do que
+             errado. Pedido do Joao a 2026-09-30 -- o "~115 MB" escrito a mao estava sempre para tras. -->
+        <span id="heroSize" data-i18n="hero_meta_size" hidden>{mb} MB</span>
       </div>
   </div>
 </section>
@@ -3042,7 +3043,7 @@
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (v) {
       if (v && v.version) {
-        var box = document.getElementById('heroLatest');
+        var box = document.getElementById('heroLatestVer');
         var ver = document.getElementById('heroVersion');
         var rel = document.getElementById('heroReleased');
         if (ver) ver.textContent = 'v' + v.version;

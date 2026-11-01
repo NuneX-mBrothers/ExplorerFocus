@@ -349,11 +349,12 @@
   .hero-latest strong { color: var(--accent); font-weight: 600; }
   .hero-latest #heroReleased { opacity: .8; }
   /* O historico das versoes (01/11/2026): a cor da versao, sublinhado a tracejado como as outras ligacoes do hero. */
-  .hero-history-line { margin-top: 12px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; }
+  .hero-history-line { margin-top: 10px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; }
   .hero-history { color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent-dim); }
   .hero-history:hover { border-bottom-style: solid; }
   /* As especificacoes debaixo do carrossel (01/11/2026): o mesmo afastamento da caixa dos diretorios. */
-  .hero-preview .hero-meta { margin-top: 18px; gap: 8px 16px; letter-spacing: 0.1em; }
+  /* uma por linha (01/11/2026, o Joao): o Windows, o pacote e o tamanho, e o historico logo a seguir */
+  .hero-preview .hero-meta { margin-top: 18px; flex-direction: column; align-items: flex-start; gap: 8px; letter-spacing: 0.1em; }
 
   /* Verificação do ficheiro (SHA-256 junto ao download) + card de primeira abertura */
   /* 01/11/2026 (o Joao): o SHA-256, o «O que é?» e o «Primeira vez?» numa linha so; parte em duas se nao couber. */

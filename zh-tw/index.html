@@ -3052,9 +3052,40 @@
       }
       if (v && v.size_mb) fillSize(v.size_mb);
       if (v && v.sha256) fillVerify(v.sha256, v.version);
-      else verifyFallback();
+      var falta = { ver: !(v && v.version), size: !(v && v.size_mb), sha: !(v && v.sha256) };
+      if (falta.ver || falta.size || falta.sha) fromGitHub(falta);
     })
-    .catch(function () { verifyFallback(); });
+    .catch(function () { fromGitHub({ ver: true, size: true, sha: true }); });
+
+  /* 01/11/2026 (o Joao): sem o version.json (a pagina aberta do disco, onde o navegador nao o deixa ler, ou um
+     version.json sem tamanho), o que falta vem da ultima release no GitHub, como o contador das descargas: a
+     versao e a data, o tamanho do .exe (MB de 1024 x 1024, arredondado, como o .cmd de publicar o conta) e o
+     SHA-256 que o GitHub calcula. Se o GitHub tambem falhar, fica como antes. */
+  function fromGitHub(falta) {
+    fetch('https://api.github.com/repos/NuneX-mBrothers/ExplorerFocus/releases/latest')
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (rel) {
+        if (!rel || !rel.assets) { if (falta.sha) verifyFallback(); return; }
+        var exe = null;
+        rel.assets.forEach(function (a) { if (a.name === 'ExplorerFocus.exe') exe = a; });
+        var nv = String(rel.tag_name || '').replace(/^v/, '');
+        if (falta.size && exe && exe.size) fillSize(exe.size / 1048576);
+        if (falta.ver && nv) {
+          var box = document.getElementById('heroLatest');
+          var ver = document.getElementById('heroVersion');
+          var dia = document.getElementById('heroReleased');
+          if (ver) ver.textContent = 'v' + nv;
+          if (dia && rel.published_at) dia.textContent = '  ·  ' + String(rel.published_at).slice(0, 10);
+          if (box) box.hidden = false;
+        }
+        if (falta.sha) {
+          var dg = exe && exe.digest ? String(exe.digest) : '';
+          if (dg.indexOf('sha256:') === 0) fillVerify(dg.slice(7), nv);
+          else verifyFallback();
+        }
+      })
+      .catch(function () { if (falta.sha) verifyFallback(); });
+  }
 
   /* ============================================================
      Descargas no GitHub — a soma de TODAS as releases (.exe + .zip).

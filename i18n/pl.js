@@ -27,6 +27,7 @@ window.I18N.pl = {
   "hero_os_note": "ExplorerFocus to program dla komputerów z Windows 10 i 11 — nie działa na telefonach ani tabletach. Aby go pobrać, otwórz tę stronę na komputerze z Windows.",
   "hero_os_ask": "Pobrać mimo to?",
   "hero_latest": "Najnowsza wersja",
+  "hero_history": "Historia wersji",
   "dl_firsttime": "Pierwsze otwarcie? Ostrzeżenie Windows?",
   "sha_link": "Czym jest SHA-256?",
   "sha_title": "Czym jest SHA-256?",

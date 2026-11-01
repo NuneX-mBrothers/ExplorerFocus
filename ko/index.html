@@ -347,6 +347,12 @@
   }
   .hero-latest strong { color: var(--accent); font-weight: 600; }
   .hero-latest #heroReleased { opacity: .8; }
+  /* O historico das versoes (01/11/2026): a cor da versao, sublinhado a tracejado como as outras ligacoes do hero. */
+  .hero-latest .hero-history-sep { margin: 0 6px 0 8px; opacity: .8; }
+  .hero-latest .hero-history { color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent-dim); }
+  .hero-latest .hero-history:hover { border-bottom-style: solid; }
+  /* As especificacoes debaixo do carrossel (01/11/2026): o mesmo afastamento da caixa dos diretorios. */
+  .hero-preview .hero-meta { margin-top: 18px; gap: 8px 16px; letter-spacing: 0.1em; }
 
   /* Verificação do ficheiro (SHA-256 junto ao download) + card de primeira abertura */
   .hero-verify { margin-top: 16px; }
@@ -1472,16 +1478,6 @@
     <div class="hero-eyebrow" data-i18n="hero_eyebrow">파일 탐색기 · WPF · .NET 10</div>
     <h1 data-i18n-html="hero_title">윈도우 탐색기,<br>잡음은 <em>빼고</em>.</h1>
     <p class="hero-lede" data-i18n="hero_lede">ExplorerFocus는 늘 같은 폴더에서 일하는 사람을 위한 윈도우 탐색기 대체품입니다. 구성할 수 있는 프로필, 깔끔한 트리, 거의 모든 것을 여는 미리보기 — 코드, 문서, 책 — 그리고 무슨 일이 벌어지는지 정말로 알려 주는 파일 작업. 셸의 잡음 없이.</p>
-    <div class="hero-meta">
-      <span data-i18n="hero_meta_os_2">Windows 11 / 10 (1809+) · 64비트</span>
-      <span data-i18n="hero_meta_pkg">독립 실행 · 단일 파일</span>
-      <!-- O tamanho do .exe vem do version.json (size_mb, que o .cmd de publicar escreve com o SHA-256,
-           depois de assinar) e escreve-se aqui ao abrir: MB inteiros, com a unidade de cada lingua. O
-           texto e o MODELO ({mb} = o numero). Fica escondido ate haver numero: melhor calado do que
-           errado. Pedido do Joao a 2026-09-30 -- o "~115 MB" escrito a mao estava sempre para tras. -->
-      <span id="heroSize" data-i18n="hero_meta_size" hidden>{mb} MB</span>
-    </div>
-
     <div class="hero-cta">
       <a class="btn btn-primary" href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.exe">
         <span aria-hidden="true">⬇</span> <span data-i18n="hero_dl_exe">받기 · .exe</span>
@@ -1506,6 +1502,9 @@
     <div class="hero-latest" id="heroLatest" hidden>
       <span data-i18n="hero_latest">최신 버전</span>:
       <strong id="heroVersion"></strong><span id="heroReleased"></span>
+      <!-- 01/11/2026 (o Joao): o historico das versoes, as Releases do GitHub, numa pagina nova. -->
+      <span class="hero-history-sep" aria-hidden="true">·</span>
+      <a class="hero-history" href="https://github.com/NuneX-mBrothers/ExplorerFocus/releases" target="_blank" rel="noopener"><span data-i18n="hero_history">버전 기록</span> <span aria-hidden="true">→</span></a>
     </div>
 
     <div class="hero-verify" id="heroVerify" hidden>
@@ -1759,6 +1758,17 @@
       <button class="shots-arrow prev" type="button" aria-label="이전 스크린샷" data-i18n-attr="aria-label:shots_prev">&#8249;</button>
       <button class="shots-arrow next" type="button" aria-label="다음 스크린샷" data-i18n-attr="aria-label:shots_next">&#8250;</button>
     </div>
+      <!-- 01/11/2026 (o Joao): as especificacoes passaram para debaixo do carrossel, para a coluna do texto
+           nao ficar mais alta do que a das imagens. -->
+      <div class="hero-meta">
+        <span data-i18n="hero_meta_os_2">Windows 11 / 10 (1809+) · 64비트</span>
+        <span data-i18n="hero_meta_pkg">독립 실행 · 단일 파일</span>
+        <!-- O tamanho do .exe vem do version.json (size_mb, que o .cmd de publicar escreve com o SHA-256,
+             depois de assinar) e escreve-se aqui ao abrir: MB inteiros, com a unidade de cada lingua. O
+             texto e o MODELO ({mb} = o numero). Fica escondido ate haver numero: melhor calado do que
+             errado. Pedido do Joao a 2026-09-30 -- o "~115 MB" escrito a mao estava sempre para tras. -->
+        <span id="heroSize" data-i18n="hero_meta_size" hidden>{mb} MB</span>
+      </div>
       <!-- ⛔ ACRESCENTAR UM DIRECTORIO = uma linha na lista + duas chaves curtas
            por lingua (a nota e a pontuacao). O NOME nao vai na traducao: e nome
            proprio. Feito para crescer -- "isto quando comeca vai em domino".

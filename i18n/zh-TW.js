@@ -31,6 +31,7 @@ window.I18N["zh-TW"] = {
   "hero_os_note": "ExplorerFocus 是適用於 Windows 10 和 11 電腦的程式，無法在手機或平板電腦上執行。請在你的 Windows 電腦上開啟本頁面下載。",
   "hero_os_ask": "仍要下載嗎？",
   "hero_latest": "最新版本",
+  "hero_history": "版本歷史",
   "dl_firsttime": "第一次開啟？Windows 跳出警告？",
   "sha_link": "SHA-256 是什麼？",
   "sha_title": "SHA-256 是什麼？",

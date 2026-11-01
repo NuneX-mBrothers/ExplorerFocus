@@ -27,6 +27,7 @@ window.I18N.en = {
   "hero_os_note": "ExplorerFocus is a program for Windows 10 and 11 PCs and doesn't run on phones or tablets. To download it, open this page on your Windows computer.",
   "hero_os_ask": "Download it anyway?",
   "hero_latest": "Latest version",
+  "hero_history": "Version history",
   "dl_firsttime": "First time opening it? Windows warning?",
   "sha_link": "What is SHA-256?",
   "sha_title": "What is SHA-256?",

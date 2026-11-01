@@ -27,6 +27,7 @@ window.I18N.ko = {
   "hero_os_note": "ExplorerFocus는 Windows 10 및 11 PC용 프로그램으로, 휴대폰이나 태블릿에서는 실행되지 않습니다. 다운로드하려면 Windows PC에서 이 페이지를 여십시오.",
   "hero_os_ask": "그래도 다운로드하시겠습니까?",
   "hero_latest": "최신 버전",
+  "hero_history": "버전 기록",
   "dl_firsttime": "처음 여시나요? 윈도우 경고가 나왔나요?",
   "sha_link": "SHA-256이 뭔가요?",
   "sha_title": "SHA-256이 뭔가요?",

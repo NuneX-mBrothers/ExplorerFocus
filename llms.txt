@@ -1,0 +1,33 @@
+# ExplorerFocus
+
+> ExplorerFocus is a file explorer for Windows 11 and 10, a replacement for Windows Explorer built for people who always work in the same folders. Each profile is a tab with its own folders, filters and saved state. It adds a preview that opens almost anything, encrypted vaults, remote connections and file tools. It is made by mBrothers, an independent developer in Portugal, and its interface is in 16 languages, including Portuguese from Portugal and from Brazil.
+
+## What it does
+
+- **Profiles:** each tab is a profile with its own tree of folders, so the folders of each piece of work are always one click away.
+- **Preview:** code, Markdown, PDF, Word, Excel, e-books, images, video and audio, in a side pane or a separate window.
+- **Encrypted vaults:** AES-256, in a format compatible with Cryptomator, readable on Android, iOS, macOS and Linux. They open as an ordinary drive letter.
+- **Remote connections:** SFTP, FTP, WebDAV, Dropbox and OneDrive, in the same tree as local folders.
+- **Tools:** PDF (merge, split and more), images, video and audio, text recognition (OCR), transcription and dictation, and translation, all running on the computer.
+- **Operations that say what is happening:** copies and moves show progress and explain why when something cannot be done.
+
+## The essentials
+
+- **Windows 11, or Windows 10 version 1809 or later, 64-bit.**
+- **One signed .exe, with no installer and nothing else to install** (self-contained, .NET 10 and WPF). A .zip is also available for organisations that block .exe downloads.
+- **Free version with no time limit, no account and no ads.** PREMIUM adds more; the current price is on the website.
+- **Privacy:** the app works on the computer; the only things it sends are listed on the privacy page, and the anonymous usage counts can be turned off.
+- **Languages:** English (UK and US), Portuguese (Portugal), Portuguese (Brazil), Spanish, French, Italian, German, Polish, Russian, Arabic, Hindi, Chinese (Simplified and Traditional), Japanese and Korean.
+- **Uninstalling:** About (the "i" button at the top right) → "Remove ExplorerFocus from this computer…".
+
+## Links
+
+- [Website (English)](https://nunex-mbrothers.github.io/ExplorerFocus/)
+- [Website (Português, Portugal)](https://nunex-mbrothers.github.io/ExplorerFocus/pt/)
+- [Website (Português, Brasil)](https://nunex-mbrothers.github.io/ExplorerFocus/br/)
+- [Download and version history (GitHub Releases)](https://github.com/NuneX-mBrothers/ExplorerFocus/releases)
+- [Privacy](https://nunex-mbrothers.github.io/ExplorerFocus/privacy.html)
+- [MajorGeeks](https://www.majorgeeks.com/files/details/explorerfocus.html)
+- [Softpedia](https://www.softpedia.com/get/File-managers/ExplorerFocus.shtml)
+- [mBrothers](https://nunex-mbrothers.github.io/mBrothers/)
+- Contact: NunexmBrothers@gmail.com

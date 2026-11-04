@@ -296,6 +296,7 @@ window.I18N.ar = {
   "nav_privacy": "الخصوصية",
   "ft_baseline": "مصنوع لعمل كل يوم",
   "mb_credit": "منتج من <a href=\"https://nunex-mbrothers.github.io/mBrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a><span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
+  "ft_company": "mBrothers علامة تجارية لشركة Intrepid Parallel, Lda.",
   "nav_vault": "الخزنة",
   "sh_label": "نظرة سريعة",
   "sh_v2_kind": "مستكشف ملفات",

@@ -98,7 +98,7 @@
     "https://nunex-mbrothers.github.io/ExplorerFocus/shots/02-cofre.webp",
     "https://nunex-mbrothers.github.io/ExplorerFocus/shots/07-claro.webp"
   ],
-  "publisher": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/" },
+  "publisher": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/", "parentOrganization": { "@type": "Organization", "name": "Intrepid Parallel, Lda" } },
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
   "author": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/" }
 }
@@ -1100,6 +1100,17 @@
     font-size: 11px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
+    color: var(--fg-3);
+  }
+  /* A linha da empresa (04/11/2026): a mBrothers é uma marca da Intrepid Parallel, Lda. Sem maiúsculas:
+     o nome legal lê-se como é. */
+  .mb-legal {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
     color: var(--fg-3);
   }
   /* A marca escreve-se SEMPRE "mBrothers" — nunca em maiúsculas.
@@ -2746,6 +2757,7 @@
   </div>
 
   <div class="mb-credit" data-i18n-html="mb_credit">Un produit <a href="https://nunex-mbrothers.github.io/mBrothers/" target="_blank" rel="noopener">mBrothers</a><span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
+  <div class="mb-legal" data-i18n="ft_company">mBrothers est une marque d'Intrepid Parallel, Lda.</div>
 </footer>
 
 <div class="ef-modal" id="verifyModal" role="dialog" aria-modal="true" aria-labelledby="verifyModalTitle">

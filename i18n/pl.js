@@ -292,6 +292,7 @@ window.I18N.pl = {
   "nav_privacy": "Prywatność",
   "ft_baseline": "zrobione na codzienną robotę",
   "mb_credit": "Produkt <a href=\"https://nunex-mbrothers.github.io/mBrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a><span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
+  "ft_company": "mBrothers to marka firmy Intrepid Parallel, Lda.",
   "nav_vault": "Sejf",
   "sh_label": "Szybki rzut oka",
   "sh_v2_kind": "Menedżer plików",

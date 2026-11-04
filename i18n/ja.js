@@ -292,6 +292,7 @@ window.I18N.ja = {
   "nav_privacy": "プライバシー",
   "ft_baseline": "日々の仕事のために設計",
   "mb_credit": "<a href=\"https://nunex-mbrothers.github.io/mBrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a> の製品<span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
+  "ft_company": "mBrothers は Intrepid Parallel, Lda のブランドです。",
   "nav_vault": "金庫",
   "sh_label": "ひと目で",
   "sh_v2_kind": "ファイルエクスプローラー",

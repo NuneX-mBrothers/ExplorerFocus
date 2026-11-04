@@ -292,6 +292,7 @@ window.I18N.zh = {
   "nav_privacy": "隐私",
   "ft_baseline": "为日常工作而设计",
   "mb_credit": "一款 <a href=\"https://nunex-mbrothers.github.io/mBrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a> 产品<span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
+  "ft_company": "mBrothers 是 Intrepid Parallel, Lda 旗下的品牌。",
   "nav_vault": "保险库",
   "sh_label": "快速一览",
   "sh_v2_kind": "一个文件资源管理器",

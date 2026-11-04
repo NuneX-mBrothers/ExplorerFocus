@@ -292,6 +292,7 @@ window.I18N.ko = {
   "nav_privacy": "개인정보",
   "ft_baseline": "매일의 일을 위해 만들었습니다",
   "mb_credit": "<a href=\"https://nunex-mbrothers.github.io/mBrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a> 제품<span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
+  "ft_company": "mBrothers는 Intrepid Parallel, Lda의 브랜드입니다.",
   "nav_vault": "금고",
   "sh_label": "한눈에 보기",
   "sh_v2_kind": "파일 탐색기",

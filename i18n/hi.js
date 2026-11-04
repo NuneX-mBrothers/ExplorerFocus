@@ -294,6 +294,7 @@ window.I18N.hi = {
   "nav_privacy": "निजता",
   "ft_baseline": "रोज़ की मेहनत के लिए बनाया गया",
   "mb_credit": "एक <a href=\"https://nunex-mbrothers.github.io/mBrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a> उत्पाद<span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
+  "ft_company": "mBrothers, Intrepid Parallel, Lda का एक ब्रांड है।",
   "nav_vault": "तिजोरी",
   "sh_label": "एक झलक",
   "sh_v2_kind": "एक फ़ाइल एक्सप्लोरर",

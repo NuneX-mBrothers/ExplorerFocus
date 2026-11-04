@@ -1,0 +1,11 @@
+{
+  "produto": "ExplorerFocus",
+  "moeda": "EUR",
+  "comIva": false,
+  "geradoEm": "2026-11-04T09:02:55.0859565+00:00",
+  "planos": [
+    { "plano": "1ano", "meses": 12, "computadores": 3, "preco": 1299, "precoDeLancamento": 999, "lancamentoAte": "2026-12-31" },
+    { "plano": "3anos", "meses": 36, "computadores": 3, "preco": 2499, "precoDeLancamento": 1999, "lancamentoAte": "2026-12-31" },
+    { "plano": "vitalicio", "meses": null, "computadores": 3, "preco": 4499, "precoDeLancamento": 3499, "lancamentoAte": "2026-12-31" }
+  ]
+}

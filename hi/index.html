@@ -98,7 +98,7 @@
     "https://nunex-mbrothers.github.io/ExplorerFocus/shots/02-cofre.webp",
     "https://nunex-mbrothers.github.io/ExplorerFocus/shots/07-claro.webp"
   ],
-  "publisher": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/", "parentOrganization": { "@type": "Organization", "name": "Intrepid Parallel, Lda" } },
+  "publisher": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/", "parentOrganization": { "@type": "Organization", "name": "Intrepid Parallel, Lda", "address": { "@type": "PostalAddress", "addressLocality": "Lisbon", "addressCountry": "PT" } } },
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
   "author": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/" }
 }
@@ -1279,6 +1279,10 @@
     font-size: 13px; line-height: 1.6; color: var(--fg-2);
   }
   .prem-note strong { color: var(--fg-1); font-weight: 600; }
+  .prem-price { margin: 18px 0 0; font-size: 14px; line-height: 1.6; color: var(--fg-1); }
+  .prem-price p { margin: 0; }
+  .prem-price strong { color: var(--fg-0); font-weight: 600; }
+  .prem-price .prem-price-vat { margin-top: 4px; font-size: 12px; color: var(--fg-3); }
   .prem-idea {
     margin-top: 26px; padding: 20px 24px;
     background: rgba(224,164,88,.07);
@@ -2690,6 +2694,11 @@
       <ul data-i18n-html="pr_prem_list2"><li>एन्क्रिप्टेड तिजोरियाँ <strong>बनाना</strong></li><li><strong>पूरी दूरस्थ पहुँच</strong>: कई कनेक्शन, सारी क्रियाएँ, WebDAV, Dropbox, OneDrive</li><li>स्क्रीन रिकॉर्डिंग <strong>बिना वॉटरमार्क, बिना समय-सीमा और आवाज़ के साथ</strong></li><li>बिना वॉटरमार्क वीडियो रिकॉर्डिंग</li><li>माइक्रोफ़ोन + सिस्टम की आवाज़ का मिश्रण</li><li>फ़ीडर (ADF) से बहु-पृष्ठ स्कैन</li><li>पूरा किताब पाठक — EPUB, Kindle प्रारूप, FB2 और कॉमिक्स</li><li>रिकॉर्डिंग में शुरुआती/अंतिम कार्ड और पाठ पट्टी</li><li>“ऑडियो समायोजित करें” और “वीडियो समायोजित करें”: हर एक का अपना स्टूडियो</li><li>वीडियो: कन्वर्ट करना या छोटा करना, GIF, उल्टा चलाना, आवाज़ जोड़ना</li><li>छवि: टेक्स्ट कॉपी करना, निजी जानकारी छिपाना, जोड़ना, विभाजित करना, पारदर्शी पृष्ठभूमि</li><li>PDF टूल्स: पृष्ठ व्यवस्थित करना, PDF से छवियाँ, पासवर्ड, PDF में बदलना, एक पृष्ठ पर कई फ़ोटो</li></ul>
       <p class="prem-note" data-i18n-html="pr_vitrine">“ऑडियो”, “वीडियो”, “छवि” और “PDF” में PREMIUM खिड़कियाँ सबके लिए खुलती हैं: PREMIUM पाने से पहले ही आप देख सकते हैं कि वे क्या करती हैं।</p>
 
+      <div class="prem-price">
+        <p data-i18n-html="pr_price">Premium 1 साल के लिए, 3 कंप्यूटरों पर: <strong>€12.99</strong>। 31 दिसंबर 2026 तक लॉन्च कीमत: <strong>€9.99</strong>।</p>
+        <p class="prem-price-vat" data-i18n="pr_price_vat">कीमतें यूरो में, VAT के बिना।</p>
+      </div>
+
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo
            das duas colunas, e não se percebia a que lado pertencia. -->
@@ -2757,7 +2766,7 @@
   </div>
 
   <div class="mb-credit" data-i18n-html="mb_credit">एक <a href="https://nunex-mbrothers.github.io/mBrothers/" target="_blank" rel="noopener">mBrothers</a> उत्पाद<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
-  <div class="mb-legal" data-i18n="ft_company">mBrothers, Intrepid Parallel, Lda का एक ब्रांड है।</div>
+  <div class="mb-legal" data-i18n="ft_company2">Intrepid Parallel, Lda का एक उत्पाद, जिसका मुख्यालय लिस्बन, पुर्तगाल में है।</div>
 </footer>
 
 <div class="ef-modal" id="verifyModal" role="dialog" aria-modal="true" aria-labelledby="verifyModalTitle">

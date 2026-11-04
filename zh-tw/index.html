@@ -98,7 +98,7 @@
     "https://nunex-mbrothers.github.io/ExplorerFocus/shots/02-cofre.webp",
     "https://nunex-mbrothers.github.io/ExplorerFocus/shots/07-claro.webp"
   ],
-  "publisher": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/", "parentOrganization": { "@type": "Organization", "name": "Intrepid Parallel, Lda" } },
+  "publisher": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/", "parentOrganization": { "@type": "Organization", "name": "Intrepid Parallel, Lda", "address": { "@type": "PostalAddress", "addressLocality": "Lisbon", "addressCountry": "PT" } } },
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
   "author": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/" }
 }
@@ -1279,6 +1279,10 @@
     font-size: 13px; line-height: 1.6; color: var(--fg-2);
   }
   .prem-note strong { color: var(--fg-1); font-weight: 600; }
+  .prem-price { margin: 18px 0 0; font-size: 14px; line-height: 1.6; color: var(--fg-1); }
+  .prem-price p { margin: 0; }
+  .prem-price strong { color: var(--fg-0); font-weight: 600; }
+  .prem-price .prem-price-vat { margin-top: 4px; font-size: 12px; color: var(--fg-3); }
   .prem-idea {
     margin-top: 26px; padding: 20px 24px;
     background: rgba(224,164,88,.07);
@@ -2690,6 +2694,11 @@
       <ul data-i18n-html="pr_prem_list2"><li><strong>建立</strong>加密保險庫</li><li><strong>完整的遠端存取</strong>：多個連線、所有操作、WebDAV、Dropbox、OneDrive</li><li>錄製螢幕<strong>沒有浮水印、沒有時間限制，而且有聲音</strong></li><li>錄影沒有浮水印</li><li>麥克風 + 系統聲音混音</li><li>用自動送稿機（ADF）掃描多頁</li><li>完整的電子書閱讀器 — EPUB、Kindle 格式、FB2 和漫畫</li><li>錄製的片頭／片尾卡和文字橫幅</li><li>「調整音訊」和「調整影片」：各自完整的工作室</li><li>影片：轉換或縮小、GIF、倒放、加入聲音</li><li>圖片：複製文字、遮蓋隱私內容、拼接、拆分、透明背景</li><li>PDF 工具：整理頁面、PDF 轉圖片、密碼、轉換成 PDF、一頁多張照片</li></ul>
       <p class="prem-note" data-i18n-html="pr_vitrine">在音訊、影片、圖片和 PDF 裡，PREMIUM 視窗對所有人開放：在擁有 PREMIUM 之前，你就能看到它們能做什麼。</p>
 
+      <div class="prem-price">
+        <p data-i18n-html="pr_price">Premium 1 年，3 台電腦：<strong>€12.99</strong>。2026年12月31日前的首發價：<strong>€9.99</strong>。</p>
+        <p class="prem-price-vat" data-i18n="pr_price_vat">價格以歐元計，未含加值稅。</p>
+      </div>
+
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo
            das duas colunas, e não se percebia a que lado pertencia. -->
@@ -2757,7 +2766,7 @@
   </div>
 
   <div class="mb-credit" data-i18n-html="mb_credit"><a href="https://nunex-mbrothers.github.io/mBrothers/" target="_blank" rel="noopener">mBrothers</a> 的產品<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
-  <div class="mb-legal" data-i18n="ft_company">mBrothers 是 Intrepid Parallel, Lda 旗下的品牌。</div>
+  <div class="mb-legal" data-i18n="ft_company2">Intrepid Parallel, Lda 的產品，總部位於葡萄牙里斯本。</div>
 </footer>
 
 <div class="ef-modal" id="verifyModal" role="dialog" aria-modal="true" aria-labelledby="verifyModalTitle">

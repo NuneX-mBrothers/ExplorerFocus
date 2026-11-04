@@ -98,7 +98,7 @@
     "https://nunex-mbrothers.github.io/ExplorerFocus/shots/02-cofre.webp",
     "https://nunex-mbrothers.github.io/ExplorerFocus/shots/07-claro.webp"
   ],
-  "publisher": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/", "parentOrganization": { "@type": "Organization", "name": "Intrepid Parallel, Lda" } },
+  "publisher": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/", "parentOrganization": { "@type": "Organization", "name": "Intrepid Parallel, Lda", "address": { "@type": "PostalAddress", "addressLocality": "Lisbon", "addressCountry": "PT" } } },
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
   "author": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/" }
 }
@@ -1279,6 +1279,10 @@
     font-size: 13px; line-height: 1.6; color: var(--fg-2);
   }
   .prem-note strong { color: var(--fg-1); font-weight: 600; }
+  .prem-price { margin: 18px 0 0; font-size: 14px; line-height: 1.6; color: var(--fg-1); }
+  .prem-price p { margin: 0; }
+  .prem-price strong { color: var(--fg-0); font-weight: 600; }
+  .prem-price .prem-price-vat { margin-top: 4px; font-size: 12px; color: var(--fg-3); }
   .prem-idea {
     margin-top: 26px; padding: 20px 24px;
     background: rgba(224,164,88,.07);
@@ -2690,6 +2694,11 @@
       <ul data-i18n-html="pr_prem_list2"><li><strong>Crear</strong> bóvedas cifradas</li><li><strong>Acceso remoto completo</strong>: varias conexiones, todas las operaciones, WebDAV, Dropbox, OneDrive</li><li>Grabación de pantalla <strong>sin marca de agua, sin límite de tiempo y con sonido</strong></li><li>Grabación de vídeo sin marca de agua</li><li>Audio con mezcla de micrófono + sonido del sistema</li><li>Escaneo multipágina con alimentador (ADF)</li><li>Lector de libros completo — EPUB, formatos Kindle, FB2 y cómics</li><li>Tarjetas de inicio/fin y banda de texto en las grabaciones</li><li>Ajustar el audio y Ajustar el vídeo: el estudio de cada uno</li><li>Vídeo: convertir o reducir, GIF, invertir, añadir un sonido</li><li>Imagen: copiar el texto, tapar lo privado, unir, dividir, fondo transparente</li><li>Herramientas PDF: organizar páginas, PDF a imágenes, contraseña, convertir a PDF, varias fotos por página</li></ul>
       <p class="prem-note" data-i18n-html="pr_vitrine">En Audio, Vídeo, Imagen y PDF, las ventanas PREMIUM se abren para todos: ves lo que hacen antes de tener PREMIUM.</p>
 
+      <div class="prem-price">
+        <p data-i18n-html="pr_price">Premium durante 1 año, en 3 ordenadores: <strong>12,99 €</strong>. Precio de lanzamiento hasta el 31 de diciembre de 2026: <strong>9,99 €</strong>.</p>
+        <p class="prem-price-vat" data-i18n="pr_price_vat">Precios en euros, sin IVA.</p>
+      </div>
+
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo
            das duas colunas, e não se percebia a que lado pertencia. -->
@@ -2757,7 +2766,7 @@
   </div>
 
   <div class="mb-credit" data-i18n-html="mb_credit">Un producto <a href="https://nunex-mbrothers.github.io/mBrothers/" target="_blank" rel="noopener">mBrothers</a><span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
-  <div class="mb-legal" data-i18n="ft_company">mBrothers es una marca de Intrepid Parallel, Lda.</div>
+  <div class="mb-legal" data-i18n="ft_company2">Un producto de Intrepid Parallel, Lda, con sede en Lisboa, Portugal.</div>
 </footer>
 
 <div class="ef-modal" id="verifyModal" role="dialog" aria-modal="true" aria-labelledby="verifyModalTitle">

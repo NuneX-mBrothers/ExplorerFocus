@@ -98,7 +98,7 @@
     "https://nunex-mbrothers.github.io/ExplorerFocus/shots/02-cofre.webp",
     "https://nunex-mbrothers.github.io/ExplorerFocus/shots/07-claro.webp"
   ],
-  "publisher": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/", "parentOrganization": { "@type": "Organization", "name": "Intrepid Parallel, Lda" } },
+  "publisher": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/", "parentOrganization": { "@type": "Organization", "name": "Intrepid Parallel, Lda", "address": { "@type": "PostalAddress", "addressLocality": "Lisbon", "addressCountry": "PT" } } },
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
   "author": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/" }
 }
@@ -1279,6 +1279,10 @@
     font-size: 13px; line-height: 1.6; color: var(--fg-2);
   }
   .prem-note strong { color: var(--fg-1); font-weight: 600; }
+  .prem-price { margin: 18px 0 0; font-size: 14px; line-height: 1.6; color: var(--fg-1); }
+  .prem-price p { margin: 0; }
+  .prem-price strong { color: var(--fg-0); font-weight: 600; }
+  .prem-price .prem-price-vat { margin-top: 4px; font-size: 12px; color: var(--fg-3); }
   .prem-idea {
     margin-top: 26px; padding: 20px 24px;
     background: rgba(224,164,88,.07);
@@ -2690,6 +2694,11 @@
       <ul data-i18n-html="pr_prem_list2"><li><strong>إنشاء</strong> خزائن مشفّرة</li><li><strong>وصول بعيد كامل</strong>: اتصالات متعدّدة، وكل العمليات، وWebDAV وDropbox وOneDrive</li><li>تسجيل الشاشة <strong>بلا علامة مائية، وبلا حدّ زمني، ومع الصوت</strong></li><li>تسجيل فيديو بلا علامة مائية</li><li>مزج صوت الميكروفون + صوت النظام</li><li>مسح متعدّد الصفحات بوحدة التغذية (ADF)</li><li>قارئ كتب كامل — EPUB، وصيغ Kindle، وFB2، والقصص المصوّرة</li><li>بطاقات البداية/النهاية وشريط النص في التسجيلات</li><li>«ضبط الصوت» و«ضبط الفيديو»: استوديو كلٍّ منهما</li><li>الفيديو: التحويل أو التصغير، وGIF، وعكس الفيديو، وإضافة صوت</li><li>الصورة: نسخ النص، وإخفاء ما هو خاص، والدمج، والتقسيم، والخلفية الشفافة</li><li>أدوات PDF: تنظيم الصفحات، PDF إلى صور، كلمة المرور، التحويل إلى PDF، عدة صور في الصفحة</li></ul>
       <p class="prem-note" data-i18n-html="pr_vitrine">في «الصوت» و«الفيديو» و«الصورة» و«PDF»، تُفتح نوافذ PREMIUM للجميع: ترى ما تفعله قبل الحصول على PREMIUM.</p>
 
+      <div class="prem-price">
+        <p data-i18n-html="pr_price">Premium لمدة سنة واحدة، على 3 حواسيب: <strong>€12.99</strong>. سعر الإطلاق حتى 31 ديسمبر 2026: <strong>€9.99</strong>.</p>
+        <p class="prem-price-vat" data-i18n="pr_price_vat">الأسعار باليورو، دون ضريبة القيمة المضافة.</p>
+      </div>
+
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo
            das duas colunas, e não se percebia a que lado pertencia. -->
@@ -2757,7 +2766,7 @@
   </div>
 
   <div class="mb-credit" data-i18n-html="mb_credit">منتج من <a href="https://nunex-mbrothers.github.io/mBrothers/" target="_blank" rel="noopener">mBrothers</a><span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
-  <div class="mb-legal" data-i18n="ft_company">mBrothers علامة تجارية لشركة Intrepid Parallel, Lda.</div>
+  <div class="mb-legal" data-i18n="ft_company2">منتج من شركة Intrepid Parallel, Lda، ومقرّها لشبونة، البرتغال.</div>
 </footer>
 
 <div class="ef-modal" id="verifyModal" role="dialog" aria-modal="true" aria-labelledby="verifyModalTitle">

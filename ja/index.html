@@ -98,7 +98,7 @@
     "https://nunex-mbrothers.github.io/ExplorerFocus/shots/02-cofre.webp",
     "https://nunex-mbrothers.github.io/ExplorerFocus/shots/07-claro.webp"
   ],
-  "publisher": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/", "parentOrganization": { "@type": "Organization", "name": "Intrepid Parallel, Lda" } },
+  "publisher": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/", "parentOrganization": { "@type": "Organization", "name": "Intrepid Parallel, Lda", "address": { "@type": "PostalAddress", "addressLocality": "Lisbon", "addressCountry": "PT" } } },
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
   "author": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/" }
 }
@@ -1279,6 +1279,10 @@
     font-size: 13px; line-height: 1.6; color: var(--fg-2);
   }
   .prem-note strong { color: var(--fg-1); font-weight: 600; }
+  .prem-price { margin: 18px 0 0; font-size: 14px; line-height: 1.6; color: var(--fg-1); }
+  .prem-price p { margin: 0; }
+  .prem-price strong { color: var(--fg-0); font-weight: 600; }
+  .prem-price .prem-price-vat { margin-top: 4px; font-size: 12px; color: var(--fg-3); }
   .prem-idea {
     margin-top: 26px; padding: 20px 24px;
     background: rgba(224,164,88,.07);
@@ -2690,6 +2694,11 @@
       <ul data-i18n-html="pr_prem_list2"><li>暗号化された金庫を<strong>作る</strong></li><li><strong>リモートアクセスのすべて</strong>：複数接続、すべての操作、WebDAV、Dropbox、OneDrive</li><li>画面の録画が<strong>透かしなし、時間の制限なし、音あり</strong></li><li>透かしなしの映像の録画</li><li>マイク + システム音のミキシング</li><li>ドキュメントフィーダー（ADF）での複数ページのスキャン</li><li>完全な書籍リーダー — EPUB、Kindle 系、FB2、コミック</li><li>録画のオープニング / エンドカードとテキストの帯</li><li>「音声を調整」と「動画を調整」：それぞれのスタジオ</li><li>ビデオ：変換または縮小、GIF、逆再生、音声の追加</li><li>画像：文字のコピー、個人情報を隠す、結合、分割、背景の透明化</li><li>PDF ツール：ページの整理、PDF を画像に、パスワード、PDF への変換、1 ページに複数の写真</li></ul>
       <p class="prem-note" data-i18n-html="pr_vitrine">オーディオ、ビデオ、画像、PDF では、PREMIUM の画面は誰でも開けます：PREMIUM を手に入れる前に、何ができるかを確かめられます。</p>
 
+      <div class="prem-price">
+        <p data-i18n-html="pr_price">Premium 1 年・パソコン 3 台：<strong>€12.99</strong>。2026年12月31日までの発売記念価格：<strong>€9.99</strong>。</p>
+        <p class="prem-price-vat" data-i18n="pr_price_vat">価格はユーロ、税抜です。</p>
+      </div>
+
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo
            das duas colunas, e não se percebia a que lado pertencia. -->
@@ -2757,7 +2766,7 @@
   </div>
 
   <div class="mb-credit" data-i18n-html="mb_credit"><a href="https://nunex-mbrothers.github.io/mBrothers/" target="_blank" rel="noopener">mBrothers</a> の製品<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
-  <div class="mb-legal" data-i18n="ft_company">mBrothers は Intrepid Parallel, Lda のブランドです。</div>
+  <div class="mb-legal" data-i18n="ft_company2">Intrepid Parallel, Lda（ポルトガル・リスボン）の製品です。</div>
 </footer>
 
 <div class="ef-modal" id="verifyModal" role="dialog" aria-modal="true" aria-labelledby="verifyModalTitle">

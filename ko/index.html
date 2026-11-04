@@ -98,7 +98,7 @@
     "https://nunex-mbrothers.github.io/ExplorerFocus/shots/02-cofre.webp",
     "https://nunex-mbrothers.github.io/ExplorerFocus/shots/07-claro.webp"
   ],
-  "publisher": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/", "parentOrganization": { "@type": "Organization", "name": "Intrepid Parallel, Lda" } },
+  "publisher": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/", "parentOrganization": { "@type": "Organization", "name": "Intrepid Parallel, Lda", "address": { "@type": "PostalAddress", "addressLocality": "Lisbon", "addressCountry": "PT" } } },
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
   "author": { "@type": "Organization", "name": "mBrothers", "url": "https://nunex-mbrothers.github.io/mBrothers/" }
 }
@@ -1279,6 +1279,10 @@
     font-size: 13px; line-height: 1.6; color: var(--fg-2);
   }
   .prem-note strong { color: var(--fg-1); font-weight: 600; }
+  .prem-price { margin: 18px 0 0; font-size: 14px; line-height: 1.6; color: var(--fg-1); }
+  .prem-price p { margin: 0; }
+  .prem-price strong { color: var(--fg-0); font-weight: 600; }
+  .prem-price .prem-price-vat { margin-top: 4px; font-size: 12px; color: var(--fg-3); }
   .prem-idea {
     margin-top: 26px; padding: 20px 24px;
     background: rgba(224,164,88,.07);
@@ -2690,6 +2694,11 @@
       <ul data-i18n-html="pr_prem_list2"><li>암호화 금고 <strong>만들기</strong></li><li><strong>완전한 원격 접속</strong>: 여러 연결, 모든 작업, WebDAV, Dropbox, OneDrive</li><li>화면 녹화 <strong>워터마크 없음, 시간 제한 없음, 소리 포함</strong></li><li>워터마크 없는 비디오 녹화</li><li>마이크 + 시스템 소리 믹싱</li><li>급지기(ADF)로 여러 쪽 스캔</li><li>완전한 책 리더 — EPUB, Kindle 형식, FB2, 만화</li><li>녹화물의 오프닝/엔딩 카드와 텍스트 띠</li><li>“오디오 조정”과 “동영상 조정”: 각각의 스튜디오</li><li>비디오: 변환 또는 축소, GIF, 거꾸로 재생, 소리 추가</li><li>이미지: 텍스트 복사, 개인 정보 가리기, 합치기, 나누기, 투명한 배경</li><li>PDF 도구: 페이지 정리, PDF를 이미지로, 암호, PDF로 변환, 한 페이지에 여러 사진</li></ul>
       <p class="prem-note" data-i18n-html="pr_vitrine">오디오, 비디오, 이미지, PDF에서는 PREMIUM 창을 누구나 열 수 있습니다: PREMIUM을 갖기 전에 무엇을 하는지 볼 수 있습니다.</p>
 
+      <div class="prem-price">
+        <p data-i18n-html="pr_price">Premium 1년, 컴퓨터 3대: <strong>€12.99</strong>. 2026년 12월 31일까지 출시 기념가: <strong>€9.99</strong>.</p>
+        <p class="prem-price-vat" data-i18n="pr_price_vat">가격은 유로, 부가세 별도입니다.</p>
+      </div>
+
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo
            das duas colunas, e não se percebia a que lado pertencia. -->
@@ -2757,7 +2766,7 @@
   </div>
 
   <div class="mb-credit" data-i18n-html="mb_credit"><a href="https://nunex-mbrothers.github.io/mBrothers/" target="_blank" rel="noopener">mBrothers</a> 제품<span class="sep" aria-hidden="true"></span>developing practical solutions for small planetary systems</div>
-  <div class="mb-legal" data-i18n="ft_company">mBrothers는 Intrepid Parallel, Lda의 브랜드입니다.</div>
+  <div class="mb-legal" data-i18n="ft_company2">포르투갈 리스본에 있는 Intrepid Parallel, Lda의 제품입니다.</div>
 </footer>
 
 <div class="ef-modal" id="verifyModal" role="dialog" aria-modal="true" aria-labelledby="verifyModalTitle">

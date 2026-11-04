@@ -276,7 +276,7 @@ window.I18N.zh = {
   "pr_prem_list": "<li><strong>创建</strong>加密保险库</li><li><strong>完整远程访问</strong>：多个连接、全部操作、WebDAV、Dropbox、OneDrive</li><li>屏幕录制<strong>无水印、无时长限制、带声音</strong></li><li>摄像头录制无水印</li><li>音频混合麦克风 + 系统声音</li><li>多页扫描，支持自动进纸器（ADF）</li><li>完整图书阅读器 — EPUB、Kindle 格式、FB2 和漫画</li><li>录制的片头/片尾卡片与文字横幅</li><li>PDF 工具：整理页面、PDF 转图片、密码、转换为 PDF</li>",
   "pr_soon_h": "即将推出",
   "pr_soon": "获取高级版的新方式即将推出，随 ExplorerFocus 的新版本一起到来。在此之前，高级版暂不提供，免费版保留今天的全部功能。你已有的高级版密钥继续有效。",
-  "pr_price_vat": "价格以欧元计，不含增值税。",
+  "pr_price_vat": "价格以欧元计，不含税。付款时会加上购买者所在国家的增值税或销售税。",
   "pr_price": "Premium 1 年，3 台电脑：<strong>€12.99</strong>。2026年12月31日前的首发价：<strong>€9.99</strong>。",
   "pr_idea3": "<strong>有好想法吗？</strong>请写信至 <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a>。",
   "ft_tagline": "为那些总在相同地方工作、并希望工具也知道这一点的人,设计的极简文件管理器。",

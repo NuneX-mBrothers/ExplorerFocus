@@ -276,7 +276,7 @@ window.I18N.ko = {
   "pr_prem_list": "<li>암호화 금고 <strong>만들기</strong></li><li><strong>완전한 원격 접속</strong>: 여러 연결, 모든 작업, WebDAV, Dropbox, OneDrive</li><li>화면 녹화 <strong>워터마크 없음, 시간 제한 없음, 소리 포함</strong></li><li>워터마크 없는 비디오 녹화</li><li>마이크 + 시스템 소리 믹싱</li><li>급지기(ADF)로 여러 쪽 스캔</li><li>완전한 책 리더 — EPUB, Kindle 형식, FB2, 만화</li><li>녹화물의 오프닝/엔딩 카드와 텍스트 띠</li><li>PDF 도구: 페이지 정리, PDF를 이미지로, 암호, PDF로 변환</li>",
   "pr_soon_h": "곧 출시",
   "pr_soon": "Premium을 얻는 새로운 방법이 ExplorerFocus 새 버전과 함께 곧 나옵니다. 그때까지 Premium은 이용할 수 없으며, 무료 버전은 지금 있는 모든 기능을 그대로 유지합니다. 이미 가지고 계신 Premium 키는 계속 작동합니다.",
-  "pr_price_vat": "가격은 유로, 부가세 별도입니다.",
+  "pr_price_vat": "가격은 유로이며 세금 별도입니다. 결제할 때 구매자 국가의 부가가치세 또는 판매세가 더해집니다.",
   "pr_price": "Premium 1년, 컴퓨터 3대: <strong>€12.99</strong>. 2026년 12월 31일까지 출시 기념가: <strong>€9.99</strong>.",
   "pr_idea3": "<strong>좋은 생각이 있으신가요?</strong> <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a>으로 보내 주세요.",
   "ft_tagline": "늘 같은 곳에서 일하는 사람을 위한, 그리고 도구가 그것을 알아주기를 바라는 사람을 위한 최소한의 탐색기.",

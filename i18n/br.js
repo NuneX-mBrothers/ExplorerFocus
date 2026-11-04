@@ -280,7 +280,7 @@ window.I18N.br = {
   "pr_prem_list": "<li><strong>Criar</strong> cofres cifrados</li><li><strong>Acesso remoto completo</strong>: várias conexões, todas as operações, WebDAV, Dropbox, OneDrive</li><li>Gravação de tela <strong>sem marca d'água, sem limite de tempo e com som</strong></li><li>Gravação de vídeo sem marca d'água</li><li>Mixagem de áudio microfone + som do sistema</li><li>Digitalização de várias páginas com alimentador (ADF)</li><li>Leitor de livros completo — EPUB, formatos Kindle, FB2 e quadrinhos</li><li>Cartões de abertura/fecho e faixa de texto nas gravações</li><li>Ferramentas de PDF: organizar páginas, PDF para imagens, senha, converter para PDF</li>",
   "pr_soon_h": "Em breve",
   "pr_soon": "Uma nova forma de obter o Premium chega em breve, com uma nova versão do ExplorerFocus. Até lá, o Premium não está disponível, e a versão grátis continua com tudo o que tem hoje. As chaves Premium que você já tem continuam funcionando.",
-  "pr_price_vat": "Preços em euros, sem IVA.",
+  "pr_price_vat": "Preços em euros, sem impostos. No pagamento, é somado o imposto sobre vendas do país de quem compra.",
   "pr_price": "Premium por 1 ano, em 3 computadores: <strong>€ 12,99</strong>. Preço de lançamento até 31 de dezembro de 2026: <strong>€ 9,99</strong>.",
   "pr_idea3": "<strong>Tem uma boa ideia?</strong> Escreva para <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a>.",
   "ft_tagline": "O explorador mínimo para quem trabalha sempre nos mesmos lugares — e quer que a ferramenta saiba disso.",

@@ -70,14 +70,24 @@ FRASE = {
  "ko": "Premium 1년, 컴퓨터 3대: <strong>{norm}</strong>. {data}까지 출시 기념가: <strong>{lanc}</strong>.",
 }
 
-# O que se diz do IVA segue o «comIva» do preçário. ⏳ Como se mostra é a ADM_IP que decide (MKT_EF-000098).
+# O que se diz do IVA segue o «comIva» do preçário. Sem IVA (o João, 04/11): o valor sem impostos, e no pagamento
+# junta-se o imposto do país de quem compra, que a Stripe calcula. Nunca uma taxa fixa (os 23 % são só de cá).
 IVA = {
- False: {"en": "Prices in euros, before VAT.", "pt": "Preços em euros, sem IVA.", "br": "Preços em euros, sem IVA.",
-         "es": "Precios en euros, sin IVA.", "fr": "Prix en euros, hors TVA.", "de": "Preise in Euro, zzgl. MwSt.",
-         "it": "Prezzi in euro, IVA esclusa.", "pl": "Ceny w euro, bez VAT.", "ru": "Цены в евро, без НДС.",
-         "ar": "الأسعار باليورو، دون ضريبة القيمة المضافة.", "hi": "कीमतें यूरो में, VAT के बिना।",
-         "zh": "价格以欧元计，不含增值税。", "zh-TW": "價格以歐元計，未含加值稅。", "ja": "価格はユーロ、税抜です。",
-         "ko": "가격은 유로, 부가세 별도입니다."},
+ False: {"en": "Prices in euros, before taxes. At checkout, the VAT or sales tax of the buyer's country is added.",
+         "pt": "Preços em euros, sem impostos. No pagamento, junta-se o IVA, ou o imposto equivalente, do país de quem compra.",
+         "br": "Preços em euros, sem impostos. No pagamento, é somado o imposto sobre vendas do país de quem compra.",
+         "es": "Precios en euros, sin impuestos. Al pagar, se añade el IVA o el impuesto equivalente del país del comprador.",
+         "fr": "Prix en euros, hors taxes. Au paiement, la TVA ou la taxe équivalente du pays de l'acheteur est ajoutée.",
+         "de": "Preise in Euro, ohne Steuern. Beim Bezahlen kommt die Mehrwertsteuer oder die entsprechende Steuer des Landes des Käufers hinzu.",
+         "it": "Prezzi in euro, tasse escluse. Al pagamento si aggiunge l'IVA, o l'imposta equivalente, del paese di chi acquista.",
+         "pl": "Ceny w euro, bez podatków. Przy płatności doliczany jest VAT lub podobny podatek kraju kupującego.",
+         "ru": "Цены в евро, без налогов. При оплате добавляется НДС или аналогичный налог страны покупателя.",
+         "ar": "الأسعار باليورو، دون الضرائب. عند الدفع تُضاف ضريبة القيمة المضافة أو ضريبة المبيعات في بلد المشتري.",
+         "hi": "कीमतें यूरो में, करों के बिना। भुगतान के समय खरीदार के देश का VAT या बिक्री कर जोड़ा जाता है।",
+         "zh": "价格以欧元计，不含税。付款时会加上购买者所在国家的增值税或销售税。",
+         "zh-TW": "價格以歐元計，未含稅。付款時會加上購買者所在國家的加值稅或銷售稅。",
+         "ja": "価格はユーロ、税抜です。お支払い時に、購入される国の付加価値税または売上税が加算されます。",
+         "ko": "가격은 유로이며 세금 별도입니다. 결제할 때 구매자 국가의 부가가치세 또는 판매세가 더해집니다."},
  True: {"en": "Prices in euros, VAT included.", "pt": "Preços em euros, com IVA.", "br": "Preços em euros, com IVA.",
         "es": "Precios en euros, IVA incluido.", "fr": "Prix en euros, TVA comprise.", "de": "Preise in Euro, inkl. MwSt.",
         "it": "Prezzi in euro, IVA inclusa.", "pl": "Ceny w euro, z VAT.", "ru": "Цены в евро, с НДС.",

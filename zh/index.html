@@ -1151,6 +1151,8 @@
     .topbar-inner { padding: 12px 150px 12px 20px; }
     .nav { gap: 14px; }
     .nav-version { display: none; }
+    /* Com o «Preços», o menu deixou de caber entre os 620 e os 900 px: saem os dois que menos se procuram. */
+    .nav a[href="#stack"], .nav a[href="#shortcuts"] { display: none; }
     .lang-switch { top: 10px; right: 12px; padding: 3px; }
     .lang-flag { width: 26px; height: 18px; }
     .lang-flag + .lang-flag { margin-left: 3px; }
@@ -1279,10 +1281,16 @@
     font-size: 13px; line-height: 1.6; color: var(--fg-2);
   }
   .prem-note strong { color: var(--fg-1); font-weight: 600; }
-  .prem-price { margin: 18px 0 0; font-size: 14px; line-height: 1.6; color: var(--fg-1); }
-  .prem-price p { margin: 0; }
-  .prem-price strong { color: var(--fg-0); font-weight: 600; }
-  .prem-price .prem-price-vat { margin-top: 4px; font-size: 12px; color: var(--fg-3); }
+  .prem-prices { margin: 28px 0 0; padding: 22px 24px; background: var(--bg-2); border: 1px solid var(--border-1); border-radius: 12px; }
+  .prem-prices h3 { margin: 0 0 6px; font-size: 20px; color: var(--fg-0); }
+  .prem-prices p { margin: 0; font-size: 14px; line-height: 1.6; color: var(--fg-1); }
+  .price-table { width: 100%; border-collapse: collapse; margin: 14px 0 0; font-size: 15px; }
+  .price-table th, .price-table td { text-align: start; padding: 10px 12px; border-bottom: 1px solid var(--border-1); }
+  .price-table th { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-3); font-weight: 500; }
+  .price-table td { color: var(--fg-1); }
+  .price-table td:first-child { color: var(--fg-0); font-weight: 600; }
+  .price-table td.lanc { color: var(--accent); font-weight: 600; }
+  .prem-prices .prem-price-vat { margin-top: 10px; font-size: 12px; color: var(--fg-3); }
   .prem-idea {
     margin-top: 26px; padding: 20px 24px;
     background: rgba(224,164,88,.07);
@@ -1487,6 +1495,7 @@
       <a href="#shortcuts" data-i18n="nav_shortcuts">快捷键</a>
       <a href="#stack" data-i18n="nav_stack">技术栈</a>
       <a href="#premium" data-i18n="nav_premium">高级版</a>
+      <a href="#prices" data-i18n="nav_prices">价格</a>
       <a href="#download" data-i18n="nav_download">下载</a>
       <span class="nav-version">v2.1.6</span>
     </nav>
@@ -2694,11 +2703,6 @@
       <ul data-i18n-html="pr_prem_list2"><li><strong>创建</strong>加密保险库</li><li><strong>完整远程访问</strong>：多个连接、全部操作、WebDAV、Dropbox、OneDrive</li><li>屏幕录制<strong>无水印、无时长限制、带声音</strong></li><li>摄像头录制无水印</li><li>音频混合麦克风 + 系统声音</li><li>多页扫描，支持自动进纸器（ADF）</li><li>完整图书阅读器 — EPUB、Kindle 格式、FB2 和漫画</li><li>录制的片头/片尾卡片与文字横幅</li><li>“调整音频”和“调整视频”：各自完整的工作室</li><li>视频：转换或缩小、GIF、倒放、添加声音</li><li>图片：复制文字、遮盖隐私内容、拼接、拆分、透明背景</li><li>PDF 工具：整理页面、PDF 转图片、密码、转换为 PDF、一页多张照片</li></ul>
       <p class="prem-note" data-i18n-html="pr_vitrine">在音频、视频、图片和 PDF 里，PREMIUM 窗口对所有人开放：在拥有 PREMIUM 之前，你就能看到它们能做什么。</p>
 
-      <div class="prem-price">
-        <p data-i18n-html="pr_price">Premium 1 年，3 台电脑：<strong>€12.99</strong>。2026年12月31日前的首发价：<strong>€9.99</strong>。</p>
-        <p class="prem-price-vat" data-i18n="pr_price_vat">价格以欧元计，不含税。付款时会加上购买者所在国家的增值税或销售税。</p>
-      </div>
-
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo
            das duas colunas, e não se percebia a que lado pertencia. -->
@@ -2707,6 +2711,20 @@
         <p data-i18n="pr_soon">获取高级版的新方式即将推出，随 ExplorerFocus 的新版本一起到来。在此之前，高级版暂不提供，免费版保留今天的全部功能。你已有的高级版密钥继续有效。</p>
       </div>
     </div>
+  </div>
+
+  <div class="prem-prices" id="prices">
+    <h3 data-i18n="pr_prices_h">价格</h3>
+    <p data-i18n="pr_price_intro">Premium，适用于 3 台电脑。首发价有效期至2026年12月31日。</p>
+    <table class="price-table">
+      <thead><tr><th data-i18n="pr_th_plan">方案</th><th data-i18n="pr_th_price">价格</th><th data-i18n="pr_th_launch">首发价</th></tr></thead>
+      <tbody>
+        <tr><td data-i18n="pr_plan_1ano">1 年</td><td data-i18n="pr_p_1ano">€12.99</td><td class="lanc" data-i18n="pr_l_1ano">€9.99</td></tr>
+        <tr><td data-i18n="pr_plan_3anos">3 年</td><td data-i18n="pr_p_3anos">€24.99</td><td class="lanc" data-i18n="pr_l_3anos">€19.99</td></tr>
+        <tr><td data-i18n="pr_plan_vida">终身（在每台电脑的使用寿命内）</td><td data-i18n="pr_p_vida">€44.99</td><td class="lanc" data-i18n="pr_l_vida">€34.99</td></tr>
+      </tbody>
+    </table>
+    <p class="prem-price-vat" data-i18n="pr_price_vat">价格以欧元计，不含税。付款时会加上购买者所在国家的增值税或销售税。</p>
   </div>
 
   <p class="prem-idea" data-i18n-html="pr_idea3"><strong>有好想法吗？</strong>请写信至 <a href="mailto:explorerfocus@intrepidparallel.com">explorerfocus@intrepidparallel.com</a>。</p>
@@ -2754,6 +2772,7 @@
       <a href="#shortcuts" data-i18n="nav_shortcuts">快捷键</a>
       <a href="#stack" data-i18n="nav_stack">技术栈</a>
       <a href="#premium" data-i18n="nav_premium">高级版</a>
+      <a href="#prices" data-i18n="nav_prices">价格</a>
       <a href="../dropbox-flow.html" data-i18n="nav_guide">操作演示</a>
       <a href="../privacy.html" data-i18n="nav_privacy">隐私</a>
     </div>

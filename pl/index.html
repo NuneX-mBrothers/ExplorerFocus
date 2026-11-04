@@ -1151,6 +1151,8 @@
     .topbar-inner { padding: 12px 150px 12px 20px; }
     .nav { gap: 14px; }
     .nav-version { display: none; }
+    /* Com o «Preços», o menu deixou de caber entre os 620 e os 900 px: saem os dois que menos se procuram. */
+    .nav a[href="#stack"], .nav a[href="#shortcuts"] { display: none; }
     .lang-switch { top: 10px; right: 12px; padding: 3px; }
     .lang-flag { width: 26px; height: 18px; }
     .lang-flag + .lang-flag { margin-left: 3px; }
@@ -1279,10 +1281,16 @@
     font-size: 13px; line-height: 1.6; color: var(--fg-2);
   }
   .prem-note strong { color: var(--fg-1); font-weight: 600; }
-  .prem-price { margin: 18px 0 0; font-size: 14px; line-height: 1.6; color: var(--fg-1); }
-  .prem-price p { margin: 0; }
-  .prem-price strong { color: var(--fg-0); font-weight: 600; }
-  .prem-price .prem-price-vat { margin-top: 4px; font-size: 12px; color: var(--fg-3); }
+  .prem-prices { margin: 28px 0 0; padding: 22px 24px; background: var(--bg-2); border: 1px solid var(--border-1); border-radius: 12px; }
+  .prem-prices h3 { margin: 0 0 6px; font-size: 20px; color: var(--fg-0); }
+  .prem-prices p { margin: 0; font-size: 14px; line-height: 1.6; color: var(--fg-1); }
+  .price-table { width: 100%; border-collapse: collapse; margin: 14px 0 0; font-size: 15px; }
+  .price-table th, .price-table td { text-align: start; padding: 10px 12px; border-bottom: 1px solid var(--border-1); }
+  .price-table th { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-3); font-weight: 500; }
+  .price-table td { color: var(--fg-1); }
+  .price-table td:first-child { color: var(--fg-0); font-weight: 600; }
+  .price-table td.lanc { color: var(--accent); font-weight: 600; }
+  .prem-prices .prem-price-vat { margin-top: 10px; font-size: 12px; color: var(--fg-3); }
   .prem-idea {
     margin-top: 26px; padding: 20px 24px;
     background: rgba(224,164,88,.07);
@@ -1487,6 +1495,7 @@
       <a href="#shortcuts" data-i18n="nav_shortcuts">Skróty</a>
       <a href="#stack" data-i18n="nav_stack">Technologie</a>
       <a href="#premium" data-i18n="nav_premium">Premium</a>
+      <a href="#prices" data-i18n="nav_prices">Ceny</a>
       <a href="#download" data-i18n="nav_download">Pobierz</a>
       <span class="nav-version">v2.1.6</span>
     </nav>
@@ -2694,11 +2703,6 @@
       <ul data-i18n-html="pr_prem_list2"><li><strong>Tworzenie</strong> zaszyfrowanych sejfów</li><li><strong>Pełny dostęp zdalny</strong>: wiele połączeń, wszystkie operacje, WebDAV, Dropbox, OneDrive</li><li>Nagrywanie ekranu <strong>bez znaku wodnego, bez limitu czasu i z dźwiękiem</strong></li><li>Nagrywanie wideo bez znaku wodnego</li><li>Miksowanie dźwięku mikrofon + system</li><li>Skanowanie wielostronicowe z podajnikiem (ADF)</li><li>Pełny czytnik książek — EPUB, formaty Kindle, FB2 i komiksy</li><li>Karty początkowa/końcowa i pasek tekstowy w nagraniach</li><li>„Dostosuj dźwięk” i „Dostosuj wideo”: każde to osobne studio</li><li>Wideo: konwersja lub zmniejszanie, GIF, odtwarzanie wstecz, dodawanie dźwięku</li><li>Obraz: kopiowanie tekstu, zakrywanie tego, co prywatne, łączenie, dzielenie, przezroczyste tło</li><li>Narzędzia PDF: porządkowanie stron, PDF na obrazy, hasło, konwersja do PDF, kilka zdjęć na stronie</li></ul>
       <p class="prem-note" data-i18n-html="pr_vitrine">W menu Audio, Wideo, Obraz i PDF okna PREMIUM otwierają się dla wszystkich: widzisz, co robią, zanim będziesz mieć PREMIUM.</p>
 
-      <div class="prem-price">
-        <p data-i18n-html="pr_price">Premium na 1 rok, na 3 komputery: <strong>12,99 €</strong>. Cena premierowa do 31 grudnia 2026: <strong>9,99 €</strong>.</p>
-        <p class="prem-price-vat" data-i18n="pr_price_vat">Ceny w euro, bez podatków. Przy płatności doliczany jest VAT lub podobny podatek kraju kupującego.</p>
-      </div>
-
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
            no mesmo sítio, alinhado. Antes era uma faixa à largura toda, por baixo
            das duas colunas, e não se percebia a que lado pertencia. -->
@@ -2707,6 +2711,20 @@
         <p data-i18n="pr_soon">Wkrótce pojawi się nowy sposób na uzyskanie Premium, razem z nową wersją ExplorerFocus. Do tego czasu Premium nie jest dostępne, a darmowa wersja zachowuje wszystko, co ma dziś. Klucze Premium, które już masz, nadal działają.</p>
       </div>
     </div>
+  </div>
+
+  <div class="prem-prices" id="prices">
+    <h3 data-i18n="pr_prices_h">Ceny</h3>
+    <p data-i18n="pr_price_intro">Premium na 3 komputery. Cena premierowa obowiązuje do 31 grudnia 2026.</p>
+    <table class="price-table">
+      <thead><tr><th data-i18n="pr_th_plan">Plan</th><th data-i18n="pr_th_price">Cena</th><th data-i18n="pr_th_launch">Cena premierowa</th></tr></thead>
+      <tbody>
+        <tr><td data-i18n="pr_plan_1ano">1 rok</td><td data-i18n="pr_p_1ano">12,99 €</td><td class="lanc" data-i18n="pr_l_1ano">9,99 €</td></tr>
+        <tr><td data-i18n="pr_plan_3anos">3 lata</td><td data-i18n="pr_p_3anos">24,99 €</td><td class="lanc" data-i18n="pr_l_3anos">19,99 €</td></tr>
+        <tr><td data-i18n="pr_plan_vida">Dożywotnia (dopóki działa każdy komputer)</td><td data-i18n="pr_p_vida">44,99 €</td><td class="lanc" data-i18n="pr_l_vida">34,99 €</td></tr>
+      </tbody>
+    </table>
+    <p class="prem-price-vat" data-i18n="pr_price_vat">Ceny w euro, bez podatków. Przy płatności doliczany jest VAT lub podobny podatek kraju kupującego.</p>
   </div>
 
   <p class="prem-idea" data-i18n-html="pr_idea3"><strong>Masz dobry pomysł?</strong> Napisz na <a href="mailto:explorerfocus@intrepidparallel.com">explorerfocus@intrepidparallel.com</a>.</p>
@@ -2754,6 +2772,7 @@
       <a href="#shortcuts" data-i18n="nav_shortcuts">Skróty</a>
       <a href="#stack" data-i18n="nav_stack">Technologie</a>
       <a href="#premium" data-i18n="nav_premium">Premium</a>
+      <a href="#prices" data-i18n="nav_prices">Ceny</a>
       <a href="../dropbox-flow.html" data-i18n="nav_guide">Jak to działa</a>
       <a href="../privacy.html" data-i18n="nav_privacy">Prywatność</a>
     </div>

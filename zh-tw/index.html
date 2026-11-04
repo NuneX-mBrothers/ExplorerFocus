@@ -1281,6 +1281,10 @@
     font-size: 13px; line-height: 1.6; color: var(--fg-2);
   }
   .prem-note strong { color: var(--fg-1); font-weight: 600; }
+  .prem-groups h5 { margin: 18px 0 6px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--accent); font-weight: 600; }
+  .prem-groups h5:first-child { margin-top: 4px; }
+  .prem-groups ul { margin: 0; padding: 0; list-style: none; }
   .prem-prices { margin: 28px 0 0; padding: 22px 24px; background: var(--bg-2); border: 1px solid var(--border-1); border-radius: 12px; }
   .prem-prices h3 { margin: 0 0 6px; font-size: 20px; color: var(--fg-0); }
   .prem-prices p { margin: 0; font-size: 14px; line-height: 1.6; color: var(--fg-1); }
@@ -2700,7 +2704,7 @@
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag2">即將推出 · 新版本</span>
-      <ul data-i18n-html="pr_prem_list3"><li><strong>建立加密保險庫</strong> — 檔名和內容都加密；開啟保險庫免費</li><li><strong>每個保險庫都有「Recycle Bin」</strong> — 刪除的東西最多保留 30 天</li><li><strong>產生字幕</strong> — 一部影片或整部影集，用原語言或譯成其他語言</li><li><strong>翻譯字幕</strong> — 一個檔案或整部影集一次完成</li><li><strong>影片播放時的即時字幕</strong> — 原語言或即時翻譯</li><li><strong>轉寫錄音</strong> — 輸出為文字、Word、PDF 或字幕</li><li>聽寫輸出為 Word 或 PDF，或譯成其他語言</li><li><strong>翻譯 PDF 或整本書</strong> — 全部在電腦上完成，什麼都不會離開電腦</li><li><strong>完整的遠端存取</strong> — 多個連線和所有操作，不只是瀏覽</li><li>連線到 WebDAV、Dropbox 和 OneDrive（免費版：一個 SFTP、FTP 或 FTPS 連線，僅能檢視）</li><li><strong>螢幕錄製沒有限制</strong> — 沒有浮水印、沒有 15 秒上限，而且有聲音（麥克風＋系統）</li><li>螢幕錄製的開場卡、結尾卡、文字橫幅和背景音樂</li><li><strong>旁白錄製與混音（voice over）</strong> — 在影片上錄下旁白並加入音樂</li><li>攝影機錄影沒有浮水印</li><li><strong>掃描沒有限制</strong> — 多頁、自動送稿器（ADF），而且沒有浮水印</li><li><strong>調整音訊</strong> — 音量、標準化和變速不變調</li><li>淡入和淡出、移除錄音中的靜音和縮短停頓</li><li><strong>調整影片</strong> — 顏色、黑白、速度、淡入淡出和聲音</li><li>裁剪或鏡像影片，或加上浮水印</li><li>轉換或縮小影片、製作 GIF 或倒放</li><li>為影片加入聲音，或把聲音轉換為立體聲</li><li><strong>遮蓋隱私內容</strong> — 找出人臉、電子郵件、電話號碼、IBAN、稅號和卡號</li><li>複製圖片中的文字</li><li>拼接或拆分圖片，以及讓背景變透明</li><li><strong>整理 PDF 頁面</strong> — 選取、調整順序、旋轉和移除頁面（合併和分割免費）</li><li>把 PDF 頁面轉成圖片，以及加密碼或移除密碼</li><li>辨識掃描 PDF 的文字，以及把圖片和 Word 檔案轉換為 PDF</li><li><strong>完整的電子書閱讀器</strong> — EPUB、MOBI、AZW、AZW3、PRC、FB2 和漫畫（CBZ、CBR），含紙張和夜間紙張檢視</li><li>在 EPUB、PDF 和 FB2 之間轉換書籍，把 MOBI、AZW、AZW3 和 PRC 轉成 EPUB，以及把漫畫轉成 PDF、EPUB 或 CBZ</li></ul>
+      <div class="prem-groups" data-i18n-html="pr_prem_groups"><h5>保險庫</h5><ul><li><strong>建立加密保險庫</strong> — 檔名和內容都加密，每個保險庫都有「Recycle Bin」（最多保留 30 天）。開啟保險庫免費</li></ul><h5>聽寫</h5><ul><li><strong>字幕</strong> — 產生（一部影片或整部影集）、翻譯，以及在影片播放時即時顯示</li><li><strong>轉寫錄音</strong> — 輸出為文字、Word、PDF 或字幕 — 以及聽寫輸出為 Word、PDF 或譯成其他語言</li></ul><h5>遠端存取</h5><ul><li>多個連線和所有操作，以及連線到 WebDAV、Dropbox 和 OneDrive（免費版：一個 SFTP、FTP 或 FTPS 連線，僅能檢視）</li></ul><h5>錄製與掃描</h5><ul><li>螢幕錄製沒有浮水印、沒有 15 秒上限，而且有聲音（麥克風＋系統），並可加開場卡、結尾卡、文字橫幅和音樂</li><li>為影片錄旁白（voice over），以及攝影機錄影沒有浮水印</li><li>多頁掃描，支援自動送稿器（ADF），而且沒有浮水印</li></ul><h5>音訊</h5><ul><li>音量、標準化、變速不變調、淡入淡出、移除靜音和縮短停頓</li></ul><h5>影片</h5><ul><li>調整顏色、黑白、速度、淡入淡出和聲音；裁剪、鏡像和加上浮水印</li><li>轉換或縮小、製作 GIF、倒放、加入聲音或轉換為立體聲</li></ul><h5>圖片</h5><ul><li>遮蓋隱私內容（人臉、電子郵件、電話號碼、IBAN、稅號和卡號）、複製文字、拼接或拆分圖片，以及讓背景變透明</li></ul><h5>PDF（合併和分割免費）</h5><ul><li><strong>整理頁面</strong> — 選取、調整順序、旋轉和移除 — 並轉成圖片；加密碼或移除密碼</li><li>辨識掃描 PDF 的文字，以及把圖片和 Word 檔案轉換為 PDF</li><li>翻譯整份 PDF，什麼都不會離開電腦</li></ul><h5>書籍</h5><ul><li><strong>完整的電子書閱讀器</strong> — EPUB、MOBI、AZW、AZW3、PRC、FB2 和漫畫（CBZ、CBR），含紙張和夜間紙張檢視</li><li>在 EPUB、PDF 和 FB2 之間轉換，把 MOBI、AZW、AZW3 和 PRC 轉成 EPUB，以及把漫畫轉成 PDF、EPUB 或 CBZ</li><li>翻譯整本書，什麼都不會離開電腦</li></ul></div>
       <p class="prem-note" data-i18n-html="pr_vitrine">在音訊、影片、圖片和 PDF 裡，PREMIUM 視窗對所有人開放：在擁有 PREMIUM 之前，你就能看到它們能做什麼。</p>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica

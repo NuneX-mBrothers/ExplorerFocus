@@ -276,7 +276,7 @@ window.I18N.it = {
   "pr_prem_list": "<li><strong>Creare</strong> casseforti cifrate</li><li><strong>Accesso remoto completo</strong>: più connessioni, tutte le operazioni, WebDAV, Dropbox, OneDrive</li><li>Registrazione dello schermo <strong>senza filigrana, senza limite di tempo e con audio</strong></li><li>Registrazione video senza filigrana</li><li>Mix audio microfono + audio di sistema</li><li>Scansione a più pagine con alimentatore (ADF)</li><li>Lettore di libri completo — EPUB, formati Kindle, FB2 e fumetti</li><li>Schede di apertura/chiusura e fascia di testo nelle registrazioni</li><li>Strumenti PDF: organizzare le pagine, PDF in immagini, password, convertire in PDF</li>",
   "pr_soon_h": "Presto disponibile",
   "pr_soon": "Presto arriverà un nuovo modo per avere Premium, con una nuova versione di ExplorerFocus. Fino ad allora Premium non è disponibile, e la versione gratuita mantiene tutto quello che ha oggi. Le chiavi Premium che hai già continuano a funzionare.",
-  "pr_idea2": "<strong>Hai una buona idea?</strong> Scrivi a <a href=\"mailto:NunexmBrothers@gmail.com\">NunexmBrothers@gmail.com</a>.",
+  "pr_idea3": "<strong>Hai una buona idea?</strong> Scrivi a <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a>.",
   "ft_tagline": "L'explorer minimale per chi lavora sempre negli stessi posti — e vuole che lo strumento lo sappia.",
   "ft_get": "Scaricalo",
   "ft_releases": "Rilasci",

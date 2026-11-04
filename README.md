@@ -70,6 +70,6 @@ Bouncy Castle (vault encryption) · PDFsharp (PDF tools) · DokanNet (vault driv
 ## About
 
 Made by **mBrothers** — three brothers who keep talking each other into building things.
-Questions, bugs and ideas: [NunexmBrothers@gmail.com](mailto:NunexmBrothers@gmail.com)
+Questions, bugs and ideas: [explorerfocus@intrepidparallel.com](mailto:explorerfocus@intrepidparallel.com)
 
 Also from us: [**The Absolute LogViewer**](https://nunex-mbrothers.github.io/TheAbsoluteLogViewer/) — a free Windows log viewer with real-time tailing.

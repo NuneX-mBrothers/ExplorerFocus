@@ -280,7 +280,7 @@ window.I18N.ar = {
   "pr_prem_list": "<li><strong>إنشاء</strong> خزائن مشفّرة</li><li><strong>وصول بعيد كامل</strong>: اتصالات متعدّدة، وكل العمليات، وWebDAV وDropbox وOneDrive</li><li>تسجيل الشاشة <strong>بلا علامة مائية، وبلا حدّ زمني، ومع الصوت</strong></li><li>تسجيل فيديو بلا علامة مائية</li><li>مزج صوت الميكروفون + صوت النظام</li><li>مسح متعدّد الصفحات بوحدة التغذية (ADF)</li><li>قارئ كتب كامل — EPUB، وصيغ Kindle، وFB2، والقصص المصوّرة</li><li>بطاقات البداية/النهاية وشريط النص في التسجيلات</li><li>أدوات PDF: تنظيم الصفحات، PDF إلى صور، كلمة المرور، التحويل إلى PDF</li>",
   "pr_soon_h": "قريباً",
   "pr_soon": "طريقة جديدة للحصول على Premium قادمة قريباً، مع إصدار جديد من ExplorerFocus. حتى ذلك الحين، Premium غير متاح، وتحتفظ النسخة المجانية بكل ما فيها اليوم. مفاتيح Premium التي لديك تبقى تعمل.",
-  "pr_idea2": "<strong>عندك فكرة جيّدة؟</strong> اكتب إلى <a href=\"mailto:NunexmBrothers@gmail.com\">NunexmBrothers@gmail.com</a>.",
+  "pr_idea3": "<strong>عندك فكرة جيّدة؟</strong> اكتب إلى <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a>.",
   "ft_tagline": "المستكشف الأصغر لمن يعمل دائماً في الأماكن نفسها — ويريد أن تعرف الأداة ذلك.",
   "ft_get": "التنزيل",
   "ft_releases": "الإصدارات",

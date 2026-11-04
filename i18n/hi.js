@@ -278,7 +278,7 @@ window.I18N.hi = {
   "pr_prem_list": "<li>एन्क्रिप्टेड तिजोरियाँ <strong>बनाना</strong></li><li><strong>पूरी दूरस्थ पहुँच</strong>: कई कनेक्शन, सारी क्रियाएँ, WebDAV, Dropbox, OneDrive</li><li>स्क्रीन रिकॉर्डिंग <strong>बिना वॉटरमार्क, बिना समय-सीमा और आवाज़ के साथ</strong></li><li>बिना वॉटरमार्क वीडियो रिकॉर्डिंग</li><li>माइक्रोफ़ोन + सिस्टम की आवाज़ का मिश्रण</li><li>फ़ीडर (ADF) से बहु-पृष्ठ स्कैन</li><li>पूरा किताब पाठक — EPUB, Kindle प्रारूप, FB2 और कॉमिक्स</li><li>रिकॉर्डिंग में शुरुआती/अंतिम कार्ड और पाठ पट्टी</li><li>PDF टूल्स: पृष्ठ व्यवस्थित करना, PDF से छवियाँ, पासवर्ड, PDF में बदलना</li>",
   "pr_soon_h": "जल्द ही",
   "pr_soon": "Premium पाने का एक नया तरीक़ा जल्द ही आ रहा है, ExplorerFocus के नए संस्करण के साथ। तब तक Premium उपलब्ध नहीं है, और मुफ़्त संस्करण में आज जो कुछ है, वह सब बना रहता है। आपके पास जो Premium कुंजियाँ पहले से हैं, वे काम करती रहेंगी।",
-  "pr_idea2": "<strong>कोई अच्छा विचार है?</strong> <a href=\"mailto:NunexmBrothers@gmail.com\">NunexmBrothers@gmail.com</a> पर लिखिए।",
+  "pr_idea3": "<strong>कोई अच्छा विचार है?</strong> <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a> पर लिखिए।",
   "ft_tagline": "उन लोगों के लिए सबसे छोटा एक्सप्लोरर जो हमेशा उन्हीं जगहों पर काम करते हैं — और चाहते हैं कि औज़ार को यह पता हो।",
   "ft_get": "पाइए",
   "ft_releases": "रिलीज़",

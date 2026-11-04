@@ -276,7 +276,7 @@ window.I18N.ja = {
   "pr_prem_list": "<li>暗号化された金庫を<strong>作る</strong></li><li><strong>リモートアクセスのすべて</strong>：複数接続、すべての操作、WebDAV、Dropbox、OneDrive</li><li>画面の録画が<strong>透かしなし、時間の制限なし、音あり</strong></li><li>透かしなしの映像の録画</li><li>マイク + システム音のミキシング</li><li>ドキュメントフィーダー（ADF）での複数ページのスキャン</li><li>完全な書籍リーダー — EPUB、Kindle 系、FB2、コミック</li><li>録画のオープニング / エンドカードとテキストの帯</li><li>PDF ツール：ページの整理、PDF を画像に、パスワード、PDF への変換</li>",
   "pr_soon_h": "近日公開",
   "pr_soon": "PREMIUM を手に入れる新しい方法が、ExplorerFocus の新しいバージョンとともに近日中に始まります。それまで PREMIUM はご利用いただけませんが、無料版は今あるものをすべてそのまま使えます。すでにお持ちの PREMIUM キーは引き続き使えます。",
-  "pr_idea2": "<strong>いい考えがありますか？</strong> <a href=\"mailto:NunexmBrothers@gmail.com\">NunexmBrothers@gmail.com</a> までどうぞ。",
+  "pr_idea3": "<strong>いい考えがありますか？</strong> <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a> までどうぞ。",
   "ft_tagline": "いつも同じ場所で働く人のための、最小限のエクスプローラー — その道具に、それを分かっていてほしい人のために。",
   "ft_get": "入手する",
   "ft_releases": "リリース",

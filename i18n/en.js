@@ -276,7 +276,7 @@ window.I18N.en = {
   "pr_prem_list": "<li><strong>Creating</strong> encrypted vaults</li><li><strong>Full remote access</strong>: multiple connections, all operations, WebDAV, Dropbox, OneDrive</li><li>Screen recording <strong>with no watermark, no time limit and with sound</strong></li><li>Video recording without watermark</li><li>Audio mixing microphone + system sound</li><li>Multi-page scanning with document feeder (ADF)</li><li>Full book reader — EPUB, Kindle formats, FB2 and comics</li><li>Intro/end cards and text banner on recordings</li><li>PDF tools: organize pages, PDF to images, password, convert to PDF</li>",
   "pr_soon_h": "Coming soon",
   "pr_soon": "A new way to get Premium is coming soon, with a new version of ExplorerFocus. Until then, Premium isn't available, and the free version keeps everything it has today. Premium keys you already have keep working.",
-  "pr_idea2": "<strong>Got a good idea?</strong> Write to <a href=\"mailto:NunexmBrothers@gmail.com\">NunexmBrothers@gmail.com</a>.",
+  "pr_idea3": "<strong>Got a good idea?</strong> Write to <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a>.",
   "ft_tagline": "The minimal explorer for people who always work in the same places — and want the tool to know it.",
   "ft_get": "Get it",
   "ft_releases": "Releases",

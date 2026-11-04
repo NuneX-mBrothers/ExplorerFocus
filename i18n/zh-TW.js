@@ -280,7 +280,7 @@ window.I18N["zh-TW"] = {
   "pr_prem_list": "<li><strong>建立</strong>加密保險庫</li><li><strong>完整的遠端存取</strong>：多個連線、所有操作、WebDAV、Dropbox、OneDrive</li><li>錄製螢幕<strong>沒有浮水印、沒有時間限制，而且有聲音</strong></li><li>錄影沒有浮水印</li><li>麥克風 + 系統聲音混音</li><li>用自動送稿機（ADF）掃描多頁</li><li>完整的電子書閱讀器 — EPUB、Kindle 格式、FB2 和漫畫</li><li>錄製的片頭／片尾卡和文字橫幅</li><li>PDF 工具：整理頁面、PDF 轉圖片、密碼、轉換成 PDF</li>",
   "pr_soon_h": "即將推出",
   "pr_soon": "取得 Premium 的新方式即將推出，隨 ExplorerFocus 的新版本一起來。在那之前，Premium 暫不提供，免費版保有今天的一切。你已經有的 Premium 金鑰會繼續有效。",
-  "pr_idea2": "<strong>有好想法嗎？</strong>寫信到 <a href=\"mailto:NunexmBrothers@gmail.com\">NunexmBrothers@gmail.com</a>。",
+  "pr_idea3": "<strong>有好想法嗎？</strong>寫信到 <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a>。",
   "ft_tagline": "給總在同幾個地方工作、又希望工具知道這件事的人，一個最精簡的檔案總管。",
   "ft_get": "下載",
   "ft_releases": "版本",

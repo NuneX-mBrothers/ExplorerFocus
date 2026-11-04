@@ -306,6 +306,7 @@ window.I18N.pl = {
   "ft_project": "Projekt",
   "nav_guide": "Jak to działa",
   "nav_privacy": "Prywatność",
+  "nav_legal": "Nota prawna",
   "ft_baseline": "zrobione na codzienną robotę",
   "mb_credit": "Produkt <a href=\"https://nunex-mbrothers.github.io/mBrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a><span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
   "ft_company2": "Produkt firmy Intrepid Parallel, Lda z siedzibą w Lizbonie w Portugalii.",

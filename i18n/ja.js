@@ -306,6 +306,7 @@ window.I18N.ja = {
   "ft_project": "プロジェクト",
   "nav_guide": "使い方",
   "nav_privacy": "プライバシー",
+  "nav_legal": "法的表示",
   "ft_baseline": "日々の仕事のために設計",
   "mb_credit": "<a href=\"https://nunex-mbrothers.github.io/mBrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a> の製品<span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
   "ft_company2": "Intrepid Parallel, Lda（ポルトガル・リスボン）の製品です。",

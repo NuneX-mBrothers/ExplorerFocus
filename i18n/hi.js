@@ -308,6 +308,7 @@ window.I18N.hi = {
   "ft_project": "प्रोजेक्ट",
   "nav_guide": "यह कैसे काम करता है",
   "nav_privacy": "निजता",
+  "nav_legal": "कानूनी सूचना",
   "ft_baseline": "रोज़ की मेहनत के लिए बनाया गया",
   "mb_credit": "एक <a href=\"https://nunex-mbrothers.github.io/mBrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a> उत्पाद<span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
   "ft_company2": "Intrepid Parallel, Lda का एक उत्पाद, जिसका मुख्यालय लिस्बन, पुर्तगाल में है।",

@@ -293,7 +293,7 @@ window.I18N.fr = {
   "pr_l_vida": "34,99 €",
   "pr_price_vat": "Prix en euros, hors taxes. Au paiement, la TVA ou la taxe équivalente du pays de l'acheteur est ajoutée.",
   "pr_idea3": "<strong>Tu as une bonne idée ?</strong> Écris à <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a>.",
-  "ft_tagline": "L'explorateur minimal pour ceux qui travaillent toujours aux mêmes endroits — et qui veulent que l'outil le sache.",
+  "ft_tagline2": "L'explorateur focalisé pour ceux qui travaillent toujours aux mêmes endroits — et qui veulent que l'outil le sache.",
   "ft_get": "Télécharger",
   "ft_releases": "Versions",
   "sh_h": "Envoyez-le à un proche",

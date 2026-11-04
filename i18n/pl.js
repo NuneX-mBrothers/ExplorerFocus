@@ -293,7 +293,7 @@ window.I18N.pl = {
   "pr_l_vida": "34,99 €",
   "pr_price_vat": "Ceny w euro, bez podatków. Przy płatności doliczany jest VAT lub podobny podatek kraju kupującego.",
   "pr_idea3": "<strong>Masz dobry pomysł?</strong> Napisz na <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a>.",
-  "ft_tagline": "Minimalny menedżer plików dla ludzi, którzy zawsze pracują w tych samych miejscach — i chcą, żeby narzędzie o tym wiedziało.",
+  "ft_tagline2": "Skupiony menedżer plików dla ludzi, którzy zawsze pracują w tych samych miejscach — i chcą, żeby narzędzie o tym wiedziało.",
   "ft_get": "Pobierz",
   "ft_releases": "Wydania",
   "sh_h": "Wyślij znajomym",

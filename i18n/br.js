@@ -297,7 +297,7 @@ window.I18N.br = {
   "pr_l_vida": "€ 34,99",
   "pr_price_vat": "Preços em euros, sem impostos. No pagamento, é somado o imposto sobre vendas do país de quem compra.",
   "pr_idea3": "<strong>Tem uma boa ideia?</strong> Escreva para <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a>.",
-  "ft_tagline": "O explorador mínimo para quem trabalha sempre nos mesmos lugares — e quer que a ferramenta saiba disso.",
+  "ft_tagline2": "O explorador focado para quem trabalha sempre nos mesmos lugares — e quer que a ferramenta saiba disso.",
   "ft_get": "Baixar",
   "ft_releases": "Versões",
   "sh_h": "Envie para um amigo",

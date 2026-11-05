@@ -292,6 +292,7 @@ window.I18N.pt = {
   "pr_p_vida": "44,99 €",
   "pr_l_vida": "34,99 €",
   "pr_price_vat": "Preços em euros, sem impostos. No pagamento, junta-se o IVA, ou o imposto equivalente, do país de quem compra.",
+  "pr_buy_soon": "As compras abrem nos próximos dias.",
   "pr_idea3": "<strong>Tens uma boa ideia?</strong> Escreve para <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a>.",
   "ft_tagline2": "O explorador focado para quem trabalha sempre nos mesmos sítios — e quer que a ferramenta o saiba.",
   "ft_get": "Obter",

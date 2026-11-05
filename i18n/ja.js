@@ -292,6 +292,7 @@ window.I18N.ja = {
   "pr_p_vida": "€44.99",
   "pr_l_vida": "€34.99",
   "pr_price_vat": "価格はユーロ、税抜です。お支払い時に、購入される国の付加価値税または売上税が加算されます。",
+  "pr_buy_soon": "購入は数日以内に開始します。",
   "pr_idea3": "<strong>いい考えがありますか？</strong> <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a> までどうぞ。",
   "ft_tagline2": "いつも同じ場所で働く人のための、集中できるエクスプローラー — その道具に、それを分かっていてほしい人のために。",
   "ft_get": "入手する",

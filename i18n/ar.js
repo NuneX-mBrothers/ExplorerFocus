@@ -296,6 +296,7 @@ window.I18N.ar = {
   "pr_p_vida": "€44.99",
   "pr_l_vida": "€34.99",
   "pr_price_vat": "الأسعار باليورو، دون الضرائب. عند الدفع تُضاف ضريبة القيمة المضافة أو ضريبة المبيعات في بلد المشتري.",
+  "pr_buy_soon": "تُفتح المشتريات خلال الأيام القليلة القادمة.",
   "pr_idea3": "<strong>عندك فكرة جيّدة؟</strong> اكتب إلى <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a>.",
   "ft_tagline2": "المستكشف المركّز لمن يعمل دائماً في الأماكن نفسها — ويريد أن تعرف الأداة ذلك.",
   "ft_get": "التنزيل",

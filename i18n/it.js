@@ -292,6 +292,7 @@ window.I18N.it = {
   "pr_p_vida": "44,99 €",
   "pr_l_vida": "34,99 €",
   "pr_price_vat": "Prezzi in euro, tasse escluse. Al pagamento si aggiunge l'IVA, o l'imposta equivalente, del paese di chi acquista.",
+  "pr_buy_soon": "Gli acquisti aprono nei prossimi giorni.",
   "pr_idea3": "<strong>Hai una buona idea?</strong> Scrivi a <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a>.",
   "ft_tagline2": "L'explorer focalizzato per chi lavora sempre negli stessi posti — e vuole che lo strumento lo sappia.",
   "ft_get": "Scaricalo",

@@ -296,6 +296,7 @@ window.I18N["zh-TW"] = {
   "pr_p_vida": "€44.99",
   "pr_l_vida": "€34.99",
   "pr_price_vat": "價格以歐元計，未含稅。付款時會加上購買者所在國家的加值稅或銷售稅。",
+  "pr_buy_soon": "購買將在未來幾天開放。",
   "pr_idea3": "<strong>有好想法嗎？</strong>寫信到 <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a>。",
   "ft_tagline2": "給總在同幾個地方工作、又希望工具知道這件事的人，一個專注的檔案總管。",
   "ft_get": "下載",

@@ -292,6 +292,7 @@ window.I18N.ko = {
   "pr_p_vida": "€44.99",
   "pr_l_vida": "€34.99",
   "pr_price_vat": "가격은 유로이며 세금 별도입니다. 결제할 때 구매자 국가의 부가가치세 또는 판매세가 더해집니다.",
+  "pr_buy_soon": "구매는 며칠 안에 열립니다.",
   "pr_idea3": "<strong>좋은 생각이 있으신가요?</strong> <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a>으로 보내 주세요.",
   "ft_tagline2": "늘 같은 곳에서 일하는 사람을 위한, 그리고 도구가 그것을 알아주기를 바라는 사람을 위한 집중형 탐색기.",
   "ft_get": "받기",

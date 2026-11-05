@@ -137,9 +137,28 @@ COLUNAS = {
  "ja": ("プラン", "価格", "発売記念価格"), "ko": ("요금제", "가격", "출시 기념가"),
 }
 
+# Por baixo da tabela: ainda não se compra (05/11; a mesma frase da janela da compra fechada da app)
+SOON = {
+ "en": "Purchases open in the next few days.",
+ "pt": "As compras abrem nos próximos dias.",
+ "br": "As compras abrem nos próximos dias.",
+ "es": "Las compras abren en los próximos días.",
+ "fr": "Les achats ouvrent dans les prochains jours.",
+ "it": "Gli acquisti aprono nei prossimi giorni.",
+ "de": "Käufe sind in den nächsten Tagen möglich.",
+ "pl": "Zakupy ruszą w najbliższych dniach.",
+ "ru": "Покупки откроются в ближайшие дни.",
+ "ar": "تُفتح المشتريات خلال الأيام القليلة القادمة.",
+ "hi": "खरीदारी अगले कुछ दिनों में शुरू होगी।",
+ "zh": "购买将在未来几天开放。",
+ "zh-TW": "購買將在未來幾天開放。",
+ "ja": "購入は数日以内に開始します。",
+ "ko": "구매는 며칠 안에 열립니다.",
+}
+
 CHAVES = ("nav_prices", "pr_prices_h", "pr_price_intro", "pr_th_plan", "pr_th_price", "pr_th_launch",
           "pr_plan_1ano", "pr_plan_3anos", "pr_plan_vida",
-          "pr_p_1ano", "pr_l_1ano", "pr_p_3anos", "pr_l_3anos", "pr_p_vida", "pr_l_vida", "pr_price_vat")
+          "pr_p_1ano", "pr_l_1ano", "pr_p_3anos", "pr_l_3anos", "pr_p_vida", "pr_l_vida", "pr_price_vat", "pr_buy_soon")
 
 def main():
     p = json.load(open(PRECOS, encoding="utf-8"))
@@ -162,7 +181,7 @@ def main():
              # o russo já acaba a data em «г.»: sem um segundo ponto (a revisão de 05/11)
              "pr_price_intro": INTRO[lingua].format(data=data(lingua, fim)).replace("г..", "г."),
              "pr_th_plan": COLUNAS[lingua][0], "pr_th_price": COLUNAS[lingua][1], "pr_th_launch": COLUNAS[lingua][2],
-             "pr_price_vat": IVA[bool(p["comIva"])][lingua]}
+             "pr_price_vat": IVA[bool(p["comIva"])][lingua], "pr_buy_soon": SOON[lingua]}
         for sufixo, plano, nome in zip(("1ano", "3anos", "vida"), ("1ano", "3anos", "vitalicio"), PLANOS[lingua]):
             x = por_plano[plano]
             t["pr_plan_" + sufixo] = nome
@@ -175,7 +194,7 @@ def main():
         s = open(caminho, encoding="utf-8").read()
         s = re.sub(r'^  "pr_price": .*,\n', "", s, flags=re.M)          # a chave de uma linha só, que nunca saiu
         s = re.sub(r'^  "pr_price_[a-z0-9]+": .*,\n', "", s, flags=re.M)
-        s = re.sub(r'^  "(nav_prices|pr_prices_h|pr_th_[a-z]+|pr_plan_[a-z0-9]+|pr_[pl]_[a-z0-9]+)": .*,\n', "", s, flags=re.M)
+        s = re.sub(r'^  "(nav_prices|pr_prices_h|pr_buy_soon|pr_th_[a-z]+|pr_plan_[a-z0-9]+|pr_[pl]_[a-z0-9]+)": .*,\n', "", s, flags=re.M)
         ancora = re.search(r'^  "pr_soon": .*,$', s, re.M)
         if not ancora:
             sys.exit("⛔ %s: não encontro o pr_soon" % lingua)
@@ -199,8 +218,9 @@ def main():
              '      <tbody>\n%s      </tbody>\n'
              '    </table>\n'
              '    <p class="prem-price-vat" data-i18n="pr_price_vat">%s</p>\n'
+             '    <p class="prem-price-soon" data-i18n="pr_buy_soon">%s</p>\n'
              '  </div>\n\n') % (en["pr_prices_h"], en["pr_price_intro"], en["pr_th_plan"], en["pr_th_price"],
-                                en["pr_th_launch"], linhas, en["pr_price_vat"])
+                                en["pr_th_launch"], linhas, en["pr_price_vat"], en["pr_buy_soon"])
     velho = re.compile(r'  <div class="prem-prices" id="prices">\n.*?\n  </div>\n\n', re.S)
     if velho.search(h):
         h = velho.sub(lambda _: bloco, h, count=1)
@@ -226,7 +246,8 @@ def main():
            "  .price-table td { color: var(--fg-1); }\n"
            "  .price-table td:first-child { color: var(--fg-0); font-weight: 600; }\n"
            "  .price-table td.lanc { color: var(--accent); font-weight: 600; }\n"
-           "  .prem-prices .prem-price-vat { margin-top: 10px; font-size: 12px; color: var(--fg-3); }\n")
+           "  .prem-prices .prem-price-vat { margin-top: 10px; font-size: 12px; color: var(--fg-3); }\n"
+           "  .prem-prices .prem-price-soon { margin-top: 10px; font-size: 14px; font-weight: 600; color: var(--fg-0); }\n")
     h = re.sub(r"^  (\.prem-price|\[dir=\"rtl\"\] \.prem-card \.prem-price|\.prem-card \.prem-price|\.prem-prices|\.price-table)[^\n]*\n", "", h, flags=re.M)
     ancora = "  .prem-note strong { color: var(--fg-1); font-weight: 600; }\n"
     if h.count(ancora) != 1:

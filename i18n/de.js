@@ -292,6 +292,7 @@ window.I18N.de = {
   "pr_p_vida": "44,99 €",
   "pr_l_vida": "34,99 €",
   "pr_price_vat": "Preise in Euro, ohne Steuern. Beim Bezahlen kommt die Mehrwertsteuer oder die entsprechende Steuer des Landes des Käufers hinzu.",
+  "pr_buy_soon": "Käufe sind in den nächsten Tagen möglich.",
   "pr_idea3": "<strong>Hast du eine gute Idee?</strong> Schreib an <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a>.",
   "ft_tagline2": "Der fokussierte Explorer für Menschen, die immer an denselben Orten arbeiten — und wollen, dass das Werkzeug das weiß.",
   "ft_get": "Herunterladen",

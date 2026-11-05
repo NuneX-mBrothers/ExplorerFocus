@@ -292,6 +292,7 @@ window.I18N.en = {
   "pr_p_vida": "€44.99",
   "pr_l_vida": "€34.99",
   "pr_price_vat": "Prices in euros, before taxes. At checkout, the VAT or sales tax of the buyer's country is added.",
+  "pr_buy_soon": "Purchases open in the next few days.",
   "pr_idea3": "<strong>Got a good idea?</strong> Write to <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a>.",
   "ft_tagline2": "The focused explorer for people who always work in the same places — and want the tool to know it.",
   "ft_get": "Get it",

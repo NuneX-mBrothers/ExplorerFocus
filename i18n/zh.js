@@ -292,6 +292,7 @@ window.I18N.zh = {
   "pr_p_vida": "€44.99",
   "pr_l_vida": "€34.99",
   "pr_price_vat": "价格以欧元计，不含税。付款时会加上购买者所在国家的增值税或销售税。",
+  "pr_buy_soon": "购买将在未来几天开放。",
   "pr_idea3": "<strong>有好想法吗？</strong>请写信至 <a href=\"mailto:explorerfocus@intrepidparallel.com\">explorerfocus@intrepidparallel.com</a>。",
   "ft_tagline2": "为那些总在相同地方工作、并希望工具也知道这一点的人，设计的专注型文件管理器。",
   "ft_get": "下载",

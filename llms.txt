@@ -1,6 +1,6 @@
 # ExplorerFocus
 
-> ExplorerFocus is a file explorer for Windows 11 and 10, a replacement for Windows Explorer built for people who always work in the same folders. Each profile is a tab with its own folders, filters and saved state. It adds a preview that opens almost anything, encrypted vaults, remote connections and file tools. It is made by mBrothers, an independent developer in Portugal, and its interface is in 16 languages, including Portuguese from Portugal and from Brazil.
+> ExplorerFocus is a file explorer for Windows 11 and 10, a replacement for Windows Explorer built for people who always work in the same folders. Each profile is a tab with its own folders, filters and saved state. It adds a preview that opens almost anything, encrypted vaults, remote connections and file tools. It is made by mBrothers, a brand of Intrepid Parallel, Lda, in Lisbon, Portugal, and its interface is in 16 languages, including Portuguese from Portugal and from Brazil.
 
 ## What it does
 

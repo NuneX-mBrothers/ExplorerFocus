@@ -159,7 +159,8 @@ def main():
     textos = {}
     for lingua in INTRO:
         t = {"nav_prices": TITULO[lingua], "pr_prices_h": TITULO[lingua],
-             "pr_price_intro": INTRO[lingua].format(data=data(lingua, fim)),
+             # o russo já acaba a data em «г.»: sem um segundo ponto (a revisão de 05/11)
+             "pr_price_intro": INTRO[lingua].format(data=data(lingua, fim)).replace("г..", "г."),
              "pr_th_plan": COLUNAS[lingua][0], "pr_th_price": COLUNAS[lingua][1], "pr_th_launch": COLUNAS[lingua][2],
              "pr_price_vat": IVA[bool(p["comIva"])][lingua]}
         for sufixo, plano, nome in zip(("1ano", "3anos", "vida"), ("1ano", "3anos", "vitalicio"), PLANOS[lingua]):

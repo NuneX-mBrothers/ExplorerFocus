@@ -267,7 +267,7 @@ window.I18N.de = {
   "nav_premium": "Premium",
   "pr_num": "§ 05 · Kostenlos und Premium",
   "pr_title2": "Der Explorer ist <em>kostenlos</em>. Premium bringt ihn weiter.",
-  "pr_blurb3": "Kein Konto, keine Werbung, keine Frist: alles, was Sie zum Durchsuchen, Ansehen und Ordnen Ihrer Dateien brauchen, ist kostenlos und bleibt es. Premium bringt die anspruchsvolleren Werkzeuge — Tresore anlegen, Untertitel und Übersetzung, Aufnahmen, Audio, Video, Bild, PDF und Bücher.",
+  "pr_blurb3": "Kein Konto, keine Werbung, keine Frist: alles, was du zum Durchsuchen, Ansehen und Ordnen deiner Dateien brauchst, ist kostenlos und bleibt es. Premium bringt die anspruchsvolleren Werkzeuge — Tresore anlegen, Untertitel und Übersetzung, Aufnahmen, Audio, Video, Bild, PDF und Bücher.",
   "pr_free_h": "Kostenlos",
   "pr_free_tag": "für immer · ohne Konto",
   "pr_free_list": "<li>Profile, konfigurierbare Bäume, Multi-Muster-Suche</li><li>Vorschau: Code, PDF, Word/Excel, Markdown, Bilder, Bücher</li><li>Dateioperationen mit echtem Fortschritt, Tempo, ETA, Verlauf und Konflikten</li><li>Terminals, Zuordnungen pro Dateiendung, Archive als Ordner</li><li>Vollständiges dunkles Design, 16 Sprachen, automatische Updates</li><li>Audioaufnahme (Mikrofon)</li><li><strong>1 Remote-Verbindung</strong> (SFTP/FTP/FTPS) — durchsuchen und Vorschau</li><li>PDF: zusammenfügen und teilen</li>",

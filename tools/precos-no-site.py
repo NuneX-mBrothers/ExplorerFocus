@@ -1,6 +1,6 @@
 """Os preços do PREMIUM no site, a partir do preçário do servidor (tools/precos.json).
 
-O João, 04/11/2026: no site ficam, numa TABELA (o plano, o preço, o preço de lançamento), os três planos, todos para 3 computadores (1 ano, 3 anos e vitalícia), com o preço
+04/11/2026: no site ficam, numa TABELA (o plano, o preço, o preço de lançamento), os três planos, todos para 3 computadores (1 ano, 3 anos e vitalícia), com o preço
 normal e o de lançamento ao lado, sem riscar, e a data de fim. As renovações e os computadores a mais ficam na app. A
 Stripe compara o que se cobra com o que o site mostra; por isso os três planos que se vendem estão à vista.
 
@@ -96,7 +96,7 @@ def linha(lingua, nome, norm, lanc):
     dois = "：" if lingua in ("zh", "zh-TW", "ja") else (" : " if lingua == "fr" else ": ")
     return "<strong>%s</strong>%s%s · %s <strong>%s</strong>" % (nome, dois, norm, LANCAMENTO[lingua], lanc)
 
-# O que se diz do IVA segue o «comIva» do preçário. Sem IVA (o João, 04/11): o valor sem impostos, e no pagamento
+# O que se diz do IVA segue o «comIva» do preçário. Sem IVA (04/11): o valor sem impostos, e no pagamento
 # junta-se o imposto do país de quem compra, que a Stripe calcula. Nunca uma taxa fixa (os 23 % são só de cá).
 IVA = {
  False: {"en": "Prices in euros, before taxes. At checkout, the VAT or sales tax of the buyer's country is added.",

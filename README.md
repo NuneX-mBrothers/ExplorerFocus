@@ -69,7 +69,7 @@ Bouncy Castle (vault encryption) · PDFsharp (PDF tools) · DokanNet (vault driv
 
 ## About
 
-Made by **mBrothers**, a brand of Intrepid Parallel, Lda, in Lisbon, Portugal.
+Made by **mBrothers**, a brand used by Intrepid Parallel, Lda, in Lisbon, Portugal.
 Questions, bugs and ideas: [explorerfocus@intrepidparallel.com](mailto:explorerfocus@intrepidparallel.com)
 
 Also from us: [**The Absolute LogViewer**](https://nunex-mbrothers.github.io/TheAbsoluteLogViewer/) — a free Windows log viewer with real-time tailing.

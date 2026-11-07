@@ -7,7 +7,7 @@
 **The file organiser for 64-bit Windows 11 and 10 — your folders, arranged by what you work on.**
 A focused file explorer with profiles, rich preview, honest file operations, encrypted vaults, remote/cloud access — and capture tools built in.
 
-[**⬇ Download (.exe)**](https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.exe) · [**Download (.zip)**](https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip) · [**Website**](https://nunex-mbrothers.github.io/ExplorerFocus/) · [**Releases**](https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest)
+[**⬇ Download (.exe)**](https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.exe) · [**Download (.zip)**](https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest/download/ExplorerFocus.zip) · [**Website**](https://intrepidparallel.com/explorerfocus/) · [**Releases**](https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest)
 
 Single `.exe` · no installer · no runtime to install · digitally signed · 16 languages
 
@@ -51,7 +51,7 @@ connections, all operations, WebDAV, Dropbox, OneDrive), screen and camera recor
 watermark or time cap and with system sound, audio mixing, multi-page scanning with a document
 feeder, the complete book reader (EPUB, Kindle formats, FB2 and comics, including the paper mode), the PDF tools beyond merge and split, and intro/end cards on
 recordings. A new way to get Premium is coming soon, with a new version; Premium keys you already have keep working. Details on the
-[website](https://nunex-mbrothers.github.io/ExplorerFocus/#premium).
+[website](https://intrepidparallel.com/explorerfocus/#premium).
 
 ## First run
 
@@ -72,4 +72,4 @@ Bouncy Castle (vault encryption) · PDFsharp (PDF tools) · DokanNet (vault driv
 Made by **mBrothers**, a brand used by Intrepid Parallel, Lda, in Lisbon, Portugal.
 Questions, bugs and ideas: [explorerfocus@intrepidparallel.com](mailto:explorerfocus@intrepidparallel.com)
 
-Also from us: [**The Absolute LogViewer**](https://nunex-mbrothers.github.io/TheAbsoluteLogViewer/) — a free Windows log viewer with real-time tailing.
+Also from us: [**The Absolute LogViewer**](https://intrepidparallel.com/logviewer/) — a free Windows log viewer with real-time tailing.

@@ -42,7 +42,7 @@ import sys
 sys.stdout.reconfigure(encoding="utf-8")
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE = "https://nunex-mbrothers.github.io/ExplorerFocus/"
+BASE = "https://intrepidparallel.com/explorerfocus/"
 
 # código do dicionário → pasta, rótulo no selector, hreflang, og:locale, bandeira
 # ⛔ O `lang` do <html> leva o campo `hreflang`, nunca o código do dicionário.

@@ -313,7 +313,7 @@ window.I18N.br = {
   "nav_privacy": "Privacidade",
   "nav_legal": "Aviso legal",
   "ft_baseline": "feito para o dia a dia",
-  "mb_credit": "Um produto <a href=\"https://nunex-mbrothers.github.io/mBrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a><span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
+  "mb_credit": "Um produto <a href=\"https://intrepidparallel.com/mbrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a><span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
   "ft_company2": "Um produto da Intrepid Parallel, Lda, com sede em Lisboa, Portugal.",
   "nav_vault": "Cofre",
   "sh_label": "Uma olhada rápida",

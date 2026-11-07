@@ -22,12 +22,12 @@
 
 ## Links
 
-- [Website (English)](https://nunex-mbrothers.github.io/ExplorerFocus/)
-- [Website (Português, Portugal)](https://nunex-mbrothers.github.io/ExplorerFocus/pt/)
-- [Website (Português, Brasil)](https://nunex-mbrothers.github.io/ExplorerFocus/br/)
+- [Website (English)](https://intrepidparallel.com/explorerfocus/)
+- [Website (Português, Portugal)](https://intrepidparallel.com/explorerfocus/pt/)
+- [Website (Português, Brasil)](https://intrepidparallel.com/explorerfocus/br/)
 - [Download and version history (GitHub Releases)](https://github.com/NuneX-mBrothers/ExplorerFocus/releases)
-- [Privacy](https://nunex-mbrothers.github.io/ExplorerFocus/privacy.html)
+- [Privacy](https://intrepidparallel.com/explorerfocus/privacy.html)
 - [MajorGeeks](https://www.majorgeeks.com/files/details/explorerfocus.html)
 - [Softpedia](https://www.softpedia.com/get/File-managers/ExplorerFocus.shtml)
-- [mBrothers](https://nunex-mbrothers.github.io/mBrothers/)
+- [mBrothers](https://intrepidparallel.com/mbrothers/)
 - Contact: explorerfocus@intrepidparallel.com

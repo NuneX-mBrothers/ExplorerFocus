@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /StandAlone/
 
-Sitemap: https://nunex-mbrothers.github.io/ExplorerFocus/sitemap.xml
+Sitemap: https://intrepidparallel.com/explorerfocus/sitemap.xml

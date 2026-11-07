@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ExplorerFocus — Privacy Policy</title>
-<meta name="description" content="Privacy policy for ExplorerFocus, a focused file explorer for Windows. The app has no backend server; your data stays on your device.">
+<meta name="description" content="Privacy policy for ExplorerFocus: what the app and this website send, what we keep, for how long and why.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0E0F11">
-<link rel="canonical" href="https://nunex-mbrothers.github.io/ExplorerFocus/privacy.html">
+<link rel="canonical" href="https://intrepidparallel.com/explorerfocus/privacy.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='6'%20fill='%230E0F11'/%3E%3Cpath%20d='M16%204l12%2012-12%2012L4%2016z'%20fill='%23E0A458'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
@@ -47,6 +47,11 @@
   li { margin:6px 0; }
   .lead { font-size:17px; color:var(--fg-0); }
   .card { background:var(--bg-1); border:1px solid var(--border-1); border-radius:8px; padding:16px 20px; margin:18px 0; }
+  h3 { font-family:var(--font-display); font-weight:600; font-size:20px; color:var(--fg-0); margin:26px 0 6px; }
+  .tabela { overflow-x:auto; margin:14px 0; }
+  table { border-collapse:collapse; width:100%; font-size:14px; }
+  th, td { text-align:left; vertical-align:top; padding:8px 10px; border-bottom:1px solid var(--border-1); color:var(--fg-1); }
+  th { color:var(--fg-0); font-weight:600; border-bottom:1px solid var(--border-2); }
   footer { margin-top:54px; padding-top:20px; border-top:1px solid var(--border-1); font-family:var(--font-mono); font-size:12px; color:var(--fg-2); }
 </style>
 </head>
@@ -59,85 +64,227 @@
     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="6" fill="#16181B"/><path d="M16 4l12 12-12 12L4 16z" fill="#E0A458"/></svg>
     <h1>Privacy Policy</h1>
   </div>
-  <div class="updated">ExplorerFocus · Last updated: 20 October 2026</div>
+  <div class="updated">ExplorerFocus · Last updated: 7 November 2026</div>
 
-  <p class="lead">ExplorerFocus is a desktop file explorer for Windows. It runs entirely on
-  your own computer. <strong>There is no ExplorerFocus server, and we do not collect, store,
-  transmit or sell your data.</strong> This page explains what the app touches and where it stays.</p>
+  <p class="lead"><strong>Who we are.</strong> ExplorerFocus is made by Intrepid Parallel, Lda ("we", "us"), Av. Afonso
+  Costa, 20, Galeria Esq., 1900-036 Lisboa, Portugal, single registration and tax number (NIPC) 519724976. mBrothers is
+  a brand used by Intrepid Parallel, Lda. For anything about your data, write to
+  <a href="mailto:explorerfocus@intrepidparallel.com">explorerfocus@intrepidparallel.com</a>.</p>
 
   <div class="card">
     <strong>The short version</strong>
     <ul>
-      <li>No backend. Everything happens locally on your device.</li>
-      <li>Cloud and server connections go <strong>directly</strong> from your machine to the
-          provider — never through us.</li>
-      <li>Tokens and passwords are stored on your machine, <strong>encrypted with Windows DPAPI</strong>.</li>
-      <li>The app only ever accesses the accounts and files <strong>you</strong> connect.</li>
+      <li><strong>ExplorerFocus works on your computer.</strong> Your files, folders, vaults, passwords and connections
+          never pass through us.</li>
+      <li><strong>Something leaves your computer only in the cases listed below,</strong> and in each one either you
+          asked for it or the app tells you first. Wherever the app talks to our licence server, a <em>Data
+          protection</em> button explains it on the spot.</li>
+      <li><strong>For licences we keep the minimum:</strong> your email, the identifiers of your computers and the
+          licence itself. A name only if you give us one. <strong>We never store your IP address.</strong></li>
+      <li><strong>We never sell your data, and we share it only with the services named on this page, for what is
+          described here.</strong> We send you promotions only if you ask for them, and you can stop them with one click
+          in any of them. Emails about your licence, such as a reminder before it ends, are part of the licence.</li>
     </ul>
   </div>
 
-  <h2>Data we collect</h2>
-  <p>None on any server — we don't operate one. The app stores its settings, your configured
-  folders/trees, and your saved connections <strong>locally</strong>, in your Windows user profile.
-  This information never leaves your device except when <em>you</em> ask the app to connect to a
-  service you chose.</p>
-  <p>One page, <em>My machine</em>, can show the public address your connection is seen with. It is
-  looked up only when you press that button, from <code>api.ipify.org</code> or
-  <code>checkip.amazonaws.com</code>.</p>
+  <h2>When something leaves your computer</h2>
+  <div class="tabela">
+  <table>
+    <thead><tr><th>When</th><th>What is sent</th><th>To</th><th>What we keep</th></tr></thead>
+    <tbody>
+      <tr><td>The app checks for updates (you can turn this off)</td><td>a request for a small version file</td><td>GitHub Pages</td><td>nothing</td></tr>
+      <tr><td>You accept an update</td><td>the download of the new version</td><td>GitHub</td><td>nothing</td></tr>
+      <tr><td>An update is installed, the app runs for the first time, you open <em>An idea?</em>, or you click <em>Try it</em> on the LogViewer suggestion in a log preview (you can turn this off)</td><td>an anonymous count of that event, nothing about you</td><td>GoatCounter</td><td>a count</td></tr>
+      <tr><td>You download the speech or translation models (the app asks first)</td><td>the download request</td><td>Hugging Face, GitHub, nuget.org</td><td>nothing</td></tr>
+      <tr><td>You install the vault drive engine (Dokany)</td><td>the download request</td><td>GitHub</td><td>nothing</td></tr>
+      <tr><td>You ask <em>My machine</em> for your public address</td><td>a request</td><td>ipify.org or Amazon</td><td>nothing</td></tr>
+      <tr><td>You use <em>Show on map…</em> (the app asks first)</td><td>the photo's coordinates</td><td>OpenStreetMap</td><td>nothing</td></tr>
+      <tr><td>You connect a cloud account or a server</td><td>your sign-in, directly</td><td>the provider or server you chose</td><td>nothing</td></tr>
+      <tr><td>You open <em>Activate PREMIUM on this computer</em>, after allowing the connection</td><td>first, only this computer's identifier, to check whether it already has a licence (for example after reinstalling Windows); then, to show the plans and their prices, the identifier and your Windows currency (to show an approximate price); for the price of a renewal or an upgrade, also its licence key</td><td>our licence server</td><td>see <em>Visits</em> and <em>Requests</em></td></tr>
+      <tr><td>You open <em>Licence status</em>, or a key arrives from our server and the app confirms it</td><td>this computer's identifier, a random code, and its licence key if it has one</td><td>our licence server</td><td>see <em>Visits</em> and <em>Requests</em></td></tr>
+      <tr><td>You use your licence on this computer (<em>I already have a licence</em>)</td><td>this computer's identifier and its name in Windows, the licence email, the code we sent to it, the app's language (for the email), a name if you write one, and your answer about promotions if you give one</td><td>our licence server</td><td>see <em>Licences</em></td></tr>
+      <tr><td>You deactivate PREMIUM on this computer</td><td>this computer's identifier and its licence key</td><td>our licence server</td><td>see <em>Licences</em></td></tr>
+      <tr><td>You activate the giveaway edition (optional)</td><td>this computer's identifier</td><td>our licence server</td><td>the identifier and the time</td></tr>
+      <tr><td>You write to us</td><td>your email and your message</td><td>us</td><td>your email and message, to answer you</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Every request to our licence server also carries the app's version number. The app never sends files, folders,
+  passwords or card details.</p>
 
-  <h2>Cloud connections (Dropbox, OneDrive, Google Drive)</h2>
+  <h2>Licences and our licence server</h2>
+  <ul>
+    <li><strong>The computer identifier</strong> is a code the app works out on your computer from your Windows
+        installation and system drive. It contains no name and no files, and it changes if Windows is reinstalled.
+        Because it can be linked to a licence, we treat it as personal data, even where we only keep it encrypted.</li>
+    <li><strong>Your name is optional.</strong> If you write one, we use it only to greet you in our emails, exactly as
+        you wrote it. If you don't, we greet you by your email address.</li>
+    <li><strong>Using your licence on another computer.</strong> You give the licence email in the app, and, if that
+        email has a licence, we send a code to it, so only whoever reads that email can use the licence. An email
+        without a licence gets nothing. The email shows the computer's name in Windows, so you can tell which computer
+        asked. The code is valid for 10 minutes, only once, and we keep it only as a fingerprint (a hash), never as the
+        code itself. Each code request and each wrong code is kept with the email and the computer identifier for 30
+        days, for the hourly limits and the one-hour block after six wrong codes.</li>
+    <li><strong>Buying.</strong> Purchases are not open yet. Before they open, we will update this page with how buying
+        works and who handles the payment.</li>
+    <li><strong>What we keep for a licence:</strong> your email, the name you gave us (if any), your country and
+        language, the plan and its dates, what you paid, the identifiers and Windows names of the computers it is used
+        on (three, or more if you bought more), the keys issued for them, the emails we sent you, a history of what was
+        done to the licence and by whom (issued, used on a computer, released, details corrected), and your answers
+        about promotions, with the date, the channel and the version of the text, as proof of what you chose.</li>
+    <li><strong>Requests.</strong> For each request from the app, our server records the time, the kind of request, the
+        answer and the computer identifier, <strong>encrypted</strong> (with a key that exists only on our server). We
+        need it for support and to spot abuse. If you ask for help, we encrypt the full identifier you give us in the
+        same way to find your requests. It never includes your IP address. A computer without a licence only ever
+        appears in totals in our own tools.</li>
+    <li><strong>Visits.</strong> When the app talks to our server at your request (the prices, the licence status, the
+        data we hold), we note one visit per computer, however many requests it makes in that visit. We keep the
+        computer identifier only encrypted, the kind of computer (normal or giveaway), the first and last visit, and
+        how many visits came from each country (in the United States, from each state) and from each version of the
+        app. We use it only to count where our visitors come from and how often they come back, never to know who you
+        are: we only ever look at totals, and we never link a visit to a licence or a purchase. A computer's line is
+        deleted once it has not visited for 12 months; the totals by day, week, month and year, by country, by US
+        state and by version of the app, stay, and they carry nothing about any computer.</li>
+    <li><strong>Where our users are, roughly.</strong> The first time a computer contacts our server, the server works
+        out an approximate area from the connection (country, region, nearest town) and adds one to a count for that
+        area and month. The count is not linked to your computer or to you. The IP address is read only for that
+        moment, to find the area and the country (and, in the United States, the state) for <em>Visits</em>, and for
+        the limits per address it is kept in memory for at most an hour and never written down. The area comes from a
+        database kept on our own server: IP geolocation by <a href="https://db-ip.com" target="_blank" rel="noopener">DB-IP</a>.
+        For a mobile connection, the area is usually the operator's, not yours.</li>
+    <li><strong>The giveaway edition.</strong> Before anything is sent, the app tells you exactly what will be sent, and
+        you can refuse. If you agree, we keep only this computer's identifier and the time of activation, so we know
+        how many activations there were and so you can upgrade to the full Premium later at a special price. If you
+        refuse, nothing is sent, the date is checked on public time sources (GoatCounter, Microsoft, Cloudflare), and
+        the giveaway still works, but without the special price.</li>
+    <li><strong>Emails.</strong> They are sent from explorerfocus@intrepidparallel.com through
+        <a href="https://www.brevo.com" target="_blank" rel="noopener">Brevo</a>, an email service based in the
+        European Union that sends them on our behalf. Brevo does not keep the text of the emails; it keeps the record of
+        each sending (the address, the subject and whether it was delivered) for one month, and counts openings and
+        clicks only as totals, without linking them to anyone. Your replies arrive in our company mailbox, in Microsoft
+        365. There are two kinds of email:
+      <ul>
+        <li><strong>about your licence:</strong> the codes, the keys, and the reminders 30 days, 7 days and on the day a
+            licence for a period ends (licences never renew by themselves). These come with the licence. A copy of each,
+            except the codes, is kept in our company mailbox for about 2 years;</li>
+        <li><strong>promotions</strong> (news and offers about ExplorerFocus and the other mBrothers programs): only if
+            you tick the box when you give us your email. The box is never ticked for you. Each email has a link to stop
+            them, and without the box ticked we never write to you about anything but your licence.</li>
+      </ul>
+    </li>
+    <li><strong>Backups.</strong> Our licence data is copied every day, and each copy is kept for 30 days. We also keep
+        the three most recent full copies, on a computer of our management and in our company's Microsoft 365
+        (OneDrive), both encrypted.</li>
+  </ul>
+
+  <h2>Why we use your data</h2>
+  <ul>
+    <li><strong>To give you the licence you bought or activated,</strong> including the giveaway licence, to send you
+        its codes, keys and reminders, and to check it when you ask (the contract between us).</li>
+    <li><strong>The request records, to support you and stop abuse; and the visits and the area counts, to know where
+        our users come from and how often they come back</strong> (our legitimate interest). You can ask us to delete
+        any of these.</li>
+    <li><strong>The codes and their limits, to protect the licences from misuse</strong> (our legitimate interest).</li>
+    <li><strong>What you write to us, to answer you and follow up</strong> (our legitimate interest).</li>
+    <li><strong>Promotions,</strong> only with your consent, which you can withdraw in any of them.</li>
+    <li><strong>The anonymous counts</strong> of the app's events help us see how the app is used (our legitimate
+        interest). They carry nothing about you, and you can turn them off in <em>About → Send anonymous usage
+        statistics</em>.</li>
+  </ul>
+
+  <h2>How long we keep it</h2>
+  <div class="tabela">
+  <table>
+    <thead><tr><th>What</th><th>How long</th></tr></thead>
+    <tbody>
+      <tr><td>A licence and its customer record</td><td>while the licence exists (a lifetime licence lasts as long as its computers), and 3 years after it ends; then it is anonymised</td></tr>
+      <tr><td>The text of the emails we sent</td><td>2 years (that an email was sent, to whom and when, stays with the licence)</td></tr>
+      <tr><td>The record of each sending, at Brevo</td><td>1 month</td></tr>
+      <tr><td>The history of a licence</td><td>with the licence; anonymising removes the names and emails from it</td></tr>
+      <tr><td>Your answers about promotions</td><td>while your customer record exists; anonymising removes the email from them</td></tr>
+      <tr><td>The request records</td><td>1 year</td></tr>
+      <tr><td>The visits of a computer</td><td>until it has not visited for 12 months</td></tr>
+      <tr><td>The codes, the code requests and the errors</td><td>30 days</td></tr>
+      <tr><td>Backups</td><td>30 days; the three most recent encrypted copies are replaced as new ones are made</td></tr>
+      <tr><td>What you write to us at explorerfocus@intrepidparallel.com</td><td>about 2 years</td></tr>
+      <tr><td>A giveaway licence</td><td>like any other licence, above</td></tr>
+      <tr><td>The area counts and the totals by day, week, month and year</td><td>they carry nothing about anyone, and we keep them</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Our server deletes what has reached its limit once a day, by itself. <strong>Anonymising</strong> removes your
+  email, your names, the names of your computers, the text of the emails and the codes; the licence keeps working.</p>
+
+  <h2>Where it is stored</h2>
+  <p>Our licence server is in the Netherlands, in the European Union, and its daily backups stay on it. Our emails are
+  sent through Brevo, in the European Union, and the copies and your replies are kept in our company's Microsoft 365.
+  The three encrypted full copies are kept on a computer of our management and in our company's Microsoft 365
+  (OneDrive). GitHub, GoatCounter, Hugging Face, Microsoft and the other services named in the table above may handle
+  data outside the European Union, under their own safeguards.</p>
+
+  <h2>Your rights</h2>
+  <p>You can ask us to see, correct or delete your data, to stop using it, or to receive a copy of it. Write to
+  <a href="mailto:explorerfocus@intrepidparallel.com">explorerfocus@intrepidparallel.com</a> and we will answer within
+  one month. If we delete a licence record, we can no longer send codes for it, renew it or move it to another
+  computer, and for the giveaway the special price is lost. You can also complain to the Portuguese data protection
+  authority (CNPD, <a href="https://www.cnpd.pt" target="_blank" rel="noopener">www.cnpd.pt</a>) or to the one in your
+  country.</p>
+
+  <h2>Everything else stays on your computer</h2>
+  <p>The app stores its settings, your configured folders and trees, and your saved connections
+  <strong>locally</strong>, in your Windows user profile. This information never leaves your device except in the cases
+  above.</p>
+
+  <h3>Cloud connections (Dropbox, OneDrive, Google Drive)</h3>
   <p>Connecting a cloud account is optional. When you do:</p>
   <ul>
-    <li>Authentication uses the provider's official <strong>OAuth 2</strong> flow (with PKCE).
-        You sign in on the provider's own page; the app never sees your password.</li>
-    <li>The app receives an access/refresh token that grants access to <strong>your own account
-        only</strong>. The token is stored locally and <strong>encrypted with Windows DPAPI</strong>;
-        it is never sent to us or any third party.</li>
-    <li>All file operations happen <strong>directly between your computer and the provider's API</strong>.
-        Your files do not pass through any ExplorerFocus infrastructure.</li>
+    <li>Authentication uses the provider's official <strong>OAuth 2</strong> flow (with PKCE). You sign in on the
+        provider's own page; the app never sees your password.</li>
+    <li>The app receives an access/refresh token that grants access to <strong>your own account only</strong>. The token
+        is stored locally and <strong>encrypted with Windows DPAPI</strong>; it is never sent to us or any third
+        party.</li>
+    <li>All file operations happen <strong>directly between your computer and the provider's API</strong>. Your files
+        do not pass through us.</li>
   </ul>
   <p>Permissions requested, and why:</p>
   <ul>
     <li><strong>Dropbox</strong> — <code>account_info.read</code> (show which account is linked),
         <code>files.metadata.read</code> (browse folders/files), <code>files.content.read</code>
-        (preview/open/download), <code>files.content.write</code> (upload, create folders,
-        rename, move, delete your files).</li>
-    <li><strong>OneDrive</strong> (Microsoft Graph) — <code>Files.ReadWrite</code> and
-        <code>offline_access</code>, to browse and manage your own OneDrive files and keep the
-        connection working between sessions.</li>
+        (preview/open/download), <code>files.content.write</code> (upload, create folders, rename, move, delete your
+        files).</li>
+    <li><strong>OneDrive</strong> (Microsoft Graph) — <code>Files.ReadWrite</code> and <code>offline_access</code>, to
+        browse and manage your own OneDrive files and keep the connection working between sessions.</li>
     <li><strong>Google Drive</strong> — the Drive scope, to browse and manage your own Drive files.</li>
   </ul>
-  <p>You can disconnect at any time inside the app, and you can revoke access entirely from your
-  provider's account/security settings (Dropbox connected apps, Microsoft account apps, Google
-  account third-party access).</p>
+  <p>You can disconnect at any time inside the app, and you can revoke access entirely from your provider's
+  account/security settings (Dropbox connected apps, Microsoft account apps, Google account third-party access).</p>
 
-  <h2>Remote servers (SFTP / FTP / FTPS / WebDAV)</h2>
-  <p>If you add a remote server, its host, username and credentials are stored locally and
-  <strong>encrypted with Windows DPAPI</strong>. Connections are made directly from your machine
-  to that server. We never see your servers or credentials.</p>
+  <h3>Remote servers (SFTP / FTP / FTPS / WebDAV)</h3>
+  <p>If you add a remote server, its host, username and credentials are stored locally and <strong>encrypted with
+  Windows DPAPI</strong>. Connections are made directly from your machine to that server. We never see your servers or
+  credentials.</p>
 
-  <h2>Local files</h2>
-  <p>The app reads and writes the files and folders you choose to work with, on your own device,
-  just like Windows Explorer. Nothing is uploaded anywhere unless you explicitly perform an upload
-  to a destination you connected. Previews are rendered without going to the network: a document
-  that points at remote content does not fetch it.</p>
+  <h3>Local files</h3>
+  <p>The app reads and writes the files and folders you choose to work with, on your own device, just like Windows
+  Explorer. Nothing is uploaded anywhere unless you explicitly perform an upload to a destination you connected.
+  Previews are rendered without going to the network: a document that points at remote content does not fetch
+  it.</p>
 
-  <h2>Encrypted vaults</h2>
-  <p>A vault is a set of encrypted files in a folder you choose, on your own disk. The password and
-  the recovery words stay on your machine — they are never sent anywhere, and <strong>we cannot open
-  a vault for you</strong>.</p>
+  <h3>Encrypted vaults</h3>
+  <p>A vault is a set of encrypted files in a folder you choose, on your own disk. The password and the recovery words
+  stay on your machine — they are never sent anywhere, and <strong>we cannot open a vault for you</strong>.</p>
   <p>Giving a vault a drive letter needs the
-  <a href="https://github.com/dokan-dev/dokany" target="_blank" rel="noopener">Dokany</a> driver. If
-  you let the app install it, the installer is downloaded from that project's own releases on GitHub,
-  and installing it is a separate confirmation.</p>
+  <a href="https://github.com/dokan-dev/dokany" target="_blank" rel="noopener">Dokany</a> driver. If you let the app
+  install it, the installer is downloaded from that project's own releases on GitHub, and installing it is a separate
+  confirmation.</p>
 
-  <h2>Photos and location</h2>
+  <h3>Photos and location</h3>
   <p>The photo X-ray, “Near…”, reading the text of an image and finding faces to cover them all happen on your
-  computer, without internet. Only “Show on map…” goes out: it asks first, and only then sends the photo's
-  coordinates to <a href="https://www.openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a> to draw the map.
-  When a photo has a location, every box that saves a copy asks whether the location goes with it.</p>
+  computer, without internet. Only “Show on map…” goes out: it asks first, and only then sends the photo's coordinates
+  to <a href="https://www.openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a> to draw the map. When a
+  photo has a location, every box that saves a copy asks whether the location goes with it.</p>
 
-  <h2>Listen and write</h2>
+  <h3>Listen and write</h3>
   <p>The ear, which writes down what is said, and the translator work on your computer. They don't come with the
   program: the first time you use them, the app asks for permission and downloads them once. The models come from
   <a href="https://huggingface.co" target="_blank" rel="noopener">Hugging Face</a>, and the engines that run them come
@@ -145,50 +292,39 @@
   those sites see the request. After that, the sound, the text and the translations never leave your computer, and no
   internet is needed.</p>
 
-  <h2>Software updates &amp; anonymous statistics</h2>
-  <p>The app can check for new versions by fetching a small <code>version.json</code> file hosted on
-  GitHub Pages. This is an ordinary web request and sends <strong>no personal data</strong>. You can
-  turn automatic checks off in the app's settings.</p>
-  <p>When an update is <strong>actually applied</strong>, the app sends a single <strong>anonymous</strong>
-  hit to our privacy-friendly analytics (<a href="https://www.goatcounter.com" target="_blank" rel="noopener">GoatCounter</a>)
-  so we can count how many updates happen. It carries <strong>no personal data</strong> — only the fact that an
-  update occurred. You can turn this off at any time via <em>About → “Send anonymous usage statistics”</em>.</p>
+  <h3>Software updates</h3>
+  <p>The app can check for new versions by fetching a small <code>version.json</code> file hosted on GitHub Pages. This
+  is an ordinary web request and sends <strong>no personal data</strong>. You can turn automatic checks off in the
+  app's settings.</p>
 
-  <h2>Licensing</h2>
-  <p>The optional PREMIUM tier is tied to a device using a locally-computed <strong>machine ID</strong>
-  (a hash derived from your Windows installation and system volume), which is used only to bind a
-  licence to a machine. We never receive or store your payment card details.</p>
-
-  <h2>Website analytics</h2>
-  <p>This website uses <a href="https://www.goatcounter.com" target="_blank" rel="noopener">GoatCounter</a>,
-  a privacy-friendly analytics service. It sets <strong>no cookies</strong>, uses no cross-site tracking and
-  stores <strong>no personal data</strong> (it does not retain your IP address). We use it only to count page
-  views and, anonymously, how often the download buttons (.exe / .zip) and the share buttons are clicked. Because it uses no cookies
-  and no personal data, no consent banner is required.</p>
-
-  <h2>Website hosting &amp; fonts</h2>
-  <p>This website is hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>,
-  and the download buttons fetch the program from GitHub Releases. To show how many times the program has been
-  downloaded, the home page also asks GitHub's public API for the list of releases. Like any web host, GitHub
-  receives your IP address when your browser loads a page, a file or that list from it, and
+  <h2>This website</h2>
+  <p>This website is hosted on our own server, in the Netherlands, and <strong>uses no cookies</strong>. To count visits,
+  and the clicks on the download buttons, our server records each request (the page, the browser and the site you came
+  from) with the IP address cut short, and deletes those records after 14 days. Only totals stay: by day, page, country
+  (in the United States, also the state) and referring site. Requests from robots and from servers (hosting networks)
+  are not counted as visits: they are counted apart, only by the name of the robot or the network. The country, the
+  state and the network come from the shortened address, through the IP to City Lite and IP to ASN Lite databases by
+  <a href="https://db-ip.com" target="_blank" rel="noopener">DB-IP</a> (CC BY 4.0).</p>
+  <p>The download buttons pass through our server, which counts the click, and the program then comes from GitHub
+  Releases; GitHub receives your IP address when it sends you the file, and
   <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub's privacy statement</a>
-  applies to that. The fonts are served by this website itself, so opening a page sends nothing to Google or
-  to any other font service.</p>
+  applies to that. The old addresses, on nunex-mbrothers.github.io, bring you here; GitHub, which hosts them, records
+  the IP address of whoever passes through. The fonts are served by this website itself.</p>
 
   <h2>Data sharing</h2>
-  <p>We do not sell, rent or share your data. We have no servers that collect it. Apart from the website
-  hosting and the anonymous counting described above, the only parties your data reaches are the services
-  <em>you</em> connect to, directly.</p>
+  <p>We do not sell or rent your data. Apart from our licence server, the email service and the counting described
+  above, the only parties your data reaches are the services <em>you</em> connect to, directly.</p>
 
   <h2>Children</h2>
   <p>ExplorerFocus is a general-purpose utility and is not directed at children under 13.</p>
 
-  <h2>Changes to this policy</h2>
-  <p>If this policy changes, the updated version will be posted on this page with a new "last updated"
-  date.</p>
+  <h2>Changes</h2>
+  <p>If this policy changes, the new version is posted here with a new date. If the change affects data we already
+  keep, we tell you in the app.</p>
 
   <h2>Contact</h2>
-  <p>Questions about privacy? Email <a href="mailto:explorerfocus@intrepidparallel.com">explorerfocus@intrepidparallel.com</a>.</p>
+  <p><a href="mailto:explorerfocus@intrepidparallel.com">explorerfocus@intrepidparallel.com</a> · Intrepid Parallel,
+  Lda, Av. Afonso Costa, 20, Galeria Esq., 1900-036 Lisboa, Portugal.</p>
 
   <footer>
     © 2026 mBrothers · ExplorerFocus · <a href="./index.html">Home</a> · <a href="./legal.html">Legal notice</a><br>

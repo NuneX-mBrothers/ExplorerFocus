@@ -312,6 +312,7 @@ window.I18N.ar = {
   "nav_guide": "كيف يعمل",
   "nav_privacy": "الخصوصية",
   "nav_legal": "إشعار قانوني",
+  "nav_terms": "شروط البيع",
   "ft_baseline": "مصنوع لعمل كل يوم",
   "mb_credit": "منتج من <a href=\"https://intrepidparallel.com/mbrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a><span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
   "ft_company2": "منتج من شركة Intrepid Parallel, Lda، ومقرّها لشبونة، البرتغال.",

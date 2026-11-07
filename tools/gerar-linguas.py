@@ -91,7 +91,7 @@ BARRA_DA_APP = [
 RTL = {"ar"}
 
 # páginas soltas que não são traduzidas mas têm de continuar no sitemap
-SOLTAS = ["privacy.html", "dropbox-flow.html", "legal.html"]
+SOLTAS = ["privacy.html", "dropbox-flow.html", "legal.html", "terms.html"]
 
 
 def existe(cod):

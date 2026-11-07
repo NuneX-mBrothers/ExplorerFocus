@@ -308,6 +308,7 @@ window.I18N.en = {
   "nav_guide": "How it works",
   "nav_privacy": "Privacy",
   "nav_legal": "Legal notice",
+  "nav_terms": "Terms of sale",
   "ft_baseline": "designed for the daily grind",
   "mb_credit": "An <a href=\"https://intrepidparallel.com/mbrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a> product<span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
   "ft_company2": "A product of Intrepid Parallel, Lda, located in Lisbon, Portugal.",

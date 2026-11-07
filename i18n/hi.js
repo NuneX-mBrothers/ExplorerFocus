@@ -310,6 +310,7 @@ window.I18N.hi = {
   "nav_guide": "यह कैसे काम करता है",
   "nav_privacy": "निजता",
   "nav_legal": "कानूनी सूचना",
+  "nav_terms": "बिक्री की शर्तें",
   "ft_baseline": "रोज़ की मेहनत के लिए बनाया गया",
   "mb_credit": "एक <a href=\"https://intrepidparallel.com/mbrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a> उत्पाद<span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
   "ft_company2": "Intrepid Parallel, Lda का एक उत्पाद, जिसका मुख्यालय लिस्बन, पुर्तगाल में है।",

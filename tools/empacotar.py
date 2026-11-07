@@ -51,7 +51,7 @@ def fora(nome):
 def main():
     if sys.stdout.isatty():
         sys.exit("[ERRO] o pacote é binário: liga-o ao ssh com |, ou manda-o para um ficheiro com >")
-    for f in ("index.html", "privacy.html", "legal.html", "version.json"):
+    for f in ("index.html", "privacy.html", "legal.html", "terms.html", "version.json"):
         if not os.path.isfile(os.path.join(RAIZ, f)):
             sys.exit("[ERRO] falta o %s na raiz do site" % f)
     with tarfile.open(fileobj=sys.stdout.buffer, mode="w|gz", format=tarfile.GNU_FORMAT) as tar:

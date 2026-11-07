@@ -308,6 +308,7 @@ window.I18N.zh = {
   "nav_guide": "操作演示",
   "nav_privacy": "隐私",
   "nav_legal": "法律声明",
+  "nav_terms": "销售条款",
   "ft_baseline": "为日常工作而设计",
   "mb_credit": "一款 <a href=\"https://intrepidparallel.com/mbrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a> 产品<span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
   "ft_company2": "Intrepid Parallel, Lda 的产品，总部位于葡萄牙里斯本。",

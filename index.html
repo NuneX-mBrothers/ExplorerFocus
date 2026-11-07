@@ -3047,8 +3047,10 @@
         descarga. No site publicado, se o version.json falhar, a caixa fica
         ESCONDIDA — melhor calado do que errado. */
   var VERIFY_FALLBACK = { version: '1.2.1', sha256: '531D24D52F429E46EE5918051B43F2A9318E6EDC2F2792F18F3331BCB82A9DBB' };
+  /* 07/11/2026: o site passou para intrepidparallel.com. Publicado é qualquer endereço http(s) que não seja
+     esta máquina (antes era só o github.io, e no servidor novo o SHA-256 velho apareceria). */
   var EM_PRODUCAO = location.protocol.indexOf('http') === 0 &&
-                    location.hostname.indexOf('github.io') >= 0;
+                    !/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
   function verifyFallback() {
     if (EM_PRODUCAO) return;
     fillVerify(VERIFY_FALLBACK.sha256, VERIFY_FALLBACK.version);
@@ -3083,7 +3085,8 @@
     n.hidden = false;
     var ask = document.getElementById('heroOsAsk');
     var pergunta = n.textContent.trim() + '\n\n' + (ask ? ask.textContent.trim() : '');
-    document.querySelectorAll('a[href$="ExplorerFocus.exe"], a[href$="ExplorerFocus.zip"]').forEach(function (a) {
+    /* 07/11/2026: os botões passam pelo nosso endereço que conta (…/descarregar/exe e …/zip). */
+    document.querySelectorAll('a[href$="descarregar/exe"], a[href$="descarregar/zip"]').forEach(function (a) {
       a.addEventListener('click', function (e) {
         if (window.confirm(pergunta)) return;
         e.preventDefault();
@@ -3111,85 +3114,33 @@
       }
       if (v && v.size_mb) fillSize(v.size_mb);
       if (v && v.sha256) fillVerify(v.sha256, v.version);
-      var falta = { ver: !(v && v.version), size: !(v && v.size_mb), sha: !(v && v.sha256) };
-      if (falta.ver || falta.size || falta.sha) fromGitHub(falta);
+      if (!(v && v.sha256)) verifyFallback();
     })
-    .catch(function () { fromGitHub({ ver: true, size: true, sha: true }); });
-
-  /* 01/11/2026: sem o version.json (a pagina aberta do disco, onde o navegador nao o deixa ler, ou um
-     version.json sem tamanho), o que falta vem da ultima release no GitHub, como o contador das descargas: a
-     versao e a data, o tamanho do .exe (MB de 1024 x 1024, arredondado, como o .cmd de publicar o conta) e o
-     SHA-256 que o GitHub calcula. Se o GitHub tambem falhar, fica como antes. */
-  function fromGitHub(falta) {
-    fetch('https://api.github.com/repos/NuneX-mBrothers/ExplorerFocus/releases/latest')
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (rel) {
-        if (!rel || !rel.assets) { if (falta.sha) verifyFallback(); return; }
-        var exe = null;
-        rel.assets.forEach(function (a) { if (a.name === 'ExplorerFocus.exe') exe = a; });
-        var nv = String(rel.tag_name || '').replace(/^v/, '');
-        if (falta.size && exe && exe.size) fillSize(exe.size / 1048576);
-        if (falta.ver && nv) {
-          var box = document.getElementById('heroLatest');
-          var ver = document.getElementById('heroVersion');
-          var dia = document.getElementById('heroReleased');
-          if (ver) ver.textContent = 'v' + nv;
-          if (dia && rel.published_at) dia.textContent = '  ·  ' + String(rel.published_at).slice(0, 10);
-          if (box) box.hidden = false;
-        }
-        if (falta.sha) {
-          var dg = exe && exe.digest ? String(exe.digest) : '';
-          if (dg.indexOf('sha256:') === 0) fillVerify(dg.slice(7), nv);
-          else verifyFallback();
-        }
-      })
-      .catch(function () { if (falta.sha) verifyFallback(); });
-  }
+    .catch(function () { verifyFallback(); });
 
   /* ============================================================
-     Descargas no GitHub — a soma de TODAS as releases (.exe + .zip).
-     ⛔ Pagina a pagina: o EF ja passa das 100 releases, e um pedido so com
-        per_page=100 contava de menos SEM aviso (o site do LogViewer ainda
-        cabe numa pagina). Se qualquer pagina falhar (limite da API, rede),
-        nao se mostra nada: um numero a menos passava por verdadeiro.
-     Guardado 5 minutos na sessao, como no LogViewer: sem cookies.
+     Descargas — a soma de TODAS as releases (.exe + .zip).
+     07/11/2026: quem visita já não pergunta ao GitHub (o GitHub ficava com o IP de cada visita). É o nosso
+     servidor que soma, de hora a hora, e serve o total em descargas.json, ao lado do version.json
+     ({"total": N, "em": "…"}). Sem resposta, ou sem total, não se mostra nada: melhor calado do que errado.
+     Sem cookies e sem guardar nada no navegador.
   ============================================================ */
   (function () {
     var box = document.getElementById('heroDlCount');
     var el = document.getElementById('heroDlTotal');
     if (!box || !el) return;
-    var CK = 'ef.dl', agora = Date.now();
     var lang = document.documentElement.lang || 'en';
-    function mostra(total) {
-      try { el.textContent = Number(total).toLocaleString(lang); }
-      catch (e) { el.textContent = String(total); }
-      box.hidden = false;
-    }
-    try {
-      var c = JSON.parse(sessionStorage.getItem(CK) || 'null');
-      /* 20/10/2026: so vale se foi guardado ha MENOS de 5 minutos E NAO no futuro. Com o relogio da maquina
-         adiantado quando se guardou (ou atrasado depois), a idade dava negativa e o numero velho ficava
-         para sempre na aba: o Chrome da Minix mostrava 1724 descargas com 3279 no GitHub. */
-      var idade = c ? agora - c.ts : -1;
-      if (c && typeof c.t === 'number' && idade >= 0 && idade < 300000) { mostra(c.t); return; }
-    } catch (e) {}
-    function pagina(n, soma) {
-      return fetch('https://api.github.com/repos/NuneX-mBrothers/ExplorerFocus/releases?per_page=100&page=' + n)
-        .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
-        .then(function (rel) {
-          rel.forEach(function (rl) {
-            (rl.assets || []).forEach(function (a) { soma += a.download_count || 0; });
-          });
-          return (rel.length === 100 && n < 10) ? pagina(n + 1, soma) : soma;
-        });
-    }
     var corre = function () {
-      pagina(1, 0).then(function (total) {
-        if (total > 0) {
-          mostra(total);
-          try { sessionStorage.setItem(CK, JSON.stringify({ t: total, ts: agora })); } catch (e) {}
-        }
-      }).catch(function () {});
+      fetch((window.EF_ROOT || '') + 'descargas.json')
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (d) {
+          var total = d && Number(d.total);
+          if (!(total > 0)) return;
+          try { el.textContent = total.toLocaleString(lang); }
+          catch (e) { el.textContent = String(total); }
+          box.hidden = false;
+        })
+        .catch(function () {});
     };
     if (window.requestIdleCallback) requestIdleCallback(corre); else setTimeout(corre, 1200);
   })();

@@ -64,7 +64,7 @@
     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="6" fill="#16181B"/><path d="M16 4l12 12-12 12L4 16z" fill="#E0A458"/></svg>
     <h1>Privacy Policy</h1>
   </div>
-  <div class="updated">ExplorerFocus · Last updated: 7 November 2026</div>
+  <div class="updated">ExplorerFocus · Last updated: 8 November 2026</div>
 
   <p class="lead"><strong>Who we are.</strong> ExplorerFocus is made by Intrepid Parallel, Lda ("we", "us"), Av. Afonso
   Costa, 20, Galeria Esq., 1900-036 Lisboa, Portugal, single registration and tax number (NIPC) 519724976. mBrothers is
@@ -76,11 +76,11 @@
     <ul>
       <li><strong>ExplorerFocus works on your computer.</strong> Your files, folders, vaults, passwords and connections
           never pass through us.</li>
-      <li><strong>Something leaves your computer only in the cases listed below,</strong> and in each one either you
-          asked for it or the app tells you first. Wherever the app talks to our licence server, a <em>Data
+      <li><strong>Something leaves your computer only in the cases listed below.</strong> Wherever the app talks to our licence server, a <em>Data
           protection</em> button explains it on the spot.</li>
       <li><strong>For licences we keep the minimum:</strong> your email, the identifiers of your computers and the
-          licence itself. A name only if you give us one. <strong>We never store your IP address.</strong></li>
+          licence itself. A name only if you give us one. <strong>We never store your IP address,</strong> and your card
+          details never reach us.</li>
       <li><strong>We never sell your data, and we share it only with the services named on this page, for what is
           described here.</strong> We send you promotions only if you ask for them, and you can stop them with one click
           in any of them. Emails about your licence, such as a reminder before it ends, are part of the licence.</li>
@@ -94,7 +94,8 @@
     <tbody>
       <tr><td>The app checks for updates (you can turn this off)</td><td>a request for a small version file</td><td>GitHub Pages</td><td>nothing</td></tr>
       <tr><td>You accept an update</td><td>the download of the new version</td><td>GitHub</td><td>nothing</td></tr>
-      <tr><td>An update is installed, the app runs for the first time, you open <em>An idea?</em>, or you click <em>Try it</em> on the LogViewer suggestion in a log preview (you can turn this off)</td><td>an anonymous count of that event, nothing about you</td><td>GoatCounter</td><td>a count</td></tr>
+      <tr><td>The app starts (you can turn this off in <em>About → Send usage statistics</em>)</td><td>usage statistics: a random number of this installation (not the computer identifier), the app's version, edition and language</td><td>our server</td><td>see <em>Usage statistics</em></td></tr>
+      <tr><td>Only in the giveaway edition: it starts, or the giveaway is activated (the same switch turns this off)</td><td>a count of that event, once per computer, nothing about you</td><td>GoatCounter</td><td>a count</td></tr>
       <tr><td>You download the speech or translation models (the app asks first)</td><td>the download request</td><td>Hugging Face, GitHub, nuget.org</td><td>nothing</td></tr>
       <tr><td>You install the vault drive engine (Dokany)</td><td>the download request</td><td>GitHub</td><td>nothing</td></tr>
       <tr><td>You ask <em>My machine</em> for your public address</td><td>a request</td><td>ipify.org or Amazon</td><td>nothing</td></tr>
@@ -102,9 +103,11 @@
       <tr><td>You connect a cloud account or a server</td><td>your sign-in, directly</td><td>the provider or server you chose</td><td>nothing</td></tr>
       <tr><td>You open <em>Activate PREMIUM on this computer</em>, after allowing the connection</td><td>first, only this computer's identifier, to check whether it already has a licence (for example after reinstalling Windows); then, to show the plans and their prices, the identifier and your Windows currency (to show an approximate price); for the price of a renewal or an upgrade, also its licence key</td><td>our licence server</td><td>see <em>Visits</em> and <em>Requests</em></td></tr>
       <tr><td>You open <em>Licence status</em>, or a key arrives from our server and the app confirms it</td><td>this computer's identifier, a random code, and its licence key if it has one</td><td>our licence server</td><td>see <em>Visits</em> and <em>Requests</em></td></tr>
+      <tr><td>This computer has a licence, whenever needed to confirm it</td><td>this computer's identifier and its licence key</td><td>our licence server</td><td>see <em>Requests</em></td></tr>
       <tr><td>You use your licence on this computer (<em>I already have a licence</em>)</td><td>this computer's identifier and its name in Windows, the licence email, the code we sent to it, the app's language (for the email), a name if you write one, and your answer about promotions if you give one</td><td>our licence server</td><td>see <em>Licences</em></td></tr>
       <tr><td>You deactivate PREMIUM on this computer</td><td>this computer's identifier and its licence key</td><td>our licence server</td><td>see <em>Licences</em></td></tr>
       <tr><td>You activate the giveaway edition (optional)</td><td>this computer's identifier</td><td>our licence server</td><td>the identifier and the time</td></tr>
+      <tr><td>You buy, renew or add computers</td><td>in the app, the licence email and the plan; on the payment page, your payment details, country and address</td><td>our licence server; Stripe, for Sold through Link, LLC</td><td>see <em>Buying</em></td></tr>
       <tr><td>You write to us</td><td>your email and your message</td><td>us</td><td>your email and message, to answer you</td></tr>
     </tbody>
   </table>
@@ -125,15 +128,19 @@
         asked. The code is valid for 10 minutes, only once, and we keep it only as a fingerprint (a hash), never as the
         code itself. Each code request and each wrong code is kept with the email and the computer identifier for 30
         days, for the hourly limits and the one-hour block after six wrong codes.</li>
-    <li><strong>Buying.</strong> Purchases are not open yet. Before they open, we will update this page with how buying
-        works and who handles the payment.</li>
+    <li><strong>Buying.</strong> You pay on a Stripe page. The seller is Sold through Link, LLC, of the Stripe group: it
+        receives your payment details, country and address directly, under its own
+        <a href="https://link.com/privacy" target="_blank" rel="noopener">privacy policy</a>, and sends you the receipt and
+        the invoice. From Stripe we keep, for each payment, your email, your country, the amounts (with the tax and any
+        refund), the type of payment and its status, and the computer it was for. Never your card details, and not the
+        name or VAT number you may give on the payment page. A refunded purchase cancels its licence.</li>
     <li><strong>What we keep for a licence:</strong> your email, the name you gave us (if any), your country and
         language, the plan and its dates, what you paid, the identifiers and Windows names of the computers it is used
         on (three, or more if you bought more), the keys issued for them, the emails we sent you, a history of what was
         done to the licence and by whom (issued, used on a computer, released, details corrected), and your answers
         about promotions, with the date, the channel and the version of the text, as proof of what you chose.</li>
-    <li><strong>Requests.</strong> The app only talks to our licence server when you ask it to: when you open the PREMIUM
-        window, check your licence or activate it. Never while you use the program. For each of these requests we keep
+    <li><strong>Requests.</strong> The app talks to our licence server when you open the PREMIUM window, check your licence
+        or activate it. If this computer has a licence, it also confirms it whenever needed. For each of these requests we keep
         the time, what was asked and the answer, with the computer identifier encrypted, for support and to stop abuse.
         It never includes your IP address.</li>
     <li><strong>Visits.</strong> When the app talks to our server at your request (the prices, the licence status, the
@@ -144,6 +151,11 @@
         are: we only ever look at totals, and we never link a visit to a licence or a purchase. A computer's line is
         deleted once it has not visited for 12 months; the totals by day, week, month and year, by country, by US
         state and by version of the app, stay, and they carry nothing about any computer.</li>
+    <li><strong>Usage statistics.</strong> When the app starts, it sends a random number of this installation, created by
+        the app and not taken from your computer or from you, with the app's version, edition and language. The server
+        works out the country (in the United States, the state) from the connection and does not keep the IP address. We
+        keep each installation's line, with the number encrypted, until it has sent nothing for 12 months; after that only
+        totals remain. You can turn this off in <em>About → Send usage statistics</em>.</li>
     <li><strong>Where our users are, roughly.</strong> The first time a computer contacts our server, the server works
         out an approximate area from the connection (country, region, nearest town) and adds one to a count for that
         area and month. The count is not linked to your computer or to you. The IP address is read only for that
@@ -154,8 +166,7 @@
     <li><strong>The giveaway edition.</strong> Before anything is sent, the app tells you exactly what will be sent, and
         you can refuse. If you agree, we keep only this computer's identifier and the time of activation, so we know
         how many activations there were and so you can upgrade to the full Premium later at a special price. If you
-        refuse, nothing is sent, the date is checked on public time sources (GoatCounter, Microsoft, Cloudflare), and
-        the giveaway still works, but without the special price.</li>
+        refuse, nothing is sent.</li>
     <li><strong>Emails.</strong> We send them from explorerfocus@intrepidparallel.com, through Brevo, an email service in
         the European Union. There are two kinds:
       <ul>
@@ -175,16 +186,16 @@
   <h2>Why we use your data</h2>
   <ul>
     <li><strong>To give you the licence you bought or activated,</strong> including the giveaway licence, to send you
-        its codes, keys and reminders, and to check it when you ask (the contract between us).</li>
+        its codes, keys and reminders, and to check it when you ask and whenever needed to confirm it (the contract
+        between us).</li>
     <li><strong>The request records, to support you and stop abuse; and the visits and the area counts, to know where
         our users come from and how often they come back</strong> (our legitimate interest). You can ask us to delete
         any of these.</li>
     <li><strong>The codes and their limits, to protect the licences from misuse</strong> (our legitimate interest).</li>
     <li><strong>What you write to us, to answer you and follow up</strong> (our legitimate interest).</li>
     <li><strong>Promotions,</strong> only with your consent, which you can withdraw in any of them.</li>
-    <li><strong>The anonymous counts</strong> of the app's events help us see how the app is used (our legitimate
-        interest). They carry nothing about you, and you can turn them off in <em>About → Send anonymous usage
-        statistics</em>.</li>
+    <li><strong>The usage statistics,</strong> to know how many installations use the app, in which versions, languages
+        and countries (our legitimate interest). You can turn them off in <em>About → Send usage statistics</em>.</li>
   </ul>
 
   <h2>How long we keep it</h2>
@@ -197,6 +208,8 @@
       <tr><td>The history of a licence</td><td>with the licence; anonymising removes the names and emails from it</td></tr>
       <tr><td>Your answers about promotions</td><td>while your customer record exists; anonymising removes the email from them</td></tr>
       <tr><td>The request records</td><td>1 year</td></tr>
+      <tr><td>The usage statistics of an installation</td><td>until it has sent nothing for 12 months; the totals stay</td></tr>
+      <tr><td>The payment records</td><td>for as long as accounting law requires</td></tr>
       <tr><td>The visits of a computer</td><td>until it has not visited for 12 months</td></tr>
       <tr><td>The codes, the code requests and the errors</td><td>30 days</td></tr>
       <tr><td>Backups</td><td>30 days; the three most recent encrypted copies are replaced as new ones are made</td></tr>
@@ -213,8 +226,9 @@
   <p>Our licence server is in the Netherlands, in the European Union, and its daily backups stay on it. Our emails are
   sent through Brevo, in the European Union, and our mailbox is in our company's Microsoft 365.
   The three encrypted full copies are kept on a computer of our management and in our company's Microsoft 365
-  (OneDrive). GitHub, GoatCounter, Hugging Face, Microsoft and the other services named in the table above may handle
-  data outside the European Union, under their own safeguards.</p>
+  (OneDrive). Payments are handled by Stripe and by Sold through Link, LLC, under their own privacy policies. Stripe,
+  Link, GitHub, Hugging Face, Microsoft and the other services named in the table above may handle data outside the
+  European Union, under their own safeguards.</p>
 
   <h2>Your rights</h2>
   <p>You can ask us to see, correct or delete your data, to stop using it, or to receive a copy of it. Write to

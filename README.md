@@ -50,7 +50,7 @@ Premium unlocks a defined set of extras: creating encrypted vaults, full remote 
 connections, all operations, WebDAV, Dropbox, OneDrive), screen and camera recording without
 watermark or time cap and with system sound, audio mixing, multi-page scanning with a document
 feeder, the complete book reader (EPUB, Kindle formats, FB2 and comics, including the paper mode), the PDF tools beyond merge and split, and intro/end cards on
-recordings. A new way to get Premium is coming soon, with a new version; Premium keys you already have keep working. Details on the
+recordings. Premium is bought in the app, with the yellow PREMIUM button; Premium keys you already have keep working. Details on the
 [website](https://intrepidparallel.com/explorerfocus/#premium).
 
 ## First run

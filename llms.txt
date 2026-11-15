@@ -29,5 +29,5 @@
 - [Privacy](https://intrepidparallel.com/explorerfocus/privacy.html)
 - [MajorGeeks](https://www.majorgeeks.com/files/details/explorerfocus.html)
 - [Softpedia](https://www.softpedia.com/get/File-managers/ExplorerFocus.shtml)
-- [mBrothers](https://intrepidparallel.com/mbrothers/)
+- [mBrothers](https://intrepidparallel.com/)
 - Contact: explorerfocus@intrepidparallel.com

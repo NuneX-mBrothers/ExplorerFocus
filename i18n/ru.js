@@ -310,7 +310,7 @@ window.I18N.ru = {
   "nav_legal": "Правовая информация",
   "nav_terms": "Условия продажи",
   "ft_baseline": "сделано для ежедневной работы",
-  "mb_credit": "Продукт <a href=\"https://intrepidparallel.com/mbrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a><span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
+  "mb_credit": "Продукт <a href=\"https://intrepidparallel.com/\" target=\"_blank\" rel=\"noopener\">mBrothers</a><span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
   "ft_company2": "Продукт компании Intrepid Parallel, Lda из Лиссабона, Португалия.",
   "nav_vault": "Хранилище",
   "sh_label": "Беглый взгляд",

@@ -310,7 +310,7 @@ window.I18N.ko = {
   "nav_legal": "법적 고지",
   "nav_terms": "판매 약관",
   "ft_baseline": "매일의 일을 위해 만들었습니다",
-  "mb_credit": "<a href=\"https://intrepidparallel.com/mbrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a> 제품<span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
+  "mb_credit": "<a href=\"https://intrepidparallel.com/\" target=\"_blank\" rel=\"noopener\">mBrothers</a> 제품<span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
   "ft_company2": "포르투갈 리스본에 있는 Intrepid Parallel, Lda의 제품입니다.",
   "nav_vault": "금고",
   "sh_label": "한눈에 보기",

@@ -314,7 +314,7 @@ window.I18N.ar = {
   "nav_legal": "إشعار قانوني",
   "nav_terms": "شروط البيع",
   "ft_baseline": "مصنوع لعمل كل يوم",
-  "mb_credit": "منتج من <a href=\"https://intrepidparallel.com/mbrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a><span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
+  "mb_credit": "منتج من <a href=\"https://intrepidparallel.com/\" target=\"_blank\" rel=\"noopener\">mBrothers</a><span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
   "ft_company2": "منتج من شركة Intrepid Parallel, Lda، ومقرّها لشبونة، البرتغال.",
   "nav_vault": "الخزنة",
   "sh_label": "نظرة سريعة",

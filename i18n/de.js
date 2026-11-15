@@ -310,7 +310,7 @@ window.I18N.de = {
   "nav_legal": "Impressum",
   "nav_terms": "AGB",
   "ft_baseline": "für den Alltag gemacht",
-  "mb_credit": "Ein <a href=\"https://intrepidparallel.com/mbrothers/\" target=\"_blank\" rel=\"noopener\">mBrothers</a>-Produkt<span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
+  "mb_credit": "Ein <a href=\"https://intrepidparallel.com/\" target=\"_blank\" rel=\"noopener\">mBrothers</a>-Produkt<span class=\"sep\" aria-hidden=\"true\"></span>developing practical solutions for small planetary systems",
   "ft_company2": "Ein Produkt der Intrepid Parallel, Lda mit Sitz in Lissabon, Portugal.",
   "nav_vault": "Tresor",
   "sh_label": "Ein kurzer Blick",

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title data-i18n="page_title">ExplorerFocus — file explorer with encrypted vaults</title>
-<meta name="description" data-i18n-attr="content" data-i18n="page_desc" content="Organise your files by what you work on: a focused Windows Explorer alternative with profiles, rich preview and encrypted vaults that mount as a drive letter.">
+<meta name="description" data-i18n-attr="content" data-i18n="page_desc2" content="A focused Windows Explorer alternative: profiles, rich preview, encrypted vaults as a drive letter, and English e-books read aloud or turned into audiobooks.">
 
 <!-- ===== SEO ===== -->
 <meta name="author" content="mBrothers">
@@ -38,7 +38,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ExplorerFocus">
 <meta property="og:title" content="ExplorerFocus — file explorer with encrypted vaults">
-<meta property="og:description" data-i18n-attr="content" data-i18n="page_desc" content="Organise your files by what you work on: a focused Windows Explorer alternative with profiles, rich preview and encrypted vaults that mount as a drive letter.">
+<meta property="og:description" data-i18n-attr="content" data-i18n="page_desc2" content="A focused Windows Explorer alternative: profiles, rich preview, encrypted vaults as a drive letter, and English e-books read aloud or turned into audiobooks.">
 <meta property="og:url" content="https://intrepidparallel.com/explorerfocus/">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="pt_PT">
@@ -63,7 +63,7 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ExplorerFocus — file explorer with encrypted vaults">
-<meta name="twitter:description" data-i18n-attr="content" data-i18n="page_desc" content="Organise your files by what you work on: a focused Windows Explorer alternative with profiles, rich preview and encrypted vaults that mount as a drive letter.">
+<meta name="twitter:description" data-i18n-attr="content" data-i18n="page_desc2" content="A focused Windows Explorer alternative: profiles, rich preview, encrypted vaults as a drive letter, and English e-books read aloud or turned into audiobooks.">
 <meta name="twitter:image" content="https://intrepidparallel.com/explorerfocus/og-cover.png">
 
 <!-- Dados estruturados (Schema.org) -->
@@ -75,7 +75,7 @@
   "operatingSystem": "Windows 11, Windows 10 (version 1809 or later)",
   "processorRequirements": "x64",
   "applicationCategory": "UtilitiesApplication",
-  "description": "A focused alternative to Windows Explorer: encrypted vaults in the Cryptomator format that mount as a Windows drive letter, profiles, configurable trees, honest file operations, rich preview, a built-in book reader (EPUB, MOBI/AZW, comics) and remote access (SFTP/FTP/FTPS/WebDAV).",
+  "description": "A focused alternative to Windows Explorer: encrypted vaults in the Cryptomator format that mount as a Windows drive letter, profiles, configurable trees, honest file operations, rich preview, a built-in book reader (EPUB, MOBI/AZW, comics) and remote access (SFTP/FTP/FTPS/WebDAV), and English e-books and PDFs read aloud with 28 natural voices or turned into audiobooks (MP3, M4B, EPUB 3 with the voice inside).",
   "featureList": [
     "Encrypted vaults: AES-256 file and filename encryption in the Cryptomator format — vaults created here open in Cryptomator on Android, iOS, macOS and Linux, and existing Cryptomator vaults open here",
     "Vaults mount as a Windows drive letter, so any application on the machine opens the files inside them",
@@ -87,6 +87,8 @@
     "Built-in capture: screen recording, camera, audio and scanner",
     "16 interface languages: Portuguese (Portugal and Brazil), English (UK and US), Spanish, French, Italian, German, Polish, Russian, Arabic, Hindi, Chinese (Simplified and Traditional), Japanese and Korean",
     "PDF tools: merge and split PDF, rotate and reorder pages, PDF to JPG/PNG, password-protect or unlock PDF, convert Word and JPG to PDF",
+    "Read aloud: English e-books and PDFs with 28 natural voices (American and British), the sentence and the word highlighted, each book with its own speed, a sleep timer and marks, all on the computer (free)",
+    "EPUB to audiobook: an MP3 per chapter with the cover, an M4B with chapters, or an EPUB 3 with the voice inside (PREMIUM; a sample of up to 3 minutes is free)",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://intrepidparallel.com/explorerfocus/",
@@ -1855,15 +1857,66 @@
          Saíram as 16 línguas, o disco, os livros em papel e o som de um vídeo (passou a ser parte do Vídeo).
          ⛔ 20/10, a 2.1.2 (o cofre fica nas pills, como primeira entrada): Cofres, Ouvir e escrever, E-books,
          PDF, Vídeo e Áudio. Saíram a Imagem e o Tema claro, as duas que não mudaram na 2.1.2. -->
+    <!-- ⛔ 17/11, a versão dos audiolivros: entram os Audiolivros à cabeça (o destaque do João) e sai o Áudio, o mais
+         antigo das seis (no Core/Changelog.cs, o Áudio não muda desde a 2.1.1). -->
+    <a href="#audiolivros" data-i18n="wn_audiolivros">🎧 Audiobooks</a>
     <a href="#vault" data-i18n="wn_vault">🔒 The vaults</a>
     <a href="#ouvir" data-i18n="wn_ouvir">🗣 Listen and write</a>
     <a href="#feat24" data-i18n="wn_livros">📚 E-books</a>
     <a href="#feat34" data-i18n="wn_pdf_211">📄 PDF</a>
     <a href="#feat33" data-i18n="wn_video">🎬 Video</a>
-    <a href="#feat35" data-i18n="wn_audio_211">🎧 Audio</a>
   </nav>
   <span class="whatsnew-ver">v2.2.4</span>
 </div>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     AUDIOLIVROS — a versão dos audiolivros (17/11/2026). O destaque pedido pelo João: ouvir é grátis; fazer o audiolivro
+     é PREMIUM. ⛔ Nunca «o único», nunca «exato» (o realce da palavra é estimado), nunca mais do que 2× (o João, 16/11).
+     ⛔ Nada sobre leitores de telefone que toquem o EPUB com voz (o da Librera não toca: o João, 16/11). Molde: o da
+     secção «Ouvir e escrever».
+     ══════════════════════════════════════════════════════════════════════ -->
+<section class="vault ouvir" id="audiolivros">
+  <div class="vault-head">
+    <div>
+      <div class="section-num"><span data-i18n="au_num">§ 01 · Audiobooks</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <h2 data-i18n-html="au_title">Turn your e-books into <em>audiobooks</em>.</h2>
+      <p class="vault-lead" data-i18n-html="au_blurb">Listen wherever you like: in the car, on your phone, at home or at your computer. ExplorerFocus reads English e-books and PDFs aloud with 28 natural voices, right on your PC, and your books are never uploaded.</p>
+    </div>
+  </div>
+  <div class="vault-grid">
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_now_ic">LISTEN NOW</div>
+      <h4 data-i18n="au_now_h">In a few seconds, free.</h4>
+      <p data-i18n-html="au_now">Select a book and, in the <em>E-books</em> menu, choose <em>Listen to this book…</em> (PDFs too, in the <em>PDF</em> menu). The sentence and the word being heard are highlighted. Click any sentence to start from there; next time it carries on where you stopped.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_ply_ic">THE PLAYER</div>
+      <h4 data-i18n="au_ply_h">What audiobook apps have.</h4>
+      <p data-i18n-html="au_ply">Each book keeps its own speed, up to 2×, and shows the time left in the chapter and in the book. A sleep timer, marks with notes, chapter skipping, the media keys, and a button that takes you back after a jump.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_mk_ic">MAKE AN AUDIOBOOK</div>
+      <h4 data-i18n="au_mk_h">For the phone and the car.</h4>
+      <p data-i18n-html="au_mk"><em>Make an audiobook…</em> records an MP3 per chapter, with the cover, for any player, or an M4B with chapters, the audiobook format. Before it starts, it shows how long the audio will be and how long it will take on your computer; it can stop and carry on later.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_ep_ic">READ AND LISTEN</div>
+      <h4 data-i18n="au_ep_h">The text and the voice together.</h4>
+      <p data-i18n-html="au_ep">Or an EPUB 3 with the voice inside, with the sentence lit up as it is read, for e-book readers that play it, such as Thorium Reader (free). ExplorerFocus also plays EPUBs that already come with a recorded voice.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_vz_ic">THE VOICES</div>
+      <h4 data-i18n="au_vz_h">28, American and British.</h4>
+      <p data-i18n-html="au_vz">Women and men, with a sample of each before you choose, in the settings, under <em>Voices</em>.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_loc_ic">ON THE COMPUTER ITSELF</div>
+      <h4 data-i18n="au_loc_h">Your books stay with you.</h4>
+      <p data-i18n-html="au_loc">The voices are downloaded once, only if you say yes. After that, no internet is needed, and your books never leave your PC.</p>
+    </div>
+  </div>
+  <p class="vault-note" data-i18n-html="au_tiers"><a class="free-word" href="#free">Free</a>: listening to e-books and PDFs, with everything the player has, and a sample of up to 3 minutes as an MP3. <a class="prem-word" href="#premium">PREMIUM</a>: making the whole audiobook — the MP3s, the M4B and the read-and-listen EPUB. English voices; e-books without DRM only, for your own use.</p>
+</section>
 
 <!-- ══════════════════════════════════════════════════════════════════════
      OUVIR E ESCREVER — a 2.1.2 (20/10/2026). Textos aprovados.
@@ -1875,7 +1928,7 @@
 <section class="vault ouvir" id="ouvir">
   <div class="vault-head">
     <div>
-      <div class="section-num"><span data-i18n="ou_num">§ 01 · Listen and write</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <div class="section-num"><span data-i18n="ou_num2">§ 02 · Listen and write</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
       <h2 data-i18n-html="ou_title">One translator for <em>everything</em>.</h2>
       <p class="vault-lead" data-i18n-html="ou_blurb">ExplorerFocus now listens: it writes down what is said in audio and video files, and translates what is said, subtitles, a video as it plays, PDFs and books. All on the computer itself. The translation is automatic, and worth reviewing.</p>
     </div>
@@ -1919,7 +1972,7 @@
 <div id="features"></div>
 <div class="section-header">
   <div>
-    <div class="section-num" data-i18n="cat_num2">§ 02 · Catalog</div>
+    <div class="section-num" data-i18n="cat_num3">§ 03 · Catalog</div>
     <h2 class="section-title" data-i18n-html="cat_title">What <em>really</em><br>makes a difference.</h2>
   </div>
   <p class="section-blurb" data-i18n="cat_blurb">Each feature was added to answer a concrete problem in daily work over a known file tree. None is there for show. Almost all can be toggled on or off.</p>
@@ -2338,7 +2391,7 @@
 <section class="vault" id="vault">
   <div class="vault-head">
     <div>
-      <div class="section-num"><span data-i18n="vt_num2">§ 03 · The vault</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <div class="section-num"><span data-i18n="vt_num3">§ 04 · The vault</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
       <h2 data-i18n-html="vt_title">Encrypted, and still just <em>folders</em>.</h2>
 
       <!-- spec §0 «O que é» -->
@@ -2540,7 +2593,7 @@
 <section class="shortcuts" id="shortcuts">
   <div class="shortcuts-inner">
     <div class="shortcuts-side">
-      <div class="section-num" data-i18n="sc_num2">§ 04 · Shortcuts</div>
+      <div class="section-num" data-i18n="sc_num3">§ 05 · Shortcuts</div>
       <h2 data-i18n-html="sc_title">Hands on<br>the <em>home row</em>.</h2>
       <p data-i18n="sc_blurb">Every important operation has a shortcut. Mouse-free whenever possible — comfort for long sessions.</p>
     </div>
@@ -2592,7 +2645,7 @@
 
 <!-- STACK -->
 <section class="stack" id="stack">
-  <div class="section-num" data-i18n="st_num2">§ 05 · Stack</div>
+  <div class="section-num" data-i18n="st_num3">§ 06 · Stack</div>
   <h2 data-i18n-html="st_title">Built with <em>serious parts</em>.</h2>
   <p data-i18n="st_blurb">Each dependency was chosen for maturity, size, or the absence of reasonable alternatives. No framework-of-the-day.</p>
   <p class="stack-licences" data-i18n-html="st_licences">The <strong>complete list travels inside the program</strong>, with every author and the full licence texts — under <em>About → Third-party licences</em>.</p>
@@ -2686,6 +2739,11 @@
       <p data-i18n="st_ouv">The ear is Whisper (OpenAI), through Whisper.net and whisper.cpp. The translator is LMT-60 (NiuTrans) on llama.cpp, or the lighter M2M100 (Meta) on ONNX Runtime. All MIT, except LMT-60, Apache 2.0. The models are not inside the program: they come once, only with permission.</p>
     </div>
     <div class="stack-cell">
+      <div class="ic" data-i18n="st_voz_ic">READ ALOUD</div>
+      <h4>Kokoro-82M · MisakiSharp</h4>
+      <p data-i18n="st_voz">The voice is Kokoro-82M (Apache 2.0), on ONNX Runtime, with the English pronunciation of MisakiSharp (Apache 2.0). It is not inside the program: it comes once, only with permission.</p>
+    </div>
+    <div class="stack-cell">
       <div class="ic" data-i18n="st_win_ic">WINDOWS</div>
       <h4>Media Foundation · WIC · OCR</h4>
       <p data-i18n="st_win">Video, images, reading text and finding faces use what Windows already ships. No extra library to age badly.</p>
@@ -2700,21 +2758,21 @@
 
 <!-- PREMIUM -->
 <section class="premium" id="premium">
-  <div class="section-num" data-i18n="pr_num2">§ 06 · Free and Premium</div>
+  <div class="section-num" data-i18n="pr_num3">§ 07 · Free and Premium</div>
   <h2 data-i18n-html="pr_title2">The explorer is <em>free</em>. Premium takes it further.</h2>
-  <p class="prem-blurb" data-i18n="pr_blurb3">No account, no ads, no time limit: everything you need to explore, preview and organise your files is free, and stays free. Premium adds the more demanding tools — creating vaults, subtitles and translation, recording, audio, video, image, PDF and books.</p>
+  <p class="prem-blurb" data-i18n="pr_blurb4">No account, no ads, no time limit: everything you need to explore, preview and organise your files is free, and stays free. Premium adds the more demanding tools — creating vaults, subtitles and translation, recording, audio, video, image, PDF, books and audiobooks.</p>
 
   <div class="prem-grid">
     <div class="prem-card" id="free">
       <h4 data-i18n="pr_free_h">Free</h4>
       <span class="prem-tag" data-i18n="pr_free_tag">forever · no account</span>
-      <ul data-i18n-html="pr_free_list2"><li>Profiles, configurable trees, multi-pattern search</li><li>Preview: code, PDF, Word/Excel, Markdown, images, books</li><li>File operations with real progress, speed, ETA, history and conflicts</li><li>Terminals, per-extension app associations, archives as folders</li><li>Dark or light theme, 16 languages, auto-updates</li><li>Audio recording (microphone)</li><li><strong>1 remote connection</strong> (SFTP/FTP/FTPS) — browse and preview</li><li>Audio: cut, split, join, change format, MP3 tags</li><li>Video: cut, split, join, rotate, save a frame, the video's sound</li><li>Image: photo X-ray, crop, shrink, rotate, change format and ICO, copy and paste</li><li>PDF: merge and split</li></ul>
+      <ul data-i18n-html="pr_free_list3"><li>Profiles, configurable trees, multi-pattern search</li><li>Preview: code, PDF, Word/Excel, Markdown, images, books</li><li>File operations with real progress, speed, ETA, history and conflicts</li><li>Terminals, per-extension app associations, archives as folders</li><li>Dark or light theme, 16 languages, auto-updates</li><li>Audio recording (microphone)</li><li><strong>1 remote connection</strong> (SFTP/FTP/FTPS) — browse and preview</li><li>Audio: cut, split, join, change format, MP3 tags</li><li>Video: cut, split, join, rotate, save a frame, the video's sound</li><li>Image: photo X-ray, crop, shrink, rotate, change format and ICO, copy and paste</li><li>PDF: merge and split</li><li>Listening to English e-books and PDFs read aloud, and an audiobook sample</li></ul>
     </div>
 
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag2">in the app</span>
-      <div class="prem-groups" data-i18n-html="pr_prem_groups"><h5>Vaults</h5><ul><li><strong>Create encrypted vaults</strong> — names and contents encrypted, and a Recycle Bin in each vault (up to 30 days). Opening a vault is free</li></ul><h5>Listen and write</h5><ul><li><strong>Subtitles</strong> — create them (for a video or a whole series), translate them and watch them live as the video plays</li><li><strong>Transcribe a recording</strong> — to text, Word, PDF or subtitles — and dictation to Word, to PDF or translated</li></ul><h5>Remote access</h5><ul><li>Several connections and every operation, plus WebDAV, Dropbox and OneDrive (free: one SFTP, FTP or FTPS connection, view only)</li></ul><h5>Record and scan</h5><ul><li>Record the screen with no watermark, no 15 s limit and with sound (microphone + system), with cards, a text banner and music</li><li>Narrate over a video (voice over), and record the camera with no watermark</li><li>Scan several pages, with the document feeder (ADF) and no watermark</li></ul><h5>Audio</h5><ul><li>Volume, normalise, speed without changing the pitch, fade in and out, remove silence and shorten pauses</li></ul><h5>Video</h5><ul><li>Adjust the colours, black and white, speed, fades and sound; crop, mirror and add a watermark</li><li>Convert or shrink, make a GIF, play it backwards, add a sound or turn it into stereo</li></ul><h5>Image</h5><ul><li>Cover what's private (faces, emails, phone numbers, IBANs, tax and card numbers), copy the text, join or split images and make a background transparent</li></ul><h5>PDF (merging and splitting are free)</h5><ul><li><strong>Organise the pages</strong> — pick, reorder, rotate and remove them — and turn them into images; add or remove the password</li><li>Recognise the text of a scanned PDF, and convert images and Word to PDF</li><li>Translate a whole PDF, without anything leaving the computer</li></ul><h5>Books</h5><ul><li><strong>The full reader</strong> — EPUB, MOBI, AZW, AZW3, PRC, FB2 and comics (CBZ, CBR), with the Paper and Night paper views</li><li>Convert between EPUB, PDF and FB2, turn MOBI, AZW, AZW3 and PRC into EPUB, and comics into PDF, EPUB or CBZ</li><li>Translate a whole book, without anything leaving the computer</li></ul></div>
+      <div class="prem-groups" data-i18n-html="pr_prem_groups2"><h5>Vaults</h5><ul><li><strong>Create encrypted vaults</strong> — names and contents encrypted, and a Recycle Bin in each vault (up to 30 days). Opening a vault is free</li></ul><h5>Listen and write</h5><ul><li><strong>Subtitles</strong> — create them (for a video or a whole series), translate them and watch them live as the video plays</li><li><strong>Transcribe a recording</strong> — to text, Word, PDF or subtitles — and dictation to Word, to PDF or translated</li></ul><h5>Remote access</h5><ul><li>Several connections and every operation, plus WebDAV, Dropbox and OneDrive (free: one SFTP, FTP or FTPS connection, view only)</li></ul><h5>Record and scan</h5><ul><li>Record the screen with no watermark, no 15 s limit and with sound (microphone + system), with cards, a text banner and music</li><li>Narrate over a video (voice over), and record the camera with no watermark</li><li>Scan several pages, with the document feeder (ADF) and no watermark</li></ul><h5>Audio</h5><ul><li>Volume, normalise, speed without changing the pitch, fade in and out, remove silence and shorten pauses</li></ul><h5>Video</h5><ul><li>Adjust the colours, black and white, speed, fades and sound; crop, mirror and add a watermark</li><li>Convert or shrink, make a GIF, play it backwards, add a sound or turn it into stereo</li></ul><h5>Image</h5><ul><li>Cover what's private (faces, emails, phone numbers, IBANs, tax and card numbers), copy the text, join or split images and make a background transparent</li></ul><h5>PDF (merging and splitting are free)</h5><ul><li><strong>Organise the pages</strong> — pick, reorder, rotate and remove them — and turn them into images; add or remove the password</li><li>Recognise the text of a scanned PDF, and convert images and Word to PDF</li><li>Translate a whole PDF, without anything leaving the computer</li></ul><h5>Books</h5><ul><li><strong>The full reader</strong> — EPUB, MOBI, AZW, AZW3, PRC, FB2 and comics (CBZ, CBR), with the Paper and Night paper views</li><li>Convert between EPUB, PDF and FB2, turn MOBI, AZW, AZW3 and PRC into EPUB, and comics into PDF, EPUB or CBZ</li><li>Translate a whole book, without anything leaving the computer</li><li>Make audiobooks from an English e-book or PDF — an MP3 per chapter, an M4B or an EPUB with the voice inside — without anything leaving the computer</li></ul></div>
       <p class="prem-note" data-i18n-html="pr_vitrine">In Audio, Video, Image and PDF, the PREMIUM boxes open for everyone: you see what they do before you have PREMIUM.</p>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica

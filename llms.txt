@@ -1,6 +1,6 @@
 # ExplorerFocus
 
-> ExplorerFocus is a file explorer for Windows 11 and 10, a replacement for Windows Explorer built for people who always work in the same folders. Each profile is a tab with its own folders, filters and saved state. It adds a preview that opens almost anything, encrypted vaults, remote connections and file tools. It is made by mBrothers, a brand used by Intrepid Parallel, Lda, in Lisbon, Portugal, and its interface is in 16 languages, including Portuguese from Portugal and from Brazil.
+> ExplorerFocus is a file explorer for Windows 11 and 10, a replacement for Windows Explorer built for people who always work in the same folders. Each profile is a tab with its own folders, filters and saved state. It adds a preview that opens almost anything, encrypted vaults, remote connections and file tools, and it reads English e-books aloud or turns them into audiobooks. It is made by mBrothers, a brand used by Intrepid Parallel, Lda, in Lisbon, Portugal, and its interface is in 16 languages, including Portuguese from Portugal and from Brazil.
 
 ## What it does
 
@@ -9,6 +9,7 @@
 - **Encrypted vaults:** AES-256, in a format compatible with Cryptomator, readable on Android, iOS, macOS and Linux. They open as an ordinary drive letter.
 - **Remote connections:** SFTP, FTP, WebDAV, Dropbox and OneDrive, in the same tree as local folders.
 - **Tools:** PDF (merge, split and more), images, video and audio, text recognition (OCR), transcription and dictation, and translation, all running on the computer.
+- **Read aloud and audiobooks:** English e-books and PDFs read aloud with 28 natural voices, American and British, with the sentence and the word highlighted, each book with its own speed, a sleep timer and marks (free). EPUB to audiobook: an MP3 per chapter with the cover, an M4B with chapters, or an EPUB 3 with the voice inside (PREMIUM; a sample of up to 3 minutes is free). Everything runs on the computer: the voices are downloaded once, with permission, and books are never uploaded.
 - **Operations that say what is happening:** copies and moves show progress and explain why when something cannot be done.
 
 ## The essentials

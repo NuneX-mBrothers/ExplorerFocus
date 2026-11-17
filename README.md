@@ -35,6 +35,7 @@ want to reach them fast — and to see what's inside a file without opening it.
 - **Encrypted vaults** — file names and contents encrypted in the Cryptomator format. Give a vault a drive letter and every app on the machine can use it; vaults made here also open in Cryptomator on Android, iOS, Mac and Linux. Opening a vault is free; creating one is Premium.
 - **Remote & cloud** — SFTP, FTP/FTPS, WebDAV, Dropbox, OneDrive. Browse, preview and operate as if local; edit a remote file and it syncs on save.
 - **Books & comics** — preview any EPUB, Kindle, FB2 or comic, and read it in full: plain, or as a two-page paper book with a night version.
+- **Read aloud & audiobooks** — English e-books and PDFs read aloud with 28 natural voices, the sentence and the word highlighted, each book with its own speed, a sleep timer and marks (free). And EPUB to audiobook: an MP3 per chapter, an M4B with chapters, or an EPUB 3 with the voice inside (Premium). All on your computer.
 - **Capture built in** — screen (with webcam PiP and system audio), video, audio and scanning, without leaving the explorer.
 - **The sound of a video** — save the audio of any video Windows can play as MP3, AAC, WMA, WAV, FLAC or ALAC, or make a copy of the video without sound. The original is left untouched.
 - **PDF tools** — merge and split any PDF for free; with Premium, organize pages on thumbnails, turn pages into images, add or remove a password, and convert images and simple Word documents to PDF. The original is never touched.
@@ -49,7 +50,7 @@ nags.
 Premium unlocks a defined set of extras: creating encrypted vaults, full remote access (multiple
 connections, all operations, WebDAV, Dropbox, OneDrive), screen and camera recording without
 watermark or time cap and with system sound, audio mixing, multi-page scanning with a document
-feeder, the complete book reader (EPUB, Kindle formats, FB2 and comics, including the paper mode), the PDF tools beyond merge and split, and intro/end cards on
+feeder, the complete book reader (EPUB, Kindle formats, FB2 and comics, including the paper mode), the PDF tools beyond merge and split, making audiobooks, and intro/end cards on
 recordings. Premium is bought in the app, with the yellow PREMIUM button; Premium keys you already have keep working. Details on the
 [website](https://intrepidparallel.com/explorerfocus/#premium).
 

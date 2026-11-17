@@ -284,9 +284,9 @@ for cod, pasta, rot, hl, loc, fl in activas:
     # o cabeçalho social reescreve-se SEMPRE, mesmo na raiz: é dali que sai o
     # que aparece nos resultados de pesquisa e nas pré-visualizações
     for padrao, chave in [(r'(<meta property="og:title" content=")[^"]*(")', "page_title"),
-                          (r'(<meta property="og:description" content=")[^"]*(")', "page_desc"),
+                          (r'(<meta property="og:description" content=")[^"]*(")', "page_desc2"),
                           (r'(<meta name="twitter:title" content=")[^"]*(")', "page_title"),
-                          (r'(<meta name="twitter:description" content=")[^"]*(")', "page_desc")]:
+                          (r'(<meta name="twitter:description" content=")[^"]*(")', "page_desc2")]:
         pag = re.sub(padrao, lambda m: m.group(1) + H.escape(d[chave], quote=True) + m.group(2),
                      pag, count=1)
 

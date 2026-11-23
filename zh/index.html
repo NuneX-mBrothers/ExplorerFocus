@@ -89,11 +89,16 @@
     "PDF tools: merge and split PDF, rotate and reorder pages, PDF to JPG/PNG, password-protect or unlock PDF, convert Word and JPG to PDF",
     "Read aloud: English e-books and PDFs with 28 natural voices (American and British), the sentence and the word highlighted, each book with its own speed, a sleep timer and marks, all on the computer (free)",
     "EPUB to audiobook: an MP3 per chapter with the cover, an M4B with chapters, or an EPUB 3 with the voice inside (PREMIUM; a sample of up to 3 minutes is free)",
+    "Compressed archives: open ZIP, RAR, 7z and TAR like folders; create ZIP, TAR, TAR.GZ and TAR.BZ2 archives from the right-click menu, compatible with WinZip, WinRAR and 7-Zip (RAR too, with WinRAR installed; a password on ZIP and RAR is PREMIUM)",
+    "DAISY talking books (DAISY 2.02 and DAISY 3, including audio-only) and W3C (LPF) and Readium audiobooks, played with their own recorded voice, highlighting what is being heard (free)",
+    "Redesigned right-click context menus in the tree and the list: the options in columns, with where the action takes place at the top",
+    "Rotate any image by any angle, degree by degree, with the corners cropped or transparent; enhance an image with filters and colour adjustments (PREMIUM)",
+    "Web pages and internet shortcuts open in the browser of your choice, in a normal or private window",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://intrepidparallel.com/explorerfocus/zh/",
   "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
-  "softwareVersion": "2.2.7",
+  "softwareVersion": "2.2.8",
   "image": "https://intrepidparallel.com/explorerfocus/og-cover.png",
   "screenshot": [
     "https://intrepidparallel.com/explorerfocus/shots/01-perfis.webp",
@@ -1504,7 +1509,7 @@
       <a href="#premium" data-i18n="nav_premium">高级版</a>
       <a href="#prices" data-i18n="nav_prices">价格</a>
       <a href="#download" data-i18n="nav_download">下载</a>
-      <span class="nav-version">v2.2.7</span>
+      <span class="nav-version">v2.2.8</span>
     </nav>
   </div>
 </header>
@@ -1859,14 +1864,17 @@
          PDF, Vídeo e Áudio. Saíram a Imagem e o Tema claro, as duas que não mudaram na 2.1.2. -->
     <!-- ⛔ 17/11, a versão dos audiolivros: entram os Audiolivros à cabeça (o destaque do João) e sai o Áudio, o mais
          antigo das seis (no Core/Changelog.cs, o Áudio não muda desde a 2.1.1). -->
+    <!-- ⛔ 23/11, a 2.2.8 (o cartão abre com os menus de contexto e o Comprimir): entram os dois à cabeça; saem o Vídeo e o
+         «Ouvir e escrever». Medido no Changelog.cs do 843a2c42: o Vídeo entrou no cartão pela última vez na 2.1.6 (Cl216JuntarVideos); o «Ouvir e escrever» na 2.1.5 (Cl215TraduzirLegendasEmLote).
+         O DAISY entra pelos Audiolivros, que ficam. -->
+    <a href="#feat37" data-i18n="wn_menus">🗂 右键菜单</a>
+    <a href="#feat29" data-i18n="wn_arquivos">🗜 压缩文件</a>
     <a href="#audiobooks" data-i18n="wn_audiolivros">🎧 有声书</a>
     <a href="#vault" data-i18n="wn_vault">🔒 保险库</a>
-    <a href="#ouvir" data-i18n="wn_ouvir">🗣 听写</a>
     <a href="#feat24" data-i18n="wn_livros">📚 电子书</a>
     <a href="#feat34" data-i18n="wn_pdf_211">📄 PDF</a>
-    <a href="#feat33" data-i18n="wn_video">🎬 视频</a>
   </nav>
-  <span class="whatsnew-ver">v2.2.7</span>
+  <span class="whatsnew-ver">v2.2.8</span>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -1902,7 +1910,7 @@
     <div class="stack-cell">
       <div class="ic" data-i18n="au_ep_ic">边读边听</div>
       <h4 data-i18n="au_ep_h">文字和语音合在一起。</h4>
-      <p data-i18n-html="au_ep">或者一个内含语音的 EPUB 3，朗读时句子会亮起，适用于能播放它的电子书阅读器，例如 Thorium Reader（免费）。ExplorerFocus 也能播放自带录制语音的 EPUB。</p>
+      <p data-i18n-html="au_ep2">或者一个内含语音的 EPUB 3，朗读时句子会亮起，适用于能播放它的电子书阅读器，例如 Thorium Reader（免费）。ExplorerFocus 也能播放自带录制语音的 EPUB。 DAISY 图书以及 W3C 和 Readium 有声书会被自动识别为电子书：可以用书中自带的录制语音收听，正在听的内容会高亮显示。</p>
     </div>
     <div class="stack-cell">
       <div class="ic" data-i18n="au_vz_ic">语音</div>
@@ -2274,11 +2282,15 @@
     </p>
   </div>
 
-  <div class="feat w12">
-    <div class="num"><span data-i18n="f29_num">29 — 压缩包当作文件夹</span><a class="badge-free" href="#free" data-i18n="badge_free">免费</a></div>
+  <div class="feat w12" id="feat29">
+    <div class="num"><span data-i18n="f29_num">29 — 压缩包当作文件夹</span><a class="badge-free" href="#free" data-i18n="badge_free">免费</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f29_h">像文件夹一样打开 ZIP、RAR、7z 和 TAR。</h3>
-    <p data-i18n-html="f29_p">双击（或<em>浏览内容</em>）即可进入压缩包 — 浏览内容、<em>预览</em>并把<em>文件复制出来</em>，无需全部解压。只读；<em>打开方式…</em>仍会用 WinRAR/WinZip/7-Zip 打开。</p>
-    <div class="feat-mark" data-i18n="f29_mark">ZIP · RAR · 7z · TAR · 复制文件出来</div>
+    <p data-i18n-html="f29_p3">右键 → “浏览内容”：ZIP、RAR、7z 或 TAR 会像文件夹一样打开，只把需要的复制出来即可。双击则用它自己的程序（WinRAR、7-Zip…）打开，如果装了的话。</p>
+    <p class="feat-p2" data-i18n-html="f29_p2"><strong>直接在 ExplorerFocus 中创建 ZIP、TAR、TAR.GZ 和 TAR.BZ2 压缩文件</strong>：右键即可，无需安装其他程序，并与 WinZip、WinRAR 和 7-Zip 兼容。装有 WinRAR 时，也可创建 RAR。ZIP 和 RAR 可设密码（PREMIUM）。</p>
+    <div class="feat-mark" data-i18n="f29_mark2">ZIP · RAR · 7z · TAR · 复制文件出来 · 压缩 · TAR.GZ · TAR.BZ2 · 密码</div>
+    <p class="feat-note">
+      <span data-i18n="f29_premium">PREMIUM：创建带密码的 ZIP 和 RAR 压缩文件 — RAR 还会锁住文件名。不加密码压缩是免费的。</span>
+    </p>
   </div>
 
   <div class="feat w12" id="feat30">
@@ -2350,6 +2362,7 @@
     <div class="num"><span data-i18n="fim_num">35 — 图片</span><a class="badge-free" href="#free" data-i18n="badge_free">免费</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="fim_h">照片里藏着什么 — 以及处理它的工具。</h3>
     <p data-i18n-html="fim_p">选中一张图片，<em>图片</em>按钮就会亮起。<em>照片透视</em>会显示照片里藏着的信息——拍摄地点、相机及其序列号、各种日期，以及那张隐藏的缩略图（有时还能看出被裁掉的部分）——并保存一份只保留你所选内容的副本。它还会告诉你这张图片是否<em>声明</em>自己由 AI 制作或编辑、用的是什么程序；<em>…附近</em>则不联网就能说出地名。接着：<em>裁剪</em>并拉直歪斜的地平线，按你想要的大小<em>缩小后发送</em>，<em>旋转和翻转</em>（JPG 完全不损失画质），<em>更改格式</em>（一键把 iPhone 的 HEIC 转成 JPG，甚至能做 Windows 的 .ico 图标），<em>复制图片</em>以便粘贴到 WhatsApp，在文件夹里按 <em>Ctrl+V</em> 就能把截图变成文件。有了 PREMIUM：<em>复制图片中的文字</em>、<em>遮盖隐私内容</em>（电子邮件、电话号码、IBAN、银行卡和人脸）、<em>拼接</em>和<em>拆分</em>图片，以及<em>透明背景</em>。<strong>原文件保持不变。</strong></p>
+    <p class="feat-p2" data-i18n-html="fim_p2">在“图片”菜单中，现在可以<strong>将任意图片旋转任意角度</strong>，逐度调整，把歪斜的照片拉直，空白边角也可以设为透明。 <strong>增强图片</strong>（PREMIUM）：现成的滤镜和色彩调整。副本保存在原图旁边，原图保持不变。</p>
     <div class="feat-mark" data-i18n="fim_mark">透视 · AI 标记 · …附近 · 裁剪 · 缩小 · 旋转 · HEIC → JPG · ICO · 复制 · Ctrl+V · 文字 · 遮盖 · 拼接 · 拆分 · 透明背景</div>
     <p class="feat-note">
       <span data-i18n="fim_free">免费：照片透视、裁剪、缩小、旋转和翻转、更改格式（含 ICO）、复制，以及粘贴为文件。</span><br>
@@ -2369,6 +2382,12 @@
       <span data-i18n="fpdf_premium2">PREMIUM：整理页面、PDF 转图片、添加或移除密码、转换为 PDF（也包括一页多张照片）、识别文字、翻译和转成电子书。</span>
       <span class="feat-drm" data-i18n="f34_note">受保护或已损坏的 PDF 会明确提示，不会留下做了一半的文件。在加密保险库里也能用，通过它的盘符。</span>
     </p>
+  </div>
+
+  <div class="feat w12" id="feat37">
+    <div class="num"><span data-i18n="f37_num">37 — 右键菜单</span><a class="badge-free" href="#free" data-i18n="badge_free">免费</a></div>
+    <h3 data-i18n="f37_h">右键菜单，全新设计。</h3>
+    <p data-i18n-html="f37_p"><strong>全面重新设计右键菜单</strong>：在树和列表中右键单击打开的菜单，现在选项分栏排列，顶部显示操作的位置。</p>
   </div>
 
 </section>
@@ -2763,7 +2782,7 @@
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">PREMIUM</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag2">在应用内</span>
-      <div class="prem-groups" data-i18n-html="pr_prem_groups2"><h5>保险库</h5><ul><li><strong>新建加密保险库</strong> — 文件名和内容都加密，每个保险库都有“Recycle Bin”（最多保留 30 天）。打开保险库免费</li></ul><h5>听写</h5><ul><li><strong>字幕</strong> — 生成（一个视频或整部剧集）、翻译，以及在视频播放时实时显示</li><li><strong>转写录音</strong> — 输出为文本、Word、PDF 或字幕 — 以及听写输出为 Word、PDF 或译成其他语言</li></ul><h5>远程访问</h5><ul><li>多个连接和所有操作，以及连接 WebDAV、Dropbox 和 OneDrive（免费版：一个 SFTP、FTP 或 FTPS 连接，仅可查看）</li></ul><h5>录制与扫描</h5><ul><li>录屏无水印、无 15 秒限制，带声音（麦克风 + 系统），并可加开场卡、结尾卡、文字横幅和音乐</li><li>为视频配旁白（配音），以及摄像头录制无水印</li><li>多页扫描，支持送稿器（ADF），且无水印</li></ul><h5>音频</h5><ul><li>音量、标准化、变速不变调、淡入淡出、去除静音和缩短停顿</li></ul><h5>视频</h5><ul><li>调整颜色、黑白、速度、淡入淡出和声音；裁剪、镜像和加水印</li><li>转换或缩小、制作 GIF、倒放、添加声音或转换为立体声</li></ul><h5>图片</h5><ul><li>遮盖隐私内容（人脸、电子邮件、电话号码、IBAN、税号和卡号）、复制文字、拼接或拆分图片，以及让背景变透明</li></ul><h5>PDF（合并和拆分免费）</h5><ul><li><strong>整理页面</strong> — 选择、调整顺序、旋转和移除 — 并转成图片；加密码或移除密码</li><li>识别扫描 PDF 的文字，以及把图片和 Word 文件转换为 PDF</li><li>翻译整份 PDF，什么都不会离开电脑</li></ul><h5>图书</h5><ul><li><strong>完整阅读器</strong> — EPUB、MOBI、AZW、AZW3、PRC、FB2 和漫画（CBZ、CBR），含纸张和夜间纸张视图</li><li>在 EPUB、PDF 和 FB2 之间转换，把 MOBI、AZW、AZW3 和 PRC 转成 EPUB，以及把漫画转成 PDF、EPUB 或 CBZ</li><li>翻译整本书，什么都不会离开电脑</li><li>把英文电子书或 PDF 做成有声书——每章一个 MP3、一个 M4B，或内含语音的 EPUB——什么都不会离开电脑</li></ul></div>
+      <div class="prem-groups" data-i18n-html="pr_prem_groups3"><h5>保险库</h5><ul><li><strong>新建加密保险库</strong> — 文件名和内容都加密，每个保险库都有“Recycle Bin”（最多保留 30 天）。打开保险库免费</li></ul><h5>压缩文件</h5><ul><li>创建带密码的 ZIP 和 RAR 压缩文件 — RAR 还会锁住文件名。不加密码压缩是免费的</li></ul><h5>听写</h5><ul><li><strong>字幕</strong> — 生成（一个视频或整部剧集）、翻译，以及在视频播放时实时显示</li><li><strong>转写录音</strong> — 输出为文本、Word、PDF 或字幕 — 以及听写输出为 Word、PDF 或译成其他语言</li></ul><h5>远程访问</h5><ul><li>多个连接和所有操作，以及连接 WebDAV、Dropbox 和 OneDrive（免费版：一个 SFTP、FTP 或 FTPS 连接，仅可查看）</li></ul><h5>录制与扫描</h5><ul><li>录屏无水印、无 15 秒限制，带声音（麦克风 + 系统），并可加开场卡、结尾卡、文字横幅和音乐</li><li>为视频配旁白（配音），以及摄像头录制无水印</li><li>多页扫描，支持送稿器（ADF），且无水印</li></ul><h5>音频</h5><ul><li>音量、标准化、变速不变调、淡入淡出、去除静音和缩短停顿</li></ul><h5>视频</h5><ul><li>调整颜色、黑白、速度、淡入淡出和声音；裁剪、镜像和加水印</li><li>转换或缩小、制作 GIF、倒放、添加声音或转换为立体声</li></ul><h5>图片</h5><ul><li>遮盖隐私内容（人脸、电子邮件、电话号码、IBAN、税号和卡号）、复制文字、拼接或拆分图片、让背景变透明，以及增强图片（滤镜、色彩）</li></ul><h5>PDF（合并和拆分免费）</h5><ul><li><strong>整理页面</strong> — 选择、调整顺序、旋转和移除 — 并转成图片；加密码或移除密码</li><li>识别扫描 PDF 的文字，以及把图片和 Word 文件转换为 PDF</li><li>翻译整份 PDF，什么都不会离开电脑</li></ul><h5>图书</h5><ul><li><strong>完整阅读器</strong> — EPUB、MOBI、AZW、AZW3、PRC、FB2 和漫画（CBZ、CBR），含纸张和夜间纸张视图</li><li>在 EPUB、PDF 和 FB2 之间转换，把 MOBI、AZW、AZW3 和 PRC 转成 EPUB，以及把漫画转成 PDF、EPUB 或 CBZ</li><li>翻译整本书，什么都不会离开电脑</li><li>把英文电子书或 PDF 做成有声书——每章一个 MP3、一个 M4B，或内含语音的 EPUB——什么都不会离开电脑</li></ul></div>
       <p class="prem-note" data-i18n-html="pr_vitrine">在音频、视频、图片和 PDF 里，PREMIUM 窗口对所有人开放：在拥有 PREMIUM 之前，你就能看到它们能做什么。</p>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
@@ -2845,7 +2864,7 @@
   </div>
 
   <div class="footer-baseline">
-    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.2.7 · WPF · net10.0-windows · single-file</span>
+    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.2.8 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">为日常工作而设计</span>
   </div>
 

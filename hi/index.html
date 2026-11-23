@@ -89,11 +89,16 @@
     "PDF tools: merge and split PDF, rotate and reorder pages, PDF to JPG/PNG, password-protect or unlock PDF, convert Word and JPG to PDF",
     "Read aloud: English e-books and PDFs with 28 natural voices (American and British), the sentence and the word highlighted, each book with its own speed, a sleep timer and marks, all on the computer (free)",
     "EPUB to audiobook: an MP3 per chapter with the cover, an M4B with chapters, or an EPUB 3 with the voice inside (PREMIUM; a sample of up to 3 minutes is free)",
+    "Compressed archives: open ZIP, RAR, 7z and TAR like folders; create ZIP, TAR, TAR.GZ and TAR.BZ2 archives from the right-click menu, compatible with WinZip, WinRAR and 7-Zip (RAR too, with WinRAR installed; a password on ZIP and RAR is PREMIUM)",
+    "DAISY talking books (DAISY 2.02 and DAISY 3, including audio-only) and W3C (LPF) and Readium audiobooks, played with their own recorded voice, highlighting what is being heard (free)",
+    "Redesigned right-click context menus in the tree and the list: the options in columns, with where the action takes place at the top",
+    "Rotate any image by any angle, degree by degree, with the corners cropped or transparent; enhance an image with filters and colour adjustments (PREMIUM)",
+    "Web pages and internet shortcuts open in the browser of your choice, in a normal or private window",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://intrepidparallel.com/explorerfocus/hi/",
   "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
-  "softwareVersion": "2.2.7",
+  "softwareVersion": "2.2.8",
   "image": "https://intrepidparallel.com/explorerfocus/og-cover.png",
   "screenshot": [
     "https://intrepidparallel.com/explorerfocus/shots/01-perfis.webp",
@@ -1504,7 +1509,7 @@
       <a href="#premium" data-i18n="nav_premium">Premium</a>
       <a href="#prices" data-i18n="nav_prices">कीमतें</a>
       <a href="#download" data-i18n="nav_download">पाइए</a>
-      <span class="nav-version">v2.2.7</span>
+      <span class="nav-version">v2.2.8</span>
     </nav>
   </div>
 </header>
@@ -1859,14 +1864,17 @@
          PDF, Vídeo e Áudio. Saíram a Imagem e o Tema claro, as duas que não mudaram na 2.1.2. -->
     <!-- ⛔ 17/11, a versão dos audiolivros: entram os Audiolivros à cabeça (o destaque do João) e sai o Áudio, o mais
          antigo das seis (no Core/Changelog.cs, o Áudio não muda desde a 2.1.1). -->
+    <!-- ⛔ 23/11, a 2.2.8 (o cartão abre com os menus de contexto e o Comprimir): entram os dois à cabeça; saem o Vídeo e o
+         «Ouvir e escrever». Medido no Changelog.cs do 843a2c42: o Vídeo entrou no cartão pela última vez na 2.1.6 (Cl216JuntarVideos); o «Ouvir e escrever» na 2.1.5 (Cl215TraduzirLegendasEmLote).
+         O DAISY entra pelos Audiolivros, que ficam. -->
+    <a href="#feat37" data-i18n="wn_menus">🗂 संदर्भ मेनू</a>
+    <a href="#feat29" data-i18n="wn_arquivos">🗜 कंप्रेस किए गए आर्काइव</a>
     <a href="#audiobooks" data-i18n="wn_audiolivros">🎧 ऑडियोबुक</a>
     <a href="#vault" data-i18n="wn_vault">🔒 तिजोरियाँ</a>
-    <a href="#ouvir" data-i18n="wn_ouvir">🗣 सुनना और लिखना</a>
     <a href="#feat24" data-i18n="wn_livros">📚 ई-बुक</a>
     <a href="#feat34" data-i18n="wn_pdf_211">📄 PDF</a>
-    <a href="#feat33" data-i18n="wn_video">🎬 वीडियो</a>
   </nav>
-  <span class="whatsnew-ver">v2.2.7</span>
+  <span class="whatsnew-ver">v2.2.8</span>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -1902,7 +1910,7 @@
     <div class="stack-cell">
       <div class="ic" data-i18n="au_ep_ic">पढ़ें और सुनें</div>
       <h4 data-i18n="au_ep_h">टेक्स्ट और आवाज़ साथ-साथ।</h4>
-      <p data-i18n-html="au_ep">या आवाज़ समेत एक EPUB 3, जिसमें पढ़ा जा रहा वाक्य जगमगाता है, उन ई-बुक रीडरों के लिए जो इसे चलाते हैं, जैसे Thorium Reader (मुफ़्त)। ExplorerFocus उन EPUB को भी चलाता है जिनमें पहले से रिकॉर्ड की गई आवाज़ होती है।</p>
+      <p data-i18n-html="au_ep2">या आवाज़ समेत एक EPUB 3, जिसमें पढ़ा जा रहा वाक्य जगमगाता है, उन ई-बुक रीडरों के लिए जो इसे चलाते हैं, जैसे Thorium Reader (मुफ़्त)। ExplorerFocus उन EPUB को भी चलाता है जिनमें पहले से रिकॉर्ड की गई आवाज़ होती है। DAISY किताबें और W3C व Readium ऑडियोबुक अपने-आप ई-बुक के रूप में पहचानी जाती हैं: इन्हें इनकी अपनी रिकॉर्ड की गई आवाज़ में सुना जा सकता है, और जो सुनाई दे रहा है वह हाइलाइट होता है।</p>
     </div>
     <div class="stack-cell">
       <div class="ic" data-i18n="au_vz_ic">आवाज़ें</div>
@@ -2274,11 +2282,15 @@
     </p>
   </div>
 
-  <div class="feat w12">
-    <div class="num"><span data-i18n="f29_num">29 — संग्रह फ़ोल्डर की तरह</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a></div>
+  <div class="feat w12" id="feat29">
+    <div class="num"><span data-i18n="f29_num">29 — संग्रह फ़ोल्डर की तरह</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f29_h">ZIP, RAR, 7z और TAR को फ़ोल्डर की तरह खोलिए।</h3>
-    <p data-i18n-html="f29_p">दो बार क्लिक (या <em>भीतर देखिए</em>) कर संग्रह में जाइए — सामग्री देखिए, <em>पूर्वावलोकन</em> कीजिए और सब खोले बिना <em>फ़ाइलें बाहर कॉपी</em> कीजिए। केवल पढ़ने के लिए; <em>इससे खोलें…</em> अब भी उन्हें WinRAR/WinZip/7-Zip में खोलता है।</p>
-    <div class="feat-mark" data-i18n="f29_mark">ZIP · RAR · 7z · TAR · बाहर कॉपी</div>
+    <p data-i18n-html="f29_p3">राइट-क्लिक → «अंदर ब्राउज़ करें»: ZIP, RAR, 7z या TAR एक फ़ोल्डर की तरह खुलता है, और आप सिर्फ़ ज़रूरी चीज़ें बाहर कॉपी करते हैं। डबल-क्लिक उसे उसके अपने प्रोग्राम (WinRAR, 7-Zip…) में खोलता है, अगर कोई हो।</p>
+    <p class="feat-p2" data-i18n-html="f29_p2"><strong>ZIP, TAR, TAR.GZ और TAR.BZ2 आर्काइव बनाना</strong> सीधे ExplorerFocus में, राइट-क्लिक से, बिना कोई दूसरा प्रोग्राम इंस्टॉल किए, और WinZip, WinRAR और 7-Zip के साथ संगत। WinRAR इंस्टॉल हो तो RAR भी। ZIP और RAR पर पासवर्ड (PREMIUM)।</p>
+    <div class="feat-mark" data-i18n="f29_mark2">ZIP · RAR · 7z · TAR · बाहर कॉपी · कंप्रेस करें · TAR.GZ · TAR.BZ2 · पासवर्ड</div>
+    <p class="feat-note">
+      <span data-i18n="f29_premium">PREMIUM: पासवर्ड वाले ZIP और RAR आर्काइव बनाना — RAR में फ़ाइलों के नाम भी बंद रहते हैं। बिना पासवर्ड कंप्रेस करना मुफ़्त है।</span>
+    </p>
   </div>
 
   <div class="feat w12" id="feat30">
@@ -2350,6 +2362,7 @@
     <div class="num"><span data-i18n="fim_num">35 — छवि</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="fim_h">एक फ़ोटो क्या छिपाए रहती है — और उससे निपटने के टूल।</h3>
     <p data-i18n-html="fim_p">कोई छवि चुनें और <em>छवि</em> बटन जल उठता है। <em>फ़ोटो का एक्स-रे</em> दिखाता है कि उसमें क्या छिपा है — वह कहाँ ली गई, कैमरा और उसका सीरियल नंबर, तारीख़ें, और छिपा थंबनेल, जो कभी-कभी अब भी वह दिखाता है जो काटकर हटाया गया था — और सिर्फ़ आपकी चुनी जानकारी के साथ एक कॉपी सहेजता है। साथ ही यह बताता है कि क्या छवि ख़ुद को AI से बनी या संपादित <em>घोषित करती</em> है, और किस प्रोग्राम से, और <em>… के पास</em> इंटरनेट पर गए बिना सबसे नज़दीकी जगह का नाम बताता है। फिर: <em>क्रॉप करें</em> और टेढ़े क्षितिज को सीधा करें, मनचाहे आकार तक <em>भेजने के लिए छोटा करें</em>, <em>घुमाएँ और पलटें</em> — JPG हो तो गुणवत्ता ज़रा भी खोए बिना — <em>फ़ॉर्मैट बदलें</em> (iPhone का HEIC एक क्लिक में JPG में, और Windows के .ico आइकन तक), WhatsApp में चिपकाने के लिए <em>छवि कॉपी करें</em>, और किसी फ़ोल्डर में <em>Ctrl+V</em> स्क्रीनशॉट को फ़ाइल बना देता है। PREMIUM में: छवि से <em>टेक्स्ट कॉपी करें</em>, <em>निजी जानकारी छिपाएँ</em> (ईमेल, फ़ोन नंबर, IBAN, कार्ड और चेहरे), छवियाँ <em>जोड़ें</em> और <em>विभाजित करें</em>, और <em>पारदर्शी पृष्ठभूमि</em>। <strong>मूल जैसा है वैसा ही रहता है।</strong></p>
+    <p class="feat-p2" data-i18n-html="fim_p2">छवि मेनू में अब <strong>किसी भी छवि को किसी भी कोण पर घुमाया जा सकता है</strong>, डिग्री-दर-डिग्री, ताकि टेढ़ी तस्वीरें सीधी की जा सकें, और खाली कोने पारदर्शी बनाए जा सकते हैं। <strong>छवि बेहतर बनाएँ</strong> (PREMIUM): तैयार फ़िल्टर और रंगों का समायोजन। प्रति मूल के बगल में बनती है; मूल जैसा है वैसा रहता है।</p>
     <div class="feat-mark" data-i18n="fim_mark">एक्स-रे · AI का निशान · … के पास · क्रॉप करें · छोटा करें · घुमाएँ · HEIC → JPG · ICO · कॉपी करें · Ctrl+V · टेक्स्ट · छिपाएँ · जोड़ें · विभाजित करें · पारदर्शी पृष्ठभूमि</div>
     <p class="feat-note">
       <span data-i18n="fim_free">मुफ़्त: एक्स-रे, क्रॉप करना, छोटा करना, घुमाना और पलटना, फ़ॉर्मैट बदलना (ICO समेत), कॉपी करना, और फ़ाइल के रूप में चिपकाना।</span><br>
@@ -2369,6 +2382,12 @@
       <span data-i18n="fpdf_premium2">PREMIUM: पृष्ठ व्यवस्थित करना, PDF से छवियाँ, पासवर्ड लगाना या हटाना, PDF में बदलना (एक पृष्ठ पर कई फ़ोटो भी), टेक्स्ट पहचानना, अनुवाद करना और ई-बुक में बदलना।</span>
       <span class="feat-drm" data-i18n="f34_note">सुरक्षित या क्षतिग्रस्त PDF की सूचना दी जाती है, और कुछ भी अधूरा नहीं छूटता। यह एन्क्रिप्टेड तिजोरी के अंदर भी काम करता है, उसके ड्राइव अक्षर के ज़रिए।</span>
     </p>
+  </div>
+
+  <div class="feat w12" id="feat37">
+    <div class="num"><span data-i18n="f37_num">37 — संदर्भ मेनू</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a></div>
+    <h3 data-i18n="f37_h">राइट-क्लिक के मेनू, पूरी तरह नए सिरे से डिज़ाइन किए गए।</h3>
+    <p data-i18n-html="f37_p"><strong>संदर्भ मेनू का पूरी तरह नया डिज़ाइन</strong>, वे मेनू जो पेड़ और सूची में राइट-क्लिक से खुलते हैं: विकल्प कॉलम में, और ऊपर यह कि काम कहाँ होगा।</p>
   </div>
 
 </section>
@@ -2763,7 +2782,7 @@
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag2">ऐप में</span>
-      <div class="prem-groups" data-i18n-html="pr_prem_groups2"><h5>तिजोरियाँ</h5><ul><li><strong>एन्क्रिप्टेड तिजोरियाँ बनाना</strong> — नाम और सामग्री एन्क्रिप्टेड, और हर तिजोरी में एक Recycle Bin (30 दिन तक)। तिजोरी खोलना मुफ़्त है</li></ul><h5>सुनना और लिखना</h5><ul><li><strong>उपशीर्षक</strong> — बनाना (एक वीडियो या पूरी सीरीज़ के लिए), अनुवाद करना और वीडियो चलते समय लाइव देखना</li><li><strong>रिकॉर्डिंग का लिप्यंतरण</strong> — टेक्स्ट, Word, PDF या उपशीर्षक में — और डिक्टेशन Word, PDF में या अनुवादित</li></ul><h5>रिमोट एक्सेस</h5><ul><li>कई कनेक्शन और सभी ऑपरेशन, और WebDAV, Dropbox और OneDrive से जुड़ना (मुफ़्त में: एक SFTP, FTP या FTPS कनेक्शन, सिर्फ़ देखने के लिए)</li></ul><h5>रिकॉर्ड और स्कैन</h5><ul><li>बिना वॉटरमार्क, बिना 15 सेकंड सीमा और ध्वनि के साथ (माइक + सिस्टम) स्क्रीन रिकॉर्ड करना, कार्ड, टेक्स्ट बैनर और संगीत के साथ</li><li>वीडियो पर नरेशन करना (वॉइस ओवर), और बिना वॉटरमार्क कैमरा रिकॉर्ड करना</li><li>कई पृष्ठ स्कैन करना, फीडर (ADF) के साथ और बिना वॉटरमार्क</li></ul><h5>ऑडियो</h5><ul><li>वॉल्यूम, सामान्य करना, पिच बदले बिना गति, फ़ेड इन और फ़ेड आउट, ख़ामोशी हटाना और विराम छोटे करना</li></ul><h5>वीडियो</h5><ul><li>रंग, श्वेत-श्याम, गति, फ़ेड और आवाज़ समायोजित करना; क्रॉप करना, दर्पण करना और वॉटरमार्क जोड़ना</li><li>कन्वर्ट करना या छोटा करना, GIF बनाना, उल्टा चलाना, आवाज़ जोड़ना या उसे स्टीरियो में बदलना</li></ul><h5>छवि</h5><ul><li>निजी जानकारी छिपाना (चेहरे, ईमेल, फ़ोन नंबर, IBAN, कर संख्या और कार्ड नंबर), टेक्स्ट कॉपी करना, छवियाँ जोड़ना या विभाजित करना और पृष्ठभूमि पारदर्शी बनाना</li></ul><h5>PDF (जोड़ना और बाँटना मुफ़्त है)</h5><ul><li><strong>पृष्ठ व्यवस्थित करना</strong> — चुनना, क्रम बदलना, घुमाना और हटाना — और उन्हें छवियों में बदलना; पासवर्ड लगाना या हटाना</li><li>स्कैन किए गए PDF का टेक्स्ट पहचानना, और छवियों व Word फ़ाइलों को PDF में बदलना</li><li>पूरे PDF का अनुवाद, बिना कुछ भी कंप्यूटर से बाहर गए</li></ul><h5>किताबें</h5><ul><li><strong>पूर्ण रीडर</strong> — EPUB, MOBI, AZW, AZW3, PRC, FB2 और कॉमिक्स (CBZ, CBR), कागज़ और रात का कागज़ दृश्यों के साथ</li><li>EPUB, PDF और FB2 के बीच बदलना, MOBI, AZW, AZW3 और PRC को EPUB में, और कॉमिक्स को PDF, EPUB या CBZ में</li><li>पूरी किताब का अनुवाद, बिना कुछ भी कंप्यूटर से बाहर गए</li><li>अंग्रेज़ी ई-बुक या PDF से ऑडियोबुक बनाना — हर अध्याय की एक MP3, एक M4B, या आवाज़ समेत एक EPUB — बिना कुछ भी कंप्यूटर से बाहर गए</li></ul></div>
+      <div class="prem-groups" data-i18n-html="pr_prem_groups3"><h5>तिजोरियाँ</h5><ul><li><strong>एन्क्रिप्टेड तिजोरियाँ बनाना</strong> — नाम और सामग्री एन्क्रिप्टेड, और हर तिजोरी में एक Recycle Bin (30 दिन तक)। तिजोरी खोलना मुफ़्त है</li></ul><h5>कंप्रेस किए गए आर्काइव</h5><ul><li>पासवर्ड वाले ZIP और RAR आर्काइव बनाना — RAR में फ़ाइलों के नाम भी बंद रहते हैं। बिना पासवर्ड कंप्रेस करना मुफ़्त है</li></ul><h5>सुनना और लिखना</h5><ul><li><strong>उपशीर्षक</strong> — बनाना (एक वीडियो या पूरी सीरीज़ के लिए), अनुवाद करना और वीडियो चलते समय लाइव देखना</li><li><strong>रिकॉर्डिंग का लिप्यंतरण</strong> — टेक्स्ट, Word, PDF या उपशीर्षक में — और डिक्टेशन Word, PDF में या अनुवादित</li></ul><h5>रिमोट एक्सेस</h5><ul><li>कई कनेक्शन और सभी ऑपरेशन, और WebDAV, Dropbox और OneDrive से जुड़ना (मुफ़्त में: एक SFTP, FTP या FTPS कनेक्शन, सिर्फ़ देखने के लिए)</li></ul><h5>रिकॉर्ड और स्कैन</h5><ul><li>बिना वॉटरमार्क, बिना 15 सेकंड सीमा और ध्वनि के साथ (माइक + सिस्टम) स्क्रीन रिकॉर्ड करना, कार्ड, टेक्स्ट बैनर और संगीत के साथ</li><li>वीडियो पर नरेशन करना (वॉइस ओवर), और बिना वॉटरमार्क कैमरा रिकॉर्ड करना</li><li>कई पृष्ठ स्कैन करना, फीडर (ADF) के साथ और बिना वॉटरमार्क</li></ul><h5>ऑडियो</h5><ul><li>वॉल्यूम, सामान्य करना, पिच बदले बिना गति, फ़ेड इन और फ़ेड आउट, ख़ामोशी हटाना और विराम छोटे करना</li></ul><h5>वीडियो</h5><ul><li>रंग, श्वेत-श्याम, गति, फ़ेड और आवाज़ समायोजित करना; क्रॉप करना, दर्पण करना और वॉटरमार्क जोड़ना</li><li>कन्वर्ट करना या छोटा करना, GIF बनाना, उल्टा चलाना, आवाज़ जोड़ना या उसे स्टीरियो में बदलना</li></ul><h5>छवि</h5><ul><li>निजी जानकारी छिपाना (चेहरे, ईमेल, फ़ोन नंबर, IBAN, कर संख्या और कार्ड नंबर), टेक्स्ट कॉपी करना, छवियाँ जोड़ना या विभाजित करना, पृष्ठभूमि पारदर्शी बनाना और छवि को बेहतर बनाना (फ़िल्टर, रंग)</li></ul><h5>PDF (जोड़ना और बाँटना मुफ़्त है)</h5><ul><li><strong>पृष्ठ व्यवस्थित करना</strong> — चुनना, क्रम बदलना, घुमाना और हटाना — और उन्हें छवियों में बदलना; पासवर्ड लगाना या हटाना</li><li>स्कैन किए गए PDF का टेक्स्ट पहचानना, और छवियों व Word फ़ाइलों को PDF में बदलना</li><li>पूरे PDF का अनुवाद, बिना कुछ भी कंप्यूटर से बाहर गए</li></ul><h5>किताबें</h5><ul><li><strong>पूर्ण रीडर</strong> — EPUB, MOBI, AZW, AZW3, PRC, FB2 और कॉमिक्स (CBZ, CBR), कागज़ और रात का कागज़ दृश्यों के साथ</li><li>EPUB, PDF और FB2 के बीच बदलना, MOBI, AZW, AZW3 और PRC को EPUB में, और कॉमिक्स को PDF, EPUB या CBZ में</li><li>पूरी किताब का अनुवाद, बिना कुछ भी कंप्यूटर से बाहर गए</li><li>अंग्रेज़ी ई-बुक या PDF से ऑडियोबुक बनाना — हर अध्याय की एक MP3, एक M4B, या आवाज़ समेत एक EPUB — बिना कुछ भी कंप्यूटर से बाहर गए</li></ul></div>
       <p class="prem-note" data-i18n-html="pr_vitrine">“ऑडियो”, “वीडियो”, “छवि” और “PDF” में PREMIUM खिड़कियाँ सबके लिए खुलती हैं: PREMIUM पाने से पहले ही आप देख सकते हैं कि वे क्या करती हैं।</p>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
@@ -2845,7 +2864,7 @@
   </div>
 
   <div class="footer-baseline">
-    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.2.7 · WPF · net10.0-windows · single-file</span>
+    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.2.8 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">रोज़ की मेहनत के लिए बनाया गया</span>
   </div>
 

@@ -89,11 +89,16 @@
     "PDF tools: merge and split PDF, rotate and reorder pages, PDF to JPG/PNG, password-protect or unlock PDF, convert Word and JPG to PDF",
     "Read aloud: English e-books and PDFs with 28 natural voices (American and British), the sentence and the word highlighted, each book with its own speed, a sleep timer and marks, all on the computer (free)",
     "EPUB to audiobook: an MP3 per chapter with the cover, an M4B with chapters, or an EPUB 3 with the voice inside (PREMIUM; a sample of up to 3 minutes is free)",
+    "Compressed archives: open ZIP, RAR, 7z and TAR like folders; create ZIP, TAR, TAR.GZ and TAR.BZ2 archives from the right-click menu, compatible with WinZip, WinRAR and 7-Zip (RAR too, with WinRAR installed; a password on ZIP and RAR is PREMIUM)",
+    "DAISY talking books (DAISY 2.02 and DAISY 3, including audio-only) and W3C (LPF) and Readium audiobooks, played with their own recorded voice, highlighting what is being heard (free)",
+    "Redesigned right-click context menus in the tree and the list: the options in columns, with where the action takes place at the top",
+    "Rotate any image by any angle, degree by degree, with the corners cropped or transparent; enhance an image with filters and colour adjustments (PREMIUM)",
+    "Web pages and internet shortcuts open in the browser of your choice, in a normal or private window",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://intrepidparallel.com/explorerfocus/ko/",
   "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
-  "softwareVersion": "2.2.7",
+  "softwareVersion": "2.2.8",
   "image": "https://intrepidparallel.com/explorerfocus/og-cover.png",
   "screenshot": [
     "https://intrepidparallel.com/explorerfocus/shots/01-perfis.webp",
@@ -1504,7 +1509,7 @@
       <a href="#premium" data-i18n="nav_premium">Premium</a>
       <a href="#prices" data-i18n="nav_prices">가격</a>
       <a href="#download" data-i18n="nav_download">받기</a>
-      <span class="nav-version">v2.2.7</span>
+      <span class="nav-version">v2.2.8</span>
     </nav>
   </div>
 </header>
@@ -1859,14 +1864,17 @@
          PDF, Vídeo e Áudio. Saíram a Imagem e o Tema claro, as duas que não mudaram na 2.1.2. -->
     <!-- ⛔ 17/11, a versão dos audiolivros: entram os Audiolivros à cabeça (o destaque do João) e sai o Áudio, o mais
          antigo das seis (no Core/Changelog.cs, o Áudio não muda desde a 2.1.1). -->
+    <!-- ⛔ 23/11, a 2.2.8 (o cartão abre com os menus de contexto e o Comprimir): entram os dois à cabeça; saem o Vídeo e o
+         «Ouvir e escrever». Medido no Changelog.cs do 843a2c42: o Vídeo entrou no cartão pela última vez na 2.1.6 (Cl216JuntarVideos); o «Ouvir e escrever» na 2.1.5 (Cl215TraduzirLegendasEmLote).
+         O DAISY entra pelos Audiolivros, que ficam. -->
+    <a href="#feat37" data-i18n="wn_menus">🗂 상황에 맞는 메뉴</a>
+    <a href="#feat29" data-i18n="wn_arquivos">🗜 압축 파일</a>
     <a href="#audiobooks" data-i18n="wn_audiolivros">🎧 오디오북</a>
     <a href="#vault" data-i18n="wn_vault">🔒 금고</a>
-    <a href="#ouvir" data-i18n="wn_ouvir">🗣 듣고 쓰기</a>
     <a href="#feat24" data-i18n="wn_livros">📚 전자책</a>
     <a href="#feat34" data-i18n="wn_pdf_211">📄 PDF</a>
-    <a href="#feat33" data-i18n="wn_video">🎬 비디오</a>
   </nav>
-  <span class="whatsnew-ver">v2.2.7</span>
+  <span class="whatsnew-ver">v2.2.8</span>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -1902,7 +1910,7 @@
     <div class="stack-cell">
       <div class="ic" data-i18n="au_ep_ic">읽으며 듣기</div>
       <h4 data-i18n="au_ep_h">글과 음성을 함께.</h4>
-      <p data-i18n-html="au_ep">또는 음성이 들어 있는 EPUB 3. 읽는 문장이 밝게 표시되며, Thorium Reader(무료)처럼 이를 재생하는 전자책 리더에서 쓸 수 있습니다. ExplorerFocus는 녹음된 음성이 이미 들어 있는 EPUB도 재생합니다.</p>
+      <p data-i18n-html="au_ep2">또는 음성이 들어 있는 EPUB 3. 읽는 문장이 밝게 표시되며, Thorium Reader(무료)처럼 이를 재생하는 전자책 리더에서 쓸 수 있습니다. ExplorerFocus는 녹음된 음성이 이미 들어 있는 EPUB도 재생합니다. DAISY 도서와 W3C 및 Readium 오디오북이 전자책으로 자동 인식됩니다. 책에 녹음된 음성으로 들을 수 있으며, 듣고 있는 부분이 강조 표시됩니다.</p>
     </div>
     <div class="stack-cell">
       <div class="ic" data-i18n="au_vz_ic">음성</div>
@@ -2274,11 +2282,15 @@
     </p>
   </div>
 
-  <div class="feat w12">
-    <div class="num"><span data-i18n="f29_num">29 — 압축 파일도 폴더처럼</span><a class="badge-free" href="#free" data-i18n="badge_free">무료</a></div>
+  <div class="feat w12" id="feat29">
+    <div class="num"><span data-i18n="f29_num">29 — 압축 파일도 폴더처럼</span><a class="badge-free" href="#free" data-i18n="badge_free">무료</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f29_h">ZIP, RAR, 7z, TAR를 폴더처럼 엽니다.</h3>
-    <p data-i18n-html="f29_p">두 번 누르거나(또는 <em>안을 둘러보기</em>) 압축 파일로 들어가 내용을 보고, <em>미리보고</em>, 전부 풀지 않고 <em>파일만 꺼내 복사</em>합니다. 읽기만 합니다. <em>연결 프로그램…</em>은 여전히 WinRAR/WinZip/7-Zip으로 엽니다.</p>
-    <div class="feat-mark" data-i18n="f29_mark">ZIP · RAR · 7z · TAR · 꺼내 복사</div>
+    <p data-i18n-html="f29_p3">마우스 오른쪽 단추 → 「안을 탐색」: ZIP, RAR, 7z, TAR가 폴더처럼 열리고, 필요한 것만 꺼내 복사할 수 있습니다. 두 번 클릭하면 전용 프로그램(WinRAR, 7-Zip 등)이 있을 때 그 프로그램으로 열립니다.</p>
+    <p class="feat-p2" data-i18n-html="f29_p2"><strong>ExplorerFocus에서 바로 ZIP, TAR, TAR.GZ, TAR.BZ2 압축 파일 만들기</strong>: 마우스 오른쪽 단추로, 다른 프로그램을 설치하지 않고 만들 수 있으며 WinZip, WinRAR, 7-Zip과 호환됩니다. WinRAR가 설치되어 있으면 RAR도 만들 수 있습니다. ZIP과 RAR에 암호 설정(PREMIUM).</p>
+    <div class="feat-mark" data-i18n="f29_mark2">ZIP · RAR · 7z · TAR · 꺼내 복사 · 압축 · TAR.GZ · TAR.BZ2 · 암호</div>
+    <p class="feat-note">
+      <span data-i18n="f29_premium">PREMIUM: 암호를 건 ZIP 및 RAR 압축 파일 만들기 — RAR 형식은 파일 이름까지 잠급니다. 암호 없는 압축은 무료.</span>
+    </p>
   </div>
 
   <div class="feat w12" id="feat30">
@@ -2350,6 +2362,7 @@
     <div class="num"><span data-i18n="fim_num">35 — 이미지</span><a class="badge-free" href="#free" data-i18n="badge_free">무료</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="fim_h">사진에 숨어 있는 것 — 그리고 그것을 다루는 도구.</h3>
     <p data-i18n-html="fim_p">이미지를 선택하면 <em>이미지</em> 버튼이 켜집니다. <em>사진 엑스레이</em>는 사진에 숨어 있는 것을 보여 줍니다 — 찍은 장소, 카메라와 그 일련번호, 날짜들, 그리고 잘라 낸 부분이 아직 보이기도 하는 숨겨진 미리 보기 이미지 — 그리고 고른 것만 남긴 사본을 저장합니다. 이미지가 AI로 만들어졌거나 편집되었다고 <em>스스로 밝히는지</em>, 어떤 프로그램으로 했는지도 알려 주며, <em>… 근처</em>는 인터넷에 접속하지 않고 지명을 알려 줍니다. 그다음에는: <em>자르기</em>와 기울어진 수평선 바로잡기, 원하는 크기로 <em>보내기용으로 줄이기</em>, <em>회전 및 뒤집기</em>(JPG는 화질 손실이 전혀 없이), <em>형식 변경</em>(iPhone의 HEIC를 한 번에 JPG로, Windows의 .ico 아이콘까지), WhatsApp에 붙여 넣을 수 있게 <em>이미지 복사</em>, 그리고 폴더에서 <em>Ctrl+V</em>를 누르면 스크린샷이 파일이 됩니다. PREMIUM이 있으면: 이미지에서 <em>텍스트 복사</em>, <em>개인 정보 가리기</em>(이메일, 전화번호, IBAN, 카드, 얼굴), 이미지 <em>합치기</em>와 <em>나누기</em>, 그리고 <em>투명한 배경</em>. <strong>원본은 그대로 유지됩니다.</strong></p>
+    <p class="feat-p2" data-i18n-html="fim_p2">이미지 메뉴에서 이제 <strong>어떤 이미지든 원하는 각도로 회전</strong>할 수 있습니다. 도 단위로 조정해 기울어진 사진을 바로잡고, 빈 모서리는 투명하게 만들 수 있습니다. <strong>이미지 보정</strong>(PREMIUM): 바로 쓸 수 있는 필터와 색 조정. 사본은 원본 옆에 만들어지며 원본은 그대로 유지됩니다.</p>
     <div class="feat-mark" data-i18n="fim_mark">엑스레이 · AI 표시 · … 근처 · 자르기 · 줄이기 · 회전 · HEIC → JPG · ICO · 복사 · Ctrl+V · 텍스트 · 가리기 · 합치기 · 나누기 · 투명한 배경</div>
     <p class="feat-note">
       <span data-i18n="fim_free">무료: 사진 엑스레이, 자르기, 줄이기, 회전 및 뒤집기, 형식 변경(ICO 포함), 복사, 파일로 붙여 넣기.</span><br>
@@ -2369,6 +2382,12 @@
       <span data-i18n="fpdf_premium2">PREMIUM: 페이지 정리, PDF를 이미지로, 암호 걸기 또는 해제, PDF로 변환(한 페이지에 여러 사진도 포함), 텍스트 인식, 번역, 전자책으로 변환.</span>
       <span class="feat-drm" data-i18n="f34_note">보호되었거나 손상된 PDF는 그 사실을 알려 주며, 반쯤 만들어진 결과는 남기지 않습니다. 암호화된 금고 안에서도 드라이브 문자를 통해 작동합니다.</span>
     </p>
+  </div>
+
+  <div class="feat w12" id="feat37">
+    <div class="num"><span data-i18n="f37_num">37 — 상황에 맞는 메뉴</span><a class="badge-free" href="#free" data-i18n="badge_free">무료</a></div>
+    <h3 data-i18n="f37_h">마우스 오른쪽 단추 메뉴를 처음부터 새로 설계했습니다.</h3>
+    <p data-i18n-html="f37_p"><strong>상황에 맞는 메뉴 전면 재설계</strong>: 트리와 목록에서 마우스 오른쪽 단추로 클릭하면 열리는 메뉴로, 옵션이 열로 나뉘고 위쪽에 작업이 이루어지는 곳이 표시됩니다.</p>
   </div>
 
 </section>
@@ -2763,7 +2782,7 @@
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag2">앱에서</span>
-      <div class="prem-groups" data-i18n-html="pr_prem_groups2"><h5>금고</h5><ul><li><strong>암호화 금고 만들기</strong> — 이름과 내용을 암호화, 금고마다 “Recycle Bin”(최대 30일). 금고를 여는 것은 무료</li></ul><h5>듣고 쓰기</h5><ul><li><strong>자막</strong> — 만들기(동영상 하나 또는 시리즈 전체), 번역, 재생 중 실시간 보기</li><li><strong>녹음 받아쓰기</strong> — 텍스트, Word, PDF 또는 자막으로 — 와 음성 입력을 Word나 PDF로 또는 번역해서</li></ul><h5>원격 접속</h5><ul><li>여러 연결과 모든 작업, 그리고 WebDAV, Dropbox, OneDrive 연결(무료: SFTP, FTP, FTPS 연결 하나, 보기만)</li></ul><h5>녹화와 스캔</h5><ul><li><strong>화면 녹화</strong> — 워터마크 없음, 15초 제한 없음, 소리 포함(마이크 + 시스템), 카드와 텍스트 띠, 음악까지</li><li>동영상 위 내레이션(보이스오버)과 워터마크 없는 카메라 녹화</li><li><strong>여러 쪽 스캔</strong> — 급지 장치(ADF), 워터마크 없음</li></ul><h5>오디오</h5><ul><li>볼륨, 정규화, 음높이를 바꾸지 않는 속도 조절, 페이드 인과 페이드 아웃, 무음 제거와 쉼 줄이기</li></ul><h5>동영상</h5><ul><li>색과 흑백, 속도, 페이드, 소리 조정, 자르기, 뒤집기, 워터마크 넣기</li><li>변환 또는 축소, GIF 만들기, 거꾸로 재생, 소리 추가 또는 스테레오로 변환</li></ul><h5>이미지</h5><ul><li>개인 정보 가리기(얼굴, 이메일, 전화번호, IBAN, 납세자 번호, 카드 번호), 텍스트 복사, 이미지 합치기나 나누기, 배경을 투명하게</li></ul><h5>PDF(합치기와 나누기는 무료)</h5><ul><li><strong>페이지 정리</strong> — 고르기, 순서 바꾸기, 회전, 빼기 — 와 이미지로 바꾸기, 암호 걸기와 해제</li><li>스캔한 PDF의 텍스트 인식, 이미지와 Word 파일을 PDF로 변환</li><li><strong>PDF 전체 번역</strong> — 아무것도 컴퓨터 밖으로 나가지 않음</li></ul><h5>책</h5><ul><li><strong>책 읽기 전부</strong> — EPUB, MOBI, AZW, AZW3, PRC, FB2, 만화(CBZ, CBR), 종이와 밤의 종이 보기 포함</li><li>EPUB·PDF·FB2 간 변환, MOBI·AZW·AZW3·PRC를 EPUB로, 만화를 PDF·EPUB·CBZ로</li><li><strong>책 한 권 전체 번역</strong> — 아무것도 컴퓨터 밖으로 나가지 않음</li><li><strong>오디오북 만들기</strong> — 영어 전자책이나 PDF로 장별 MP3, M4B, 음성이 들어 있는 EPUB를 — 아무것도 컴퓨터 밖으로 나가지 않음</li></ul></div>
+      <div class="prem-groups" data-i18n-html="pr_prem_groups3"><h5>금고</h5><ul><li><strong>암호화 금고 만들기</strong> — 이름과 내용을 암호화, 금고마다 “Recycle Bin”(최대 30일). 금고를 여는 것은 무료</li></ul><h5>압축 파일</h5><ul><li>암호를 건 ZIP 및 RAR 압축 파일 만들기 — RAR 형식은 파일 이름까지 잠급니다. 암호 없는 압축은 무료</li></ul><h5>듣고 쓰기</h5><ul><li><strong>자막</strong> — 만들기(동영상 하나 또는 시리즈 전체), 번역, 재생 중 실시간 보기</li><li><strong>녹음 받아쓰기</strong> — 텍스트, Word, PDF 또는 자막으로 — 와 음성 입력을 Word나 PDF로 또는 번역해서</li></ul><h5>원격 접속</h5><ul><li>여러 연결과 모든 작업, 그리고 WebDAV, Dropbox, OneDrive 연결(무료: SFTP, FTP, FTPS 연결 하나, 보기만)</li></ul><h5>녹화와 스캔</h5><ul><li><strong>화면 녹화</strong> — 워터마크 없음, 15초 제한 없음, 소리 포함(마이크 + 시스템), 카드와 텍스트 띠, 음악까지</li><li>동영상 위 내레이션(보이스오버)과 워터마크 없는 카메라 녹화</li><li><strong>여러 쪽 스캔</strong> — 급지 장치(ADF), 워터마크 없음</li></ul><h5>오디오</h5><ul><li>볼륨, 정규화, 음높이를 바꾸지 않는 속도 조절, 페이드 인과 페이드 아웃, 무음 제거와 쉼 줄이기</li></ul><h5>동영상</h5><ul><li>색과 흑백, 속도, 페이드, 소리 조정, 자르기, 뒤집기, 워터마크 넣기</li><li>변환 또는 축소, GIF 만들기, 거꾸로 재생, 소리 추가 또는 스테레오로 변환</li></ul><h5>이미지</h5><ul><li>개인 정보 가리기(얼굴, 이메일, 전화번호, IBAN, 납세자 번호, 카드 번호), 텍스트 복사, 이미지 합치기나 나누기, 배경을 투명하게, 이미지 보정(필터, 색)</li></ul><h5>PDF(합치기와 나누기는 무료)</h5><ul><li><strong>페이지 정리</strong> — 고르기, 순서 바꾸기, 회전, 빼기 — 와 이미지로 바꾸기, 암호 걸기와 해제</li><li>스캔한 PDF의 텍스트 인식, 이미지와 Word 파일을 PDF로 변환</li><li><strong>PDF 전체 번역</strong> — 아무것도 컴퓨터 밖으로 나가지 않음</li></ul><h5>책</h5><ul><li><strong>책 읽기 전부</strong> — EPUB, MOBI, AZW, AZW3, PRC, FB2, 만화(CBZ, CBR), 종이와 밤의 종이 보기 포함</li><li>EPUB·PDF·FB2 간 변환, MOBI·AZW·AZW3·PRC를 EPUB로, 만화를 PDF·EPUB·CBZ로</li><li><strong>책 한 권 전체 번역</strong> — 아무것도 컴퓨터 밖으로 나가지 않음</li><li><strong>오디오북 만들기</strong> — 영어 전자책이나 PDF로 장별 MP3, M4B, 음성이 들어 있는 EPUB를 — 아무것도 컴퓨터 밖으로 나가지 않음</li></ul></div>
       <p class="prem-note" data-i18n-html="pr_vitrine">오디오, 비디오, 이미지, PDF에서는 PREMIUM 창을 누구나 열 수 있습니다: PREMIUM을 갖기 전에 무엇을 하는지 볼 수 있습니다.</p>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
@@ -2845,7 +2864,7 @@
   </div>
 
   <div class="footer-baseline">
-    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.2.7 · WPF · net10.0-windows · single-file</span>
+    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.2.8 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">매일의 일을 위해 만들었습니다</span>
   </div>
 

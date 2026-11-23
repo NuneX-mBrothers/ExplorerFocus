@@ -89,11 +89,16 @@
     "PDF tools: merge and split PDF, rotate and reorder pages, PDF to JPG/PNG, password-protect or unlock PDF, convert Word and JPG to PDF",
     "Read aloud: English e-books and PDFs with 28 natural voices (American and British), the sentence and the word highlighted, each book with its own speed, a sleep timer and marks, all on the computer (free)",
     "EPUB to audiobook: an MP3 per chapter with the cover, an M4B with chapters, or an EPUB 3 with the voice inside (PREMIUM; a sample of up to 3 minutes is free)",
+    "Compressed archives: open ZIP, RAR, 7z and TAR like folders; create ZIP, TAR, TAR.GZ and TAR.BZ2 archives from the right-click menu, compatible with WinZip, WinRAR and 7-Zip (RAR too, with WinRAR installed; a password on ZIP and RAR is PREMIUM)",
+    "DAISY talking books (DAISY 2.02 and DAISY 3, including audio-only) and W3C (LPF) and Readium audiobooks, played with their own recorded voice, highlighting what is being heard (free)",
+    "Redesigned right-click context menus in the tree and the list: the options in columns, with where the action takes place at the top",
+    "Rotate any image by any angle, degree by degree, with the corners cropped or transparent; enhance an image with filters and colour adjustments (PREMIUM)",
+    "Web pages and internet shortcuts open in the browser of your choice, in a normal or private window",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://intrepidparallel.com/explorerfocus/ar/",
   "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
-  "softwareVersion": "2.2.7",
+  "softwareVersion": "2.2.8",
   "image": "https://intrepidparallel.com/explorerfocus/og-cover.png",
   "screenshot": [
     "https://intrepidparallel.com/explorerfocus/shots/01-perfis.webp",
@@ -1504,7 +1509,7 @@
       <a href="#premium" data-i18n="nav_premium">Premium</a>
       <a href="#prices" data-i18n="nav_prices">الأسعار</a>
       <a href="#download" data-i18n="nav_download">التنزيل</a>
-      <span class="nav-version">v2.2.7</span>
+      <span class="nav-version">v2.2.8</span>
     </nav>
   </div>
 </header>
@@ -1859,14 +1864,17 @@
          PDF, Vídeo e Áudio. Saíram a Imagem e o Tema claro, as duas que não mudaram na 2.1.2. -->
     <!-- ⛔ 17/11, a versão dos audiolivros: entram os Audiolivros à cabeça (o destaque do João) e sai o Áudio, o mais
          antigo das seis (no Core/Changelog.cs, o Áudio não muda desde a 2.1.1). -->
+    <!-- ⛔ 23/11, a 2.2.8 (o cartão abre com os menus de contexto e o Comprimir): entram os dois à cabeça; saem o Vídeo e o
+         «Ouvir e escrever». Medido no Changelog.cs do 843a2c42: o Vídeo entrou no cartão pela última vez na 2.1.6 (Cl216JuntarVideos); o «Ouvir e escrever» na 2.1.5 (Cl215TraduzirLegendasEmLote).
+         O DAISY entra pelos Audiolivros, que ficam. -->
+    <a href="#feat37" data-i18n="wn_menus">🗂 قوائم السياق</a>
+    <a href="#feat29" data-i18n="wn_arquivos">🗜 الملفات المضغوطة</a>
     <a href="#audiobooks" data-i18n="wn_audiolivros">🎧 الكتب الصوتية</a>
     <a href="#vault" data-i18n="wn_vault">🔒 الخزائن</a>
-    <a href="#ouvir" data-i18n="wn_ouvir">🗣 الاستماع والكتابة</a>
     <a href="#feat24" data-i18n="wn_livros">📚 كتب إلكترونية</a>
     <a href="#feat34" data-i18n="wn_pdf_211">📄 PDF</a>
-    <a href="#feat33" data-i18n="wn_video">🎬 الفيديو</a>
   </nav>
-  <span class="whatsnew-ver">v2.2.7</span>
+  <span class="whatsnew-ver">v2.2.8</span>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -1902,7 +1910,7 @@
     <div class="stack-cell">
       <div class="ic" data-i18n="au_ep_ic">اقرأ واستمع</div>
       <h4 data-i18n="au_ep_h">النص والصوت معًا.</h4>
-      <p data-i18n-html="au_ep">أو EPUB 3 بالصوت في داخله، تُضاء فيه الجملة أثناء قراءتها، لقارئات الكتب الإلكترونية التي تشغّله، مثل Thorium Reader (مجاني). ويشغّل ExplorerFocus أيضًا ملفات EPUB التي تأتي بصوت مسجَّل.</p>
+      <p data-i18n-html="au_ep2">أو EPUB 3 بالصوت في داخله، تُضاء فيه الجملة أثناء قراءتها، لقارئات الكتب الإلكترونية التي تشغّله، مثل Thorium Reader (مجاني). ويشغّل ExplorerFocus أيضًا ملفات EPUB التي تأتي بصوت مسجَّل. كتب DAISY والكتب الصوتية بصيغتي W3C و Readium تُعرَف تلقائيًا ككتب إلكترونية: يُستمع إليها بالصوت المسجَّل الذي تحمله، مع تمييز ما يُسمع.</p>
     </div>
     <div class="stack-cell">
       <div class="ic" data-i18n="au_vz_ic">الأصوات</div>
@@ -2274,11 +2282,15 @@
     </p>
   </div>
 
-  <div class="feat w12">
-    <div class="num"><span data-i18n="f29_num">29 — الأرشيفات كمجلدات</span><a class="badge-free" href="#free" data-i18n="badge_free">مجاني</a></div>
+  <div class="feat w12" id="feat29">
+    <div class="num"><span data-i18n="f29_num">29 — الأرشيفات كمجلدات</span><a class="badge-free" href="#free" data-i18n="badge_free">مجاني</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f29_h">افتح ZIP وRAR و7z وTAR كالمجلدات.</h3>
-    <p data-i18n-html="f29_p">نقرة مزدوجة (أو <em>استعرض الداخل</em>) للدخول إلى الأرشيف — استعرض المحتوى، و<em>عاين</em>، و<em>انسخ ملفات إلى الخارج</em> دون فكّ كل شيء. قراءة فقط؛ و<em>فتح باستخدام…</em> ما زال يفتحها في WinRAR/WinZip/7-Zip.</p>
-    <div class="feat-mark" data-i18n="f29_mark">ZIP · RAR · 7z · TAR · النسخ إلى الخارج</div>
+    <p data-i18n-html="f29_p3">بالنقر بزر الفأرة الأيمن ثم «تصفّح المحتوى»: يُفتح ZIP أو RAR أو 7z أو TAR كأنه مجلد، ويُنسخ منه ما يلزم فقط. أما النقر المزدوج فيفتحه في برنامجه، مثل WinRAR أو 7-Zip، إن وُجد.</p>
+    <p class="feat-p2" data-i18n-html="f29_p2"><strong>إنشاء ملفات مضغوطة بصيغ ZIP وTAR وTAR.GZ وTAR.BZ2</strong> داخل ExplorerFocus نفسه، بالنقر بزر الفأرة الأيمن، دون تثبيت برامج أخرى، ومتوافقة مع WinZip وWinRAR و7-Zip. ومع تثبيت WinRAR، بصيغة RAR أيضًا. وكلمة المرور في ZIP وRAR ميزة PREMIUM.</p>
+    <div class="feat-mark" data-i18n="f29_mark2">ZIP · RAR · 7z · TAR · النسخ إلى الخارج · ضغط · TAR.GZ · TAR.BZ2 · كلمة مرور</div>
+    <p class="feat-note">
+      <span data-i18n="f29_premium">PREMIUM: إنشاء ملفات ZIP وRAR بكلمة مرور — وفي RAR تُقفل أسماء الملفات أيضًا. والضغط من دون كلمة مرور مجاني.</span>
+    </p>
   </div>
 
   <div class="feat w12" id="feat30">
@@ -2350,6 +2362,7 @@
     <div class="num"><span data-i18n="fim_num">35 — الصورة</span><a class="badge-free" href="#free" data-i18n="badge_free">مجاني</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="fim_h">ما تخفيه الصورة — والأدوات للتعامل معه.</h3>
     <p data-i18n-html="fim_p">حدّد صورة فيضيء زر <em>الصورة</em>. تُظهر <em>أشعة سينية للصورة</em> ما تخفيه الصورة — مكان التقاطها، والكاميرا ورقمها التسلسلي، والتواريخ، والصورة المصغّرة المخفية التي قد تُظهر أحيانًا ما قُصّ منها — وتحفظ نسخة لا تحمل إلا ما تختاره. وتذكر أيضًا ما إذا كانت الصورة <em>تُعلن</em> أنها صُنعت أو عُدّلت بالذكاء الاصطناعي، وبأي برنامج، و<em>بالقرب من…</em> يذكر أقرب بلدة دون الاتصال بالإنترنت. ثم: <em>الاقتصاص</em> وتقويم أفق مائل، و<em>التصغير للإرسال</em> إلى الحجم المطلوب، و<em>التدوير والقلب</em> — دون أي فقدان في الجودة إن كانت JPG — و<em>تغيير التنسيق</em> (HEIC من iPhone إلى JPG بنقرة واحدة، وحتى أيقونات ‎.ico الخاصة بـWindows)، و<em>نسخ الصورة</em> للصقها في WhatsApp، و<em>Ctrl+V</em> في مجلد يحوّل لقطة الشاشة إلى ملف. ومع PREMIUM: <em>نسخ النص</em> من الصورة، و<em>إخفاء ما هو خاص</em> (عناوين البريد وأرقام الهواتف وأرقام IBAN والبطاقات والوجوه)، و<em>دمج</em> الصور و<em>تقسيمها</em>، و<em>خلفية شفافة</em>. <strong>يبقى الأصل كما هو.</strong></p>
+    <p class="feat-p2" data-i18n-html="fim_p2">في قائمة الصورة، أصبح من الممكن <strong>تدوير أي صورة بأي زاوية</strong>، درجة بدرجة، لتقويم الصور المائلة، ويمكن أن تصبح الأركان الفارغة شفافة. <strong>تحسين الصورة</strong> (PREMIUM): فلاتر جاهزة وضبط الألوان. تُحفظ النسخة بجانب الأصل، ويبقى الأصل كما هو.</p>
     <div class="feat-mark" data-i18n="fim_mark">أشعة سينية · علامة الذكاء الاصطناعي · بالقرب من… · اقتصاص · تصغير · تدوير · HEIC → JPG · ICO · نسخ · Ctrl+V · النص · إخفاء · دمج · تقسيم · خلفية شفافة</div>
     <p class="feat-note">
       <span data-i18n="fim_free">مجاني: الأشعة السينية، والاقتصاص، والتصغير، والتدوير والقلب، وتغيير التنسيق (مع ICO)، والنسخ، واللصق كملف.</span><br>
@@ -2369,6 +2382,12 @@
       <span data-i18n="fpdf_premium2">PREMIUM: تنظيم الصفحات، وتحويل PDF إلى صور، وإضافة كلمة المرور أو إزالتها، والتحويل إلى PDF (وكذلك عدة صور في الصفحة)، والتعرّف على النص، والترجمة، والتحويل إلى كتاب إلكتروني.</span>
       <span class="feat-drm" data-i18n="f34_note">يُبلَّغ عن ملف PDF المحمي أو التالف، ولا يبقى شيء منجزًا نصفه. يعمل أيضًا داخل خزنة مشفّرة، عبر حرف محرك الأقراص الخاص بها.</span>
     </p>
+  </div>
+
+  <div class="feat w12" id="feat37">
+    <div class="num"><span data-i18n="f37_num">37 — قوائم السياق</span><a class="badge-free" href="#free" data-i18n="badge_free">مجاني</a></div>
+    <h3 data-i18n="f37_h">قوائم النقر بزر الفأرة الأيمن، بتصميم جديد بالكامل.</h3>
+    <p data-i18n-html="f37_p"><strong>إعادة تصميم كاملة لقوائم السياق</strong>، التي تُفتح بالنقر بزر الفأرة الأيمن في الشجرة وفي قائمة الملفات: الخيارات في أعمدة، وفي الأعلى المكان الذي تُنفَّذ فيه العملية.</p>
   </div>
 
 </section>
@@ -2763,7 +2782,7 @@
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag2">في التطبيق</span>
-      <div class="prem-groups" data-i18n-html="pr_prem_groups2"><h5>الخزائن</h5><ul><li><strong>إنشاء خزائن مشفّرة</strong> — الأسماء والمحتويات مشفّرة، مع «Recycle Bin» في كل خزنة (حتى 30 يومًا). فتح خزنة مجاني</li></ul><h5>الاستماع والكتابة</h5><ul><li><strong>الترجمة المصاحبة</strong> — إنشاؤها (لفيديو واحد أو لمسلسل كامل) وترجمتها ومشاهدتها مباشرة أثناء تشغيل الفيديو</li><li><strong>تفريغ تسجيل</strong> — إلى نص أو Word أو PDF أو ترجمة مصاحبة — والإملاء إلى Word أو PDF أو مترجمًا</li></ul><h5>الوصول عن بُعد</h5><ul><li>اتصالات متعددة وجميع العمليات، والاتصال بـ WebDAV وDropbox وOneDrive (مجاناً: اتصال واحد SFTP أو FTP أو FTPS، للعرض فقط)</li></ul><h5>التسجيل والمسح الضوئي</h5><ul><li>تسجيل الشاشة بلا علامة مائية، بلا حد 15 ثانية ومع الصوت (ميكروفون + النظام)، مع البطاقات وشريط النص والموسيقى</li><li>التعليق فوق فيديو (تعليق صوتي)، وتسجيل الكاميرا بلا علامة مائية</li><li>مسح عدة صفحات ضوئيًا، مع وحدة التغذية (ADF) وبلا علامة مائية</li></ul><h5>الصوت</h5><ul><li>مستوى الصوت والتسوية والسرعة دون تغيير طبقة الصوت، والظهور والتلاشي التدريجيان، وإزالة الصمت وتقصير الوقفات</li></ul><h5>الفيديو</h5><ul><li>ضبط الألوان والأبيض والأسود والسرعة والظهور والتلاشي والصوت؛ والاقتصاص والقلب كالمرآة وإضافة علامة مائية</li><li>التحويل أو التصغير، وصنع GIF، والتشغيل العكسي، وإضافة صوت أو تحويله إلى ستيريو</li></ul><h5>الصورة</h5><ul><li>إخفاء ما هو خاص (الوجوه والبريد الإلكتروني وأرقام الهاتف وأرقام IBAN والأرقام الضريبية وأرقام البطاقات)، ونسخ النص، ودمج الصور أو تقسيمها، وجعل الخلفية شفافة</li></ul><h5>PDF (الدمج والتقسيم مجانيان)</h5><ul><li><strong>تنظيم الصفحات</strong> — اختيارها وتغيير ترتيبها وتدويرها وإزالتها — وتحويلها إلى صور؛ ووضع كلمة مرور أو إزالتها</li><li>التعرّف على نص ملف PDF ممسوح ضوئيًا، وتحويل الصور وملفات Word إلى PDF</li><li>ترجمة ملف PDF كامل، دون أن يخرج شيء من الحاسوب</li></ul><h5>الكتب</h5><ul><li><strong>القارئ الكامل</strong> — EPUB وMOBI وAZW وAZW3 وPRC وFB2 والقصص المصوّرة (CBZ وCBR)، مع عرضَي ورق وورق ليلي</li><li>التحويل بين EPUB وPDF وFB2، وتحويل MOBI وAZW وAZW3 وPRC إلى EPUB، والقصص المصوّرة إلى PDF أو EPUB أو CBZ</li><li>ترجمة كتاب كامل، دون أن يخرج شيء من الحاسوب</li><li>صنع كتب صوتية من كتاب إلكتروني أو ملف PDF بالإنجليزية — ملف MP3 لكل فصل، أو M4B، أو EPUB بالصوت في داخله — دون أن يخرج شيء من الحاسوب</li></ul></div>
+      <div class="prem-groups" data-i18n-html="pr_prem_groups3"><h5>الخزائن</h5><ul><li><strong>إنشاء خزائن مشفّرة</strong> — الأسماء والمحتويات مشفّرة، مع «Recycle Bin» في كل خزنة (حتى 30 يومًا). فتح خزنة مجاني</li></ul><h5>الملفات المضغوطة</h5><ul><li>إنشاء ملفات ZIP وRAR بكلمة مرور — وفي RAR تُقفل أسماء الملفات أيضًا. والضغط من دون كلمة مرور مجاني</li></ul><h5>الاستماع والكتابة</h5><ul><li><strong>الترجمة المصاحبة</strong> — إنشاؤها (لفيديو واحد أو لمسلسل كامل) وترجمتها ومشاهدتها مباشرة أثناء تشغيل الفيديو</li><li><strong>تفريغ تسجيل</strong> — إلى نص أو Word أو PDF أو ترجمة مصاحبة — والإملاء إلى Word أو PDF أو مترجمًا</li></ul><h5>الوصول عن بُعد</h5><ul><li>اتصالات متعددة وجميع العمليات، والاتصال بـ WebDAV وDropbox وOneDrive (مجاناً: اتصال واحد SFTP أو FTP أو FTPS، للعرض فقط)</li></ul><h5>التسجيل والمسح الضوئي</h5><ul><li>تسجيل الشاشة بلا علامة مائية، بلا حد 15 ثانية ومع الصوت (ميكروفون + النظام)، مع البطاقات وشريط النص والموسيقى</li><li>التعليق فوق فيديو (تعليق صوتي)، وتسجيل الكاميرا بلا علامة مائية</li><li>مسح عدة صفحات ضوئيًا، مع وحدة التغذية (ADF) وبلا علامة مائية</li></ul><h5>الصوت</h5><ul><li>مستوى الصوت والتسوية والسرعة دون تغيير طبقة الصوت، والظهور والتلاشي التدريجيان، وإزالة الصمت وتقصير الوقفات</li></ul><h5>الفيديو</h5><ul><li>ضبط الألوان والأبيض والأسود والسرعة والظهور والتلاشي والصوت؛ والاقتصاص والقلب كالمرآة وإضافة علامة مائية</li><li>التحويل أو التصغير، وصنع GIF، والتشغيل العكسي، وإضافة صوت أو تحويله إلى ستيريو</li></ul><h5>الصورة</h5><ul><li>إخفاء ما هو خاص (الوجوه والبريد الإلكتروني وأرقام الهاتف وأرقام IBAN والأرقام الضريبية وأرقام البطاقات)، ونسخ النص، ودمج الصور أو تقسيمها، وجعل الخلفية شفافة، وتحسين الصورة (الفلاتر والألوان)</li></ul><h5>PDF (الدمج والتقسيم مجانيان)</h5><ul><li><strong>تنظيم الصفحات</strong> — اختيارها وتغيير ترتيبها وتدويرها وإزالتها — وتحويلها إلى صور؛ ووضع كلمة مرور أو إزالتها</li><li>التعرّف على نص ملف PDF ممسوح ضوئيًا، وتحويل الصور وملفات Word إلى PDF</li><li>ترجمة ملف PDF كامل، دون أن يخرج شيء من الحاسوب</li></ul><h5>الكتب</h5><ul><li><strong>القارئ الكامل</strong> — EPUB وMOBI وAZW وAZW3 وPRC وFB2 والقصص المصوّرة (CBZ وCBR)، مع عرضَي ورق وورق ليلي</li><li>التحويل بين EPUB وPDF وFB2، وتحويل MOBI وAZW وAZW3 وPRC إلى EPUB، والقصص المصوّرة إلى PDF أو EPUB أو CBZ</li><li>ترجمة كتاب كامل، دون أن يخرج شيء من الحاسوب</li><li>صنع كتب صوتية من كتاب إلكتروني أو ملف PDF بالإنجليزية — ملف MP3 لكل فصل، أو M4B، أو EPUB بالصوت في داخله — دون أن يخرج شيء من الحاسوب</li></ul></div>
       <p class="prem-note" data-i18n-html="pr_vitrine">في «الصوت» و«الفيديو» و«الصورة» و«PDF»، تُفتح نوافذ PREMIUM للجميع: ترى ما تفعله قبل الحصول على PREMIUM.</p>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
@@ -2845,7 +2864,7 @@
   </div>
 
   <div class="footer-baseline">
-    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.2.7 · WPF · net10.0-windows · single-file</span>
+    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.2.8 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">مصنوع لعمل كل يوم</span>
   </div>
 

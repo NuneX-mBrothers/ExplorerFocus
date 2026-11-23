@@ -89,11 +89,16 @@
     "PDF tools: merge and split PDF, rotate and reorder pages, PDF to JPG/PNG, password-protect or unlock PDF, convert Word and JPG to PDF",
     "Read aloud: English e-books and PDFs with 28 natural voices (American and British), the sentence and the word highlighted, each book with its own speed, a sleep timer and marks, all on the computer (free)",
     "EPUB to audiobook: an MP3 per chapter with the cover, an M4B with chapters, or an EPUB 3 with the voice inside (PREMIUM; a sample of up to 3 minutes is free)",
+    "Compressed archives: open ZIP, RAR, 7z and TAR like folders; create ZIP, TAR, TAR.GZ and TAR.BZ2 archives from the right-click menu, compatible with WinZip, WinRAR and 7-Zip (RAR too, with WinRAR installed; a password on ZIP and RAR is PREMIUM)",
+    "DAISY talking books (DAISY 2.02 and DAISY 3, including audio-only) and W3C (LPF) and Readium audiobooks, played with their own recorded voice, highlighting what is being heard (free)",
+    "Redesigned right-click context menus in the tree and the list: the options in columns, with where the action takes place at the top",
+    "Rotate any image by any angle, degree by degree, with the corners cropped or transparent; enhance an image with filters and colour adjustments (PREMIUM)",
+    "Web pages and internet shortcuts open in the browser of your choice, in a normal or private window",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://intrepidparallel.com/explorerfocus/it/",
   "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
-  "softwareVersion": "2.2.7",
+  "softwareVersion": "2.2.8",
   "image": "https://intrepidparallel.com/explorerfocus/og-cover.png",
   "screenshot": [
     "https://intrepidparallel.com/explorerfocus/shots/01-perfis.webp",
@@ -1504,7 +1509,7 @@
       <a href="#premium" data-i18n="nav_premium">Premium</a>
       <a href="#prices" data-i18n="nav_prices">Prezzi</a>
       <a href="#download" data-i18n="nav_download">Scaricalo</a>
-      <span class="nav-version">v2.2.7</span>
+      <span class="nav-version">v2.2.8</span>
     </nav>
   </div>
 </header>
@@ -1859,14 +1864,17 @@
          PDF, Vídeo e Áudio. Saíram a Imagem e o Tema claro, as duas que não mudaram na 2.1.2. -->
     <!-- ⛔ 17/11, a versão dos audiolivros: entram os Audiolivros à cabeça (o destaque do João) e sai o Áudio, o mais
          antigo das seis (no Core/Changelog.cs, o Áudio não muda desde a 2.1.1). -->
+    <!-- ⛔ 23/11, a 2.2.8 (o cartão abre com os menus de contexto e o Comprimir): entram os dois à cabeça; saem o Vídeo e o
+         «Ouvir e escrever». Medido no Changelog.cs do 843a2c42: o Vídeo entrou no cartão pela última vez na 2.1.6 (Cl216JuntarVideos); o «Ouvir e escrever» na 2.1.5 (Cl215TraduzirLegendasEmLote).
+         O DAISY entra pelos Audiolivros, que ficam. -->
+    <a href="#feat37" data-i18n="wn_menus">🗂 Menu contestuali</a>
+    <a href="#feat29" data-i18n="wn_arquivos">🗜 Archivi compressi</a>
     <a href="#audiobooks" data-i18n="wn_audiolivros">🎧 Audiolibri</a>
     <a href="#vault" data-i18n="wn_vault">🔒 Le casseforti</a>
-    <a href="#ouvir" data-i18n="wn_ouvir">🗣 Ascoltare e scrivere</a>
     <a href="#feat24" data-i18n="wn_livros">📚 E-book</a>
     <a href="#feat34" data-i18n="wn_pdf_211">📄 PDF</a>
-    <a href="#feat33" data-i18n="wn_video">🎬 Video</a>
   </nav>
-  <span class="whatsnew-ver">v2.2.7</span>
+  <span class="whatsnew-ver">v2.2.8</span>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -1902,7 +1910,7 @@
     <div class="stack-cell">
       <div class="ic" data-i18n="au_ep_ic">LEGGERE E ASCOLTARE</div>
       <h4 data-i18n="au_ep_h">Il testo e la voce insieme.</h4>
-      <p data-i18n-html="au_ep">Oppure un EPUB 3 con la voce dentro, con la frase accesa mentre viene letta, per i lettori di e-book che lo riproducono, come Thorium Reader (gratuito). ExplorerFocus riproduce anche gli EPUB che hanno già una voce registrata.</p>
+      <p data-i18n-html="au_ep2">Oppure un EPUB 3 con la voce dentro, con la frase accesa mentre viene letta, per i lettori di e-book che lo riproducono, come Thorium Reader (gratuito). ExplorerFocus riproduce anche gli EPUB che hanno già una voce registrata. Libri DAISY e audiolibri W3C e Readium, riconosciuti automaticamente come e-book: si ascoltano con la voce registrata che contengono, con ciò che si ascolta evidenziato.</p>
     </div>
     <div class="stack-cell">
       <div class="ic" data-i18n="au_vz_ic">LE VOCI</div>
@@ -2274,11 +2282,15 @@
     </p>
   </div>
 
-  <div class="feat w12">
-    <div class="num"><span data-i18n="f29_num">29 — ARCHIVI COME CARTELLE</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+  <div class="feat w12" id="feat29">
+    <div class="num"><span data-i18n="f29_num">29 — ARCHIVI COME CARTELLE</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f29_h">Apri ZIP, RAR, 7z e TAR come cartelle.</h3>
-    <p data-i18n-html="f29_p">Doppio clic (o <em>Sfoglia dentro</em>) per entrare nell'archivio — sfoglia il contenuto, guarda l'<em>anteprima</em> e <em>copia i file fuori</em> senza estrarre tutto. Sola lettura; <em>Apri con…</em> continua ad aprirli in WinRAR/WinZip/7-Zip.</p>
-    <div class="feat-mark" data-i18n="f29_mark">ZIP · RAR · 7z · TAR · Copia fuori</div>
+    <p data-i18n-html="f29_p3">Clic destro → «Esplora dentro»: lo ZIP, RAR, 7z o TAR si apre come una cartella, e copi solo quello che ti serve. Il doppio clic lo apre nel suo programma (WinRAR, 7-Zip…), se ce n'è uno.</p>
+    <p class="feat-p2" data-i18n-html="f29_p2"><strong>Creare archivi ZIP, TAR, TAR.GZ e TAR.BZ2</strong> direttamente in ExplorerFocus, dal clic destro, senza installare altri programmi e compatibili con WinZip, WinRAR e 7-Zip. Con WinRAR installato, anche RAR. Password per ZIP e RAR (PREMIUM).</p>
+    <div class="feat-mark" data-i18n="f29_mark2">ZIP · RAR · 7z · TAR · Copia fuori · Comprimi · TAR.GZ · TAR.BZ2 · Password</div>
+    <p class="feat-note">
+      <span data-i18n="f29_premium">PREMIUM: creare archivi ZIP e RAR con password — nel RAR, anche i nomi dei file restano protetti. Comprimere senza password è gratis.</span>
+    </p>
   </div>
 
   <div class="feat w12" id="feat30">
@@ -2350,6 +2362,7 @@
     <div class="num"><span data-i18n="fim_num">35 — IMMAGINE</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="fim_h">Ciò che una foto nasconde — e gli strumenti per trattarla.</h3>
     <p data-i18n-html="fim_p">Seleziona un'immagine e si accende il pulsante <em>Immagine</em>. I <em>Raggi X della foto</em> mostrano ciò che la foto nasconde — dove è stata scattata, la fotocamera e il suo numero di serie, le date, e la miniatura nascosta che a volte mostra ancora ciò che è stato ritagliato — e salvano una copia con solo ciò che scegli. Dicono anche se l'immagine <em>dichiara</em> di essere stata fatta o modificata con l'IA, e con quale programma, e <em>Vicino a…</em> dice la località senza andare su internet. Poi: <em>ritaglia</em> e raddrizza un orizzonte storto, <em>riduci per inviare</em> alla dimensione che vuoi, <em>ruota e rifletti</em> — in un JPG, senza alcuna perdita di qualità —, <em>cambia formato</em> (l'HEIC dell'iPhone in JPG con un clic, e perfino le icone .ico di Windows), <em>copia l'immagine</em> per incollarla su WhatsApp, e <em>Ctrl+V</em> in una cartella trasforma uno screenshot in un file. Con PREMIUM: <em>copia il testo</em> da un'immagine, <em>copri ciò che è privato</em> (email, numeri di telefono, IBAN, carte e volti), <em>unisci</em> e <em>dividi</em> immagini, e lo <em>sfondo trasparente</em>. <strong>L'originale resta com'è.</strong></p>
+    <p class="feat-p2" data-i18n-html="fim_p2">Nel menu Immagine ora è possibile <strong>ruotare qualsiasi immagine di qualsiasi angolo</strong>, grado per grado, per raddrizzare le foto storte, e gli angoli vuoti possono diventare trasparenti. <strong>Migliora l'immagine</strong> (PREMIUM): filtri pronti e regolazioni dei colori. La copia nasce accanto; l'originale resta com'è.</p>
     <div class="feat-mark" data-i18n="fim_mark">Raggi X · Marchio di IA · Vicino a… · Ritaglia · Riduci · Ruota · HEIC → JPG · ICO · Copia · Ctrl+V · Testo · Copri · Unisci · Dividi · Sfondo trasparente</div>
     <p class="feat-note">
       <span data-i18n="fim_free">Gratis: i raggi X, ritagliare, ridurre, ruotare e riflettere, cambiare formato (con ICO), copiare e incollare come file.</span><br>
@@ -2369,6 +2382,12 @@
       <span data-i18n="fpdf_premium2">PREMIUM: organizzare le pagine, PDF in immagini, aggiungere o togliere la password, convertire in PDF (anche più foto per pagina), riconoscere il testo, tradurre e passare a e-book.</span>
       <span class="feat-drm" data-i18n="f34_note">Un PDF protetto o danneggiato viene segnalato, e non resta nulla fatto a metà. Funziona anche dentro una cassaforte cifrata, tramite la sua lettera di unità.</span>
     </p>
+  </div>
+
+  <div class="feat w12" id="feat37">
+    <div class="num"><span data-i18n="f37_num">37 — MENU CONTESTUALI</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a></div>
+    <h3 data-i18n="f37_h">I menu del clic destro, riprogettati da zero.</h3>
+    <p data-i18n-html="f37_p"><strong>Riprogettazione completa dei menu contestuali</strong>, quelli che si aprono con il clic destro nell'albero e nell'elenco: le opzioni in colonne e, in alto, dove si svolge l'operazione.</p>
   </div>
 
 </section>
@@ -2763,7 +2782,7 @@
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag2">nell'app</span>
-      <div class="prem-groups" data-i18n-html="pr_prem_groups2"><h5>Casseforti</h5><ul><li><strong>Creare casseforti cifrate</strong> — nomi e contenuti cifrati, e una Recycle Bin in ogni cassaforte (fino a 30 giorni). Aprire una cassaforte è gratis</li></ul><h5>Ascoltare e scrivere</h5><ul><li><strong>Sottotitoli</strong> — crearli (di un video o di un'intera serie), tradurli e vederli dal vivo mentre il video scorre</li><li><strong>Trascrivere una registrazione</strong> — in testo, Word, PDF o sottotitoli — e la dettatura in Word, in PDF o tradotta</li></ul><h5>Accesso remoto</h5><ul><li>Più connessioni e tutte le operazioni, e collegarsi a WebDAV, Dropbox e OneDrive (gratis: una connessione SFTP, FTP o FTPS, solo per vedere)</li></ul><h5>Registrare e scansionare</h5><ul><li>Registrare lo schermo senza filigrana, senza limite di 15 s e con audio (micro + sistema), con schede, banner di testo e musica</li><li>Narrare sopra un video (voice over), e registrare dalla fotocamera senza filigrana</li><li>Scansionare più pagine, con l'alimentatore (ADF) e senza filigrana</li></ul><h5>Audio</h5><ul><li>Volume, normalizzazione, velocità senza cambiare il tono, dissolvenze in entrata e in uscita, togliere il silenzio e accorciare le pause</li></ul><h5>Video</h5><ul><li>Regolare i colori, il bianco e nero, la velocità, le dissolvenze e l'audio; ritagliare, specchiare e aggiungere una filigrana</li><li>Convertire o ridurre, fare una GIF, invertirlo, aggiungere un suono o portarlo in stereo</li></ul><h5>Immagine</h5><ul><li>Coprire ciò che è privato (volti, email, telefoni, IBAN, codici fiscali e numeri di carta), copiare il testo, unire o dividere immagini e rendere trasparente uno sfondo</li></ul><h5>PDF (unire e dividere sono gratis)</h5><ul><li><strong>Organizzare le pagine</strong> — scegliere, riordinare, ruotare e togliere — e trasformarle in immagini; mettere o togliere la password</li><li>Riconoscere il testo di un PDF scansionato, e convertire immagini e file Word in PDF</li><li>Tradurre un PDF intero, senza che nulla esca dal computer</li></ul><h5>Libri</h5><ul><li><strong>Il lettore completo</strong> — EPUB, MOBI, AZW, AZW3, PRC, FB2 e fumetti (CBZ, CBR), con le viste Carta e Carta notturna</li><li>Convertire tra EPUB, PDF e FB2, passare MOBI, AZW, AZW3 e PRC in EPUB, e i fumetti in PDF, EPUB o CBZ</li><li>Tradurre un libro intero, senza che nulla esca dal computer</li><li>Fare audiolibri da un e-book o da un PDF in inglese — un MP3 per capitolo, un M4B o un EPUB con la voce dentro — senza che nulla esca dal computer</li></ul></div>
+      <div class="prem-groups" data-i18n-html="pr_prem_groups3"><h5>Casseforti</h5><ul><li><strong>Creare casseforti cifrate</strong> — nomi e contenuti cifrati, e una Recycle Bin in ogni cassaforte (fino a 30 giorni). Aprire una cassaforte è gratis</li></ul><h5>Archivi compressi</h5><ul><li>Creare archivi ZIP e RAR con password — nel RAR, anche i nomi dei file restano protetti. Comprimere senza password è gratis</li></ul><h5>Ascoltare e scrivere</h5><ul><li><strong>Sottotitoli</strong> — crearli (di un video o di un'intera serie), tradurli e vederli dal vivo mentre il video scorre</li><li><strong>Trascrivere una registrazione</strong> — in testo, Word, PDF o sottotitoli — e la dettatura in Word, in PDF o tradotta</li></ul><h5>Accesso remoto</h5><ul><li>Più connessioni e tutte le operazioni, e collegarsi a WebDAV, Dropbox e OneDrive (gratis: una connessione SFTP, FTP o FTPS, solo per vedere)</li></ul><h5>Registrare e scansionare</h5><ul><li>Registrare lo schermo senza filigrana, senza limite di 15 s e con audio (micro + sistema), con schede, banner di testo e musica</li><li>Narrare sopra un video (voice over), e registrare dalla fotocamera senza filigrana</li><li>Scansionare più pagine, con l'alimentatore (ADF) e senza filigrana</li></ul><h5>Audio</h5><ul><li>Volume, normalizzazione, velocità senza cambiare il tono, dissolvenze in entrata e in uscita, togliere il silenzio e accorciare le pause</li></ul><h5>Video</h5><ul><li>Regolare i colori, il bianco e nero, la velocità, le dissolvenze e l'audio; ritagliare, specchiare e aggiungere una filigrana</li><li>Convertire o ridurre, fare una GIF, invertirlo, aggiungere un suono o portarlo in stereo</li></ul><h5>Immagine</h5><ul><li>Coprire ciò che è privato (volti, email, telefoni, IBAN, codici fiscali e numeri di carta), copiare il testo, unire o dividere immagini, rendere trasparente uno sfondo e migliorare un'immagine (filtri, colori)</li></ul><h5>PDF (unire e dividere sono gratis)</h5><ul><li><strong>Organizzare le pagine</strong> — scegliere, riordinare, ruotare e togliere — e trasformarle in immagini; mettere o togliere la password</li><li>Riconoscere il testo di un PDF scansionato, e convertire immagini e file Word in PDF</li><li>Tradurre un PDF intero, senza che nulla esca dal computer</li></ul><h5>Libri</h5><ul><li><strong>Il lettore completo</strong> — EPUB, MOBI, AZW, AZW3, PRC, FB2 e fumetti (CBZ, CBR), con le viste Carta e Carta notturna</li><li>Convertire tra EPUB, PDF e FB2, passare MOBI, AZW, AZW3 e PRC in EPUB, e i fumetti in PDF, EPUB o CBZ</li><li>Tradurre un libro intero, senza che nulla esca dal computer</li><li>Fare audiolibri da un e-book o da un PDF in inglese — un MP3 per capitolo, un M4B o un EPUB con la voce dentro — senza che nulla esca dal computer</li></ul></div>
       <p class="prem-note" data-i18n-html="pr_vitrine">In Audio, Video, Immagine e PDF, le finestre PREMIUM si aprono a tutti: vedi cosa fanno prima di avere PREMIUM.</p>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
@@ -2845,7 +2864,7 @@
   </div>
 
   <div class="footer-baseline">
-    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.2.7 · WPF · net10.0-windows · single-file</span>
+    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.2.8 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">pensato per il lavoro di ogni giorno</span>
   </div>
 

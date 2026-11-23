@@ -89,11 +89,16 @@
     "PDF tools: merge and split PDF, rotate and reorder pages, PDF to JPG/PNG, password-protect or unlock PDF, convert Word and JPG to PDF",
     "Read aloud: English e-books and PDFs with 28 natural voices (American and British), the sentence and the word highlighted, each book with its own speed, a sleep timer and marks, all on the computer (free)",
     "EPUB to audiobook: an MP3 per chapter with the cover, an M4B with chapters, or an EPUB 3 with the voice inside (PREMIUM; a sample of up to 3 minutes is free)",
+    "Compressed archives: open ZIP, RAR, 7z and TAR like folders; create ZIP, TAR, TAR.GZ and TAR.BZ2 archives from the right-click menu, compatible with WinZip, WinRAR and 7-Zip (RAR too, with WinRAR installed; a password on ZIP and RAR is PREMIUM)",
+    "DAISY talking books (DAISY 2.02 and DAISY 3, including audio-only) and W3C (LPF) and Readium audiobooks, played with their own recorded voice, highlighting what is being heard (free)",
+    "Redesigned right-click context menus in the tree and the list: the options in columns, with where the action takes place at the top",
+    "Rotate any image by any angle, degree by degree, with the corners cropped or transparent; enhance an image with filters and colour adjustments (PREMIUM)",
+    "Web pages and internet shortcuts open in the browser of your choice, in a normal or private window",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://intrepidparallel.com/explorerfocus/ru/",
   "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
-  "softwareVersion": "2.2.7",
+  "softwareVersion": "2.2.8",
   "image": "https://intrepidparallel.com/explorerfocus/og-cover.png",
   "screenshot": [
     "https://intrepidparallel.com/explorerfocus/shots/01-perfis.webp",
@@ -1504,7 +1509,7 @@
       <a href="#premium" data-i18n="nav_premium">Premium</a>
       <a href="#prices" data-i18n="nav_prices">Цены</a>
       <a href="#download" data-i18n="nav_download">Скачать</a>
-      <span class="nav-version">v2.2.7</span>
+      <span class="nav-version">v2.2.8</span>
     </nav>
   </div>
 </header>
@@ -1859,14 +1864,17 @@
          PDF, Vídeo e Áudio. Saíram a Imagem e o Tema claro, as duas que não mudaram na 2.1.2. -->
     <!-- ⛔ 17/11, a versão dos audiolivros: entram os Audiolivros à cabeça (o destaque do João) e sai o Áudio, o mais
          antigo das seis (no Core/Changelog.cs, o Áudio não muda desde a 2.1.1). -->
+    <!-- ⛔ 23/11, a 2.2.8 (o cartão abre com os menus de contexto e o Comprimir): entram os dois à cabeça; saem o Vídeo e o
+         «Ouvir e escrever». Medido no Changelog.cs do 843a2c42: o Vídeo entrou no cartão pela última vez na 2.1.6 (Cl216JuntarVideos); o «Ouvir e escrever» na 2.1.5 (Cl215TraduzirLegendasEmLote).
+         O DAISY entra pelos Audiolivros, que ficam. -->
+    <a href="#feat37" data-i18n="wn_menus">🗂 Контекстные меню</a>
+    <a href="#feat29" data-i18n="wn_arquivos">🗜 Сжатые архивы</a>
     <a href="#audiobooks" data-i18n="wn_audiolivros">🎧 Аудиокниги</a>
     <a href="#vault" data-i18n="wn_vault">🔒 Хранилища</a>
-    <a href="#ouvir" data-i18n="wn_ouvir">🗣 Слушать и писать</a>
     <a href="#feat24" data-i18n="wn_livros">📚 Эл. книги</a>
     <a href="#feat34" data-i18n="wn_pdf_211">📄 PDF</a>
-    <a href="#feat33" data-i18n="wn_video">🎬 Видео</a>
   </nav>
-  <span class="whatsnew-ver">v2.2.7</span>
+  <span class="whatsnew-ver">v2.2.8</span>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -1902,7 +1910,7 @@
     <div class="stack-cell">
       <div class="ic" data-i18n="au_ep_ic">ЧИТАТЬ И СЛУШАТЬ</div>
       <h4 data-i18n="au_ep_h">Текст и голос вместе.</h4>
-      <p data-i18n-html="au_ep">Или EPUB 3 с голосом внутри, где читаемая фраза подсвечивается, для читалок, которые его воспроизводят, например Thorium Reader (бесплатный). ExplorerFocus воспроизводит и EPUB, в которых уже есть записанный голос.</p>
+      <p data-i18n-html="au_ep2">Или EPUB 3 с голосом внутри, где читаемая фраза подсвечивается, для читалок, которые его воспроизводят, например Thorium Reader (бесплатный). ExplorerFocus воспроизводит и EPUB, в которых уже есть записанный голос. Книги DAISY и аудиокниги W3C и Readium автоматически распознаются как электронные книги: их можно слушать с записанным в них голосом, а то, что звучит, выделяется.</p>
     </div>
     <div class="stack-cell">
       <div class="ic" data-i18n="au_vz_ic">ГОЛОСА</div>
@@ -2274,11 +2282,15 @@
     </p>
   </div>
 
-  <div class="feat w12">
-    <div class="num"><span data-i18n="f29_num">29 — АРХИВЫ КАК ПАПКИ</span><a class="badge-free" href="#free" data-i18n="badge_free">Бесплатно</a></div>
+  <div class="feat w12" id="feat29">
+    <div class="num"><span data-i18n="f29_num">29 — АРХИВЫ КАК ПАПКИ</span><a class="badge-free" href="#free" data-i18n="badge_free">Бесплатно</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="f29_h">Открывайте ZIP, RAR, 7z и TAR как папки.</h3>
-    <p data-i18n-html="f29_p">Двойной клик (или <em>Заглянуть внутрь</em>), чтобы войти в архив — смотрите содержимое, <em>предпросмотр</em> и <em>копируйте файлы наружу</em>, не распаковывая всё. Только чтение; <em>Открыть с помощью…</em> по-прежнему откроет их в WinRAR/WinZip/7-Zip.</p>
-    <div class="feat-mark" data-i18n="f29_mark">ZIP · RAR · 7z · TAR · Копирование наружу</div>
+    <p data-i18n-html="f29_p3">Правый щелчок → «Открыть содержимое»: ZIP, RAR, 7z или TAR открывается как папка, и вы копируете только то, что нужно. Двойной щелчок открывает его в своей программе (WinRAR, 7-Zip…), если она есть.</p>
+    <p class="feat-p2" data-i18n-html="f29_p2"><strong>Создание архивов ZIP, TAR, TAR.GZ и TAR.BZ2</strong> прямо в ExplorerFocus, правым щелчком, без установки других программ; архивы совместимы с WinZip, WinRAR и 7-Zip. С установленным WinRAR — также RAR. Пароль для ZIP и RAR (PREMIUM).</p>
+    <div class="feat-mark" data-i18n="f29_mark2">ZIP · RAR · 7z · TAR · Копирование наружу · Сжать · TAR.GZ · TAR.BZ2 · Пароль</div>
+    <p class="feat-note">
+      <span data-i18n="f29_premium">PREMIUM: создание архивов ZIP и RAR с паролем — в RAR закрыты и имена файлов. Сжатие без пароля бесплатно.</span>
+    </p>
   </div>
 
   <div class="feat w12" id="feat30">
@@ -2350,6 +2362,7 @@
     <div class="num"><span data-i18n="fim_num">35 — ИЗОБРАЖЕНИЕ</span><a class="badge-free" href="#free" data-i18n="badge_free">Бесплатно</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
     <h3 data-i18n="fim_h">Что фотография скрывает — и инструменты, чтобы с этим справиться.</h3>
     <p data-i18n-html="fim_p">Выделите изображение — и загорится кнопка <em>Изображение</em>. <em>Рентген фото</em> показывает, что фотография скрывает, — где она снята, камеру и её серийный номер, даты и скрытую миниатюру, на которой порой ещё видно обрезанное, — и сохраняет копию только с тем, что вы выберете. Он также сообщает, <em>заявляет</em> ли изображение, что оно создано или отредактировано с помощью ИИ, и в какой программе, а функция <em>Поблизости…</em> называет населённый пункт без выхода в интернет. Дальше: <em>обрезать</em> и выровнять заваленный горизонт, <em>уменьшить для отправки</em> до нужного размера, <em>повернуть и отразить</em> — у JPG без малейшей потери качества, — <em>изменить формат</em> (HEIC с iPhone в JPG одним кликом и даже значки Windows .ico), <em>копировать изображение</em>, чтобы вставить его в WhatsApp, а <em>Ctrl+V</em> в папке превращает снимок экрана в файл. С PREMIUM: <em>копировать текст</em> с изображения, <em>скрыть личное</em> (адреса почты, номера телефонов, IBAN, номера карт и лица), <em>объединить</em> и <em>разделить</em> изображения и <em>прозрачный фон</em>. <strong>Оригинал остаётся как есть.</strong></p>
+    <p class="feat-p2" data-i18n-html="fim_p2">В меню «Изображение» теперь можно <strong>повернуть любое изображение на любой угол</strong>, по одному градусу, чтобы выровнять наклонённые фотографии, а пустые углы можно сделать прозрачными. <strong>Улучшить изображение</strong> (PREMIUM): готовые фильтры и коррекция цветов. Копия создаётся рядом, оригинал остаётся без изменений.</p>
     <div class="feat-mark" data-i18n="fim_mark">Рентген · Метка ИИ · Поблизости… · Обрезка · Уменьшение · Поворот · HEIC → JPG · ICO · Копирование · Ctrl+V · Текст · Скрытие · Объединение · Разделение · Прозрачный фон</div>
     <p class="feat-note">
       <span data-i18n="fim_free">Бесплатно: рентген, обрезка, уменьшение, поворот и отражение, смена формата (с ICO), копирование и вставка как файла.</span><br>
@@ -2369,6 +2382,12 @@
       <span data-i18n="fpdf_premium2">PREMIUM: упорядочивание страниц, PDF в изображения, установка или снятие пароля, преобразование в PDF (в том числе несколько фото на странице), распознавание текста, перевод и преобразование в электронную книгу.</span>
       <span class="feat-drm" data-i18n="f34_note">О защищённом или повреждённом PDF сообщается, и ничего не остаётся сделанным наполовину. Работает и внутри зашифрованного хранилища — через его букву диска.</span>
     </p>
+  </div>
+
+  <div class="feat w12" id="feat37">
+    <div class="num"><span data-i18n="f37_num">37 — КОНТЕКСТНЫЕ МЕНЮ</span><a class="badge-free" href="#free" data-i18n="badge_free">Бесплатно</a></div>
+    <h3 data-i18n="f37_h">Меню правого щелчка, переработанные с нуля.</h3>
+    <p data-i18n-html="f37_p"><strong>Полностью переработанные контекстные меню</strong>, которые открываются правым щелчком в дереве и в списке: команды в столбцах, а вверху — где выполняется действие.</p>
   </div>
 
 </section>
@@ -2763,7 +2782,7 @@
     <div class="prem-card is-prem">
       <h4 data-i18n="pr_prem_h">Premium</h4>
       <span class="prem-tag" data-i18n="pr_prem_tag2">в приложении</span>
-      <div class="prem-groups" data-i18n-html="pr_prem_groups2"><h5>Хранилища</h5><ul><li><strong>Создание зашифрованных хранилищ</strong> — имена и содержимое зашифрованы, и Recycle Bin в каждом хранилище (до 30 дней). Открытие бесплатно</li></ul><h5>Слушать и писать</h5><ul><li><strong>Субтитры</strong> — создание (к одному видео или к целому сериалу), перевод и показ в реальном времени во время просмотра</li><li><strong>Расшифровка записи</strong> — в текст, Word, PDF или субтитры — и диктовка в Word, в PDF или с переводом</li></ul><h5>Удалённый доступ</h5><ul><li>Несколько подключений и все операции, а также WebDAV, Dropbox и OneDrive (бесплатно: одно подключение SFTP, FTP или FTPS, только просмотр)</li></ul><h5>Запись и сканирование</h5><ul><li>Запись экрана без водяного знака и лимита 15 с, со звуком (микрофон + система), с карточками, текстовой полосой и музыкой</li><li>Озвучка поверх видео (voice over) и запись с камеры без водяного знака</li><li>Сканирование нескольких страниц, с автоподатчиком (ADF) и без водяного знака</li></ul><h5>Звук</h5><ul><li>Громкость, нормализация, скорость без изменения высоты тона, плавное нарастание и затухание, удаление тишины и сокращение пауз</li></ul><h5>Видео</h5><ul><li>Настройка цветов, чёрно-белого, скорости, переходов и звука; обрезка, отражение и водяной знак</li><li>Преобразование или уменьшение, создание GIF, воспроизведение задом наперёд, добавление звука или перевод в стерео</li></ul><h5>Изображение</h5><ul><li>Скрыть личное (лица, адреса почты, телефоны, IBAN, налоговые номера и номера карт), копировать текст, объединять и разделять изображения, делать фон прозрачным</li></ul><h5>PDF (объединение и разделение бесплатны)</h5><ul><li><strong>Упорядочивание страниц</strong> — выбор, порядок, поворот и удаление — и превращение их в изображения; установка и снятие пароля</li><li><strong>Распознавание текста отсканированного PDF, изображения и Word</strong> — в PDF</li><li><strong>Перевод целого PDF</strong> — ничего не покидает компьютер</li></ul><h5>Книги</h5><ul><li><strong>Полная читалка</strong> — EPUB, MOBI, AZW, AZW3, PRC, FB2 и комиксы (CBZ, CBR), с видами «Бумага» и «Ночная бумага»</li><li><strong>Преобразование между EPUB, PDF и FB2, MOBI, AZW, AZW3 и PRC</strong> — в EPUB, а комиксов — в PDF, EPUB или CBZ</li><li><strong>Перевод целой книги</strong> — ничего не покидает компьютер</li><li><strong>Аудиокниги</strong> из английской электронной книги или PDF — MP3 на главу, M4B или EPUB с голосом внутри — ничего не покидает компьютер</li></ul></div>
+      <div class="prem-groups" data-i18n-html="pr_prem_groups3"><h5>Хранилища</h5><ul><li><strong>Создание зашифрованных хранилищ</strong> — имена и содержимое зашифрованы, и Recycle Bin в каждом хранилище (до 30 дней). Открытие бесплатно</li></ul><h5>Сжатые архивы</h5><ul><li>Создание архивов ZIP и RAR с паролем — в RAR закрыты и имена файлов. Сжатие без пароля бесплатно</li></ul><h5>Слушать и писать</h5><ul><li><strong>Субтитры</strong> — создание (к одному видео или к целому сериалу), перевод и показ в реальном времени во время просмотра</li><li><strong>Расшифровка записи</strong> — в текст, Word, PDF или субтитры — и диктовка в Word, в PDF или с переводом</li></ul><h5>Удалённый доступ</h5><ul><li>Несколько подключений и все операции, а также WebDAV, Dropbox и OneDrive (бесплатно: одно подключение SFTP, FTP или FTPS, только просмотр)</li></ul><h5>Запись и сканирование</h5><ul><li>Запись экрана без водяного знака и лимита 15 с, со звуком (микрофон + система), с карточками, текстовой полосой и музыкой</li><li>Озвучка поверх видео (voice over) и запись с камеры без водяного знака</li><li>Сканирование нескольких страниц, с автоподатчиком (ADF) и без водяного знака</li></ul><h5>Звук</h5><ul><li>Громкость, нормализация, скорость без изменения высоты тона, плавное нарастание и затухание, удаление тишины и сокращение пауз</li></ul><h5>Видео</h5><ul><li>Настройка цветов, чёрно-белого, скорости, переходов и звука; обрезка, отражение и водяной знак</li><li>Преобразование или уменьшение, создание GIF, воспроизведение задом наперёд, добавление звука или перевод в стерео</li></ul><h5>Изображение</h5><ul><li>Скрыть личное (лица, адреса почты, телефоны, IBAN, налоговые номера и номера карт), копировать текст, объединять и разделять изображения, делать фон прозрачным, улучшать изображения (фильтры, цвета)</li></ul><h5>PDF (объединение и разделение бесплатны)</h5><ul><li><strong>Упорядочивание страниц</strong> — выбор, порядок, поворот и удаление — и превращение их в изображения; установка и снятие пароля</li><li><strong>Распознавание текста отсканированного PDF, изображения и Word</strong> — в PDF</li><li><strong>Перевод целого PDF</strong> — ничего не покидает компьютер</li></ul><h5>Книги</h5><ul><li><strong>Полная читалка</strong> — EPUB, MOBI, AZW, AZW3, PRC, FB2 и комиксы (CBZ, CBR), с видами «Бумага» и «Ночная бумага»</li><li><strong>Преобразование между EPUB, PDF и FB2, MOBI, AZW, AZW3 и PRC</strong> — в EPUB, а комиксов — в PDF, EPUB или CBZ</li><li><strong>Перевод целой книги</strong> — ничего не покидает компьютер</li><li><strong>Аудиокниги</strong> из английской электронной книги или PDF — MP3 на главу, M4B или EPUB с голосом внутри — ничего не покидает компьютер</li></ul></div>
       <p class="prem-note" data-i18n-html="pr_vitrine">В меню Аудио, Видео, Изображение и PDF окна PREMIUM открываются всем: вы видите, что они делают, ещё до того, как у вас появится PREMIUM.</p>
 
       <!-- Como se obtém vive DENTRO do cartão do Premium: tudo o que é pago fica
@@ -2845,7 +2864,7 @@
   </div>
 
   <div class="footer-baseline">
-    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.2.7 · WPF · net10.0-windows · single-file</span>
+    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.2.8 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">сделано для ежедневной работы</span>
   </div>
 

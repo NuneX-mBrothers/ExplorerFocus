@@ -492,5 +492,16 @@ window.I18N.ko = {
   "vt_num3": "§ 04 · 금고",
   "sc_num3": "§ 05 · 단축키",
   "st_num3": "§ 06 · 기술",
-  "pr_num3": "§ 07 · 무료와 Premium"
+  "pr_num3": "§ 07 · 무료와 Premium",
+  "wn_menus": "🗂 상황에 맞는 메뉴",
+  "wn_arquivos": "🗜 압축 파일",
+  "f37_num": "37 — 상황에 맞는 메뉴",
+  "f37_h": "마우스 오른쪽 단추 메뉴를 처음부터 새로 설계했습니다.",
+  "f37_p": "<strong>상황에 맞는 메뉴 전면 재설계</strong>: 트리와 목록에서 마우스 오른쪽 단추로 클릭하면 열리는 메뉴로, 옵션이 열로 나뉘고 위쪽에 작업이 이루어지는 곳이 표시됩니다.",
+  "f29_p2": "<strong>ExplorerFocus에서 바로 ZIP, TAR, TAR.GZ, TAR.BZ2 압축 파일 만들기</strong>: 마우스 오른쪽 단추로, 다른 프로그램을 설치하지 않고 만들 수 있으며 WinZip, WinRAR, 7-Zip과 호환됩니다. WinRAR가 설치되어 있으면 RAR도 만들 수 있습니다. ZIP과 RAR에 암호 설정(PREMIUM).",
+  "f29_mark2": "ZIP · RAR · 7z · TAR · 꺼내 복사 · 압축 · TAR.GZ · TAR.BZ2 · 암호",
+  "f29_premium": "PREMIUM: 암호를 건 ZIP 및 RAR 압축 파일 만들기 — RAR 형식은 파일 이름까지 잠급니다. 암호 없는 압축은 무료.",
+  "fim_p2": "이미지 메뉴에서 이제 <strong>어떤 이미지든 원하는 각도로 회전</strong>할 수 있습니다. 도 단위로 조정해 기울어진 사진을 바로잡고, 빈 모서리는 투명하게 만들 수 있습니다. <strong>이미지 보정</strong>(PREMIUM): 바로 쓸 수 있는 필터와 색 조정. 사본은 원본 옆에 만들어지며 원본은 그대로 유지됩니다.",
+  "au_ep2": "또는 음성이 들어 있는 EPUB 3. 읽는 문장이 밝게 표시되며, Thorium Reader(무료)처럼 이를 재생하는 전자책 리더에서 쓸 수 있습니다. ExplorerFocus는 녹음된 음성이 이미 들어 있는 EPUB도 재생합니다. DAISY 도서와 W3C 및 Readium 오디오북이 전자책으로 자동 인식됩니다. 책에 녹음된 음성으로 들을 수 있으며, 듣고 있는 부분이 강조 표시됩니다.",
+  "pr_prem_groups3": "<h5>금고</h5><ul><li><strong>암호화 금고 만들기</strong> — 이름과 내용을 암호화, 금고마다 “Recycle Bin”(최대 30일). 금고를 여는 것은 무료</li></ul><h5>압축 파일</h5><ul><li>암호를 건 ZIP 및 RAR 압축 파일 만들기 — RAR 형식은 파일 이름까지 잠급니다. 암호 없는 압축은 무료</li></ul><h5>듣고 쓰기</h5><ul><li><strong>자막</strong> — 만들기(동영상 하나 또는 시리즈 전체), 번역, 재생 중 실시간 보기</li><li><strong>녹음 받아쓰기</strong> — 텍스트, Word, PDF 또는 자막으로 — 와 음성 입력을 Word나 PDF로 또는 번역해서</li></ul><h5>원격 접속</h5><ul><li>여러 연결과 모든 작업, 그리고 WebDAV, Dropbox, OneDrive 연결(무료: SFTP, FTP, FTPS 연결 하나, 보기만)</li></ul><h5>녹화와 스캔</h5><ul><li><strong>화면 녹화</strong> — 워터마크 없음, 15초 제한 없음, 소리 포함(마이크 + 시스템), 카드와 텍스트 띠, 음악까지</li><li>동영상 위 내레이션(보이스오버)과 워터마크 없는 카메라 녹화</li><li><strong>여러 쪽 스캔</strong> — 급지 장치(ADF), 워터마크 없음</li></ul><h5>오디오</h5><ul><li>볼륨, 정규화, 음높이를 바꾸지 않는 속도 조절, 페이드 인과 페이드 아웃, 무음 제거와 쉼 줄이기</li></ul><h5>동영상</h5><ul><li>색과 흑백, 속도, 페이드, 소리 조정, 자르기, 뒤집기, 워터마크 넣기</li><li>변환 또는 축소, GIF 만들기, 거꾸로 재생, 소리 추가 또는 스테레오로 변환</li></ul><h5>이미지</h5><ul><li>개인 정보 가리기(얼굴, 이메일, 전화번호, IBAN, 납세자 번호, 카드 번호), 텍스트 복사, 이미지 합치기나 나누기, 배경을 투명하게, 이미지 보정(필터, 색)</li></ul><h5>PDF(합치기와 나누기는 무료)</h5><ul><li><strong>페이지 정리</strong> — 고르기, 순서 바꾸기, 회전, 빼기 — 와 이미지로 바꾸기, 암호 걸기와 해제</li><li>스캔한 PDF의 텍스트 인식, 이미지와 Word 파일을 PDF로 변환</li><li><strong>PDF 전체 번역</strong> — 아무것도 컴퓨터 밖으로 나가지 않음</li></ul><h5>책</h5><ul><li><strong>책 읽기 전부</strong> — EPUB, MOBI, AZW, AZW3, PRC, FB2, 만화(CBZ, CBR), 종이와 밤의 종이 보기 포함</li><li>EPUB·PDF·FB2 간 변환, MOBI·AZW·AZW3·PRC를 EPUB로, 만화를 PDF·EPUB·CBZ로</li><li><strong>책 한 권 전체 번역</strong> — 아무것도 컴퓨터 밖으로 나가지 않음</li><li><strong>오디오북 만들기</strong> — 영어 전자책이나 PDF로 장별 MP3, M4B, 음성이 들어 있는 EPUB를 — 아무것도 컴퓨터 밖으로 나가지 않음</li></ul>"
 };

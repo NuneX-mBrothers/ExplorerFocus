@@ -496,5 +496,16 @@ window.I18N["zh-TW"] = {
   "vt_num3": "§ 04 · 保險庫",
   "sc_num3": "§ 05 · 快速鍵",
   "st_num3": "§ 06 · 技術",
-  "pr_num3": "§ 07 · 免費與 Premium"
+  "pr_num3": "§ 07 · 免費與 Premium",
+  "wn_menus": "🗂 右鍵選單",
+  "wn_arquivos": "🗜 壓縮檔",
+  "f37_num": "37 — 右鍵選單",
+  "f37_h": "右鍵選單，全新設計。",
+  "f37_p": "<strong>全面重新設計右鍵選單</strong>：在樹狀目錄和清單中按右鍵開啟的選單，現在選項分欄排列，頂端顯示操作的位置。",
+  "f29_p2": "<strong>直接在 ExplorerFocus 中建立 ZIP、TAR、TAR.GZ 和 TAR.BZ2 壓縮檔</strong>：按右鍵即可，無需安裝其他程式，並與 WinZip、WinRAR 和 7-Zip 相容。裝有 WinRAR 時，也能建立 RAR。ZIP 和 RAR 可設定密碼（PREMIUM）。",
+  "f29_mark2": "ZIP · RAR · 7z · TAR · 複製出來 · 壓縮 · TAR.GZ · TAR.BZ2 · 密碼",
+  "f29_premium": "PREMIUM：建立帶密碼的 ZIP 和 RAR 壓縮檔 — RAR 還會鎖住檔名。不加密碼壓縮是免費的。",
+  "fim_p2": "在「圖片」選單中，現在可以<strong>將任意圖片旋轉任意角度</strong>，逐度調整，把歪斜的照片拉直，空白邊角也可以設為透明。 <strong>增強圖片</strong>（PREMIUM）：現成的濾鏡和色彩調整。副本儲存在原圖旁邊，原圖維持不變。",
+  "au_ep2": "或者一個內含語音的 EPUB 3，朗讀時句子會亮起，適用於能播放它的電子書閱讀器，例如 Thorium Reader（免費）。ExplorerFocus 也能播放自帶錄製語音的 EPUB。 DAISY 圖書以及 W3C 和 Readium 有聲書會被自動辨識為電子書：可以用書中自帶的錄製語音收聽，正在聽的內容會反白顯示。",
+  "pr_prem_groups3": "<h5>保險庫</h5><ul><li><strong>建立加密保險庫</strong> — 檔名和內容都加密，每個保險庫都有「Recycle Bin」（最多保留 30 天）。開啟保險庫免費</li></ul><h5>壓縮檔</h5><ul><li>建立帶密碼的 ZIP 和 RAR 壓縮檔 — RAR 還會鎖住檔名。不加密碼壓縮是免費的</li></ul><h5>聽寫</h5><ul><li><strong>字幕</strong> — 產生（一部影片或整部影集）、翻譯，以及在影片播放時即時顯示</li><li><strong>轉寫錄音</strong> — 輸出為文字、Word、PDF 或字幕 — 以及聽寫輸出為 Word、PDF 或譯成其他語言</li></ul><h5>遠端存取</h5><ul><li>多個連線和所有操作，以及連線到 WebDAV、Dropbox 和 OneDrive（免費版：一個 SFTP、FTP 或 FTPS 連線，僅能檢視）</li></ul><h5>錄製與掃描</h5><ul><li>螢幕錄製沒有浮水印、沒有 15 秒上限，而且有聲音（麥克風＋系統），並可加開場卡、結尾卡、文字橫幅和音樂</li><li>為影片錄旁白（voice over），以及攝影機錄影沒有浮水印</li><li>多頁掃描，支援自動送稿器（ADF），而且沒有浮水印</li></ul><h5>音訊</h5><ul><li>音量、標準化、變速不變調、淡入淡出、移除靜音和縮短停頓</li></ul><h5>影片</h5><ul><li>調整顏色、黑白、速度、淡入淡出和聲音；裁剪、鏡像和加上浮水印</li><li>轉換或縮小、製作 GIF、倒放、加入聲音或轉換為立體聲</li></ul><h5>圖片</h5><ul><li>遮蓋隱私內容（人臉、電子郵件、電話號碼、IBAN、稅號和卡號）、複製文字、拼接或拆分圖片、讓背景變透明，以及增強圖片（濾鏡、色彩）</li></ul><h5>PDF（合併和分割免費）</h5><ul><li><strong>整理頁面</strong> — 選取、調整順序、旋轉和移除 — 並轉成圖片；加密碼或移除密碼</li><li>辨識掃描 PDF 的文字，以及把圖片和 Word 檔案轉換為 PDF</li><li>翻譯整份 PDF，什麼都不會離開電腦</li></ul><h5>書籍</h5><ul><li><strong>完整的電子書閱讀器</strong> — EPUB、MOBI、AZW、AZW3、PRC、FB2 和漫畫（CBZ、CBR），含紙張和夜間紙張檢視</li><li>在 EPUB、PDF 和 FB2 之間轉換，把 MOBI、AZW、AZW3 和 PRC 轉成 EPUB，以及把漫畫轉成 PDF、EPUB 或 CBZ</li><li>翻譯整本書，什麼都不會離開電腦</li><li>把英文電子書或 PDF 做成有聲書——每章一個 MP3、一個 M4B，或內含語音的 EPUB——什麼都不會離開電腦</li></ul>"
 };

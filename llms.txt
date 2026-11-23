@@ -10,6 +10,11 @@
 - **Remote connections:** SFTP, FTP, WebDAV, Dropbox and OneDrive, in the same tree as local folders.
 - **Tools:** PDF (merge, split and more), images, video and audio, text recognition (OCR), transcription and dictation, and translation, all running on the computer.
 - **Read aloud and audiobooks:** English e-books and PDFs read aloud with 28 natural voices, American and British, with the sentence and the word highlighted, each book with its own speed, a sleep timer and marks (free). EPUB to audiobook: an MP3 per chapter with the cover, an M4B with chapters, or an EPUB 3 with the voice inside (PREMIUM; a sample of up to 3 minutes is free). Everything runs on the computer: the voices are downloaded once, with permission, and books are never uploaded.
+- **DAISY and audiobook formats:** DAISY 2.02 and DAISY 3 talking books (with text, or audio only) and W3C Audiobooks (.lpf) and Readium audiobooks (.audiobook) are recognised as e-books and play with their own recorded voice, with what is being heard highlighted (free).
+- **Compressed archives:** ZIP, RAR, 7z and TAR open like folders. ZIP, TAR, TAR.GZ and TAR.BZ2 archives are created from the right-click menu, with no other programs to install, and open in WinZip, WinRAR and 7-Zip; RAR too, with WinRAR installed. A password on ZIP (AES-256) and RAR is PREMIUM.
+- **Context menus:** the right-click menus in the tree and the list show the options in columns and, at the top, where the action takes place or how many items are selected.
+- **Images:** rotate any image by any angle, degree by degree, with the empty corners cropped or made transparent (free); enhance an image with filters, colour adjustments and a before-and-after comparison (PREMIUM).
+- **The browser of your choice:** web pages and internet shortcuts open in the browser you choose, in a normal or private window.
 - **Operations that say what is happening:** copies and moves show progress and explain why when something cannot be done.
 
 ## The essentials

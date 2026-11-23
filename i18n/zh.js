@@ -492,5 +492,16 @@ window.I18N.zh = {
   "vt_num3": "§ 04 · 保险库",
   "sc_num3": "§ 05 · 快捷键",
   "st_num3": "§ 06 · 技术栈",
-  "pr_num3": "§ 07 · 免费与高级版"
+  "pr_num3": "§ 07 · 免费与高级版",
+  "wn_menus": "🗂 右键菜单",
+  "wn_arquivos": "🗜 压缩文件",
+  "f37_num": "37 — 右键菜单",
+  "f37_h": "右键菜单，全新设计。",
+  "f37_p": "<strong>全面重新设计右键菜单</strong>：在树和列表中右键单击打开的菜单，现在选项分栏排列，顶部显示操作的位置。",
+  "f29_p2": "<strong>直接在 ExplorerFocus 中创建 ZIP、TAR、TAR.GZ 和 TAR.BZ2 压缩文件</strong>：右键即可，无需安装其他程序，并与 WinZip、WinRAR 和 7-Zip 兼容。装有 WinRAR 时，也可创建 RAR。ZIP 和 RAR 可设密码（PREMIUM）。",
+  "f29_mark2": "ZIP · RAR · 7z · TAR · 复制文件出来 · 压缩 · TAR.GZ · TAR.BZ2 · 密码",
+  "f29_premium": "PREMIUM：创建带密码的 ZIP 和 RAR 压缩文件 — RAR 还会锁住文件名。不加密码压缩是免费的。",
+  "fim_p2": "在“图片”菜单中，现在可以<strong>将任意图片旋转任意角度</strong>，逐度调整，把歪斜的照片拉直，空白边角也可以设为透明。 <strong>增强图片</strong>（PREMIUM）：现成的滤镜和色彩调整。副本保存在原图旁边，原图保持不变。",
+  "au_ep2": "或者一个内含语音的 EPUB 3，朗读时句子会亮起，适用于能播放它的电子书阅读器，例如 Thorium Reader（免费）。ExplorerFocus 也能播放自带录制语音的 EPUB。 DAISY 图书以及 W3C 和 Readium 有声书会被自动识别为电子书：可以用书中自带的录制语音收听，正在听的内容会高亮显示。",
+  "pr_prem_groups3": "<h5>保险库</h5><ul><li><strong>新建加密保险库</strong> — 文件名和内容都加密，每个保险库都有“Recycle Bin”（最多保留 30 天）。打开保险库免费</li></ul><h5>压缩文件</h5><ul><li>创建带密码的 ZIP 和 RAR 压缩文件 — RAR 还会锁住文件名。不加密码压缩是免费的</li></ul><h5>听写</h5><ul><li><strong>字幕</strong> — 生成（一个视频或整部剧集）、翻译，以及在视频播放时实时显示</li><li><strong>转写录音</strong> — 输出为文本、Word、PDF 或字幕 — 以及听写输出为 Word、PDF 或译成其他语言</li></ul><h5>远程访问</h5><ul><li>多个连接和所有操作，以及连接 WebDAV、Dropbox 和 OneDrive（免费版：一个 SFTP、FTP 或 FTPS 连接，仅可查看）</li></ul><h5>录制与扫描</h5><ul><li>录屏无水印、无 15 秒限制，带声音（麦克风 + 系统），并可加开场卡、结尾卡、文字横幅和音乐</li><li>为视频配旁白（配音），以及摄像头录制无水印</li><li>多页扫描，支持送稿器（ADF），且无水印</li></ul><h5>音频</h5><ul><li>音量、标准化、变速不变调、淡入淡出、去除静音和缩短停顿</li></ul><h5>视频</h5><ul><li>调整颜色、黑白、速度、淡入淡出和声音；裁剪、镜像和加水印</li><li>转换或缩小、制作 GIF、倒放、添加声音或转换为立体声</li></ul><h5>图片</h5><ul><li>遮盖隐私内容（人脸、电子邮件、电话号码、IBAN、税号和卡号）、复制文字、拼接或拆分图片、让背景变透明，以及增强图片（滤镜、色彩）</li></ul><h5>PDF（合并和拆分免费）</h5><ul><li><strong>整理页面</strong> — 选择、调整顺序、旋转和移除 — 并转成图片；加密码或移除密码</li><li>识别扫描 PDF 的文字，以及把图片和 Word 文件转换为 PDF</li><li>翻译整份 PDF，什么都不会离开电脑</li></ul><h5>图书</h5><ul><li><strong>完整阅读器</strong> — EPUB、MOBI、AZW、AZW3、PRC、FB2 和漫画（CBZ、CBR），含纸张和夜间纸张视图</li><li>在 EPUB、PDF 和 FB2 之间转换，把 MOBI、AZW、AZW3 和 PRC 转成 EPUB，以及把漫画转成 PDF、EPUB 或 CBZ</li><li>翻译整本书，什么都不会离开电脑</li><li>把英文电子书或 PDF 做成有声书——每章一个 MP3、一个 M4B，或内含语音的 EPUB——什么都不会离开电脑</li></ul>"
 };

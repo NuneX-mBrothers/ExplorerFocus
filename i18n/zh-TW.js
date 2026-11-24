@@ -520,5 +520,6 @@ window.I18N["zh-TW"] = {
   "f38_h": "Windows 隱藏的東西，一目了然。",
   "f38_p": "<strong>我的 Windows 秘密</strong>：底部列中「我的電腦」和「我的工作」之間的新連結，帶有「新」標記，顯示 Windows 在這台電腦上把東西放在哪裡。%APPDATA%、%LOCALAPPDATA% 和其他環境變數背後的隱藏資料夾，每個都附有完整路徑和用途，按一下即可開啟；在「檢視所有變數」中，可以看到所有環境變數及其值。",
   "f38_p2": "<strong>Windows 保存了關於你的哪些資訊</strong>（PREMIUM），在同一個視窗中：你在「執行」和檔案總管網址列中輸入的內容、最近的檔案、你複製的內容（包括圖片）、Windows 記得的 USB 隨身碟、最近開啟的程式、已刪除相片的縮圖、儲存的通知、每個磁碟機的資源回收筒和暫存檔案，並附有手動前往的方法。其中一部分可以刪除；暫存檔案和資源回收筒只刪除 7 天前的內容。",
-  "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH"
+  "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH",
+  "f38_p3": "只要知道怎麼找到，這些都不難取得，更不是不可能。最大的好處是，這裡把它們集中在一起，一鍵即達。"
 };

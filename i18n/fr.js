@@ -516,5 +516,6 @@ window.I18N.fr = {
   "f38_h": "Ce que Windows cache, au grand jour.",
   "f38_p": "<strong>Les secrets de mon Windows</strong>, un nouveau lien dans la barre du bas, entre « Ma machine » et « Mes tâches », marqué « Nouveau » : là où Windows range les choses sur votre ordinateur. Les dossiers cachés derrière %APPDATA%, %LOCALAPPDATA% et les autres variables d'environnement, chacun avec son chemin complet et son rôle, à un clic ; et, dans « Voir toutes les variables », toutes les variables d'environnement avec leur valeur.",
   "f38_p2": "<strong>Ce que Windows garde sur vous</strong> (PREMIUM), dans la même fenêtre : ce que vous avez tapé dans Exécuter et dans la barre de l'Explorateur de fichiers, les fichiers récents, ce que vous avez copié (images comprises), les clés USB dont il se souvient, les programmes ouverts récemment, les miniatures des photos supprimées, les notifications conservées, la Corbeille de chaque lecteur et les fichiers temporaires, avec le chemin pour y accéder à la main. Une partie peut être supprimée ; les fichiers temporaires et la Corbeille, seulement ce qui a plus de 7 jours.",
-  "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH"
+  "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH",
+  "f38_p3": "Rien de tout cela n'est impossible ni difficile à obtenir, à condition de savoir comment y accéder. Le grand avantage, c'est qu'ici tout est réuni, à un clic."
 };

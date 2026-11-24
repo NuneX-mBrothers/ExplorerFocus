@@ -516,5 +516,6 @@ window.I18N.de = {
   "f38_h": "Was Windows verbirgt, auf einen Blick.",
   "f38_p": "<strong>Meine Windows-Geheimnisse</strong>, ein neuer Link in der unteren Leiste, zwischen „Mein Rechner“ und „Meine Aufgaben“, markiert mit „Neu“: wo Windows auf Ihrem Computer Dinge ablegt. Die versteckten Ordner hinter %APPDATA%, %LOCALAPPDATA% und den anderen Umgebungsvariablen, jeder mit vollständigem Pfad und seinem Zweck, mit einem Klick erreichbar; und unter „Alle Variablen anzeigen“ alle Umgebungsvariablen mit ihrem Wert.",
   "f38_p2": "<strong>Was Windows über Sie speichert</strong> (PREMIUM), im selben Fenster: was Sie in „Ausführen“ und in der Adressleiste des Datei-Explorers eingegeben haben, zuletzt verwendete Dateien, was Sie kopiert haben (Bilder eingeschlossen), die USB-Sticks, an die sich Windows erinnert, kürzlich geöffnete Programme, die Miniaturansichten gelöschter Fotos, gespeicherte Benachrichtigungen, der Papierkorb jedes Laufwerks und temporäre Dateien, mit dem Weg, um von Hand dorthin zu gelangen. Einiges davon lässt sich löschen; temporäre Dateien und der Papierkorb nur, was älter als 7 Tage ist.",
-  "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH"
+  "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH",
+  "f38_p3": "Nichts davon ist unmöglich oder schwer zu bekommen, wenn man weiß, wie man dorthin gelangt. Der große Vorteil: Hier ist alles an einem Ort, nur einen Klick entfernt."
 };

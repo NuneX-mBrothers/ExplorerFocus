@@ -520,5 +520,6 @@ window.I18N.br = {
   "f38_h": "O que o Windows esconde, à vista.",
   "f38_p": "<strong>Os segredos do meu Windows</strong>, um link novo na barra de baixo, entre “A minha máquina” e “Minhas tarefas”, com a marca “Novo”: onde o Windows guarda as coisas neste computador. As pastas ocultas por trás da %APPDATA%, da %LOCALAPPDATA% e das outras variáveis de ambiente, cada uma com o caminho completo e para que serve, a um clique; e, em “Ver todas as variáveis”, todas as variáveis de ambiente, com o valor de cada uma.",
   "f38_p2": "<strong>O que o Windows guarda sobre você</strong> (PREMIUM), na mesma janela: o que você digitou no Executar e na barra do Explorador de Arquivos, os arquivos recentes, o que você copiou (imagens incluídas), os pen drives que o Windows lembra, os programas abertos recentemente, as miniaturas das fotos apagadas, as notificações guardadas, a Lixeira de cada unidade e os arquivos temporários, com o caminho para chegar lá manualmente. Parte disso pode ser apagada; os temporários e a Lixeira, só o que tem mais de 7 dias.",
-  "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH"
+  "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH",
+  "f38_p3": "Nada disso é impossível nem difícil de obter, desde que se saiba como chegar lá. A grande vantagem é que aqui está tudo junto, a um clique."
 };

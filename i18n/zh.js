@@ -516,5 +516,6 @@ window.I18N.zh = {
   "f38_h": "Windows 隐藏的东西，一目了然。",
   "f38_p": "<strong>我的 Windows 秘密</strong>：底部栏中“我的电脑”和“我的任务”之间的新链接，带有“新”标记，显示 Windows 在这台电脑上把东西放在哪里。%APPDATA%、%LOCALAPPDATA% 和其他环境变量背后的隐藏文件夹，每个都附有完整路径和用途，点击即可打开；在“查看所有变量”中，可以看到所有环境变量及其值。",
   "f38_p2": "<strong>Windows 保存了关于你的哪些信息</strong>（PREMIUM），在同一个窗口中：你在“运行”和文件资源管理器地址栏中输入的内容、最近的文件、你复制的内容（包括图片）、Windows 记得的 U 盘、最近打开的程序、已删除照片的缩略图、保存的通知、每个磁盘的回收站和临时文件，并附有手动前往的方法。其中一部分可以删除；临时文件和回收站只删除 7 天前的内容。",
-  "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH"
+  "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH",
+  "f38_p3": "只要知道怎么找到，这些都不难获得，更不是不可能。最大的好处是，这里把它们集中在一起，一键即达。"
 };

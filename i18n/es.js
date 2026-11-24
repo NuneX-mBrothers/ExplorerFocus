@@ -517,5 +517,5 @@ window.I18N.es = {
   "f38_p": "<strong>Los secretos de mi Windows</strong>, un enlace nuevo en la barra de abajo, entre «Mi equipo» y «Mis tareas», con la marca «Nuevo»: dónde guarda Windows las cosas en tu ordenador. Las carpetas ocultas detrás de %APPDATA%, %LOCALAPPDATA% y las demás variables de entorno, cada una con su ruta completa y para qué sirve, a un clic; y, en «Ver todas las variables», todas las variables de entorno con su valor.",
   "f38_p2": "<strong>Lo que Windows guarda sobre ti</strong> (PREMIUM), en la misma ventana: lo que escribiste en Ejecutar y en la barra del Explorador de archivos, los archivos recientes, lo que copiaste (imágenes incluidas), las memorias USB que recuerda, los programas abiertos hace poco, las miniaturas de las fotos borradas, las notificaciones guardadas, la Papelera de cada unidad y los archivos temporales, con el camino para llegar a mano. Parte de ello se puede borrar; los temporales y la Papelera, solo lo que tiene más de 7 días.",
   "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH",
-  "f38_p3": "Nada de esto es imposible de encontrar, si se conoce el camino. La ventaja es que aquí está todo junto, a un clic."
+  "f38_p3": "Nada de esto es imposible de encontrar, si se conoce el camino. La ventaja es que aquí está todo junto, a un clic, para cualquiera."
 };

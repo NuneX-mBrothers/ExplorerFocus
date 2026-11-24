@@ -517,5 +517,5 @@ window.I18N.pt = {
   "f38_p": "<strong>Os segredos do meu Windows</strong>, um link novo na barra de baixo, entre «A minha máquina» e «As minhas tarefas», com a marca «Novo»: onde o Windows guarda as coisas neste computador. As pastas escondidas por trás da %APPDATA%, da %LOCALAPPDATA% e das outras variáveis de ambiente, cada uma com o caminho completo e para que serve, a um clique; e, em «Ver todas as variáveis», todas as variáveis de ambiente, com o valor de cada uma.",
   "f38_p2": "<strong>O que o Windows guarda sobre quem o usa</strong> (PREMIUM), na mesma janela: o que se escreveu no Executar e na barra do Explorador, os ficheiros recentes, o que se copiou (imagens incluídas), as pens USB que recorda, os programas abertos há pouco, as miniaturas das fotografias apagadas, as notificações guardadas, a Reciclagem de cada disco e os ficheiros temporários, com o caminho para lá chegar à mão. Parte disso pode apagar-se; os temporários e a Reciclagem, só o que tem mais de 7 dias.",
   "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH",
-  "f38_p3": "Nada disto é impossível de encontrar, para quem souber o caminho. A vantagem é que aqui está tudo junto, a um clique."
+  "f38_p3": "Nada disto é impossível de encontrar, para quem souber o caminho. A vantagem é que aqui está tudo junto, a um clique, para qualquer pessoa."
 };

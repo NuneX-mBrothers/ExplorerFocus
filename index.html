@@ -94,6 +94,7 @@
     "Redesigned right-click context menus in the tree and the list: the options in columns, with where the action takes place at the top",
     "Rotate any image by any angle, degree by degree, with the corners cropped or transparent; enhance an image with filters and colour adjustments (PREMIUM)",
     "Web pages and internet shortcuts open in the browser of your choice, in a normal or private window",
+    "My Windows secrets: the hidden folders behind %APPDATA%, %LOCALAPPDATA% and the other environment variables, with their full paths, and every environment variable with its value (free); what Windows keeps about you, such as what was typed in Run, recent files, what was copied, the USB drives it remembers, the thumbnails of deleted photos and saved notifications, with the way to get there by hand, and some of it can be deleted (PREMIUM)",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://intrepidparallel.com/explorerfocus/",
@@ -1867,120 +1868,23 @@
     <!-- ⛔ 23/11, a 2.2.8 (o cartão abre com os menus de contexto e o Comprimir): entram os dois à cabeça; saem o Vídeo e o
          «Ouvir e escrever». Medido no Changelog.cs do 843a2c42: o Vídeo entrou no cartão pela última vez na 2.1.6 (Cl216JuntarVideos); o «Ouvir e escrever» na 2.1.5 (Cl215TraduzirLegendasEmLote).
          O DAISY entra pelos Audiolivros, que ficam. -->
+    <!-- 24/11/2026, o João: «As pills têm de ter coisas mais diferentes entre si.» Entram os segredos do Windows (2.2.9) e
+         as legendas (voltam); saem os e-books e o PDF, que repetiam a leitura ao lado dos audiolivros. -->
+    <a href="#feat38" data-i18n="wn_segredos">🗝 My Windows secrets</a>
     <a href="#feat37" data-i18n="wn_menus">🗂 Context menus</a>
     <a href="#feat29" data-i18n="wn_arquivos">🗜 Compressed archives</a>
+    <a href="#ouvir" data-i18n="wn_legendas">🎬 Subtitles</a>
     <a href="#audiobooks" data-i18n="wn_audiolivros">🎧 Audiobooks</a>
     <a href="#vault" data-i18n="wn_vault">🔒 The vaults</a>
-    <a href="#feat24" data-i18n="wn_livros">📚 E-books</a>
-    <a href="#feat34" data-i18n="wn_pdf_211">📄 PDF</a>
   </nav>
   <span class="whatsnew-ver">v2.2.9</span>
 </div>
-
-<!-- ══════════════════════════════════════════════════════════════════════
-     AUDIOLIVROS — a versão dos audiolivros (17/11/2026). O destaque pedido pelo João: ouvir é grátis; fazer o audiolivro
-     é PREMIUM. ⛔ Nunca «o único», nunca «exato» (o realce da palavra é estimado), nunca mais do que 2× (o João, 16/11).
-     ⛔ Nada sobre leitores de telefone que toquem o EPUB com voz (o da Librera não toca: o João, 16/11). Molde: o da
-     secção «Ouvir e escrever».
-     ══════════════════════════════════════════════════════════════════════ -->
-<span id="audiolivros"></span><section class="vault ouvir" id="audiobooks">
-  <div class="vault-head">
-    <div>
-      <div class="section-num"><span data-i18n="au_num">§ 01 · Audiobooks</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-      <h2 data-i18n-html="au_title">Turn your e-books into <em>audiobooks</em>.</h2>
-      <p class="vault-lead" data-i18n-html="au_blurb2">The audiobooks you make are ordinary audio files: listen to them wherever you like, in the car, on your phone or at home. ExplorerFocus reads English e-books and PDFs aloud with 28 natural voices, right on your PC, and your books are never uploaded.</p>
-    </div>
-  </div>
-  <div class="vault-grid">
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_now_ic">LISTEN NOW</div>
-      <h4 data-i18n="au_now_h">In a few seconds, free.</h4>
-      <p data-i18n-html="au_now">Select a book and, in the <em>E-books</em> menu, choose <em>Listen to this book…</em> (PDFs too, in the <em>PDF</em> menu). The sentence and the word being heard are highlighted. Click any sentence to start from there; next time it carries on where you stopped.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_ply_ic">THE PLAYER</div>
-      <h4 data-i18n="au_ply_h">What audiobook apps have.</h4>
-      <p data-i18n-html="au_ply">Each book keeps its own speed, up to 2×, and shows the time left in the chapter and in the book. A sleep timer, marks with notes, chapter skipping, the media keys, and a button that takes you back after a jump.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_mk_ic">MAKE AN AUDIOBOOK</div>
-      <h4 data-i18n="au_mk_h">For the phone and the car.</h4>
-      <p data-i18n-html="au_mk"><em>Make an audiobook…</em> records an MP3 per chapter, with the cover, for any player, or an M4B with chapters, the audiobook format. Before it starts, it shows how long the audio will be and how long it will take on your computer; it can stop and carry on later.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_ep_ic">READ AND LISTEN</div>
-      <h4 data-i18n="au_ep_h">The text and the voice together.</h4>
-      <p data-i18n-html="au_ep2">Or an EPUB 3 with the voice inside, with the sentence lit up as it is read, for e-book readers that play it, such as Thorium Reader (free). ExplorerFocus also plays EPUBs that already come with a recorded voice. DAISY books and W3C and Readium audiobooks, automatically recognised as e-books: they play with their own recorded voice, highlighting what is being heard.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_vz_ic">THE VOICES</div>
-      <h4 data-i18n="au_vz_h">28, American and British.</h4>
-      <p data-i18n-html="au_vz">Women and men, with a sample of each before you choose, in the settings, under <em>Voices</em>.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_loc_ic">ON THE COMPUTER ITSELF</div>
-      <h4 data-i18n="au_loc_h">Your books stay with you.</h4>
-      <p data-i18n-html="au_loc">The voices are downloaded once, only if you say yes. After that, no internet is needed, and your books never leave your PC.</p>
-    </div>
-  </div>
-  <p class="vault-note" data-i18n-html="au_tiers"><a class="free-word" href="#free">Free</a>: listening to e-books and PDFs, with everything the player has, and a sample of up to 3 minutes as an MP3. <a class="prem-word" href="#premium">PREMIUM</a>: making the whole audiobook — the MP3s, the M4B and the read-and-listen EPUB. English voices; e-books without DRM only, for your own use.</p>
-</section>
-
-<!-- ══════════════════════════════════════════════════════════════════════
-     OUVIR E ESCREVER — a 2.1.2 (20/10/2026). Textos aprovados.
-     ⛔ O nome é o da APP («Ouvir e escrever — como funciona», a janela PREMIUM, a oferta do GOTD): o site e a app dizem
-       o mesmo. O «tudo» vai no título. Nunca «traduções de qualidade»: diz-se o que faz, e lembra-se que se revê.
-     ⛔ Grátis só o ditado para .txt; o resto é PREMIUM (gratis-ou-premium-ferramentas.md). O ouvido e o tradutor vêm
-       uma vez, com autorização (a privacy.html diz de onde). Molde: o da secção do cofre, sem o desenho.
-     ══════════════════════════════════════════════════════════════════════ -->
-<section class="vault ouvir" id="ouvir">
-  <div class="vault-head">
-    <div>
-      <div class="section-num"><span data-i18n="ou_num2">§ 02 · Listen and write</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-      <h2 data-i18n-html="ou_title">One translator for <em>everything</em>.</h2>
-      <p class="vault-lead" data-i18n-html="ou_blurb">ExplorerFocus now listens: it writes down what is said in audio and video files, and translates what is said, subtitles, a video as it plays, PDFs and books. All on the computer itself. The translation is automatic, and worth reviewing.</p>
-    </div>
-  </div>
-  <div class="vault-grid">
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_sub_ic">SUBTITLES</div>
-      <h4 data-i18n="ou_sub_h">In the language you want.</h4>
-      <p data-i18n-html="ou_sub"><em>Create subtitles…</em> listens to the video and writes the subtitles with their timings, in the spoken language or translated. <em>Translate subtitles…</em> turns an .srt into another language. They are saved next to the video, and the preview and players such as VLC find them on their own.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_live_ic">LIVE</div>
-      <h4 data-i18n="ou_live_h">While the film plays.</h4>
-      <p data-i18n-html="ou_live">In the preview, a film in another language gets translated subtitles without stopping. Also inside a vault.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_lote_ic">IN BATCH</div>
-      <h4 data-i18n="ou_lote_h">A whole series at once.</h4>
-      <p data-i18n-html="ou_lote"><em>Create subtitles in batch…</em> subtitles every episode, in English and in the chosen language, while you do something else. Stopping halfway loses nothing: it carries on from where it stopped.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_trn_ic">TRANSCRIBE AND DICTATE</div>
-      <h4 data-i18n="ou_trn_h">From sound to text.</h4>
-      <p data-i18n-html="ou_trn">The text of a recording, as text, Word, PDF or subtitles — even when more than one language is spoken. And on the 🎤, <em>Record and transcribe</em> writes down what is said, as you speak.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_liv_ic">PDF AND BOOKS</div>
-      <h4 data-i18n="ou_liv_h">A whole book in another language.</h4>
-      <p data-i18n-html="ou_liv">A PDF, scanned ones too, or a book in EPUB, PDF or FB2, translated into another language. A long job can be paused and continued later.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_loc_ic">ON THE COMPUTER ITSELF</div>
-      <h4 data-i18n="ou_loc_h">Nothing leaves it.</h4>
-      <p data-i18n-html="ou_loc">The ear and the translator come once, only with permission, and serve every language. After that, the sound, the text and the translations stay on the computer, and no internet is needed. With a graphics card, much faster.</p>
-    </div>
-  </div>
-  <p class="vault-note" data-i18n-html="ou_tiers"><a class="free-word" href="#free">Free</a>: dictating to .txt, on the 🎤. <a class="prem-word" href="#premium">PREMIUM</a>: subtitles, live subtitles, the batch, transcribing to Word, PDF and subtitles, and every translation.</p>
-</section>
 
 <!-- CATALOG -->
 <div id="features"></div>
 <div class="section-header">
   <div>
-    <div class="section-num" data-i18n="cat_num3">§ 03 · Catalog</div>
+    <div class="section-num" data-i18n="cat_num4">§ 01 · Catalog</div>
     <h2 class="section-title" data-i18n-html="cat_title">What <em>really</em><br>makes a difference.</h2>
   </div>
   <p class="section-blurb" data-i18n="cat_blurb">Each feature was added to answer a concrete problem in daily work over a known file tree. None is there for show. Almost all can be toggled on or off.</p>
@@ -2390,6 +2294,15 @@
     <p data-i18n-html="f37_p"><strong>Complete redesign of the context menus</strong>, the ones a right-click opens in the tree and the list: the options in columns and, at the top, where the action takes place.</p>
   </div>
 
+  <!-- 24/11/2026: a 2.2.9, «My Windows secrets» (os textos do cartão da app, Cl229Segredos e Cl229SegredosPremium). -->
+  <div class="feat w12" id="feat38">
+    <div class="num"><span data-i18n="f38_num">38 — MY WINDOWS SECRETS</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f38_h">What Windows hides, in plain sight.</h3>
+    <p data-i18n-html="f38_p"><strong>My Windows secrets</strong>, a new link in the bottom bar, between “My machine” and “My tasks”, marked “New”: where Windows keeps things on your computer. The hidden folders behind %APPDATA%, %LOCALAPPDATA% and the other environment variables, each with its full path and what it's for, one click away; and, in “Show all variables”, every environment variable with its value.</p>
+    <p class="feat-p2" data-i18n-html="f38_p2"><strong>What Windows keeps about you</strong> (PREMIUM), in the same window: what you typed in Run and in File Explorer's address bar, recent files, what you copied (pictures included), the USB drives it remembers, the programs you opened recently, the thumbnails of deleted photos, saved notifications, each drive's Recycle Bin and temporary files, with the way to get there by hand. Some of it can be deleted; temporary files and the Recycle Bin only when older than 7 days.</p>
+    <div class="feat-mark" data-i18n="f38_mark">%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH</div>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -2410,7 +2323,7 @@
 <section class="vault" id="vault">
   <div class="vault-head">
     <div>
-      <div class="section-num"><span data-i18n="vt_num3">§ 04 · The vault</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <div class="section-num"><span data-i18n="vt_num4">§ 02 · The vault</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
       <h2 data-i18n-html="vt_title">Encrypted, and still just <em>folders</em>.</h2>
 
       <!-- spec §0 «O que é» -->
@@ -2606,6 +2519,105 @@
 
 
   <p class="vault-note" data-i18n-html="vt_premium"><a class="prem-word" href="#premium">PREMIUM</a> — creating vaults. Opening them is free, including vaults made elsewhere.</p>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     OUVIR E ESCREVER — a 2.1.2 (20/10/2026). Textos aprovados.
+     ⛔ O nome é o da APP («Ouvir e escrever — como funciona», a janela PREMIUM, a oferta do GOTD): o site e a app dizem
+       o mesmo. O «tudo» vai no título. Nunca «traduções de qualidade»: diz-se o que faz, e lembra-se que se revê.
+     ⛔ Grátis só o ditado para .txt; o resto é PREMIUM (gratis-ou-premium-ferramentas.md). O ouvido e o tradutor vêm
+       uma vez, com autorização (a privacy.html diz de onde). Molde: o da secção do cofre, sem o desenho.
+     ══════════════════════════════════════════════════════════════════════ -->
+<section class="vault ouvir" id="ouvir">
+  <div class="vault-head">
+    <div>
+      <div class="section-num"><span data-i18n="ou_num3">§ 03 · Listen and write</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <h2 data-i18n-html="ou_title">One translator for <em>everything</em>.</h2>
+      <p class="vault-lead" data-i18n-html="ou_blurb">ExplorerFocus now listens: it writes down what is said in audio and video files, and translates what is said, subtitles, a video as it plays, PDFs and books. All on the computer itself. The translation is automatic, and worth reviewing.</p>
+    </div>
+  </div>
+  <div class="vault-grid">
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_sub_ic">SUBTITLES</div>
+      <h4 data-i18n="ou_sub_h">In the language you want.</h4>
+      <p data-i18n-html="ou_sub"><em>Create subtitles…</em> listens to the video and writes the subtitles with their timings, in the spoken language or translated. <em>Translate subtitles…</em> turns an .srt into another language. They are saved next to the video, and the preview and players such as VLC find them on their own.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_live_ic">LIVE</div>
+      <h4 data-i18n="ou_live_h">While the film plays.</h4>
+      <p data-i18n-html="ou_live">In the preview, a film in another language gets translated subtitles without stopping. Also inside a vault.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_lote_ic">IN BATCH</div>
+      <h4 data-i18n="ou_lote_h">A whole series at once.</h4>
+      <p data-i18n-html="ou_lote"><em>Create subtitles in batch…</em> subtitles every episode, in English and in the chosen language, while you do something else. Stopping halfway loses nothing: it carries on from where it stopped.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_trn_ic">TRANSCRIBE AND DICTATE</div>
+      <h4 data-i18n="ou_trn_h">From sound to text.</h4>
+      <p data-i18n-html="ou_trn">The text of a recording, as text, Word, PDF or subtitles — even when more than one language is spoken. And on the 🎤, <em>Record and transcribe</em> writes down what is said, as you speak.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_liv_ic">PDF AND BOOKS</div>
+      <h4 data-i18n="ou_liv_h">A whole book in another language.</h4>
+      <p data-i18n-html="ou_liv">A PDF, scanned ones too, or a book in EPUB, PDF or FB2, translated into another language. A long job can be paused and continued later.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_loc_ic">ON THE COMPUTER ITSELF</div>
+      <h4 data-i18n="ou_loc_h">Nothing leaves it.</h4>
+      <p data-i18n-html="ou_loc">The ear and the translator come once, only with permission, and serve every language. After that, the sound, the text and the translations stay on the computer, and no internet is needed. With a graphics card, much faster.</p>
+    </div>
+  </div>
+  <p class="vault-note" data-i18n-html="ou_tiers"><a class="free-word" href="#free">Free</a>: dictating to .txt, on the 🎤. <a class="prem-word" href="#premium">PREMIUM</a>: subtitles, live subtitles, the batch, transcribing to Word, PDF and subtitles, and every translation.</p>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     AUDIOLIVROS — a versão dos audiolivros (17/11/2026). O destaque pedido pelo João: ouvir é grátis; fazer o audiolivro
+     é PREMIUM. ⛔ Nunca «o único», nunca «exato» (o realce da palavra é estimado), nunca mais do que 2× (o João, 16/11).
+     ⛔ Nada sobre leitores de telefone que toquem o EPUB com voz (o da Librera não toca: o João, 16/11). Molde: o da
+     secção «Ouvir e escrever».
+     ══════════════════════════════════════════════════════════════════════ -->
+<span id="audiolivros"></span><section class="vault ouvir" id="audiobooks">
+  <div class="vault-head">
+    <div>
+      <div class="section-num"><span data-i18n="au_num2">§ 04 · Audiobooks</span><a class="badge-free" href="#free" data-i18n="badge_free">Free</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <h2 data-i18n-html="au_title">Turn your e-books into <em>audiobooks</em>.</h2>
+      <p class="vault-lead" data-i18n-html="au_blurb2">The audiobooks you make are ordinary audio files: listen to them wherever you like, in the car, on your phone or at home. ExplorerFocus reads English e-books and PDFs aloud with 28 natural voices, right on your PC, and your books are never uploaded.</p>
+    </div>
+  </div>
+  <div class="vault-grid">
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_now_ic">LISTEN NOW</div>
+      <h4 data-i18n="au_now_h">In a few seconds, free.</h4>
+      <p data-i18n-html="au_now">Select a book and, in the <em>E-books</em> menu, choose <em>Listen to this book…</em> (PDFs too, in the <em>PDF</em> menu). The sentence and the word being heard are highlighted. Click any sentence to start from there; next time it carries on where you stopped.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_ply_ic">THE PLAYER</div>
+      <h4 data-i18n="au_ply_h">What audiobook apps have.</h4>
+      <p data-i18n-html="au_ply">Each book keeps its own speed, up to 2×, and shows the time left in the chapter and in the book. A sleep timer, marks with notes, chapter skipping, the media keys, and a button that takes you back after a jump.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_mk_ic">MAKE AN AUDIOBOOK</div>
+      <h4 data-i18n="au_mk_h">For the phone and the car.</h4>
+      <p data-i18n-html="au_mk"><em>Make an audiobook…</em> records an MP3 per chapter, with the cover, for any player, or an M4B with chapters, the audiobook format. Before it starts, it shows how long the audio will be and how long it will take on your computer; it can stop and carry on later.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_ep_ic">READ AND LISTEN</div>
+      <h4 data-i18n="au_ep_h">The text and the voice together.</h4>
+      <p data-i18n-html="au_ep2">Or an EPUB 3 with the voice inside, with the sentence lit up as it is read, for e-book readers that play it, such as Thorium Reader (free). ExplorerFocus also plays EPUBs that already come with a recorded voice. DAISY books and W3C and Readium audiobooks, automatically recognised as e-books: they play with their own recorded voice, highlighting what is being heard.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_vz_ic">THE VOICES</div>
+      <h4 data-i18n="au_vz_h">28, American and British.</h4>
+      <p data-i18n-html="au_vz">Women and men, with a sample of each before you choose, in the settings, under <em>Voices</em>.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_loc_ic">ON THE COMPUTER ITSELF</div>
+      <h4 data-i18n="au_loc_h">Your books stay with you.</h4>
+      <p data-i18n-html="au_loc">The voices are downloaded once, only if you say yes. After that, no internet is needed, and your books never leave your PC.</p>
+    </div>
+  </div>
+  <p class="vault-note" data-i18n-html="au_tiers"><a class="free-word" href="#free">Free</a>: listening to e-books and PDFs, with everything the player has, and a sample of up to 3 minutes as an MP3. <a class="prem-word" href="#premium">PREMIUM</a>: making the whole audiobook — the MP3s, the M4B and the read-and-listen EPUB. English voices; e-books without DRM only, for your own use.</p>
 </section>
 
 <!-- SHORTCUTS -->

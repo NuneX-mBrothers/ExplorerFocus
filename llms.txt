@@ -15,6 +15,7 @@
 - **Context menus:** the right-click menus in the tree and the list show the options in columns and, at the top, where the action takes place or how many items are selected.
 - **Images:** rotate any image by any angle, degree by degree, with the empty corners cropped or made transparent (free); enhance an image with filters, colour adjustments and a before-and-after comparison (PREMIUM).
 - **The browser of your choice:** web pages and internet shortcuts open in the browser you choose, in a normal or private window.
+- **My Windows secrets:** where Windows keeps things on the computer: the hidden folders behind %APPDATA%, %LOCALAPPDATA% and the other environment variables, each with its full path and what it is for, and every environment variable with its value (free). What Windows keeps about the user (what was typed in Run, the paths typed in File Explorer, recent files, what was copied, the USB drives it remembers, recently opened programs, the thumbnails of deleted photos, saved notifications, each drive's Recycle Bin and temporary files), with the way to get there by hand; some of it can be deleted, temporary files and the Recycle Bin only when older than 7 days (PREMIUM).
 - **Operations that say what is happening:** copies and moves show progress and explain why when something cannot be done.
 
 ## The essentials

@@ -517,5 +517,10 @@ window.I18N.fr = {
   "f38_p": "<strong>Les secrets de mon Windows</strong>, un nouveau lien dans la barre du bas, entre « Ma machine » et « Mes tâches », marqué « Nouveau » : là où Windows range les choses sur votre ordinateur. Les dossiers cachés derrière %APPDATA%, %LOCALAPPDATA% et les autres variables d'environnement, chacun avec son chemin complet et son rôle, à un clic ; et, dans « Voir toutes les variables », toutes les variables d'environnement avec leur valeur.",
   "f38_p2": "<strong>Ce que Windows garde sur vous</strong> (PREMIUM), dans la même fenêtre : ce que vous avez tapé dans Exécuter et dans la barre de l'Explorateur de fichiers, les fichiers récents, ce que vous avez copié (images comprises), les clés USB dont il se souvient, les programmes ouverts récemment, les miniatures des photos supprimées, les notifications conservées, la Corbeille de chaque lecteur et les fichiers temporaires, avec le chemin pour y accéder à la main. Une partie peut être supprimée ; les fichiers temporaires et la Corbeille, seulement ce qui a plus de 7 jours.",
   "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH",
-  "f38_p3": "Rien de tout cela n'est introuvable, pour qui connaît le chemin. L'avantage, c'est qu'ici tout est réuni, à un clic, pour tout le monde."
+  "f38_p3": "Rien de tout cela n'est introuvable, pour qui connaît le chemin. L'avantage, c'est qu'ici tout est réuni, à un clic, pour tout le monde.",
+  "pr_plan_emp": "Entreprises, avec le logo de l'entreprise (50 ordinateurs ou plus)",
+  "pr_p_emp": "<a href=\"#companies\">Sur devis</a>",
+  "pr_emp_h": "🏢 ExplorerFocus avec la marque de votre entreprise",
+  "pr_emp_p": "Pour les entreprises de 50 ordinateurs ou plus, ExplorerFocus peut devenir l'explorateur de fichiers de l'entreprise elle-même : le logo de l'entreprise prend la place de « ExplorerFocus 2 ». Le reste du programme ne change pas : les mêmes fonctions et les mêmes mises à jour. Les licences se comptent par ordinateur, et ce n'est pas un achat en ligne.",
+  "pr_emp_fecho": "Demandez-nous un devis pour votre entreprise, en indiquant sur combien d'ordinateurs vous voulez utiliser ExplorerFocus, et nous vous l'enverrons personnalisé par e-mail."
 };

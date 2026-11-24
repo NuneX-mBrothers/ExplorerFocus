@@ -521,5 +521,10 @@ window.I18N.br = {
   "f38_p": "<strong>Os segredos do meu Windows</strong>, um link novo na barra de baixo, entre “A minha máquina” e “Minhas tarefas”, com a marca “Novo”: onde o Windows guarda as coisas neste computador. As pastas ocultas por trás da %APPDATA%, da %LOCALAPPDATA% e das outras variáveis de ambiente, cada uma com o caminho completo e para que serve, a um clique; e, em “Ver todas as variáveis”, todas as variáveis de ambiente, com o valor de cada uma.",
   "f38_p2": "<strong>O que o Windows guarda sobre você</strong> (PREMIUM), na mesma janela: o que você digitou no Executar e na barra do Explorador de Arquivos, os arquivos recentes, o que você copiou (imagens incluídas), os pen drives que o Windows lembra, os programas abertos recentemente, as miniaturas das fotos apagadas, as notificações guardadas, a Lixeira de cada unidade e os arquivos temporários, com o caminho para chegar lá manualmente. Parte disso pode ser apagada; os temporários e a Lixeira, só o que tem mais de 7 dias.",
   "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH",
-  "f38_p3": "Nada disso é impossível de encontrar, para quem conhece o caminho. A vantagem é que aqui está tudo junto, a um clique, para qualquer pessoa."
+  "f38_p3": "Nada disso é impossível de encontrar, para quem conhece o caminho. A vantagem é que aqui está tudo junto, a um clique, para qualquer pessoa.",
+  "pr_plan_emp": "Empresas, com o logotipo da empresa (50 computadores ou mais)",
+  "pr_p_emp": "<a href=\"#companies\">Sob orçamento</a>",
+  "pr_emp_h": "🏢 O ExplorerFocus com a marca da sua empresa",
+  "pr_emp_p": "Para empresas com 50 computadores ou mais, o ExplorerFocus pode passar a ser o explorador de arquivos da própria empresa: o logotipo da empresa entra no lugar do “ExplorerFocus 2”. O resto do programa continua igual: as mesmas funções e as mesmas atualizações. As licenças são por número de computadores, e não é uma compra on-line.",
+  "pr_emp_fecho": "Peça uma cotação para a sua empresa, informando em quantos computadores você quer usar o ExplorerFocus, e nós a enviamos personalizada por e‑mail."
 };

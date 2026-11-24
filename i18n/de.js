@@ -517,5 +517,10 @@ window.I18N.de = {
   "f38_p": "<strong>Meine Windows-Geheimnisse</strong>, ein neuer Link in der unteren Leiste, zwischen „Mein Rechner“ und „Meine Aufgaben“, markiert mit „Neu“: wo Windows auf Ihrem Computer Dinge ablegt. Die versteckten Ordner hinter %APPDATA%, %LOCALAPPDATA% und den anderen Umgebungsvariablen, jeder mit vollständigem Pfad und seinem Zweck, mit einem Klick erreichbar; und unter „Alle Variablen anzeigen“ alle Umgebungsvariablen mit ihrem Wert.",
   "f38_p2": "<strong>Was Windows über Sie speichert</strong> (PREMIUM), im selben Fenster: was Sie in „Ausführen“ und in der Adressleiste des Datei-Explorers eingegeben haben, zuletzt verwendete Dateien, was Sie kopiert haben (Bilder eingeschlossen), die USB-Sticks, an die sich Windows erinnert, kürzlich geöffnete Programme, die Miniaturansichten gelöschter Fotos, gespeicherte Benachrichtigungen, der Papierkorb jedes Laufwerks und temporäre Dateien, mit dem Weg, um von Hand dorthin zu gelangen. Einiges davon lässt sich löschen; temporäre Dateien und der Papierkorb nur, was älter als 7 Tage ist.",
   "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH",
-  "f38_p3": "Nichts davon ist unauffindbar, wenn man den Weg kennt. Der Vorteil: Hier ist alles beisammen, nur einen Klick entfernt, für jeden."
+  "f38_p3": "Nichts davon ist unauffindbar, wenn man den Weg kennt. Der Vorteil: Hier ist alles beisammen, nur einen Klick entfernt, für jeden.",
+  "pr_plan_emp": "Unternehmen, mit dem Firmenlogo (ab 50 Computern)",
+  "pr_p_emp": "<a href=\"#companies\">Auf Anfrage</a>",
+  "pr_emp_h": "🏢 ExplorerFocus mit Ihrer Firmenmarke",
+  "pr_emp_p": "Für Unternehmen mit 50 oder mehr Computern kann ExplorerFocus zum eigenen Datei-Explorer des Unternehmens werden: Das Firmenlogo tritt an die Stelle von „ExplorerFocus 2“. Der Rest des Programms bleibt gleich: dieselben Funktionen und dieselben Updates. Lizenziert wird nach Anzahl der Computer, und es ist kein Online-Kauf.",
+  "pr_emp_fecho": "Fordern Sie ein Angebot für Ihr Unternehmen an und nennen Sie die Anzahl der Computer, auf denen Sie ExplorerFocus nutzen möchten. Wir senden es Ihnen individuell per E‑Mail."
 };

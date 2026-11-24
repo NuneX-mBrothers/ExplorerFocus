@@ -517,5 +517,10 @@ window.I18N.es = {
   "f38_p": "<strong>Los secretos de mi Windows</strong>, un enlace nuevo en la barra de abajo, entre «Mi equipo» y «Mis tareas», con la marca «Nuevo»: dónde guarda Windows las cosas en tu ordenador. Las carpetas ocultas detrás de %APPDATA%, %LOCALAPPDATA% y las demás variables de entorno, cada una con su ruta completa y para qué sirve, a un clic; y, en «Ver todas las variables», todas las variables de entorno con su valor.",
   "f38_p2": "<strong>Lo que Windows guarda sobre ti</strong> (PREMIUM), en la misma ventana: lo que escribiste en Ejecutar y en la barra del Explorador de archivos, los archivos recientes, lo que copiaste (imágenes incluidas), las memorias USB que recuerda, los programas abiertos hace poco, las miniaturas de las fotos borradas, las notificaciones guardadas, la Papelera de cada unidad y los archivos temporales, con el camino para llegar a mano. Parte de ello se puede borrar; los temporales y la Papelera, solo lo que tiene más de 7 días.",
   "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH",
-  "f38_p3": "Nada de esto es imposible de encontrar, si se conoce el camino. La ventaja es que aquí está todo junto, a un clic, para cualquiera."
+  "f38_p3": "Nada de esto es imposible de encontrar, si se conoce el camino. La ventaja es que aquí está todo junto, a un clic, para cualquiera.",
+  "pr_plan_emp": "Empresas, con el logotipo de la empresa (50 ordenadores o más)",
+  "pr_p_emp": "<a href=\"#companies\">Por presupuesto</a>",
+  "pr_emp_h": "🏢 ExplorerFocus con la marca de tu empresa",
+  "pr_emp_p": "Para empresas con 50 ordenadores o más, ExplorerFocus puede convertirse en el explorador de archivos de la propia empresa: el logotipo de la empresa ocupa el lugar de «ExplorerFocus 2». El resto del programa sigue igual: las mismas funciones y las mismas actualizaciones. Las licencias son por número de ordenadores, y no es una compra en línea.",
+  "pr_emp_fecho": "Pídenos un presupuesto para tu empresa, indicando en cuántos ordenadores quieres usar ExplorerFocus, y te lo enviamos personalizado por email."
 };

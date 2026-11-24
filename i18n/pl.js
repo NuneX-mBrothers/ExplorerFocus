@@ -517,5 +517,10 @@ window.I18N.pl = {
   "f38_p": "<strong>Moje sekrety Windows</strong>, nowy link na dolnym pasku, między „Mój komputer” a „Moje zadania”, oznaczony „Nowość”: gdzie Windows przechowuje rzeczy na tym komputerze. Ukryte foldery za %APPDATA%, %LOCALAPPDATA% i innymi zmiennymi środowiskowymi, każdy z pełną ścieżką i przeznaczeniem, na jedno kliknięcie; a w „Pokaż wszystkie zmienne” wszystkie zmienne środowiskowe z ich wartościami.",
   "f38_p2": "<strong>Co system Windows przechowuje o tobie</strong> (PREMIUM), w tym samym oknie: co wpisano w oknie Uruchamianie i w pasku adresu Eksploratora plików, ostatnie pliki, co skopiowano (także obrazy), pendrive’y zapamiętane przez Windows, ostatnio otwierane programy, miniatury usuniętych zdjęć, zapisane powiadomienia, Kosz każdego dysku i pliki tymczasowe, z drogą, jak dotrzeć tam ręcznie. Część z tego można usunąć; pliki tymczasowe i Kosz tylko wtedy, gdy są starsze niż 7 dni.",
   "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH",
-  "f38_p3": "Nic z tego nie jest niemożliwe do znalezienia, jeśli znasz drogę. Zaleta: tutaj wszystko jest razem, na jedno kliknięcie, dla każdego."
+  "f38_p3": "Nic z tego nie jest niemożliwe do znalezienia, jeśli znasz drogę. Zaleta: tutaj wszystko jest razem, na jedno kliknięcie, dla każdego.",
+  "pr_plan_emp": "Firmy, z logo firmy (od 50 komputerów)",
+  "pr_p_emp": "<a href=\"#companies\">Wycena indywidualna</a>",
+  "pr_emp_h": "🏢 ExplorerFocus z marką Twojej firmy",
+  "pr_emp_p": "Dla firm z 50 lub więcej komputerami ExplorerFocus może stać się własnym eksploratorem plików firmy: logo firmy zastępuje „ExplorerFocus 2”. Reszta programu pozostaje bez zmian: te same funkcje i te same aktualizacje. Licencje są według liczby komputerów i nie jest to zakup online.",
+  "pr_emp_fecho": "Poproś nas o wycenę dla swojej firmy, podając, na ilu komputerach chcesz używać ExplorerFocus, a wyślemy Ci indywidualną wycenę e-mailem."
 };

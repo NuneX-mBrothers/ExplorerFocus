@@ -517,5 +517,10 @@ window.I18N.en = {
   "f38_p": "<strong>My Windows secrets</strong>, a new link in the bottom bar, between “My machine” and “My tasks”, marked “New”: where Windows keeps things on your computer. The hidden folders behind %APPDATA%, %LOCALAPPDATA% and the other environment variables, each with its full path and what it's for, one click away; and, in “Show all variables”, every environment variable with its value.",
   "f38_p2": "<strong>What Windows keeps about you</strong> (PREMIUM), in the same window: what you typed in Run and in File Explorer's address bar, recent files, what you copied (pictures included), the USB drives it remembers, the programs you opened recently, the thumbnails of deleted photos, saved notifications, each drive's Recycle Bin and temporary files, with the way to get there by hand. Some of it can be deleted; temporary files and the Recycle Bin only when older than 7 days.",
   "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH",
-  "f38_p3": "None of this is impossible to find, if you know the way. The advantage is that here it's all together, one click away, for anyone."
+  "f38_p3": "None of this is impossible to find, if you know the way. The advantage is that here it's all together, one click away, for anyone.",
+  "pr_plan_emp": "Companies, with your logo (50 computers or more)",
+  "pr_p_emp": "<a href=\"#companies\">By quote</a>",
+  "pr_emp_h": "🏢 ExplorerFocus with your company's brand",
+  "pr_emp_p": "For companies with 50 computers or more, ExplorerFocus can become the company's own file explorer: the company's logo takes the place of “ExplorerFocus 2”. The rest of the program stays the same: the same features and the same updates. Licences are by number of computers, and this is not an online purchase.",
+  "pr_emp_fecho": "Ask us for a quote for your company, saying how many computers you want to use ExplorerFocus on, and we will email you a personalised one."
 };

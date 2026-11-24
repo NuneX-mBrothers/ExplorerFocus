@@ -517,5 +517,5 @@ window.I18N.it = {
   "f38_p": "<strong>I segreti del mio Windows</strong>, un nuovo link nella barra in basso, tra «La mia macchina» e «Le mie attività», con il segno «Nuovo»: dove Windows tiene le cose su questo computer. Le cartelle nascoste dietro %APPDATA%, %LOCALAPPDATA% e le altre variabili d'ambiente, ognuna con il percorso completo e a cosa serve, a un clic; e, in «Mostra tutte le variabili», tutte le variabili d'ambiente con il loro valore.",
   "f38_p2": "<strong>Ciò che Windows conserva su di te</strong> (PREMIUM), nella stessa finestra: ciò che hai scritto in Esegui e nella barra di Esplora file, i file recenti, ciò che hai copiato (immagini comprese), le chiavette USB che ricorda, i programmi aperti di recente, le anteprime delle foto eliminate, le notifiche conservate, il Cestino di ogni unità e i file temporanei, con il percorso per arrivarci a mano. Una parte si può eliminare; i file temporanei e il Cestino, solo ciò che ha più di 7 giorni.",
   "f38_mark": "%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH",
-  "f38_p3": "Niente di tutto questo è impossibile o difficile da ottenere, purché si sappia come arrivarci. Il grande vantaggio è che qui è tutto riunito, a un clic."
+  "f38_p3": "Niente di tutto questo è impossibile da trovare, se si conosce la strada. Il vantaggio è che qui è tutto insieme, a un clic."
 };

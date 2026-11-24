@@ -94,6 +94,7 @@
     "Redesigned right-click context menus in the tree and the list: the options in columns, with where the action takes place at the top",
     "Rotate any image by any angle, degree by degree, with the corners cropped or transparent; enhance an image with filters and colour adjustments (PREMIUM)",
     "Web pages and internet shortcuts open in the browser of your choice, in a normal or private window",
+    "My Windows secrets: the hidden folders behind %APPDATA%, %LOCALAPPDATA% and the other environment variables, with their full paths, and every environment variable with its value (free); what Windows keeps about you, such as what was typed in Run, recent files, what was copied, the USB drives it remembers, the thumbnails of deleted photos and saved notifications, with the way to get there by hand, and some of it can be deleted (PREMIUM)",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://intrepidparallel.com/explorerfocus/br/",
@@ -1867,120 +1868,23 @@
     <!-- ⛔ 23/11, a 2.2.8 (o cartão abre com os menus de contexto e o Comprimir): entram os dois à cabeça; saem o Vídeo e o
          «Ouvir e escrever». Medido no Changelog.cs do 843a2c42: o Vídeo entrou no cartão pela última vez na 2.1.6 (Cl216JuntarVideos); o «Ouvir e escrever» na 2.1.5 (Cl215TraduzirLegendasEmLote).
          O DAISY entra pelos Audiolivros, que ficam. -->
+    <!-- 24/11/2026, o João: «As pills têm de ter coisas mais diferentes entre si.» Entram os segredos do Windows (2.2.9) e
+         as legendas (voltam); saem os e-books e o PDF, que repetiam a leitura ao lado dos audiolivros. -->
+    <a href="#feat38" data-i18n="wn_segredos">🗝 Os segredos do meu Windows</a>
     <a href="#feat37" data-i18n="wn_menus">🗂 Menus de contexto</a>
     <a href="#feat29" data-i18n="wn_arquivos">🗜 Arquivos compactados</a>
+    <a href="#ouvir" data-i18n="wn_legendas">🎬 Legendas</a>
     <a href="#audiobooks" data-i18n="wn_audiolivros">🎧 Audiolivros</a>
     <a href="#vault" data-i18n="wn_vault">🔒 Os cofres</a>
-    <a href="#feat24" data-i18n="wn_livros">📚 E-books</a>
-    <a href="#feat34" data-i18n="wn_pdf_211">📄 PDF</a>
   </nav>
   <span class="whatsnew-ver">v2.2.9</span>
 </div>
-
-<!-- ══════════════════════════════════════════════════════════════════════
-     AUDIOLIVROS — a versão dos audiolivros (17/11/2026). O destaque pedido pelo João: ouvir é grátis; fazer o audiolivro
-     é PREMIUM. ⛔ Nunca «o único», nunca «exato» (o realce da palavra é estimado), nunca mais do que 2× (o João, 16/11).
-     ⛔ Nada sobre leitores de telefone que toquem o EPUB com voz (o da Librera não toca: o João, 16/11). Molde: o da
-     secção «Ouvir e escrever».
-     ══════════════════════════════════════════════════════════════════════ -->
-<span id="audiolivros"></span><section class="vault ouvir" id="audiobooks">
-  <div class="vault-head">
-    <div>
-      <div class="section-num"><span data-i18n="au_num">§ 01 · Audiolivros</span><a class="badge-free" href="#free" data-i18n="badge_free">Grátis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-      <h2 data-i18n-html="au_title">Seus e-books viram <em>audiolivros</em>.</h2>
-      <p class="vault-lead" data-i18n-html="au_blurb2">Os audiolivros que você cria são arquivos de áudio comuns: ouça onde quiser, no carro, no celular ou em casa. O ExplorerFocus lê em voz alta e-books e PDFs em inglês, com 28 vozes naturais, no seu próprio PC, e seus livros nunca são enviados para lugar nenhum.</p>
-    </div>
-  </div>
-  <div class="vault-grid">
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_now_ic">OUVIR AGORA</div>
-      <h4 data-i18n="au_now_h">Em poucos segundos, grátis.</h4>
-      <p data-i18n-html="au_now">Selecione um livro e, no menu <em>E-books</em>, escolha <em>Ouvir este livro…</em> (os PDFs também, no menu <em>PDF</em>). A frase e a palavra que você ouve ficam destacadas. Um clique numa frase começa a ler dali, e da próxima vez continua de onde parou.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_ply_ic">O LEITOR</div>
-      <h4 data-i18n="au_ply_h">O que os apps de audiolivros têm.</h4>
-      <p data-i18n-html="au_ply">Cada livro guarda sua velocidade, até 2×, e mostra quanto falta no capítulo e no livro. Um timer para dormir, marcas com notas, pular capítulos, as teclas de mídia e um botão que leva você de volta depois de um salto.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_mk_ic">FAZER O AUDIOLIVRO</div>
-      <h4 data-i18n="au_mk_h">Para o celular e o carro.</h4>
-      <p data-i18n-html="au_mk">O <em>Gerar o audiolivro…</em> grava um MP3 por capítulo, com a capa, para qualquer player, ou um M4B com os capítulos, o formato dos audiolivros. Antes de começar, diz quanto dura o áudio e quanto vai demorar no seu computador; dá para parar e continuar depois.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_ep_ic">LER E OUVIR</div>
-      <h4 data-i18n="au_ep_h">O texto e a voz juntos.</h4>
-      <p data-i18n-html="au_ep2">Ou um EPUB 3 com a voz dentro, com a frase acesa enquanto é lida, para os leitores de e-books que o reproduzem, como o Thorium Reader (grátis). O ExplorerFocus também reproduz os EPUBs que já vêm com voz gravada. Livros DAISY e audiolivros W3C e Readium, reconhecidos automaticamente como e-books: podem ser ouvidos com a voz gravada que trazem, com o que está sendo ouvido destacado.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_vz_ic">AS VOZES</div>
-      <h4 data-i18n="au_vz_h">28, americanas e britânicas.</h4>
-      <p data-i18n-html="au_vz">De mulher e de homem, com uma amostra de cada antes de escolher, nas configurações, em <em>Vozes</em>.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_loc_ic">NO PRÓPRIO COMPUTADOR</div>
-      <h4 data-i18n="au_loc_h">Seus livros ficam com você.</h4>
-      <p data-i18n-html="au_loc">As vozes são baixadas uma vez, só se você disser que sim. Depois, não é preciso internet, e seus livros nunca saem do seu PC.</p>
-    </div>
-  </div>
-  <p class="vault-note" data-i18n-html="au_tiers"><a class="free-word" href="#free">Grátis</a>: ouvir os e-books e os PDFs, com tudo o que o leitor tem, e uma amostra de até 3 minutos em MP3. <a class="prem-word" href="#premium">PREMIUM</a>: fazer o audiolivro inteiro — os MP3, o M4B e o EPUB que se lê e se ouve. Vozes em inglês; só e-books sem DRM, para uso próprio.</p>
-</section>
-
-<!-- ══════════════════════════════════════════════════════════════════════
-     OUVIR E ESCREVER — a 2.1.2 (20/10/2026). Textos aprovados.
-     ⛔ O nome é o da APP («Ouvir e escrever — como funciona», a janela PREMIUM, a oferta do GOTD): o site e a app dizem
-       o mesmo. O «tudo» vai no título. Nunca «traduções de qualidade»: diz-se o que faz, e lembra-se que se revê.
-     ⛔ Grátis só o ditado para .txt; o resto é PREMIUM (gratis-ou-premium-ferramentas.md). O ouvido e o tradutor vêm
-       uma vez, com autorização (a privacy.html diz de onde). Molde: o da secção do cofre, sem o desenho.
-     ══════════════════════════════════════════════════════════════════════ -->
-<section class="vault ouvir" id="ouvir">
-  <div class="vault-head">
-    <div>
-      <div class="section-num"><span data-i18n="ou_num2">§ 02 · Ouvir e escrever</span><a class="badge-free" href="#free" data-i18n="badge_free">Grátis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-      <h2 data-i18n-html="ou_title">Um só tradutor para <em>tudo</em>.</h2>
-      <p class="vault-lead" data-i18n-html="ou_blurb">O ExplorerFocus passa a ouvir: escreve o que é dito nos áudios e nos vídeos, e traduz o que é dito, as legendas, o vídeo enquanto toca, os PDFs e os livros. Tudo no próprio computador. A tradução é automática, e vale a pena revisá-la.</p>
-    </div>
-  </div>
-  <div class="vault-grid">
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_sub_ic">LEGENDAS</div>
-      <h4 data-i18n="ou_sub_h">No idioma que você quiser.</h4>
-      <p data-i18n-html="ou_sub"><em>Criar legendas…</em> ouve o vídeo e escreve as legendas com os tempos, no idioma falado ou traduzidas. <em>Traduzir as legendas…</em> passa um .srt para outro idioma. Elas ficam ao lado do vídeo, e a pré-visualização e players como o VLC as encontram sozinhos.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_live_ic">AO VIVO</div>
-      <h4 data-i18n="ou_live_h">Enquanto o filme toca.</h4>
-      <p data-i18n-html="ou_live">Na pré-visualização, um filme em outro idioma ganha legendas traduzidas sem parar. Também dentro de um cofre.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_lote_ic">EM LOTE</div>
-      <h4 data-i18n="ou_lote_h">Uma série inteira de uma vez.</h4>
-      <p data-i18n-html="ou_lote"><em>Criar legendas em lote…</em> legenda todos os episódios, em inglês e no idioma escolhido, enquanto você faz outra coisa. Parar no meio não perde nada: continua de onde parou.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_trn_ic">TRANSCREVER E DITAR</div>
-      <h4 data-i18n="ou_trn_h">Do áudio ao texto.</h4>
-      <p data-i18n-html="ou_trn">O texto de uma gravação, em texto, Word, PDF ou legendas, mesmo quando se fala mais de um idioma. E no 🎤, <em>Gravar e transcrever</em> escreve o que é dito, enquanto você fala.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_liv_ic">PDF E LIVROS</div>
-      <h4 data-i18n="ou_liv_h">Um livro inteiro em outro idioma.</h4>
-      <p data-i18n-html="ou_liv">Um PDF, também digitalizado, ou um livro em EPUB, PDF ou FB2, traduzidos para outro idioma. Um trabalho grande pode ser pausado e continuado depois.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_loc_ic">NO PRÓPRIO COMPUTADOR</div>
-      <h4 data-i18n="ou_loc_h">Nada sai dele.</h4>
-      <p data-i18n-html="ou_loc">O ouvido e o tradutor são baixados uma vez, só com autorização, e servem para todos os idiomas. Depois, o áudio, o texto e as traduções não saem do computador, e não é preciso internet. Com uma placa de vídeo, muito mais rápido.</p>
-    </div>
-  </div>
-  <p class="vault-note" data-i18n-html="ou_tiers"><a class="free-word" href="#free">Grátis</a>: ditar para .txt, no 🎤. <a class="prem-word" href="#premium">PREMIUM</a>: as legendas, as legendas ao vivo, o lote, transcrever para Word, PDF e legendas, e todas as traduções.</p>
-</section>
 
 <!-- CATALOG -->
 <div id="features"></div>
 <div class="section-header">
   <div>
-    <div class="section-num" data-i18n="cat_num3">§ 03 · Catálogo</div>
+    <div class="section-num" data-i18n="cat_num4">§ 01 · Catálogo</div>
     <h2 class="section-title" data-i18n-html="cat_title">O que <em>realmente</em><br>faz diferença.</h2>
   </div>
   <p class="section-blurb" data-i18n="cat_blurb">Cada recurso foi acrescentado para responder a um problema concreto do trabalho diário sobre uma árvore de arquivos conhecida. Nenhum está aí para enfeitar. Quase todos podem ser ligados ou desligados.</p>
@@ -2390,6 +2294,16 @@
     <p data-i18n-html="f37_p"><strong>Redesenho completo dos menus de contexto</strong>, os que abrem com o botão direito do mouse, na árvore e na lista: as opções em colunas e, no topo, onde a operação é feita.</p>
   </div>
 
+  <!-- 24/11/2026: a 2.2.9, «My Windows secrets» (os textos do cartão da app, Cl229Segredos e Cl229SegredosPremium). -->
+  <div class="feat w12" id="feat38">
+    <div class="num"><span data-i18n="f38_num">38 — OS SEGREDOS DO MEU WINDOWS</span><a class="badge-free" href="#free" data-i18n="badge_free">Grátis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f38_h">O que o Windows esconde, à vista.</h3>
+    <p data-i18n-html="f38_p"><strong>Os segredos do meu Windows</strong>, um link novo na barra de baixo, entre “A minha máquina” e “Minhas tarefas”, com a marca “Novo”: onde o Windows guarda as coisas neste computador. As pastas ocultas por trás da %APPDATA%, da %LOCALAPPDATA% e das outras variáveis de ambiente, cada uma com o caminho completo e para que serve, a um clique; e, em “Ver todas as variáveis”, todas as variáveis de ambiente, com o valor de cada uma.</p>
+    <p class="feat-p2" data-i18n-html="f38_p2"><strong>O que o Windows guarda sobre você</strong> (PREMIUM), na mesma janela: o que você digitou no Executar e na barra do Explorador de Arquivos, os arquivos recentes, o que você copiou (imagens incluídas), os pen drives que o Windows lembra, os programas abertos recentemente, as miniaturas das fotos apagadas, as notificações guardadas, a Lixeira de cada unidade e os arquivos temporários, com o caminho para chegar lá manualmente. Parte disso pode ser apagada; os temporários e a Lixeira, só o que tem mais de 7 dias.</p>
+    <p class="feat-p2" data-i18n="f38_p3">Nada disso é impossível de encontrar, para quem conhece o caminho. A vantagem é que aqui está tudo junto, a um clique, para qualquer pessoa.</p>
+    <div class="feat-mark" data-i18n="f38_mark">%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH</div>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -2410,7 +2324,7 @@
 <section class="vault" id="vault">
   <div class="vault-head">
     <div>
-      <div class="section-num"><span data-i18n="vt_num3">§ 04 · O cofre</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <div class="section-num"><span data-i18n="vt_num4">§ 02 · O cofre</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
       <h2 data-i18n-html="vt_title">Cifrado, e mesmo assim só <em>pastas</em>.</h2>
 
       <!-- spec §0 «O que é» -->
@@ -2597,6 +2511,105 @@
 
 
   <p class="vault-note" data-i18n-html="vt_premium"><a class="prem-word" href="#premium">PREMIUM</a> — criar cofres. Abri-los é grátis, inclusive cofres criados em outro lugar.</p>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     OUVIR E ESCREVER — a 2.1.2 (20/10/2026). Textos aprovados.
+     ⛔ O nome é o da APP («Ouvir e escrever — como funciona», a janela PREMIUM, a oferta do GOTD): o site e a app dizem
+       o mesmo. O «tudo» vai no título. Nunca «traduções de qualidade»: diz-se o que faz, e lembra-se que se revê.
+     ⛔ Grátis só o ditado para .txt; o resto é PREMIUM (gratis-ou-premium-ferramentas.md). O ouvido e o tradutor vêm
+       uma vez, com autorização (a privacy.html diz de onde). Molde: o da secção do cofre, sem o desenho.
+     ══════════════════════════════════════════════════════════════════════ -->
+<section class="vault ouvir" id="ouvir">
+  <div class="vault-head">
+    <div>
+      <div class="section-num"><span data-i18n="ou_num3">§ 03 · Ouvir e escrever</span><a class="badge-free" href="#free" data-i18n="badge_free">Grátis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <h2 data-i18n-html="ou_title">Um só tradutor para <em>tudo</em>.</h2>
+      <p class="vault-lead" data-i18n-html="ou_blurb">O ExplorerFocus passa a ouvir: escreve o que é dito nos áudios e nos vídeos, e traduz o que é dito, as legendas, o vídeo enquanto toca, os PDFs e os livros. Tudo no próprio computador. A tradução é automática, e vale a pena revisá-la.</p>
+    </div>
+  </div>
+  <div class="vault-grid">
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_sub_ic">LEGENDAS</div>
+      <h4 data-i18n="ou_sub_h">No idioma que você quiser.</h4>
+      <p data-i18n-html="ou_sub"><em>Criar legendas…</em> ouve o vídeo e escreve as legendas com os tempos, no idioma falado ou traduzidas. <em>Traduzir as legendas…</em> passa um .srt para outro idioma. Elas ficam ao lado do vídeo, e a pré-visualização e players como o VLC as encontram sozinhos.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_live_ic">AO VIVO</div>
+      <h4 data-i18n="ou_live_h">Enquanto o filme toca.</h4>
+      <p data-i18n-html="ou_live">Na pré-visualização, um filme em outro idioma ganha legendas traduzidas sem parar. Também dentro de um cofre.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_lote_ic">EM LOTE</div>
+      <h4 data-i18n="ou_lote_h">Uma série inteira de uma vez.</h4>
+      <p data-i18n-html="ou_lote"><em>Criar legendas em lote…</em> legenda todos os episódios, em inglês e no idioma escolhido, enquanto você faz outra coisa. Parar no meio não perde nada: continua de onde parou.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_trn_ic">TRANSCREVER E DITAR</div>
+      <h4 data-i18n="ou_trn_h">Do áudio ao texto.</h4>
+      <p data-i18n-html="ou_trn">O texto de uma gravação, em texto, Word, PDF ou legendas, mesmo quando se fala mais de um idioma. E no 🎤, <em>Gravar e transcrever</em> escreve o que é dito, enquanto você fala.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_liv_ic">PDF E LIVROS</div>
+      <h4 data-i18n="ou_liv_h">Um livro inteiro em outro idioma.</h4>
+      <p data-i18n-html="ou_liv">Um PDF, também digitalizado, ou um livro em EPUB, PDF ou FB2, traduzidos para outro idioma. Um trabalho grande pode ser pausado e continuado depois.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_loc_ic">NO PRÓPRIO COMPUTADOR</div>
+      <h4 data-i18n="ou_loc_h">Nada sai dele.</h4>
+      <p data-i18n-html="ou_loc">O ouvido e o tradutor são baixados uma vez, só com autorização, e servem para todos os idiomas. Depois, o áudio, o texto e as traduções não saem do computador, e não é preciso internet. Com uma placa de vídeo, muito mais rápido.</p>
+    </div>
+  </div>
+  <p class="vault-note" data-i18n-html="ou_tiers"><a class="free-word" href="#free">Grátis</a>: ditar para .txt, no 🎤. <a class="prem-word" href="#premium">PREMIUM</a>: as legendas, as legendas ao vivo, o lote, transcrever para Word, PDF e legendas, e todas as traduções.</p>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     AUDIOLIVROS — a versão dos audiolivros (17/11/2026). O destaque pedido pelo João: ouvir é grátis; fazer o audiolivro
+     é PREMIUM. ⛔ Nunca «o único», nunca «exato» (o realce da palavra é estimado), nunca mais do que 2× (o João, 16/11).
+     ⛔ Nada sobre leitores de telefone que toquem o EPUB com voz (o da Librera não toca: o João, 16/11). Molde: o da
+     secção «Ouvir e escrever».
+     ══════════════════════════════════════════════════════════════════════ -->
+<span id="audiolivros"></span><section class="vault ouvir" id="audiobooks">
+  <div class="vault-head">
+    <div>
+      <div class="section-num"><span data-i18n="au_num2">§ 04 · Audiolivros</span><a class="badge-free" href="#free" data-i18n="badge_free">Grátis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <h2 data-i18n-html="au_title">Seus e-books viram <em>audiolivros</em>.</h2>
+      <p class="vault-lead" data-i18n-html="au_blurb2">Os audiolivros que você cria são arquivos de áudio comuns: ouça onde quiser, no carro, no celular ou em casa. O ExplorerFocus lê em voz alta e-books e PDFs em inglês, com 28 vozes naturais, no seu próprio PC, e seus livros nunca são enviados para lugar nenhum.</p>
+    </div>
+  </div>
+  <div class="vault-grid">
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_now_ic">OUVIR AGORA</div>
+      <h4 data-i18n="au_now_h">Em poucos segundos, grátis.</h4>
+      <p data-i18n-html="au_now">Selecione um livro e, no menu <em>E-books</em>, escolha <em>Ouvir este livro…</em> (os PDFs também, no menu <em>PDF</em>). A frase e a palavra que você ouve ficam destacadas. Um clique numa frase começa a ler dali, e da próxima vez continua de onde parou.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_ply_ic">O LEITOR</div>
+      <h4 data-i18n="au_ply_h">O que os apps de audiolivros têm.</h4>
+      <p data-i18n-html="au_ply">Cada livro guarda sua velocidade, até 2×, e mostra quanto falta no capítulo e no livro. Um timer para dormir, marcas com notas, pular capítulos, as teclas de mídia e um botão que leva você de volta depois de um salto.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_mk_ic">FAZER O AUDIOLIVRO</div>
+      <h4 data-i18n="au_mk_h">Para o celular e o carro.</h4>
+      <p data-i18n-html="au_mk">O <em>Gerar o audiolivro…</em> grava um MP3 por capítulo, com a capa, para qualquer player, ou um M4B com os capítulos, o formato dos audiolivros. Antes de começar, diz quanto dura o áudio e quanto vai demorar no seu computador; dá para parar e continuar depois.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_ep_ic">LER E OUVIR</div>
+      <h4 data-i18n="au_ep_h">O texto e a voz juntos.</h4>
+      <p data-i18n-html="au_ep2">Ou um EPUB 3 com a voz dentro, com a frase acesa enquanto é lida, para os leitores de e-books que o reproduzem, como o Thorium Reader (grátis). O ExplorerFocus também reproduz os EPUBs que já vêm com voz gravada. Livros DAISY e audiolivros W3C e Readium, reconhecidos automaticamente como e-books: podem ser ouvidos com a voz gravada que trazem, com o que está sendo ouvido destacado.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_vz_ic">AS VOZES</div>
+      <h4 data-i18n="au_vz_h">28, americanas e britânicas.</h4>
+      <p data-i18n-html="au_vz">De mulher e de homem, com uma amostra de cada antes de escolher, nas configurações, em <em>Vozes</em>.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_loc_ic">NO PRÓPRIO COMPUTADOR</div>
+      <h4 data-i18n="au_loc_h">Seus livros ficam com você.</h4>
+      <p data-i18n-html="au_loc">As vozes são baixadas uma vez, só se você disser que sim. Depois, não é preciso internet, e seus livros nunca saem do seu PC.</p>
+    </div>
+  </div>
+  <p class="vault-note" data-i18n-html="au_tiers"><a class="free-word" href="#free">Grátis</a>: ouvir os e-books e os PDFs, com tudo o que o leitor tem, e uma amostra de até 3 minutos em MP3. <a class="prem-word" href="#premium">PREMIUM</a>: fazer o audiolivro inteiro — os MP3, o M4B e o EPUB que se lê e se ouve. Vozes em inglês; só e-books sem DRM, para uso próprio.</p>
 </section>
 
 <!-- SHORTCUTS -->

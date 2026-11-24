@@ -94,6 +94,7 @@
     "Redesigned right-click context menus in the tree and the list: the options in columns, with where the action takes place at the top",
     "Rotate any image by any angle, degree by degree, with the corners cropped or transparent; enhance an image with filters and colour adjustments (PREMIUM)",
     "Web pages and internet shortcuts open in the browser of your choice, in a normal or private window",
+    "My Windows secrets: the hidden folders behind %APPDATA%, %LOCALAPPDATA% and the other environment variables, with their full paths, and every environment variable with its value (free); what Windows keeps about you, such as what was typed in Run, recent files, what was copied, the USB drives it remembers, the thumbnails of deleted photos and saved notifications, with the way to get there by hand, and some of it can be deleted (PREMIUM)",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://intrepidparallel.com/explorerfocus/ko/",
@@ -1867,120 +1868,23 @@
     <!-- ⛔ 23/11, a 2.2.8 (o cartão abre com os menus de contexto e o Comprimir): entram os dois à cabeça; saem o Vídeo e o
          «Ouvir e escrever». Medido no Changelog.cs do 843a2c42: o Vídeo entrou no cartão pela última vez na 2.1.6 (Cl216JuntarVideos); o «Ouvir e escrever» na 2.1.5 (Cl215TraduzirLegendasEmLote).
          O DAISY entra pelos Audiolivros, que ficam. -->
+    <!-- 24/11/2026, o João: «As pills têm de ter coisas mais diferentes entre si.» Entram os segredos do Windows (2.2.9) e
+         as legendas (voltam); saem os e-books e o PDF, que repetiam a leitura ao lado dos audiolivros. -->
+    <a href="#feat38" data-i18n="wn_segredos">🗝 내 Windows의 비밀</a>
     <a href="#feat37" data-i18n="wn_menus">🗂 상황에 맞는 메뉴</a>
     <a href="#feat29" data-i18n="wn_arquivos">🗜 압축 파일</a>
+    <a href="#ouvir" data-i18n="wn_legendas">🎬 자막</a>
     <a href="#audiobooks" data-i18n="wn_audiolivros">🎧 오디오북</a>
     <a href="#vault" data-i18n="wn_vault">🔒 금고</a>
-    <a href="#feat24" data-i18n="wn_livros">📚 전자책</a>
-    <a href="#feat34" data-i18n="wn_pdf_211">📄 PDF</a>
   </nav>
   <span class="whatsnew-ver">v2.2.9</span>
 </div>
-
-<!-- ══════════════════════════════════════════════════════════════════════
-     AUDIOLIVROS — a versão dos audiolivros (17/11/2026). O destaque pedido pelo João: ouvir é grátis; fazer o audiolivro
-     é PREMIUM. ⛔ Nunca «o único», nunca «exato» (o realce da palavra é estimado), nunca mais do que 2× (o João, 16/11).
-     ⛔ Nada sobre leitores de telefone que toquem o EPUB com voz (o da Librera não toca: o João, 16/11). Molde: o da
-     secção «Ouvir e escrever».
-     ══════════════════════════════════════════════════════════════════════ -->
-<span id="audiolivros"></span><section class="vault ouvir" id="audiobooks">
-  <div class="vault-head">
-    <div>
-      <div class="section-num"><span data-i18n="au_num">§ 01 · 오디오북</span><a class="badge-free" href="#free" data-i18n="badge_free">무료</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-      <h2 data-i18n-html="au_title">전자책을 <em>오디오북</em>으로.</h2>
-      <p class="vault-lead" data-i18n-html="au_blurb2">만든 오디오북은 일반 오디오 파일이므로 차에서, 휴대폰으로, 집에서, 원하는 곳에서 들을 수 있습니다. ExplorerFocus는 영어 전자책과 PDF를 28가지 자연스러운 음성으로 바로 여러분의 PC에서 소리 내어 읽으며, 책은 어디에도 올라가지 않습니다.</p>
-    </div>
-  </div>
-  <div class="vault-grid">
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_now_ic">바로 듣기</div>
-      <h4 data-i18n="au_now_h">몇 초 만에, 무료로.</h4>
-      <p data-i18n-html="au_now">책을 선택하고 <em>전자책</em> 메뉴에서 <em>이 책 듣기…</em>를 고르십시오(PDF도 <em>PDF</em> 메뉴에서). 들리는 문장과 단어가 강조 표시됩니다. 문장을 클릭하면 거기서부터 읽고, 다음에는 멈춘 곳에서 이어 갑니다.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_ply_ic">플레이어</div>
-      <h4 data-i18n="au_ply_h">오디오북 앱에 있는 기능 그대로.</h4>
-      <p data-i18n-html="au_ply">책마다 속도를 기억하고(최대 2×), 장과 책의 남은 시간을 보여 줍니다. 수면 타이머, 메모가 있는 북마크, 장 건너뛰기, 미디어 키, 이동한 뒤 원래 자리로 돌아가는 단추도 있습니다.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_mk_ic">오디오북 만들기</div>
-      <h4 data-i18n="au_mk_h">휴대폰과 차에서.</h4>
-      <p data-i18n-html="au_mk"><em>오디오북 만들기…</em>는 표지가 들어간 장별 MP3(어떤 플레이어에서나 재생)나 장이 들어간 M4B(오디오북 형식)를 녹음합니다. 시작하기 전에 오디오 길이와 여러분의 컴퓨터에서 걸리는 시간을 보여 주며, 멈췄다가 나중에 이어 갈 수 있습니다.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_ep_ic">읽으며 듣기</div>
-      <h4 data-i18n="au_ep_h">글과 음성을 함께.</h4>
-      <p data-i18n-html="au_ep2">또는 음성이 들어 있는 EPUB 3. 읽는 문장이 밝게 표시되며, Thorium Reader(무료)처럼 이를 재생하는 전자책 리더에서 쓸 수 있습니다. ExplorerFocus는 녹음된 음성이 이미 들어 있는 EPUB도 재생합니다. DAISY 도서와 W3C 및 Readium 오디오북이 전자책으로 자동 인식됩니다. 책에 녹음된 음성으로 들을 수 있으며, 듣고 있는 부분이 강조 표시됩니다.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_vz_ic">음성</div>
-      <h4 data-i18n="au_vz_h">28가지, 미국식과 영국식.</h4>
-      <p data-i18n-html="au_vz">여성과 남성 음성이 있으며, 고르기 전에 각각 미리 들어 볼 수 있습니다. 설정의 <em>음성</em>에서.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_loc_ic">컴퓨터 안에서</div>
-      <h4 data-i18n="au_loc_h">책은 여러분 곁에 남습니다.</h4>
-      <p data-i18n-html="au_loc">음성은 여러분이 허락할 때만 한 번 내려받습니다. 그 뒤로는 인터넷이 필요 없고, 책은 PC 밖으로 나가지 않습니다.</p>
-    </div>
-  </div>
-  <p class="vault-note" data-i18n-html="au_tiers"><a class="free-word" href="#free">무료</a>: 전자책과 PDF 듣기, 플레이어의 모든 기능, 최대 3분 분량의 MP3 샘플. <a class="prem-word" href="#premium">PREMIUM</a>: 오디오북 전체 만들기 — MP3, M4B, 읽으며 듣는 EPUB. 영어 음성이며, DRM이 없는 전자책만, 개인 용도로.</p>
-</section>
-
-<!-- ══════════════════════════════════════════════════════════════════════
-     OUVIR E ESCREVER — a 2.1.2 (20/10/2026). Textos aprovados.
-     ⛔ O nome é o da APP («Ouvir e escrever — como funciona», a janela PREMIUM, a oferta do GOTD): o site e a app dizem
-       o mesmo. O «tudo» vai no título. Nunca «traduções de qualidade»: diz-se o que faz, e lembra-se que se revê.
-     ⛔ Grátis só o ditado para .txt; o resto é PREMIUM (gratis-ou-premium-ferramentas.md). O ouvido e o tradutor vêm
-       uma vez, com autorização (a privacy.html diz de onde). Molde: o da secção do cofre, sem o desenho.
-     ══════════════════════════════════════════════════════════════════════ -->
-<section class="vault ouvir" id="ouvir">
-  <div class="vault-head">
-    <div>
-      <div class="section-num"><span data-i18n="ou_num2">§ 02 · 듣고 쓰기</span><a class="badge-free" href="#free" data-i18n="badge_free">무료</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-      <h2 data-i18n-html="ou_title"><em>모든 것</em>을 위한 하나의 번역기.</h2>
-      <p class="vault-lead" data-i18n-html="ou_blurb">ExplorerFocus가 이제 듣습니다. 오디오와 동영상에서 말하는 내용을 적고, 말한 내용과 자막, 재생 중인 동영상, PDF와 책을 번역합니다. 모두 이 컴퓨터에서. 번역은 자동이므로 검토하는 것이 좋습니다.</p>
-    </div>
-  </div>
-  <div class="vault-grid">
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_sub_ic">자막</div>
-      <h4 data-i18n="ou_sub_h">원하는 언어로.</h4>
-      <p data-i18n-html="ou_sub"><em>자막 만들기…</em>는 동영상을 듣고 시간에 맞춘 자막을 말하는 언어 그대로, 또는 번역해서 씁니다. <em>자막 번역…</em>은 .srt를 다른 언어로 바꿉니다. 자막은 동영상 옆에 저장되며, 미리 보기와 VLC 같은 플레이어가 알아서 찾습니다.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_live_ic">실시간</div>
-      <h4 data-i18n="ou_live_h">영화가 재생되는 동안.</h4>
-      <p data-i18n-html="ou_live">미리 보기에서 외국어 영화에 번역된 자막이 멈추지 않고 붙습니다. 금고 안에서도 됩니다.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_lote_ic">일괄</div>
-      <h4 data-i18n="ou_lote_h">시리즈 전체를 한 번에.</h4>
-      <p data-i18n-html="ou_lote"><em>자막 일괄 만들기…</em>는 모든 에피소드에 영어 자막과 선택한 언어 자막을 만들며, 그동안 다른 일을 할 수 있습니다. 중간에 멈춰도 잃는 것이 없습니다. 멈춘 곳부터 이어집니다.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_trn_ic">받아쓰기와 구술</div>
-      <h4 data-i18n="ou_trn_h">소리에서 글로.</h4>
-      <p data-i18n-html="ou_trn">녹음 내용을 텍스트, Word, PDF 또는 자막으로 — 두 가지 이상의 언어로 말해도 됩니다. 🎤의 <em>녹음하고 받아쓰기</em>는 말하는 대로 바로 적습니다.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_liv_ic">PDF와 책</div>
-      <h4 data-i18n="ou_liv_h">책 한 권을 통째로 다른 언어로.</h4>
-      <p data-i18n-html="ou_liv">PDF(스캔한 것도) 또는 EPUB, PDF, FB2 책을 다른 언어로 번역합니다. 긴 작업은 일시 정지했다가 나중에 이어 갈 수 있습니다.</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_loc_ic">모두 이 컴퓨터에서</div>
-      <h4 data-i18n="ou_loc_h">아무것도 나가지 않습니다.</h4>
-      <p data-i18n-html="ou_loc">듣기와 번역기는 허락할 때 한 번만 내려받으며, 모든 언어에 쓰입니다. 그 뒤로 소리, 글, 번역은 컴퓨터에 남고, 인터넷도 필요 없습니다. 그래픽 카드가 있으면 훨씬 빠릅니다.</p>
-    </div>
-  </div>
-  <p class="vault-note" data-i18n-html="ou_tiers"><a class="free-word" href="#free">무료</a>: 🎤에서 .txt로 받아쓰기. <a class="prem-word" href="#premium">PREMIUM</a>: 자막, 실시간 자막, 일괄 처리, Word·PDF·자막으로 받아쓰기, 그리고 모든 번역.</p>
-</section>
 
 <!-- CATALOG -->
 <div id="features"></div>
 <div class="section-header">
   <div>
-    <div class="section-num" data-i18n="cat_num3">§ 03 · 목록</div>
+    <div class="section-num" data-i18n="cat_num4">§ 01 · 목록</div>
     <h2 class="section-title" data-i18n-html="cat_title"><em>정말로</em><br>차이를 만드는 것.</h2>
   </div>
   <p class="section-blurb" data-i18n="cat_blurb">모든 기능은 익숙한 파일 트리 위에서 매일 부딪히던 구체적인 문제에 답하려고 들어왔습니다. 보여 주기용은 하나도 없습니다. 거의 다 켜고 끌 수 있습니다.</p>
@@ -2390,6 +2294,16 @@
     <p data-i18n-html="f37_p"><strong>상황에 맞는 메뉴 전면 재설계</strong>: 트리와 목록에서 마우스 오른쪽 단추로 클릭하면 열리는 메뉴로, 옵션이 열로 나뉘고 위쪽에 작업이 이루어지는 곳이 표시됩니다.</p>
   </div>
 
+  <!-- 24/11/2026: a 2.2.9, «My Windows secrets» (os textos do cartão da app, Cl229Segredos e Cl229SegredosPremium). -->
+  <div class="feat w12" id="feat38">
+    <div class="num"><span data-i18n="f38_num">38 — 내 WINDOWS의 비밀</span><a class="badge-free" href="#free" data-i18n="badge_free">무료</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f38_h">Windows가 숨겨 둔 것을 한눈에.</h3>
+    <p data-i18n-html="f38_p"><strong>내 Windows의 비밀</strong>: 아래쪽 막대의 '내 컴퓨터'와 '내 작업' 사이에 '새 기능' 표시가 붙은 새 링크입니다. Windows가 이 컴퓨터의 어디에 무엇을 보관하는지 보여 줍니다. %APPDATA%, %LOCALAPPDATA% 등 환경 변수 뒤의 숨김 폴더를 전체 경로와 용도와 함께 클릭 한 번으로 열 수 있고, '모든 변수 보기'에서는 모든 환경 변수와 그 값을 볼 수 있습니다.</p>
+    <p class="feat-p2" data-i18n-html="f38_p2"><strong>Windows가 사용자에 대해 보관하는 것</strong>(PREMIUM): 같은 창에서 실행 창과 파일 탐색기 주소 표시줄에 입력한 내용, 최근 파일, 복사한 내용(이미지 포함), Windows가 기억하는 USB 드라이브, 최근에 연 프로그램, 삭제한 사진의 미리 보기 사진, 저장된 알림, 드라이브별 휴지통과 임시 파일을 직접 찾아가는 방법과 함께 보여 줍니다. 일부는 삭제할 수 있으며, 임시 파일과 휴지통은 7일이 지난 항목만 삭제됩니다.</p>
+    <p class="feat-p2" data-i18n="f38_p3">길만 알면 이 중 어느 것도 찾지 못할 것은 없습니다. 장점은 여기 모든 것이 모여 있어 누구나 클릭 한 번이면 된다는 것입니다.</p>
+    <div class="feat-mark" data-i18n="f38_mark">%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH</div>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -2410,7 +2324,7 @@
 <section class="vault" id="vault">
   <div class="vault-head">
     <div>
-      <div class="section-num"><span data-i18n="vt_num3">§ 04 · 금고</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <div class="section-num"><span data-i18n="vt_num4">§ 02 · 금고</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
       <h2 data-i18n-html="vt_title">암호화되어 있지만, 여전히 그저 <em>폴더</em>입니다.</h2>
 
       <!-- spec §0 «O que é» -->
@@ -2597,6 +2511,105 @@
 
 
   <p class="vault-note" data-i18n-html="vt_premium"><a class="prem-word" href="#premium">PREMIUM</a> — 금고 만들기. 여는 것은 무료이며, 다른 곳에서 만든 금고도 마찬가지입니다.</p>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     OUVIR E ESCREVER — a 2.1.2 (20/10/2026). Textos aprovados.
+     ⛔ O nome é o da APP («Ouvir e escrever — como funciona», a janela PREMIUM, a oferta do GOTD): o site e a app dizem
+       o mesmo. O «tudo» vai no título. Nunca «traduções de qualidade»: diz-se o que faz, e lembra-se que se revê.
+     ⛔ Grátis só o ditado para .txt; o resto é PREMIUM (gratis-ou-premium-ferramentas.md). O ouvido e o tradutor vêm
+       uma vez, com autorização (a privacy.html diz de onde). Molde: o da secção do cofre, sem o desenho.
+     ══════════════════════════════════════════════════════════════════════ -->
+<section class="vault ouvir" id="ouvir">
+  <div class="vault-head">
+    <div>
+      <div class="section-num"><span data-i18n="ou_num3">§ 03 · 듣고 쓰기</span><a class="badge-free" href="#free" data-i18n="badge_free">무료</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <h2 data-i18n-html="ou_title"><em>모든 것</em>을 위한 하나의 번역기.</h2>
+      <p class="vault-lead" data-i18n-html="ou_blurb">ExplorerFocus가 이제 듣습니다. 오디오와 동영상에서 말하는 내용을 적고, 말한 내용과 자막, 재생 중인 동영상, PDF와 책을 번역합니다. 모두 이 컴퓨터에서. 번역은 자동이므로 검토하는 것이 좋습니다.</p>
+    </div>
+  </div>
+  <div class="vault-grid">
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_sub_ic">자막</div>
+      <h4 data-i18n="ou_sub_h">원하는 언어로.</h4>
+      <p data-i18n-html="ou_sub"><em>자막 만들기…</em>는 동영상을 듣고 시간에 맞춘 자막을 말하는 언어 그대로, 또는 번역해서 씁니다. <em>자막 번역…</em>은 .srt를 다른 언어로 바꿉니다. 자막은 동영상 옆에 저장되며, 미리 보기와 VLC 같은 플레이어가 알아서 찾습니다.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_live_ic">실시간</div>
+      <h4 data-i18n="ou_live_h">영화가 재생되는 동안.</h4>
+      <p data-i18n-html="ou_live">미리 보기에서 외국어 영화에 번역된 자막이 멈추지 않고 붙습니다. 금고 안에서도 됩니다.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_lote_ic">일괄</div>
+      <h4 data-i18n="ou_lote_h">시리즈 전체를 한 번에.</h4>
+      <p data-i18n-html="ou_lote"><em>자막 일괄 만들기…</em>는 모든 에피소드에 영어 자막과 선택한 언어 자막을 만들며, 그동안 다른 일을 할 수 있습니다. 중간에 멈춰도 잃는 것이 없습니다. 멈춘 곳부터 이어집니다.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_trn_ic">받아쓰기와 구술</div>
+      <h4 data-i18n="ou_trn_h">소리에서 글로.</h4>
+      <p data-i18n-html="ou_trn">녹음 내용을 텍스트, Word, PDF 또는 자막으로 — 두 가지 이상의 언어로 말해도 됩니다. 🎤의 <em>녹음하고 받아쓰기</em>는 말하는 대로 바로 적습니다.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_liv_ic">PDF와 책</div>
+      <h4 data-i18n="ou_liv_h">책 한 권을 통째로 다른 언어로.</h4>
+      <p data-i18n-html="ou_liv">PDF(스캔한 것도) 또는 EPUB, PDF, FB2 책을 다른 언어로 번역합니다. 긴 작업은 일시 정지했다가 나중에 이어 갈 수 있습니다.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_loc_ic">모두 이 컴퓨터에서</div>
+      <h4 data-i18n="ou_loc_h">아무것도 나가지 않습니다.</h4>
+      <p data-i18n-html="ou_loc">듣기와 번역기는 허락할 때 한 번만 내려받으며, 모든 언어에 쓰입니다. 그 뒤로 소리, 글, 번역은 컴퓨터에 남고, 인터넷도 필요 없습니다. 그래픽 카드가 있으면 훨씬 빠릅니다.</p>
+    </div>
+  </div>
+  <p class="vault-note" data-i18n-html="ou_tiers"><a class="free-word" href="#free">무료</a>: 🎤에서 .txt로 받아쓰기. <a class="prem-word" href="#premium">PREMIUM</a>: 자막, 실시간 자막, 일괄 처리, Word·PDF·자막으로 받아쓰기, 그리고 모든 번역.</p>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     AUDIOLIVROS — a versão dos audiolivros (17/11/2026). O destaque pedido pelo João: ouvir é grátis; fazer o audiolivro
+     é PREMIUM. ⛔ Nunca «o único», nunca «exato» (o realce da palavra é estimado), nunca mais do que 2× (o João, 16/11).
+     ⛔ Nada sobre leitores de telefone que toquem o EPUB com voz (o da Librera não toca: o João, 16/11). Molde: o da
+     secção «Ouvir e escrever».
+     ══════════════════════════════════════════════════════════════════════ -->
+<span id="audiolivros"></span><section class="vault ouvir" id="audiobooks">
+  <div class="vault-head">
+    <div>
+      <div class="section-num"><span data-i18n="au_num2">§ 04 · 오디오북</span><a class="badge-free" href="#free" data-i18n="badge_free">무료</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <h2 data-i18n-html="au_title">전자책을 <em>오디오북</em>으로.</h2>
+      <p class="vault-lead" data-i18n-html="au_blurb2">만든 오디오북은 일반 오디오 파일이므로 차에서, 휴대폰으로, 집에서, 원하는 곳에서 들을 수 있습니다. ExplorerFocus는 영어 전자책과 PDF를 28가지 자연스러운 음성으로 바로 여러분의 PC에서 소리 내어 읽으며, 책은 어디에도 올라가지 않습니다.</p>
+    </div>
+  </div>
+  <div class="vault-grid">
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_now_ic">바로 듣기</div>
+      <h4 data-i18n="au_now_h">몇 초 만에, 무료로.</h4>
+      <p data-i18n-html="au_now">책을 선택하고 <em>전자책</em> 메뉴에서 <em>이 책 듣기…</em>를 고르십시오(PDF도 <em>PDF</em> 메뉴에서). 들리는 문장과 단어가 강조 표시됩니다. 문장을 클릭하면 거기서부터 읽고, 다음에는 멈춘 곳에서 이어 갑니다.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_ply_ic">플레이어</div>
+      <h4 data-i18n="au_ply_h">오디오북 앱에 있는 기능 그대로.</h4>
+      <p data-i18n-html="au_ply">책마다 속도를 기억하고(최대 2×), 장과 책의 남은 시간을 보여 줍니다. 수면 타이머, 메모가 있는 북마크, 장 건너뛰기, 미디어 키, 이동한 뒤 원래 자리로 돌아가는 단추도 있습니다.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_mk_ic">오디오북 만들기</div>
+      <h4 data-i18n="au_mk_h">휴대폰과 차에서.</h4>
+      <p data-i18n-html="au_mk"><em>오디오북 만들기…</em>는 표지가 들어간 장별 MP3(어떤 플레이어에서나 재생)나 장이 들어간 M4B(오디오북 형식)를 녹음합니다. 시작하기 전에 오디오 길이와 여러분의 컴퓨터에서 걸리는 시간을 보여 주며, 멈췄다가 나중에 이어 갈 수 있습니다.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_ep_ic">읽으며 듣기</div>
+      <h4 data-i18n="au_ep_h">글과 음성을 함께.</h4>
+      <p data-i18n-html="au_ep2">또는 음성이 들어 있는 EPUB 3. 읽는 문장이 밝게 표시되며, Thorium Reader(무료)처럼 이를 재생하는 전자책 리더에서 쓸 수 있습니다. ExplorerFocus는 녹음된 음성이 이미 들어 있는 EPUB도 재생합니다. DAISY 도서와 W3C 및 Readium 오디오북이 전자책으로 자동 인식됩니다. 책에 녹음된 음성으로 들을 수 있으며, 듣고 있는 부분이 강조 표시됩니다.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_vz_ic">음성</div>
+      <h4 data-i18n="au_vz_h">28가지, 미국식과 영국식.</h4>
+      <p data-i18n-html="au_vz">여성과 남성 음성이 있으며, 고르기 전에 각각 미리 들어 볼 수 있습니다. 설정의 <em>음성</em>에서.</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_loc_ic">컴퓨터 안에서</div>
+      <h4 data-i18n="au_loc_h">책은 여러분 곁에 남습니다.</h4>
+      <p data-i18n-html="au_loc">음성은 여러분이 허락할 때만 한 번 내려받습니다. 그 뒤로는 인터넷이 필요 없고, 책은 PC 밖으로 나가지 않습니다.</p>
+    </div>
+  </div>
+  <p class="vault-note" data-i18n-html="au_tiers"><a class="free-word" href="#free">무료</a>: 전자책과 PDF 듣기, 플레이어의 모든 기능, 최대 3분 분량의 MP3 샘플. <a class="prem-word" href="#premium">PREMIUM</a>: 오디오북 전체 만들기 — MP3, M4B, 읽으며 듣는 EPUB. 영어 음성이며, DRM이 없는 전자책만, 개인 용도로.</p>
 </section>
 
 <!-- SHORTCUTS -->

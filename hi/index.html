@@ -94,6 +94,7 @@
     "Redesigned right-click context menus in the tree and the list: the options in columns, with where the action takes place at the top",
     "Rotate any image by any angle, degree by degree, with the corners cropped or transparent; enhance an image with filters and colour adjustments (PREMIUM)",
     "Web pages and internet shortcuts open in the browser of your choice, in a normal or private window",
+    "My Windows secrets: the hidden folders behind %APPDATA%, %LOCALAPPDATA% and the other environment variables, with their full paths, and every environment variable with its value (free); what Windows keeps about you, such as what was typed in Run, recent files, what was copied, the USB drives it remembers, the thumbnails of deleted photos and saved notifications, with the way to get there by hand, and some of it can be deleted (PREMIUM)",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://intrepidparallel.com/explorerfocus/hi/",
@@ -1867,120 +1868,23 @@
     <!-- ⛔ 23/11, a 2.2.8 (o cartão abre com os menus de contexto e o Comprimir): entram os dois à cabeça; saem o Vídeo e o
          «Ouvir e escrever». Medido no Changelog.cs do 843a2c42: o Vídeo entrou no cartão pela última vez na 2.1.6 (Cl216JuntarVideos); o «Ouvir e escrever» na 2.1.5 (Cl215TraduzirLegendasEmLote).
          O DAISY entra pelos Audiolivros, que ficam. -->
+    <!-- 24/11/2026, o João: «As pills têm de ter coisas mais diferentes entre si.» Entram os segredos do Windows (2.2.9) e
+         as legendas (voltam); saem os e-books e o PDF, que repetiam a leitura ao lado dos audiolivros. -->
+    <a href="#feat38" data-i18n="wn_segredos">🗝 मेरे Windows के रहस्य</a>
     <a href="#feat37" data-i18n="wn_menus">🗂 संदर्भ मेनू</a>
     <a href="#feat29" data-i18n="wn_arquivos">🗜 कंप्रेस किए गए आर्काइव</a>
+    <a href="#ouvir" data-i18n="wn_legendas">🎬 सबटाइटल</a>
     <a href="#audiobooks" data-i18n="wn_audiolivros">🎧 ऑडियोबुक</a>
     <a href="#vault" data-i18n="wn_vault">🔒 तिजोरियाँ</a>
-    <a href="#feat24" data-i18n="wn_livros">📚 ई-बुक</a>
-    <a href="#feat34" data-i18n="wn_pdf_211">📄 PDF</a>
   </nav>
   <span class="whatsnew-ver">v2.2.9</span>
 </div>
-
-<!-- ══════════════════════════════════════════════════════════════════════
-     AUDIOLIVROS — a versão dos audiolivros (17/11/2026). O destaque pedido pelo João: ouvir é grátis; fazer o audiolivro
-     é PREMIUM. ⛔ Nunca «o único», nunca «exato» (o realce da palavra é estimado), nunca mais do que 2× (o João, 16/11).
-     ⛔ Nada sobre leitores de telefone que toquem o EPUB com voz (o da Librera não toca: o João, 16/11). Molde: o da
-     secção «Ouvir e escrever».
-     ══════════════════════════════════════════════════════════════════════ -->
-<span id="audiolivros"></span><section class="vault ouvir" id="audiobooks">
-  <div class="vault-head">
-    <div>
-      <div class="section-num"><span data-i18n="au_num">§ 01 · ऑडियोबुक</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-      <h2 data-i18n-html="au_title">अपनी ई-बुक को <em>ऑडियोबुक</em> बनाएँ।</h2>
-      <p class="vault-lead" data-i18n-html="au_blurb2">आप जो ऑडियोबुक बनाते हैं, वे सामान्य ऑडियो फ़ाइलें हैं: उन्हें जहाँ चाहें सुनें, कार में, फ़ोन पर या घर पर। ExplorerFocus अंग्रेज़ी ई-बुक और PDF को 28 स्वाभाविक आवाज़ों में ज़ोर से पढ़ता है, आपके अपने PC पर, और आपकी किताबें कभी कहीं अपलोड नहीं होतीं।</p>
-    </div>
-  </div>
-  <div class="vault-grid">
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_now_ic">अभी सुनें</div>
-      <h4 data-i18n="au_now_h">कुछ ही सेकंड में, मुफ़्त।</h4>
-      <p data-i18n-html="au_now">कोई किताब चुनें और <em>ई-बुक</em> मेन्यू में <em>यह किताब सुनें…</em> चुनें (PDF भी, <em>PDF</em> मेन्यू में)। सुना जा रहा वाक्य और शब्द हाइलाइट रहते हैं। किसी वाक्य पर क्लिक करने से वहीं से पढ़ना शुरू होता है, और अगली बार जहाँ रुका था वहीं से।</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_ply_ic">प्लेयर</div>
-      <h4 data-i18n="au_ply_h">वह सब, जो ऑडियोबुक ऐप्स में होता है।</h4>
-      <p data-i18n-html="au_ply">हर किताब अपनी गति याद रखती है, 2× तक, और दिखाती है कि अध्याय और किताब में कितना बाकी है। स्लीप टाइमर, नोट वाले निशान, अध्याय छोड़ना, मीडिया कुंजियाँ, और एक बटन जो छलांग के बाद वापस ले आता है।</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_mk_ic">ऑडियोबुक बनाएँ</div>
-      <h4 data-i18n="au_mk_h">फ़ोन और कार के लिए।</h4>
-      <p data-i18n-html="au_mk"><em>ऑडियोबुक बनाएँ…</em> हर अध्याय की एक MP3 कवर के साथ, किसी भी प्लेयर के लिए, या अध्यायों वाली एक M4B, ऑडियोबुक का फ़ॉर्मेट, रिकॉर्ड करता है। शुरू करने से पहले बताता है कि ऑडियो कितना लंबा होगा और आपके कंप्यूटर पर कितना समय लगेगा; इसे रोककर बाद में जारी रखा जा सकता है।</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_ep_ic">पढ़ें और सुनें</div>
-      <h4 data-i18n="au_ep_h">टेक्स्ट और आवाज़ साथ-साथ।</h4>
-      <p data-i18n-html="au_ep2">या आवाज़ समेत एक EPUB 3, जिसमें पढ़ा जा रहा वाक्य जगमगाता है, उन ई-बुक रीडरों के लिए जो इसे चलाते हैं, जैसे Thorium Reader (मुफ़्त)। ExplorerFocus उन EPUB को भी चलाता है जिनमें पहले से रिकॉर्ड की गई आवाज़ होती है। DAISY किताबें और W3C व Readium ऑडियोबुक अपने-आप ई-बुक के रूप में पहचानी जाती हैं: इन्हें इनकी अपनी रिकॉर्ड की गई आवाज़ में सुना जा सकता है, और जो सुनाई दे रहा है वह हाइलाइट होता है।</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_vz_ic">आवाज़ें</div>
-      <h4 data-i18n="au_vz_h">28, अमेरिकी और ब्रिटिश।</h4>
-      <p data-i18n-html="au_vz">महिलाओं और पुरुषों की, चुनने से पहले हर एक का नमूना सुनकर, सेटिंग्स में <em>आवाज़ें</em> में।</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_loc_ic">कंप्यूटर पर ही</div>
-      <h4 data-i18n="au_loc_h">आपकी किताबें आपके पास रहती हैं।</h4>
-      <p data-i18n-html="au_loc">आवाज़ें एक बार डाउनलोड होती हैं, सिर्फ़ तब जब आप हाँ कहें। उसके बाद इंटरनेट की ज़रूरत नहीं होती, और आपकी किताबें कभी आपके PC से बाहर नहीं जातीं।</p>
-    </div>
-  </div>
-  <p class="vault-note" data-i18n-html="au_tiers"><a class="free-word" href="#free">मुफ़्त</a>: ई-बुक और PDF सुनना, प्लेयर की हर सुविधा के साथ, और MP3 में 3 मिनट तक का नमूना। <a class="prem-word" href="#premium">PREMIUM</a>: पूरी ऑडियोबुक बनाना — MP3, M4B और पढ़ने-सुनने वाली EPUB। अंग्रेज़ी आवाज़ें; सिर्फ़ बिना DRM वाली ई-बुक, निजी इस्तेमाल के लिए।</p>
-</section>
-
-<!-- ══════════════════════════════════════════════════════════════════════
-     OUVIR E ESCREVER — a 2.1.2 (20/10/2026). Textos aprovados.
-     ⛔ O nome é o da APP («Ouvir e escrever — como funciona», a janela PREMIUM, a oferta do GOTD): o site e a app dizem
-       o mesmo. O «tudo» vai no título. Nunca «traduções de qualidade»: diz-se o que faz, e lembra-se que se revê.
-     ⛔ Grátis só o ditado para .txt; o resto é PREMIUM (gratis-ou-premium-ferramentas.md). O ouvido e o tradutor vêm
-       uma vez, com autorização (a privacy.html diz de onde). Molde: o da secção do cofre, sem o desenho.
-     ══════════════════════════════════════════════════════════════════════ -->
-<section class="vault ouvir" id="ouvir">
-  <div class="vault-head">
-    <div>
-      <div class="section-num"><span data-i18n="ou_num2">§ 02 · सुनना और लिखना</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-      <h2 data-i18n-html="ou_title"><em>हर चीज़</em> के लिए एक ही अनुवादक।</h2>
-      <p class="vault-lead" data-i18n-html="ou_blurb">ExplorerFocus अब सुनता है: ऑडियो और वीडियो में जो कहा जाता है उसे लिखता है, और कही गई बात, उपशीर्षक, चलता हुआ वीडियो, PDF और किताबें अनुवाद करता है। सब कुछ इसी कंप्यूटर पर। अनुवाद स्वचालित है, और उसे जाँच लेना अच्छा है।</p>
-    </div>
-  </div>
-  <div class="vault-grid">
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_sub_ic">उपशीर्षक</div>
-      <h4 data-i18n="ou_sub_h">आपकी चुनी भाषा में।</h4>
-      <p data-i18n-html="ou_sub"><em>उपशीर्षक बनाएँ…</em> वीडियो सुनकर समय के साथ उपशीर्षक लिखता है, बोली जा रही भाषा में या अनुवाद करके। <em>उपशीर्षक का अनुवाद करें…</em> किसी .srt को दूसरी भाषा में बदलता है। वे वीडियो के बगल में सहेजे जाते हैं, और पूर्वावलोकन तथा VLC जैसे प्लेयर उन्हें अपने-आप ढूँढ लेते हैं।</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_live_ic">लाइव</div>
-      <h4 data-i18n="ou_live_h">फ़िल्म चलते-चलते।</h4>
-      <p data-i18n-html="ou_live">पूर्वावलोकन में, दूसरी भाषा की फ़िल्म को बिना रुके अनुवादित उपशीर्षक मिलते हैं। तिजोरी के अंदर भी।</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_lote_ic">बैच में</div>
-      <h4 data-i18n="ou_lote_h">पूरी सीरीज़ एक साथ।</h4>
-      <p data-i18n-html="ou_lote"><em>बैच में उपशीर्षक बनाएँ…</em> सभी एपिसोड के उपशीर्षक बनाता है, अंग्रेज़ी में और चुनी गई भाषा में, जबकि आप कोई और काम करते रहते हैं। बीच में रोकने से कुछ नहीं खोता: काम वहीं से आगे बढ़ता है जहाँ रुका था।</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_trn_ic">लिप्यंतरण और डिक्टेशन</div>
-      <h4 data-i18n="ou_trn_h">आवाज़ से टेक्स्ट तक।</h4>
-      <p data-i18n-html="ou_trn">किसी रिकॉर्डिंग का पाठ, टेक्स्ट, Word, PDF या उपशीर्षक में — तब भी जब एक से ज़्यादा भाषाएँ बोली गई हों। और 🎤 में, <em>रिकॉर्ड करें और लिखें</em> जो बोला जाता है उसे साथ-साथ लिखता है।</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_liv_ic">PDF और किताबें</div>
-      <h4 data-i18n="ou_liv_h">पूरी किताब दूसरी भाषा में।</h4>
-      <p data-i18n-html="ou_liv">एक PDF, स्कैन किया हुआ भी, या EPUB, PDF या FB2 में एक किताब, दूसरी भाषा में अनुवादित। लंबे काम को रोका और बाद में जारी रखा जा सकता है।</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_loc_ic">इसी कंप्यूटर पर</div>
-      <h4 data-i18n="ou_loc_h">उससे कुछ बाहर नहीं जाता।</h4>
-      <p data-i18n-html="ou_loc">कान और अनुवादक एक बार आते हैं, सिर्फ़ अनुमति से, और सभी भाषाओं के काम आते हैं। उसके बाद आवाज़, टेक्स्ट और अनुवाद कंप्यूटर पर ही रहते हैं, और इंटरनेट की ज़रूरत नहीं होती। ग्राफ़िक्स कार्ड के साथ, कहीं ज़्यादा तेज़।</p>
-    </div>
-  </div>
-  <p class="vault-note" data-i18n-html="ou_tiers"><a class="free-word" href="#free">मुफ़्त</a>: 🎤 में .txt में बोलकर लिखवाना। <a class="prem-word" href="#premium">PREMIUM</a>: उपशीर्षक, लाइव सबटाइटल, बैच, Word, PDF और उपशीर्षक में लिप्यंतरण, और सभी अनुवाद।</p>
-</section>
 
 <!-- CATALOG -->
 <div id="features"></div>
 <div class="section-header">
   <div>
-    <div class="section-num" data-i18n="cat_num3">§ 03 · सूची</div>
+    <div class="section-num" data-i18n="cat_num4">§ 01 · सूची</div>
     <h2 class="section-title" data-i18n-html="cat_title">जो <em>सचमुच</em><br>फ़र्क डालता है।</h2>
   </div>
   <p class="section-blurb" data-i18n="cat_blurb">हर सुविधा एक जानी-पहचानी फ़ाइल ट्री पर रोज़ के काम में आने वाली किसी ठोस दिक्कत का जवाब देने के लिए जोड़ी गई। कोई भी दिखावे के लिए नहीं है। लगभग सब चालू या बंद की जा सकती हैं।</p>
@@ -2390,6 +2294,16 @@
     <p data-i18n-html="f37_p"><strong>संदर्भ मेनू का पूरी तरह नया डिज़ाइन</strong>, वे मेनू जो पेड़ और सूची में राइट-क्लिक से खुलते हैं: विकल्प कॉलम में, और ऊपर यह कि काम कहाँ होगा।</p>
   </div>
 
+  <!-- 24/11/2026: a 2.2.9, «My Windows secrets» (os textos do cartão da app, Cl229Segredos e Cl229SegredosPremium). -->
+  <div class="feat w12" id="feat38">
+    <div class="num"><span data-i18n="f38_num">38 — मेरे WINDOWS के रहस्य</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f38_h">Windows जो छिपाता है, सब सामने।</h3>
+    <p data-i18n-html="f38_p"><strong>मेरे Windows के रहस्य</strong>, नीचे की पट्टी में “मेरी मशीन” और “मेरे कार्य” के बीच एक नया लिंक, “नया” के निशान के साथ: Windows इस कंप्यूटर पर चीज़ें कहाँ रखता है। %APPDATA%, %LOCALAPPDATA% और अन्य एनवायरनमेंट वेरिएबल के पीछे छिपे फ़ोल्डर, हर एक अपने पूरे पथ और उपयोग के साथ, एक क्लिक पर; और “सभी वेरिएबल दिखाएँ” में सभी एनवायरनमेंट वेरिएबल, उनके मान के साथ।</p>
+    <p class="feat-p2" data-i18n-html="f38_p2"><strong>Windows आपके बारे में क्या रखता है</strong> (PREMIUM), उसी विंडो में: आपने “चलाएँ” और फ़ाइल एक्सप्लोरर के पता बार में क्या लिखा, हाल की फ़ाइलें, आपने क्या कॉपी किया (चित्रों सहित), Windows को याद USB ड्राइव, हाल ही में खोले गए प्रोग्राम, हटाई गई फ़ोटो के थंबनेल, सहेजी गई सूचनाएँ, हर ड्राइव का रीसायकल बिन और अस्थायी फ़ाइलें, वहाँ खुद पहुँचने के रास्ते के साथ। इनमें से कुछ हटाया जा सकता है; अस्थायी फ़ाइलें और रीसायकल बिन, केवल 7 दिन से पुराना।</p>
+    <p class="feat-p2" data-i18n="f38_p3">जो रास्ता जानता है, उसके लिए इनमें से कुछ भी ढूँढना असंभव नहीं है। फ़ायदा यह है कि यहाँ सब एक साथ है, हर किसी के लिए बस एक क्लिक दूर।</p>
+    <div class="feat-mark" data-i18n="f38_mark">%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH</div>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -2410,7 +2324,7 @@
 <section class="vault" id="vault">
   <div class="vault-head">
     <div>
-      <div class="section-num"><span data-i18n="vt_num3">§ 04 · तिजोरी</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <div class="section-num"><span data-i18n="vt_num4">§ 02 · तिजोरी</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
       <h2 data-i18n-html="vt_title">एन्क्रिप्टेड, फिर भी बस <em>फ़ोल्डर</em>।</h2>
 
       <!-- spec §0 «O que é» -->
@@ -2597,6 +2511,105 @@
 
 
   <p class="vault-note" data-i18n-html="vt_premium"><a class="prem-word" href="#premium">PREMIUM</a> — तिजोरियाँ बनाना। उन्हें खोलना मुफ़्त है, कहीं और बनी तिजोरियों समेत।</p>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     OUVIR E ESCREVER — a 2.1.2 (20/10/2026). Textos aprovados.
+     ⛔ O nome é o da APP («Ouvir e escrever — como funciona», a janela PREMIUM, a oferta do GOTD): o site e a app dizem
+       o mesmo. O «tudo» vai no título. Nunca «traduções de qualidade»: diz-se o que faz, e lembra-se que se revê.
+     ⛔ Grátis só o ditado para .txt; o resto é PREMIUM (gratis-ou-premium-ferramentas.md). O ouvido e o tradutor vêm
+       uma vez, com autorização (a privacy.html diz de onde). Molde: o da secção do cofre, sem o desenho.
+     ══════════════════════════════════════════════════════════════════════ -->
+<section class="vault ouvir" id="ouvir">
+  <div class="vault-head">
+    <div>
+      <div class="section-num"><span data-i18n="ou_num3">§ 03 · सुनना और लिखना</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <h2 data-i18n-html="ou_title"><em>हर चीज़</em> के लिए एक ही अनुवादक।</h2>
+      <p class="vault-lead" data-i18n-html="ou_blurb">ExplorerFocus अब सुनता है: ऑडियो और वीडियो में जो कहा जाता है उसे लिखता है, और कही गई बात, उपशीर्षक, चलता हुआ वीडियो, PDF और किताबें अनुवाद करता है। सब कुछ इसी कंप्यूटर पर। अनुवाद स्वचालित है, और उसे जाँच लेना अच्छा है।</p>
+    </div>
+  </div>
+  <div class="vault-grid">
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_sub_ic">उपशीर्षक</div>
+      <h4 data-i18n="ou_sub_h">आपकी चुनी भाषा में।</h4>
+      <p data-i18n-html="ou_sub"><em>उपशीर्षक बनाएँ…</em> वीडियो सुनकर समय के साथ उपशीर्षक लिखता है, बोली जा रही भाषा में या अनुवाद करके। <em>उपशीर्षक का अनुवाद करें…</em> किसी .srt को दूसरी भाषा में बदलता है। वे वीडियो के बगल में सहेजे जाते हैं, और पूर्वावलोकन तथा VLC जैसे प्लेयर उन्हें अपने-आप ढूँढ लेते हैं।</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_live_ic">लाइव</div>
+      <h4 data-i18n="ou_live_h">फ़िल्म चलते-चलते।</h4>
+      <p data-i18n-html="ou_live">पूर्वावलोकन में, दूसरी भाषा की फ़िल्म को बिना रुके अनुवादित उपशीर्षक मिलते हैं। तिजोरी के अंदर भी।</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_lote_ic">बैच में</div>
+      <h4 data-i18n="ou_lote_h">पूरी सीरीज़ एक साथ।</h4>
+      <p data-i18n-html="ou_lote"><em>बैच में उपशीर्षक बनाएँ…</em> सभी एपिसोड के उपशीर्षक बनाता है, अंग्रेज़ी में और चुनी गई भाषा में, जबकि आप कोई और काम करते रहते हैं। बीच में रोकने से कुछ नहीं खोता: काम वहीं से आगे बढ़ता है जहाँ रुका था।</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_trn_ic">लिप्यंतरण और डिक्टेशन</div>
+      <h4 data-i18n="ou_trn_h">आवाज़ से टेक्स्ट तक।</h4>
+      <p data-i18n-html="ou_trn">किसी रिकॉर्डिंग का पाठ, टेक्स्ट, Word, PDF या उपशीर्षक में — तब भी जब एक से ज़्यादा भाषाएँ बोली गई हों। और 🎤 में, <em>रिकॉर्ड करें और लिखें</em> जो बोला जाता है उसे साथ-साथ लिखता है।</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_liv_ic">PDF और किताबें</div>
+      <h4 data-i18n="ou_liv_h">पूरी किताब दूसरी भाषा में।</h4>
+      <p data-i18n-html="ou_liv">एक PDF, स्कैन किया हुआ भी, या EPUB, PDF या FB2 में एक किताब, दूसरी भाषा में अनुवादित। लंबे काम को रोका और बाद में जारी रखा जा सकता है।</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_loc_ic">इसी कंप्यूटर पर</div>
+      <h4 data-i18n="ou_loc_h">उससे कुछ बाहर नहीं जाता।</h4>
+      <p data-i18n-html="ou_loc">कान और अनुवादक एक बार आते हैं, सिर्फ़ अनुमति से, और सभी भाषाओं के काम आते हैं। उसके बाद आवाज़, टेक्स्ट और अनुवाद कंप्यूटर पर ही रहते हैं, और इंटरनेट की ज़रूरत नहीं होती। ग्राफ़िक्स कार्ड के साथ, कहीं ज़्यादा तेज़।</p>
+    </div>
+  </div>
+  <p class="vault-note" data-i18n-html="ou_tiers"><a class="free-word" href="#free">मुफ़्त</a>: 🎤 में .txt में बोलकर लिखवाना। <a class="prem-word" href="#premium">PREMIUM</a>: उपशीर्षक, लाइव सबटाइटल, बैच, Word, PDF और उपशीर्षक में लिप्यंतरण, और सभी अनुवाद।</p>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     AUDIOLIVROS — a versão dos audiolivros (17/11/2026). O destaque pedido pelo João: ouvir é grátis; fazer o audiolivro
+     é PREMIUM. ⛔ Nunca «o único», nunca «exato» (o realce da palavra é estimado), nunca mais do que 2× (o João, 16/11).
+     ⛔ Nada sobre leitores de telefone que toquem o EPUB com voz (o da Librera não toca: o João, 16/11). Molde: o da
+     secção «Ouvir e escrever».
+     ══════════════════════════════════════════════════════════════════════ -->
+<span id="audiolivros"></span><section class="vault ouvir" id="audiobooks">
+  <div class="vault-head">
+    <div>
+      <div class="section-num"><span data-i18n="au_num2">§ 04 · ऑडियोबुक</span><a class="badge-free" href="#free" data-i18n="badge_free">मुफ़्त</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <h2 data-i18n-html="au_title">अपनी ई-बुक को <em>ऑडियोबुक</em> बनाएँ।</h2>
+      <p class="vault-lead" data-i18n-html="au_blurb2">आप जो ऑडियोबुक बनाते हैं, वे सामान्य ऑडियो फ़ाइलें हैं: उन्हें जहाँ चाहें सुनें, कार में, फ़ोन पर या घर पर। ExplorerFocus अंग्रेज़ी ई-बुक और PDF को 28 स्वाभाविक आवाज़ों में ज़ोर से पढ़ता है, आपके अपने PC पर, और आपकी किताबें कभी कहीं अपलोड नहीं होतीं।</p>
+    </div>
+  </div>
+  <div class="vault-grid">
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_now_ic">अभी सुनें</div>
+      <h4 data-i18n="au_now_h">कुछ ही सेकंड में, मुफ़्त।</h4>
+      <p data-i18n-html="au_now">कोई किताब चुनें और <em>ई-बुक</em> मेन्यू में <em>यह किताब सुनें…</em> चुनें (PDF भी, <em>PDF</em> मेन्यू में)। सुना जा रहा वाक्य और शब्द हाइलाइट रहते हैं। किसी वाक्य पर क्लिक करने से वहीं से पढ़ना शुरू होता है, और अगली बार जहाँ रुका था वहीं से।</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_ply_ic">प्लेयर</div>
+      <h4 data-i18n="au_ply_h">वह सब, जो ऑडियोबुक ऐप्स में होता है।</h4>
+      <p data-i18n-html="au_ply">हर किताब अपनी गति याद रखती है, 2× तक, और दिखाती है कि अध्याय और किताब में कितना बाकी है। स्लीप टाइमर, नोट वाले निशान, अध्याय छोड़ना, मीडिया कुंजियाँ, और एक बटन जो छलांग के बाद वापस ले आता है।</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_mk_ic">ऑडियोबुक बनाएँ</div>
+      <h4 data-i18n="au_mk_h">फ़ोन और कार के लिए।</h4>
+      <p data-i18n-html="au_mk"><em>ऑडियोबुक बनाएँ…</em> हर अध्याय की एक MP3 कवर के साथ, किसी भी प्लेयर के लिए, या अध्यायों वाली एक M4B, ऑडियोबुक का फ़ॉर्मेट, रिकॉर्ड करता है। शुरू करने से पहले बताता है कि ऑडियो कितना लंबा होगा और आपके कंप्यूटर पर कितना समय लगेगा; इसे रोककर बाद में जारी रखा जा सकता है।</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_ep_ic">पढ़ें और सुनें</div>
+      <h4 data-i18n="au_ep_h">टेक्स्ट और आवाज़ साथ-साथ।</h4>
+      <p data-i18n-html="au_ep2">या आवाज़ समेत एक EPUB 3, जिसमें पढ़ा जा रहा वाक्य जगमगाता है, उन ई-बुक रीडरों के लिए जो इसे चलाते हैं, जैसे Thorium Reader (मुफ़्त)। ExplorerFocus उन EPUB को भी चलाता है जिनमें पहले से रिकॉर्ड की गई आवाज़ होती है। DAISY किताबें और W3C व Readium ऑडियोबुक अपने-आप ई-बुक के रूप में पहचानी जाती हैं: इन्हें इनकी अपनी रिकॉर्ड की गई आवाज़ में सुना जा सकता है, और जो सुनाई दे रहा है वह हाइलाइट होता है।</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_vz_ic">आवाज़ें</div>
+      <h4 data-i18n="au_vz_h">28, अमेरिकी और ब्रिटिश।</h4>
+      <p data-i18n-html="au_vz">महिलाओं और पुरुषों की, चुनने से पहले हर एक का नमूना सुनकर, सेटिंग्स में <em>आवाज़ें</em> में।</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_loc_ic">कंप्यूटर पर ही</div>
+      <h4 data-i18n="au_loc_h">आपकी किताबें आपके पास रहती हैं।</h4>
+      <p data-i18n-html="au_loc">आवाज़ें एक बार डाउनलोड होती हैं, सिर्फ़ तब जब आप हाँ कहें। उसके बाद इंटरनेट की ज़रूरत नहीं होती, और आपकी किताबें कभी आपके PC से बाहर नहीं जातीं।</p>
+    </div>
+  </div>
+  <p class="vault-note" data-i18n-html="au_tiers"><a class="free-word" href="#free">मुफ़्त</a>: ई-बुक और PDF सुनना, प्लेयर की हर सुविधा के साथ, और MP3 में 3 मिनट तक का नमूना। <a class="prem-word" href="#premium">PREMIUM</a>: पूरी ऑडियोबुक बनाना — MP3, M4B और पढ़ने-सुनने वाली EPUB। अंग्रेज़ी आवाज़ें; सिर्फ़ बिना DRM वाली ई-बुक, निजी इस्तेमाल के लिए।</p>
 </section>
 
 <!-- SHORTCUTS -->

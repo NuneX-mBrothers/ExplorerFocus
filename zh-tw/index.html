@@ -94,6 +94,7 @@
     "Redesigned right-click context menus in the tree and the list: the options in columns, with where the action takes place at the top",
     "Rotate any image by any angle, degree by degree, with the corners cropped or transparent; enhance an image with filters and colour adjustments (PREMIUM)",
     "Web pages and internet shortcuts open in the browser of your choice, in a normal or private window",
+    "My Windows secrets: the hidden folders behind %APPDATA%, %LOCALAPPDATA% and the other environment variables, with their full paths, and every environment variable with its value (free); what Windows keeps about you, such as what was typed in Run, recent files, what was copied, the USB drives it remembers, the thumbnails of deleted photos and saved notifications, with the way to get there by hand, and some of it can be deleted (PREMIUM)",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://intrepidparallel.com/explorerfocus/zh-tw/",
@@ -1867,120 +1868,23 @@
     <!-- ⛔ 23/11, a 2.2.8 (o cartão abre com os menus de contexto e o Comprimir): entram os dois à cabeça; saem o Vídeo e o
          «Ouvir e escrever». Medido no Changelog.cs do 843a2c42: o Vídeo entrou no cartão pela última vez na 2.1.6 (Cl216JuntarVideos); o «Ouvir e escrever» na 2.1.5 (Cl215TraduzirLegendasEmLote).
          O DAISY entra pelos Audiolivros, que ficam. -->
+    <!-- 24/11/2026, o João: «As pills têm de ter coisas mais diferentes entre si.» Entram os segredos do Windows (2.2.9) e
+         as legendas (voltam); saem os e-books e o PDF, que repetiam a leitura ao lado dos audiolivros. -->
+    <a href="#feat38" data-i18n="wn_segredos">🗝 我的 Windows 秘密</a>
     <a href="#feat37" data-i18n="wn_menus">🗂 右鍵選單</a>
     <a href="#feat29" data-i18n="wn_arquivos">🗜 壓縮檔</a>
+    <a href="#ouvir" data-i18n="wn_legendas">🎬 字幕</a>
     <a href="#audiobooks" data-i18n="wn_audiolivros">🎧 有聲書</a>
     <a href="#vault" data-i18n="wn_vault">🔒 保險庫</a>
-    <a href="#feat24" data-i18n="wn_livros">📚 電子書</a>
-    <a href="#feat34" data-i18n="wn_pdf_211">📄 PDF</a>
   </nav>
   <span class="whatsnew-ver">v2.2.9</span>
 </div>
-
-<!-- ══════════════════════════════════════════════════════════════════════
-     AUDIOLIVROS — a versão dos audiolivros (17/11/2026). O destaque pedido pelo João: ouvir é grátis; fazer o audiolivro
-     é PREMIUM. ⛔ Nunca «o único», nunca «exato» (o realce da palavra é estimado), nunca mais do que 2× (o João, 16/11).
-     ⛔ Nada sobre leitores de telefone que toquem o EPUB com voz (o da Librera não toca: o João, 16/11). Molde: o da
-     secção «Ouvir e escrever».
-     ══════════════════════════════════════════════════════════════════════ -->
-<span id="audiolivros"></span><section class="vault ouvir" id="audiobooks">
-  <div class="vault-head">
-    <div>
-      <div class="section-num"><span data-i18n="au_num">§ 01 · 有聲書</span><a class="badge-free" href="#free" data-i18n="badge_free">免費</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-      <h2 data-i18n-html="au_title">把你的電子書變成<em>有聲書</em>。</h2>
-      <p class="vault-lead" data-i18n-html="au_blurb2">你製作的有聲書是一般的音訊檔案：在車上、在手機上或在家裡，隨處聆聽。ExplorerFocus 用 28 種自然的語音朗讀英文電子書和 PDF，就在你自己的電腦上，你的書永遠不會被上傳。</p>
-    </div>
-  </div>
-  <div class="vault-grid">
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_now_ic">立即聆聽</div>
-      <h4 data-i18n="au_now_h">幾秒內開始，免費。</h4>
-      <p data-i18n-html="au_now">選取一本書，在<em>電子書</em>選單中選擇<em>聆聽這本書…</em>（PDF 也可以，在 <em>PDF</em> 選單中）。正在聽的句子和詞會醒目顯示。按一下任一句就從那裡讀起，下次會從上次停下的地方繼續。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_ply_ic">播放器</div>
-      <h4 data-i18n="au_ply_h">有聲書 App 該有的，都有。</h4>
-      <p data-i18n-html="au_ply">每本書各自保存語速，最高 2×，並顯示本章和全書還剩多少。睡眠定時、附備註的書籤、跳章、媒體鍵，還有一個跳轉後帶你回到原處的按鈕。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_mk_ic">製作有聲書</div>
-      <h4 data-i18n="au_mk_h">適合手機和車上。</h4>
-      <p data-i18n-html="au_mk"><em>製作有聲書…</em>會為每章錄製一個附封面的 MP3，適用於任何播放器；或者一個附章節的 M4B，也就是有聲書格式。開始之前，它會顯示音訊有多長、在你的電腦上需要多久；可以暫停，之後再繼續。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_ep_ic">邊讀邊聽</div>
-      <h4 data-i18n="au_ep_h">文字和語音合在一起。</h4>
-      <p data-i18n-html="au_ep2">或者一個內含語音的 EPUB 3，朗讀時句子會亮起，適用於能播放它的電子書閱讀器，例如 Thorium Reader（免費）。ExplorerFocus 也能播放自帶錄製語音的 EPUB。 DAISY 圖書以及 W3C 和 Readium 有聲書會被自動辨識為電子書：可以用書中自帶的錄製語音收聽，正在聽的內容會反白顯示。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_vz_ic">語音</div>
-      <h4 data-i18n="au_vz_h">28 種，美式和英式。</h4>
-      <p data-i18n-html="au_vz">女聲和男聲，選擇前可以先試聽每一種，在設定的<em>語音</em>中。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_loc_ic">就在電腦上</div>
-      <h4 data-i18n="au_loc_h">你的書留在你身邊。</h4>
-      <p data-i18n-html="au_loc">語音只下載一次，而且要你同意才下載。之後不需要連網，你的書也永遠不會離開你的電腦。</p>
-    </div>
-  </div>
-  <p class="vault-note" data-i18n-html="au_tiers"><a class="free-word" href="#free">免費</a>：聆聽電子書和 PDF，播放器的所有功能，以及最長 3 分鐘的 MP3 試聽片段。<a class="prem-word" href="#premium">PREMIUM</a>：製作完整的有聲書——MP3、M4B，以及可讀可聽的 EPUB。英文語音；僅限無 DRM 的電子書，供個人使用。</p>
-</section>
-
-<!-- ══════════════════════════════════════════════════════════════════════
-     OUVIR E ESCREVER — a 2.1.2 (20/10/2026). Textos aprovados.
-     ⛔ O nome é o da APP («Ouvir e escrever — como funciona», a janela PREMIUM, a oferta do GOTD): o site e a app dizem
-       o mesmo. O «tudo» vai no título. Nunca «traduções de qualidade»: diz-se o que faz, e lembra-se que se revê.
-     ⛔ Grátis só o ditado para .txt; o resto é PREMIUM (gratis-ou-premium-ferramentas.md). O ouvido e o tradutor vêm
-       uma vez, com autorização (a privacy.html diz de onde). Molde: o da secção do cofre, sem o desenho.
-     ══════════════════════════════════════════════════════════════════════ -->
-<section class="vault ouvir" id="ouvir">
-  <div class="vault-head">
-    <div>
-      <div class="section-num"><span data-i18n="ou_num2">§ 02 · 聽寫</span><a class="badge-free" href="#free" data-i18n="badge_free">免費</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-      <h2 data-i18n-html="ou_title">一個翻譯器，翻譯<em>一切</em>。</h2>
-      <p class="vault-lead" data-i18n-html="ou_blurb">ExplorerFocus 現在會聽了：把音訊和影片裡說的話寫下來，並翻譯說的話、字幕、正在播放的影片、PDF 和書。全部在本機完成。翻譯是自動的，最好檢查一遍。</p>
-    </div>
-  </div>
-  <div class="vault-grid">
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_sub_ic">字幕</div>
-      <h4 data-i18n="ou_sub_h">想要哪種語言都行。</h4>
-      <p data-i18n-html="ou_sub"><em>產生字幕…</em> 聆聽影片並寫出帶時間軸的字幕，可用原本說話的語言，也可翻譯。<em>翻譯字幕…</em> 把 .srt 翻成另一種語言。字幕存在影片旁邊，預覽和 VLC 等播放器會自動找到。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_live_ic">即時</div>
-      <h4 data-i18n="ou_live_h">邊播放邊看。</h4>
-      <p data-i18n-html="ou_live">在預覽中，外語電影不停頓地顯示翻譯好的字幕。在保險庫裡也可以。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_lote_ic">批次</div>
-      <h4 data-i18n="ou_lote_h">整部影集一次完成。</h4>
-      <p data-i18n-html="ou_lote"><em>批次建立字幕…</em> 為所有集數產生英文字幕和所選語言的字幕，同時你可以做別的事。中途停下也不會遺失任何內容：會從停下的地方繼續。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_trn_ic">轉寫和聽寫</div>
-      <h4 data-i18n="ou_trn_h">從聲音到文字。</h4>
-      <p data-i18n-html="ou_trn">把錄音轉成文字、Word、PDF 或字幕——即使說了不只一種語言。在 🎤 中，<em>錄音並轉寫</em> 會邊說邊把話寫下來。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_liv_ic">PDF 和書</div>
-      <h4 data-i18n="ou_liv_h">整本書換一種語言。</h4>
-      <p data-i18n-html="ou_liv">PDF（掃描版也可以）或 EPUB、PDF、FB2 格式的書，翻譯成另一種語言。大的工作可以暫停，之後再繼續。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_loc_ic">全部在本機</div>
-      <h4 data-i18n="ou_loc_h">什麼都不會離開電腦。</h4>
-      <p data-i18n-html="ou_loc">聽寫和翻譯元件只需下載一次，且須經允許，適用於所有語言。之後，聲音、文字和譯文都留在電腦上，也不需要連網。有顯示卡時快得多。</p>
-    </div>
-  </div>
-  <p class="vault-note" data-i18n-html="ou_tiers"><a class="free-word" href="#free">免費</a>：在 🎤 中口述成 .txt。<a class="prem-word" href="#premium">PREMIUM</a>：字幕、即時字幕、批次、轉寫為 Word、PDF 和字幕，以及所有翻譯。</p>
-</section>
 
 <!-- CATALOG -->
 <div id="features"></div>
 <div class="section-header">
   <div>
-    <div class="section-num" data-i18n="cat_num3">§ 03 · 功能一覽</div>
+    <div class="section-num" data-i18n="cat_num4">§ 01 · 功能一覽</div>
     <h2 class="section-title" data-i18n-html="cat_title">真正<em>有差</em><br>的地方。</h2>
   </div>
   <p class="section-blurb" data-i18n="cat_blurb">每一個功能，都是為了回答在熟悉的檔案樹上每天遇到的具體問題才加進來的。沒有一個是拿來充場面。幾乎每一個都可以開或關。</p>
@@ -2390,6 +2294,16 @@
     <p data-i18n-html="f37_p"><strong>全面重新設計右鍵選單</strong>：在樹狀目錄和清單中按右鍵開啟的選單，現在選項分欄排列，頂端顯示操作的位置。</p>
   </div>
 
+  <!-- 24/11/2026: a 2.2.9, «My Windows secrets» (os textos do cartão da app, Cl229Segredos e Cl229SegredosPremium). -->
+  <div class="feat w12" id="feat38">
+    <div class="num"><span data-i18n="f38_num">38 — 我的 WINDOWS 秘密</span><a class="badge-free" href="#free" data-i18n="badge_free">免費</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f38_h">Windows 隱藏的東西，一目了然。</h3>
+    <p data-i18n-html="f38_p"><strong>我的 Windows 秘密</strong>：底部列中「我的電腦」和「我的工作」之間的新連結，帶有「新」標記，顯示 Windows 在這台電腦上把東西放在哪裡。%APPDATA%、%LOCALAPPDATA% 和其他環境變數背後的隱藏資料夾，每個都附有完整路徑和用途，按一下即可開啟；在「檢視所有變數」中，可以看到所有環境變數及其值。</p>
+    <p class="feat-p2" data-i18n-html="f38_p2"><strong>Windows 保存了關於你的哪些資訊</strong>（PREMIUM），在同一個視窗中：你在「執行」和檔案總管網址列中輸入的內容、最近的檔案、你複製的內容（包括圖片）、Windows 記得的 USB 隨身碟、最近開啟的程式、已刪除相片的縮圖、儲存的通知、每個磁碟機的資源回收筒和暫存檔案，並附有手動前往的方法。其中一部分可以刪除；暫存檔案和資源回收筒只刪除 7 天前的內容。</p>
+    <p class="feat-p2" data-i18n="f38_p3">只要知道路徑，這些都不難找到。好處是，這裡把一切集中在一起，任何人一鍵即達。</p>
+    <div class="feat-mark" data-i18n="f38_mark">%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH</div>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -2410,7 +2324,7 @@
 <section class="vault" id="vault">
   <div class="vault-head">
     <div>
-      <div class="section-num"><span data-i18n="vt_num3">§ 04 · 保險庫</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <div class="section-num"><span data-i18n="vt_num4">§ 02 · 保險庫</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
       <h2 data-i18n-html="vt_title">經過加密，卻依然只是<em>資料夾</em>。</h2>
 
       <!-- spec §0 «O que é» -->
@@ -2597,6 +2511,105 @@
 
 
   <p class="vault-note" data-i18n-html="vt_premium"><a class="prem-word" href="#premium">PREMIUM</a> — 建立保險庫。打開保險庫是免費的，包括在別處建立的。</p>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     OUVIR E ESCREVER — a 2.1.2 (20/10/2026). Textos aprovados.
+     ⛔ O nome é o da APP («Ouvir e escrever — como funciona», a janela PREMIUM, a oferta do GOTD): o site e a app dizem
+       o mesmo. O «tudo» vai no título. Nunca «traduções de qualidade»: diz-se o que faz, e lembra-se que se revê.
+     ⛔ Grátis só o ditado para .txt; o resto é PREMIUM (gratis-ou-premium-ferramentas.md). O ouvido e o tradutor vêm
+       uma vez, com autorização (a privacy.html diz de onde). Molde: o da secção do cofre, sem o desenho.
+     ══════════════════════════════════════════════════════════════════════ -->
+<section class="vault ouvir" id="ouvir">
+  <div class="vault-head">
+    <div>
+      <div class="section-num"><span data-i18n="ou_num3">§ 03 · 聽寫</span><a class="badge-free" href="#free" data-i18n="badge_free">免費</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <h2 data-i18n-html="ou_title">一個翻譯器，翻譯<em>一切</em>。</h2>
+      <p class="vault-lead" data-i18n-html="ou_blurb">ExplorerFocus 現在會聽了：把音訊和影片裡說的話寫下來，並翻譯說的話、字幕、正在播放的影片、PDF 和書。全部在本機完成。翻譯是自動的，最好檢查一遍。</p>
+    </div>
+  </div>
+  <div class="vault-grid">
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_sub_ic">字幕</div>
+      <h4 data-i18n="ou_sub_h">想要哪種語言都行。</h4>
+      <p data-i18n-html="ou_sub"><em>產生字幕…</em> 聆聽影片並寫出帶時間軸的字幕，可用原本說話的語言，也可翻譯。<em>翻譯字幕…</em> 把 .srt 翻成另一種語言。字幕存在影片旁邊，預覽和 VLC 等播放器會自動找到。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_live_ic">即時</div>
+      <h4 data-i18n="ou_live_h">邊播放邊看。</h4>
+      <p data-i18n-html="ou_live">在預覽中，外語電影不停頓地顯示翻譯好的字幕。在保險庫裡也可以。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_lote_ic">批次</div>
+      <h4 data-i18n="ou_lote_h">整部影集一次完成。</h4>
+      <p data-i18n-html="ou_lote"><em>批次建立字幕…</em> 為所有集數產生英文字幕和所選語言的字幕，同時你可以做別的事。中途停下也不會遺失任何內容：會從停下的地方繼續。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_trn_ic">轉寫和聽寫</div>
+      <h4 data-i18n="ou_trn_h">從聲音到文字。</h4>
+      <p data-i18n-html="ou_trn">把錄音轉成文字、Word、PDF 或字幕——即使說了不只一種語言。在 🎤 中，<em>錄音並轉寫</em> 會邊說邊把話寫下來。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_liv_ic">PDF 和書</div>
+      <h4 data-i18n="ou_liv_h">整本書換一種語言。</h4>
+      <p data-i18n-html="ou_liv">PDF（掃描版也可以）或 EPUB、PDF、FB2 格式的書，翻譯成另一種語言。大的工作可以暫停，之後再繼續。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_loc_ic">全部在本機</div>
+      <h4 data-i18n="ou_loc_h">什麼都不會離開電腦。</h4>
+      <p data-i18n-html="ou_loc">聽寫和翻譯元件只需下載一次，且須經允許，適用於所有語言。之後，聲音、文字和譯文都留在電腦上，也不需要連網。有顯示卡時快得多。</p>
+    </div>
+  </div>
+  <p class="vault-note" data-i18n-html="ou_tiers"><a class="free-word" href="#free">免費</a>：在 🎤 中口述成 .txt。<a class="prem-word" href="#premium">PREMIUM</a>：字幕、即時字幕、批次、轉寫為 Word、PDF 和字幕，以及所有翻譯。</p>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     AUDIOLIVROS — a versão dos audiolivros (17/11/2026). O destaque pedido pelo João: ouvir é grátis; fazer o audiolivro
+     é PREMIUM. ⛔ Nunca «o único», nunca «exato» (o realce da palavra é estimado), nunca mais do que 2× (o João, 16/11).
+     ⛔ Nada sobre leitores de telefone que toquem o EPUB com voz (o da Librera não toca: o João, 16/11). Molde: o da
+     secção «Ouvir e escrever».
+     ══════════════════════════════════════════════════════════════════════ -->
+<span id="audiolivros"></span><section class="vault ouvir" id="audiobooks">
+  <div class="vault-head">
+    <div>
+      <div class="section-num"><span data-i18n="au_num2">§ 04 · 有聲書</span><a class="badge-free" href="#free" data-i18n="badge_free">免費</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <h2 data-i18n-html="au_title">把你的電子書變成<em>有聲書</em>。</h2>
+      <p class="vault-lead" data-i18n-html="au_blurb2">你製作的有聲書是一般的音訊檔案：在車上、在手機上或在家裡，隨處聆聽。ExplorerFocus 用 28 種自然的語音朗讀英文電子書和 PDF，就在你自己的電腦上，你的書永遠不會被上傳。</p>
+    </div>
+  </div>
+  <div class="vault-grid">
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_now_ic">立即聆聽</div>
+      <h4 data-i18n="au_now_h">幾秒內開始，免費。</h4>
+      <p data-i18n-html="au_now">選取一本書，在<em>電子書</em>選單中選擇<em>聆聽這本書…</em>（PDF 也可以，在 <em>PDF</em> 選單中）。正在聽的句子和詞會醒目顯示。按一下任一句就從那裡讀起，下次會從上次停下的地方繼續。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_ply_ic">播放器</div>
+      <h4 data-i18n="au_ply_h">有聲書 App 該有的，都有。</h4>
+      <p data-i18n-html="au_ply">每本書各自保存語速，最高 2×，並顯示本章和全書還剩多少。睡眠定時、附備註的書籤、跳章、媒體鍵，還有一個跳轉後帶你回到原處的按鈕。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_mk_ic">製作有聲書</div>
+      <h4 data-i18n="au_mk_h">適合手機和車上。</h4>
+      <p data-i18n-html="au_mk"><em>製作有聲書…</em>會為每章錄製一個附封面的 MP3，適用於任何播放器；或者一個附章節的 M4B，也就是有聲書格式。開始之前，它會顯示音訊有多長、在你的電腦上需要多久；可以暫停，之後再繼續。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_ep_ic">邊讀邊聽</div>
+      <h4 data-i18n="au_ep_h">文字和語音合在一起。</h4>
+      <p data-i18n-html="au_ep2">或者一個內含語音的 EPUB 3，朗讀時句子會亮起，適用於能播放它的電子書閱讀器，例如 Thorium Reader（免費）。ExplorerFocus 也能播放自帶錄製語音的 EPUB。 DAISY 圖書以及 W3C 和 Readium 有聲書會被自動辨識為電子書：可以用書中自帶的錄製語音收聽，正在聽的內容會反白顯示。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_vz_ic">語音</div>
+      <h4 data-i18n="au_vz_h">28 種，美式和英式。</h4>
+      <p data-i18n-html="au_vz">女聲和男聲，選擇前可以先試聽每一種，在設定的<em>語音</em>中。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_loc_ic">就在電腦上</div>
+      <h4 data-i18n="au_loc_h">你的書留在你身邊。</h4>
+      <p data-i18n-html="au_loc">語音只下載一次，而且要你同意才下載。之後不需要連網，你的書也永遠不會離開你的電腦。</p>
+    </div>
+  </div>
+  <p class="vault-note" data-i18n-html="au_tiers"><a class="free-word" href="#free">免費</a>：聆聽電子書和 PDF，播放器的所有功能，以及最長 3 分鐘的 MP3 試聽片段。<a class="prem-word" href="#premium">PREMIUM</a>：製作完整的有聲書——MP3、M4B，以及可讀可聽的 EPUB。英文語音；僅限無 DRM 的電子書，供個人使用。</p>
 </section>
 
 <!-- SHORTCUTS -->

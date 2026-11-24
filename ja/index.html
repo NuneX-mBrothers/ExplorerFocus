@@ -94,6 +94,7 @@
     "Redesigned right-click context menus in the tree and the list: the options in columns, with where the action takes place at the top",
     "Rotate any image by any angle, degree by degree, with the corners cropped or transparent; enhance an image with filters and colour adjustments (PREMIUM)",
     "Web pages and internet shortcuts open in the browser of your choice, in a normal or private window",
+    "My Windows secrets: the hidden folders behind %APPDATA%, %LOCALAPPDATA% and the other environment variables, with their full paths, and every environment variable with its value (free); what Windows keeps about you, such as what was typed in Run, recent files, what was copied, the USB drives it remembers, the thumbnails of deleted photos and saved notifications, with the way to get there by hand, and some of it can be deleted (PREMIUM)",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://intrepidparallel.com/explorerfocus/ja/",
@@ -1867,120 +1868,23 @@
     <!-- ⛔ 23/11, a 2.2.8 (o cartão abre com os menus de contexto e o Comprimir): entram os dois à cabeça; saem o Vídeo e o
          «Ouvir e escrever». Medido no Changelog.cs do 843a2c42: o Vídeo entrou no cartão pela última vez na 2.1.6 (Cl216JuntarVideos); o «Ouvir e escrever» na 2.1.5 (Cl215TraduzirLegendasEmLote).
          O DAISY entra pelos Audiolivros, que ficam. -->
+    <!-- 24/11/2026, o João: «As pills têm de ter coisas mais diferentes entre si.» Entram os segredos do Windows (2.2.9) e
+         as legendas (voltam); saem os e-books e o PDF, que repetiam a leitura ao lado dos audiolivros. -->
+    <a href="#feat38" data-i18n="wn_segredos">🗝 この Windows の秘密</a>
     <a href="#feat37" data-i18n="wn_menus">🗂 コンテキスト メニュー</a>
     <a href="#feat29" data-i18n="wn_arquivos">🗜 圧縮アーカイブ</a>
+    <a href="#ouvir" data-i18n="wn_legendas">🎬 字幕</a>
     <a href="#audiobooks" data-i18n="wn_audiolivros">🎧 オーディオブック</a>
     <a href="#vault" data-i18n="wn_vault">🔒 金庫</a>
-    <a href="#feat24" data-i18n="wn_livros">📚 電子書籍</a>
-    <a href="#feat34" data-i18n="wn_pdf_211">📄 PDF</a>
   </nav>
   <span class="whatsnew-ver">v2.2.9</span>
 </div>
-
-<!-- ══════════════════════════════════════════════════════════════════════
-     AUDIOLIVROS — a versão dos audiolivros (17/11/2026). O destaque pedido pelo João: ouvir é grátis; fazer o audiolivro
-     é PREMIUM. ⛔ Nunca «o único», nunca «exato» (o realce da palavra é estimado), nunca mais do que 2× (o João, 16/11).
-     ⛔ Nada sobre leitores de telefone que toquem o EPUB com voz (o da Librera não toca: o João, 16/11). Molde: o da
-     secção «Ouvir e escrever».
-     ══════════════════════════════════════════════════════════════════════ -->
-<span id="audiolivros"></span><section class="vault ouvir" id="audiobooks">
-  <div class="vault-head">
-    <div>
-      <div class="section-num"><span data-i18n="au_num">§ 01 · オーディオブック</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-      <h2 data-i18n-html="au_title">電子書籍を<em>オーディオブック</em>に。</h2>
-      <p class="vault-lead" data-i18n-html="au_blurb2">作成したオーディオブックは普通の音声ファイルなので、車の中でも、スマートフォンでも、家でも、好きな所で聴けます。ExplorerFocus は英語の電子書籍と PDF を 28 の自然な音声で、あなたのパソコンの上で読み上げます。本がアップロードされることはありません。</p>
-    </div>
-  </div>
-  <div class="vault-grid">
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_now_ic">すぐに聴く</div>
-      <h4 data-i18n="au_now_h">数秒で、無料で。</h4>
-      <p data-i18n-html="au_now">本を選択し、<em>電子書籍</em>メニューで<em>この本を聴く…</em>を選びます（PDF も <em>PDF</em> メニューで）。聞こえている文と単語が強調表示されます。文をクリックするとそこから読み、次回は止めた所から続きます。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_ply_ic">プレーヤー</div>
-      <h4 data-i18n="au_ply_h">オーディオブック アプリにある機能を。</h4>
-      <p data-i18n-html="au_ply">本ごとに速度を保存し（最大 2×）、章と本の残り時間を表示します。スリープタイマー、メモ付きのブックマーク、章の移動、メディア キー、移動したあと元の場所に戻すボタンも。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_mk_ic">オーディオブックを作る</div>
-      <h4 data-i18n="au_mk_h">スマートフォンや車で。</h4>
-      <p data-i18n-html="au_mk"><em>オーディオブックを作成…</em>は、章ごとに表紙付きの MP3（どのプレーヤーでも再生可）か、章付きの M4B（オーディオブックの形式）を録音します。始める前に、音声の長さとあなたのパソコンでかかる時間を表示し、途中で止めてあとで続けられます。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_ep_ic">読みながら聴く</div>
-      <h4 data-i18n="au_ep_h">文章と音声を一緒に。</h4>
-      <p data-i18n-html="au_ep2">または音声入りの EPUB 3。読まれている文が光り、Thorium Reader（無料）など、これを再生できる電子書籍リーダーで使えます。録音された音声がすでに入っている EPUB も、ExplorerFocus で再生できます。 DAISY 図書と W3C・Readium のオーディオブックが電子書籍として自動的に認識されます。収録された音声で聴けて、聴いている部分がハイライトされます。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_vz_ic">音声</div>
-      <h4 data-i18n="au_vz_h">28 種類、アメリカ英語とイギリス英語。</h4>
-      <p data-i18n-html="au_vz">女性と男性の声。選ぶ前にそれぞれ試聴できます。設定の<em>音声</em>で。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="au_loc_ic">パソコンの中で</div>
-      <h4 data-i18n="au_loc_h">本は手元に残ります。</h4>
-      <p data-i18n-html="au_loc">音声のダウンロードは一度だけで、あなたが許可したときだけです。その後はインターネットは不要で、本がパソコンから出ることはありません。</p>
-    </div>
-  </div>
-  <p class="vault-note" data-i18n-html="au_tiers"><a class="free-word" href="#free">無料</a>：電子書籍と PDF を聴くこと、プレーヤーのすべての機能、最大 3 分の MP3 サンプル。<a class="prem-word" href="#premium">PREMIUM</a>：オーディオブックを丸ごと作ること — MP3、M4B、読んで聴ける EPUB。英語の音声。DRM のない電子書籍のみ、個人での利用に限ります。</p>
-</section>
-
-<!-- ══════════════════════════════════════════════════════════════════════
-     OUVIR E ESCREVER — a 2.1.2 (20/10/2026). Textos aprovados.
-     ⛔ O nome é o da APP («Ouvir e escrever — como funciona», a janela PREMIUM, a oferta do GOTD): o site e a app dizem
-       o mesmo. O «tudo» vai no título. Nunca «traduções de qualidade»: diz-se o que faz, e lembra-se que se revê.
-     ⛔ Grátis só o ditado para .txt; o resto é PREMIUM (gratis-ou-premium-ferramentas.md). O ouvido e o tradutor vêm
-       uma vez, com autorização (a privacy.html diz de onde). Molde: o da secção do cofre, sem o desenho.
-     ══════════════════════════════════════════════════════════════════════ -->
-<section class="vault ouvir" id="ouvir">
-  <div class="vault-head">
-    <div>
-      <div class="section-num"><span data-i18n="ou_num2">§ 02 · 聞いて書く</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
-      <h2 data-i18n-html="ou_title"><em>すべて</em>をひとつの翻訳で。</h2>
-      <p class="vault-lead" data-i18n-html="ou_blurb">ExplorerFocus が聞くようになりました。音声や動画で話されていることを書き出し、話された内容、字幕、再生中の動画、PDF、本を翻訳します。すべてこのパソコンの中で。翻訳は自動なので、見直すのがおすすめです。</p>
-    </div>
-  </div>
-  <div class="vault-grid">
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_sub_ic">字幕</div>
-      <h4 data-i18n="ou_sub_h">好きな言語で。</h4>
-      <p data-i18n-html="ou_sub"><em>字幕を作成…</em> は動画を聞いて、タイミング付きの字幕を、話されている言語のまま、または翻訳して書き出します。<em>字幕を翻訳…</em> は .srt を別の言語にします。字幕は動画の横に保存され、プレビューや VLC などのプレーヤーが自動で見つけます。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_live_ic">ライブ</div>
-      <h4 data-i18n="ou_live_h">映画を再生しながら。</h4>
-      <p data-i18n-html="ou_live">プレビューで、外国語の映画に翻訳された字幕が止まらずに付きます。金庫の中でも使えます。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_lote_ic">一括</div>
-      <h4 data-i18n="ou_lote_h">シリーズ全体を一度に。</h4>
-      <p data-i18n-html="ou_lote"><em>字幕を一括で作成…</em> はすべてのエピソードに英語と選んだ言語の字幕を付けます。その間、ほかの作業ができます。途中で止めても何も失われず、止まったところから続きます。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_trn_ic">文字起こしと口述</div>
-      <h4 data-i18n="ou_trn_h">音声から文章へ。</h4>
-      <p data-i18n-html="ou_trn">録音の内容をテキスト、Word、PDF、字幕に。複数の言語が話されていても大丈夫です。🎤 の <em>録音して文字起こし</em> は、話すそばから書き出します。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_liv_ic">PDF と本</div>
-      <h4 data-i18n="ou_liv_h">本を丸ごと別の言語で。</h4>
-      <p data-i18n-html="ou_liv">PDF（スキャンしたものも）や、EPUB・PDF・FB2 の本を別の言語に翻訳します。長い作業は一時停止して、後で続けられます。</p>
-    </div>
-    <div class="stack-cell">
-      <div class="ic" data-i18n="ou_loc_ic">すべてこのパソコンで</div>
-      <h4 data-i18n="ou_loc_h">何も外に出ません。</h4>
-      <p data-i18n-html="ou_loc">聞き取りと翻訳の部品は、許可したときに一度だけ届き、すべての言語に使えます。その後は、音声も文章も翻訳もパソコンから出ず、インターネットも要りません。グラフィックカードがあれば、ずっと速くなります。</p>
-    </div>
-  </div>
-  <p class="vault-note" data-i18n-html="ou_tiers"><a class="free-word" href="#free">無料</a>：🎤 で .txt への口述。<a class="prem-word" href="#premium">PREMIUM</a>：字幕、ライブ字幕、一括、Word・PDF・字幕への文字起こし、そしてすべての翻訳。</p>
-</section>
 
 <!-- CATALOG -->
 <div id="features"></div>
 <div class="section-header">
   <div>
-    <div class="section-num" data-i18n="cat_num3">§ 03 · カタログ</div>
+    <div class="section-num" data-i18n="cat_num4">§ 01 · カタログ</div>
     <h2 class="section-title" data-i18n-html="cat_title"><em>本当に</em>違いを<br>生むもの。</h2>
   </div>
   <p class="section-blurb" data-i18n="cat_blurb">どの機能も、決まったファイルツリーの上で日々ぶつかる具体的な問題に答えるために足されたものです。見せるためだけのものはひとつもありません。ほとんどすべて、オンとオフを切り替えられます。</p>
@@ -2390,6 +2294,16 @@
     <p data-i18n-html="f37_p"><strong>コンテキスト メニューを全面的に刷新</strong>。ツリーとリストで右クリックすると開くメニューで、項目が列に分かれ、上部に操作の対象場所が表示されます。</p>
   </div>
 
+  <!-- 24/11/2026: a 2.2.9, «My Windows secrets» (os textos do cartão da app, Cl229Segredos e Cl229SegredosPremium). -->
+  <div class="feat w12" id="feat38">
+    <div class="num"><span data-i18n="f38_num">38 — この WINDOWS の秘密</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f38_h">Windows が隠しているものを、ひと目で。</h3>
+    <p data-i18n-html="f38_p"><strong>この Windows の秘密</strong>：下部のバーの「このマシン」と「自分のタスク」の間に、「新機能」の印が付いた新しいリンクができました。Windows がこのコンピューターのどこに何を保存しているかを表示します。%APPDATA%、%LOCALAPPDATA% などの環境変数の背後にある隠しフォルダーを、完全なパスと用途付きでワンクリックで開けます。「すべての変数を表示」では、すべての環境変数とその値を確認できます。</p>
+    <p class="feat-p2" data-i18n-html="f38_p2"><strong>Windows が利用者について保存しているもの</strong>（PREMIUM）：同じウィンドウで、「ファイル名を指定して実行」とエクスプローラーのアドレス バーに入力した内容、最近使ったファイル、コピーした内容（画像を含む）、Windows が覚えている USB メモリ、最近開いたプログラム、削除した写真の縮小表示、保存された通知、各ドライブのごみ箱、一時ファイルを、手動での行き方と合わせて表示します。一部は削除でき、一時ファイルとごみ箱は 7 日より前のものだけが対象です。</p>
+    <p class="feat-p2" data-i18n="f38_p3">道筋さえ知っていれば、どれも見つけられないものではありません。利点は、ここにすべてがまとまっていて、誰でもワンクリックで届くことです。</p>
+    <div class="feat-mark" data-i18n="f38_mark">%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH</div>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -2410,7 +2324,7 @@
 <section class="vault" id="vault">
   <div class="vault-head">
     <div>
-      <div class="section-num"><span data-i18n="vt_num3">§ 04 · 金庫</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <div class="section-num"><span data-i18n="vt_num4">§ 02 · 金庫</span><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
       <h2 data-i18n-html="vt_title">暗号化されていても、ただの<em>フォルダー</em>。</h2>
 
       <!-- spec §0 «O que é» -->
@@ -2597,6 +2511,105 @@
 
 
   <p class="vault-note" data-i18n-html="vt_premium"><a class="prem-word" href="#premium">PREMIUM</a> — 金庫を作ること。開くのは無料で、よそで作られた金庫も含みます。</p>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     OUVIR E ESCREVER — a 2.1.2 (20/10/2026). Textos aprovados.
+     ⛔ O nome é o da APP («Ouvir e escrever — como funciona», a janela PREMIUM, a oferta do GOTD): o site e a app dizem
+       o mesmo. O «tudo» vai no título. Nunca «traduções de qualidade»: diz-se o que faz, e lembra-se que se revê.
+     ⛔ Grátis só o ditado para .txt; o resto é PREMIUM (gratis-ou-premium-ferramentas.md). O ouvido e o tradutor vêm
+       uma vez, com autorização (a privacy.html diz de onde). Molde: o da secção do cofre, sem o desenho.
+     ══════════════════════════════════════════════════════════════════════ -->
+<section class="vault ouvir" id="ouvir">
+  <div class="vault-head">
+    <div>
+      <div class="section-num"><span data-i18n="ou_num3">§ 03 · 聞いて書く</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <h2 data-i18n-html="ou_title"><em>すべて</em>をひとつの翻訳で。</h2>
+      <p class="vault-lead" data-i18n-html="ou_blurb">ExplorerFocus が聞くようになりました。音声や動画で話されていることを書き出し、話された内容、字幕、再生中の動画、PDF、本を翻訳します。すべてこのパソコンの中で。翻訳は自動なので、見直すのがおすすめです。</p>
+    </div>
+  </div>
+  <div class="vault-grid">
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_sub_ic">字幕</div>
+      <h4 data-i18n="ou_sub_h">好きな言語で。</h4>
+      <p data-i18n-html="ou_sub"><em>字幕を作成…</em> は動画を聞いて、タイミング付きの字幕を、話されている言語のまま、または翻訳して書き出します。<em>字幕を翻訳…</em> は .srt を別の言語にします。字幕は動画の横に保存され、プレビューや VLC などのプレーヤーが自動で見つけます。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_live_ic">ライブ</div>
+      <h4 data-i18n="ou_live_h">映画を再生しながら。</h4>
+      <p data-i18n-html="ou_live">プレビューで、外国語の映画に翻訳された字幕が止まらずに付きます。金庫の中でも使えます。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_lote_ic">一括</div>
+      <h4 data-i18n="ou_lote_h">シリーズ全体を一度に。</h4>
+      <p data-i18n-html="ou_lote"><em>字幕を一括で作成…</em> はすべてのエピソードに英語と選んだ言語の字幕を付けます。その間、ほかの作業ができます。途中で止めても何も失われず、止まったところから続きます。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_trn_ic">文字起こしと口述</div>
+      <h4 data-i18n="ou_trn_h">音声から文章へ。</h4>
+      <p data-i18n-html="ou_trn">録音の内容をテキスト、Word、PDF、字幕に。複数の言語が話されていても大丈夫です。🎤 の <em>録音して文字起こし</em> は、話すそばから書き出します。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_liv_ic">PDF と本</div>
+      <h4 data-i18n="ou_liv_h">本を丸ごと別の言語で。</h4>
+      <p data-i18n-html="ou_liv">PDF（スキャンしたものも）や、EPUB・PDF・FB2 の本を別の言語に翻訳します。長い作業は一時停止して、後で続けられます。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="ou_loc_ic">すべてこのパソコンで</div>
+      <h4 data-i18n="ou_loc_h">何も外に出ません。</h4>
+      <p data-i18n-html="ou_loc">聞き取りと翻訳の部品は、許可したときに一度だけ届き、すべての言語に使えます。その後は、音声も文章も翻訳もパソコンから出ず、インターネットも要りません。グラフィックカードがあれば、ずっと速くなります。</p>
+    </div>
+  </div>
+  <p class="vault-note" data-i18n-html="ou_tiers"><a class="free-word" href="#free">無料</a>：🎤 で .txt への口述。<a class="prem-word" href="#premium">PREMIUM</a>：字幕、ライブ字幕、一括、Word・PDF・字幕への文字起こし、そしてすべての翻訳。</p>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     AUDIOLIVROS — a versão dos audiolivros (17/11/2026). O destaque pedido pelo João: ouvir é grátis; fazer o audiolivro
+     é PREMIUM. ⛔ Nunca «o único», nunca «exato» (o realce da palavra é estimado), nunca mais do que 2× (o João, 16/11).
+     ⛔ Nada sobre leitores de telefone que toquem o EPUB com voz (o da Librera não toca: o João, 16/11). Molde: o da
+     secção «Ouvir e escrever».
+     ══════════════════════════════════════════════════════════════════════ -->
+<span id="audiolivros"></span><section class="vault ouvir" id="audiobooks">
+  <div class="vault-head">
+    <div>
+      <div class="section-num"><span data-i18n="au_num2">§ 04 · オーディオブック</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+      <h2 data-i18n-html="au_title">電子書籍を<em>オーディオブック</em>に。</h2>
+      <p class="vault-lead" data-i18n-html="au_blurb2">作成したオーディオブックは普通の音声ファイルなので、車の中でも、スマートフォンでも、家でも、好きな所で聴けます。ExplorerFocus は英語の電子書籍と PDF を 28 の自然な音声で、あなたのパソコンの上で読み上げます。本がアップロードされることはありません。</p>
+    </div>
+  </div>
+  <div class="vault-grid">
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_now_ic">すぐに聴く</div>
+      <h4 data-i18n="au_now_h">数秒で、無料で。</h4>
+      <p data-i18n-html="au_now">本を選択し、<em>電子書籍</em>メニューで<em>この本を聴く…</em>を選びます（PDF も <em>PDF</em> メニューで）。聞こえている文と単語が強調表示されます。文をクリックするとそこから読み、次回は止めた所から続きます。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_ply_ic">プレーヤー</div>
+      <h4 data-i18n="au_ply_h">オーディオブック アプリにある機能を。</h4>
+      <p data-i18n-html="au_ply">本ごとに速度を保存し（最大 2×）、章と本の残り時間を表示します。スリープタイマー、メモ付きのブックマーク、章の移動、メディア キー、移動したあと元の場所に戻すボタンも。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_mk_ic">オーディオブックを作る</div>
+      <h4 data-i18n="au_mk_h">スマートフォンや車で。</h4>
+      <p data-i18n-html="au_mk"><em>オーディオブックを作成…</em>は、章ごとに表紙付きの MP3（どのプレーヤーでも再生可）か、章付きの M4B（オーディオブックの形式）を録音します。始める前に、音声の長さとあなたのパソコンでかかる時間を表示し、途中で止めてあとで続けられます。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_ep_ic">読みながら聴く</div>
+      <h4 data-i18n="au_ep_h">文章と音声を一緒に。</h4>
+      <p data-i18n-html="au_ep2">または音声入りの EPUB 3。読まれている文が光り、Thorium Reader（無料）など、これを再生できる電子書籍リーダーで使えます。録音された音声がすでに入っている EPUB も、ExplorerFocus で再生できます。 DAISY 図書と W3C・Readium のオーディオブックが電子書籍として自動的に認識されます。収録された音声で聴けて、聴いている部分がハイライトされます。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_vz_ic">音声</div>
+      <h4 data-i18n="au_vz_h">28 種類、アメリカ英語とイギリス英語。</h4>
+      <p data-i18n-html="au_vz">女性と男性の声。選ぶ前にそれぞれ試聴できます。設定の<em>音声</em>で。</p>
+    </div>
+    <div class="stack-cell">
+      <div class="ic" data-i18n="au_loc_ic">パソコンの中で</div>
+      <h4 data-i18n="au_loc_h">本は手元に残ります。</h4>
+      <p data-i18n-html="au_loc">音声のダウンロードは一度だけで、あなたが許可したときだけです。その後はインターネットは不要で、本がパソコンから出ることはありません。</p>
+    </div>
+  </div>
+  <p class="vault-note" data-i18n-html="au_tiers"><a class="free-word" href="#free">無料</a>：電子書籍と PDF を聴くこと、プレーヤーのすべての機能、最大 3 分の MP3 サンプル。<a class="prem-word" href="#premium">PREMIUM</a>：オーディオブックを丸ごと作ること — MP3、M4B、読んで聴ける EPUB。英語の音声。DRM のない電子書籍のみ、個人での利用に限ります。</p>
 </section>
 
 <!-- SHORTCUTS -->

@@ -1299,7 +1299,12 @@
   .price-table td:first-child { color: var(--fg-0); font-weight: 600; }
   .price-table td.lanc { color: var(--accent); font-weight: 600; }
   .prem-prices .prem-price-vat { margin-top: 10px; font-size: 12px; color: var(--fg-3); }
-  .prem-prices .prem-price-soon { margin-top: 10px; font-size: 14px; font-weight: 600; color: var(--fg-0); }
+  .prem-prices .prem-empresas { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-1); }
+.prem-prices .prem-empresas h4 { margin: 0 0 6px; font-size: 16px; color: var(--fg-0); }
+.prem-prices .prem-empresas p + p { margin-top: 6px; }
+.prem-prices .prem-emp-mail a { border-bottom: 1px dashed var(--accent-dim); }
+.price-table tr.emp td { font-style: italic; }
+.prem-prices .prem-price-soon { margin-top: 10px; font-size: 14px; font-weight: 600; color: var(--fg-0); }
   .prem-groups h5 { margin: 18px 0 6px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em;
     text-transform: uppercase; color: var(--accent); font-weight: 600; }
   .prem-groups h5:first-child { margin-top: 4px; }
@@ -2817,10 +2822,18 @@
         <tr><td data-i18n="pr_plan_1ano">1 年</td><td data-i18n="pr_p_1ano">€12.99</td><td class="lanc" data-i18n="pr_l_1ano">€9.99</td></tr>
         <tr><td data-i18n="pr_plan_3anos">3 年</td><td data-i18n="pr_p_3anos">€24.99</td><td class="lanc" data-i18n="pr_l_3anos">€19.99</td></tr>
         <tr><td data-i18n="pr_plan_vida">终身（在每台电脑的使用寿命内）</td><td data-i18n="pr_p_vida">€44.99</td><td class="lanc" data-i18n="pr_l_vida">€34.99</td></tr>
+        <tr class="emp"><td data-i18n="pr_plan_emp">企业版，使用贵公司的标志（50 台电脑及以上）</td><td colspan="2" data-i18n-html="pr_p_emp"><a href="#companies">按报价</a></td></tr>
       </tbody>
     </table>
     <p class="prem-price-vat" data-i18n="pr_price_vat">价格以欧元计，不含税。付款时会加上购买者所在国家的增值税或销售税。</p>
     <p class="prem-price-soon" data-i18n="pr_buy_soon">在应用内通过黄色的 PREMIUM 按钮购买。</p>
+    <!-- 24/11/2026, o João: a oferta para empresas na zona dos preços (os textos da janela «Com a marca da empresa?» da app, de 14/11). -->
+    <div class="prem-empresas" id="companies">
+      <h4 data-i18n="pr_emp_h">🏢 带有贵公司品牌的 ExplorerFocus</h4>
+      <p data-i18n="pr_emp_p">对于拥有 50 台或更多电脑的公司，ExplorerFocus 可以成为公司自己的文件资源管理器：公司的标志将取代“ExplorerFocus 2”。 程序的其余部分保持不变：同样的功能，同样的更新。许可按电脑数量计算，且不是在线购买。</p>
+      <p data-i18n="pr_emp_fecho">请为贵公司向我们索取报价，并注明您希望在多少台电脑上使用 ExplorerFocus，我们会通过电子邮件发送专属报价。</p>
+      <p class="prem-emp-mail"><a href="mailto:explorerfocus@intrepidparallel.com?subject=ExplorerFocus%3A%20your%20brand%20on%20it%20(site)">explorerfocus@intrepidparallel.com</a></p>
+    </div>
   </div>
 
   <p class="prem-idea" data-i18n-html="pr_idea3"><strong>有好想法吗？</strong>请写信至 <a href="mailto:explorerfocus@intrepidparallel.com">explorerfocus@intrepidparallel.com</a>。</p>

@@ -1299,7 +1299,12 @@
   .price-table td:first-child { color: var(--fg-0); font-weight: 600; }
   .price-table td.lanc { color: var(--accent); font-weight: 600; }
   .prem-prices .prem-price-vat { margin-top: 10px; font-size: 12px; color: var(--fg-3); }
-  .prem-prices .prem-price-soon { margin-top: 10px; font-size: 14px; font-weight: 600; color: var(--fg-0); }
+  .prem-prices .prem-empresas { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-1); }
+.prem-prices .prem-empresas h4 { margin: 0 0 6px; font-size: 16px; color: var(--fg-0); }
+.prem-prices .prem-empresas p + p { margin-top: 6px; }
+.prem-prices .prem-emp-mail a { border-bottom: 1px dashed var(--accent-dim); }
+.price-table tr.emp td { font-style: italic; }
+.prem-prices .prem-price-soon { margin-top: 10px; font-size: 14px; font-weight: 600; color: var(--fg-0); }
   .prem-groups h5 { margin: 18px 0 6px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em;
     text-transform: uppercase; color: var(--accent); font-weight: 600; }
   .prem-groups h5:first-child { margin-top: 4px; }
@@ -2817,10 +2822,18 @@
         <tr><td data-i18n="pr_plan_1ano">1 ano</td><td data-i18n="pr_p_1ano">12,99 €</td><td class="lanc" data-i18n="pr_l_1ano">9,99 €</td></tr>
         <tr><td data-i18n="pr_plan_3anos">3 anos</td><td data-i18n="pr_p_3anos">24,99 €</td><td class="lanc" data-i18n="pr_l_3anos">19,99 €</td></tr>
         <tr><td data-i18n="pr_plan_vida">Vitalícia (enquanto cada computador durar)</td><td data-i18n="pr_p_vida">44,99 €</td><td class="lanc" data-i18n="pr_l_vida">34,99 €</td></tr>
+        <tr class="emp"><td data-i18n="pr_plan_emp">Empresas, com o logótipo da empresa (50 computadores ou mais)</td><td colspan="2" data-i18n-html="pr_p_emp"><a href="#companies">Por cotação</a></td></tr>
       </tbody>
     </table>
     <p class="prem-price-vat" data-i18n="pr_price_vat">Preços em euros, sem impostos. No pagamento, junta-se o IVA, ou o imposto equivalente, do país de quem compra.</p>
     <p class="prem-price-soon" data-i18n="pr_buy_soon">Compra-se na app, pelo botão amarelo PREMIUM.</p>
+    <!-- 24/11/2026, o João: a oferta para empresas na zona dos preços (os textos da janela «Com a marca da empresa?» da app, de 14/11). -->
+    <div class="prem-empresas" id="companies">
+      <h4 data-i18n="pr_emp_h">🏢 O ExplorerFocus com a marca da empresa</h4>
+      <p data-i18n="pr_emp_p">Para empresas com 50 computadores ou mais, o ExplorerFocus pode passar a ser o explorador de ficheiros da própria empresa: o logótipo da empresa entra no lugar do «ExplorerFocus 2». O resto do programa fica igual: as mesmas funções e as mesmas atualizações. As licenças são por número de computadores, e não é uma compra online.</p>
+      <p data-i18n="pr_emp_fecho">Basta pedir-nos uma cotação, com o número de computadores onde se vai usar o ExplorerFocus, e enviamo-la personalizada, por email.</p>
+      <p class="prem-emp-mail"><a href="mailto:explorerfocus@intrepidparallel.com?subject=ExplorerFocus%3A%20your%20brand%20on%20it%20(site)">explorerfocus@intrepidparallel.com</a></p>
+    </div>
   </div>
 
   <p class="prem-idea" data-i18n-html="pr_idea3"><strong>Tens uma boa ideia?</strong> Escreve para <a href="mailto:explorerfocus@intrepidparallel.com">explorerfocus@intrepidparallel.com</a>.</p>

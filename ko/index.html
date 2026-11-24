@@ -1299,7 +1299,12 @@
   .price-table td:first-child { color: var(--fg-0); font-weight: 600; }
   .price-table td.lanc { color: var(--accent); font-weight: 600; }
   .prem-prices .prem-price-vat { margin-top: 10px; font-size: 12px; color: var(--fg-3); }
-  .prem-prices .prem-price-soon { margin-top: 10px; font-size: 14px; font-weight: 600; color: var(--fg-0); }
+  .prem-prices .prem-empresas { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-1); }
+.prem-prices .prem-empresas h4 { margin: 0 0 6px; font-size: 16px; color: var(--fg-0); }
+.prem-prices .prem-empresas p + p { margin-top: 6px; }
+.prem-prices .prem-emp-mail a { border-bottom: 1px dashed var(--accent-dim); }
+.price-table tr.emp td { font-style: italic; }
+.prem-prices .prem-price-soon { margin-top: 10px; font-size: 14px; font-weight: 600; color: var(--fg-0); }
   .prem-groups h5 { margin: 18px 0 6px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em;
     text-transform: uppercase; color: var(--accent); font-weight: 600; }
   .prem-groups h5:first-child { margin-top: 4px; }
@@ -2817,10 +2822,18 @@
         <tr><td data-i18n="pr_plan_1ano">1년</td><td data-i18n="pr_p_1ano">€12.99</td><td class="lanc" data-i18n="pr_l_1ano">€9.99</td></tr>
         <tr><td data-i18n="pr_plan_3anos">3년</td><td data-i18n="pr_p_3anos">€24.99</td><td class="lanc" data-i18n="pr_l_3anos">€19.99</td></tr>
         <tr><td data-i18n="pr_plan_vida">평생 (각 컴퓨터를 쓰는 동안)</td><td data-i18n="pr_p_vida">€44.99</td><td class="lanc" data-i18n="pr_l_vida">€34.99</td></tr>
+        <tr class="emp"><td data-i18n="pr_plan_emp">기업용, 귀사 로고 포함(컴퓨터 50대 이상)</td><td colspan="2" data-i18n-html="pr_p_emp"><a href="#companies">견적 문의</a></td></tr>
       </tbody>
     </table>
     <p class="prem-price-vat" data-i18n="pr_price_vat">가격은 유로이며 세금 별도입니다. 결제할 때 구매자 국가의 부가가치세 또는 판매세가 더해집니다.</p>
     <p class="prem-price-soon" data-i18n="pr_buy_soon">앱의 노란색 PREMIUM 버튼으로 구매합니다.</p>
+    <!-- 24/11/2026, o João: a oferta para empresas na zona dos preços (os textos da janela «Com a marca da empresa?» da app, de 14/11). -->
+    <div class="prem-empresas" id="companies">
+      <h4 data-i18n="pr_emp_h">🏢 귀사 브랜드를 넣은 ExplorerFocus</h4>
+      <p data-i18n="pr_emp_p">컴퓨터가 50대 이상인 회사는 ExplorerFocus를 회사 자체의 파일 탐색기로 쓸 수 있습니다. 'ExplorerFocus 2' 자리에 회사 로고가 들어갑니다. 나머지는 그대로입니다. 기능도 업데이트도 같습니다. 라이선스는 컴퓨터 대수 기준이며, 온라인 구매가 아닙니다.</p>
+      <p data-i18n="pr_emp_fecho">귀사를 위한 견적을 요청해 주십시오. ExplorerFocus를 사용하려는 컴퓨터 대수를 알려 주시면 맞춤 견적을 이메일로 보내 드립니다.</p>
+      <p class="prem-emp-mail"><a href="mailto:explorerfocus@intrepidparallel.com?subject=ExplorerFocus%3A%20your%20brand%20on%20it%20(site)">explorerfocus@intrepidparallel.com</a></p>
+    </div>
   </div>
 
   <p class="prem-idea" data-i18n-html="pr_idea3"><strong>좋은 생각이 있으신가요?</strong> <a href="mailto:explorerfocus@intrepidparallel.com">explorerfocus@intrepidparallel.com</a>으로 보내 주세요.</p>

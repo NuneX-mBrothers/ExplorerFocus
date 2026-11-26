@@ -522,5 +522,13 @@ window.I18N.ko = {
   "pr_p_emp": "<a href=\"#companies\">견적 문의</a>",
   "pr_emp_h": "🏢 귀사 브랜드를 넣은 ExplorerFocus",
   "pr_emp_p": "컴퓨터가 50대 이상인 회사는 ExplorerFocus를 회사 자체의 파일 탐색기로 쓸 수 있습니다. 'ExplorerFocus 2' 자리에 회사 로고가 들어갑니다. 나머지는 그대로입니다. 기능도 업데이트도 같습니다. 라이선스는 컴퓨터 대수 기준이며, 온라인 구매가 아닙니다.",
-  "pr_emp_fecho": "귀사를 위한 견적을 요청해 주십시오. ExplorerFocus를 사용하려는 컴퓨터 대수를 알려 주시면 맞춤 견적을 이메일로 보내 드립니다."
+  "pr_emp_fecho": "귀사를 위한 견적을 요청해 주십시오. ExplorerFocus를 사용하려는 컴퓨터 대수를 알려 주시면 맞춤 견적을 이메일로 보내 드립니다.",
+  "wn_docs": "📝 문서",
+  "f39_num": "39 — 문서",
+  "f39_h": "듣는 문서.",
+  "f39_p": "새 <strong>문서</strong> 버튼: Word, 텍스트, Markdown, RTF, LibreOffice 문서를 <strong>소리 내어 읽어 주는 대로 들을 수 있습니다</strong>. 읽는 문장이 강조 표시됩니다. 무료.",
+  "f39_p2": "문서의 <strong>오디오 버전 만들기</strong>(PREMIUM): 부분마다 MP3 하나, M4B 또는 음성이 들어간 EPUB로 만들어 휴대폰이나 차에서 들을 수 있습니다. 샘플은 무료입니다.",
+  "f39_p3": "PDF나 전자책이 아닌 <strong>문서 번역</strong>(PREMIUM): 문서 전체를 다른 언어로 옮겨 새 Word 파일이나 .txt로 만들며, 제목은 제자리에 그대로 둡니다.",
+  "f39_p4": "그리고 <strong>문서의 페이지를 이미지로 변환</strong>(PREMIUM): PNG 또는 JPEG로, Word 파일은 종이에 인쇄한 모습 그대로 나옵니다.",
+  "f39_mark": "DOCX · DOC · TXT · MD · RTF · ODT"
 };

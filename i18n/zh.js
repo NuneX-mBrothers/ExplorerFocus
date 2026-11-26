@@ -522,5 +522,13 @@ window.I18N.zh = {
   "pr_p_emp": "<a href=\"#companies\">按报价</a>",
   "pr_emp_h": "🏢 带有贵公司品牌的 ExplorerFocus",
   "pr_emp_p": "对于拥有 50 台或更多电脑的公司，ExplorerFocus 可以成为公司自己的文件资源管理器：公司的标志将取代“ExplorerFocus 2”。 程序的其余部分保持不变：同样的功能，同样的更新。许可按电脑数量计算，且不是在线购买。",
-  "pr_emp_fecho": "请为贵公司向我们索取报价，并注明您希望在多少台电脑上使用 ExplorerFocus，我们会通过电子邮件发送专属报价。"
+  "pr_emp_fecho": "请为贵公司向我们索取报价，并注明您希望在多少台电脑上使用 ExplorerFocus，我们会通过电子邮件发送专属报价。",
+  "wn_docs": "📝 文档",
+  "f39_num": "39 — 文档",
+  "f39_h": "可以听的文档。",
+  "f39_p": "新按钮 <strong>文档</strong>，适用于 Word、文本、Markdown、RTF 和 LibreOffice 文档：<strong>朗读给你听</strong>，正在读的句子会高亮显示。免费。",
+  "f39_p2": "为文档<strong>制作音频版</strong>（PREMIUM）：每部分一个 MP3、一个 M4B，或一个带语音的 EPUB，可在手机上或车里收听。试听片段免费。",
+  "f39_p3": "<strong>翻译文档</strong>，适用于 PDF 和电子书以外的文档（PREMIUM）：整份文档译成另一种语言，生成新的 Word 文件或 .txt，标题保持原位。",
+  "f39_p4": "还能<strong>把文档的页面转成图片</strong>（PREMIUM），格式为 PNG 或 JPEG：Word 文件转出来和打印在纸上一样。",
+  "f39_mark": "DOCX · DOC · TXT · MD · RTF · ODT"
 };

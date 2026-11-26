@@ -522,5 +522,13 @@ window.I18N.de = {
   "pr_p_emp": "<a href=\"#companies\">Auf Anfrage</a>",
   "pr_emp_h": "🏢 ExplorerFocus mit Ihrer Firmenmarke",
   "pr_emp_p": "Für Unternehmen mit 50 oder mehr Computern kann ExplorerFocus zum eigenen Datei-Explorer des Unternehmens werden: Das Firmenlogo tritt an die Stelle von „ExplorerFocus 2“. Der Rest des Programms bleibt gleich: dieselben Funktionen und dieselben Updates. Lizenziert wird nach Anzahl der Computer, und es ist kein Online-Kauf.",
-  "pr_emp_fecho": "Fordern Sie ein Angebot für Ihr Unternehmen an und nennen Sie die Anzahl der Computer, auf denen Sie ExplorerFocus nutzen möchten. Wir senden es Ihnen individuell per E‑Mail."
+  "pr_emp_fecho": "Fordern Sie ein Angebot für Ihr Unternehmen an und nennen Sie die Anzahl der Computer, auf denen Sie ExplorerFocus nutzen möchten. Wir senden es Ihnen individuell per E‑Mail.",
+  "wn_docs": "📝 Docs",
+  "f39_num": "39 — DOCS",
+  "f39_h": "Dokumente zum Anhören.",
+  "f39_p": "Eine neue Schaltfläche, <strong>Docs</strong>, für Word-, Text-, Markdown-, RTF- und LibreOffice-Dokumente: <strong>sie vorlesen lassen</strong>, wobei der gerade gelesene Satz aufleuchtet. Kostenlos.",
+  "f39_p2": "Aus einem Dokument <strong>eine Audioversion erstellen</strong> (PREMIUM): eine MP3 pro Teil, ein M4B oder ein EPUB mit der Stimme, zum Hören auf dem Handy oder im Auto. Die Hörprobe ist kostenlos.",
+  "f39_p3": "<strong>Dokumente übersetzen</strong>, die keine PDFs oder E-Books sind (PREMIUM): das ganze Dokument in einer anderen Sprache, als neue Word-Datei oder .txt, mit den Überschriften an ihrem Platz.",
+  "f39_p4": "Und <strong>die Seiten eines Dokuments in Bilder umwandeln</strong> (PREMIUM), als PNG oder JPEG: Eine Word-Datei sieht aus wie auf Papier.",
+  "f39_mark": "DOCX · DOC · TXT · MD · RTF · ODT"
 };

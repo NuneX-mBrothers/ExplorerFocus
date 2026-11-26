@@ -526,5 +526,13 @@ window.I18N["zh-TW"] = {
   "pr_p_emp": "<a href=\"#companies\">依報價</a>",
   "pr_emp_h": "🏢 帶有貴公司品牌的 ExplorerFocus",
   "pr_emp_p": "對於擁有 50 台或更多電腦的公司，ExplorerFocus 可以成為公司自己的檔案總管：公司的標誌將取代「ExplorerFocus 2」。 程式的其餘部分保持不變：同樣的功能，同樣的更新。授權依電腦數量計算，且不是線上購買。",
-  "pr_emp_fecho": "請為貴公司向我們索取報價，並註明您希望在多少台電腦上使用 ExplorerFocus，我們會以電子郵件寄送專屬報價。"
+  "pr_emp_fecho": "請為貴公司向我們索取報價，並註明您希望在多少台電腦上使用 ExplorerFocus，我們會以電子郵件寄送專屬報價。",
+  "wn_docs": "📝 文件",
+  "f39_num": "39 — 文件",
+  "f39_h": "可以聽的文件。",
+  "f39_p": "新按鈕 <strong>文件</strong>，適用於 Word、文字、Markdown、RTF 和 LibreOffice 文件：<strong>朗讀給你聽</strong>，正在讀的句子會醒目顯示。免費。",
+  "f39_p2": "為文件<strong>製作音訊版</strong>（PREMIUM）：每部分一個 MP3、一個 M4B，或一個附語音的 EPUB，可在手機上或車裡聆聽。試聽片段免費。",
+  "f39_p3": "<strong>翻譯文件</strong>，適用於 PDF 和電子書以外的文件（PREMIUM）：整份文件譯成另一種語言，產生新的 Word 檔案或 .txt，標題保持原位。",
+  "f39_p4": "還能<strong>把文件的頁面轉成圖片</strong>（PREMIUM），格式為 PNG 或 JPEG：Word 檔案轉出來和印在紙上一樣。",
+  "f39_mark": "DOCX · DOC · TXT · MD · RTF · ODT"
 };

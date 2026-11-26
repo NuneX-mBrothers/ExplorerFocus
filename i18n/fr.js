@@ -522,5 +522,13 @@ window.I18N.fr = {
   "pr_p_emp": "<a href=\"#companies\">Sur devis</a>",
   "pr_emp_h": "🏢 ExplorerFocus avec la marque de votre entreprise",
   "pr_emp_p": "Pour les entreprises de 50 ordinateurs ou plus, ExplorerFocus peut devenir l'explorateur de fichiers de l'entreprise elle-même : le logo de l'entreprise prend la place de « ExplorerFocus 2 ». Le reste du programme ne change pas : les mêmes fonctions et les mêmes mises à jour. Les licences se comptent par ordinateur, et ce n'est pas un achat en ligne.",
-  "pr_emp_fecho": "Demandez-nous un devis pour votre entreprise, en indiquant sur combien d'ordinateurs vous voulez utiliser ExplorerFocus, et nous vous l'enverrons personnalisé par e-mail."
+  "pr_emp_fecho": "Demandez-nous un devis pour votre entreprise, en indiquant sur combien d'ordinateurs vous voulez utiliser ExplorerFocus, et nous vous l'enverrons personnalisé par e-mail.",
+  "wn_docs": "📝 Docs",
+  "f39_num": "39 — DOCS",
+  "f39_h": "Des documents qui s'écoutent.",
+  "f39_p": "Un nouveau bouton, <strong>Docs</strong>, pour les documents Word, texte, Markdown, RTF et LibreOffice : <strong>les écouter à voix haute</strong>, avec la phrase qui s'allume pendant la lecture. Gratuit.",
+  "f39_p2": "<strong>Faire une version audio</strong> d'un document (PREMIUM) : un MP3 par partie, un M4B ou un EPUB avec la voix, à écouter sur le téléphone ou en voiture. L'extrait est gratuit.",
+  "f39_p3": "<strong>Traduire des documents</strong> qui ne sont ni des PDF ni des livres numériques (PREMIUM) : le document entier dans une autre langue, dans un nouveau fichier Word ou .txt, avec les titres à leur place.",
+  "f39_p4": "Et <strong>transformer les pages d'un document en images</strong> (PREMIUM), en PNG ou JPEG : un fichier Word sort comme sur papier.",
+  "f39_mark": "DOCX · DOC · TXT · MD · RTF · ODT"
 };

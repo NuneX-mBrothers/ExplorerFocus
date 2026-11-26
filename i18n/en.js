@@ -522,5 +522,13 @@ window.I18N.en = {
   "pr_p_emp": "<a href=\"#companies\">By quote</a>",
   "pr_emp_h": "🏢 ExplorerFocus with your company's brand",
   "pr_emp_p": "For companies with 50 computers or more, ExplorerFocus can become the company's own file explorer: the company's logo takes the place of “ExplorerFocus 2”. The rest of the program stays the same: the same features and the same updates. Licences are by number of computers, and this is not an online purchase.",
-  "pr_emp_fecho": "Ask us for a quote for your company, saying how many computers you want to use ExplorerFocus on, and we will email you a personalised one."
+  "pr_emp_fecho": "Ask us for a quote for your company, saying how many computers you want to use ExplorerFocus on, and we will email you a personalised one.",
+  "wn_docs": "📝 Docs",
+  "f39_num": "39 — DOCS",
+  "f39_h": "Documents you can listen to.",
+  "f39_p": "A new <strong>Docs</strong> button for Word, text, Markdown, RTF and LibreOffice documents: <strong>listen to them read aloud</strong>, with the sentence lit up as it's read. Free.",
+  "f39_p2": "<strong>Make an audio version</strong> of a document (PREMIUM): an MP3 per part, an M4B or an EPUB with the voice, to listen to on the phone or in the car. The sample is free.",
+  "f39_p3": "<strong>Translate documents</strong> that aren't PDFs or e-books (PREMIUM): the whole document in another language, as a new Word file or .txt, with the headings in place.",
+  "f39_p4": "And <strong>turn a document's pages into images</strong> (PREMIUM), as PNG or JPEG: a Word file comes out as it would on paper.",
+  "f39_mark": "DOCX · DOC · TXT · MD · RTF · ODT"
 };

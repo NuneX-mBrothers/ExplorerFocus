@@ -522,5 +522,13 @@ window.I18N.ja = {
   "pr_p_emp": "<a href=\"#companies\">お見積もり</a>",
   "pr_emp_h": "🏢 御社のブランドを入れた ExplorerFocus",
   "pr_emp_p": "パソコンが 50 台以上の企業では、ExplorerFocus を自社のファイル エクスプローラーにできます。「ExplorerFocus 2」の場所に御社のロゴが入ります。 それ以外は変わりません。機能もアップデートも同じです。ライセンスはパソコンの台数単位で、オンラインでの購入ではありません。",
-  "pr_emp_fecho": "御社向けのお見積もりをご依頼ください。ExplorerFocus を使いたいパソコンの台数をお知らせいただければ、個別のお見積もりをメールでお送りします。"
+  "pr_emp_fecho": "御社向けのお見積もりをご依頼ください。ExplorerFocus を使いたいパソコンの台数をお知らせいただければ、個別のお見積もりをメールでお送りします。",
+  "wn_docs": "📝 文書",
+  "f39_num": "39 — 文書",
+  "f39_h": "聴ける文書。",
+  "f39_p": "新しい <strong>文書</strong> ボタン：Word、テキスト、Markdown、RTF、LibreOffice の文書を<strong>読み上げで聴けます</strong>。読んでいる文が光って表示されます。無料。",
+  "f39_p2": "文書の<strong>音声版を作成</strong>（PREMIUM）：パートごとの MP3、M4B、または音声入りの EPUB にして、スマートフォンや車の中で聴けます。サンプルは無料です。",
+  "f39_p3": "PDF や電子書籍以外の<strong>文書を翻訳</strong>（PREMIUM）：文書全体を別の言語に訳し、新しい Word ファイルまたは .txt にします。見出しはそのままの位置に残ります。",
+  "f39_p4": "さらに、<strong>文書のページを画像に変換</strong>（PREMIUM）：PNG または JPEG で、Word ファイルは紙に印刷したときと同じ見た目になります。",
+  "f39_mark": "DOCX · DOC · TXT · MD · RTF · ODT"
 };

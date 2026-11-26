@@ -95,11 +95,12 @@
     "Rotate any image by any angle, degree by degree, with the corners cropped or transparent; enhance an image with filters and colour adjustments (PREMIUM)",
     "Web pages and internet shortcuts open in the browser of your choice, in a normal or private window",
     "My Windows secrets: the hidden folders behind %APPDATA%, %LOCALAPPDATA% and the other environment variables, with their full paths, and every environment variable with its value (free); what Windows keeps about you, such as what was typed in Run, recent files, what was copied, the USB drives it remembers, the thumbnails of deleted photos and saved notifications, with the way to get there by hand, and some of it can be deleted (PREMIUM)",
+    "Docs: Word, text, Markdown, RTF and LibreOffice documents read aloud with natural voices, the sentence lit up as it's read (free); an audio version of a document (an MP3 per part, an M4B or an EPUB with the voice), the whole document translated into a new Word file or .txt, and its pages as PNG or JPEG images (PREMIUM)",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://intrepidparallel.com/explorerfocus/it/",
   "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
-  "softwareVersion": "2.2.9",
+  "softwareVersion": "2.2.10",
   "image": "https://intrepidparallel.com/explorerfocus/og-cover.png",
   "screenshot": [
     "https://intrepidparallel.com/explorerfocus/shots/01-perfis.webp",
@@ -1515,7 +1516,7 @@
       <a href="#premium" data-i18n="nav_premium">Premium</a>
       <a href="#prices" data-i18n="nav_prices">Prezzi</a>
       <a href="#download" data-i18n="nav_download">Scaricalo</a>
-      <span class="nav-version">v2.2.9</span>
+      <span class="nav-version">v2.2.10</span>
     </nav>
   </div>
 </header>
@@ -1875,14 +1876,16 @@
          O DAISY entra pelos Audiolivros, que ficam. -->
     <!-- 24/11/2026, o João: «As pills têm de ter coisas mais diferentes entre si.» Entram os segredos do Windows (2.2.9) e
          as legendas (voltam); saem os e-books e o PDF, que repetiam a leitura ao lado dos audiolivros. -->
+    <!-- 26/11/2026: a 2.2.10. Entra o «Docs» (#feat39), à cabeça; sai a dos audiolivros, a mais antiga das que podem sair (os
+         segredos e as legendas foram escolhas do João a 24/11; o cofre é A novidade da versão 2), e o «Docs» também é ouvir. -->
+    <a href="#feat39" data-i18n="wn_docs">📝 Docs</a>
     <a href="#feat38" data-i18n="wn_segredos">🗝 I segreti del mio Windows</a>
     <a href="#feat37" data-i18n="wn_menus">🗂 Menu contestuali</a>
     <a href="#feat29" data-i18n="wn_arquivos">🗜 Archivi compressi</a>
     <a href="#ouvir" data-i18n="wn_legendas">🎬 Sottotitoli</a>
-    <a href="#audiobooks" data-i18n="wn_audiolivros">🎧 Audiolibri</a>
     <a href="#vault" data-i18n="wn_vault">🔒 Le casseforti</a>
   </nav>
-  <span class="whatsnew-ver">v2.2.9</span>
+  <span class="whatsnew-ver">v2.2.10</span>
 </div>
 
 <!-- CATALOG -->
@@ -2307,6 +2310,18 @@
     <p class="feat-p2" data-i18n-html="f38_p2"><strong>Ciò che Windows conserva su di te</strong> (PREMIUM), nella stessa finestra: ciò che hai scritto in Esegui e nella barra di Esplora file, i file recenti, ciò che hai copiato (immagini comprese), le chiavette USB che ricorda, i programmi aperti di recente, le anteprime delle foto eliminate, le notifiche conservate, il Cestino di ogni unità e i file temporanei, con il percorso per arrivarci a mano. Una parte si può eliminare; i file temporanei e il Cestino, solo ciò che ha più di 7 giorni.</p>
     <p class="feat-p2" data-i18n="f38_p3">Niente di tutto questo è impossibile da trovare, se si conosce la strada. Il vantaggio è che qui è tutto insieme, a un clic, per chiunque.</p>
     <div class="feat-mark" data-i18n="f38_mark">%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH</div>
+  </div>
+
+  <!-- 26/11/2026: a 2.2.10, o botão «Docs» (os textos do cartão da app: Cl2210Docs, Cl2210VersaoAudio, Cl2210Traduzir e
+       Cl2210Imagens). -->
+  <div class="feat w12" id="feat39">
+    <div class="num"><span data-i18n="f39_num">39 — DOCS</span><a class="badge-free" href="#free" data-i18n="badge_free">Gratis</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f39_h">Documenti da ascoltare.</h3>
+    <p data-i18n-html="f39_p">Un nuovo pulsante, <strong>Docs</strong>, per i documenti Word, di testo, Markdown, RTF e LibreOffice: <strong>ascoltarli ad alta voce</strong>, con la frase che si illumina mentre viene letta. Gratis.</p>
+    <p class="feat-p2" data-i18n-html="f39_p2"><strong>Crea una versione audio</strong> di un documento (PREMIUM): un MP3 per parte, un M4B o un EPUB con la voce, da ascoltare sul telefono o in macchina. Il campione è gratis.</p>
+    <p class="feat-p2" data-i18n-html="f39_p3"><strong>Tradurre documenti</strong> che non sono PDF né e-book (PREMIUM): l'intero documento in un'altra lingua, in un nuovo Word o .txt, con i titoli al loro posto.</p>
+    <p class="feat-p2" data-i18n-html="f39_p4">E <strong>trasformare le pagine di un documento in immagini</strong> (PREMIUM), in PNG o JPEG: un Word esce come sulla carta.</p>
+    <div class="feat-mark" data-i18n="f39_mark">DOCX · DOC · TXT · MD · RTF · ODT</div>
   </div>
 
 </section>
@@ -2890,7 +2905,7 @@
   </div>
 
   <div class="footer-baseline">
-    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.2.9 · WPF · net10.0-windows · single-file</span>
+    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.2.10 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">pensato per il lavoro di ogni giorno</span>
   </div>
 

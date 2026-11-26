@@ -95,11 +95,12 @@
     "Rotate any image by any angle, degree by degree, with the corners cropped or transparent; enhance an image with filters and colour adjustments (PREMIUM)",
     "Web pages and internet shortcuts open in the browser of your choice, in a normal or private window",
     "My Windows secrets: the hidden folders behind %APPDATA%, %LOCALAPPDATA% and the other environment variables, with their full paths, and every environment variable with its value (free); what Windows keeps about you, such as what was typed in Run, recent files, what was copied, the USB drives it remembers, the thumbnails of deleted photos and saved notifications, with the way to get there by hand, and some of it can be deleted (PREMIUM)",
+    "Docs: Word, text, Markdown, RTF and LibreOffice documents read aloud with natural voices, the sentence lit up as it's read (free); an audio version of a document (an MP3 per part, an M4B or an EPUB with the voice), the whole document translated into a new Word file or .txt, and its pages as PNG or JPEG images (PREMIUM)",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://intrepidparallel.com/explorerfocus/ko/",
   "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
-  "softwareVersion": "2.2.9",
+  "softwareVersion": "2.2.10",
   "image": "https://intrepidparallel.com/explorerfocus/og-cover.png",
   "screenshot": [
     "https://intrepidparallel.com/explorerfocus/shots/01-perfis.webp",
@@ -1515,7 +1516,7 @@
       <a href="#premium" data-i18n="nav_premium">Premium</a>
       <a href="#prices" data-i18n="nav_prices">가격</a>
       <a href="#download" data-i18n="nav_download">받기</a>
-      <span class="nav-version">v2.2.9</span>
+      <span class="nav-version">v2.2.10</span>
     </nav>
   </div>
 </header>
@@ -1875,14 +1876,16 @@
          O DAISY entra pelos Audiolivros, que ficam. -->
     <!-- 24/11/2026, o João: «As pills têm de ter coisas mais diferentes entre si.» Entram os segredos do Windows (2.2.9) e
          as legendas (voltam); saem os e-books e o PDF, que repetiam a leitura ao lado dos audiolivros. -->
+    <!-- 26/11/2026: a 2.2.10. Entra o «Docs» (#feat39), à cabeça; sai a dos audiolivros, a mais antiga das que podem sair (os
+         segredos e as legendas foram escolhas do João a 24/11; o cofre é A novidade da versão 2), e o «Docs» também é ouvir. -->
+    <a href="#feat39" data-i18n="wn_docs">📝 문서</a>
     <a href="#feat38" data-i18n="wn_segredos">🗝 내 Windows의 비밀</a>
     <a href="#feat37" data-i18n="wn_menus">🗂 상황에 맞는 메뉴</a>
     <a href="#feat29" data-i18n="wn_arquivos">🗜 압축 파일</a>
     <a href="#ouvir" data-i18n="wn_legendas">🎬 자막</a>
-    <a href="#audiobooks" data-i18n="wn_audiolivros">🎧 오디오북</a>
     <a href="#vault" data-i18n="wn_vault">🔒 금고</a>
   </nav>
-  <span class="whatsnew-ver">v2.2.9</span>
+  <span class="whatsnew-ver">v2.2.10</span>
 </div>
 
 <!-- CATALOG -->
@@ -2307,6 +2310,18 @@
     <p class="feat-p2" data-i18n-html="f38_p2"><strong>Windows가 사용자에 대해 보관하는 것</strong>(PREMIUM): 같은 창에서 실행 창과 파일 탐색기 주소 표시줄에 입력한 내용, 최근 파일, 복사한 내용(이미지 포함), Windows가 기억하는 USB 드라이브, 최근에 연 프로그램, 삭제한 사진의 미리 보기 사진, 저장된 알림, 드라이브별 휴지통과 임시 파일을 직접 찾아가는 방법과 함께 보여 줍니다. 일부는 삭제할 수 있으며, 임시 파일과 휴지통은 7일이 지난 항목만 삭제됩니다.</p>
     <p class="feat-p2" data-i18n="f38_p3">길만 알면 이 중 어느 것도 찾지 못할 것은 없습니다. 장점은 여기 모든 것이 모여 있어 누구나 클릭 한 번이면 된다는 것입니다.</p>
     <div class="feat-mark" data-i18n="f38_mark">%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH</div>
+  </div>
+
+  <!-- 26/11/2026: a 2.2.10, o botão «Docs» (os textos do cartão da app: Cl2210Docs, Cl2210VersaoAudio, Cl2210Traduzir e
+       Cl2210Imagens). -->
+  <div class="feat w12" id="feat39">
+    <div class="num"><span data-i18n="f39_num">39 — 문서</span><a class="badge-free" href="#free" data-i18n="badge_free">무료</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f39_h">듣는 문서.</h3>
+    <p data-i18n-html="f39_p">새 <strong>문서</strong> 버튼: Word, 텍스트, Markdown, RTF, LibreOffice 문서를 <strong>소리 내어 읽어 주는 대로 들을 수 있습니다</strong>. 읽는 문장이 강조 표시됩니다. 무료.</p>
+    <p class="feat-p2" data-i18n-html="f39_p2">문서의 <strong>오디오 버전 만들기</strong>(PREMIUM): 부분마다 MP3 하나, M4B 또는 음성이 들어간 EPUB로 만들어 휴대폰이나 차에서 들을 수 있습니다. 샘플은 무료입니다.</p>
+    <p class="feat-p2" data-i18n-html="f39_p3">PDF나 전자책이 아닌 <strong>문서 번역</strong>(PREMIUM): 문서 전체를 다른 언어로 옮겨 새 Word 파일이나 .txt로 만들며, 제목은 제자리에 그대로 둡니다.</p>
+    <p class="feat-p2" data-i18n-html="f39_p4">그리고 <strong>문서의 페이지를 이미지로 변환</strong>(PREMIUM): PNG 또는 JPEG로, Word 파일은 종이에 인쇄한 모습 그대로 나옵니다.</p>
+    <div class="feat-mark" data-i18n="f39_mark">DOCX · DOC · TXT · MD · RTF · ODT</div>
   </div>
 
 </section>
@@ -2890,7 +2905,7 @@
   </div>
 
   <div class="footer-baseline">
-    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.2.9 · WPF · net10.0-windows · single-file</span>
+    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.2.10 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">매일의 일을 위해 만들었습니다</span>
   </div>
 

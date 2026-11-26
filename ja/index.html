@@ -95,11 +95,12 @@
     "Rotate any image by any angle, degree by degree, with the corners cropped or transparent; enhance an image with filters and colour adjustments (PREMIUM)",
     "Web pages and internet shortcuts open in the browser of your choice, in a normal or private window",
     "My Windows secrets: the hidden folders behind %APPDATA%, %LOCALAPPDATA% and the other environment variables, with their full paths, and every environment variable with its value (free); what Windows keeps about you, such as what was typed in Run, recent files, what was copied, the USB drives it remembers, the thumbnails of deleted photos and saved notifications, with the way to get there by hand, and some of it can be deleted (PREMIUM)",
+    "Docs: Word, text, Markdown, RTF and LibreOffice documents read aloud with natural voices, the sentence lit up as it's read (free); an audio version of a document (an MP3 per part, an M4B or an EPUB with the voice), the whole document translated into a new Word file or .txt, and its pages as PNG or JPEG images (PREMIUM)",
     "Single self-contained .exe, no installer"
   ],
   "url": "https://intrepidparallel.com/explorerfocus/ja/",
   "downloadUrl": "https://github.com/NuneX-mBrothers/ExplorerFocus/releases/latest",
-  "softwareVersion": "2.2.9",
+  "softwareVersion": "2.2.10",
   "image": "https://intrepidparallel.com/explorerfocus/og-cover.png",
   "screenshot": [
     "https://intrepidparallel.com/explorerfocus/shots/01-perfis.webp",
@@ -1515,7 +1516,7 @@
       <a href="#premium" data-i18n="nav_premium">PREMIUM</a>
       <a href="#prices" data-i18n="nav_prices">料金</a>
       <a href="#download" data-i18n="nav_download">入手する</a>
-      <span class="nav-version">v2.2.9</span>
+      <span class="nav-version">v2.2.10</span>
     </nav>
   </div>
 </header>
@@ -1875,14 +1876,16 @@
          O DAISY entra pelos Audiolivros, que ficam. -->
     <!-- 24/11/2026, o João: «As pills têm de ter coisas mais diferentes entre si.» Entram os segredos do Windows (2.2.9) e
          as legendas (voltam); saem os e-books e o PDF, que repetiam a leitura ao lado dos audiolivros. -->
+    <!-- 26/11/2026: a 2.2.10. Entra o «Docs» (#feat39), à cabeça; sai a dos audiolivros, a mais antiga das que podem sair (os
+         segredos e as legendas foram escolhas do João a 24/11; o cofre é A novidade da versão 2), e o «Docs» também é ouvir. -->
+    <a href="#feat39" data-i18n="wn_docs">📝 文書</a>
     <a href="#feat38" data-i18n="wn_segredos">🗝 この Windows の秘密</a>
     <a href="#feat37" data-i18n="wn_menus">🗂 コンテキスト メニュー</a>
     <a href="#feat29" data-i18n="wn_arquivos">🗜 圧縮アーカイブ</a>
     <a href="#ouvir" data-i18n="wn_legendas">🎬 字幕</a>
-    <a href="#audiobooks" data-i18n="wn_audiolivros">🎧 オーディオブック</a>
     <a href="#vault" data-i18n="wn_vault">🔒 金庫</a>
   </nav>
-  <span class="whatsnew-ver">v2.2.9</span>
+  <span class="whatsnew-ver">v2.2.10</span>
 </div>
 
 <!-- CATALOG -->
@@ -2307,6 +2310,18 @@
     <p class="feat-p2" data-i18n-html="f38_p2"><strong>Windows が利用者について保存しているもの</strong>（PREMIUM）：同じウィンドウで、「ファイル名を指定して実行」とエクスプローラーのアドレス バーに入力した内容、最近使ったファイル、コピーした内容（画像を含む）、Windows が覚えている USB メモリ、最近開いたプログラム、削除した写真の縮小表示、保存された通知、各ドライブのごみ箱、一時ファイルを、手動での行き方と合わせて表示します。一部は削除でき、一時ファイルとごみ箱は 7 日より前のものだけが対象です。</p>
     <p class="feat-p2" data-i18n="f38_p3">道筋さえ知っていれば、どれも見つけられないものではありません。利点は、ここにすべてがまとまっていて、誰でもワンクリックで届くことです。</p>
     <div class="feat-mark" data-i18n="f38_mark">%APPDATA% · %LOCALAPPDATA% · %PROGRAMDATA% · %TEMP% · PATH</div>
+  </div>
+
+  <!-- 26/11/2026: a 2.2.10, o botão «Docs» (os textos do cartão da app: Cl2210Docs, Cl2210VersaoAudio, Cl2210Traduzir e
+       Cl2210Imagens). -->
+  <div class="feat w12" id="feat39">
+    <div class="num"><span data-i18n="f39_num">39 — 文書</span><a class="badge-free" href="#free" data-i18n="badge_free">無料</a><a class="badge-pro" href="#premium" data-i18n="badge_pro">PREMIUM</a></div>
+    <h3 data-i18n="f39_h">聴ける文書。</h3>
+    <p data-i18n-html="f39_p">新しい <strong>文書</strong> ボタン：Word、テキスト、Markdown、RTF、LibreOffice の文書を<strong>読み上げで聴けます</strong>。読んでいる文が光って表示されます。無料。</p>
+    <p class="feat-p2" data-i18n-html="f39_p2">文書の<strong>音声版を作成</strong>（PREMIUM）：パートごとの MP3、M4B、または音声入りの EPUB にして、スマートフォンや車の中で聴けます。サンプルは無料です。</p>
+    <p class="feat-p2" data-i18n-html="f39_p3">PDF や電子書籍以外の<strong>文書を翻訳</strong>（PREMIUM）：文書全体を別の言語に訳し、新しい Word ファイルまたは .txt にします。見出しはそのままの位置に残ります。</p>
+    <p class="feat-p2" data-i18n-html="f39_p4">さらに、<strong>文書のページを画像に変換</strong>（PREMIUM）：PNG または JPEG で、Word ファイルは紙に印刷したときと同じ見た目になります。</p>
+    <div class="feat-mark" data-i18n="f39_mark">DOCX · DOC · TXT · MD · RTF · ODT</div>
   </div>
 
 </section>
@@ -2890,7 +2905,7 @@
   </div>
 
   <div class="footer-baseline">
-    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.2.9 · WPF · net10.0-windows · single-file</span>
+    <span>© 2026 <span class="brand-mb">mBrothers</span> · v2.2.10 · WPF · net10.0-windows · single-file</span>
     <span data-i18n="ft_baseline">日々の仕事のために設計</span>
   </div>
 

@@ -64,7 +64,7 @@
     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="6" fill="#16181B"/><path d="M16 4l12 12-12 12L4 16z" fill="#E0A458"/></svg>
     <h1>Privacy Policy</h1>
   </div>
-  <div class="updated">ExplorerFocus · Last updated: 19 November 2026</div>
+  <div class="updated">ExplorerFocus · Last updated: 28 November 2026</div>
 
   <p class="lead"><strong>Who we are.</strong> ExplorerFocus is made by Intrepid Parallel, Lda ("we", "us"), Av. Afonso
   Costa, 20, Galeria Esq., 1900-036 Lisboa, Portugal, single registration and tax number (NIPC) 519724976. mBrothers is
@@ -95,7 +95,6 @@
       <tr><td>The app checks for updates (you can turn this off)</td><td>a request for a small version file</td><td>GitHub Pages</td><td>nothing</td></tr>
       <tr><td>You accept an update</td><td>the download of the new version</td><td>GitHub</td><td>nothing</td></tr>
       <tr><td>The app starts (you can turn this off in <em>About → Send usage statistics</em>)</td><td>usage statistics: a random number of this installation (not the computer identifier), the app's version, edition and language</td><td>our server</td><td>see <em>Usage statistics</em></td></tr>
-      <tr><td>Only in the giveaway edition: it starts, or the giveaway is activated (the same switch turns this off)</td><td>a count of that event, once per computer, nothing about you</td><td>GoatCounter</td><td>a count</td></tr>
       <tr><td>You download the voice, speech or translation models (the app asks first)</td><td>the download request</td><td>Hugging Face, GitHub, nuget.org</td><td>nothing</td></tr>
       <tr><td>You install the vault drive engine (Dokany)</td><td>the download request</td><td>GitHub</td><td>nothing</td></tr>
       <tr><td>You ask <em>My machine</em> for your public address</td><td>a request</td><td>ipify.org or Amazon</td><td>nothing</td></tr>
@@ -106,7 +105,7 @@
       <tr><td>This computer has a licence, whenever needed to confirm it</td><td>this computer's identifier and its licence key</td><td>our licence server</td><td>see <em>Requests</em></td></tr>
       <tr><td>You use your licence on this computer (<em>I already have a licence</em>)</td><td>this computer's identifier and its name in Windows, the licence email, the code we sent to it, the app's language (for the email), a name if you write one, and your answer about promotions if you give one</td><td>our licence server</td><td>see <em>Licences</em></td></tr>
       <tr><td>You deactivate PREMIUM on this computer</td><td>this computer's identifier and its licence key</td><td>our licence server</td><td>see <em>Licences</em></td></tr>
-      <tr><td>You activate the giveaway edition (optional)</td><td>this computer's identifier</td><td>our licence server</td><td>the identifier and the time</td></tr>
+      <tr><td>You activate the giveaway edition (optional)</td><td>this computer's identifier</td><td>our licence server</td><td>the identifier, only encrypted, and the time</td></tr>
       <tr><td>You buy, renew or add computers</td><td>in the app, the licence email and the plan; on the payment page, your payment details, country and address</td><td>our licence server; Stripe, for Sold through Link, LLC</td><td>see <em>Buying</em></td></tr>
       <tr><td>You write to us</td><td>your email and your message</td><td>us</td><td>your email and message, to answer you</td></tr>
     </tbody>
@@ -167,9 +166,9 @@
         database kept on our own server: IP geolocation by <a href="https://db-ip.com" target="_blank" rel="noopener">DB-IP</a>.
         For a mobile connection, the area is usually the operator's, not yours.</li>
     <li><strong>The giveaway edition.</strong> Before anything is sent, the app tells you exactly what will be sent, and
-        you can refuse. If you agree, we keep only this computer's identifier and the time of activation, so we know
-        how many activations there were and so you can upgrade to the full Premium later at a special price. If you
-        refuse, nothing is sent.</li>
+        you can refuse. If you agree, we keep only this computer's identifier, encrypted, and the time of activation, so
+        we know how many activations there were and so you can upgrade to PREMIUM later at a special price. The IP
+        address is not stored: it is used only at that moment, to limit abuse. If you refuse, nothing is sent.</li>
     <li><strong>Emails.</strong> We send them from explorerfocus@intrepidparallel.com, through our company's Microsoft
         365. There are two kinds:
       <ul>
